@@ -36,6 +36,9 @@ python -m aie validate shorts/reel-05        # checks a job.json; --check-files 
 python -m aie run jobs/longform-ai-editor cut      # builds the cut -> build/pieces.json (skipped if unchanged)
 python -m aie run jobs/longform-ai-editor verify   # transcribes each piece alone, reviews every joint
 python -m aie diag gap jobs/longform-ai-editor 78.30   # loudness around a cut: where the real word gap is
+python -m aie run shorts/reel-05 captions    # words + styled captions -> build/captions.ass
+python -m aie run shorts/reel-05 package     # SRT per variant + cover -> build/publish/
+python -m aie run shorts/reel-05 mix         # voice, SFX, music -> one -14 LUFS audio file per variant
 python -m unittest discover -s tests         # runs the tests
 ```
 

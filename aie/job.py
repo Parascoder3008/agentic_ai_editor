@@ -11,6 +11,7 @@ from pathlib import Path
 
 from . import captions as captions_mod
 from . import package as package_mod
+from . import schema
 from .effects import Catalog
 from .settings import Settings, SettingsError, load_settings
 
@@ -18,7 +19,7 @@ MODES = {"footage", "avatar", "client", "longform"}
 LAYOUTS = {"hook", "broll", "face", "split", "card", "full", "screen", "cam"}
 FPS = {24, 25, 30, 50, 60}
 TOP_KEYS = {"id", "title", "mode", "fps", "size", "language", "sources", "script", "cut", "timeline", "variants",
-            "captions", "package", "graphics", "effects", "sfx", "music", "custom", "gates", "notes"}
+            "captions", "package", "graphics", "effects", "sfx", "music", "mix", "custom", "gates", "notes"}
 SOURCE_KEYS = {"path", "offset", "voice_offset", "note"}
 SEGMENT_KEYS = {"t", "layout", "src", "in", "speed", "zoom", "note"}
 PIECE_KEYS = {"src", "in", "out", "text", "zoom", "tag", "note"}
@@ -258,11 +259,12 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
                 if vn not in variants:
                     c.err(f"effects[{i}].variants", f"{vn!r} is not one of the job's variants")
 
-    sfx = data.get("sfx", [])
-    if not isinstance(sfx, list) or not all(isinstance(s, dict) and isinstance(s.get("kind"), str) for s in sfx):
-        c.err("sfx", "must be a list of cues, each with a \"kind\"")
-    if "music" in data and not isinstance(data["music"], dict):
-        c.err("music", "must be an object")
+    if "sfx" in data:
+        c.errors += schema.check_sfx(data["sfx"], data)
+    if "music" in data:
+        c.errors += schema.check_music(data["music"], data)
+    if "mix" in data:
+        c.errors += schema.check_mix(data["mix"], data)
     custom = data.get("custom", [])
     if not isinstance(custom, list) or not all(isinstance(s, str) for s in custom):
         c.err("custom", "must be a list of script paths inside the job folder")

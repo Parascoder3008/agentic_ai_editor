@@ -12,6 +12,8 @@ A stage brings the stages it reads up to date first (captions runs the cut if it
 """
 import hashlib
 import json
+import math
+from pathlib import Path
 
 from .job import Job
 from .settings import Settings
@@ -116,9 +118,14 @@ def stage_verify(job: Job, settings: Settings, force: bool = False, log=print) -
     return {"joints": len(js), "flagged": flagged}
 
 
+def _dep(log):
+    """Log for a prerequisite stage: silent when it was already up to date, so a run only reports work it did."""
+    return lambda s: None if s.split(" (")[0].endswith(": up to date") else log(s)
+
+
 def _built_cut(job: Job, settings: Settings, log) -> dict | None:
     """The cut, brought up to date first, or None for a job whose timeline is written by hand."""
-    return stage_cut(job, settings, False, log) if "cut" in job.data else None
+    return stage_cut(job, settings, False, _dep(log)) if "cut" in job.data else None
 
 
 def _length(job: Job, built: dict | None) -> float:
@@ -163,7 +170,7 @@ def stage_captions(job: Job, settings: Settings, force: bool = False, log=print)
 
 def stage_package(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
     from . import captions, package
-    words = stage_captions(job, settings, False, log)["words"]
+    words = stage_captions(job, settings, False, _dep(log))["words"]
     built = _built_cut(job, settings, lambda *_: None)
     pkg = job.data.get("package", {})
     prefix = pkg.get("prefix", job.id.upper().replace("-", ""))
@@ -196,7 +203,125 @@ def stage_package(job: Job, settings: Settings, force: bool = False, log=print) 
     return {"files": [str(f) for f in made]}
 
 
-STAGES = {"cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "package": stage_package}
+def _mix(job: Job) -> dict:
+    return {"gain_db": "auto", "voice_lufs": -17.0, "joint_fade": 0.02, "tail": 0.8, **job.data.get("mix", {})}
+
+
+def _voice_source(job: Job) -> str | None:
+    """The source whose own audio is the voice (an avatar render), or None when the voice comes from the cut."""
+    m = job.data.get("mix", {})
+    if "voice" in m:
+        return m["voice"]
+    if "cut" in job.data:
+        return None
+    named = [n for n, s in job.data["sources"].items() if "voice_offset" in s]
+    if not named:
+        raise StageError('no voice: give "mix": {"voice": <source>} or a "cut"')
+    return named[0]
+
+
+def stage_voice(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    from . import sound
+    built = _built_cut(job, settings, log)
+    name, out = _voice_source(job), job.dir / "build" / "voice.wav"
+    if name:
+        src = _source(job, settings, name)
+        key = _key("voice", name, job.data["sources"][name], _stamp(src))
+    else:
+        files = {n: _source(job, settings, n) for n in sorted({p["src"] for p in built["pieces"]})}
+        key = _key("voice", built["key"], _mix(job)["tail"], [[n, _stamp(f)] for n, f in files.items()])
+    stamp = job.dir / "build" / "voice.key"
+    if out.exists() and stamp.exists() and stamp.read_text() == key and not force:
+        log("voice: up to date")
+        return {"key": key, "path": out}
+    out.parent.mkdir(parents=True, exist_ok=True)
+    if name:
+        sound.voice_from_source(src, job.data["sources"][name].get("voice_offset", 0.0), out)
+        log(f"voice: {name} from {job.data['sources'][name].get('voice_offset', 0.0)} s -> {out}")
+    else:
+        sound.voice_from_pieces(built["pieces"], files, built["length"] + _mix(job)["tail"], out)
+        log(f"voice: {len(built['pieces'])} pieces, room-tone crossfade at every joint -> {out}")
+    stamp.write_text(key)
+    return {"key": key, "path": out}
+
+
+def _stem(job, settings, force, log, kind, cfg, render):
+    """Shared shape of the sfx and music stages: brought up to date against the voice and their own settings."""
+    import soundfile as sf
+    voice = stage_voice(job, settings, False, _dep(log))
+    out, stamp = job.dir / "build" / f"{kind}.wav", job.dir / "build" / f"{kind}.key"
+    key = _key(kind, cfg, voice["key"], job.length)
+    if out.exists() and stamp.exists() and stamp.read_text() == key and not force:
+        log(f"{kind}: up to date")
+        return {"key": key, "path": out}
+    x = render(voice["path"])
+    sf.write(out, x, 48000, subtype="PCM_24")
+    stamp.write_text(key)
+    log(f"{kind}: {len(x) / 48000:.2f} s, peak {20 * math.log10(float(abs(x).max()) + 1e-12):.1f} dBFS -> {out}")
+    return {"key": key, "path": out}
+
+
+def stage_sfx(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    from . import sfx
+    cfg = job.data.get("sfx")
+    if not cfg or not cfg.get("cues"):
+        raise StageError("this job has no \"sfx\" cues")
+    built = _built_cut(job, settings, lambda *_: None)
+
+    def render(voice_path):
+        import soundfile as sf
+        v, _ = sf.read(voice_path)
+        return sfx.render(cfg, _length(job, built) + _mix(job)["tail"], v)
+    return _stem(job, settings, force, log, "sfx", cfg, render)
+
+
+def stage_music(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    from . import music
+    cfg = job.data.get("music")
+    if not cfg:
+        raise StageError("this job has no \"music\" score")
+
+    def render(voice_path):
+        return music.render(cfg["score"], music.read_stereo(voice_path), cfg.get("voice_gain", []), log)
+    return _stem(job, settings, force, log, "music", cfg, render)
+
+
+def stage_mix(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    from . import sound
+    built = _built_cut(job, settings, lambda *_: None)
+    voice = stage_voice(job, settings, False, _dep(log))
+    fx = stage_sfx(job, settings, False, _dep(log)) if job.data.get("sfx") else None
+    mu = stage_music(job, settings, False, _dep(log)) if job.data.get("music") else None
+    stems = [fx and fx["path"], mu and mu["path"]]
+    m, length = _mix(job), _length(job, built)
+    key = _key("mix", m, job.data["variants"], length, voice["key"], fx and fx["key"], mu and mu["key"])
+    report_file = job.dir / "build" / "mix.json"
+    old = _read(report_file)
+    if old and old.get("key") == key and not force and all(Path(v["path"]).exists() for v in old["variants"].values()):
+        log("mix: up to date")
+        return old
+    gain = m["gain_db"] if m["gain_db"] != "auto" else m["voice_lufs"] - sound.lufs(voice["path"])
+    report = {"key": key, "gain_db": round(gain, 2), "variants": {}}
+    b = job.dir / "build"
+    for name, v in job.data["variants"].items():
+        pre = b / f"mix_{name}.wav"
+        sound.run(sound.premix_cmd(voice["path"], stems[0], stems[1], pre, length + m["tail"], gain,
+                                   v.get("mute_voice_after")))
+        graph, total = sound.variant_graph(v.get("ranges", [[0.0, length]]), v.get("freeze", 0.0), m["joint_fade"])
+        raw = b / f"audio_{name}_pre.wav"
+        sound.run(["ffmpeg", "-y", "-v", "error", "-i", pre, "-filter_complex", graph, "-map", "[a]",
+                   "-ar", "48000", "-c:a", "pcm_s24le", raw])
+        out = b / f"audio_{name}.wav"
+        sound.loudnorm(raw, out)
+        meas = sound.measure(out)
+        report["variants"][name] = {"path": str(out), "seconds": round(total, 3), **meas}
+        log(f"mix: {name} {total:.2f} s, {meas['lufs']:.1f} LUFS, true peak {meas['true_peak']:.1f} dBTP -> {out}")
+    _write(report_file, report)
+    return report
+
+
+STAGES = {"cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "package": stage_package,
+          "voice": stage_voice, "sfx": stage_sfx, "music": stage_music, "mix": stage_mix}
 
 
 def run(job: Job, settings: Settings, stage: str, force: bool = False, log=print):
