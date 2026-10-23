@@ -33,8 +33,13 @@ One-time setup on each machine: copy `aie.local.example.json` to `aie.local.json
 python -m aie doctor                         # checks ffmpeg, Node, Python libraries, folders, fonts, catalog
 python -m aie effects                        # lists the effects catalog (--kind overlay, --format 9:16)
 python -m aie validate shorts/reel-05        # checks a job.json; --check-files also checks its footage exists
+python -m aie run jobs/longform-ai-editor cut      # builds the cut -> build/pieces.json (skipped if unchanged)
+python -m aie run jobs/longform-ai-editor verify   # transcribes each piece alone, reviews every joint
+python -m aie diag gap jobs/longform-ai-editor 78.30   # loudness around a cut: where the real word gap is
 python -m unittest discover -s tests         # runs the tests
 ```
+
+Stage outputs go to `<job>/build/` and are git-ignored; `--force` reruns a stage whose inputs haven't changed.
 
 ## Add the code from the PC
 

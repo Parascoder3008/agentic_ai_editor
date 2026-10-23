@@ -197,6 +197,16 @@ Step 7 doesn't block the exit test: your next reel uses whatever is in the catal
   Of the 9 templates, `lf_compare`, `lf_end` and `lf_rule` are one-offs with the long-form's text written in, and
   `keyword-callout` is a hand-edited starter, so they are not in the catalog (see `effects/README.md`).
   **All 5 catalog effects are 16:9; reels need the 9:16 effects that step 5 ports.**
+- **Step 2: built and proven in the cloud (23 Oct); the PC check is pending.** `aie/audio.py` (10 ms loudness),
+  `aie/cuts.py` (the long-form span cutter, expression for expression, plus measured pieces), `aie/verify.py`
+  (per-piece transcription, joint review, repeat report, letter timings), `aie/runner.py` (stages write to `build/` and
+  skip when their inputs are unchanged). Commands: `run <job> cut|verify`, `diag gap|ctc`. The long-form is now
+  `jobs/longform-ai-editor/job.json` (78 keep, 16 drop, read from `body_edl.py`). Proven: reel-04's output times equal
+  its `timeline.json`; the joint review and repeat report print exactly what `review_joints.py` (118 lines) and
+  `check_repeats.py` (170 lines) printed on the long-form's data; synthetic audio covers splitting at long pauses,
+  frame-exact edges, drops, skipped clicks and never padding into the next word. 54 tests on Python 3.10–3.13.
+  **Still to prove on the PC:** the cutter rebuilds `body_pieces.json` exactly from the WAV (test included; it skips
+  where the WAV isn't), and `verify` runs with faster-whisper.
 - **Herk Edit Kit received (23 Oct)** in `vendor/herk-edit-kit` (see its `VENDORED.md`). MIT plus a use permission
   that covers commercial videos. Its style library has **406 cards, all 16:9 (1920x1080)**: 101 stat, 81 overview,
   78 section, 73 lower-third, 73 label, each with named text slots and a duration range. Both styles use Nate's AIS

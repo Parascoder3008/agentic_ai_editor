@@ -21,8 +21,9 @@ DEFAULTS = {
     "avatar_rotation": "shorts/avatar_rotation.json",
     "video_use": None,
     "herk_kit": None,
+    "whisper_model": "large-v3-turbo",
 }
-PATH_KEYS = [k for k in DEFAULTS if k not in ("roots", "hyperframes")]
+PATH_KEYS = [k for k in DEFAULTS if k not in ("roots", "hyperframes", "whisper_model")]
 
 
 class SettingsError(ValueError):
@@ -47,8 +48,10 @@ class Settings:
             name, _, rest = ref[1:].partition("/")
             roots = self.data["roots"]
             if name not in roots:
-                where = self.source or REPO / LOCAL
-                raise SettingsError(f'"{ref}": no root named "{name}" under "roots" in {where}')
+                if self.source is None:
+                    raise SettingsError(f'"{ref}": no aie.local.json on this machine yet. Copy '
+                                        f'aie.local.example.json to {REPO / LOCAL} and set "{name}" under "roots"')
+                raise SettingsError(f'"{ref}": no root named "{name}" under "roots" in {self.source}')
             return Path(roots[name]) / rest
         p = Path(ref)
         return p if p.is_absolute() else base / p

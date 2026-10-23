@@ -3,11 +3,11 @@ name = "aie"
 version = "0.1.0"
 description = "AI Editor pipeline: one job.json per video, rendered by shared stages"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = ["numpy"]
 
 [project.optional-dependencies]
-# Later stages; the validator, catalog and doctor need only the standard library.
-media = ["numpy", "scipy", "soundfile", "pillow", "opencv-python"]
+# Later stages. validate, effects and doctor run on the standard library alone; cut needs numpy.
+media = ["scipy", "soundfile", "pillow", "opencv-python"]
 speech = ["faster-whisper", "torch", "torchaudio"]
 qa = ["playwright"]
 

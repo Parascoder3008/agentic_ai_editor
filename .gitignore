@@ -12,6 +12,8 @@ aie.local.json
 inbox/
 **/frames/
 **/seg_*.mkv
+# Stage outputs of the aie runner, rebuilt from job.json
+build/
 *.mp4
 *.mov
 *.mkv

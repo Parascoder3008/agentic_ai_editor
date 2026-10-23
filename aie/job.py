@@ -15,12 +15,12 @@ from .settings import Settings, SettingsError, load_settings
 MODES = {"footage", "avatar", "client", "longform"}
 LAYOUTS = {"hook", "broll", "face", "split", "card", "full", "screen", "cam"}
 FPS = {24, 25, 30, 50, 60}
-TOP_KEYS = {"id", "title", "mode", "fps", "size", "sources", "script", "cut", "timeline", "variants", "captions",
-            "graphics", "effects", "sfx", "music", "custom", "gates", "notes"}
+TOP_KEYS = {"id", "title", "mode", "fps", "size", "language", "sources", "script", "cut", "timeline", "variants",
+            "captions", "graphics", "effects", "sfx", "music", "custom", "gates", "notes"}
 SOURCE_KEYS = {"path", "offset", "voice_offset", "note"}
 SEGMENT_KEYS = {"t", "layout", "src", "in", "speed", "zoom", "note"}
 PIECE_KEYS = {"src", "in", "out", "text", "zoom", "tag", "note"}
-SPAN_CUT_KEYS = {"mode", "source", "keep", "drop", "gap", "pad_in", "pad_out"}
+SPAN_CUT_KEYS = {"mode", "source", "keep", "drop", "gap", "pad_in", "pad_out", "silence_db", "speech_db", "min_island"}
 VARIANT_KEYS = {"ranges", "freeze", "mute_voice_after", "note"}
 GATE_KEYS = {"storyboard_approved", "final_approved"}
 EPS = 1e-6
@@ -74,14 +74,16 @@ class _Check:
         for k in sorted(set(obj) - allowed):
             self.err(where, f"unknown key {k!r} (allowed: {', '.join(sorted(allowed))})")
 
-    def span(self, s, where, fps=None, labelled=False) -> bool:
-        """[t0, t1] (plus a label or note when labelled) with 0 <= t0 < t1."""
-        shape = '[start, end] or [start, end, "label"]' if labelled else "[start, end]"
-        if not isinstance(s, list) or len(s) not in ((2, 3) if labelled else (2,)) or not all(map(_num, s[:2])):
-            self.err(where, f"must be {shape} in seconds")
+    def span(self, s, where, fps=None, labelled=False, noted=False) -> bool:
+        """[t0, t1] with 0 <= t0 < t1, plus a text label when labelled and a text note after it when noted."""
+        sizes = (2, 3, 4) if noted else (2, 3) if labelled else (2,)
+        shape = ('[start, end, "label", "note"]' if noted else '[start, end, "label"]') if labelled else "[start, end]"
+        if not isinstance(s, list) or len(s) not in sizes or not all(map(_num, s[:2])):
+            self.err(where, f"must be {shape} in seconds (label and note optional)" if labelled
+                     else f"must be {shape} in seconds")
             return False
-        if labelled and len(s) == 3 and not isinstance(s[2], str):
-            self.err(where, "the third item must be a text label")
+        if not all(isinstance(x, str) for x in s[2:]):
+            self.err(where, "items after the times must be text")
         if not 0 <= s[0] < s[1]:
             self.err(where, f"start {s[0]} must be >= 0 and before end {s[1]}")
             return False
@@ -129,6 +131,8 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
 
     if "script" in data and not isinstance(data["script"], str):
         c.err("script", "must be a path to the script text")
+    if "language" in data and not (isinstance(data["language"], str) and re.fullmatch(r"[a-z]{2}", data["language"])):
+        c.err("language", "must be a two-letter code for transcription, e.g. \"hi\" for Hinglish or \"en\"")
 
     if "cut" not in data and "timeline" not in data:
         c.err("job", "needs a \"cut\" (camera footage) or a \"timeline\" (segments), or both")
@@ -146,12 +150,15 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
                 c.err("cut.keep", "required: a list of [start, end, \"label\"] spans to keep")
                 keep = []
             for i, s in enumerate(keep):
-                c.span(s, f"cut.keep[{i}]", labelled=True)
+                c.span(s, f"cut.keep[{i}]", labelled=True, noted=True)
             for i, s in enumerate(cut.get("drop", [])):
                 c.span(s, f"cut.drop[{i}]", labelled=True)
-            for k in ("gap", "pad_in", "pad_out"):
+            for k in ("gap", "pad_in", "pad_out", "min_island"):
                 if k in cut and (not _num(cut[k]) or cut[k] < 0):
                     c.err(f"cut.{k}", "must be a number of seconds >= 0")
+            for k in ("silence_db", "speech_db"):
+                if k in cut and (not _num(cut[k]) or cut[k] >= 0):
+                    c.err(f"cut.{k}", "must be a level in dBFS below 0, e.g. -55")
         else:
             c.keys(cut, {"mode", "pieces"}, "cut")
             pieces = cut.get("pieces")
@@ -207,12 +214,13 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
         variants = {}
     for name, v in variants.items():
         w = f"variants.{name}"
-        if not isinstance(v, dict) or not isinstance(v.get("ranges"), list) or not v["ranges"]:
-            c.err(w, "must have \"ranges\": [[start, end], ...] on the output timeline")
+        if not isinstance(v, dict) or ("ranges" in v and (not isinstance(v["ranges"], list) or not v["ranges"])):
+            c.err(w, "must be an object; \"ranges\": [[start, end], ...] on the output timeline (leave it out for "
+                     "the whole video)")
             continue
         c.keys(v, VARIANT_KEYS, w)
         last = -1.0
-        for i, r in enumerate(v["ranges"]):
+        for i, r in enumerate(v.get("ranges", [])):
             if c.span(r, f"{w}.ranges[{i}]", fps):
                 if r[0] < last - EPS:
                     c.err(f"{w}.ranges[{i}]", "ranges must be in order and must not overlap")

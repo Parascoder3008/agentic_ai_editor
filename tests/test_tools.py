@@ -58,6 +58,17 @@ class ToolsTest(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertIn("no job.json", r.stdout)
 
+    def test_cli_without_numpy(self):
+        """validate and doctor work on a bare machine; cut says what to install instead of crashing."""
+        def run(*args):
+            code = f"import sys; sys.modules['numpy'] = None; from aie.cli import main; sys.exit(main({list(args)!r}))"
+            return subprocess.run([sys.executable, "-c", code], cwd=REPO, capture_output=True, text=True)
+        self.assertEqual(run("validate", "shorts/reel-05").returncode, 0)
+        self.assertIn("python module numpy", run("doctor").stdout)
+        r = run("run", "shorts/reel-04", "cut")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("needs the Python module 'numpy'", r.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
