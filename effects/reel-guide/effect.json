@@ -1,0 +1,28 @@
+{
+  "name": "reel-guide",
+  "title": "Free guide card",
+  "description": "A free-guide card: title, numbered items popping in, and a FREE stamp (reel-05 beat 10)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/guide.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "KICK": {"default": "FREE GUIDE", "description": "Small line on top"},
+    "TITLE": {"required": true, "description": "The guide's title; <br> breaks a line"},
+    "ITEMS": {"type": "list", "default": [], "description": "What's inside, numbered (up to 4 fit)"},
+    "STAMP": {"default": "FREE", "description": "Stamp in the corner (empty: none)"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 3.08, "min": 2.0, "max": 6.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["guide", "lead magnet", "cta", "free"],
+  "example": {
+    "TITLE": "Claude ka<br>WhatsApp agent",
+    "ITEMS": ["Kapso sign up + number", "Skills ka 1 command", "Ready prompt: booking agent", "WhatsApp rules: opt-in"]
+  },
+  "preview": "preview.jpg"
+}

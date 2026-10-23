@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-code: Code scrolling up a dark editor card, with a stamp slammed on at the end (reel-05 beat 8) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="chip" id="chip">{{CHIP}} <small>{{CHIP_SMALL}}</small></div>
+          <div class="card term" id="card" style="left:70px;top:300px;width:940px;height:600px;overflow:hidden">
+            <div class="mono" id="code" style="position:absolute;left:36px;top:30px;right:30px;font-weight:500;font-size:28px;line-height:1.55;color:#DFDDDF;white-space:pre"></div>
+          </div>
+          <div class="stamp green" id="stamp" style="left:560px;top:760px;font-size:44px;background:#0A0F12">{{STAMP}}</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      const CODE = {{CODE}};
+      gsap.set(["#chip", "#card", "#stamp"], { opacity: 0 });
+      R.$("#code").textContent = CODE.join("\n");
+      const h = R.$("#code").offsetHeight, end = Math.min(0, 540 - h);
+      R.pop("#card", 0.02, 0.22); R.pop("#chip", R.at(0.23));
+      tl.fromTo("#code", { y: 120 }, { y: end, duration: Math.max(0.3, DUR - 0.1), ease: "none" }, 0.04);
+      if (R.$("#stamp").textContent.trim()) R.slam("#stamp", R.at(0.8)); else R.$("#stamp").remove();
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

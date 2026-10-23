@@ -1,0 +1,32 @@
+{
+  "name": "reel-counter",
+  "title": "Count-up card",
+  "description": "A navy card where a big number counts up, with its unit and a small note (reel-05 beat 4)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/counter.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "KICK": {"default": "", "description": "Small line on top"},
+    "TO": {"type": "number", "required": true, "description": "The number it counts up to"},
+    "PREFIX": {"default": "", "description": "Before the number, e.g. ₹"},
+    "SUFFIX": {"default": "", "description": "After it, e.g. %"},
+    "UNIT": {"default": "", "description": "Line under the number"},
+    "NOTE": {"default": "", "description": "Small grey note (fine print, sources)"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 2.44, "min": 1.6, "max": 6.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["number", "stat", "counter", "pricing"],
+  "example": {
+    "KICK": "KAPSO · FREE PLAN",
+    "TO": 2000,
+    "UNIT": "messages / mahina",
+    "NOTE": "Meta ke WhatsApp charges alag · bheje + aaye, dono gine jaate hain"
+  },
+  "preview": "preview.jpg"
+}

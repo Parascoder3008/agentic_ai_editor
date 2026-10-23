@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-step: A numbered setup step: an app card, a cursor presses its button, a field types itself, a green done line (reel-05 beat 5) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="chip" id="chip">{{CHIP}} <small>{{CHIP_SMALL}}</small></div>
+          <div class="card" id="card" style="left:140px;top:300px;width:800px;height:600px">
+            <img id="lg" src="{{LOGO}}" style="position:absolute;left:40px;top:36px;width:84px;height:84px;border-radius:20px;object-fit:contain" />
+            <div id="app" style="position:absolute;left:146px;top:52px;font-weight:900;font-size:44px">{{APP}}</div>
+            <div class="btn" id="btn" style="left:40px;top:160px;width:720px;background:#1A9FD1;color:#FFFFFF">{{BUTTON}}</div>
+            <div class="lab" id="flab" style="position:absolute;left:44px;top:290px">{{FIELD_LABEL}}</div>
+            <div id="fld" class="mono" style="position:absolute;left:40px;top:336px;width:720px;height:96px;border-radius:18px;border:2px solid #3AB0D8;
+              background:#0B141A;font-weight:700;font-size:40px;padding:22px 26px;color:#FFFFFF;white-space:nowrap;overflow:hidden"><span id="fty"></span></div>
+            <div id="ok" class="ok" style="position:absolute;left:40px;top:470px;width:720px;height:88px;border-radius:18px;background:rgba(61,220,151,0.14);
+              border:2px solid #3DDC97;font-weight:900;font-size:40px;text-align:center;padding-top:18px">{{DONE}}</div>
+          </div>
+          <div id="cur" style="position:absolute;left:600px;top:540px;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:60px solid #FFFFFF;transform:rotate(-30deg);filter:drop-shadow(0 4px 6px #000)"></div>
+          <div class="src" id="srcField">{{FIELD_TEXT}}</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      gsap.set(["#chip", "#card", "#flab", "#fld", "#ok", "#cur"], { opacity: 0 });
+      if (!R.$("#lg").getAttribute("src")) { R.$("#lg").remove(); R.$("#app").style.left = "40px"; }
+      R.pop("#chip", R.at(0.035)); R.pop("#card", R.at(0.1), 0.3);
+      tl.fromTo("#cur", { opacity: 0, x: 220, y: 160 }, { opacity: 1, x: 0, y: -280, duration: 0.45, ease: "power2.out" }, R.at(0.26));
+      R.press("#btn", R.at(0.26) + 0.46);
+      tl.to("#cur", { opacity: 0, duration: 0.15 }, R.at(0.26) + 0.7);
+      R.pop("#flab", R.at(0.59), 0.2); R.pop("#fld", R.at(0.605), 0.22);
+      R.type("#fty", R.text("#srcField"), R.at(0.68), R.at(0.82));
+      R.pop("#ok", R.at(0.835), 0.26);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

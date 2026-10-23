@@ -6,12 +6,11 @@
   "engine": "hyperframes-template",
   "source": "templates/lf_lower.html",
   "formats": ["16:9"],
-  "params": {
-    "NAME": {"required": true, "description": "e.g. \"PARAS ARORA\""},
-    "ROLE": {"default": "", "description": "e.g. \"Founder · Exponential World AI\""}
-  },
+  "params": {"NAME": {"required": true, "description": "e.g. \"PARAS ARORA\""}, "ROLE": {"default": "", "description": "e.g. \"Founder · Exponential World AI\""}},
   "duration": {"default": 3.6, "min": 2.0, "max": 6.0},
   "origin": "Long-form AI editor video, 2026-10-07",
   "license": "own",
-  "tags": ["text", "name", "intro"]
+  "tags": ["text", "name", "intro"],
+  "example": {"NAME": "PARAS ARORA", "ROLE": "Founder · Exponential World AI"},
+  "preview": "preview.jpg"
 }

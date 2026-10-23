@@ -1,0 +1,29 @@
+{
+  "name": "reel-rule",
+  "title": "Rule card",
+  "description": "A warning chip slams on, then a rule card; an optional toggle switches on (reel-05 beat 9)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/rule.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "&#x26A0;&#xFE0F; 1 RULE", "description": "The amber warning chip"},
+    "RULE": {"required": true, "description": "The rule, big; <br> breaks a line, <span class=\"hl\">word</span> turns it blue"},
+    "SUB": {"default": "", "description": "Small line under it"},
+    "TOGGLE": {"default": "", "description": "If set, a switch with this label turns on (e.g. \"OPT-IN\")"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 3.52, "min": 2.0, "max": 6.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["rule", "warning", "compliance", "tip"],
+  "example": {
+    "RULE": "Customer ki<br><span class=\"hl\">PERMISSION</span> pehle",
+    "SUB": "OPT-IN BINA MESSAGE NAHI",
+    "TOGGLE": "OPT-IN"
+  },
+  "preview": "preview.jpg"
+}

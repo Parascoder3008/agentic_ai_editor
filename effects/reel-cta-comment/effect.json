@@ -1,0 +1,26 @@
+{
+  "name": "reel-cta-comment",
+  "title": "Comment-keyword CTA (Instagram)",
+  "description": "Instagram CTA: follow, comment a keyword, the guide lands in DM (reel-05 beat 11)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/cta-comment.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "FOLLOW": {"default": "+ FOLLOW", "description": "The follow button"},
+    "ASK": {"default": "COMMENT KARO", "description": "Line over the keyword"},
+    "KEYWORD": {"required": true, "description": "The word to comment"},
+    "SIZE": {"type": "number", "default": 130, "description": "Keyword font size; lower it for long words"},
+    "DM": {"default": "&#x2709; Guide &#x2192; aapke DM", "description": "What they get in DM"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 4.76, "min": 3.0, "max": 8.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["cta", "instagram", "comment", "dm"],
+  "example": {"KEYWORD": "AGENT"},
+  "preview": "preview.jpg"
+}

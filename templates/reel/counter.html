@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-counter: A navy card where a big number counts up, with its unit and a small note (reel-05 beat 4) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="card navy" id="card" style="left:170px;top:280px;width:740px;height:560px;text-align:center">
+            <div class="lab" style="margin-top:46px;color:#3AB0D8;font-size:32px">{{KICK}}</div>
+            <div id="cnt" style="margin-top:34px;font-weight:900;font-size:190px;letter-spacing:-0.03em;line-height:1;color:#FFFFFF;text-shadow:0 0 50px rgba(26,159,209,0.6)">0</div>
+            <div id="per" style="margin-top:22px;font-weight:800;font-size:48px">{{UNIT}}</div>
+            <div id="note" class="lab" style="margin:30px 40px 0;font-size:28px;letter-spacing:0.02em;color:#8696A0">{{NOTE}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      const TO = {{TO}}, PRE = "{{PREFIX}}", POST = "{{SUFFIX}}";
+      gsap.set(["#card", "#per", "#note"], { opacity: 0 });
+      R.pop("#card", 0.06, 0.3);
+      const c = { n: 0 }, fmt = (n) => PRE + Math.round(n).toLocaleString("en-IN") + POST;
+      R.$("#cnt").textContent = fmt(0);
+      tl.fromTo(c, { n: 0 }, { n: TO, duration: 0.65, ease: "power2.out", onUpdate: () => { R.$("#cnt").textContent = fmt(c.n); } }, R.at(0.3));
+      tl.to("#cnt", { scale: 1.12, duration: 0.12, yoyo: true, repeat: 1 }, R.at(0.3) + 0.63);
+      R.pop("#per", R.at(0.77), 0.22); R.pop("#note", R.at(0.84), 0.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

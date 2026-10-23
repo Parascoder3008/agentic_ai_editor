@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-guide: A free-guide card: title, numbered items popping in, and a FREE stamp (reel-05 beat 10) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="card navy" id="card" style="left:170px;top:250px;width:740px;height:620px">
+            <div class="lab" style="position:absolute;left:44px;top:40px;color:#3AB0D8">{{KICK}}</div>
+            <div style="position:absolute;left:44px;top:84px;right:44px;font-weight:900;font-size:60px;line-height:1.05">{{TITLE}}</div>
+            <div id="items" style="position:absolute;left:44px;top:270px;right:44px"></div>
+            <div class="stamp blue" id="stamp" style="left:470px;top:40px;font-size:40px">{{STAMP}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      const ITEMS = {{ITEMS}};
+      gsap.set(["#card", "#stamp"], { opacity: 0 });
+      R.pop("#card", R.at(0.045), 0.32);
+      ITEMS.forEach((t, i) => {
+        const el = document.createElement("div"), n = document.createElement("span");
+        el.className = "row"; n.textContent = String(i + 1); el.appendChild(n); el.appendChild(document.createTextNode("\u00a0 " + t));
+        R.$("#items").appendChild(el); gsap.set(el, { opacity: 0 }); R.pop(el, R.at(0.16) + i * 0.22, 0.24);
+      });
+      if (R.$("#stamp").textContent.trim()) R.slam("#stamp", R.at(0.58), 8); else R.$("#stamp").remove();
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

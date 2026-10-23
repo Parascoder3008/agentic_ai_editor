@@ -15,5 +15,12 @@
   "duration": {"default": 1.8, "min": 1.0, "max": 4.0},
   "origin": "Long-form AI editor video, 2026-10-07 (8 uses)",
   "license": "own",
-  "tags": ["text", "chapter", "step"]
+  "tags": ["text", "chapter", "step"],
+  "example": {
+    "NUM": "",
+    "STEP": "HOW I SET IT UP",
+    "TITLE": "1 skill + 2 GitHub repos",
+    "SUB": "video-use · HyperFrames — both free"
+  },
+  "preview": "preview.jpg"
 }

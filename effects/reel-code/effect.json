@@ -1,0 +1,48 @@
+{
+  "name": "reel-code",
+  "title": "Code scroll",
+  "description": "Code scrolling up a dark editor card, with a stamp slammed on at the end (reel-05 beat 8)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/code.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "", "description": "The pill title at the top of the stage, e.g. \"STEP 1\""},
+    "CHIP_SMALL": {"default": "", "description": "Smaller text after it, e.g. \"· Kapso\""},
+    "CODE": {"type": "list", "required": true, "description": "Code lines, top to bottom"},
+    "STAMP": {"default": "", "description": "Optional green stamp at the end, e.g. \"● AGENT LIVE\""},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 1.92, "min": 1.2, "max": 6.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["code", "build", "agent"],
+  "example": {
+    "CHIP": "CODE",
+    "CHIP_SMALL": "· Claude khud likhta hai",
+    "STAMP": "&#x25CF; AGENT LIVE",
+    "CODE": [
+      "// booking agent · runs on your WhatsApp number",
+      "on('message', async (msg) => {",
+      "  const ask = await claude.read(msg.text);",
+      "  if (ask.intent === 'booking') {",
+      "    const free = await calendar.freeSlots(ask.day);",
+      "    return wa.sendButtons(msg.from, free);",
+      "  }",
+      "  if (ask.slotPicked) {",
+      "    await calendar.book(ask.slotPicked, msg.from);",
+      "    return wa.send(msg.from, 'Booked ✅');",
+      "  }",
+      "  return wa.send(msg.from, await claude.reply(ask));",
+      "});",
+      "",
+      "// opt-in check before any template message",
+      "if (!contact.optedIn) return;",
+      "deploy({ number: process.env.WA_NUMBER });"
+    ]
+  },
+  "preview": "preview.jpg"
+}

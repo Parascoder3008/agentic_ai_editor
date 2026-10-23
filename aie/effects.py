@@ -6,8 +6,19 @@ check_placement() rejects unknown effects, missing required parameters, unknown 
 "choices" before anything renders. Effect.html() fills a hyperframes-template's {{PARAM}} slots for one use:
 defaults, the job's values, DUR (the duration) and "derived" values looked up from another parameter
 (kw's SIDE "right" -> SIDECSS "right: 80px; text-align: left;").
+
+Parameter types ("type" in effect.json, default "text"):
+  text    inserted as is (HTML allowed, e.g. <span class="hl">)
+  list    a JSON list, inserted as JSON for the template's script (messages, code lines, guide items)
+  number  a number
+  color   "#RRGGBB"
+  file    a file in the job folder (a real logo, a screenshot); copied next to the render as asset_<param><ext>
+"files" lists shared files the template loads (templates/reel/reel.css); they are copied next to it too.
+"zone": "stage" effects draw in the top half (the split layout's stage), "full" ones over the whole frame.
+"example" holds parameter values for the preview render and the tests.
 """
 import json
+import re
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -17,9 +28,12 @@ KINDS = {"overlay", "picture", "transition", "caption", "sound"}
 ENGINES = {"hyperframes-template", "hyperframes-composition", "ffmpeg", "python", "synth"}
 FORMATS = {"16:9", "9:16", "1:1"}
 EFFECT_KEYS = {"name", "title", "description", "kind", "engine", "source", "params", "duration", "formats",
-               "brand", "origin", "license", "tags", "preview", "derived"}
-PARAM_KEYS = {"required", "default", "choices", "description"}
-PLACEMENT_KEYS = {"effect", "at", "dur", "params", "id", "variants", "note"}
+               "brand", "origin", "license", "tags", "preview", "derived", "files", "example", "zone"}
+PARAM_KEYS = {"required", "default", "choices", "description", "type"}
+TYPES = {"text", "list", "number", "file", "color"}
+ZONES = {"stage", "full"}
+COLOR = re.compile(r"^#[0-9A-Fa-f]{6}$")
+PLACEMENT_KEYS = {"effect", "at", "dur", "params", "id", "variants", "word", "note"}
 
 
 def _num(x):
@@ -44,23 +58,51 @@ class Effect:
         """Parameter values for one use: defaults overlaid with what the job gave."""
         return {**{k: p["default"] for k, p in self.params.items() if "default" in p}, **given}
 
+    def _path(self, ref: str, templates: Path | None = None) -> Path:
+        """A file named in effect.json: under the "templates" setting, the repo, or this effect's folder."""
+        parts = Path(ref).parts
+        if templates is not None and parts[0] == "templates":
+            return Path(templates, *parts[1:])
+        return REPO / ref if (REPO / ref).exists() else self.dir / ref
+
     @property
     def source_path(self) -> Path:
-        src = self.data["source"]
-        return REPO / src if (REPO / src).exists() else self.dir / src
+        return self._path(self.data["source"])
+
+    def kind_of(self, param: str) -> str:
+        return self.params.get(param, {}).get("type", "text")
+
+    @staticmethod
+    def asset_name(param: str, value: str) -> str:
+        return f"asset_{param.lower()}{Path(value).suffix.lower()}" if value else ""
+
+    def files(self, given: dict, templates: Path | None = None) -> dict:
+        """{name next to the render: source} for the shared files and the file parameters (the latter relative to the
+        job folder, still to be resolved by the caller)."""
+        out = {Path(f).name: self._path(f, templates) for f in self.data.get("files", [])}
+        for k, v in self.filled(given).items():
+            if self.kind_of(k) == "file" and v:
+                out[self.asset_name(k, v)] = v
+        return out
+
+    def _text(self, k: str, v) -> str:
+        t = self.kind_of(k)
+        if t == "list":
+            return json.dumps(v, ensure_ascii=False).replace("</", "<\\/")
+        if t == "file":
+            return self.asset_name(k, v)
+        return str(v)
 
     def html(self, given: dict, dur: float, templates: Path | None = None) -> str:
         """The template with every {{SLOT}} filled for one use. templates overrides the folder of a source under
         templates/ (the "templates" machine setting)."""
         if self.data["engine"] != "hyperframes-template":
             raise ValueError(f"{self.name}: only hyperframes-template effects are filled from parameters")
-        v = {**self.filled(given), "DUR": str(dur)}
+        v = {k: self._text(k, x) for k, x in self.filled(given).items()}
+        v["DUR"] = str(dur)
         for name, d in self.data.get("derived", {}).items():
-            v[name] = d["map"][v[d["from"]]]
-        src = self.source_path
-        if templates is not None and Path(self.data["source"]).parts[0] == "templates":
-            src = Path(templates, *Path(self.data["source"]).parts[1:])
-        html = src.read_text(encoding="utf-8")
+            v[name] = d["map"][self.filled(given)[d["from"]]]
+        html = self._path(self.data["source"], templates).read_text(encoding="utf-8")
         for k, val in v.items():
             html = html.replace("{{" + k + "}}", str(val))
         if "{{" in html:
@@ -102,6 +144,10 @@ def _check_effect(d: Path, data, errs: list) -> None:
             errs.append(f"{w}: param {name!r} is required, so it can't have a default")
         if "choices" in p and "default" in p and p["default"] not in p["choices"]:
             errs.append(f"{w}: param {name!r} default {p['default']!r} is not one of its choices")
+        if p.get("type", "text") not in TYPES:
+            errs.append(f"{w}: param {name!r} type must be one of {sorted(TYPES)}")
+        elif "default" in p and _bad_value(p, p["default"]):
+            errs.append(f"{w}: param {name!r} default: {_bad_value(p, p['default'])}")
     dur = data.get("duration", {})
     if not isinstance(dur, dict) or not all(_num(v) and v > 0 for v in dur.values()) \
             or set(dur) - {"default", "min", "max"}:
@@ -119,6 +165,32 @@ def _check_effect(d: Path, data, errs: list) -> None:
         errs.append(f"{w}: derived must be an object")
     if data.get("brand") not in (None, "own"):
         errs.append(f'{w}: brand must be "own" (Paras-only) or left out')
+    if data.get("zone") not in (None, *ZONES):
+        errs.append(f"{w}: zone must be one of {sorted(ZONES)}")
+    files = data.get("files", [])
+    if not isinstance(files, list) or not all(isinstance(f, str) for f in files):
+        errs.append(f"{w}: files must be a list of paths")
+    else:
+        for f in files:
+            if not ((REPO / f).exists() or (d / f).exists()):
+                errs.append(f"{w}: file {f!r} not found (relative to the repo or the effect folder)")
+    ex = data.get("example", {})
+    if not isinstance(ex, dict) or set(ex) - set(params):
+        errs.append(f"{w}: example must give values for its own params only")
+    if data.get("engine") == "hyperframes-template" and "example" not in data:
+        errs.append(f"{w}: example is required (the values its preview and tests render with)")
+
+
+def _bad_value(spec: dict, v) -> str:
+    """Why v doesn't fit the parameter's type, or ""."""
+    t = spec.get("type", "text")
+    if t == "list":
+        return "" if isinstance(v, list) else "must be a list"
+    if t == "number":
+        return "" if _num(v) else "must be a number"
+    if t == "color":
+        return "" if isinstance(v, str) and COLOR.match(v) else 'must be a colour like "#1A9FD1"'
+    return "" if isinstance(v, (str, int, float)) and not isinstance(v, bool) else "must be text"
 
 
 class Catalog:
@@ -155,6 +227,8 @@ class Catalog:
         if fx is None:
             known = ", ".join(sorted(self.effects)) or "none yet"
             return errs + [f"{where}: unknown effect {name!r} (catalog has: {known})"]
+        if "word" in p and not (isinstance(p["word"], str) and p["word"].strip()):
+            errs.append(f"{where}: \"word\" is the spoken word the effect lands on")
         at, dur = p.get("at"), p.get("dur", fx.data.get("duration", {}).get("default"))
         if not _num(at) or at < 0:
             errs.append(f"{where}: \"at\" must be a time in seconds >= 0")
@@ -178,6 +252,8 @@ class Catalog:
                 errs.append(f"{where}: {name} needs parameter {k!r}")
             if k in given and "choices" in spec and given[k] not in spec["choices"]:
                 errs.append(f"{where}: {name} {k}={given[k]!r} is not one of {spec['choices']}")
+            if k in given and _bad_value(spec, given[k]):
+                errs.append(f"{where}: {name} {k} {_bad_value(spec, given[k])}")
         if fx.data.get("brand") == "own" and mode == "client":
             errs.append(f"{where}: {name} carries Paras's own brand and can't go into a client job")
         if aspect and fx.formats and aspect not in fx.formats:

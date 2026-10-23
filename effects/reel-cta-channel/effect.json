@@ -1,0 +1,25 @@
+{
+  "name": "reel-cta-channel",
+  "title": "Channel CTA (YouTube)",
+  "description": "YouTube CTA: a channel card with a JOIN button and a bouncing 'link in the description' arrow (reel-05 beat 12)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/cta-channel.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "KICK": {"default": "FREE GUIDE + DAILY AI TIPS", "description": "Small line on top"},
+    "TITLE": {"default": "WhatsApp channel", "description": "What to join"},
+    "BUTTON": {"default": "JOIN", "description": "The button"},
+    "LINE": {"default": "Link description mein", "description": "The line with the bouncing arrow"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 4.2, "min": 2.5, "max": 8.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["cta", "youtube", "whatsapp", "channel"],
+  "example": {},
+  "preview": "preview.jpg"
+}

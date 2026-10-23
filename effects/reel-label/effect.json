@@ -1,0 +1,24 @@
+{
+  "name": "reel-label",
+  "title": "Label pill",
+  "description": "A pill label over footage, e.g. 'SETUP = 3 STEPS' or a green 'BOOKED' (reel-05 full-frame chips)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/label.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "full",
+  "params": {
+    "TEXT": {"required": true, "description": "The label"},
+    "COLOR": {"default": "blue", "choices": ["blue", "green", "amber"], "description": "Blue; green for done/booked; amber for a warning"},
+    "Y": {"type": "number", "default": 250, "description": "Top of the pill"}
+  },
+  "derived": {"COLORCLASS": {"from": "COLOR", "map": {"blue": "", "green": "green", "amber": "amber"}}},
+  "duration": {"default": 1.05, "min": 0.6, "max": 4.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["label", "pill", "text", "status"],
+  "example": {"TEXT": "&#x2705; BOOKED · Fri 4 PM", "COLOR": "green"},
+  "preview": "preview.jpg"
+}

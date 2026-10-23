@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-cta-channel: YouTube CTA: a channel card with a JOIN button and a bouncing 'link in the description' arrow (reel-05 beat 12) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="card" id="card" style="left:140px;top:280px;width:800px;height:330px;text-align:center">
+            <div class="lab" style="margin-top:40px;color:#3AB0D8">{{KICK}}</div>
+            <div style="margin-top:20px;font-weight:900;font-size:68px">{{TITLE}}</div>
+            <div class="btn" id="join" style="left:250px;top:210px;width:300px;background:#1A9FD1;color:#FFFFFF">{{BUTTON}}</div>
+          </div>
+          <div id="desc" style="position:absolute;left:90px;right:90px;top:660px;text-align:center;font-weight:800;font-size:44px">{{LINE}} <span id="arr" style="display:inline-block;color:#3AB0D8">&#x2193;</span></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      gsap.set(["#card", "#desc"], { opacity: 0 });
+      R.pop("#card", R.at(0.07), 0.32); R.pop("#desc", R.at(0.18));
+      tl.to("#arr", { y: 14, duration: 0.25, yoyo: true, repeat: Math.max(1, Math.floor((R.at(0.78) - R.at(0.3)) / 0.25)), ease: "sine.inOut" }, R.at(0.3));
+      R.press("#join", R.at(0.81), { scale: 0.9 }).to("#join", { backgroundColor: "#3AB0D8", duration: 0.15 }, R.at(0.81) + 0.11);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

@@ -14,11 +14,12 @@
     "SIZE": {"default": "84", "description": "Main line font size in px"}
   },
   "derived": {
-    "SIDECSS": {"from": "SIDE", "map": {"right": "right: 80px; text-align: left;", "left": "left: 80px; text-align: left;",
-                                        "center": "left: 660px; text-align: center;"}}
+    "SIDECSS": {"from": "SIDE", "map": {"right": "right: 80px; text-align: left;", "left": "left: 80px; text-align: left;", "center": "left: 660px; text-align: center;"}}
   },
   "duration": {"default": 2.4, "min": 1.0, "max": 6.0},
   "origin": "Long-form AI editor video, 2026-10-07 (32 uses)",
   "license": "own",
-  "tags": ["text", "keyword", "callout"]
+  "tags": ["text", "keyword", "callout"],
+  "example": {"KICK": "Edited by", "MAIN": "Claude <span class=\"hl\">Opus 5.5</span>"},
+  "preview": "preview.jpg"
 }

@@ -1,0 +1,33 @@
+{
+  "name": "reel-terminal",
+  "title": "Terminal command",
+  "description": "A terminal card: a command types itself, then ticked result lines and an optional stamp (reel-05 beat 6)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/terminal.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "", "description": "The pill title at the top of the stage, e.g. \"STEP 1\""},
+    "CHIP_SMALL": {"default": "", "description": "Smaller text after it, e.g. \"· Kapso\""},
+    "TITLE": {"default": "CLAUDE CODE · TERMINAL", "description": "Label in the title bar"},
+    "COMMAND": {"required": true, "description": "The command that types itself after the $"},
+    "LINES": {"type": "list", "default": [], "description": "Result lines, each shown with a green tick"},
+    "STAMP": {"default": "", "description": "Optional stamp slammed on at the end, e.g. \"4 SKILLS\""},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 4.6, "min": 2.5, "max": 8.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["terminal", "command", "code", "install"],
+  "example": {
+    "CHIP": "STEP 2",
+    "CHIP_SMALL": "· 1 command",
+    "COMMAND": "npx skills add gokapso/agent-skills",
+    "LINES": ["integrate-whatsapp", "automate-whatsapp", "observe-whatsapp", "integrate-whatsapp-calling"],
+    "STAMP": "4 SKILLS"
+  },
+  "preview": "preview.jpg"
+}

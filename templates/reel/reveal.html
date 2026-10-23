@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-reveal: A mystery box that flips into a real logo, its name and its link (reel-05 beat 2) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="chip" id="chip">{{CHIP}}</div>
+          <div id="mys" style="position:absolute;left:400px;top:340px;width:280px;height:280px;border-radius:40px;border:4px dashed rgba(58,176,216,0.6);
+            text-align:center;font-weight:900;font-size:180px;line-height:270px;color:rgba(223,221,223,0.5)">?</div>
+          <img id="logo" src="{{LOGO}}" style="position:absolute;left:400px;top:330px;width:280px;height:280px;object-fit:contain;border-radius:56px;box-shadow:0 0 70px rgba(26,159,209,0.55)" />
+          <div id="name" style="position:absolute;left:90px;right:90px;top:650px;text-align:center;font-weight:900;font-size:110px;letter-spacing:-0.02em;white-space:nowrap">{{NAME}}</div>
+          <div id="url" class="lab" style="position:absolute;left:0;right:0;top:790px;text-align:center;font-size:32px;color:#3AB0D8">{{URL}}</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      gsap.set(["#chip", "#mys", "#logo", "#name", "#url"], { opacity: 0 });
+      const rv = Math.max(1.2, R.at(0.68));                       // shipped: 2.0 s into a 2.9 s beat
+      R.pop("#chip", R.at(0.085)); R.pop("#mys", R.at(0.18), 0.3);
+      tl.to("#mys", { rotation: 6, duration: 0.12, yoyo: true, repeat: 5 }, R.at(0.36));
+      R.hide("#mys", rv - 0.04, 0.06);
+      tl.fromTo("#logo", { opacity: 0, scale: 0.4, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2.2)" }, rv);
+      R.pop("#name", rv + 0.1); R.pop("#url", rv + 0.35, 0.2);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

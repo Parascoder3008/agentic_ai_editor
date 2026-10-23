@@ -1,0 +1,25 @@
+{
+  "name": "reel-hook",
+  "title": "Hook text",
+  "description": "Two-line hook text slammed onto the first frames over footage, then a slow push (reel-05 hook)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/hook.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "full",
+  "params": {
+    "LINE1": {"required": true, "description": "First line (white)"},
+    "LINE2": {"required": true, "description": "Second line (blue, the punch)"},
+    "SIZE1": {"type": "number", "default": 62, "description": "First line size"},
+    "SIZE2": {"type": "number", "default": 76, "description": "Second line size; it never wraps, so keep it short"},
+    "Y": {"type": "number", "default": 1250, "description": "Top of the text (keep it inside y 200-1560, clear of the face)"}
+  },
+  "duration": {"default": 3.2, "min": 1.0, "max": 6.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["hook", "title", "text", "opening"],
+  "example": {"LINE1": "CLAUDE ka apna", "LINE2": "WhatsApp NUMBER"},
+  "preview": "preview.jpg"
+}

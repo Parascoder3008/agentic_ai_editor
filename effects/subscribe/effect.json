@@ -11,5 +11,7 @@
   "brand": "own",
   "origin": "Long-form AI editor video, 2026-10-07",
   "license": "own",
-  "tags": ["cta", "youtube"]
+  "tags": ["cta", "youtube"],
+  "example": {},
+  "preview": "preview.jpg"
 }

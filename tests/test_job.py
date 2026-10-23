@@ -81,6 +81,13 @@ class JobTest(unittest.TestCase):
         self.assertFlags(lambda d: d.update(gates={"approved": True}), "unknown key 'approved'")
         self.assertFlags(lambda d: d.update(custom="edit/x.py"), "custom")
 
+    def test_stage_effects_only_over_split_beats(self):
+        chat = {"effect": "reel-chat", "at": 0.5, "dur": 2.0, "params": {"MESSAGES": [{"from": "in", "text": "hi"}]}}
+        self.assertEqual(errs(lambda d: d.update(effects=[{**chat, "at": 0.0}])), [])            # 0-2 is split
+        self.assertFlags(lambda d: d.update(effects=[chat]), "2.00-4.04 is a broll beat")
+        self.assertEqual(errs(lambda d: d.update(effects=[{**chat, "params": {**chat["params"], "BG": "none"}}])), [])
+        self.assertEqual(errs(lambda d: d.update(effects=[{"effect": "reel-stamp", "at": 2.5, "params": {"TEXT": "x"}}])), [])
+
     def test_layouts_and_graphics(self):
         self.assertFlags(lambda d: d.pop("layouts"), "the timeline uses split or face layouts")
         self.assertFlags(lambda d: d["timeline"][1].update(layout="face"), "layouts.face: the timeline uses")

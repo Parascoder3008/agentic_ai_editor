@@ -1,0 +1,24 @@
+{
+  "name": "reel-bubble",
+  "title": "Chat bubble",
+  "description": "A chat bubble popping over footage, as if the message just arrived (reel-05: her 2 AM message)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/bubble.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "full",
+  "params": {
+    "TEXT": {"required": true, "description": "The message"},
+    "SIDE": {"default": "in", "choices": ["in", "out"], "description": "\"in\": grey, from the left; \"out\": green, from the right"},
+    "Y": {"type": "number", "default": 210, "description": "Top of the bubble"}
+  },
+  "derived": {"SIDECSS": {"from": "SIDE", "map": {"in": "left:120px;", "out": "right:120px;left:auto;"}}},
+  "duration": {"default": 1.06, "min": 0.6, "max": 4.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["chat", "message", "bubble"],
+  "example": {"TEXT": "Friday ko slot hai? 🗓️"},
+  "preview": "preview.jpg"
+}

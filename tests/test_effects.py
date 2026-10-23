@@ -1,5 +1,6 @@
 import json
 import unittest
+from pathlib import Path
 
 from aie.effects import Catalog
 from aie.settings import REPO
@@ -59,6 +60,38 @@ class CatalogTest(unittest.TestCase):
         for i in uses:
             p = {"effect": names[i["tpl"]], "at": 0.0, "dur": i["dur"], "params": i.get("vars", {})}
             self.assertEqual(self.check(p), [], i["id"])
+
+    def test_every_example_fills_its_template(self):
+        """Each effect's example is a valid placement, fills every slot, and names files that exist."""
+        for name, fx in self.cat.effects.items():
+            with self.subTest(effect=name):
+                self.assertIn("example", fx.data)
+                p = {"effect": name, "at": 0.0, "params": fx.data["example"]}
+                self.assertEqual(self.cat.check_placement(p, "fx", "avatar", fx.formats[0]), [])
+                html = fx.html(fx.data["example"], fx.data.get("duration", {}).get("default", 2.0))
+                self.assertNotIn("{{", html)
+                for n, src in fx.files(fx.data["example"]).items():
+                    self.assertTrue((src if isinstance(src, Path) else REPO / src).exists(), f"{name}: {n}")
+                self.assertTrue((fx.dir / fx.data["preview"]).exists(), f"{name}: run tools/effect_preview.py")
+
+    def test_reel_family(self):
+        reel = {n: fx for n, fx in self.cat.effects.items() if n.startswith("reel-")}
+        self.assertEqual(len(reel), 17)
+        for n, fx in reel.items():
+            with self.subTest(effect=n):
+                self.assertEqual((fx.formats, fx.data["brand"], fx.data["kind"]), (["9:16"], "own", "overlay"))
+                self.assertIn(fx.data["zone"], ("stage", "full"))
+
+    def test_typed_parameters(self):
+        chat = {"effect": "reel-chat", "at": 1.0}
+        self.assertIn("must be a list", "\n".join(self.check({**chat, "params": {"MESSAGES": "hi"}}, aspect="9:16")))
+        self.assertIn("must be a number", "\n".join(self.check(
+            {"effect": "reel-counter", "at": 1.0, "params": {"TO": "2k"}}, aspect="9:16")))
+        html = self.cat.get("reel-chat").html({"MESSAGES": [{"from": "in", "text": "</script><b>x"}]}, 2.0)
+        self.assertIn('const MSGS = [{"from": "in", "text": "<\\/script><b>x"}];', html)   # can't close the script
+        files = self.cat.get("reel-reveal").files({"LOGO": "assets/Tool.PNG", "NAME": "T"})
+        self.assertEqual(sorted(files), ["asset_logo.png", "reel.css", "reel.js"])
+        self.assertIn('src="asset_logo.png"', self.cat.get("reel-reveal").html({"LOGO": "assets/Tool.PNG", "NAME": "T"}, 2.0))
 
     def test_broken_effect_files_are_reported(self):
         import tempfile

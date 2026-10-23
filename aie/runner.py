@@ -6,6 +6,8 @@ inputs haven't changed is skipped; --force runs it anyway.
   cut      -> build/pieces.json   frame-exact pieces in output order
   verify   -> build/piece_tx.json, build/joints.txt   every kept piece transcribed alone, every joint reviewed
   captions -> build/words.json, build/captions.ass    words on the output timeline, styled word-by-word captions
+  storyboard -> build/storyboard.html  every beat: words, layout, a framed still with every planned box; Paras approves
+                                       it (gates.storyboard_approved) before the picture renders
   package  -> build/publish/<PREFIX>_<variant>.srt, cover.jpg
   voice, sfx, music -> build/voice.wav, sfx.wav, music.wav
   mix      -> build/audio_<variant>.wav   one -14 LUFS file per variant
@@ -15,6 +17,7 @@ inputs haven't changed is skipped; --force runs it anyway.
                                        then the job's "custom" scripts in order
   picture  -> build/picture.mp4        graphics, effects and burned-in captions over the base
   deliver  -> build/publish/<PREFIX>_<variant>[_PREVIEW].mp4   each variant cut from the picture, muxed with its audio
+  qa       -> build/qa/qa.json, contact sheets   the 9.5 audit (aie/qa.py); "all" runs every stage through qa
 
 A stage brings the stages it reads up to date first (captions runs the cut if it changed). Renders are PREVIEW quality
 and named _PREVIEW until gates.final_approved is true. One render runs at a time on a machine.
@@ -485,7 +488,15 @@ def stage_effects(job: Job, settings: Settings, force: bool = False, log=print) 
             if not (d / f).exists():
                 shutil.copy(base / f, d / f)
         (d / "index.html").write_text(html, encoding="utf-8")
-        k = _key("effect", html, job.data["fps"], settings.data["hyperframes"])
+        copies = {}         # shared files (reel.css) and file parameters (logos, from the job folder)
+        for name, src in fx.files(p.get("params", {}), settings.path("templates")).items():
+            path = src if isinstance(src, Path) else settings.resolve(src, job.dir)
+            if not path.exists():
+                raise StageError(f"effects[{i}]: {fx.name} needs {path}, which isn't there")
+            copies[name] = path
+            shutil.copy(path, d / name)
+        k = _key("effect", html, job.data["fps"], settings.data["hyperframes"],
+                 [[n, hashlib.sha1(f.read_bytes()).hexdigest()] for n, f in sorted(copies.items())])
         out, stamp = d / "render.webm", d / ".rendered"
         if not (out.exists() and stamp.exists() and stamp.read_text() == k and not force):
             log(f"effects: rendering {d.name} ({fx.name}, {dur} s) ...")
@@ -585,9 +596,48 @@ def _overlays(job: Job, settings: Settings, log) -> tuple:
     return gfx, ass, fx
 
 
+def stage_storyboard(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    """build/storyboard.html + storyboard.json: every beat with its words, layout, a framed still and the planned boxes."""
+    from . import storyboard as sb
+    from .effects import Catalog
+    d, b = job.data, job.dir / "build"
+    built = _built_cut(job, settings, lambda *_: None)
+    words = stage_captions(job, settings, False, _dep(log))["words"] if "words" in (d.get("captions") or {}) else []
+    cat = Catalog.load(settings.path("effects"))
+    folder = b / "storyboard"
+    folder.mkdir(parents=True, exist_ok=True)
+    rows, lay = [], d.get("layouts", {})
+    for n, beat in enumerate(sb.beats(d, built and built["pieces"]), 1):
+        t0, t1 = beat["t"]
+        src = _source(job, settings, beat["src"])
+        mid = beat["in"] + (t1 - t0) / 2 * beat["speed"]
+        still = sb.frame_for(beat["layout"], lay, sb.grab(src, mid), d["size"], beat["zoom"])
+        items = sb.boxes(d, beat, cat)
+        name = f"beat_{n:02d}.jpg"
+        sb.draw(still, items, d["size"], 360 if d["size"][1] > d["size"][0] else 640, settings.path("fonts")).save(
+            folder / name, quality=86)
+        rows.append({"n": n, "t": [t0, t1], "layout": beat["layout"], "src": beat["src"], "in": beat["in"],
+                     "words": " ".join(w["text"] for w in words if t0 <= w["start"] < t1),
+                     "on_screen": [label for label, _, _ in items],
+                     "sfx": [c for c in (d.get("sfx") or {}).get("cues", []) if "t" in c and t0 <= c["t"] < t1],
+                     "note": beat["note"], "still": f"storyboard/{name}"})
+    sb.write(b / "storyboard.json", rows)
+    (b / "storyboard.html").write_text(sb.page(d, rows), encoding="utf-8")
+    state = "approved" if d.get("gates", {}).get("storyboard_approved") else "waiting for approval"
+    log(f"storyboard: {len(rows)} beats -> {b / 'storyboard.html'} ({state})")
+    return {"beats": rows}
+
+
+def _storyboard_gate(job: Job):
+    if not job.data.get("gates", {}).get("storyboard_approved", False):
+        raise StageError("the storyboard isn't approved yet: review build/storyboard.html (python -m aie run "
+                         f"{job.dir.name} storyboard), then set gates.storyboard_approved to true in job.json")
+
+
 def stage_picture(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
     """The master picture: build/picture.mp4, plus build/picture_<variant>.mp4 for a variant whose effects differ."""
     from . import picture
+    _storyboard_gate(job)
     base = stage_base(job, settings, False, _dep(log))
     gfx, ass, fx = _overlays(job, settings, log)
     built = _built_cut(job, settings, lambda *_: None)
@@ -662,10 +712,142 @@ def stage_deliver(job: Job, settings: Settings, force: bool = False, log=print) 
     return report
 
 
-STAGES = {"cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "package": stage_package,
+def stage_qa(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    """The 9.5 audit of the delivered files (see aie/qa.py) -> build/qa/qa.json and contact sheets."""
+    from . import qa
+    from .effects import Catalog
+    dl = stage_deliver(job, settings, False, _dep(log))
+    d, b = job.data, job.dir / "build"
+    built = _built_cut(job, settings, lambda *_: None)
+    pieces = built["pieces"] if built else None
+    length, fps, size = _length(job, built), d["fps"], d["size"]
+    out = b / "qa"
+    out.mkdir(parents=True, exist_ok=True)
+    cap = d.get("captions") or {}
+    words = (_read(b / "words.json") or {}).get("words", []) if "words" in cap else []
+    voice = qa._pcm(b / "voice.wav")
+    C = {}
+
+    exp = {n: sum(e - s for s, e in v.get("ranges", [[0.0, length]])) + v.get("freeze", 0.0) for n, v in d["variants"].items()}
+    bad = [f"{n} {v['seconds']:.2f} s (expected {exp[n]:.2f})" for n, v in dl["variants"].items()
+           if abs(v["seconds"] - exp[n]) > 1.5 / fps]
+    C["length"] = qa.check("FAIL" if bad else "OK", "length", "; ".join(bad) or
+                           ", ".join(f"{n} {v['seconds']:.2f} s" for n, v in dl["variants"].items()))
+    bad = [f"{n} {v['lufs']:.1f} LUFS / {v['true_peak']:.1f} dBTP" for n, v in dl["variants"].items()
+           if abs(v["lufs"] + 14) > 0.5 or v["true_peak"] > -1.5]
+    C["loudness"] = qa.check("FAIL" if bad else "OK", "loudness", "; ".join(bad) or
+                             ", ".join(f"{n} {v['lufs']:.1f} LUFS, {v['true_peak']:.1f} dBTP" for n, v in dl["variants"].items()))
+
+    finals, rows, heard, sheets = {}, {}, {}, []
+    for n, v in d["variants"].items():
+        ranges = v.get("ranges", [[0.0, length]])
+        finals[n] = qa._pcm(dl["variants"][n]["path"])
+        items = qa.stretches(d, pieces, ranges, length)
+        rows[n] = qa.sync(finals[n], voice, items)
+        heard[n] = qa.heard(finals[n], voice, items, settings.data["whisper_model"], d.get("language", "hi"))
+        video = Path(dl["variants"][n]["path"])
+        at = qa.cuts(d, pieces, ranges)
+        sheets.append(qa.joints_sheet(video, at, size, out / f"{n}_joints.jpg"))
+        f = qa.out_map(ranges)
+        marks = sorted({round(o, 2) for o in [f(e["at"] + 0.4) for e in d.get("effects", [])] +
+                        [f((s["t"][0] + s["t"][1]) / 2) for s in d.get("timeline", [])] if o is not None})
+        sheets.append(qa.zones_sheet(video, marks or [exp[n] * k / 8 for k in range(8)], size, out / f"{n}_sheet.jpg"))
+    lags = [abs(r["lag_ms"]) for rs in rows.values() for r in rs]
+    worst = max(lags) if lags else None
+    C["sync"] = qa.check("FAIL" if worst is not None and worst > 10 else ("OK" if lags else "WARN"), "sync",
+                         f"max |lag| {worst} ms over {len(lags)} stretches" if lags else "no voiced stretch to line up",
+                         rows=rows)
+
+    if pieces:
+        hs = qa.holes(voice, [p["out0"] for p in pieces[1:]])
+        C["joints"] = qa.check("FAIL" if hs else "OK", "joints", f"{len(hs)} hole(s) in the room tone at a cut" if hs
+                               else f"{len(pieces) - 1} audio joints, no hole", holes=hs)
+    if any(h is None for h in heard.values()):
+        C["words"] = qa.check("NOT RUN", "words", "needs faster-whisper (run QA on the PC)")
+    else:
+        lost = [(n, r) for n, rs in heard.items() for r in rs if r["lost"]]
+        C["words"] = qa.check("FAIL" if lost else "OK", "words", f"{len(lost)} stretch(es) lose words in the mix" if lost
+                              else "every word the voice says is heard in the final mix", heard=heard)
+
+    canon = list((cap.get("text") or {}).get("replace", {}).values()) + d.get("qa", {}).get("words", [])
+    sp = qa.spelling(words, canon)
+    C["spelling"] = qa.check("FAIL" if sp else "OK", "spelling", f"{len(sp)} finding(s)" if sp else
+                             f"{len(words)} caption words against {len(set(canon))} names", findings=sp)
+
+    zone = []
+    if size[1] > size[0]:
+        if cap.get("burn", True):
+            zone += [f"caption style {z['style']} box {z['box']}" for z in qa.caption_zone(cap, size)]
+        cat = Catalog.load(settings.path("effects"))
+        for i, p in enumerate(d.get("effects", [])):
+            fx = cat.get(p["effect"])
+            webm = next(iter(sorted((b / "effects").glob(f"{i:02d}_*/render.webm"))), None)
+            if fx and webm and fx.data.get("zone"):
+                dur = p.get("dur", fx.data.get("duration", {}).get("default", 1.0))
+                zone += [f"effects[{i}] {fx.name}: {m}" for m in
+                         qa.effect_zone(fx.data["zone"], qa.alpha_box(webm, [dur * k for k in (0.2, 0.5, 0.85)], size))]
+    C["safe_zone"] = qa.check("FAIL" if zone else "OK", "safe_zone", "; ".join(zone) or
+                              "captions and effects inside x 90-930, y 200-1560" if size[1] > size[0] else "16:9: n/a")
+
+    ow = qa.on_word(d.get("effects", []), words)
+    off = [r for r in ow if r["off"] is None or not -0.15 <= r["off"] <= 0.2]
+    C["on_word"] = qa.check("FAIL" if off else "OK", "on_word",
+                            "; ".join(f"effects[{r['effect']}] '{r['word']}' " + ("not heard within 2 s" if r["off"] is None
+                                      else f"{r['off']:+.2f} s off") for r in off) or f"{len(ow)} effect(s) placed on words",
+                            rows=ow)
+
+    if d["mode"] == "client":
+        bad = [n for n, s in d["sources"].items() if s.get("rights") not in ("client", "generated", "licensed")]
+        C["rights"] = qa.check("FAIL" if bad else "OK", "rights", f"rights not client/generated/licensed: {', '.join(bad)}"
+                               if bad else "every source is the client's, generated or licensed")
+
+    texts = [("title", d.get("title", "")), ("captions", " ".join(w["text"] for w in words))]
+    if d.get("script") and (job.dir / d["script"]).exists():
+        texts.append(("script", (job.dir / d["script"]).read_text(encoding="utf-8")))
+    for i, p in enumerate(d.get("effects", [])):
+        texts += [(f"effects[{i}].{k}", json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v)
+                  for k, v in p.get("params", {}).items()]
+    hits = qa.claims(texts, d.get("qa", {}).get("cleared", []))
+    C["compliance"] = qa.check("FAIL" if hits else "OK", "compliance",
+                               "; ".join(f"{h['where']}: \"{h['phrase']}\"" for h in hits) + " (blocked: Paras reviews; "
+                               "a phrase he clears goes in qa.cleared)" if hits else "no income, return or guarantee claims",
+                               hits=hits)
+
+    first = [e["at"] for e in d.get("effects", [])] + ([0.0] if d.get("graphics") else []) + \
+            ([w["start"] for w in words[:1]] if cap.get("burn", True) and words else [])
+    C["hook"] = qa.check("OK" if first and min(first) <= 1.0 else "WARN", "hook",
+                         f"first text or graphic at {min(first):.2f} s" if first else "nothing on screen in the first second")
+    still = {n: qa.still_spans(Path(v["path"]), size) for n, v in dl["variants"].items()}
+    ends = {n: exp[n] - d["variants"][n].get("freeze", 0.0) for n in d["variants"]}      # the end freeze is meant
+    long_ = [f"{n} {a:.1f}-{min(b_, ends[n]):.1f} s" for n, spans in still.items() for a, b_ in spans
+             if min(b_, ends[n]) - a >= 3.0]
+    C["static"] = qa.check("WARN" if long_ else "OK", "static", ("picture held still: " + "; ".join(long_)) if long_
+                           else "no picture held still for over 3 s")
+
+    if "timeline" in d:
+        an = qa.anchors(d["timeline"], words) if words else []
+        C["anchors"] = qa.check("WARN" if an else "OK", "anchors", "; ".join(
+            f"cut {a['cut']:.2f} s: next word '{a['next_word']}' {a['off']:+.2f} s" for a in an) or
+            ("every cut on a spoken word" if words else "no words to check against"))
+        ru = qa.reused(d["timeline"])
+        C["footage"] = qa.check("WARN" if ru else "OK", "footage", "; ".join(
+            f"{r['src']} {r['window'][0]}-{r['window'][1]} s shown at {r['at'][0]:.2f} and {r['at'][1]:.2f} s" for r in ru)
+            or "no B-roll window shown twice")
+
+    sc, ok = qa.score(C)
+    rep = {"score": sc, "passed": ok, "final": dl["final"], "checks": C, "sheets": [str(x) for x in sheets]}
+    qa.write(out / "qa.json", rep)
+    for line in qa.report_lines(rep):
+        log(line)
+    log(f"qa: -> {out / 'qa.json'} (look at the contact sheets too: {', '.join(x.name for x in sheets)})")
+    return rep
+
+
+STAGES = {"cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "storyboard": stage_storyboard,
+          "package": stage_package,
           "voice": stage_voice, "sfx": stage_sfx, "music": stage_music, "mix": stage_mix,
           "graphics": stage_graphics, "effects": stage_effects, "base": stage_base, "picture": stage_picture,
-          "deliver": stage_deliver}
+          "deliver": stage_deliver, "qa": stage_qa, "all": stage_qa}
 
 
 def run(job: Job, settings: Settings, stage: str, force: bool = False, log=print):

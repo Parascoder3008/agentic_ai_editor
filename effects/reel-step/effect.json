@@ -1,0 +1,37 @@
+{
+  "name": "reel-step",
+  "title": "Setup step",
+  "description": "A numbered setup step: an app card, a cursor presses its button, a field types itself, a green done line (reel-05 beat 5)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/step.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "", "description": "The pill title at the top of the stage, e.g. \"STEP 1\""},
+    "CHIP_SMALL": {"default": "", "description": "Smaller text after it, e.g. \"· Kapso\""},
+    "APP": {"required": true, "description": "App name on the card"},
+    "LOGO": {"type": "file", "default": "", "description": "Its real logo (optional)"},
+    "BUTTON": {"default": "Sign up &#x2192;", "description": "The button the cursor presses"},
+    "FIELD_LABEL": {"default": "", "description": "Label over the field"},
+    "FIELD_TEXT": {"required": true, "description": "What types into the field (mask private numbers)"},
+    "DONE": {"default": "&#x2713; Done", "description": "The green line at the end"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 4.24, "min": 3.0, "max": 8.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["step", "setup", "signup", "tutorial"],
+  "example": {
+    "CHIP": "STEP 1",
+    "CHIP_SMALL": "· Kapso",
+    "APP": "Kapso",
+    "LOGO": "shorts/reel-05/gfx/assets/kapso.png",
+    "FIELD_LABEL": "WHATSAPP BUSINESS NUMBER",
+    "FIELD_TEXT": "+91 ●●●●● ●●●●●",
+    "DONE": "&#x2713; Number linked"
+  },
+  "preview": "preview.jpg"
+}

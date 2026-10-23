@@ -19,9 +19,11 @@ MODES = {"footage", "avatar", "client", "longform"}
 LAYOUTS = {"hook", "broll", "face", "split", "card", "full", "screen", "cam"}
 FPS = {24, 25, 30, 50, 60}
 TOP_KEYS = {"id", "title", "mode", "fps", "size", "language", "sources", "script", "cut", "timeline", "variants",
-            "captions", "package", "layouts", "graphics", "effects", "sfx", "music", "mix", "custom", "gates", "notes"}
+            "captions", "package", "layouts", "graphics", "effects", "sfx", "music", "mix", "custom", "gates", "qa", "notes"}
 GRAPHICS_KEYS = {"composition", "render", "offset", "pad"}
-SOURCE_KEYS = {"path", "offset", "voice_offset", "note"}
+SOURCE_KEYS = {"path", "offset", "voice_offset", "rights", "note"}
+RIGHTS = {"own", "client", "generated", "licensed"}
+QA_KEYS = {"words", "cleared"}
 SEGMENT_KEYS = {"t", "layout", "src", "in", "speed", "zoom", "note"}
 PIECE_KEYS = {"src", "in", "out", "text", "zoom", "tag", "note"}
 SPAN_CUT_KEYS = {"mode", "source", "keep", "drop", "gap", "pad_in", "pad_out", "silence_db", "speech_db", "min_island"}
@@ -96,6 +98,24 @@ class _Check:
         return True
 
 
+def _stage_check(catalog: Catalog, p, where: str, timeline) -> list:
+    """A stage effect draws its panel over the top half: on a timeline job that's only right over split beats."""
+    fx = catalog.get(p.get("effect")) if isinstance(p, dict) else None
+    if not fx or fx.data.get("zone") != "stage" or not isinstance(timeline, list) or not _num(p.get("at")):
+        return []
+    if fx.filled(p.get("params", {}) if isinstance(p.get("params"), dict) else {}).get("BG") == "none":
+        return []
+    a = p["at"]
+    b = a + (p.get("dur") or fx.data.get("duration", {}).get("default", 0))
+    errs = []
+    for s in timeline:
+        if isinstance(s, dict) and s.get("layout") != "split" and isinstance(s.get("t"), list) and len(s["t"]) == 2 \
+                and _num(s["t"][0]) and _num(s["t"][1]) and s["t"][0] < b - 1e-6 and s["t"][1] > a + 1e-6:
+            errs.append(f"{where}: {fx.name} draws the stage panel over the top half, but {s['t'][0]:.2f}-{s['t'][1]:.2f} "
+                        f"is a {s.get('layout')} beat (place it on split beats, or set \"BG\": \"none\")")
+    return errs
+
+
 def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, settings: Settings | None = None,
              check_files: bool = False) -> list:
     c = _Check()
@@ -132,6 +152,8 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
         for k in ("offset", "voice_offset"):
             if k in s and not _num(s[k]):
                 c.err(f"{w}.{k}", "must be a number of seconds")
+        if "rights" in s and s["rights"] not in RIGHTS:
+            c.err(f"{w}.rights", f"one of {sorted(RIGHTS)}: who owns the footage (client jobs: client, generated or licensed)")
 
     if "script" in data and not isinstance(data["script"], str):
         c.err("script", "must be a path to the script text")
@@ -278,6 +300,7 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
             for vn in (p.get("variants", []) if isinstance(p, dict) else []):
                 if vn not in variants:
                     c.err(f"effects[{i}].variants", f"{vn!r} is not one of the job's variants")
+            c.errors += _stage_check(catalog, p, f"effects[{i}]", data.get("timeline"))
 
     if "sfx" in data:
         c.errors += schema.check_sfx(data["sfx"], data)
@@ -293,6 +316,14 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
         c.err("gates", "must be {\"storyboard_approved\": true/false, \"final_approved\": true/false}")
     else:
         c.keys(gates, GATE_KEYS, "gates")
+    q = data.get("qa", {})
+    if not isinstance(q, dict):
+        c.err("qa", 'must be {"words": [names spelled right], "cleared": [phrases Paras cleared]}')
+    else:
+        c.keys(q, QA_KEYS, "qa")
+        for k in QA_KEYS & set(q):
+            if not (isinstance(q[k], list) and all(isinstance(x, str) for x in q[k])):
+                c.err(f"qa.{k}", "must be a list of text")
 
     if check_files and job_dir is not None:
         settings = settings or load_settings()

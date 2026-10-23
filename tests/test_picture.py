@@ -236,18 +236,22 @@ class SyntheticRenderTest(unittest.TestCase):
         cls.d = d = Path(tempfile.mkdtemp()).resolve()
         fx = d / "effects/box"
         fx.mkdir(parents=True)
-        (fx / "box.html").write_text("<div data-duration=\"{{DUR}}\">{{WORD}}</div>")
+        (fx / "box.html").write_text("<div data-duration=\"{{DUR}}\">{{WORD}}<img src=\"{{LOGO}}\"></div>")
+        (fx / "box.css").write_text("div {}")
         (fx / "effect.json").write_text(json.dumps({
             "name": "box", "title": "Test box", "kind": "overlay", "engine": "hyperframes-template",
-            "source": "box.html", "formats": ["9:16"], "params": {"WORD": {"default": "hi"}},
-            "duration": {"default": 1.0}, "origin": "test", "license": "own"}))
+            "source": "box.html", "files": ["box.css"], "formats": ["9:16"],
+            "params": {"WORD": {"default": "hi"}, "LOGO": {"type": "file", "required": True}},
+            "duration": {"default": 1.0}, "origin": "test", "license": "own", "example": {"LOGO": "logo.png"}}))
         (d / "aie.local.json").write_text(json.dumps({"min_free_gb": 0, "effects": str(d / "effects")}))
         cls.s = load_settings(d / "aie.local.json")
         j = d / "job"
         (j / "gfx").mkdir(parents=True)
+        (j / "logo.png").write_bytes(b"PNG")
         # the avatar: a green 1920x1080 frame with a white box (where both crops look) and a 440 Hz voice
         ff("-f", "lavfi", "-i", "color=c=0x22AA44:s=1920x1080:r=25:d=4", "-f", "lavfi", "-i",
-           "sine=frequency=440:duration=4:sample_rate=48000", "-vf", "drawbox=x=900:y=300:w=120:h=120:c=white:t=fill",
+           "aevalsrc='0.3*sin(2*PI*440*t)*gt(sin(2*PI*1.7*t+1.3*sin(2*PI*0.4*t)),0.2)':s=48000:d=4",   # voice-like bursts
+           "-vf", "drawbox=x=900:y=300:w=120:h=120:c=white:t=fill",
            "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest", j / "avatar.mp4")
         ff("-f", "lavfi", "-i", "color=c=0x2244CC:s=1080x1920:r=25:d=2", "-c:v", "libx264", "-pix_fmt", "yuv420p",
            j / "hook.mp4")
@@ -266,12 +270,14 @@ class SyntheticRenderTest(unittest.TestCase):
             "variants": {"instagram": {"ranges": [[0.0, 3.0]], "freeze": 0.4},
                          "youtube": {"ranges": [[0.0, 1.0], [2.0, 3.0]]}},
             "graphics": {"render": "gfx/render.webm"},
-            "effects": [{"effect": "box", "at": 2.0, "variants": ["youtube"]}],
+            "effects": [{"effect": "box", "at": 2.0, "variants": ["youtube"], "params": {"LOGO": "logo.png"}}],
             "mix": {"voice": "avatar", "tail": 0.5},
+            "gates": {"storyboard_approved": True, "final_approved": False},
         })
 
         def stand_in(settings, folder, fps, out):      # what HyperFrames would render: a white square for 1 s
-            assert "<div data-duration=\"1.0\">hi</div>" == (folder / "index.html").read_text()
+            assert (folder / "index.html").read_text() == "<div data-duration=\"1.0\">hi<img src=\"asset_logo.png\"></div>"
+            assert (folder / "box.css").exists() and (folder / "asset_logo.png").read_bytes() == b"PNG"
             ff("-f", "lavfi", "-i", "color=c=white@0.0:s=1080x1920:r=25:d=1,format=yuva420p,"
                "drawbox=x=440:y=1600:w=200:h=200:c=white@1.0:t=fill:replace=1", "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", out)
 
@@ -322,6 +328,39 @@ class SyntheticRenderTest(unittest.TestCase):
         log = []
         runner.run(load_job(self.d / "job", self.s), self.s, "deliver", log=log.append)
         self.assertEqual(log, ["deliver: up to date"])
+
+    def test_storyboard(self):
+        rep = runner.run(load_job(self.d / "job", self.s), self.s, "storyboard", log=lambda *_: None)
+        b = self.d / "job/build"
+        self.assertEqual([r["layout"] for r in rep["beats"]], ["hook", "split", "face"])
+        self.assertTrue(all((b / r["still"]).exists() for r in rep["beats"]))
+        self.assertIn("#1 Test box @2.00", rep["beats"][2]["on_screen"][-1])
+        page = (b / "storyboard.html").read_text()
+        self.assertIn("3 beats", page)
+        from PIL import Image
+        still = Image.open(b / rep["beats"][1]["still"]).convert("RGB")      # split: void outside, avatar in the card
+        k = still.width / 1080
+        self.assertTrue(all(abs(a - c) < 20 for a, c in zip(still.getpixel((int(40 * k), int(1000 * k))), (12, 14, 15))))
+        self.assertTrue(all(abs(a - c) < 30 for a, c in zip(still.getpixel((int(540 * k), int(1800 * k))), (0x22, 0xAA, 0x44))))
+
+    def test_gate_holds_the_picture_until_the_storyboard_is_approved(self):
+        job = load_job(self.d / "job", self.s)
+        job.data["gates"]["storyboard_approved"] = False
+        with self.assertRaisesRegex(runner.StageError, "storyboard isn't approved"):
+            runner.run(job, self.s, "picture", log=lambda *_: None)
+
+    def test_qa_audit(self):
+        log = []
+        rep = runner.run(load_job(self.d / "job", self.s), self.s, "qa", log=log.append)
+        c = rep["checks"]
+        for name in ("length", "loudness", "sync", "spelling", "safe_zone", "on_word", "compliance", "hook"):
+            with self.subTest(check=name):
+                self.assertEqual(c[name]["status"], "OK", c[name]["summary"])
+        self.assertLessEqual(max(abs(r["lag_ms"]) for rs in c["sync"]["rows"].values() for r in rs), 10)
+        self.assertIn(c["words"]["status"], ("OK", "NOT RUN"))
+        self.assertTrue(rep["passed"])
+        self.assertTrue(all(Path(x).exists() for x in rep["sheets"]))
+        self.assertTrue(log[0].startswith("QA 10.0/10  PASS") or log[0].startswith("QA 9."), log[0])
 
 
 class LockTest(unittest.TestCase):

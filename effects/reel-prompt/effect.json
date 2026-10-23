@@ -1,0 +1,32 @@
+{
+  "name": "reel-prompt",
+  "title": "Prompt typed",
+  "description": "A prompt typed into an app's message box, then the send button pressed (reel-05 beat 7)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/prompt.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "", "description": "The pill title at the top of the stage, e.g. \"STEP 1\""},
+    "CHIP_SMALL": {"default": "", "description": "Smaller text after it, e.g. \"· Kapso\""},
+    "APP": {"default": "Claude Code", "description": "App name on the card"},
+    "LOGO": {"type": "file", "default": "", "description": "Its real logo (optional)"},
+    "PROMPT": {"required": true, "description": "The prompt that types itself"},
+    "SIZE": {"type": "number", "default": 50, "description": "Prompt font size; lower it for long prompts"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 4.88, "min": 2.5, "max": 10.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["prompt", "claude", "chat", "ai"],
+  "example": {
+    "CHIP": "STEP 3",
+    "CHIP_SMALL": "· Claude ko bolo",
+    "LOGO": "shorts/reel-05/gfx/assets/claude.svg",
+    "PROMPT": "Mere business ke liye WhatsApp agent banao jo bookings sambhale"
+  },
+  "preview": "preview.jpg"
+}

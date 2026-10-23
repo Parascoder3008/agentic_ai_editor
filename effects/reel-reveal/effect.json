@@ -1,0 +1,25 @@
+{
+  "name": "reel-reveal",
+  "title": "Tool reveal",
+  "description": "A mystery box that flips into a real logo, its name and its link (reel-05 beat 2)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/reveal.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "FREE TOOL", "description": "Pill title"},
+    "LOGO": {"type": "file", "required": true, "description": "The tool's real logo (never redrawn), in the job folder"},
+    "NAME": {"required": true, "description": "The tool's name, big"},
+    "URL": {"default": "", "description": "Its address, small"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 2.92, "min": 1.8, "max": 6.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["logo", "reveal", "tool", "brand"],
+  "example": {"LOGO": "shorts/reel-05/gfx/assets/kapso.png", "NAME": "Kapso", "URL": "kapso.com"},
+  "preview": "preview.jpg"
+}

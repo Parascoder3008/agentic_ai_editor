@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-terminal: A terminal card: a command types itself, then ticked result lines and an optional stamp (reel-05 beat 6) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="stage" class="{{BG}}">
+          <div class="chip" id="chip">{{CHIP}} <small>{{CHIP_SMALL}}</small></div>
+          <div class="card term" id="term" style="left:70px;top:300px;width:940px;height:600px">
+            <div style="position:absolute;left:30px;top:28px"><span class="dot" style="background:#F85149"></span><span class="dot" style="background:#E2A33B"></span><span class="dot" style="background:#3DDC97"></span></div>
+            <div class="lab" style="position:absolute;right:34px;top:24px;color:#3AB0D8">{{TITLE}}</div>
+            <div class="mono" style="position:absolute;left:36px;top:92px;right:30px;font-weight:700;font-size:34px;line-height:1.5;white-space:pre-wrap"><span style="color:#3AB0D8">$ </span><span id="cmd"></span></div>
+            <div class="mono" id="out" style="position:absolute;left:36px;top:236px;right:30px;font-weight:700;font-size:31px;line-height:1.65;color:#DFDDDF"></div>
+          </div>
+          <div class="stamp blue" id="stamp" style="left:640px;top:800px;font-size:40px;background:#0A0F12">{{STAMP}}</div>
+          <div class="src" id="srcCmd">{{COMMAND}}</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      const LINES = {{LINES}};
+      gsap.set(["#chip", "#term", "#stamp"], { opacity: 0 });
+      R.pop("#chip", R.at(0.033)); R.pop("#term", R.at(0.07), 0.3);
+      R.type("#cmd", R.text("#srcCmd"), R.at(0.21), R.at(0.55));
+      LINES.forEach((t, i) => {
+        const el = document.createElement("div"), ok = document.createElement("span");
+        ok.className = "ok"; ok.textContent = "\u2713 "; el.appendChild(ok); el.appendChild(document.createTextNode(t));
+        R.$("#out").appendChild(el); gsap.set(el, { opacity: 0 }); R.pop(el, R.at(0.58) + i * 0.14, 0.18);
+      });
+      if (R.$("#stamp").textContent.trim()) R.slam("#stamp", R.at(0.75)); else R.$("#stamp").remove();
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

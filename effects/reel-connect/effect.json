@@ -1,0 +1,34 @@
+{
+  "name": "reel-connect",
+  "title": "Two logos connected",
+  "description": "Two real logos joined by a glowing pipe, with data packets running across (reel-05 beat 3)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/connect.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "", "description": "The pill title at the top of the stage, e.g. \"STEP 1\""},
+    "CHIP_SMALL": {"default": "", "description": "Smaller text after it, e.g. \"· Kapso\""},
+    "LEFT_LOGO": {"type": "file", "required": true, "description": "Real logo on the left"},
+    "LEFT_NAME": {"required": true, "description": "Its name"},
+    "RIGHT_LOGO": {"type": "file", "required": true, "description": "Real logo on the right"},
+    "RIGHT_NAME": {"required": true, "description": "Its name"},
+    "BG": {"default": "bg", "choices": ["bg", "none"], "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"}
+  },
+  "duration": {"default": 3.4, "min": 2.0, "max": 8.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["logo", "integration", "api", "connect"],
+  "example": {
+    "CHIP": "OFFICIAL",
+    "CHIP_SMALL": "WhatsApp API",
+    "LEFT_LOGO": "shorts/reel-05/gfx/assets/claude.svg",
+    "LEFT_NAME": "Claude",
+    "RIGHT_LOGO": "shorts/reel-05/gfx/assets/whatsapp.svg",
+    "RIGHT_NAME": "WhatsApp"
+  },
+  "preview": "preview.jpg"
+}

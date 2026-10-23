@@ -1,0 +1,44 @@
+{
+  "name": "reel-chat",
+  "title": "Chat thread",
+  "description": "WhatsApp-style chat on the stage: messages arrive one by one, typing dots before each reply (reel-05 beat 1)",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/chat.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "stage",
+  "params": {
+    "CHIP": {"default": "", "description": "The pill title at the top of the stage, e.g. \"STEP 1\""},
+    "CHIP_SMALL": {"default": "", "description": "Smaller text after it, e.g. \"· Kapso\""},
+    "NAME": {"default": "Customer", "description": "Who the chat is with"},
+    "STATUS": {"default": "online", "description": "Line under the name"},
+    "MESSAGES": {
+      "type": "list",
+      "required": true,
+      "description": "[{\"from\": \"in\"|\"out\", \"text\": \"...\", \"time\": \"2:04\", \"buttons\": [\"11:00 AM\", \"4:00 PM\"], \"pick\": 1}, ...] in order; a reply gets typing dots first, \"pick\" taps a button"
+    },
+    "BG": {
+      "default": "bg",
+      "choices": ["bg", "none"],
+      "description": "\"bg\" draws the navy stage panel over the top half; \"none\" leaves it clear"
+    }
+  },
+  "duration": {"default": 2.72, "min": 1.5, "max": 8.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["chat", "whatsapp", "messages", "demo"],
+  "example": {
+    "CHIP": "&#x1F916; CLAUDE",
+    "CHIP_SMALL": "· jawab de raha hai",
+    "STATUS": "online · 2:04 AM",
+    "MESSAGES": [
+      {"from": "in", "text": "Friday ko slot hai? 🗓️", "time": "2:04"},
+      {"from": "out", "text": "Haan ji! Friday ke free slots 👇", "time": "2:04 ✓✓", "buttons": ["11:00 AM", "4:00 PM"], "pick": 1},
+      {"from": "in", "text": "4:00 PM please 🙏", "time": "2:05"},
+      {"from": "out", "text": "✅ Booked: Friday, 4 PM", "time": "2:05 ✓✓"}
+    ]
+  },
+  "preview": "preview.jpg"
+}

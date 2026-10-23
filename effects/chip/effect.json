@@ -15,5 +15,12 @@
   "duration": {"default": 3.6, "min": 1.5, "max": 6.0},
   "origin": "Long-form AI editor video, 2026-10-07 (4 uses)",
   "license": "own",
-  "tags": ["text", "icon", "callout"]
+  "tags": ["text", "icon", "callout"],
+  "example": {
+    "TOP": "300",
+    "ICON": "<svg viewBox=\"0 0 24 24\"><path fill=\"#FFFFFF\" d=\"M6 2h8l6 6v14H6zM14 3.5V9h5.5\" /><path d=\"M9 13h8M9 17h6\" stroke=\"#1A9FD1\" stroke-width=\"1.8\"/></svg>",
+    "T1": "Every resource",
+    "T2": "Linked in the <b>description</b>"
+  },
+  "preview": "preview.jpg"
 }

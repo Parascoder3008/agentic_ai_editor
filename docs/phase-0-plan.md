@@ -212,7 +212,12 @@ Step 7 doesn't block the exit test: your next reel uses whatever is in the catal
   where the WAV isn't), and `verify` runs with faster-whisper.
 - **Steps 3 and 4: done (23 Oct).** See `docs/build-status.md`: captions, SRTs and cover byte-identical; voice, SFX and
   music stems identical to the shipped scripts' on the same input.
-- **Step 5, picture: done (23 Oct); the reel effects are next.** `aie/picture.py` and the `graphics`, `effects`,
+- **Step 5: done (23 Oct).** Reel effects: 17 effects ported from reel-05 as 9:16 templates (`templates/reel/`, shared
+  `reel.css` / `reel.js`), each with an example, a rendered `preview.jpg` and automatic checks (drawn, stage effects in
+  the top half, full-frame text in the IG safe zone, right size); HyperFrames lint: 0 errors. Parameters now have types
+  (list, number, colour, file for real logos). The validator rejects a stage effect over a full-frame beat.
+  Not ported: reel-03's staircase world and reel-04's frame-by-frame picture effects (job code until a picture engine
+  exists), reel-04's client-styled graphics (a Phase 1 style pack). Picture: `aie/picture.py` and the `graphics`, `effects`,
   `base`, `picture` and `deliver` stages. Proven by running the shipped reel-05 `compose.py` and reel-04
   `prep.py` + `compose.py` with ffmpeg recorded: the pipeline issues the same 6 and 16 video commands, argument for
   argument, and reel-05's card mask and border are pixel-identical. A synthetic job renders for real: layouts land on the
@@ -221,6 +226,11 @@ Step 7 doesn't block the exit test: your next reel uses whatever is in the catal
   with the session's Chromium (transparent webm, alpha checked); catalog effects fill their templates byte-identically
   to `gfx_batch` (47 of 47 long-form graphics). reel-04's `compose_base.py` now also reads AIE_IN / AIE_OUT, so the
   pipeline runs it as the job's custom base step.
+- **Step 6: done in the cloud (23 Oct); the exit test is Paras's next reel.** `aie/qa.py` + the `qa` stage (the plan's
+  9.5 audit, each finding with its owner agent, joint and safe-zone contact sheets), `aie/storyboard.py` + the
+  `storyboard` stage (build/storyboard.html; the picture waits for `gates.storyboard_approved`), `run all`, the render
+  lock. On reel-05's real words every cut sits on a spoken anchor, as the kit validator found when it shipped. 112
+  tests on Python 3.10 and 3.13.
 - **Herk Edit Kit received (23 Oct)** in `vendor/herk-edit-kit` (see its `VENDORED.md`). MIT plus a use permission
   that covers commercial videos. Its style library has **406 cards, all 16:9 (1920x1080)**: 101 stat, 81 overview,
   78 section, 73 lower-third, 73 label, each with named text slots and a duration range. Both styles use Nate's AIS

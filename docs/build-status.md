@@ -17,8 +17,8 @@ UI are rendered and inspected in the cloud; anything that needs the PC, its apps
 | 0.2 | Cut builder, joint verification, stage runner | done (PC check pending) |
 | 0.3 | Captions + SRT / cover packaging | done: reel-05 and reel-04 captions.ass, words_master.json and all four SRTs byte-identical; reel-05 cover pixel-identical |
 | 0.4 | SFX, music, sound mix | done: reel-05 voice, SFX (99 traced cues) and music stems byte-identical to the shipped scripts on the same input; reel-04 piece-by-piece voice byte-identical, its SFX within 1e-3; variants delivered at the shipped lengths and -14 LUFS |
-| 0.5 | Picture, mux, variants; reel effects into the catalog | picture done: reel-05 and reel-04 video commands identical to the shipped compose scripts (recorded), card mask/border pixel-identical; synthetic job rendered and checked frame by frame. Reel effects: in progress |
-| 0.6 | QA, kit export, `run all`, render lock | |
+| 0.5 | Picture, mux, variants; reel effects into the catalog | done: reel-05 and reel-04 video commands identical to the shipped compose scripts (recorded), card mask/border pixel-identical; synthetic job rendered and checked frame by frame. 17 reel effects (9:16) ported from reel-05; all 22 catalog effects render in the cloud with HyperFrames, pass the preview checks and lint with 0 errors |
+| 0.6 | QA, kit export, `run all`, render lock | done: `qa` stage runs the plan's 9.5 audit (length, loudness, sync, joints, words, spelling, safe zone, effects on words, rights, compliance, plus hook, still-picture, cut-anchor and footage-reuse advisories), contact sheets, score and gate; `storyboard` stage and its gate; `all`; render lock. The Herk kit's rules are QA checks rather than an export (see decisions) |
 | 0.7 | Herk Edit Kit cards into the catalog, re-coloured | |
 | 1 | Style library: pack format, built packs, Style Learner | |
 | 2 | Agent team (Claude Agent SDK) + tool servers, budgets, gates | |
@@ -39,6 +39,14 @@ Things the cloud session cannot exercise. Each says what to run and what "pass" 
    match the shipped files.
 4. **reel-04 re-delivered.** `python -m aie run shorts\reel-04 deliver` (runs `edit\compose_base.py` as its custom step,
    about as long as it took before). Pass: same lengths as the shipped REEL04 files, frames match.
+7. **QA words check.** `python -m aie run shorts\reel-05 qa` on the PC runs the Whisper "words" check the cloud can't
+   (it shows NOT RUN here). Pass: OK, or a list of lost words matching what VERIFY.md found ("hai" 12.58, "hai" 23.31,
+   "pehle" 45.40 were flagged there by forced alignment and heard clearly by Whisper).
+8. **reel-04 rights.** reel-04 is a client job and its sources don't say who owns the footage yet, so QA fails the
+   rights check until `"rights": "client"` (or whatever is true) is set on sources a and b. That is the check working.
+6. **Reel effects on the PC.** `python tools\effect_preview.py` (no `--gsap` there; Chrome reaches the CDN). Pass:
+   every line ends "ok" and the previews look like the committed ones (the cloud renders used the session's Chromium and
+   system Inter, so a font difference would show here first).
 5. **HyperFrames from the pipeline.** Drop `"render"` from reel-05's `graphics` for one run: the `graphics` stage
    re-renders `gfx\index.html` (about 5 min) and the result matches the shipped render.
 
@@ -63,6 +71,15 @@ Things the cloud session cannot exercise. Each says what to run and what "pass" 
   against it; the original scorer refused such a voice.
 - Effects that only some variants show get their own master picture (`build/picture_<variant>.mp4`); the first variant's
   master is `build/picture.mp4`, which the cover is taken from.
+- The Herk kit's validators needed a hand-written export per job (scene names, events copied out of the composition,
+  open loops). Their rules now run inside QA on the job itself: cuts on spoken anchors, the 2.2 s event gap (measured
+  on the delivered picture as "no still picture over 3 s"), and each B-roll window used once.
+- A job without `gates` is treated as not approved: the storyboard must be approved before a picture renders.
+- QA score: 10, minus 1 per failed check and 0.1 per warning (0.5 at most); the gate is 9.5 with no failed check. A
+  check that can't run on a machine (Whisper in the cloud) is listed as NOT RUN and doesn't count.
+- The compliance check is a screen, not a judge: any income, return or guarantee phrase blocks the job until Paras
+  reads it; a phrase he clears goes into `qa.cleared` in job.json. On five shipped scripts it raised no false alarm and
+  it catches the long-form's "80% profitability" line that was cut by hand.
 - Pre-rendered graphics (`graphics.render`) are trusted as they are; only a `composition` is re-rendered when its
   files change. reel-04 and reel-05 point at their shipped renders, so re-delivering them doesn't re-render 5 minutes of
   graphics.

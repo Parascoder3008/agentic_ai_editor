@@ -1,0 +1,24 @@
+{
+  "name": "reel-big-number",
+  "title": "Big phrase",
+  "description": "A huge number or phrase in blue with a line under it, slammed over footage (reel-05: '24 GHANTE')",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/reel/big-number.html",
+  "files": ["templates/reel/reel.css", "templates/reel/reel.js"],
+  "formats": ["9:16"],
+  "zone": "full",
+  "params": {
+    "BIG": {"required": true, "description": "The big blue words (never wraps)"},
+    "SUB": {"default": "", "description": "The line under it"},
+    "SIZE": {"type": "number", "default": 132, "description": "Size of the big words"},
+    "Y": {"type": "number", "default": 250, "description": "Top of the text"}
+  },
+  "duration": {"default": 1.37, "min": 0.8, "max": 4.0},
+  "brand": "own",
+  "origin": "reel-05 (Claude ka WhatsApp number), shipped 2026-10-22",
+  "license": "own",
+  "tags": ["number", "stat", "text", "punch"],
+  "example": {"BIG": "24 GHANTE", "SUB": "agent ON, aap so rahe ho 😴"},
+  "preview": "preview.jpg"
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link href="reel.css" rel="stylesheet" />
+    <script src="reel.js"></script>
+  </head>
+  <body>
+    <!-- reel-hook: Two-line hook text slammed onto the first frames over footage, then a slow push (reel-05 hook) -->
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1080" data-height="1920">
+      <div id="fx" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="hk" class="ff" style="top:{{Y}}px"><div style="font-size:{{SIZE1}}px">{{LINE1}}</div><div class="hl" style="font-size:{{SIZE2}}px;white-space:nowrap">{{LINE2}}</div></div>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      const tl = gsap.timeline({ paused: true });
+      const R = reel(tl, DUR);
+      gsap.set("#hk", { opacity: 0 });
+      tl.fromTo("#hk", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.in" }, 0.04);
+      tl.to("#hk", { scale: 1.03, duration: Math.max(0.1, DUR - 0.4), ease: "none" }, 0.18);
+      R.hide("#hk", DUR - 0.12, 0.1);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>
