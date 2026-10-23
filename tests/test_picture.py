@@ -286,6 +286,29 @@ class SyntheticRenderTest(unittest.TestCase):
             cls.rep = runner.run(load_job(j, cls.s), cls.s, "deliver", log=cls.log.append)
         cls.pub = j / "build/publish"
 
+    @unittest.skipUnless(importlib.util.find_spec("opentimelineio"), "needs opentimelineio")
+    def test_nle_timeline(self):
+        import opentimelineio as otio
+        j = load_job(self.d / "job", self.s)
+        rep = runner.run(j, self.s, "otio", log=lambda *_: None)
+        tl = otio.adapters.read_from_file(rep["otio"])
+        self.assertEqual([t.name for t in tl.tracks], ["V1 originals", "V2 base", "V3 graphics", "V4 effects", "A1 voice"])
+        self.assertFalse(tl.tracks[0].enabled)
+        spans = lambda t: [(c.name, t.range_of_child(c).start_time.to_seconds(), c.duration().to_seconds(),
+                            c.source_range.start_time.to_seconds()) for c in t if isinstance(c, otio.schema.Clip)]
+        self.assertEqual(spans(tl.tracks[0]), [("beat 1 hook", 0.0, 1.0, 0.0), ("beat 2 avatar", 1.0, 1.0, 1.2),
+                                               ("beat 3 avatar", 2.0, 1.0, 2.2)])
+        self.assertEqual(spans(tl.tracks[3]), [("00_box", 2.0, 1.0, 0.0)])     # where the picture shows it
+        self.assertEqual(tl.duration().to_seconds(), 3.0)
+        self.assertEqual([m.name for m in tl.tracks.markers], ["beat 1: hook", "beat 2: split", "beat 3: face"])
+        for t in tl.tracks:
+            for c in t:
+                if isinstance(c, otio.schema.Clip):
+                    self.assertTrue(Path(otio.url_utils.filepath_from_url(c.media_reference.target_url)).exists())
+        xml = Path(rep["xml"]).read_text()
+        self.assertEqual((xml.count("<marker>"), xml.count("<enabled>FALSE</enabled>")), (3, 1))
+        self.assertEqual(runner.run(j, self.s, "otio", log=lambda *_: None)["key"], rep["key"])   # up to date
+
     def test_preview_until_approved(self):
         self.assertEqual(sorted(p.name for p in self.pub.glob("*.mp4")),
                          ["SYNTH01_instagram_PREVIEW.mp4", "SYNTH01_youtube_PREVIEW.mp4"])

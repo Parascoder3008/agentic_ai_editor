@@ -120,6 +120,7 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
                 "publish": sorted(f.name for f in (d / "build/publish").glob("*")) if (d / "build/publish").exists() else [],
                 "script": (d / "script.txt").read_text(encoding="utf-8") if (d / "script.txt").exists() else None,
                 "connectors": {n: mcp.missing(n) for n in mcp.SERVERS},
+                "nle": read("build/nle/nle.json"),
                 "versions": [{**v, "files": json.loads(v["files"])} for v in
                              db.q("select * from versions where project=? order by n", (pid,))]}
 
@@ -283,6 +284,32 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
                 shutil.copy2(f, dst / f.name)
                 copied.append(f.name)
         return {"folder": str(dst), "files": copied}
+
+    @app.post("/api/projects/{pid}/publish/copy")
+    def post_copy(pid: int):
+        """The Publisher writes the post copy (it never posts); copy with a claim is not saved."""
+        d = repo / project(pid)["path"]
+        key = connections.get("ANTHROPIC_API_KEY")
+        if not key:
+            raise HTTPException(409, "the Publisher needs the Claude API key (Connections)")
+        from ..agents import publisher
+        try:
+            return publisher.write(d, json.loads((d / "job.json").read_text(encoding="utf-8")),
+                                   dispatch.make_client(key))
+        except publisher.PublishError as e:
+            raise HTTPException(409, str(e))
+
+    @app.post("/api/projects/{pid}/nle/resolve")
+    def to_resolve(pid: int):
+        """Import the exported timeline into the open Resolve project (tools/resolve_import.py)."""
+        d = repo / project(pid)["path"]
+        rep = projects._read(d / "build/nle/nle.json")
+        if not rep or not Path(rep["otio"]).exists():
+            raise HTTPException(409, "export the timeline first")
+        exe = connections.get("RESOLVE_PATH")
+        if not exe:
+            raise HTTPException(409, "set the Resolve path in Connections")
+        return {"message": _tool(REPO / "tools/resolve_import.py", rep["otio"], "--resolve", exe).strip()}
 
     # ---------------------------------------------------------------- avatar studio
     def _tool(*args) -> str:

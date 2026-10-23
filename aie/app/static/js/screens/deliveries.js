@@ -5,6 +5,42 @@ import { get, media, post } from "../api.js";
 import { html, Btn, Chip, Empty, Icon, toast, usePoll } from "../ui.js";
 import { runStage, setGate } from "./project.js";
 
+function PostCopy({ p, file, ready }) {
+  const [text, setText] = useState(null);
+  const [busy, setBusy] = useState(false);
+  const [saved] = usePoll(() => (file ? fetch(media(p.id, "build/publish/" + file) + `?t=${Date.now()}`).then((r) => r.text()) : Promise.resolve(null)), 0, [file]);
+  const write = async () => {
+    setBusy(true);
+    try { const r = await post(`/api/projects/${p.id}/publish/copy`); setText(r.text); toast("Post copy written: check it before you post", "ok"); }
+    catch (e) { toast(e.message, e.status === 409 ? "" : "err"); } finally { setBusy(false); }
+  };
+  const shown = text || saved;
+  return html`<div class="stack" style="gap:8px"><div class="hr" />
+    <div class="row between"><span><b>Post copy</b><br /><span class="small muted">Caption, first-comment hashtags, the YouTube title and
+      description. Screened for income claims; you edit and post.</span></span>
+      <${Btn} size="sm" disabled=${!ready || busy} title=${ready ? "" : "needs the Claude API key (Connections)"} onClick=${write}>${busy ? "Writing…" : shown ? "Write again" : "Write the post copy"}<//></div>
+    ${shown && html`<textarea rows="10" readonly value=${shown} aria-label="post copy" />`}</div>`;
+}
+
+function NLE({ p, resolveReady }) {
+  const nle = p.nle;
+  const sendResolve = async () => { try { toast((await post(`/api/projects/${p.id}/nle/resolve`)).message, "ok"); } catch (e) { toast(e.message, "err"); } };
+  return html`<div class="stack" style="gap:10px">
+    <div class="row between"><span><b>Resolve / Premiere</b><br /><span class="small muted">The edit as a timeline: the framed base to grade,
+      the camera originals (off), every overlay and the stems on their own tracks, a marker per beat.</span></span>
+      <${Btn} size="sm" onClick=${() => runStage(p.id, "otio")}>${nle ? "Export again" : "Export the timeline"}<//></div>
+    ${nle && html`<div class="files">
+        <a class="btn sm" href=${media(p.id, rel(nle.otio))} download>${nle.otio.split(/[\\/]/).pop()}</a>
+        ${nle.xml && html`<a class="btn sm" href=${media(p.id, rel(nle.xml))} download>${nle.xml.split(/[\\/]/).pop()}</a>`}
+        ${(nle.srt || []).map((f) => html`<a class="btn sm" href=${media(p.id, rel(f))} download>${f.split(/[\\/]/).pop()}</a>`)}</div>
+      <ul class="small soft" style="margin:0;padding-left:18px">
+        <li><b>Resolve:</b> File → Import → Timeline… and pick the .otio${resolveReady ? ", or:" : " (set Resolve's path in Connections to import it from here)"}
+          ${resolveReady && html` <${Btn} size="sm" kind="ghost" onClick=${sendResolve}>Import into Resolve<//>`}</li>
+        <li><b>Premiere:</b> File → Import… and pick the .xml${nle.xml ? "" : html` <span class="muted">(not written: ${nle.xml_error})</span>`}</li>
+        <li>Captions: import the .srt onto a subtitle track.</li></ul>`}
+  </div>`;
+}
+
 const rel = (abs) => { const s = abs.replace(/\\/g, "/"); const i = s.lastIndexOf("/build/"); return i >= 0 ? s.slice(i + 1) : s; };
 
 export function Deliveries({ p, reload }) {
@@ -46,18 +82,16 @@ export function Deliveries({ p, reload }) {
         <h2>Package</h2>
         ${others.includes("cover.jpg") ? html`<img src=${media(p.id, "build/publish/cover.jpg")} alt="cover" style="max-width:220px;border-radius:14px" />` : html`<p class="muted small">No cover in this job's package settings.</p>`}
         <div class="files">${others.map((f) => html`<a class="btn sm" href=${media(p.id, "build/publish/" + f)} download>${f}</a>`)}</div>
+        <${PostCopy} p=${p} file=${others.find((f) => f.endsWith("_post.md"))} ready=${["set", "tested OK"].includes(status("anthropic"))} />
       </section>
       <section class="panel stack">
         <h2>Hand-off</h2>
         <div class="row between"><span><b>Google Drive</b><br /><span class="small muted">${driveReady ? "Copies the final files to your Drive folder" : "Set the Drive folder in Connections"}</span></span>
           <${Btn} icon="drive" disabled=${!driveReady || !final || !qaOK || busy} title=${!final ? "Approve the final first" : !qaOK ? "QA must pass first" : ""} onClick=${toDrive}>Copy to Drive<//></div>
         <div class="hr" />
-        <div class="row between"><span><b>Resolve / Premiere</b><br /><span class="small muted">${["set", "tested OK"].includes(status("resolve")) || ["set", "tested OK"].includes(status("premiere"))
-          ? "Sends the timeline as OpenTimelineIO" : "Set the app paths in Connections"}</span></span>
-          <div class="row"><${Btn} size="sm" disabled=${!["set", "tested OK"].includes(status("resolve"))} onClick=${() => runStage(p.id, "otio")}>Resolve<//>
-            <${Btn} size="sm" disabled=${!["set", "tested OK"].includes(status("premiere"))} onClick=${() => runStage(p.id, "otio")}>Premiere<//></div></div>
+        <${NLE} p=${p} resolveReady=${["set", "tested OK"].includes(status("resolve"))} />
         <div class="hr" />
-        <div class="row between"><span><b>Publish</b><br /><span class="small muted">The tool never posts. Upload from these files yourself; the Publisher agent only prepares the copy.</span></span>
+        <div class="row between"><span><b>Publish</b><br /><span class="small muted">The tool never posts. Upload from these files yourself, with the post copy below.</span></span>
           <${Btn} icon="lock" disabled title="Publishing stays with you">Publish<//></div>
       </section>
     </div>`;

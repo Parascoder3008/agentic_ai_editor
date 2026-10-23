@@ -188,6 +188,40 @@ class RunAgentTest(Base, unittest.TestCase):
         self.assertAlmostEqual(out["cost"], (1000 * 4.0 + 100 * 20.0) / 1e6)       # unknown models priced as Opus
 
 
+@unittest.skipUnless(HAVE, "needs anthropic, fastapi, httpx and python-multipart")
+class PublisherTest(Base, unittest.TestCase):
+    def api(self, text):
+        sent = []
+        msg = SimpleNamespace(stop_reason="end_turn", content=[SimpleNamespace(type="text", text=text)],
+                              usage={"input_tokens": 900, "output_tokens": 300})
+        return SimpleNamespace(messages=SimpleNamespace(create=lambda **kw: sent.append(kw) or msg)), sent
+
+    def test_post_copy(self):
+        from aie.agents import publisher
+        from aie.agents.roster import HAIKU
+        api, sent = self.api("## Instagram\n**Caption:** Claude ab reply karta hai.\nComment AGENT.\n"
+                             "**First comment:** #ai #claude")
+        with self.assertRaisesRegex(publisher.PublishError, "nothing to write from"):
+            publisher.write(self.dir, self.job(), api)
+        (self.dir / "build").mkdir()
+        (self.dir / "build/words.json").write_text(json.dumps({"words": [{"text": "Claude", "start": 0, "end": 1},
+                                                                         {"text": "agent", "start": 1, "end": 2}]}))
+        out = publisher.write(self.dir, self.job(), api)
+        self.assertEqual(Path(out["file"]).name, "DEMO_post.md")
+        self.assertTrue(Path(out["file"]).read_text().startswith("## Instagram"))
+        kw = sent[0]
+        self.assertEqual((kw["model"], kw["output_config"]), (HAIKU, {"effort": "low"}))
+        ask = kw["messages"][0]["content"]
+        self.assertIn("Claude agent", ask)
+        self.assertIn("comment the keyword AGENT", ask)                          # the brief's CTA keyword
+        self.assertIn("## YouTube", ask)                                         # both variants asked for
+        bad, _ = self.api("Is system se aap 50,000 per month kama sakte ho. Guaranteed!")
+        Path(out["file"]).unlink()
+        with self.assertRaisesRegex(publisher.PublishError, "income/return claim"):
+            publisher.write(self.dir, self.job(), bad)
+        self.assertFalse(Path(out["file"]).exists())                             # nothing saved
+
+
 class PlanningTest(unittest.TestCase):
     def test_waves_never_share_a_part(self):
         from aie.agents.dispatch import PARALLEL, waves

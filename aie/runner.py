@@ -19,6 +19,7 @@ inputs haven't changed is skipped; --force runs it anyway.
   picture  -> build/picture.mp4        graphics, effects and burned-in captions over the base
   deliver  -> build/publish/<PREFIX>_<variant>[_PREVIEW].mp4   each variant cut from the picture, muxed with its audio
   qa       -> build/qa/qa.json, contact sheets   the 9.5 audit (aie/qa.py); "all" runs every stage through qa
+  otio     -> build/nle/<id>.otio, <id>.xml, *.srt   the edit for finishing in Resolve or Premiere (aie/nle.py)
 
 A stage brings the stages it reads up to date first (captions runs the cut if it changed). Renders are PREVIEW quality
 and named _PREVIEW until gates.final_approved is true. One render runs at a time on a machine.
@@ -903,10 +904,49 @@ def stage_qa(job: Job, settings: Settings, force: bool = False, log=print) -> di
     return rep
 
 
+def stage_otio(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    """build/nle/<id>.otio (Resolve) and <id>.xml (Premiere): the edit for finishing in an NLE (aie/nle.py)."""
+    from . import nle, storyboard as sb
+    d, b = job.data, job.dir / "build"
+    built = _built_cut(job, settings, lambda *_: None)
+    base = stage_base(job, settings, False, _dep(log))
+    gfx = stage_graphics(job, settings, False, _dep(log)) if d.get("graphics") else None
+    fx = stage_effects(job, settings, False, _dep(log)) if d.get("effects") else None
+    voice = stage_voice(job, settings, False, _dep(log))
+    sfx = stage_sfx(job, settings, False, _dep(log)) if (d.get("sfx") or {}).get("cues") else None
+    mus = stage_music(job, settings, False, _dep(log)) if d.get("music") else None
+    pkg = stage_package(job, settings, False, _dep(log)) if "words" in (d.get("captions") or {}) else None
+    beats = sb.beats(d, built and built["pieces"])
+    length = _length(job, built)
+    key = _key("otio", base["key"], gfx and gfx["key"], fx and fx["key"], voice["key"], sfx and sfx["key"],
+               mus and mus["key"], pkg and [[f, os.path.getmtime(f)] for f in pkg["files"]], beats, d["variants"], length)
+    out, report_file = b / "nle", b / "nle" / "nle.json"
+    old = _read(report_file)
+    if old and old.get("key") == key and not force and Path(old["otio"]).exists():
+        log("otio: up to date")
+        return old
+    tl = nle.timeline(job.id, d["fps"], length, Path(base["path"]), beats,
+                      {n: _source(job, settings, n) for n in {bt["src"] for bt in beats}},
+                      gfx and (Path(gfx["path"]), d["graphics"].get("offset", 0.0)),
+                      [(Path(e["path"]), e["at"], Path(e["path"]).parent.name) for e in fx["items"]] if fx else [],
+                      {"voice": Path(voice["path"]), "sfx": sfx and Path(sfx["path"]), "music": mus and Path(mus["path"])},
+                      d["variants"])
+    report = {"key": key, **nle.write(tl, out, job.id), "srt": []}
+    for f in sorted((b / "publish").glob("*.srt")):
+        shutil.copy2(f, out / f.name)
+        report["srt"].append(str(out / f.name))
+    report["tracks"] = [t.name for t in tl.tracks]
+    _write(report_file, report)
+    log(f"otio: {len(report['tracks'])} tracks -> {report['otio']}" + (f" and {Path(report['xml']).name}" if report["xml"]
+                                                                       else f" (no FCP XML: {report['xml_error']})"))
+    return report
+
+
 STAGES = {"transcribe": stage_transcribe, "cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "storyboard": stage_storyboard,
           "package": stage_package,
           "voice": stage_voice, "sfx": stage_sfx, "music": stage_music, "mix": stage_mix,
           "graphics": stage_graphics, "effects": stage_effects, "base": stage_base, "picture": stage_picture,
+          "otio": stage_otio,
           "deliver": stage_deliver, "qa": stage_qa, "all": stage_qa}
 
 

@@ -13,6 +13,7 @@ qa = ["playwright"]
 app = ["fastapi", "uvicorn", "python-multipart"]
 agents = ["anthropic>=2.2"]          # the Claude API Tool Runner (beta) drives the agent team
 connectors = ["mcp>=2.3,<3"]         # HeyGen and Higgsfield over their MCP servers
+nle = ["opentimelineio>=0.17", "otio-fcp-adapter"]   # the otio stage: Resolve (.otio) and Premiere (FCP XML)
 
 [tool.setuptools]
 packages = ["aie", "aie.app", "aie.agents", "aie.connectors"]
