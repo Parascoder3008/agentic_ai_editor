@@ -104,6 +104,7 @@ class Worker:
         self.db.x("insert into versions (project, n, created, final, files, qa_score, qa_passed, run) values (?,?,?,?,?,?,?,?)",
                   (p["id"], n, now(), int(dl.get("final", False)), dumps(kept), qa and qa["score"],
                    qa and int(qa["passed"]), rid))
+        self.db.x("update notes set fixed_in=? where project=? and status='fixed' and fixed_in is null", (n, p["id"]))
 
     def stop(self):
         self.q.put(None)

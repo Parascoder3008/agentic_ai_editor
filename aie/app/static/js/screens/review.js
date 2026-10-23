@@ -118,7 +118,7 @@ function Notes({ p, t, variant, notes, reload, seek, inputRef }) {
     try { const r = await post(`/api/projects/${p.id}/notes/send`); toast(r.message || "Sent to the agent team", "ok"); reload(); }
     catch (e) { toast(e.message, e.status === 409 ? "" : "err"); }
   };
-  const open = notes.filter((n) => n.status === "open").length;
+  const open = notes.filter((n) => n.status === "open" && n.owner !== "Paras").length;
   return html`<section class="panel stack">
     <form class="stack" onSubmit=${add}>
       <label class="field">Note at <span class="tc" style="min-width:0">${tc(pinned)}</span>
@@ -129,12 +129,13 @@ function Notes({ p, t, variant, notes, reload, seek, inputRef }) {
     </form>
     <div class="hr" />
     <div class="row between"><h3>${notes.length} note${notes.length === 1 ? "" : "s"}</h3>
-      <${Btn} size="sm" disabled=${!open} onClick=${send} title="The Producer sends each note to its owner and a new version comes back">Send ${open || ""} to agents<//></div>
+      <${Btn} size="sm" disabled=${!open} onClick=${send} title="Each note goes to the agent that owns it; changes re-render and QA checks them again">Send ${open || ""} to agents<//></div>
     <div class="notes">${notes.length === 0 ? html`<p class="muted small">No notes on this cut. Pause where something's wrong and press <span class="kbd">n</span>.</p>` :
       notes.map((n) => html`<div class=${`note ${n.status === "fixed" ? "fixed" : ""}`} onClick=${() => seek(n.t)}>
         <div class="row between"><span class="t">${tc(n.t)}</span><span class="row" style="gap:6px"><${Chip} tone="blue">${n.owner}<//>
           <${Chip} tone=${n.status === "fixed" ? "ok" : n.status === "sent" ? "blue" : "warn"}>${n.status}${n.fixed_in ? ` in v${n.fixed_in}` : ""}<//></span></div>
         <span class="small">${n.text}</span>
+        ${n.agent_reply && html`<span class="reply">${n.agent_reply}</span>`}
         <div class="row" style="gap:6px" onClick=${(e) => e.stopPropagation()}>
           ${n.status !== "fixed" ? html`<${Btn} size="sm" kind="ghost" icon="check" onClick=${() => set(n, "fixed")}>Fixed<//>` : html`<${Btn} size="sm" kind="ghost" onClick=${() => set(n, "open")}>Reopen<//>`}
           <${Btn} size="sm" kind="ghost" icon="x" aria-label="Delete note" onClick=${async () => { await del(`/api/notes/${n.id}`); reload(); }} /></div>

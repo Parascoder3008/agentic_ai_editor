@@ -1,5 +1,6 @@
 """App state in SQLite (built into Python; one file in app_data/). job.json stays the source of truth for an edit;
-the database holds what the app adds: projects it knows, runs, notes, versions and connection test results."""
+the database holds what the app adds: projects it knows, runs, notes, versions, connection test results, and the agent
+team's dispatches with each agent's run."""
 import json
 import sqlite3
 import threading
@@ -17,6 +18,13 @@ create table if not exists notes (id integer primary key, project integer not nu
 create table if not exists versions (id integer primary key, project integer not null, n integer not null, created real not null,
     final integer not null, files text not null, qa_score real, qa_passed integer, run integer);
 create table if not exists connection_tests (id text primary key, ok integer not null, message text not null, at real not null);
+create table if not exists dispatches (id integer primary key, project integer not null, kind text not null,
+    status text not null, budget real not null, spent real not null default 0, message text not null default '',
+    started real not null, ended real);
+create table if not exists agent_runs (id integer primary key, project integer not null, dispatch integer not null,
+    role text not null, round integer not null, status text not null, task text not null, reply text not null default '',
+    cost real not null default 0, changes integer not null default 0, log text not null default '', started real,
+    ended real);
 """
 
 

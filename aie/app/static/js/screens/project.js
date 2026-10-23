@@ -7,6 +7,7 @@ import { Review } from "./review.js";
 import { Deliveries } from "./deliveries.js";
 import { AvatarPanel } from "./avatar.js";
 import { JobFile } from "./jobfile.js";
+import { AgentTeam } from "./agents.js";
 
 export const STAGE_HELP = {
   transcribe: "every spoken word with its time (Whisper, PC)", cut: "frame-exact pieces, silences out", captions: "words on the timeline, styled",
@@ -110,6 +111,7 @@ function Overview({ p, runs, reload }) {
               html`<div class=${l.startsWith("FAIL") ? "fail" : /PASS|-> |done/.test(l) ? "okl" : ""}>${l}</div>`)}</div>
               <p class="tiny muted" style="margin-top:8px">${run.stage} · queued ${ago(run.queued)}${run.ended ? ` · took ${Math.round(run.ended - run.started)} s` : ""}</p>`}`}
         </section>
+        <${AgentTeam} p=${p} reload=${reload} />
       </div>
       <div class="stack">
         <section class="panel">

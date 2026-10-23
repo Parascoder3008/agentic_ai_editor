@@ -182,6 +182,14 @@ dl.kv ul { margin: 0; padding-left: 18px; }
 .note.fixed { opacity: 0.6; }
 .note .t { font: 700 12px var(--mono); color: var(--blue-2); }
 .notes { display: grid; gap: 8px; max-height: 52vh; overflow: auto; padding-right: 2px; }
+.dispatch { padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: #0E1316; }
+.dispatch-head { all: unset; box-sizing: border-box; width: 100%; display: flex; justify-content: space-between; align-items: center;
+  gap: 10px; flex-wrap: wrap; cursor: pointer; }
+.dispatch-head:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 4px; border-radius: 6px; }
+.agent-run { display: grid; gap: 6px; padding: 10px 0 0; border-top: 1px solid var(--line); }
+.agent-run details summary { cursor: pointer; }
+.agent-run .log { max-height: 220px; font-size: 11.5px; }
+.note .reply { font-size: 12.5px; color: var(--soft); border-left: 2px solid var(--blue); padding-left: 8px; }
 .qrow { display: grid; grid-template-columns: 74px 92px minmax(0, 1fr); gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .qrow:last-child { border-bottom: 0; }
 

@@ -21,7 +21,7 @@ def secrets_path() -> Path:
 # kind: api (key + optional test call), mcp (a server the agent team connects to), app (a path on this PC),
 # tool (found on this PC, nothing to enter)
 REGISTRY = [
-    {"id": "anthropic", "kind": "api", "name": "Claude API", "for": "The agent team: Producer, Story Editor, QA Auditor and the lanes",
+    {"id": "anthropic", "kind": "api", "name": "Claude API", "for": "The agent team: the Story Editor and the lanes (Proofreader, Sound, Motion, Compositor, Cut Surgeon, Generator)",
      "fields": [{"key": "ANTHROPIC_API_KEY", "label": "API key", "secret": True, "hint": "sk-ant-..."}],
      "docs": "https://console.anthropic.com/settings/keys"},
     {"id": "heygen", "kind": "api", "name": "HeyGen", "for": "Avatar mode: pronunciation previews and avatar renders",

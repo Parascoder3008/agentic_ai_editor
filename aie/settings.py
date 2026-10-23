@@ -26,8 +26,9 @@ DEFAULTS = {
     "chrome": None,              # a Chrome headless shell for HyperFrames, when it can't find or download its own
     "gsap": None,                # a local gsap.min.js: effect renders use it instead of the CDN (offline machines)
     "min_free_gb": 15,           # renders refuse to start below this much free disk (CLAUDE.md render safety)
+    "agent_budget_usd": 3.0,     # the most one agent dispatch may spend on the Claude API; past it, it stops and asks
 }
-PATH_KEYS = [k for k in DEFAULTS if k not in ("roots", "hyperframes", "whisper_model", "min_free_gb")]
+PATH_KEYS = [k for k in DEFAULTS if k not in ("roots", "hyperframes", "whisper_model", "min_free_gb", "agent_budget_usd")]
 
 
 class SettingsError(ValueError):

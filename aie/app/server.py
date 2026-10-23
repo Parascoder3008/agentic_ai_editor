@@ -15,6 +15,7 @@ from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 from .. import runner
+from ..agents import dispatch
 from ..effects import Catalog
 from ..job import JobError, dumps as job_dumps, validate
 from ..settings import REPO, load_settings
@@ -33,6 +34,7 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
     data_dir = Path(data_dir or repo / "app_data")
     db = DB(data_dir / "app.db")
     worker = Worker(db, settings, repo, worker_run)
+    dispatch.recover(db)
     @contextlib.asynccontextmanager
     async def lifespan(_app):
         yield
@@ -238,8 +240,22 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
         if not connections.get("ANTHROPIC_API_KEY"):
             raise HTTPException(409, "the agent team needs the Claude API key (Connections); the notes wait, routed to "
                                      "their owners")
-        from ..agents import dispatch
         return dispatch.notes(repo, db, worker, project(pid), [n["id"] for n in open_])
+
+    # ---------------------------------------------------------------- the agent team
+    @app.get("/api/projects/{pid}/agents")
+    def agents(pid: int):
+        project(pid)
+        return {**dispatch.status(db, pid), "ready": bool(connections.get("ANTHROPIC_API_KEY")),
+                "budget": settings.data["agent_budget_usd"]}
+
+    @app.post("/api/projects/{pid}/agents/plan")
+    def agents_plan(pid: int):
+        """The Story Editor drafts the edit from the brief and the transcript; the storyboard follows."""
+        p = project(pid)
+        if not connections.get("ANTHROPIC_API_KEY"):
+            raise HTTPException(409, "the agent team needs the Claude API key (Connections)")
+        return dispatch.plan(repo, db, worker, p)
 
     # ---------------------------------------------------------------- deliveries
     @app.post("/api/projects/{pid}/drive")
