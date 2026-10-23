@@ -26,6 +26,19 @@ inbox/
 *.mp3
 *.npz
 *.rendered
+# Audacity projects hold the raw recording (the long-form one is 376 MB; GitHub rejects files over 100 MB)
+*.aup3
+
+# QA frame grabs and snapshots: regenerable from a render, and most of the repo's size.
+# Contact-sheet JPGs and QA reports stay.
+**/qa/**/*.png
+snaps*/
+src_frames/
+av_frames/
+
+# Local tool state
+.hyperframes/
+.netlify/
 
 # ─── Model weights and caches ─────────────────────────────────────────
 models/

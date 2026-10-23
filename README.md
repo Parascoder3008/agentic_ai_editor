@@ -33,11 +33,14 @@ cd agentic_ai_editor
 
 ```powershell
 robocopy "C:\Users\PARAS ARORA\AI_Editor" . /E `
-  /XD inbox node_modules .venv __pycache__ .cache .git models frames `
-  /XF *.mp4 *.mov *.mkv *.webm *.wav *.mp3 *.npz .env
+  /XD inbox node_modules .venv __pycache__ .cache .git models frames .hyperframes .netlify `
+  /XF *.mp4 *.mov *.mkv *.webm *.wav *.mp3 *.npz *.aup3 .env `
+      "C:\Users\PARAS ARORA\AI_Editor\README.md" "C:\Users\PARAS ARORA\AI_Editor\DAVINCI_RESOLVE_GUIDE.md"
 ```
 
 Use `/E`, never `/MIR`: `/MIR` deletes files in this folder that are not in the source, including `.git`.
+The two named files are skipped because `AI_Editor\README.md` is the BuildLoop readme (kept in `buildloop/`)
+and would overwrite this one.
 
 **3. Save the video-use patches** (the local fixes listed in CLAUDE.md)
 
