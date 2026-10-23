@@ -1,0 +1,42 @@
+# AI Editor — code and docs only. Footage, renders and model weights stay on the PC.
+
+# ─── Secrets ──────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ─── Footage, renders, intermediates ──────────────────────────────────
+# Raw takes and per-job outputs (inbox/<project>/edit/). Copy reusable
+# per-job scripts into tools/ before relying on them.
+inbox/
+**/frames/
+**/seg_*.mkv
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.mxf
+*.wav
+*.flac
+*.m4a
+*.aac
+# Music stays out unless its licence is verified (see CLAUDE.md § Music).
+# Force-add a verified SFX/music asset with: git add -f <file>
+*.mp3
+*.npz
+*.rendered
+
+# ─── Model weights and caches ─────────────────────────────────────────
+models/
+.cache/
+*.pt
+*.bin
+*.safetensors
+*.onnx
+
+# ─── Dependencies ─────────────────────────────────────────────────────
+node_modules/
+.venv/
+__pycache__/
+*.pyc
