@@ -16,6 +16,25 @@ Renders run on the PC only. This repo holds code and docs; footage, renders, mus
 | `buildloop/` | The older BuildLoop bundle docs (`video-cut-aligned` + `video-edit` skills, DaVinci Resolve guide). CLAUDE.md prefers video-use over these. |
 | `.claude/` | Safety hook from the AI OS: blocks destructive commands, secret printing and un-approved sends; denies reads of `.env` and keys |
 | `.gitignore` | Keeps footage, renders, music, model weights and `.env` out of git |
+| `aie/` | The pipeline package (Phase 0, in progress): `job.json` validator, effects catalog, machine settings |
+| `effects/` | The effects catalog, one folder per effect (see `effects/README.md`) |
+| `docs/phase-0-plan.md` | How Phase 0 is being built, step by step, and its progress |
+| `tools/`, `templates/`, `fonts/` | Shared scripts, HyperFrames templates and the Inter fonts |
+| `shorts/`, `clients/`, `ads/`, `jobs/` | Past jobs (code, settings, QA notes; no footage). New jobs go in `jobs/<slug>/` |
+| `tests/` | `python -m unittest discover -s tests` |
+
+## Using the pipeline
+
+One-time setup on each machine: copy `aie.local.example.json` to `aie.local.json` and set the folders in it.
+`"roots"` names folders outside the repo, so a job can point at `"@downloads/DJI_0358.MP4"` instead of a full path.
+`aie.local.json` is git-ignored because every machine has its own paths.
+
+```powershell
+python -m aie doctor                         # checks ffmpeg, Node, Python libraries, folders, fonts, catalog
+python -m aie effects                        # lists the effects catalog (--kind overlay, --format 9:16)
+python -m aie validate shorts/reel-05        # checks a job.json; --check-files also checks its footage exists
+python -m unittest discover -s tests         # runs the tests
+```
 
 ## Add the code from the PC
 

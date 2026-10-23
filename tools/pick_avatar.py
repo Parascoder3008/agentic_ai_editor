@@ -9,7 +9,10 @@ import sys
 from datetime import date
 from pathlib import Path
 
-ROT = Path(r"C:\Users\PARAS ARORA\AI_Editor\shorts\avatar_rotation.json")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # repo root, for the aie package
+from aie.settings import load_settings  # noqa: E402
+
+ROT = load_settings().path("avatar_rotation")
 
 
 def pick(rot, rng=random):

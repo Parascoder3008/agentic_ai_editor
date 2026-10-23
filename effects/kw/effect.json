@@ -1,0 +1,20 @@
+{
+  "name": "kw",
+  "title": "Keyword card",
+  "description": "A small kicker line over one big line. Wrap the word to highlight in <span class=\"hl\">...</span>.",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/lf_kw.html",
+  "formats": ["16:9"],
+  "params": {
+    "MAIN": {"required": true, "description": "The big line"},
+    "KICK": {"default": "", "description": "Small line above, e.g. \"Edited by\""},
+    "SIDE": {"default": "right", "choices": ["right", "left", "center"], "description": "Which side of the frame"},
+    "TOP": {"default": "330", "description": "Distance from the top, in px of a 1920x1080 frame"},
+    "SIZE": {"default": "84", "description": "Main line font size in px"}
+  },
+  "duration": {"default": 2.4, "min": 1.0, "max": 6.0},
+  "origin": "Long-form AI editor video, 2026-10-07 (32 uses)",
+  "license": "own",
+  "tags": ["text", "keyword", "callout"]
+}

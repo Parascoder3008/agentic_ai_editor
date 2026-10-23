@@ -1,0 +1,17 @@
+{
+  "name": "lower",
+  "title": "Lower third",
+  "description": "Name and role in the lower third, for introducing a speaker.",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/lf_lower.html",
+  "formats": ["16:9"],
+  "params": {
+    "NAME": {"required": true, "description": "e.g. \"PARAS ARORA\""},
+    "ROLE": {"default": "", "description": "e.g. \"Founder · Exponential World AI\""}
+  },
+  "duration": {"default": 3.6, "min": 2.0, "max": 6.0},
+  "origin": "Long-form AI editor video, 2026-10-07",
+  "license": "own",
+  "tags": ["text", "name", "intro"]
+}

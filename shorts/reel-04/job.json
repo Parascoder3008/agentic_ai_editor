@@ -1,0 +1,58 @@
+{
+  "id": "reel-04",
+  "title": "Client reel for Shivam Arora (@venomstech)",
+  "mode": "client",
+  "fps": 30,
+  "size": [1080, 1920],
+  "sources": {
+    "a": {
+      "path": "@downloads/DJI_20261019161031_0358_D.MP4",
+      "note": "main take"
+    },
+    "b": {
+      "path": "@downloads/DJI_20261019161340_0359_D.MP4",
+      "note": "YouTube CTA take"
+    }
+  },
+  "cut": {
+    "mode": "pieces",
+    "pieces": [
+      {"src": "a", "in": 15.0667, "out": 26.0, "tag": "shared", "text": "ye jo aap video dekh rahe ho … meri poori reel"},
+      {"src": "a", "in": 26.2667, "out": 43.0333, "tag": "shared", "text": "aur dikhaye usmein badhiya graphics … wapas le jaaye"},
+      {"src": "a", "in": 51.5667, "out": 61.2333, "tag": "shared", "text": "aur iske baad main bolun … bhai saab bye", "zoom": 1.06},
+      {"src": "a", "in": 62.0333, "out": 64.4667, "tag": "shared", "text": "ab ye sab kuch aap bhi kar sakte ho bahut aasaan hai"},
+      {"src": "a", "in": 64.4667, "out": 67.8667, "tag": "ig", "text": "aapko apne claude ko … convert karna hai"},
+      {"src": "a", "in": 68.1667, "out": 73.9667, "tag": "ig", "text": "ab iski ek bana rakhi … dm nahi jaayega", "zoom": 1.08},
+      {"src": "a", "in": 74.2333, "out": 76.1667, "tag": "ig", "text": "aur bhai aap apni editing … karwa sakte ho"},
+      {"src": "a", "in": 138.5333, "out": 142.4667, "tag": "ig", "text": "ab obviously ai hai … zyada lagega ya kam", "zoom": 1.08},
+      {"src": "a", "in": 142.6, "out": 144.5333, "tag": "ig", "text": "wo main bataunga uske liye follow kar lena"},
+      {"src": "b", "in": 0.3333, "out": 11.1, "tag": "yt", "text": "ab iski bana rakhi … subscribe kar lo", "zoom": 1.04}
+    ]
+  },
+  "variants": {
+    "instagram": {
+      "ranges": [
+        [0.0, 56.8]
+      ],
+      "note": "shared + IG tail"
+    },
+    "youtube": {
+      "ranges": [
+        [0.0, 39.7999],
+        [56.8, 67.5667]
+      ],
+      "note": "shared + YT tail"
+    }
+  },
+  "graphics": {
+    "composition": "gfx/index.html"
+  },
+  "custom": [
+    "edit/compose_base.py"
+  ],
+  "gates": {
+    "storyboard_approved": true,
+    "final_approved": true
+  },
+  "notes": "Delivered 2026-10-21 (see VERIFY.md). Ported from edit/edl.py + timeline.json. compose_base.py holds the frame-by-frame effects (paper cut, text-behind, his reel sliding in) until step 5 moves them into the catalog."
+}

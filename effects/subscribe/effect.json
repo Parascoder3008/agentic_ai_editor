@@ -1,0 +1,15 @@
+{
+  "name": "subscribe",
+  "title": "Subscribe button (Paras Arora, @parasarora_ai)",
+  "description": "Channel card with the subscribe button press. Carries Paras's name and handle, so it's for his own videos only.",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/lf_sub.html",
+  "formats": ["16:9"],
+  "params": {},
+  "duration": {"default": 5.0, "min": 3.0, "max": 6.0},
+  "brand": "own",
+  "origin": "Long-form AI editor video, 2026-10-07",
+  "license": "own",
+  "tags": ["cta", "youtube"]
+}

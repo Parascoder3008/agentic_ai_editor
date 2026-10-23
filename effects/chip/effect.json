@@ -1,0 +1,19 @@
+{
+  "name": "chip",
+  "title": "Icon chip",
+  "description": "An icon with two short lines of text, e.g. \"Every resource\" / \"Linked in the description\".",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/lf_chip.html",
+  "formats": ["16:9"],
+  "params": {
+    "ICON": {"required": true, "description": "Inline SVG, white on transparent (24x24 viewBox)"},
+    "T1": {"required": true, "description": "First line"},
+    "T2": {"required": true, "description": "Second line; <b>bold</b> allowed"},
+    "TOP": {"default": "300", "description": "Distance from the top, in px of a 1920x1080 frame"}
+  },
+  "duration": {"default": 3.6, "min": 1.5, "max": 6.0},
+  "origin": "Long-form AI editor video, 2026-10-07 (4 uses)",
+  "license": "own",
+  "tags": ["text", "icon", "callout"]
+}

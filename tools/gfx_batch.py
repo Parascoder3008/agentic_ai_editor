@@ -1,7 +1,7 @@
 """Batch-render templated HyperFrames graphics to transparent webm.
 
 spec JSON: [{"id": "kw01", "tpl": "kw", "dur": 1.8, "vars": {"MAIN": "...", "KICK": "...", "SIDE": "right"}}, ...]
-Templates live in AI_Editor/templates/lf_<tpl>.html with {{VAR}} placeholders.
+Templates live in templates/lf_<tpl>.html with {{VAR}} placeholders (folder set by "templates" in aie.local.json).
 Already-rendered items are skipped unless their HTML changed (cache = html hash).
 
 Usage: python gfx_batch.py <spec.json> <out_dir> [--only id1,id2] [--lint-only] [--res landscape-4k]
@@ -11,11 +11,16 @@ import hashlib
 import json
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
-TPL = Path(r"C:\Users\PARAS ARORA\AI_Editor\templates")
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # repo root, for the aie package
+from aie.settings import load_settings  # noqa: E402
+
+S = load_settings()
+TPL = S.path("templates")
 BASE_FILES = ["package.json", "hyperframes.json", "meta.json"]
-HF = ["npx", "--yes", "hyperframes@0.8.111"]
+HF = ["npx", "--yes", S.data["hyperframes"]]
 
 SIDES = {
     "right": "right: 80px; text-align: left;",
@@ -53,7 +58,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("spec")
     ap.add_argument("out")
-    ap.add_argument("--base", default=r"C:\Users\PARAS ARORA\Desktop\edit\edit\animations\_base")
+    ap.add_argument("--base", default=str(S.path("hyperframes_base")))
     ap.add_argument("--only")
     ap.add_argument("--lint-only", action="store_true")
     ap.add_argument("--res", help="HyperFrames --resolution preset, e.g. landscape-4k (same layout, rendered at 2x DPR)")

@@ -1,0 +1,71 @@
+{
+  "id": "reel-05",
+  "title": "Claude ka apna WhatsApp number (Kapso)",
+  "mode": "avatar",
+  "fps": 25,
+  "size": [1080, 1920],
+  "sources": {
+    "avatar": {
+      "path": "avatar.mp4",
+      "voice_offset": 0.24,
+      "note": "HeyGen render; voice trimmed by voice_offset so word 1 lands on frame 2"
+    },
+    "hook": {
+      "path": "hook/hook_video.mp4"
+    },
+    "woman": {
+      "path": "broll/woman_1080.mp4"
+    },
+    "salon": {
+      "path": "broll/salon_1080.mp4"
+    },
+    "sleeping": {
+      "path": "broll/sleeping_1080.mp4"
+    }
+  },
+  "script": "script.txt",
+  "timeline": [
+    {"t": [0.0, 5.4], "layout": "hook", "src": "hook", "in": 0.0},
+    {"t": [5.4, 6.56], "layout": "broll", "src": "woman", "in": 1.2, "note": "typing in the dark"},
+    {"t": [6.56, 7.48], "layout": "broll", "src": "woman", "in": 3.55, "note": "the 2:04 clock on \"2 baje\""},
+    {"t": [7.48, 9.08], "layout": "broll", "src": "woman", "in": 4.6, "note": "close-up; her message pops on \"Friday\""},
+    {"t": [9.08, 11.8], "layout": "split", "src": "avatar", "in": 9.32},
+    {"t": [11.8, 13.12], "layout": "broll", "src": "salon", "in": 4.9, "note": "owner grins at his phone, thumbs-up"},
+    {"t": [13.12, 21.88], "layout": "split", "src": "avatar", "in": 13.36},
+    {"t": [21.88, 23.8], "layout": "face", "src": "avatar", "in": 22.12},
+    {"t": [23.8, 39.44], "layout": "split", "src": "avatar", "in": 24.04},
+    {"t": [39.44, 42.44], "layout": "broll", "src": "sleeping", "in": 5.2, "note": "phone pulses while he sleeps"},
+    {"t": [42.44, 58.0], "layout": "split", "src": "avatar", "in": 42.68}
+  ],
+  "variants": {
+    "instagram": {
+      "ranges": [
+        [0.0, 53.8]
+      ],
+      "freeze": 0.6,
+      "mute_voice_after": 53.8,
+      "note": "ends on \"comment AGENT ... DM mein\" + freeze; voice muted after the last word"
+    },
+    "youtube": {
+      "ranges": [
+        [0.0, 49.04],
+        [53.8, 58.0]
+      ],
+      "freeze": 0.4,
+      "note": "skips the AGENT line; ends on the WhatsApp channel line"
+    }
+  },
+  "captions": {
+    "hide": [
+      [0.0, 5.4]
+    ]
+  },
+  "graphics": {
+    "composition": "gfx/index.html"
+  },
+  "gates": {
+    "storyboard_approved": true,
+    "final_approved": true
+  },
+  "notes": "Shipped 2026-10-22 (see VERIFY.md). Ported from edit/plan.py; SFX and music cues move here in steps 3-4."
+}

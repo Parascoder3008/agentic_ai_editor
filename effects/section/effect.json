@@ -1,0 +1,19 @@
+{
+  "name": "section",
+  "title": "Section card",
+  "description": "Full-width card that opens a section: step number, step label, title and subtitle.",
+  "kind": "overlay",
+  "engine": "hyperframes-template",
+  "source": "templates/lf_section.html",
+  "formats": ["16:9"],
+  "params": {
+    "TITLE": {"required": true, "description": "e.g. \"Create your AI employee\""},
+    "NUM": {"default": "", "description": "Step number; leave empty for an intro card"},
+    "STEP": {"default": "STEP", "description": "Label above the title, e.g. \"STEP 1\""},
+    "SUB": {"default": "", "description": "Subtitle line"}
+  },
+  "duration": {"default": 1.8, "min": 1.0, "max": 4.0},
+  "origin": "Long-form AI editor video, 2026-10-07 (8 uses)",
+  "license": "own",
+  "tags": ["text", "chapter", "step"]
+}

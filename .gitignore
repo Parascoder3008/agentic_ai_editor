@@ -1,9 +1,10 @@
 # AI Editor — code and docs only. Footage, renders and model weights stay on the PC.
 
-# ─── Secrets ──────────────────────────────────────────────────────────
+# ─── Secrets and machine settings ─────────────────────────────────────
 .env
 .env.*
 !.env.example
+aie.local.json
 
 # ─── Footage, renders, intermediates ──────────────────────────────────
 # Raw takes and per-job outputs (inbox/<project>/edit/). Copy reusable
@@ -21,6 +22,13 @@ inbox/
 *.flac
 *.m4a
 *.aac
+# Camera files often use uppercase extensions (DJI writes .MP4); Linux matches case exactly
+*.MP4
+*.MOV
+*.MKV
+*.MXF
+*.WAV
+*.LRF
 # Music stays out unless its licence is verified (see CLAUDE.md § Music).
 # Force-add a verified SFX/music asset with: git add -f <file>
 *.mp3

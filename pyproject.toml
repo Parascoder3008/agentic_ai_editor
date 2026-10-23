@@ -1,0 +1,18 @@
+[project]
+name = "aie"
+version = "0.1.0"
+description = "AI Editor pipeline: one job.json per video, rendered by shared stages"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# Later stages; the validator, catalog and doctor need only the standard library.
+media = ["numpy", "scipy", "soundfile", "pillow", "opencv-python"]
+speech = ["faster-whisper", "torch", "torchaudio"]
+qa = ["playwright"]
+
+[tool.setuptools]
+packages = ["aie"]
+
+[tool.setuptools.package-data]
+aie = ["hyperframes_base/*.json"]
