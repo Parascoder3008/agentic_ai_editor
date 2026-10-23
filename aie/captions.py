@@ -13,6 +13,7 @@ job.json "captions":
   break_at_cuts  start a fresh phrase at every cut and zone change, and never let a word linger past one
   hide       [[a, b], ...] windows with big on-screen text: no captions there
   chunk      {"max_words": 3, "max_chars": 22, "gap": 0.3}
+  burn       false when the graphics draw the captions themselves (kinetic captions); the ASS is still built
 
 Ported from tools/captions_ass.py and the reel-04 / reel-05 captions scripts; their output is reproduced byte for byte.
 """
@@ -24,7 +25,7 @@ STYLE_KEYS = {"font", "size", "color", "outline_color", "back_color", "bold", "b
               "margins", "baseline"}
 STYLE_DEFAULTS = {"font": "Inter", "size": 64, "color": "#FFFFFF", "outline_color": "#0C0E0F", "back_color": "#000000",
                   "bold": True, "border": "outline", "outline": 5, "shadow": 0, "align": 2, "margins": [60, 60]}
-CAPTION_KEYS = {"words", "text", "styles", "highlight", "zones", "break_at_cuts", "hide", "chunk"}
+CAPTION_KEYS = {"words", "text", "styles", "highlight", "zones", "break_at_cuts", "hide", "chunk", "burn"}
 HIGHLIGHT = {"color": "#1A9FD1", "pop": 112, "pop_ms": 90}
 CHUNK = {"max_words": 3, "max_chars": 22, "gap": 0.3}
 HEX = re.compile(r"#[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?")
@@ -252,6 +253,7 @@ def check(cap, data: dict) -> list:
     if not isinstance(cap, dict):
         return ["captions: must be an object"]
     errs += [f"captions: unknown key {k!r} (allowed: {', '.join(sorted(CAPTION_KEYS))})" for k in sorted(set(cap) - CAPTION_KEYS)]
+    errs += [f"captions.{k}: true or false" for k in ("break_at_cuts", "burn") if k in cap and not isinstance(cap[k], bool)]
     w = cap.get("words")
     if w is not None:
         if not isinstance(w, dict) or w.get("from") not in ("aligned", "pieces"):

@@ -2,7 +2,8 @@
 
   validate JOB...        check job.json files (a job folder or the file itself); --check-files also checks the
                          footage and other files they point at exist on this machine
-  run JOB STAGE          run one stage (cut, verify); outputs go to JOB/build/; --force reruns an up-to-date stage
+  run JOB STAGE          run one stage (cut ... deliver) and the stages it needs; outputs go to JOB/build/;
+                         --force reruns an up-to-date stage
   diag gap JOB T...      loudness around source times T: where the real gap between two words is
   diag ctc JOB A:B...    letter timings in source windows A-B (keeps restarts Whisper drops); --src picks a source
   effects                list the effects catalog; --kind overlay|picture|transition|caption|sound, --format 9:16
@@ -16,6 +17,7 @@ from pathlib import Path
 
 from . import __version__, runner
 from .effects import KINDS, Catalog
+from .ffmpeg import FFmpegError
 from .job import JobError, aspect, load_job
 from .settings import PATH_KEYS, REPO, SettingsError, load_settings
 
@@ -52,7 +54,7 @@ def cmd_run(a) -> int:
     try:
         job, settings = _job(a.job)
         runner.run(job, settings, a.stage, a.force)
-    except (JobError, runner.StageError, SettingsError) as e:
+    except (JobError, runner.StageError, SettingsError, FFmpegError) as e:
         print(f"{BAD} {e}")
         return 1
     except ImportError as e:
@@ -132,6 +134,9 @@ def cmd_doctor(a) -> int:
             line(OK if p.exists() else WARN, f"path {k}", str(p) + ("" if p.exists() else " (missing)"))
     for name, root in s.data["roots"].items():
         line(OK if Path(root).exists() else WARN, f"root @{name}", root)
+    free = shutil.disk_usage(REPO).free / 1e9
+    line(OK if free >= s.data["min_free_gb"] else WARN, "free disk", f"{free:.0f} GB (renders need "
+         f"{s.data['min_free_gb']} GB)")
     fonts = s.path("fonts")
     inter = sorted(fonts.glob("Inter-*.ttf")) if fonts and fonts.exists() else []
     line(OK if inter else BAD, "Inter fonts", f"{len(inter)} file(s) in {fonts}")

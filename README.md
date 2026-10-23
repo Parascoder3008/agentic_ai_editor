@@ -16,7 +16,7 @@ Renders run on the PC only. This repo holds code and docs; footage, renders, mus
 | `buildloop/` | The older BuildLoop bundle docs (`video-cut-aligned` + `video-edit` skills, DaVinci Resolve guide). CLAUDE.md prefers video-use over these. |
 | `.claude/` | Safety hook from the AI OS: blocks destructive commands, secret printing and un-approved sends; denies reads of `.env` and keys |
 | `.gitignore` | Keeps footage, renders, music, model weights and `.env` out of git |
-| `aie/` | The pipeline package (Phase 0, in progress): `job.json` validator, effects catalog, machine settings |
+| `aie/` | The pipeline package: `job.json` validator, effects catalog, machine settings, and the stages from cut to delivery |
 | `effects/` | The effects catalog, one folder per effect (see `effects/README.md`) |
 | `docs/phase-0-plan.md` | How Phase 0 is being built, step by step, and its progress |
 | `tools/`, `templates/`, `fonts/` | Shared scripts, HyperFrames templates and the Inter fonts |
@@ -39,10 +39,19 @@ python -m aie diag gap jobs/longform-ai-editor 78.30   # loudness around a cut: 
 python -m aie run shorts/reel-05 captions    # words + styled captions -> build/captions.ass
 python -m aie run shorts/reel-05 package     # SRT per variant + cover -> build/publish/
 python -m aie run shorts/reel-05 mix         # voice, SFX, music -> one -14 LUFS audio file per variant
+python -m aie run shorts/reel-05 picture     # footage by layout + graphics + effects + captions -> build/picture.mp4
+python -m aie run shorts/reel-05 deliver     # every variant, muxed with its audio -> build/publish/REEL05_<variant>.mp4
 python -m unittest discover -s tests         # runs the tests
 ```
 
-Stage outputs go to `<job>/build/` and are git-ignored; `--force` reruns a stage whose inputs haven't changed.
+Stage outputs go to `<job>/build/` and are git-ignored; `--force` reruns a stage whose inputs haven't changed. A stage
+brings what it needs up to date first, so `deliver` alone runs the whole job. Until `gates.final_approved` is true in
+job.json, pictures render at preview quality and deliveries are named `_PREVIEW`. One render runs at a time on a
+machine, and a render refuses to start with less than `min_free_gb` (15 GB) free.
+
+Graphics: `graphics.composition` is a HyperFrames project's `index.html`, rendered to a transparent webm by the
+`graphics` stage (Node.js needed); `graphics.render` uses an already-rendered webm as is. If HyperFrames can't find
+Chrome, set `"chrome"` in aie.local.json to a Chrome headless shell.
 
 ## Add the code from the PC
 

@@ -23,6 +23,7 @@
       {"src": "b", "in": 0.3333, "out": 11.1, "tag": "yt", "text": "ab iski bana rakhi … subscribe kar lo", "zoom": 1.04}
     ]
   },
+  "layouts": {"camera": {"head": [440, 760]}},
   "variants": {
     "instagram": {"ranges": [[0.0, 56.8]], "freeze": 0.6, "mute_voice_after": 56.8, "note": "shared + IG tail"},
     "youtube": {"ranges": [[0.0, 39.7999], [56.8, 67.5667]], "freeze": 0.4, "mute_voice_after": 67.5667, "note": "shared + YT tail"}
@@ -42,7 +43,8 @@
     },
     "highlight": {"color": "#3AB0D8"},
     "zones": [{"style": "Pip", "t": [8.55, 13.87]}, {"style": "Mid", "t": [31.4, 35.8]}],
-    "break_at_cuts": true
+    "break_at_cuts": true,
+    "burn": false
   },
   "sfx": {
     "seed": 7,
@@ -168,7 +170,7 @@
     }
   },
   "mix": {"gain_db": "auto", "voice_lufs": -17, "joint_fade": 0.02, "tail": 0.8},
-  "graphics": {"composition": "gfx/index.html"},
+  "graphics": {"composition": "gfx/index.html", "render": "gfx/render.webm"},
   "custom": ["edit/compose_base.py"],
   "gates": {"storyboard_approved": true, "final_approved": true},
   "notes": "Delivered 2026-10-21 (see VERIFY.md). Ported from edit/edl.py + timeline.json. compose_base.py holds the frame-by-frame effects (paper cut, text-behind, his reel sliding in) until step 5 moves them into the catalog."

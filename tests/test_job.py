@@ -14,6 +14,7 @@ BASE = {
         {"t": [0.0, 2.0], "layout": "split", "src": "avatar", "in": 0.24},
         {"t": [2.0, 4.04], "layout": "broll", "src": "broll", "in": 1.0},
     ],
+    "layouts": {"split": {"card": [97, 975, 886, 924], "crop": [840, 876, 540, 50]}},
     "variants": {"instagram": {"ranges": [[0.0, 4.04]], "freeze": 0.6}},
 }
 
@@ -79,6 +80,17 @@ class JobTest(unittest.TestCase):
         self.assertFlags(lambda d: d.update(gates={"storyboard_approved": "yes"}), "gates")
         self.assertFlags(lambda d: d.update(gates={"approved": True}), "unknown key 'approved'")
         self.assertFlags(lambda d: d.update(custom="edit/x.py"), "custom")
+
+    def test_layouts_and_graphics(self):
+        self.assertFlags(lambda d: d.pop("layouts"), "the timeline uses split or face layouts")
+        self.assertFlags(lambda d: d["timeline"][1].update(layout="face"), "layouts.face: the timeline uses")
+        self.assertFlags(lambda d: d["layouts"]["split"].update(card=[97, 975, 886]), "layouts.split")
+        self.assertFlags(lambda d: d["layouts"].update(camera={"head": [440, 760], "crop": [1, 2]}), "layouts.camera")
+        self.assertFlags(lambda d: d["layouts"].update(pip={}), "unknown key 'pip'")
+        self.assertFlags(lambda d: d.update(graphics={"offset": 0.2}), '"composition"')
+        self.assertFlags(lambda d: d.update(graphics={"composition": "gfx/main.html"}), "index.html")
+        self.assertFlags(lambda d: d.update(graphics={"render": "gfx/r.webm", "pad": -1}), "graphics.pad")
+        self.assertEqual(errs(lambda d: d.update(graphics={"composition": "gfx/index.html", "offset": 0.24})), [])
 
     def test_load_job_checks_files(self):
         d = Path(tempfile.mkdtemp())

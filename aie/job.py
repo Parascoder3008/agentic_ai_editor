@@ -19,7 +19,8 @@ MODES = {"footage", "avatar", "client", "longform"}
 LAYOUTS = {"hook", "broll", "face", "split", "card", "full", "screen", "cam"}
 FPS = {24, 25, 30, 50, 60}
 TOP_KEYS = {"id", "title", "mode", "fps", "size", "language", "sources", "script", "cut", "timeline", "variants",
-            "captions", "package", "graphics", "effects", "sfx", "music", "mix", "custom", "gates", "notes"}
+            "captions", "package", "layouts", "graphics", "effects", "sfx", "music", "mix", "custom", "gates", "notes"}
+GRAPHICS_KEYS = {"composition", "render", "offset", "pad"}
 SOURCE_KEYS = {"path", "offset", "voice_offset", "note"}
 SEGMENT_KEYS = {"t", "layout", "src", "in", "speed", "zoom", "note"}
 PIECE_KEYS = {"src", "in", "out", "text", "zoom", "tag", "note"}
@@ -243,8 +244,27 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
     if "package" in data:
         c.errors += package_mod.check(data["package"], data)
     gfx = data.get("graphics")
-    if gfx is not None and (not isinstance(gfx, dict) or ("composition" in gfx and not isinstance(gfx["composition"], str))):
-        c.err("graphics", "must be an object; \"composition\" is a path to the job's HyperFrames index.html")
+    if gfx is not None:
+        if not isinstance(gfx, dict):
+            c.err("graphics", "must be an object")
+        else:
+            c.keys(gfx, GRAPHICS_KEYS, "graphics")
+            for k in ("composition", "render"):
+                if k in gfx and not isinstance(gfx[k], str):
+                    c.err(f"graphics.{k}", "a path inside the job folder")
+            if not ({"composition", "render"} & set(gfx)):
+                c.err("graphics", '"composition" (a HyperFrames index.html to render) or "render" (a transparent webm '
+                                  'already rendered) is required')
+            if isinstance(gfx.get("composition"), str) and Path(gfx["composition"]).name != "index.html":
+                c.err("graphics.composition", "the HyperFrames project's index.html")
+            for k in ("offset", "pad"):
+                if k in gfx and not (_num(gfx[k]) and gfx[k] >= 0):
+                    c.err(f"graphics.{k}", "seconds >= 0")
+    if "layouts" in data:
+        from . import picture
+        c.errors += picture.check_layouts(data["layouts"], data)
+    elif any(isinstance(s, dict) and s.get("layout") in ("split", "face") for s in data.get("timeline", []) or []):
+        c.err("layouts", "the timeline uses split or face layouts, so their framing is needed")
 
     fx = data.get("effects", [])
     if not isinstance(fx, list):
@@ -267,7 +287,7 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
         c.errors += schema.check_mix(data["mix"], data)
     custom = data.get("custom", [])
     if not isinstance(custom, list) or not all(isinstance(s, str) for s in custom):
-        c.err("custom", "must be a list of script paths inside the job folder")
+        c.err("custom", "must be a list of script paths inside the job folder (each reworks the base picture)")
     gates = data.get("gates", {})
     if not isinstance(gates, dict) or not all(isinstance(v, bool) for v in gates.values()):
         c.err("gates", "must be {\"storyboard_approved\": true/false, \"final_approved\": true/false}")

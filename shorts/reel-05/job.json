@@ -25,6 +25,10 @@
     {"t": [39.44, 42.44], "layout": "broll", "src": "sleeping", "in": 5.2, "note": "phone pulses while he sleeps"},
     {"t": [42.44, 58.0], "layout": "split", "src": "avatar", "in": 42.68}
   ],
+  "layouts": {
+    "split": {"card": [97, 975, 886, 924], "crop": [840, 876, 540, 50], "radius": 28, "border": "#3AB0D88C"},
+    "face": {"crop": [608, 1080, 656, 0]}
+  },
   "variants": {
     "instagram": {
       "ranges": [[0.0, 53.8]],
@@ -189,7 +193,7 @@
       "shadow": [4, 6]
     }
   },
-  "graphics": {"composition": "gfx/index.html"},
+  "graphics": {"composition": "gfx/index.html", "render": "gfx/render.webm", "offset": 0.24, "pad": 0.5},
   "gates": {"storyboard_approved": true, "final_approved": true},
   "notes": "Shipped 2026-10-22 (see VERIFY.md). Ported from edit/plan.py; SFX cues traced from edit/sfx.py; score from edit/music_cfg.json."
 }

@@ -115,9 +115,12 @@ machine. The code never contains `C:\Users\...`, so the same code runs on your P
 
 ### Stages
 
-`python -m aie run jobs/<slug> <stage>`, or `all` to run them in order:
+`python -m aie run jobs/<slug> <stage>`. Built so far (a stage runs the ones it needs first, so `deliver` runs a whole
+job):
 
-`transcribe -> align -> cut -> verify -> storyboard -> graphics -> sfx -> music -> picture -> sound -> mux -> qa -> package -> kit`
+`cut -> verify -> captions -> package -> voice -> sfx -> music -> mix -> graphics -> effects -> base -> picture -> deliver`
+
+Still to come: `transcribe` and `align` (the HyperFrames/Whisper front end), `storyboard`, `qa`, `kit` and `all` (step 6).
 
 - A stage is skipped when its inputs haven't changed since the last run.
 - Heavy renders (`picture`, `graphics`, background removal) take a lock, so only one runs at a time (your render-safety rule).
@@ -207,6 +210,17 @@ Step 7 doesn't block the exit test: your next reel uses whatever is in the catal
   frame-exact edges, drops, skipped clicks and never padding into the next word. 54 tests on Python 3.10–3.13.
   **Still to prove on the PC:** the cutter rebuilds `body_pieces.json` exactly from the WAV (test included; it skips
   where the WAV isn't), and `verify` runs with faster-whisper.
+- **Steps 3 and 4: done (23 Oct).** See `docs/build-status.md`: captions, SRTs and cover byte-identical; voice, SFX and
+  music stems identical to the shipped scripts' on the same input.
+- **Step 5, picture: done (23 Oct); the reel effects are next.** `aie/picture.py` and the `graphics`, `effects`,
+  `base`, `picture` and `deliver` stages. Proven by running the shipped reel-05 `compose.py` and reel-04
+  `prep.py` + `compose.py` with ffmpeg recorded: the pipeline issues the same 6 and 16 video commands, argument for
+  argument, and reel-05's card mask and border are pixel-identical. A synthetic job renders for real: layouts land on the
+  measured crop windows, graphics sit on top, a variant-only effect shows in that variant only, the freeze holds, both
+  variants come out at -14 LUFS, previews are named `_PREVIEW`, a rerun is a no-op. HyperFrames renders in the cloud
+  with the session's Chromium (transparent webm, alpha checked); catalog effects fill their templates byte-identically
+  to `gfx_batch` (47 of 47 long-form graphics). reel-04's `compose_base.py` now also reads AIE_IN / AIE_OUT, so the
+  pipeline runs it as the job's custom base step.
 - **Herk Edit Kit received (23 Oct)** in `vendor/herk-edit-kit` (see its `VENDORED.md`). MIT plus a use permission
   that covers commercial videos. Its style library has **406 cards, all 16:9 (1920x1080)**: 101 stat, 81 overview,
   78 section, 73 lower-third, 73 label, each with named text slots and a duration range. Both styles use Nate's AIS

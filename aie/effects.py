@@ -3,7 +3,9 @@
 A job places an effect by name, time and parameters:
     {"effect": "kw", "at": 19.30, "dur": 2.6, "params": {"KICK": "Edited by", "MAIN": "Claude Opus"}}
 check_placement() rejects unknown effects, missing required parameters, unknown parameters and values outside
-"choices" before anything renders.
+"choices" before anything renders. Effect.html() fills a hyperframes-template's {{PARAM}} slots for one use:
+defaults, the job's values, DUR (the duration) and "derived" values looked up from another parameter
+(kw's SIDE "right" -> SIDECSS "right: 80px; text-align: left;").
 """
 import json
 from dataclasses import dataclass
@@ -15,7 +17,7 @@ KINDS = {"overlay", "picture", "transition", "caption", "sound"}
 ENGINES = {"hyperframes-template", "hyperframes-composition", "ffmpeg", "python", "synth"}
 FORMATS = {"16:9", "9:16", "1:1"}
 EFFECT_KEYS = {"name", "title", "description", "kind", "engine", "source", "params", "duration", "formats",
-               "brand", "origin", "license", "tags", "preview"}
+               "brand", "origin", "license", "tags", "preview", "derived"}
 PARAM_KEYS = {"required", "default", "choices", "description"}
 PLACEMENT_KEYS = {"effect", "at", "dur", "params", "id", "variants", "note"}
 
@@ -41,6 +43,30 @@ class Effect:
     def filled(self, given: dict) -> dict:
         """Parameter values for one use: defaults overlaid with what the job gave."""
         return {**{k: p["default"] for k, p in self.params.items() if "default" in p}, **given}
+
+    @property
+    def source_path(self) -> Path:
+        src = self.data["source"]
+        return REPO / src if (REPO / src).exists() else self.dir / src
+
+    def html(self, given: dict, dur: float, templates: Path | None = None) -> str:
+        """The template with every {{SLOT}} filled for one use. templates overrides the folder of a source under
+        templates/ (the "templates" machine setting)."""
+        if self.data["engine"] != "hyperframes-template":
+            raise ValueError(f"{self.name}: only hyperframes-template effects are filled from parameters")
+        v = {**self.filled(given), "DUR": str(dur)}
+        for name, d in self.data.get("derived", {}).items():
+            v[name] = d["map"][v[d["from"]]]
+        src = self.source_path
+        if templates is not None and Path(self.data["source"]).parts[0] == "templates":
+            src = Path(templates, *Path(self.data["source"]).parts[1:])
+        html = src.read_text(encoding="utf-8")
+        for k, val in v.items():
+            html = html.replace("{{" + k + "}}", str(val))
+        if "{{" in html:
+            i = html.index("{{")
+            raise ValueError(f"{self.name}: unfilled slot near {html[i:i + 30]!r}")
+        return html
 
 
 def _check_effect(d: Path, data, errs: list) -> None:
@@ -83,6 +109,14 @@ def _check_effect(d: Path, data, errs: list) -> None:
     fm = data.get("formats", [])
     if not isinstance(fm, list) or set(fm) - FORMATS:
         errs.append(f"{w}: formats must be a list from {sorted(FORMATS)}")
+    for name, dv in (data.get("derived") or {}).items() if isinstance(data.get("derived", {}), dict) else []:
+        src_p = params.get(dv.get("from")) if isinstance(dv, dict) else None
+        if not (isinstance(dv, dict) and set(dv) == {"from", "map"} and isinstance(dv["map"], dict) and src_p):
+            errs.append(f'{w}: derived {name!r} must be {{"from": <param>, "map": {{value: text}}}}')
+        elif "choices" in src_p and set(src_p["choices"]) - set(dv["map"]):
+            errs.append(f"{w}: derived {name!r} has no text for {sorted(set(src_p['choices']) - set(dv['map']))}")
+    if not isinstance(data.get("derived", {}), dict):
+        errs.append(f"{w}: derived must be an object")
     if data.get("brand") not in (None, "own"):
         errs.append(f'{w}: brand must be "own" (Paras-only) or left out')
 

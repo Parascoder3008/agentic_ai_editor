@@ -17,7 +17,7 @@ UI are rendered and inspected in the cloud; anything that needs the PC, its apps
 | 0.2 | Cut builder, joint verification, stage runner | done (PC check pending) |
 | 0.3 | Captions + SRT / cover packaging | done: reel-05 and reel-04 captions.ass, words_master.json and all four SRTs byte-identical; reel-05 cover pixel-identical |
 | 0.4 | SFX, music, sound mix | done: reel-05 voice, SFX (99 traced cues) and music stems byte-identical to the shipped scripts on the same input; reel-04 piece-by-piece voice byte-identical, its SFX within 1e-3; variants delivered at the shipped lengths and -14 LUFS |
-| 0.5 | Picture, mux, variants; reel effects into the catalog | |
+| 0.5 | Picture, mux, variants; reel effects into the catalog | picture done: reel-05 and reel-04 video commands identical to the shipped compose scripts (recorded), card mask/border pixel-identical; synthetic job rendered and checked frame by frame. Reel effects: in progress |
 | 0.6 | QA, kit export, `run all`, render lock | |
 | 0.7 | Herk Edit Kit cards into the catalog, re-coloured | |
 | 1 | Style library: pack format, built packs, Style Learner | |
@@ -33,6 +33,14 @@ Things the cloud session cannot exercise. Each says what to run and what "pass" 
 1. **Long-form cut from the WAV.** `python -m unittest discover -s tests` on the PC must show 0 skipped;
    `test_cutter_rebuilds_body_pieces_exactly` compares against `jobs/longform-ai-editor/edit/body_pieces.json`.
 2. **Whisper verify.** `python -m aie run jobs\longform-ai-editor verify` (faster-whisper + model download).
+3. **reel-05 re-delivered from job.json.** Copy `avatar.mp4`, `hook/`, `broll/` and `gfx/render.webm` into
+   `shorts\reel-05` if they aren't there, then `python -m aie run shorts\reel-05 deliver`. Pass: `build\publish\
+   REEL05_instagram.mp4` and `_youtube.mp4` at 54.40 s and 53.64 s, -14 LUFS, and frames at `qa\` timestamps that
+   match the shipped files.
+4. **reel-04 re-delivered.** `python -m aie run shorts\reel-04 deliver` (runs `edit\compose_base.py` as its custom step,
+   about as long as it took before). Pass: same lengths as the shipped REEL04 files, frames match.
+5. **HyperFrames from the pipeline.** Drop `"render"` from reel-05's `graphics` for one run: the `graphics` stage
+   re-renders `gfx\index.html` (about 5 min) and the result matches the shipped render.
 
 ## Requests from Paras during the build
 
@@ -53,3 +61,8 @@ Things the cloud session cannot exercise. Each says what to run and what "pass" 
   fades, 0.8 s tail. reel-05 keeps its own fixed +12 dB, 30 ms, 0.6 s in its job.json.
 - A voice longer than the score (common with avatar renders) is cut to the score's length before the music ducks
   against it; the original scorer refused such a voice.
+- Effects that only some variants show get their own master picture (`build/picture_<variant>.mp4`); the first variant's
+  master is `build/picture.mp4`, which the cover is taken from.
+- Pre-rendered graphics (`graphics.render`) are trusted as they are; only a `composition` is re-rendered when its
+  files change. reel-04 and reel-05 point at their shipped renders, so re-delivering them doesn't re-render 5 minutes of
+  graphics.

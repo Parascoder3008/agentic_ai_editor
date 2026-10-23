@@ -17,16 +17,11 @@ from pathlib import Path
 
 import numpy as np
 
+from .ffmpeg import run
+
 SR = 48000
 LOUDNORM = "loudnorm=I=-14:TP=-1.5:LRA=11"
 LIMITER = "alimiter=limit=0.72:attack=4:release=60:level=disabled"
-
-
-def run(cmd) -> subprocess.CompletedProcess:
-    r = subprocess.run([str(c) for c in cmd], capture_output=True, text=True, encoding="utf-8", errors="replace")
-    if r.returncode:
-        raise RuntimeError(f"ffmpeg failed ({r.returncode}): {r.stderr.strip()[-600:]}")
-    return r
 
 
 # ---------------------------------------------------------------- voice stem

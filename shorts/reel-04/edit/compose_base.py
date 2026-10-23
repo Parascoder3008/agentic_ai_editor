@@ -6,8 +6,10 @@ the PICTURE lives here; text/UI graphics are the HyperFrames overlay on top.
   29.40     paper-cut world: white-border cut-out, stop-motion 10 fps (matte cut2)
   31.19     cut-out shrinks to a corner sticker ("ek side mein"), 32.07 product B-roll fills the screen ("screen par … B-roll")
   35.80     sticker grows back to full ("finally main aaun"), 36.86 punch-in on "bye"
-Usage: python compose_base.py [t0 t1]   (optional range for a quick test render -> base_test.mp4)"""
+Usage: python compose_base.py [t0 t1]   (optional range for a quick test render -> base_test.mp4)
+Run by the pipeline (python -m aie run shorts/reel-04 base): reads AIE_IN, writes AIE_OUT."""
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -196,12 +198,13 @@ def main():
     cut1 = list(frames(ED / "matte" / "cut1.webm", alpha=True))
     cut2 = list(frames(ED / "matte" / "cut2.webm", alpha=True))
     print("reel", len(reel), "cut1", len(cut1), "cut2", len(cut2), flush=True)
-    out = ED / ("base_test.mp4" if len(sys.argv) > 2 else "base_video.mp4")
+    out = Path(os.environ["AIE_OUT"]) if "AIE_OUT" in os.environ else ED / ("base_test.mp4" if len(sys.argv) > 2 else "base_video.mp4")
     enc = subprocess.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
                             "-i", "-", "-c:v", "libx264", "-crf", "14", "-preset", "medium", "-pix_fmt", "yuv420p", str(out)],
                            stdin=subprocess.PIPE)
     cache2 = {}
-    for k, face in enumerate(frames(ED / "base_face.mp4", t_lo, (k1 - k0) / FPS), start=k0):
+    face_in = Path(os.environ.get("AIE_IN", ED / "base_face.mp4"))
+    for k, face in enumerate(frames(face_in, t_lo, (k1 - k0) / FPS), start=k0):
         if k >= k1:
             break
         t = k / FPS
