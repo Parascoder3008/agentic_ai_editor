@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #orbit { position: absolute; inset: 0; }
+      .card { position: absolute; left: 0; top: 0; width: 126px; height: 224px; margin: -112px 0 0 -63px;
+        border-radius: 15px; overflow: hidden; border: 3px solid #FFFFFF; background: #11324C;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45); opacity: 0; }
+      .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .card .play { position: absolute; left: 9px; bottom: 9px; display: flex; align-items: center; gap: 6px;
+        color: #FFFFFF; font-weight: 800; font-size: 14px; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
+      .card .play svg { width: 15px; height: 15px; }
+      .card .shade { position: absolute; inset: 0; background: #0C0E0F; opacity: 0; }
+      .boop { position: absolute; color: #FFFFFF; font-weight: 800; font-size: 42px; letter-spacing: 0.02em;
+        padding: 6px 16px; border-radius: 14px; background: #1A9FD1; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1920" data-height="1080">
+      <div id="orbit" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0"></div>
+      <div class="boop clip" id="boop1" data-start="0" data-duration="{{DUR}}" data-track-index="1" style="left:{{B1X}}px;top:{{B1Y}}px">BOOP!</div>
+      <div class="boop clip" id="boop2" data-start="0" data-duration="{{DUR}}" data-track-index="2" style="left:{{B2X}}px;top:{{B2Y}}px">BOOP!</div>
+    </div>
+    <script>
+      const T_IN = {{T_IN}}, T_CLICK = {{T_CLICK}}, T_HIT = {{T_HIT}}, T_HIT2 = {{T_HIT2}}, DUR = {{DUR}};
+      const CX = {{CX}}, CY = {{CY}}, RX = 300, RY = 80;          // orbit around the twirling hand (edited half)
+      const HEAD = { x: {{HX}}, y: {{HY}} };                         // head top, edited half (left)
+      const HEAD2 = { x: {{H2X}}, y: {{H2Y}} };                      // head top, ORIGINAL half (right)
+      const N = 8, TURNS = 1.25;
+      const orbit = document.getElementById("orbit");
+      const play = '<svg viewBox="0 0 24 24"><path d="M6 4 L20 12 L6 20 Z" fill="#FFFFFF"/></svg>';
+      const cards = [];
+      for (let i = 0; i < N; i++) {
+        const c = document.createElement("div");
+        c.className = "card";
+        c.innerHTML = `<img src="img/r${i + 1}.jpg"><div class="play">${play}REEL</div><div class="shade"></div>`;
+        orbit.appendChild(c); cards.push(c);
+      }
+      const E = { bo: gsap.parseEase("back.out(1.4)"), sio: gsap.parseEase("sine.inOut"), po2: gsap.parseEase("power2.out"),
+        pi2: gsap.parseEase("power2.in"), pi3: gsap.parseEase("power3.in") };
+      const clamp = (v) => Math.max(0, Math.min(1, v));
+      const seg = (t, a, b) => clamp((t - a) / (b - a));
+      const lerp = (a, b, k) => a + (b - a) * k;
+      const squash = (t, at) => { const k = seg(t, at, at + 0.16); return k > 0 && k < 1 ? Math.sin(k * Math.PI) : 0; };
+      const bop = (id, t, at) => {
+        const k = seg(t, at, at + 0.18), out = seg(t, at + 0.8, at + 1.1);
+        gsap.set(id, { opacity: k * (1 - out), scale: 0.5 + 0.5 * E.bo(k), y: -30 * out });
+      };
+      const SEAT = 70;   // card centre sits this far above the head top
+      const render = (t) => {
+        const k = E.bo(seg(t, T_IN, T_IN + 0.8));
+        const a = Math.PI * 2 * TURNS * E.sio(seg(t, T_IN, T_CLICK));
+        cards.forEach((c, i) => {
+          const th = a + Math.PI / 2 + (i / N) * Math.PI * 2;
+          const depth = Math.sin(th);
+          let x = CX + Math.cos(th) * RX * k, y = CY + depth * RY * k;
+          let s = (0.72 + 0.28 * (depth + 1) / 2) * k, rot = Math.cos(th) * -10, op = clamp(k), z = Math.round((depth + 1) * 10);
+          let shade = (1 - (depth + 1) / 2) * 0.55;
+          if (i === 0 && t >= T_CLICK) {
+            const up = E.po2(seg(t, T_CLICK, T_HIT - 0.35)), down = E.pi3(seg(t, T_HIT - 0.35, T_HIT));
+            // after the first hit: a ballistic arc across the divider onto the ORIGINAL head
+            const arc = seg(t, T_HIT + 0.16, T_HIT2);
+            const gone = E.pi2(seg(t, T_HIT2 + 0.16, T_HIT2 + 1.0));
+            x = lerp(CX, HEAD.x, up);
+            y = lerp(lerp(CY + RY, HEAD.y - 330, up), HEAD.y - SEAT, down);
+            if (t >= T_HIT + 0.16) {
+              x = lerp(HEAD.x, HEAD2.x, arc);
+              y = lerp(HEAD.y - SEAT, HEAD2.y - SEAT, arc) - 260 * Math.sin(arc * Math.PI);
+            }
+            x += 180 * gone; y += 1200 * gone;
+            s = lerp(1, 1.12, up);
+            rot = t < T_HIT ? lerp(8 * up, -6, down) : lerp(-6, 340, arc) + 90 * gone;
+            const sq = Math.max(squash(t, T_HIT), squash(t, T_HIT2));
+            gsap.set(c, { x, y, scaleX: s * (1 + 0.25 * sq), scaleY: s * (1 - 0.12 * sq), rotation: rot, zIndex: 50, opacity: 1 });
+            gsap.set(c.querySelector(".shade"), { opacity: 0 });
+            return;
+          }
+          if (i !== 0) {
+            const leave = E.pi2(seg(t, T_CLICK + 0.1 + i * 0.03, T_CLICK + 0.5 + i * 0.03));
+            op *= 1 - leave; s *= 1 - 0.6 * leave;
+          }
+          gsap.set(c, { x, y, scale: s, rotation: rot, zIndex: z, opacity: op });
+          gsap.set(c.querySelector(".shade"), { opacity: shade });
+        });
+        bop("#boop1", t, T_HIT); bop("#boop2", t, T_HIT2);
+      };
+      const clock = { t: 0 };
+      render(0);
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.to(clock, { t: DUR, duration: DUR, ease: "none", onUpdate: () => render(clock.t) }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

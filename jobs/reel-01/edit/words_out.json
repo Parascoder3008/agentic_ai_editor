@@ -1,0 +1,2146 @@
+{
+"words": [
+{
+"text": "Bhai",
+"start": 0.053,
+"end": 0.233,
+"line": "W2"
+},
+{
+"text": "maine",
+"start": 0.293,
+"end": 0.574,
+"line": "W2"
+},
+{
+"text": "kar",
+"start": 0.654,
+"end": 0.774,
+"line": "W2"
+},
+{
+"text": "diya",
+"start": 0.854,
+"end": 0.975,
+"line": "W2"
+},
+{
+"text": "apne",
+"start": 0.995,
+"end": 1.195,
+"line": "W2"
+},
+{
+"text": "video",
+"start": 1.255,
+"end": 1.496,
+"line": "W2"
+},
+{
+"text": "editor",
+"start": 1.536,
+"end": 1.836,
+"line": "W2"
+},
+{
+"text": "ki",
+"start": 1.877,
+"end": 1.937,
+"line": "W2"
+},
+{
+"text": "chhutti",
+"start": 2.017,
+"end": 2.418,
+"line": "W2"
+},
+{
+"text": "because",
+"start": 2.578,
+"end": 3.199,
+"line": "W2"
+},
+{
+"text": "Claude",
+"start": 3.3,
+"end": 3.821,
+"line": "W2"
+},
+{
+"text": "Opus",
+"start": 4.061,
+"end": 4.482,
+"line": "W2"
+},
+{
+"text": "5.5",
+"start": 4.602,
+"end": 5.444,
+"line": "W2"
+},
+{
+"text": "ne",
+"start": 5.444,
+"end": 5.504,
+"line": "W2"
+},
+{
+"text": "ye",
+"start": 5.585,
+"end": 5.645,
+"line": "W2"
+},
+{
+"text": "poora",
+"start": 5.845,
+"end": 6.166,
+"line": "W2"
+},
+{
+"text": "ka",
+"start": 6.226,
+"end": 6.286,
+"line": "W2"
+},
+{
+"text": "poora",
+"start": 6.386,
+"end": 6.587,
+"line": "W2"
+},
+{
+"text": "video",
+"start": 6.667,
+"end": 6.887,
+"line": "W2"
+},
+{
+"text": "edit",
+"start": 6.948,
+"end": 7.188,
+"line": "W2"
+},
+{
+"text": "kiya",
+"start": 7.208,
+"end": 7.368,
+"line": "W2"
+},
+{
+"text": "hai",
+"start": 7.368,
+"end": 7.429,
+"line": "W2"
+},
+{
+"text": "Matlab",
+"start": 7.613,
+"end": 7.854,
+"line": "W3"
+},
+{
+"text": "jahan",
+"start": 7.894,
+"end": 8.094,
+"line": "W3"
+},
+{
+"text": "par",
+"start": 8.134,
+"end": 8.215,
+"line": "W3"
+},
+{
+"text": "bhi",
+"start": 8.255,
+"end": 8.315,
+"line": "W3"
+},
+{
+"text": "main",
+"start": 8.375,
+"end": 8.475,
+"line": "W3"
+},
+{
+"text": "ruka",
+"start": 8.515,
+"end": 8.736,
+"line": "W3"
+},
+{
+"text": "tha",
+"start": 8.796,
+"end": 9.037,
+"line": "W3"
+},
+{
+"text": "un",
+"start": 9.037,
+"end": 9.117,
+"line": "W3"
+},
+{
+"text": "bad",
+"start": 9.238,
+"end": 9.478,
+"line": "W3"
+},
+{
+"text": "pauses",
+"start": 9.538,
+"end": 9.859,
+"line": "W3"
+},
+{
+"text": "cut",
+"start": 10.064,
+"end": 10.244,
+"line": "W4"
+},
+{
+"text": "vut",
+"start": 10.284,
+"end": 10.444,
+"line": "W4"
+},
+{
+"text": "lagane",
+"start": 10.484,
+"end": 10.785,
+"line": "W4"
+},
+{
+"text": "se",
+"start": 10.845,
+"end": 10.925,
+"line": "W4"
+},
+{
+"text": "leke",
+"start": 10.965,
+"end": 11.225,
+"line": "W4"
+},
+{
+"text": "bad",
+"start": 11.406,
+"end": 11.626,
+"line": "W4"
+},
+{
+"text": "take",
+"start": 11.726,
+"end": 11.966,
+"line": "W4"
+},
+{
+"text": "se",
+"start": 11.966,
+"end": 12.026,
+"line": "W4"
+},
+{
+"text": "leke",
+"start": 12.066,
+"end": 12.287,
+"line": "W4"
+},
+{
+"text": "maine",
+"start": 12.447,
+"end": 12.687,
+"line": "W4"
+},
+{
+"text": "kuch",
+"start": 12.747,
+"end": 12.927,
+"line": "W4"
+},
+{
+"text": "nahi",
+"start": 12.968,
+"end": 13.088,
+"line": "W4"
+},
+{
+"text": "kiya",
+"start": 13.108,
+"end": 13.248,
+"line": "W4"
+},
+{
+"text": "Aur",
+"start": 13.512,
+"end": 13.612,
+"line": "W5"
+},
+{
+"text": "ek",
+"start": 13.652,
+"end": 13.732,
+"line": "W5"
+},
+{
+"text": "extra",
+"start": 13.753,
+"end": 13.973,
+"line": "W5"
+},
+{
+"text": "cheez",
+"start": 14.053,
+"end": 14.213,
+"line": "W5"
+},
+{
+"text": "main",
+"start": 14.253,
+"end": 14.353,
+"line": "W5"
+},
+{
+"text": "karke",
+"start": 14.373,
+"end": 14.573,
+"line": "W5"
+},
+{
+"text": "dikhata",
+"start": 14.613,
+"end": 14.893,
+"line": "W5"
+},
+{
+"text": "hoon",
+"start": 14.933,
+"end": 15.054,
+"line": "W5"
+},
+{
+"text": "Aisa",
+"start": 15.3,
+"end": 15.461,
+"line": "W6"
+},
+{
+"text": "karo",
+"start": 15.541,
+"end": 15.702,
+"line": "W6"
+},
+{
+"text": "ek",
+"start": 15.802,
+"end": 15.943,
+"line": "W6"
+},
+{
+"text": "Claude",
+"start": 15.943,
+"end": 16.264,
+"line": "W6"
+},
+{
+"text": "ka",
+"start": 16.304,
+"end": 16.364,
+"line": "W6"
+},
+{
+"text": "logo",
+"start": 16.464,
+"end": 16.685,
+"line": "W6"
+},
+{
+"text": "lao",
+"start": 16.745,
+"end": 16.886,
+"line": "W6"
+},
+{
+"text": "yahan",
+"start": 16.966,
+"end": 17.106,
+"line": "W6"
+},
+{
+"text": "par",
+"start": 17.127,
+"end": 17.247,
+"line": "W6"
+},
+{
+"text": "Isko",
+"start": 17.461,
+"end": 17.662,
+"line": "W7"
+},
+{
+"text": "3D",
+"start": 17.842,
+"end": 18.102,
+"line": "W7"
+},
+{
+"text": "mein",
+"start": 18.222,
+"end": 18.322,
+"line": "W7"
+},
+{
+"text": "spin",
+"start": 18.382,
+"end": 18.663,
+"line": "W7"
+},
+{
+"text": "karke",
+"start": 18.743,
+"end": 18.963,
+"line": "W7"
+},
+{
+"text": "dikhao",
+"start": 19.003,
+"end": 19.283,
+"line": "W7"
+},
+{
+"text": "thoda",
+"start": 19.485,
+"end": 19.785,
+"line": "W7"
+},
+{
+"text": "sa",
+"start": 19.845,
+"end": 19.905,
+"line": "W7"
+},
+{
+"text": "zoom",
+"start": 19.985,
+"end": 20.185,
+"line": "W7"
+},
+{
+"text": "in",
+"start": 20.225,
+"end": 20.326,
+"line": "W7"
+},
+{
+"text": "karo",
+"start": 20.406,
+"end": 20.586,
+"line": "W7"
+},
+{
+"text": "aur",
+"start": 20.926,
+"end": 21.066,
+"line": "W7"
+},
+{
+"text": "aisa",
+"start": 21.247,
+"end": 21.487,
+"line": "W7"
+},
+{
+"text": "lage",
+"start": 21.567,
+"end": 21.727,
+"line": "W7"
+},
+{
+"text": "ki",
+"start": 21.767,
+"end": 22.008,
+"line": "W7"
+},
+{
+"text": "yeh",
+"start": 22.068,
+"end": 22.148,
+"line": "W7"
+},
+{
+"text": "camera",
+"start": 22.208,
+"end": 22.608,
+"line": "W7"
+},
+{
+"text": "mein",
+"start": 22.628,
+"end": 22.748,
+"line": "W7"
+},
+{
+"text": "jaake",
+"start": 22.748,
+"end": 22.989,
+"line": "W7"
+},
+{
+"text": "hit",
+"start": 23.029,
+"end": 23.229,
+"line": "W7"
+},
+{
+"text": "kiya",
+"start": 23.309,
+"end": 23.469,
+"line": "W7"
+},
+{
+"text": "Aur",
+"start": 23.708,
+"end": 23.809,
+"line": "W8"
+},
+{
+"text": "glass",
+"start": 23.85,
+"end": 24.071,
+"line": "W8"
+},
+{
+"text": "break",
+"start": 24.132,
+"end": 24.333,
+"line": "W8"
+},
+{
+"text": "ho",
+"start": 24.354,
+"end": 24.414,
+"line": "W8"
+},
+{
+"text": "gaya",
+"start": 24.475,
+"end": 24.575,
+"line": "W8"
+},
+{
+"text": "Dekha",
+"start": 24.823,
+"end": 25.024,
+"line": "W9"
+},
+{
+"text": "kya",
+"start": 25.105,
+"end": 25.165,
+"line": "W9"
+},
+{
+"text": "tagda",
+"start": 25.225,
+"end": 25.466,
+"line": "W9"
+},
+{
+"text": "cheez",
+"start": 25.526,
+"end": 25.687,
+"line": "W9"
+},
+{
+"text": "hai",
+"start": 25.687,
+"end": 25.787,
+"line": "W9"
+},
+{
+"text": "Ab",
+"start": 26.051,
+"end": 26.151,
+"line": "W10"
+},
+{
+"text": "aisa",
+"start": 26.191,
+"end": 26.352,
+"line": "W10"
+},
+{
+"text": "karo",
+"start": 26.412,
+"end": 26.552,
+"line": "W10"
+},
+{
+"text": "mere",
+"start": 26.612,
+"end": 26.732,
+"line": "W10"
+},
+{
+"text": "ko",
+"start": 26.772,
+"end": 26.833,
+"line": "W10"
+},
+{
+"text": "side",
+"start": 26.913,
+"end": 27.213,
+"line": "W10"
+},
+{
+"text": "pe",
+"start": 27.213,
+"end": 27.273,
+"line": "W10"
+},
+{
+"text": "le",
+"start": 27.314,
+"end": 27.374,
+"line": "W10"
+},
+{
+"text": "jao",
+"start": 27.434,
+"end": 27.594,
+"line": "W10"
+},
+{
+"text": "aur",
+"start": 27.714,
+"end": 27.835,
+"line": "W10"
+},
+{
+"text": "mere",
+"start": 28.015,
+"end": 28.336,
+"line": "W10"
+},
+{
+"text": "jo",
+"start": 28.476,
+"end": 28.556,
+"line": "W10"
+},
+{
+"text": "important",
+"start": 28.676,
+"end": 29.218,
+"line": "W10"
+},
+{
+"text": "workflows",
+"start": 29.298,
+"end": 29.779,
+"line": "W10"
+},
+{
+"text": "hain",
+"start": 29.779,
+"end": 29.899,
+"line": "W10"
+},
+{
+"text": "dikhao",
+"start": 29.899,
+"end": 30.16,
+"line": "W10"
+},
+{
+"text": "One",
+"start": 30.342,
+"end": 30.442,
+"line": "W12"
+},
+{
+"text": "is",
+"start": 30.462,
+"end": 30.522,
+"line": "W12"
+},
+{
+"text": "the",
+"start": 30.542,
+"end": 30.602,
+"line": "W12"
+},
+{
+"text": "Content",
+"start": 30.662,
+"end": 31.083,
+"line": "W12"
+},
+{
+"text": "OS",
+"start": 31.143,
+"end": 31.344,
+"line": "W12"
+},
+{
+"text": "one",
+"start": 31.464,
+"end": 31.564,
+"line": "W12"
+},
+{
+"text": "is",
+"start": 31.585,
+"end": 31.665,
+"line": "W12"
+},
+{
+"text": "the",
+"start": 31.725,
+"end": 31.785,
+"line": "W12"
+},
+{
+"text": "Business",
+"start": 31.885,
+"end": 32.286,
+"line": "W12"
+},
+{
+"text": "OS",
+"start": 32.407,
+"end": 32.667,
+"line": "W12"
+},
+{
+"text": "and",
+"start": 32.808,
+"end": 32.968,
+"line": "W12"
+},
+{
+"text": "the",
+"start": 32.988,
+"end": 33.048,
+"line": "W12"
+},
+{
+"text": "third",
+"start": 33.108,
+"end": 33.329,
+"line": "W12"
+},
+{
+"text": "one",
+"start": 33.369,
+"end": 33.529,
+"line": "W12"
+},
+{
+"text": "is",
+"start": 33.549,
+"end": 33.63,
+"line": "W12"
+},
+{
+"text": "the",
+"start": 33.69,
+"end": 33.75,
+"line": "W12"
+},
+{
+"text": "Money",
+"start": 33.87,
+"end": 34.071,
+"line": "W12"
+},
+{
+"text": "OS",
+"start": 34.191,
+"end": 34.452,
+"line": "W12"
+},
+{
+"text": "in",
+"start": 34.676,
+"end": 34.756,
+"line": "W12"
+},
+{
+"text": "teeno",
+"start": 34.796,
+"end": 34.997,
+"line": "W12"
+},
+{
+"text": "workflows",
+"start": 35.037,
+"end": 35.438,
+"line": "W12"
+},
+{
+"text": "mein",
+"start": 35.478,
+"end": 35.558,
+"line": "W12"
+},
+{
+"text": "hum",
+"start": 35.558,
+"end": 35.618,
+"line": "W12"
+},
+{
+"text": "kaise",
+"start": 35.679,
+"end": 35.919,
+"line": "W12"
+},
+{
+"text": "kaam",
+"start": 35.979,
+"end": 36.1,
+"line": "W12"
+},
+{
+"text": "karte",
+"start": 36.1,
+"end": 36.2,
+"line": "W12"
+},
+{
+"text": "hain",
+"start": 36.2,
+"end": 36.28,
+"line": "W12"
+},
+{
+"text": "Yeh",
+"start": 36.405,
+"end": 36.526,
+"line": "W13"
+},
+{
+"text": "sab",
+"start": 36.566,
+"end": 36.687,
+"line": "W13"
+},
+{
+"text": "cheezein",
+"start": 36.728,
+"end": 36.99,
+"line": "W13"
+},
+{
+"text": "dikhao",
+"start": 36.99,
+"end": 37.211,
+"line": "W13"
+},
+{
+"text": "Kaise",
+"start": 37.414,
+"end": 37.594,
+"line": "W15"
+},
+{
+"text": "hum",
+"start": 37.614,
+"end": 37.694,
+"line": "W15"
+},
+{
+"text": "content",
+"start": 37.734,
+"end": 38.075,
+"line": "W15"
+},
+{
+"text": "ke",
+"start": 38.155,
+"end": 38.195,
+"line": "W15"
+},
+{
+"text": "liye",
+"start": 38.215,
+"end": 38.315,
+"line": "W15"
+},
+{
+"text": "ideate",
+"start": 38.395,
+"end": 38.675,
+"line": "W15"
+},
+{
+"text": "karte",
+"start": 38.695,
+"end": 38.936,
+"line": "W15"
+},
+{
+"text": "hain",
+"start": 38.936,
+"end": 39.076,
+"line": "W15"
+},
+{
+"text": "script",
+"start": 39.096,
+"end": 39.456,
+"line": "W15"
+},
+{
+"text": "likhte",
+"start": 39.496,
+"end": 39.777,
+"line": "W15"
+},
+{
+"text": "hain",
+"start": 39.797,
+"end": 39.897,
+"line": "W15"
+},
+{
+"text": "kaise",
+"start": 40.037,
+"end": 40.417,
+"line": "W15"
+},
+{
+"text": "hum",
+"start": 40.478,
+"end": 40.618,
+"line": "W15"
+},
+{
+"text": "apne",
+"start": 40.658,
+"end": 40.858,
+"line": "W15"
+},
+{
+"text": "webinars",
+"start": 40.898,
+"end": 41.399,
+"line": "W15"
+},
+{
+"text": "workshops",
+"start": 41.459,
+"end": 41.959,
+"line": "W15"
+},
+{
+"text": "manage",
+"start": 42.019,
+"end": 42.36,
+"line": "W15"
+},
+{
+"text": "karte",
+"start": 42.38,
+"end": 42.54,
+"line": "W15"
+},
+{
+"text": "hain",
+"start": 42.54,
+"end": 42.62,
+"line": "W15"
+},
+{
+"text": "Aur",
+"start": 42.815,
+"end": 42.955,
+"line": "W17"
+},
+{
+"text": "kaise",
+"start": 43.095,
+"end": 43.456,
+"line": "W17"
+},
+{
+"text": "mere",
+"start": 43.556,
+"end": 43.797,
+"line": "W17"
+},
+{
+"text": "bots",
+"start": 43.937,
+"end": 44.258,
+"line": "W17"
+},
+{
+"text": "jo",
+"start": 44.318,
+"end": 44.398,
+"line": "W17"
+},
+{
+"text": "hain",
+"start": 44.439,
+"end": 44.599,
+"line": "W17"
+},
+{
+"text": "woh",
+"start": 44.599,
+"end": 44.699,
+"line": "W17"
+},
+{
+"text": "automatically",
+"start": 44.699,
+"end": 45.481,
+"line": "W17"
+},
+{
+"text": "trade",
+"start": 45.581,
+"end": 45.882,
+"line": "W17"
+},
+{
+"text": "aur",
+"start": 45.902,
+"end": 45.982,
+"line": "W17"
+},
+{
+"text": "invest",
+"start": 46.042,
+"end": 46.343,
+"line": "W17"
+},
+{
+"text": "karte",
+"start": 46.403,
+"end": 46.624,
+"line": "W17"
+},
+{
+"text": "hain",
+"start": 46.644,
+"end": 46.744,
+"line": "W17"
+},
+{
+"text": "markets",
+"start": 46.764,
+"end": 47.105,
+"line": "W17"
+},
+{
+"text": "mein",
+"start": 47.165,
+"end": 47.305,
+"line": "W17"
+},
+{
+"text": "main",
+"start": 47.666,
+"end": 47.787,
+"line": "W17"
+},
+{
+"text": "koi",
+"start": 47.807,
+"end": 47.927,
+"line": "W17"
+},
+{
+"text": "check",
+"start": 47.947,
+"end": 48.107,
+"line": "W17"
+},
+{
+"text": "bhi",
+"start": 48.147,
+"end": 48.208,
+"line": "W17"
+},
+{
+"text": "nahi",
+"start": 48.268,
+"end": 48.348,
+"line": "W17"
+},
+{
+"text": "karta",
+"start": 48.348,
+"end": 48.568,
+"line": "W17"
+},
+{
+"text": "Ab",
+"start": 48.752,
+"end": 48.853,
+"line": "W18"
+},
+{
+"text": "ek",
+"start": 48.913,
+"end": 48.973,
+"line": "W18"
+},
+{
+"text": "kaam",
+"start": 49.013,
+"end": 49.193,
+"line": "W18"
+},
+{
+"text": "karte",
+"start": 49.253,
+"end": 49.494,
+"line": "W18"
+},
+{
+"text": "hain",
+"start": 49.494,
+"end": 49.574,
+"line": "W18"
+},
+{
+"text": "mere",
+"start": 49.834,
+"end": 50.115,
+"line": "W18"
+},
+{
+"text": "haath",
+"start": 50.235,
+"end": 50.556,
+"line": "W18"
+},
+{
+"text": "ke",
+"start": 50.596,
+"end": 50.696,
+"line": "W18"
+},
+{
+"text": "upar",
+"start": 50.756,
+"end": 51.017,
+"line": "W18"
+},
+{
+"text": "3D",
+"start": 51.217,
+"end": 51.598,
+"line": "W18"
+},
+{
+"text": "mein",
+"start": 51.758,
+"end": 51.879,
+"line": "W18"
+},
+{
+"text": "spin",
+"start": 51.919,
+"end": 52.199,
+"line": "W18"
+},
+{
+"text": "karte",
+"start": 52.279,
+"end": 52.54,
+"line": "W18"
+},
+{
+"text": "hain",
+"start": 52.54,
+"end": 52.62,
+"line": "W18"
+},
+{
+"text": "to",
+"start": 52.441,
+"end": 52.521,
+"line": "W19"
+},
+{
+"text": "woh",
+"start": 52.582,
+"end": 52.662,
+"line": "W19"
+},
+{
+"text": "meri",
+"start": 52.742,
+"end": 52.983,
+"line": "W19"
+},
+{
+"text": "reels",
+"start": 53.064,
+"end": 53.345,
+"line": "W19"
+},
+{
+"text": "le",
+"start": 53.405,
+"end": 53.485,
+"line": "W19"
+},
+{
+"text": "ke",
+"start": 53.546,
+"end": 53.626,
+"line": "W19"
+},
+{
+"text": "aao",
+"start": 53.646,
+"end": 53.766,
+"line": "W19"
+},
+{
+"text": "and",
+"start": 54.048,
+"end": 54.209,
+"line": "W19"
+},
+{
+"text": "let",
+"start": 54.37,
+"end": 54.591,
+"line": "W19"
+},
+{
+"text": "my",
+"start": 54.651,
+"end": 54.792,
+"line": "W19"
+},
+{
+"text": "finger",
+"start": 54.892,
+"end": 55.294,
+"line": "W19"
+},
+{
+"text": "turn",
+"start": 55.494,
+"end": 55.735,
+"line": "W19"
+},
+{
+"text": "that",
+"start": 55.816,
+"end": 56.057,
+"line": "W19"
+},
+{
+"text": "When",
+"start": 56.282,
+"end": 56.402,
+"line": "W20"
+},
+{
+"text": "I'm",
+"start": 56.502,
+"end": 56.542,
+"line": "W20"
+},
+{
+"text": "moving",
+"start": 56.603,
+"end": 56.843,
+"line": "W20"
+},
+{
+"text": "the",
+"start": 56.883,
+"end": 56.943,
+"line": "W20"
+},
+{
+"text": "finger",
+"start": 56.984,
+"end": 57.224,
+"line": "W20"
+},
+{
+"text": "let",
+"start": 57.284,
+"end": 57.425,
+"line": "W20"
+},
+{
+"text": "my",
+"start": 57.465,
+"end": 57.565,
+"line": "W20"
+},
+{
+"text": "finger",
+"start": 57.605,
+"end": 57.866,
+"line": "W20"
+},
+{
+"text": "turn",
+"start": 57.946,
+"end": 58.147,
+"line": "W20"
+},
+{
+"text": "that",
+"start": 58.187,
+"end": 58.408,
+"line": "W20"
+},
+{
+"text": "and",
+"start": 58.65,
+"end": 58.81,
+"line": "W20"
+},
+{
+"text": "when",
+"start": 58.87,
+"end": 58.99,
+"line": "W20"
+},
+{
+"text": "I",
+"start": 59.071,
+"end": 59.091,
+"line": "W20"
+},
+{
+"text": "click",
+"start": 59.191,
+"end": 59.412,
+"line": "W20"
+},
+{
+"text": "one",
+"start": 59.532,
+"end": 59.692,
+"line": "W20"
+},
+{
+"text": "just",
+"start": 59.954,
+"end": 60.175,
+"line": "W20"
+},
+{
+"text": "let",
+"start": 60.295,
+"end": 60.476,
+"line": "W20"
+},
+{
+"text": "it",
+"start": 60.516,
+"end": 60.616,
+"line": "W20"
+},
+{
+"text": "hit",
+"start": 60.656,
+"end": 60.797,
+"line": "W20"
+},
+{
+"text": "my",
+"start": 60.857,
+"end": 60.977,
+"line": "W20"
+},
+{
+"text": "head",
+"start": 61.057,
+"end": 61.278,
+"line": "W20"
+},
+{
+"text": "Oh",
+"start": 61.505,
+"end": 61.687,
+"line": "W21"
+},
+{
+"text": "no",
+"start": 61.768,
+"end": 61.868,
+"line": "W21"
+},
+{
+"text": "ye",
+"start": 62.13,
+"end": 62.191,
+"line": "W21"
+},
+{
+"text": "kya",
+"start": 62.272,
+"end": 62.352,
+"line": "W21"
+},
+{
+"text": "kiya",
+"start": 62.413,
+"end": 62.594,
+"line": "W21"
+},
+{
+"text": "Ab",
+"start": 63.532,
+"end": 63.612,
+"line": "W22"
+},
+{
+"text": "ek",
+"start": 63.652,
+"end": 63.752,
+"line": "W22"
+},
+{
+"text": "tagda",
+"start": 63.832,
+"end": 64.093,
+"line": "W22"
+},
+{
+"text": "sa",
+"start": 64.153,
+"end": 64.213,
+"line": "W22"
+},
+{
+"text": "effect",
+"start": 64.293,
+"end": 64.593,
+"line": "W22"
+},
+{
+"text": "lagao",
+"start": 64.633,
+"end": 64.953,
+"line": "W22"
+},
+{
+"text": "jaise",
+"start": 65.133,
+"end": 65.454,
+"line": "W22"
+},
+{
+"text": "hi",
+"start": 65.474,
+"end": 65.534,
+"line": "W22"
+},
+{
+"text": "main",
+"start": 65.614,
+"end": 65.754,
+"line": "W22"
+},
+{
+"text": "aise",
+"start": 65.935,
+"end": 66.095,
+"line": "W22"
+},
+{
+"text": "khada",
+"start": 66.155,
+"end": 66.335,
+"line": "W22"
+},
+{
+"text": "hota",
+"start": 66.395,
+"end": 66.535,
+"line": "W22"
+},
+{
+"text": "hoon",
+"start": 66.535,
+"end": 66.656,
+"line": "W22"
+},
+{
+"text": "aur",
+"start": 66.878,
+"end": 66.958,
+"line": "W22"
+},
+{
+"text": "aisa",
+"start": 66.998,
+"end": 67.138,
+"line": "W22"
+},
+{
+"text": "lage",
+"start": 67.178,
+"end": 67.319,
+"line": "W22"
+},
+{
+"text": "ki",
+"start": 67.379,
+"end": 67.439,
+"line": "W22"
+},
+{
+"text": "main",
+"start": 67.479,
+"end": 67.599,
+"line": "W22"
+},
+{
+"text": "ek",
+"start": 67.619,
+"end": 67.679,
+"line": "W22"
+},
+{
+"text": "documentary",
+"start": 67.779,
+"end": 68.359,
+"line": "W22"
+},
+{
+"text": "shoot",
+"start": 68.439,
+"end": 68.66,
+"line": "W22"
+},
+{
+"text": "kar",
+"start": 68.7,
+"end": 68.78,
+"line": "W22"
+},
+{
+"text": "raha",
+"start": 68.8,
+"end": 68.88,
+"line": "W22"
+},
+{
+"text": "hoon",
+"start": 68.88,
+"end": 69.12,
+"line": "W22"
+},
+{
+"text": "Is",
+"start": 69.346,
+"end": 69.447,
+"line": "W23"
+},
+{
+"text": "type",
+"start": 69.507,
+"end": 69.709,
+"line": "W23"
+},
+{
+"text": "ka",
+"start": 69.73,
+"end": 69.77,
+"line": "W23"
+},
+{
+"text": "shot",
+"start": 69.831,
+"end": 70.033,
+"line": "W23"
+},
+{
+"text": "chahiye",
+"start": 70.093,
+"end": 70.316,
+"line": "W23"
+},
+{
+"text": "Agar",
+"start": 70.546,
+"end": 70.686,
+"line": "W25"
+},
+{
+"text": "aapko",
+"start": 70.861,
+"end": 71.283,
+"line": "W25b"
+},
+{
+"text": "bhi",
+"start": 71.323,
+"end": 71.384,
+"line": "W25b"
+},
+{
+"text": "poori",
+"start": 71.444,
+"end": 71.605,
+"line": "W25b"
+},
+{
+"text": "ki",
+"start": 71.665,
+"end": 71.886,
+"line": "W25b"
+},
+{
+"text": "step",
+"start": 71.946,
+"end": 72.148,
+"line": "W25b"
+},
+{
+"text": "by",
+"start": 72.188,
+"end": 72.288,
+"line": "W25b"
+},
+{
+"text": "step",
+"start": 72.349,
+"end": 72.55,
+"line": "W25b"
+},
+{
+"text": "guide",
+"start": 72.63,
+"end": 72.891,
+"line": "W25b"
+},
+{
+"text": "chahiye",
+"start": 72.911,
+"end": 73.133,
+"line": "W25b"
+},
+{
+"text": "aur",
+"start": 73.515,
+"end": 73.615,
+"line": "W25b"
+},
+{
+"text": "workflow",
+"start": 73.675,
+"end": 74.077,
+"line": "W25b"
+},
+{
+"text": "chahiye",
+"start": 74.118,
+"end": 74.359,
+"line": "W25b"
+},
+{
+"text": "To",
+"start": 74.542,
+"end": 74.623,
+"line": "W26"
+},
+{
+"text": "comment",
+"start": 74.743,
+"end": 75.105,
+"line": "W26"
+},
+{
+"text": "kar",
+"start": 75.166,
+"end": 75.266,
+"line": "W26"
+},
+{
+"text": "do",
+"start": 75.306,
+"end": 75.387,
+"line": "W26"
+},
+{
+"text": "EDIT",
+"start": 75.467,
+"end": 75.708,
+"line": "W26"
+},
+{
+"text": "main",
+"start": 75.95,
+"end": 76.07,
+"line": "W26"
+},
+{
+"text": "saara",
+"start": 76.211,
+"end": 76.492,
+"line": "W26"
+},
+{
+"text": "kuch",
+"start": 76.513,
+"end": 76.653,
+"line": "W26"
+},
+{
+"text": "aapke",
+"start": 76.694,
+"end": 76.874,
+"line": "W26"
+},
+{
+"text": "DM",
+"start": 76.935,
+"end": 77.116,
+"line": "W26"
+},
+{
+"text": "mein",
+"start": 77.136,
+"end": 77.236,
+"line": "W26"
+},
+{
+"text": "bhej",
+"start": 77.236,
+"end": 77.397,
+"line": "W26"
+},
+{
+"text": "doonga",
+"start": 77.437,
+"end": 77.618,
+"line": "W26"
+},
+{
+"text": "Agar",
+"start": 77.865,
+"end": 78.006,
+"line": "W28a"
+},
+{
+"text": "aapko",
+"start": 78.046,
+"end": 78.207,
+"line": "W28a"
+},
+{
+"text": "bhi",
+"start": 78.247,
+"end": 78.308,
+"line": "W28a"
+},
+{
+"text": "poora",
+"start": 78.429,
+"end": 78.61,
+"line": "W28a"
+},
+{
+"text": "ka",
+"start": 78.65,
+"end": 78.711,
+"line": "W28a"
+},
+{
+"text": "poora",
+"start": 78.751,
+"end": 78.892,
+"line": "W28a"
+},
+{
+"text": "workflow",
+"start": 78.973,
+"end": 79.335,
+"line": "W28a"
+},
+{
+"text": "seekhna",
+"start": 79.416,
+"end": 79.678,
+"line": "W28a"
+},
+{
+"text": "hai",
+"start": 79.678,
+"end": 79.778,
+"line": "W28a"
+},
+{
+"text": "to",
+"start": 79.839,
+"end": 79.919,
+"line": "W28a"
+},
+{
+"text": "maine",
+"start": 80.145,
+"end": 80.325,
+"line": "W28b"
+},
+{
+"text": "apne",
+"start": 80.365,
+"end": 80.505,
+"line": "W28b"
+},
+{
+"text": "channel",
+"start": 80.545,
+"end": 80.806,
+"line": "W28b"
+},
+{
+"text": "ke",
+"start": 80.826,
+"end": 80.886,
+"line": "W28b"
+},
+{
+"text": "description",
+"start": 80.966,
+"end": 81.386,
+"line": "W28b"
+},
+{
+"text": "mein",
+"start": 81.446,
+"end": 81.547,
+"line": "W28b"
+},
+{
+"text": "WhatsApp",
+"start": 81.687,
+"end": 82.007,
+"line": "W28b"
+},
+{
+"text": "channel",
+"start": 82.067,
+"end": 82.328,
+"line": "W28b"
+},
+{
+"text": "ka",
+"start": 82.348,
+"end": 82.408,
+"line": "W28b"
+},
+{
+"text": "link",
+"start": 82.468,
+"end": 82.608,
+"line": "W28b"
+},
+{
+"text": "daala",
+"start": 82.668,
+"end": 82.848,
+"line": "W28b"
+},
+{
+"text": "hua",
+"start": 82.848,
+"end": 82.908,
+"line": "W28b"
+},
+{
+"text": "hai",
+"start": 82.908,
+"end": 82.988,
+"line": "W28b"
+},
+{
+"text": "usmein",
+"start": 83.289,
+"end": 83.509,
+"line": "W28b"
+},
+{
+"text": "main",
+"start": 83.509,
+"end": 83.589,
+"line": "W28b"
+},
+{
+"text": "sab",
+"start": 83.609,
+"end": 83.709,
+"line": "W28b"
+},
+{
+"text": "kuch",
+"start": 83.749,
+"end": 83.89,
+"line": "W28b"
+},
+{
+"text": "share",
+"start": 83.91,
+"end": 84.13,
+"line": "W28b"
+},
+{
+"text": "karta",
+"start": 84.13,
+"end": 84.35,
+"line": "W28b"
+},
+{
+"text": "hoon",
+"start": 84.35,
+"end": 84.45,
+"line": "W28b"
+},
+{
+"text": "aur",
+"start": 84.751,
+"end": 84.871,
+"line": "W28b"
+},
+{
+"text": "ek",
+"start": 84.931,
+"end": 85.011,
+"line": "W28b"
+},
+{
+"text": "YouTube",
+"start": 85.071,
+"end": 85.332,
+"line": "W28b"
+},
+{
+"text": "video",
+"start": 85.332,
+"end": 85.552,
+"line": "W28b"
+},
+{
+"text": "bhi",
+"start": 85.592,
+"end": 85.652,
+"line": "W28b"
+},
+{
+"text": "banayi",
+"start": 85.712,
+"end": 85.952,
+"line": "W28b"
+},
+{
+"text": "hai",
+"start": 85.952,
+"end": 86.032,
+"line": "W28b"
+},
+{
+"text": "is",
+"start": 86.053,
+"end": 86.153,
+"line": "W28b"
+},
+{
+"text": "poore",
+"start": 86.213,
+"end": 86.453,
+"line": "W28b"
+},
+{
+"text": "process",
+"start": 86.513,
+"end": 86.854,
+"line": "W28b"
+},
+{
+"text": "ko",
+"start": 86.894,
+"end": 86.954,
+"line": "W28b"
+},
+{
+"text": "showcase",
+"start": 87.014,
+"end": 87.374,
+"line": "W28b"
+},
+{
+"text": "karte",
+"start": 87.374,
+"end": 87.595,
+"line": "W28b"
+},
+{
+"text": "hue",
+"start": 87.615,
+"end": 87.695,
+"line": "W28b"
+},
+{
+"text": "to",
+"start": 87.978,
+"end": 88.018,
+"line": "W28b"
+},
+{
+"text": "wahan",
+"start": 88.078,
+"end": 88.218,
+"line": "W28b"
+},
+{
+"text": "pe",
+"start": 88.238,
+"end": 88.298,
+"line": "W28b"
+},
+{
+"text": "sab",
+"start": 88.359,
+"end": 88.459,
+"line": "W28b"
+},
+{
+"text": "kuch",
+"start": 88.479,
+"end": 88.619,
+"line": "W28b"
+},
+{
+"text": "aapko",
+"start": 88.639,
+"end": 88.799,
+"line": "W28b"
+},
+{
+"text": "mil",
+"start": 88.859,
+"end": 88.959,
+"line": "W28b"
+},
+{
+"text": "jaega",
+"start": 89.019,
+"end": 89.24,
+"line": "W28b"
+},
+{
+"text": "Follow",
+"start": 89.505,
+"end": 89.726,
+"line": "W28c"
+},
+{
+"text": "subscribe",
+"start": 89.746,
+"end": 90.106,
+"line": "W28c"
+},
+{
+"text": "zaroor",
+"start": 90.126,
+"end": 90.347,
+"line": "W28c"
+},
+{
+"text": "kar",
+"start": 90.387,
+"end": 90.467,
+"line": "W28c"
+},
+{
+"text": "lena",
+"start": 90.487,
+"end": 90.627,
+"line": "W28c"
+},
+{
+"text": "agar",
+"start": 90.647,
+"end": 90.807,
+"line": "W28c"
+},
+{
+"text": "maza",
+"start": 90.847,
+"end": 91.028,
+"line": "W28c"
+},
+{
+"text": "aa",
+"start": 91.048,
+"end": 91.108,
+"line": "W28c"
+},
+{
+"text": "raha",
+"start": 91.108,
+"end": 91.208,
+"line": "W28c"
+},
+{
+"text": "hai",
+"start": 91.208,
+"end": 91.288,
+"line": "W28c"
+},
+{
+"text": "aise",
+"start": 91.288,
+"end": 91.368,
+"line": "W28c"
+},
+{
+"text": "content",
+"start": 91.408,
+"end": 91.709,
+"line": "W28c"
+},
+{
+"text": "dekh",
+"start": 91.789,
+"end": 91.949,
+"line": "W28c"
+},
+{
+"text": "ke",
+"start": 91.949,
+"end": 92.009,
+"line": "W28c"
+}
+],
+"hide": [
+[
+0.0,
+3.2
+],
+[
+7.55,
+13.15
+],
+[
+67.72,
+70.52
+],
+[
+74.64,
+78.34
+]
+]
+}

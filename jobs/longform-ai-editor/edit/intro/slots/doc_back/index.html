@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #panel { position: absolute; left: 0; top: 0; width: 960px; height: 1080px; background: #0C0E0F; overflow: hidden; }
+      #circle { position: absolute; width: 760px; height: 760px; left: 100px; top: 230px; border-radius: 50%;
+        background: radial-gradient(circle at 40% 35%, #3AB0D8 0%, #1A9FD1 55%, #11324C 100%); }
+      #ring { position: absolute; width: 900px; height: 900px; left: 30px; top: 160px; border-radius: 50%; border: 2px solid rgba(58,176,216,0.35); }
+      .row { position: absolute; left: 0; right: 0; text-align: center; line-height: 1; }
+      .stamp { display: inline-block; margin: 0 12px; color: #FFFFFF; font-weight: 900; font-size: 66px; letter-spacing: -0.03em;
+        text-shadow: 0 4px 18px rgba(12,14,15,0.85); }
+      .stamp.hl { color: #0C0E0F; -webkit-text-stroke: 3px #FFFFFF; text-shadow: none; }
+      #grain { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 2px, rgba(0,0,0,0) 2px 4px); }
+      #flash { position: absolute; left: 0; top: 0; width: 960px; height: 1080px; background: #FFFFFF; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="2.8" data-width="1920" data-height="1080">
+      <div id="panel" class="clip" data-start="0" data-duration="2.8" data-track-index="0">
+        <div id="ring"></div>
+        <div id="circle"></div>
+        <div class="row" style="top:26px"><span class="stamp" id="t1">ONE MAN.</span><span class="stamp hl" id="t2">ONE TAKE.</span></div>
+        <div class="row" style="top:100px"><span class="stamp" id="t3">ZERO EDITING.</span></div>
+        <div id="grain"></div>
+        <div id="flash"></div>
+      </div>
+    </div>
+    <script>
+      const STAMPS = [0.35, 0.8, 1.25], DUR = 2.8;
+      gsap.set(["#t1", "#t2", "#t3"], { opacity: 0 });
+      gsap.set("#circle", { scale: 0.6 });
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#flash", { opacity: 1 }, { opacity: 0, duration: 0.35, ease: "power2.out" }, 0)
+        .to("#circle", { scale: 1, duration: 0.7, ease: "expo.out" }, 0)
+        .fromTo("#ring", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.9, ease: "expo.out" }, 0.1)
+        .to("#circle", { scale: 1.04, duration: DUR - 0.8, ease: "none" }, 0.7)
+        .to("#flash", { opacity: 0.9, duration: 0.12, ease: "power2.in" }, DUR - 0.12);
+      ["#t1", "#t2", "#t3"].forEach((id, i) => tl.fromTo(id, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.out" }, STAMPS[i]));
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

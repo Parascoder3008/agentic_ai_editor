@@ -1,0 +1,7448 @@
+{
+ "language_code": "hi",
+ "words": [
+  {
+   "text": "मैंने",
+   "start": 25.31,
+   "end": 25.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.966,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 25.75,
+   "end": 25.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिया",
+   "start": 25.91,
+   "end": 26.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.954,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अपने",
+   "start": 26.09,
+   "end": 26.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "phrase"
+  },
+  {
+   "text": "video.",
+   "start": 26.33,
+   "end": 26.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.061,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भाई,",
+   "start": 28.05,
+   "end": 29.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.696,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैंने",
+   "start": 29.17,
+   "end": 29.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 29.51,
+   "end": 29.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.991,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिया",
+   "start": 29.67,
+   "end": 29.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.968,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अपने",
+   "start": 29.87,
+   "end": 30.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "video",
+   "start": 30.11,
+   "end": 30.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.273,
+   "chunk": "phrase"
+  },
+  {
+   "text": "editor",
+   "start": 30.31,
+   "end": 30.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "phrase"
+  },
+  {
+   "text": "की",
+   "start": 30.57,
+   "end": 30.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "phrase"
+  },
+  {
+   "text": "छुट्टी,",
+   "start": 30.85,
+   "end": 31.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.891,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Because",
+   "start": 31.45,
+   "end": 31.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.04,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Claude",
+   "start": 31.93,
+   "end": 32.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.624,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Opus",
+   "start": 32.69,
+   "end": 33.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.865,
+   "chunk": "phrase"
+  },
+  {
+   "text": "5",
+   "start": 33.35,
+   "end": 33.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": ".5",
+   "start": 33.65,
+   "end": 34.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ने",
+   "start": 34.21,
+   "end": 34.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.973,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ये",
+   "start": 34.41,
+   "end": 34.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.907,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 34.63,
+   "end": 35.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 35.11,
+   "end": 35.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.728,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 35.23,
+   "end": 35.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "phrase"
+  },
+  {
+   "text": "video",
+   "start": 35.51,
+   "end": 35.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "edit",
+   "start": 35.63,
+   "end": 35.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "किया",
+   "start": 35.95,
+   "end": 36.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है.",
+   "start": 36.25,
+   "end": 36.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.946,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 47.5,
+   "end": 49.36,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.975,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब,",
+   "start": 50.43,
+   "end": 50.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.923,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जहां",
+   "start": 50.83,
+   "end": 51.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.951,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पर",
+   "start": 51.05,
+   "end": 51.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.828,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 51.15,
+   "end": 51.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.808,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 51.25,
+   "end": 51.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.969,
+   "chunk": "phrase"
+  },
+  {
+   "text": "रुका",
+   "start": 51.39,
+   "end": 51.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.907,
+   "chunk": "phrase"
+  },
+  {
+   "text": "था,",
+   "start": 51.71,
+   "end": 51.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "उन",
+   "start": 51.93,
+   "end": 52.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.796,
+   "chunk": "phrase"
+  },
+  {
+   "text": "बैड",
+   "start": 52.05,
+   "end": 52.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.828,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पॉसे,",
+   "start": 52.37,
+   "end": 52.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.863,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब,",
+   "start": 52.93,
+   "end": 53.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जहां",
+   "start": 53.57,
+   "end": 53.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पर",
+   "start": 53.79,
+   "end": 53.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 53.87,
+   "end": 53.97,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.94,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 53.97,
+   "end": 54.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "रुका",
+   "start": 54.13,
+   "end": 54.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "था,",
+   "start": 54.41,
+   "end": 54.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कट",
+   "start": 54.73,
+   "end": 55.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.946,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वट",
+   "start": 55.05,
+   "end": 55.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.592,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लगाने",
+   "start": 55.25,
+   "end": 55.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "से",
+   "start": 55.69,
+   "end": 55.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लेके,",
+   "start": 55.85,
+   "end": 56.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.874,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब,",
+   "start": 73.49,
+   "end": 73.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.946,
+   "chunk": "phrase"
+  },
+  {
+   "text": "cut",
+   "start": 73.97,
+   "end": 74.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.562,
+   "chunk": "phrase"
+  },
+  {
+   "text": "word",
+   "start": 74.13,
+   "end": 74.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.854,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लगाने",
+   "start": 74.31,
+   "end": 74.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "से",
+   "start": 74.73,
+   "end": 74.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लेके,",
+   "start": 74.89,
+   "end": 75.19,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.955,
+   "chunk": "phrase"
+  },
+  {
+   "text": "bad",
+   "start": 75.31,
+   "end": 75.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "take",
+   "start": 75.53,
+   "end": 75.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.783,
+   "chunk": "phrase"
+  },
+  {
+   "text": "से",
+   "start": 75.75,
+   "end": 75.97,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लेके,",
+   "start": 75.97,
+   "end": 76.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैंने",
+   "start": 76.33,
+   "end": 76.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.991,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कुछ",
+   "start": 76.65,
+   "end": 76.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "नहीं",
+   "start": 76.83,
+   "end": 76.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.93,
+   "chunk": "phrase"
+  },
+  {
+   "text": "किया.",
+   "start": 76.99,
+   "end": 77.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और,",
+   "start": 77.63,
+   "end": 78.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 87.11,
+   "end": 87.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.864,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 87.57,
+   "end": 87.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक्स्ट्रा",
+   "start": 87.73,
+   "end": 88.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.897,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चीज,",
+   "start": 88.07,
+   "end": 88.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 88.45,
+   "end": 88.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.938,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 88.63,
+   "end": 88.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक्स्ट्रा",
+   "start": 88.75,
+   "end": 89.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.969,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चीज",
+   "start": 89.03,
+   "end": 89.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में",
+   "start": 89.21,
+   "end": 89.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.814,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करके",
+   "start": 89.33,
+   "end": 89.59,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.969,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिखाता",
+   "start": 89.59,
+   "end": 89.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हूं,",
+   "start": 89.93,
+   "end": 90.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.891,
+   "chunk": "phrase"
+  },
+  {
+   "text": "यार",
+   "start": 90.71,
+   "end": 90.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.922,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 90.95,
+   "end": 91.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.915,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Claude",
+   "start": 91.15,
+   "end": 91.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.533,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 91.49,
+   "end": 91.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "logo",
+   "start": 91.67,
+   "end": 91.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.288,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ले",
+   "start": 91.81,
+   "end": 92.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आओ",
+   "start": 92.05,
+   "end": 92.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.94,
+   "chunk": "phrase"
+  },
+  {
+   "text": "यहां",
+   "start": 92.17,
+   "end": 92.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.889,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पर,",
+   "start": 92.37,
+   "end": 92.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.867,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इसको,",
+   "start": 93.39,
+   "end": 93.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इसको",
+   "start": 93.99,
+   "end": 96.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "spin",
+   "start": 96.33,
+   "end": 96.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.892,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कराओ,",
+   "start": 96.55,
+   "end": 97.01,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.947,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इसको",
+   "start": 97.85,
+   "end": 99.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "spin",
+   "start": 99.11,
+   "end": 99.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.907,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कराओ",
+   "start": 99.33,
+   "end": 99.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.827,
+   "chunk": "phrase"
+  },
+  {
+   "text": "and",
+   "start": 99.75,
+   "end": 100.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.754,
+   "chunk": "phrase"
+  },
+  {
+   "text": "let",
+   "start": 100.29,
+   "end": 103.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.929,
+   "chunk": "phrase"
+  },
+  {
+   "text": "it",
+   "start": 103.37,
+   "end": 103.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "hit",
+   "start": 103.61,
+   "end": 103.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 103.87,
+   "end": 104.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "camera.",
+   "start": 104.09,
+   "end": 104.47,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 113.5,
+   "end": 113.5,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.266,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 114.76,
+   "end": 114.76,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.265,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 114.76,
+   "end": 114.76,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.116,
+   "chunk": "gap"
+  },
+  {
+   "text": "अम्म,",
+   "start": 114.76,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.494,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.446,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.885,
+   "chunk": "gap"
+  },
+  {
+   "text": "अम्म,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.628,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.554,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.932,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.42,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.97,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.554,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.657,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.723,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.745,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.79,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.793,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.811,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.839,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.831,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.849,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.836,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.86,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.822,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.812,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.837,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.849,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 115.02,
+   "end": 115.02,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 115.02,
+   "end": 115.12,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.865,
+   "chunk": "gap"
+  },
+  {
+   "text": "म",
+   "start": 115.12,
+   "end": 115.12,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.962,
+   "chunk": "gap"
+  },
+  {
+   "text": "ऐसा",
+   "start": 114.99,
+   "end": 115.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.596,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करो",
+   "start": 115.13,
+   "end": 115.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 115.35,
+   "end": 115.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.867,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Claude",
+   "start": 115.55,
+   "end": 115.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.522,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 115.87,
+   "end": 116.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "logo",
+   "start": 116.03,
+   "end": 116.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.316,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लाओ",
+   "start": 116.15,
+   "end": 116.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.897,
+   "chunk": "phrase"
+  },
+  {
+   "text": "यहां",
+   "start": 116.49,
+   "end": 116.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.885,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पर.",
+   "start": 116.71,
+   "end": 116.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इसको",
+   "start": 117.95,
+   "end": 118.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "3D",
+   "start": 118.41,
+   "end": 119.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.934,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में",
+   "start": 119.49,
+   "end": 119.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "spin",
+   "start": 119.73,
+   "end": 119.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.708,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करके",
+   "start": 119.91,
+   "end": 120.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.981,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिखाओ,",
+   "start": 120.33,
+   "end": 120.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.96,
+   "chunk": "phrase"
+  },
+  {
+   "text": "थोड़ा",
+   "start": 121.05,
+   "end": 121.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.979,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सो",
+   "start": 121.89,
+   "end": 122.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.898,
+   "chunk": "phrase"
+  },
+  {
+   "text": "zoom",
+   "start": 122.03,
+   "end": 122.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.905,
+   "chunk": "phrase"
+  },
+  {
+   "text": "in",
+   "start": 122.27,
+   "end": 122.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.956,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करो,",
+   "start": 122.37,
+   "end": 122.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 123.03,
+   "end": 123.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.976,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ऐसा",
+   "start": 123.17,
+   "end": 123.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.981,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लगे",
+   "start": 123.63,
+   "end": 123.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.915,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कि",
+   "start": 123.83,
+   "end": 123.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.94,
+   "chunk": "phrase"
+  },
+  {
+   "text": "यह",
+   "start": 123.91,
+   "end": 124.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.634,
+   "chunk": "phrase"
+  },
+  {
+   "text": "camera",
+   "start": 124.25,
+   "end": 124.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.885,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में",
+   "start": 124.55,
+   "end": 124.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जाके",
+   "start": 124.79,
+   "end": 125.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.957,
+   "chunk": "phrase"
+  },
+  {
+   "text": "hit",
+   "start": 125.09,
+   "end": 125.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.853,
+   "chunk": "phrase"
+  },
+  {
+   "text": "किया,",
+   "start": 125.27,
+   "end": 125.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 126.57,
+   "end": 127.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.972,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ग्लास",
+   "start": 127.23,
+   "end": 127.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.925,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ब्रेक",
+   "start": 127.71,
+   "end": 127.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हो",
+   "start": 127.99,
+   "end": 128.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "गया.",
+   "start": 128.09,
+   "end": 128.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "फुफ",
+   "start": 128.38,
+   "end": 129.58,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.723,
+   "chunk": "gap"
+  },
+  {
+   "text": "देखगा",
+   "start": 130.21,
+   "end": 130.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.588,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तकार",
+   "start": 130.53,
+   "end": 130.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.428,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 130.81,
+   "end": 130.97,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.603,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 130.97,
+   "end": 131.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.651,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.05,
+   "end": 131.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.68,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.05,
+   "end": 131.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.745,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.17,
+   "end": 131.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.796,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.17,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.81,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.839,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.863,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.887,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.896,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.909,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.921,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.919,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.927,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.914,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.942,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.941,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.92,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एड़ा",
+   "start": 131.41,
+   "end": 131.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.92,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अब,",
+   "start": 139.81,
+   "end": 140.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.788,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अब",
+   "start": 140.17,
+   "end": 140.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.968,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ऐसा",
+   "start": 140.53,
+   "end": 140.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.903,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करो,",
+   "start": 140.69,
+   "end": 140.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 140.95,
+   "end": 141.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "phrase"
+  },
+  {
+   "text": "को",
+   "start": 141.11,
+   "end": 141.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "phrase"
+  },
+  {
+   "text": "साइड",
+   "start": 141.17,
+   "end": 141.47,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.951,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पे",
+   "start": 141.47,
+   "end": 141.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.899,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ले",
+   "start": 141.61,
+   "end": 141.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जाओ,",
+   "start": 141.75,
+   "end": 141.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 142.01,
+   "end": 142.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 142.25,
+   "end": 142.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जो",
+   "start": 142.77,
+   "end": 142.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.968,
+   "chunk": "phrase"
+  },
+  {
+   "text": "important",
+   "start": 142.93,
+   "end": 143.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.537,
+   "chunk": "phrase"
+  },
+  {
+   "text": "workflow",
+   "start": 143.37,
+   "end": 143.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.554,
+   "chunk": "phrase"
+  },
+  {
+   "text": "से",
+   "start": 143.93,
+   "end": 144.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.665,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिखाओ.",
+   "start": 144.17,
+   "end": 144.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 144.43,
+   "end": 144.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.921,
+   "chunk": "phrase"
+  },
+  {
+   "text": "थ्री,",
+   "start": 144.81,
+   "end": 145.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.795,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जो",
+   "start": 145.29,
+   "end": 145.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.956,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 145.75,
+   "end": 145.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "थ्री,",
+   "start": 145.99,
+   "end": 146.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.954,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जो",
+   "start": 146.45,
+   "end": 148.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.956,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 148.09,
+   "end": 148.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "थ्री,",
+   "start": 148.21,
+   "end": 148.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जो",
+   "start": 148.21,
+   "end": 148.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.731,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 148.21,
+   "end": 148.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "थ्री",
+   "start": 148.27,
+   "end": 148.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.972,
+   "chunk": "phrase"
+  },
+  {
+   "text": "important",
+   "start": 148.49,
+   "end": 148.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.733,
+   "chunk": "phrase"
+  },
+  {
+   "text": "operating",
+   "start": 148.89,
+   "end": 149.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "system",
+   "start": 149.35,
+   "end": 149.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है,",
+   "start": 149.77,
+   "end": 149.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.887,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 149.97,
+   "end": 150.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.759,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 150.07,
+   "end": 150.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 1.0,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 150.25,
+   "end": 150.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 150.39,
+   "end": 150.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.025,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 150.85,
+   "end": 151.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.759,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.085,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.628,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.954,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.219,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.713,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.826,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.608,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.757,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.725,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.973,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.765,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.841,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.719,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.975,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.854,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.829,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.8,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.981,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.866,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.881,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.849,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.878,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.85,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.862,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.885,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.838,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.868,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.87,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.838,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.87,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.892,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.824,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.863,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.989,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.909,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.839,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.853,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.893,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.831,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.37,
+   "end": 151.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.37,
+   "end": 151.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.856,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.39,
+   "end": 151.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.39,
+   "end": 151.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.91,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.39,
+   "end": 151.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.813,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.39,
+   "end": 151.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.39,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.817,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.901,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.818,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.771,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.918,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.827,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.722,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.917,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.827,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.743,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.981,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.922,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.836,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.652,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.931,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.839,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.625,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.974,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.927,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.834,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.61,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.972,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.934,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.829,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.601,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.927,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.857,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.572,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.96,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.927,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.849,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.558,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.959,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.927,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.816,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.504,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.957,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.941,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.811,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.49,
+   "end": 151.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.469,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.49,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.943,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.935,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.836,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.459,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.929,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.933,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.828,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.439,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.914,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.936,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.842,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 151.57,
+   "end": 151.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.425,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.46,
+   "end": 151.74,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.378,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.74,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.65,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.743,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.797,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.83,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.874,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.886,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 151.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.92,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 151.84,
+   "end": 152.04,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.919,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 152.04,
+   "end": 152.06,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.927,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 152.06,
+   "end": 152.28,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.93,
+   "chunk": "gap"
+  },
+  {
+   "text": "वाई,",
+   "start": 152.28,
+   "end": 152.96,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.935,
+   "chunk": "gap"
+  },
+  {
+   "text": "One",
+   "start": 152.83,
+   "end": 153.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.246,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 153.27,
+   "end": 153.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 153.39,
+   "end": 153.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Content",
+   "start": 153.49,
+   "end": 153.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.279,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 153.81,
+   "end": 154.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.937,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 154.29,
+   "end": 154.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.676,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 154.41,
+   "end": 154.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 1.0,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 154.55,
+   "end": 154.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Business",
+   "start": 154.69,
+   "end": 154.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS,",
+   "start": 154.99,
+   "end": 155.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "and",
+   "start": 155.73,
+   "end": 155.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 155.83,
+   "end": 155.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "third",
+   "start": 155.95,
+   "end": 156.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one",
+   "start": 156.13,
+   "end": 156.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "is",
+   "start": 156.33,
+   "end": 156.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 1.0,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 156.51,
+   "end": 156.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Money",
+   "start": 156.65,
+   "end": 156.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "OS.",
+   "start": 156.91,
+   "end": 157.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इन",
+   "start": 158.21,
+   "end": 158.59,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.718,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तीनों",
+   "start": 158.59,
+   "end": 158.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वर्कफ्लोस",
+   "start": 158.93,
+   "end": 159.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.699,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में",
+   "start": 159.95,
+   "end": 160.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हम",
+   "start": 160.11,
+   "end": 160.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.647,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कैसे",
+   "start": 160.17,
+   "end": 160.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "काई",
+   "start": 160.45,
+   "end": 160.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.534,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हैं?",
+   "start": 160.51,
+   "end": 160.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.385,
+   "chunk": "phrase"
+  },
+  {
+   "text": "यह",
+   "start": 161.31,
+   "end": 161.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.768,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सब",
+   "start": 161.85,
+   "end": 162.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चीज़े",
+   "start": 162.05,
+   "end": 162.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.816,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिखा।",
+   "start": 162.27,
+   "end": 162.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.852,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 172.71,
+   "end": 173.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.733,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इसमें",
+   "start": 173.51,
+   "end": 173.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.955,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सब",
+   "start": 173.69,
+   "end": 173.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.975,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चीज़े",
+   "start": 173.85,
+   "end": 174.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.855,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दिखाऊ",
+   "start": 174.07,
+   "end": 174.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.829,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कि",
+   "start": 174.31,
+   "end": 174.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.923,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कैसे",
+   "start": 174.51,
+   "end": 174.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हम",
+   "start": 174.93,
+   "end": 175.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.948,
+   "chunk": "phrase"
+  },
+  {
+   "text": "content",
+   "start": 175.05,
+   "end": 175.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.321,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 175.39,
+   "end": 176.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.862,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 176.73,
+   "end": 176.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.976,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 176.79,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.743,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.373,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.824,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.698,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.439,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.861,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.742,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.598,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.942,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.814,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.728,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.922,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.835,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.799,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.944,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.866,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.847,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.966,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.847,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.871,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.959,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.881,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.879,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.962,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.869,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.896,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिए",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आइडियेट",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.867,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.894,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लि�",
+   "start": 177.11,
+   "end": 177.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.962,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करते",
+   "start": 177.23,
+   "end": 177.43,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.877,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हैं,",
+   "start": 177.43,
+   "end": 177.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.932,
+   "chunk": "phrase"
+  },
+  {
+   "text": "script",
+   "start": 177.65,
+   "end": 177.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.235,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लिखते",
+   "start": 177.73,
+   "end": 178.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हैं,",
+   "start": 178.25,
+   "end": 178.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कैसे",
+   "start": 178.49,
+   "end": 178.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हम",
+   "start": 178.93,
+   "end": 179.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अपने",
+   "start": 179.11,
+   "end": 179.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "webinars,",
+   "start": 179.35,
+   "end": 179.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.9,
+   "chunk": "phrase"
+  },
+  {
+   "text": "workshops",
+   "start": 179.93,
+   "end": 180.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.905,
+   "chunk": "phrase"
+  },
+  {
+   "text": "manage",
+   "start": 180.23,
+   "end": 180.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.867,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करें.",
+   "start": 180.67,
+   "end": 180.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.844,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 181.25,
+   "end": 181.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.974,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 181.75,
+   "end": 182.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.837,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.09,
+   "end": 182.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.469,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.73,
+   "end": 182.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.586,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.73,
+   "end": 182.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.803,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.73,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.799,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.701,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.812,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.864,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.785,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.862,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.893,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.801,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.804,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.923,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.821,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.864,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.932,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.863,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.82,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.952,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.912,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.873,
+   "chunk": "phrase"
+  },
+  {
+   "text": "स्वाइब,",
+   "start": 182.85,
+   "end": 182.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.958,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 183.33,
+   "end": 183.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.247,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 183.99,
+   "end": 183.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.122,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 183.99,
+   "end": 184.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.451,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.31,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.898,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.591,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.934,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.701,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.952,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.707,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.961,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.739,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.954,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.782,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.955,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अम्म,",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.764,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब.",
+   "start": 184.45,
+   "end": 184.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.955,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.432,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.744,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.627,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.932,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.9,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.96,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.946,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.973,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.959,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.976,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.963,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.975,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.967,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.974,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.965,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.976,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.973,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.968,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.966,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.34,
+   "end": 184.34,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.42,
+   "end": 184.42,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.97,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 184.42,
+   "end": 184.46,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 184.52,
+   "end": 186.04,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.978,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 186.04,
+   "end": 186.04,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 186.04,
+   "end": 186.04,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो,",
+   "start": 186.04,
+   "end": 186.04,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 186.04,
+   "end": 186.28,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो.",
+   "start": 186.28,
+   "end": 186.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 186.38,
+   "end": 188.0,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.418,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो",
+   "start": 188.0,
+   "end": 188.1,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.68,
+   "chunk": "gap"
+  },
+  {
+   "text": "कर",
+   "start": 188.1,
+   "end": 188.1,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.288,
+   "chunk": "gap"
+  },
+  {
+   "text": "दो",
+   "start": 188.1,
+   "end": 188.1,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.839,
+   "chunk": "gap"
+  },
+  {
+   "text": "और",
+   "start": 189.47,
+   "end": 189.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.797,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कैसे",
+   "start": 189.95,
+   "end": 190.43,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.97,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 190.43,
+   "end": 190.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "bots",
+   "start": 190.83,
+   "end": 191.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.059,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जो",
+   "start": 191.15,
+   "end": 191.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.799,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है,",
+   "start": 191.41,
+   "end": 191.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.933,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वो",
+   "start": 191.55,
+   "end": 191.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.898,
+   "chunk": "phrase"
+  },
+  {
+   "text": "automatically",
+   "start": 191.67,
+   "end": 191.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.866,
+   "chunk": "phrase"
+  },
+  {
+   "text": "trade",
+   "start": 191.99,
+   "end": 192.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.981,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 192.61,
+   "end": 192.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "phrase"
+  },
+  {
+   "text": "invest",
+   "start": 192.91,
+   "end": 193.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.957,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करते",
+   "start": 193.15,
+   "end": 193.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हैं,",
+   "start": 193.55,
+   "end": 193.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.981,
+   "chunk": "phrase"
+  },
+  {
+   "text": "markets",
+   "start": 193.77,
+   "end": 193.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.849,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में,",
+   "start": 193.87,
+   "end": 194.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 194.29,
+   "end": 194.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कोई",
+   "start": 194.73,
+   "end": 194.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.786,
+   "chunk": "phrase"
+  },
+  {
+   "text": "check",
+   "start": 194.83,
+   "end": 194.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.762,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 194.99,
+   "end": 195.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "नहीं",
+   "start": 195.13,
+   "end": 195.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करता.",
+   "start": 195.25,
+   "end": 195.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अब",
+   "start": 209.28,
+   "end": 210.12,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.853,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 210.12,
+   "end": 210.24,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.97,
+   "chunk": "phrase"
+  },
+  {
+   "text": "काम",
+   "start": 210.24,
+   "end": 210.44,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.97,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करते",
+   "start": 210.44,
+   "end": 210.76,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हैं,",
+   "start": 210.76,
+   "end": 213.96,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.959,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरे",
+   "start": 213.96,
+   "end": 214.46,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.943,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हाथ",
+   "start": 214.46,
+   "end": 214.82,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.973,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 214.82,
+   "end": 214.98,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "उपर",
+   "start": 214.98,
+   "end": 215.32,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.934,
+   "chunk": "phrase"
+  },
+  {
+   "text": "3D",
+   "start": 215.32,
+   "end": 215.9,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.93,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में",
+   "start": 215.9,
+   "end": 216.18,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "spin",
+   "start": 216.18,
+   "end": 216.36,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.364,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करते",
+   "start": 216.36,
+   "end": 216.82,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हैं,",
+   "start": 216.82,
+   "end": 216.82,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.949,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो",
+   "start": 216.69,
+   "end": 216.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.838,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वे",
+   "start": 216.85,
+   "end": 216.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.592,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मेरी",
+   "start": 216.93,
+   "end": 217.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.919,
+   "chunk": "phrase"
+  },
+  {
+   "text": "wheels",
+   "start": 217.29,
+   "end": 217.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.445,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ले",
+   "start": 217.53,
+   "end": 217.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 217.81,
+   "end": 217.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.684,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आओ,",
+   "start": 217.89,
+   "end": 218.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.846,
+   "chunk": "phrase"
+  },
+  {
+   "text": "and",
+   "start": 218.19,
+   "end": 218.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.877,
+   "chunk": "phrase"
+  },
+  {
+   "text": "let",
+   "start": 218.67,
+   "end": 218.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "phrase"
+  },
+  {
+   "text": "my",
+   "start": 218.99,
+   "end": 219.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "finger",
+   "start": 219.23,
+   "end": 219.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "turn",
+   "start": 219.67,
+   "end": 220.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "that.",
+   "start": 220.13,
+   "end": 220.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "When",
+   "start": 220.97,
+   "end": 221.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.055,
+   "chunk": "phrase"
+  },
+  {
+   "text": "I'm",
+   "start": 221.49,
+   "end": 221.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.617,
+   "chunk": "phrase"
+  },
+  {
+   "text": "moving",
+   "start": 221.67,
+   "end": 221.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "the",
+   "start": 221.89,
+   "end": 222.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.972,
+   "chunk": "phrase"
+  },
+  {
+   "text": "finger,",
+   "start": 222.03,
+   "end": 222.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "let",
+   "start": 222.39,
+   "end": 222.47,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "my",
+   "start": 222.47,
+   "end": 222.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "phrase"
+  },
+  {
+   "text": "finger",
+   "start": 222.61,
+   "end": 222.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "turn",
+   "start": 222.89,
+   "end": 223.19,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "that.",
+   "start": 223.19,
+   "end": 223.43,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "And",
+   "start": 223.75,
+   "end": 224.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "when",
+   "start": 224.23,
+   "end": 224.43,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "I",
+   "start": 224.43,
+   "end": 224.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "click",
+   "start": 224.57,
+   "end": 224.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "one,",
+   "start": 224.83,
+   "end": 225.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.881,
+   "chunk": "phrase"
+  },
+  {
+   "text": "just",
+   "start": 225.65,
+   "end": 225.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "let",
+   "start": 225.99,
+   "end": 226.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 1.0,
+   "chunk": "phrase"
+  },
+  {
+   "text": "it",
+   "start": 226.25,
+   "end": 226.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.999,
+   "chunk": "phrase"
+  },
+  {
+   "text": "hit",
+   "start": 226.41,
+   "end": 226.59,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 1.0,
+   "chunk": "phrase"
+  },
+  {
+   "text": "my",
+   "start": 226.59,
+   "end": 226.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "head.",
+   "start": 226.79,
+   "end": 227.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 1.0,
+   "chunk": "phrase"
+  },
+  {
+   "text": "को",
+   "start": 227.59,
+   "end": 228.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.416,
+   "chunk": "phrase"
+  },
+  {
+   "text": "नूूूू।",
+   "start": 228.11,
+   "end": 228.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.671,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Oh",
+   "start": 229.31,
+   "end": 229.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.117,
+   "chunk": "phrase"
+  },
+  {
+   "text": "no,",
+   "start": 229.79,
+   "end": 229.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.892,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ये",
+   "start": 230.15,
+   "end": 230.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.844,
+   "chunk": "phrase"
+  },
+  {
+   "text": "क्या",
+   "start": 230.27,
+   "end": 230.43,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "किया?",
+   "start": 230.43,
+   "end": 230.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "Oh",
+   "start": 231.31,
+   "end": 231.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.044,
+   "chunk": "phrase"
+  },
+  {
+   "text": "no,",
+   "start": 231.91,
+   "end": 232.19,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.928,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ये",
+   "start": 232.19,
+   "end": 232.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.677,
+   "chunk": "phrase"
+  },
+  {
+   "text": "क्या",
+   "start": 232.53,
+   "end": 232.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.907,
+   "chunk": "phrase"
+  },
+  {
+   "text": "किया?",
+   "start": 232.67,
+   "end": 232.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.814,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अब",
+   "start": 243.09,
+   "end": 243.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.824,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 243.49,
+   "end": 243.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.851,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तबड,",
+   "start": 243.69,
+   "end": 244.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.829,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अब",
+   "start": 244.91,
+   "end": 245.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.909,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 245.13,
+   "end": 245.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तगड़ा",
+   "start": 245.23,
+   "end": 245.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.97,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सा",
+   "start": 245.57,
+   "end": 245.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.914,
+   "chunk": "phrase"
+  },
+  {
+   "text": "effect",
+   "start": 245.71,
+   "end": 245.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.285,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लेगा",
+   "start": 245.87,
+   "end": 246.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.813,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हो,",
+   "start": 246.31,
+   "end": 246.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.791,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जैसे",
+   "start": 246.53,
+   "end": 246.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ही",
+   "start": 246.95,
+   "end": 247.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.942,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 247.03,
+   "end": 247.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.979,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मतलब",
+   "start": 247.21,
+   "end": 247.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ऐसे,",
+   "start": 247.49,
+   "end": 247.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.98,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ऐसे",
+   "start": 247.89,
+   "end": 248.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.975,
+   "chunk": "phrase"
+  },
+  {
+   "text": "खड़ा",
+   "start": 248.57,
+   "end": 248.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.98,
+   "chunk": "phrase"
+  },
+  {
+   "text": "होता",
+   "start": 248.83,
+   "end": 249.01,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हूँ,",
+   "start": 249.01,
+   "end": 249.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.899,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 249.33,
+   "end": 249.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ऐसा",
+   "start": 249.63,
+   "end": 249.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.907,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लगे",
+   "start": 249.93,
+   "end": 250.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.898,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कि",
+   "start": 250.13,
+   "end": 250.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.926,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वाई,",
+   "start": 250.29,
+   "end": 250.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.81,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 250.57,
+   "end": 250.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 250.67,
+   "end": 250.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.954,
+   "chunk": "phrase"
+  },
+  {
+   "text": "documentary,",
+   "start": 250.87,
+   "end": 251.41,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.972,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 251.95,
+   "end": 252.47,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.937,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ऐसा",
+   "start": 252.47,
+   "end": 252.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.913,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लगे",
+   "start": 252.65,
+   "end": 252.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कि",
+   "start": 252.79,
+   "end": 252.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 252.93,
+   "end": 253.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.991,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 253.11,
+   "end": 253.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.936,
+   "chunk": "phrase"
+  },
+  {
+   "text": "documentary",
+   "start": 253.17,
+   "end": 253.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "shoot",
+   "start": 253.67,
+   "end": 254.01,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.885,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 254.01,
+   "end": 254.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "रहा",
+   "start": 254.29,
+   "end": 254.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.874,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हूँ.",
+   "start": 254.33,
+   "end": 254.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.864,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इस",
+   "start": 254.51,
+   "end": 254.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ट्राइब",
+   "start": 254.93,
+   "end": 255.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.861,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 255.17,
+   "end": 255.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.979,
+   "chunk": "phrase"
+  },
+  {
+   "text": "शॉट्टी",
+   "start": 255.29,
+   "end": 255.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.669,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है.",
+   "start": 255.65,
+   "end": 255.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.833,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो,",
+   "start": 255.84,
+   "end": 255.84,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.686,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 255.84,
+   "end": 255.88,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.145,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 257.2,
+   "end": 257.24,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.542,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 257.24,
+   "end": 257.28,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.96,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 257.28,
+   "end": 257.28,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.674,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 257.28,
+   "end": 258.0,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 258.0,
+   "end": 258.0,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.773,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 258.0,
+   "end": 258.88,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.98,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 258.88,
+   "end": 258.88,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.8,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 258.88,
+   "end": 259.24,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 259.24,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.853,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.983,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.874,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.87,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.894,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.866,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.986,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो,",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.897,
+   "chunk": "gap"
+  },
+  {
+   "text": "मतलब.",
+   "start": 259.38,
+   "end": 259.38,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो.",
+   "start": 259.38,
+   "end": 259.5,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.897,
+   "chunk": "gap"
+  },
+  {
+   "text": "तो",
+   "start": 259.37,
+   "end": 259.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.95,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अगर,",
+   "start": 259.51,
+   "end": 259.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.966,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो",
+   "start": 260.35,
+   "end": 260.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अगर",
+   "start": 260.85,
+   "end": 260.97,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.977,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आपको",
+   "start": 260.97,
+   "end": 261.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 261.39,
+   "end": 261.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.991,
+   "chunk": "phrase"
+  },
+  {
+   "text": "ये",
+   "start": 261.51,
+   "end": 261.65,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.728,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 261.65,
+   "end": 261.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 261.95,
+   "end": 262.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.751,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 262.07,
+   "end": 262.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वर्कफ्लोव,",
+   "start": 262.33,
+   "end": 262.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.737,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अगर",
+   "start": 263.93,
+   "end": 264.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.881,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आपको",
+   "start": 264.35,
+   "end": 264.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 264.61,
+   "end": 264.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.852,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 264.71,
+   "end": 264.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.816,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 264.99,
+   "end": 265.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.808,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 265.05,
+   "end": 265.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.949,
+   "chunk": "phrase"
+  },
+  {
+   "text": "step",
+   "start": 265.21,
+   "end": 265.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.584,
+   "chunk": "phrase"
+  },
+  {
+   "text": "by",
+   "start": 265.37,
+   "end": 265.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.755,
+   "chunk": "phrase"
+  },
+  {
+   "text": "step,",
+   "start": 265.55,
+   "end": 265.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अगर",
+   "start": 265.99,
+   "end": 268.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.936,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आपको",
+   "start": 268.33,
+   "end": 268.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 268.63,
+   "end": 268.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरी",
+   "start": 268.71,
+   "end": 268.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "की",
+   "start": 268.99,
+   "end": 269.07,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.945,
+   "chunk": "phrase"
+  },
+  {
+   "text": "step",
+   "start": 269.07,
+   "end": 269.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.843,
+   "chunk": "phrase"
+  },
+  {
+   "text": "by",
+   "start": 269.37,
+   "end": 269.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "step",
+   "start": 269.57,
+   "end": 269.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "guide",
+   "start": 269.77,
+   "end": 270.01,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.904,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चाहिए",
+   "start": 270.01,
+   "end": 270.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.98,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 270.45,
+   "end": 270.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.906,
+   "chunk": "phrase"
+  },
+  {
+   "text": "workflow",
+   "start": 270.95,
+   "end": 271.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.936,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चाहिए.",
+   "start": 271.23,
+   "end": 271.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो,",
+   "start": 271.85,
+   "end": 272.17,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.957,
+   "chunk": "phrase"
+  },
+  {
+   "text": "comment",
+   "start": 272.17,
+   "end": 272.47,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.837,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 272.47,
+   "end": 272.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.962,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दो,",
+   "start": 272.77,
+   "end": 272.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.973,
+   "chunk": "phrase"
+  },
+  {
+   "text": "edit,",
+   "start": 273.01,
+   "end": 273.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 273.41,
+   "end": 273.59,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सारा",
+   "start": 273.59,
+   "end": 273.95,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कुछ",
+   "start": 273.95,
+   "end": 274.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आपके",
+   "start": 274.13,
+   "end": 274.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.992,
+   "chunk": "phrase"
+  },
+  {
+   "text": "DM",
+   "start": 274.35,
+   "end": 274.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.93,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में",
+   "start": 274.51,
+   "end": 274.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भेज़",
+   "start": 274.69,
+   "end": 274.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.816,
+   "chunk": "phrase"
+  },
+  {
+   "text": "दूगा.",
+   "start": 274.89,
+   "end": 275.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.878,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अगर,",
+   "start": 279.1,
+   "end": 279.46,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.975,
+   "chunk": "gap"
+  },
+  {
+   "text": "अगर",
+   "start": 279.46,
+   "end": 279.82,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "gap"
+  },
+  {
+   "text": "आपको",
+   "start": 279.82,
+   "end": 280.08,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "gap"
+  },
+  {
+   "text": "भी",
+   "start": 280.08,
+   "end": 280.18,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "gap"
+  },
+  {
+   "text": "ये",
+   "start": 280.18,
+   "end": 280.3,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.839,
+   "chunk": "gap"
+  },
+  {
+   "text": "पूरा",
+   "start": 280.3,
+   "end": 280.52,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.987,
+   "chunk": "gap"
+  },
+  {
+   "text": "का,",
+   "start": 280.52,
+   "end": 280.66,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.509,
+   "chunk": "gap"
+  },
+  {
+   "text": "अगर",
+   "start": 281.79,
+   "end": 282.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.704,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आपको",
+   "start": 282.23,
+   "end": 282.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.994,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 282.49,
+   "end": 282.59,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 282.59,
+   "end": 282.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.873,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 282.89,
+   "end": 282.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.886,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरा",
+   "start": 282.99,
+   "end": 283.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.966,
+   "chunk": "phrase"
+  },
+  {
+   "text": "workflow",
+   "start": 283.21,
+   "end": 283.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.193,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सीखना",
+   "start": 283.45,
+   "end": 283.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.862,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है,",
+   "start": 283.99,
+   "end": 284.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.958,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो,",
+   "start": 284.37,
+   "end": 285.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.972,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैंने",
+   "start": 285.45,
+   "end": 287.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.919,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अपने,",
+   "start": 287.91,
+   "end": 288.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैंने",
+   "start": 288.31,
+   "end": 289.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.959,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अपने",
+   "start": 289.33,
+   "end": 289.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.955,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चानल",
+   "start": 289.33,
+   "end": 289.59,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.918,
+   "chunk": "phrase"
+  },
+  {
+   "text": "के",
+   "start": 289.59,
+   "end": 289.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.985,
+   "chunk": "phrase"
+  },
+  {
+   "text": "description",
+   "start": 289.71,
+   "end": 289.99,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.545,
+   "chunk": "phrase"
+  },
+  {
+   "text": "में,",
+   "start": 289.99,
+   "end": 290.37,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "WhatsApp",
+   "start": 290.39,
+   "end": 290.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.604,
+   "chunk": "phrase"
+  },
+  {
+   "text": "चानल",
+   "start": 290.69,
+   "end": 291.11,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.967,
+   "chunk": "phrase"
+  },
+  {
+   "text": "का",
+   "start": 291.11,
+   "end": 291.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.971,
+   "chunk": "phrase"
+  },
+  {
+   "text": "link",
+   "start": 291.23,
+   "end": 291.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.887,
+   "chunk": "phrase"
+  },
+  {
+   "text": "डाला",
+   "start": 291.35,
+   "end": 291.63,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.939,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हुआ,",
+   "start": 291.63,
+   "end": 291.73,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.789,
+   "chunk": "phrase"
+  },
+  {
+   "text": "उसमें",
+   "start": 291.89,
+   "end": 292.31,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.984,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मैं",
+   "start": 292.31,
+   "end": 292.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.909,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सब",
+   "start": 292.35,
+   "end": 292.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.988,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कुछ",
+   "start": 292.51,
+   "end": 292.67,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.923,
+   "chunk": "phrase"
+  },
+  {
+   "text": "शेर",
+   "start": 292.67,
+   "end": 292.85,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.771,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करता",
+   "start": 292.85,
+   "end": 293.15,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हूँ,",
+   "start": 293.15,
+   "end": 293.25,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.948,
+   "chunk": "phrase"
+  },
+  {
+   "text": "और",
+   "start": 293.47,
+   "end": 293.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "एक",
+   "start": 293.69,
+   "end": 293.81,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "phrase"
+  },
+  {
+   "text": "YouTube",
+   "start": 293.81,
+   "end": 294.05,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.94,
+   "chunk": "phrase"
+  },
+  {
+   "text": "वीडियो",
+   "start": 294.05,
+   "end": 294.33,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.933,
+   "chunk": "phrase"
+  },
+  {
+   "text": "भी",
+   "start": 294.33,
+   "end": 294.45,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "बनाई",
+   "start": 294.45,
+   "end": 294.71,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.932,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है,",
+   "start": 294.71,
+   "end": 294.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.83,
+   "chunk": "phrase"
+  },
+  {
+   "text": "इस",
+   "start": 294.83,
+   "end": 294.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.991,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पूरे",
+   "start": 294.93,
+   "end": 295.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.996,
+   "chunk": "phrase"
+  },
+  {
+   "text": "process",
+   "start": 295.29,
+   "end": 295.55,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.934,
+   "chunk": "phrase"
+  },
+  {
+   "text": "को",
+   "start": 295.55,
+   "end": 295.77,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "showcase",
+   "start": 295.77,
+   "end": 296.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.867,
+   "chunk": "phrase"
+  },
+  {
+   "text": "करते",
+   "start": 296.03,
+   "end": 296.39,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "हुए,",
+   "start": 296.39,
+   "end": 296.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.908,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो,",
+   "start": 296.85,
+   "end": 297.03,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "तो,",
+   "start": 297.19,
+   "end": 299.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.924,
+   "chunk": "phrase"
+  },
+  {
+   "text": "महाँ",
+   "start": 299.15,
+   "end": 299.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.857,
+   "chunk": "phrase"
+  },
+  {
+   "text": "पे",
+   "start": 299.27,
+   "end": 299.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.867,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सब",
+   "start": 299.35,
+   "end": 299.49,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.99,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कुछ",
+   "start": 299.49,
+   "end": 299.61,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "आपको",
+   "start": 299.61,
+   "end": 299.83,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "मिल",
+   "start": 299.83,
+   "end": 300.01,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.997,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जाएगा,",
+   "start": 300.01,
+   "end": 300.29,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.974,
+   "chunk": "phrase"
+  },
+  {
+   "text": "follow,",
+   "start": 300.71,
+   "end": 300.91,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.708,
+   "chunk": "phrase"
+  },
+  {
+   "text": "subscribe",
+   "start": 301.01,
+   "end": 301.23,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.998,
+   "chunk": "phrase"
+  },
+  {
+   "text": "फॉलो",
+   "start": 301.83,
+   "end": 302.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.75,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सब्सक्राइब",
+   "start": 302.27,
+   "end": 302.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.933,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जरूर",
+   "start": 302.69,
+   "end": 302.89,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.966,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 302.89,
+   "end": 303.09,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.855,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लेना",
+   "start": 303.09,
+   "end": 303.35,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.922,
+   "chunk": "phrase"
+  },
+  {
+   "text": "फॉलो",
+   "start": 303.35,
+   "end": 304.19,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.852,
+   "chunk": "phrase"
+  },
+  {
+   "text": "सब्सक्राइब",
+   "start": 304.19,
+   "end": 304.57,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.991,
+   "chunk": "phrase"
+  },
+  {
+   "text": "जरूर",
+   "start": 304.57,
+   "end": 304.79,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.995,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कर",
+   "start": 304.79,
+   "end": 304.93,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.982,
+   "chunk": "phrase"
+  },
+  {
+   "text": "लेना",
+   "start": 304.93,
+   "end": 305.13,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.993,
+   "chunk": "phrase"
+  },
+  {
+   "text": "अगर",
+   "start": 305.13,
+   "end": 305.27,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.923,
+   "chunk": "phrase"
+  },
+  {
+   "text": "बजा",
+   "start": 305.27,
+   "end": 305.53,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.913,
+   "chunk": "phrase"
+  },
+  {
+   "text": "रहा",
+   "start": 305.53,
+   "end": 305.69,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.87,
+   "chunk": "phrase"
+  },
+  {
+   "text": "है",
+   "start": 305.69,
+   "end": 305.75,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.825,
+   "chunk": "phrase"
+  },
+  {
+   "text": "से",
+   "start": 305.75,
+   "end": 305.87,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.59,
+   "chunk": "phrase"
+  },
+  {
+   "text": "कॉंटेंट",
+   "start": 305.87,
+   "end": 306.21,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.889,
+   "chunk": "phrase"
+  },
+  {
+   "text": "देखके",
+   "start": 306.21,
+   "end": 306.51,
+   "type": "word",
+   "speaker_id": "speaker_0",
+   "prob": 0.931,
+   "chunk": "phrase"
+  }
+ ]
+}

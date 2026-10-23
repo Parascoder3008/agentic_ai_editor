@@ -1,0 +1,121 @@
+{
+ "fps": 25,
+ "cam": {
+  "path": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\cam_proxy.mp4",
+  "offset": 36.165,
+  "px": 1.0
+ },
+ "scr": {
+  "path": "D:\\october videos\\ai editor\\2026-10-06 21-27-13.mp4",
+  "offset": -234.106
+ },
+ "wav": "D:\\october videos\\ai editor\\ai editor.wav",
+ "grade": "eq=contrast=1.08:saturation=1.06:brightness=0.01,colorbalance=rs=-0.01:bs=0.04:rm=0.035:gm=-0.012:bm=-0.02,vignette=angle=0.42",
+ "bubble": {
+  "x": 1520,
+  "y": 660,
+  "d": 360,
+  "size": 520,
+  "cx": 1001,
+  "cy": 470
+ },
+ "segments": [
+  {
+   "m0": 512.68,
+   "m1": 513.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1001,
+    447
+   ]
+  },
+  {
+   "m0": 518.2,
+   "m1": 519.2,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    204,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1001,
+    447
+   ]
+  },
+  {
+   "m0": 535.68,
+   "m1": 536.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    430,
+    224,
+    1400,
+    788
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    999,
+    446
+   ]
+  },
+  {
+   "m0": 541.64,
+   "m1": 542.64,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    100,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    999,
+    446
+   ]
+  }
+ ],
+ "overlays": [],
+ "sfx": [],
+ "out": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\smoke_pdf.mp4",
+ "preset": "veryfast",
+ "crf": 21
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #bar { position: absolute; left: 36px; top: 900px; display: flex; align-items: stretch; }
+      #bar .accent { width: 10px; background: #1A9FD1; border-radius: 4px; }
+      #bar .txt { padding: 12px 22px; background: rgba(12,14,15,0.85); border-radius: 0 14px 14px 0; }
+      #bar .name { color: #FFFFFF; font-weight: 800; font-size: 42px; letter-spacing: 0.02em; }
+      #bar .role { color: #DFDDDF; font-weight: 500; font-size: 22px; letter-spacing: 0.18em; margin-top: 2px; }
+      #film { position: absolute; right: 996px; top: 1024px; color: #FFFFFF; font-weight: 800; font-size: 22px;
+        letter-spacing: 0.2em; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+      #film span { color: #3AB0D8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="2.8" data-width="1920" data-height="1080">
+      <div id="bar" class="clip" data-start="0" data-duration="2.8" data-track-index="0">
+        <div class="accent"></div>
+        <div class="txt"><div class="name">PARAS ARORA</div><div class="role">EXPONENTIAL WORLD</div></div>
+      </div>
+      <div id="film" class="clip" data-start="0" data-duration="2.8" data-track-index="1">A FILM BY <span>CLAUDE OPUS 5.5</span></div>
+    </div>
+    <script>
+      gsap.set(["#bar", "#film"], { opacity: 0 });
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#bar", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 1.55)
+        .fromTo("#film", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.85);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

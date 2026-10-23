@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; }
+      .layer { position: absolute; inset: 0; width: 1920px; height: 1080px; }
+      #coin { position: absolute; width: 150px; height: 150px; left: -75px; top: -75px; }
+      #coin .glow { position: absolute; inset: -70px; border-radius: 50%;
+        background: radial-gradient(circle, rgba(217,119,87,0.55) 0%, rgba(217,119,87,0.18) 40%, rgba(217,119,87,0) 70%); }
+      #coin .edge { position: absolute; inset: 0; border-radius: 50%; background: #8f4a33; left: 6px; right: -6px; }
+      #coin .face { position: absolute; inset: 0; border-radius: 50%; background: #F5EEE6;
+        border: 6px solid #D97757; display: flex; align-items: center; justify-content: center; }
+      #coin .face svg { width: 96px; height: 96px; }
+      .spark { position: absolute; width: 34px; height: 34px; margin: -17px 0 0 -17px; }
+      #flash { background: #FFFFFF; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1920" data-height="1080">
+      <div id="fx" class="layer clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div id="anchor" style="position:absolute;left:{{PALM_X}}px;top:{{PALM_Y}}px;">
+          <div class="spark" id="s0" style="left:-95px;top:-70px"></div>
+          <div class="spark" id="s1" style="left:100px;top:-95px"></div>
+          <div class="spark" id="s2" style="left:115px;top:40px"></div>
+          <div class="spark" id="s3" style="left:-110px;top:55px"></div>
+          <div id="coin">
+            <div class="glow"></div>
+            <div class="edge"></div>
+            <div class="face">
+              <svg viewBox="0 0 24 24" fill="#D97757"><path id="claudePath" /></svg>
+            </div>
+          </div>
+        </div>
+        <svg id="glass" class="layer" viewBox="0 0 1920 1080" style="opacity:0"></svg>
+        <div id="flash" class="layer"></div>
+      </div>
+    </div>
+    <script>
+      // ---- timing (seconds, relative to this overlay's start) — tuned to the spoken words
+      const T_APPEAR = {{T_APPEAR}};  // "yahan par"
+      const T_SPIN = {{T_SPIN}};      // "spin"
+      const T_GROW = {{T_GROW}};      // "zoom in karo"
+      const T_ZOOM = {{T_ZOOM}};      // "camera mein jaake"
+      const T_BREAK = {{T_BREAK}};    // "hit"
+      const T_FALL = {{T_FALL}};      // "break ho gaya"
+      const DUR = {{DUR}};
+
+      const CLAUDE = "m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.6071 1.5421-.2793 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z";
+      document.getElementById("claudePath").setAttribute("d", CLAUDE);
+      document.querySelectorAll(".spark").forEach((s) => {
+        s.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 0 L14 10 L24 12 L14 14 L12 24 L10 14 L0 12 L10 10 Z" fill="#FFE7C2"/></svg>';
+      });
+
+      // ---- deterministic glass geometry (seeded LCG; no Math.random)
+      let seed = 1337;
+      const rnd = () => ((seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296);
+      const CX = {{CX}}, CY = {{CY}};               // impact point: centre of the top (edited) video
+      const RAYS = 15, RINGS = [0, 90, 240, 500, 900, 1700];
+      const ang = [], radial = [];
+      for (let i = 0; i < RAYS; i++) ang.push((i / RAYS) * Math.PI * 2 + (rnd() - 0.5) * 0.35);
+      for (let i = 0; i < RAYS; i++) radial.push(RINGS.map((r, k) => {
+        const a = ang[i] + (k ? (rnd() - 0.5) * 0.12 : 0), rr = r * (k ? 0.85 + rnd() * 0.3 : 1);
+        return [CX + Math.cos(a) * rr, CY + Math.sin(a) * rr];
+      }));
+      const NS = "http://www.w3.org/2000/svg", glass = document.getElementById("glass");
+      const el = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+      const pts = (a) => a.map((p) => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+      const shards = [];
+      for (let i = 0; i < RAYS; i++) {
+        const A = radial[i], B = radial[(i + 1) % RAYS];
+        for (let k = 0; k < RINGS.length - 1; k++) {
+          const poly = el("polygon", { points: pts([A[k], A[k + 1], B[k + 1], B[k]]),
+            fill: `rgba(225,238,248,${(0.02 + rnd() * 0.07).toFixed(2)})`, stroke: "rgba(255,255,255,0.7)", "stroke-width": 1.2 });
+          const g = el("g", {}); g.appendChild(poly);
+          // a highlight streak inside each shard sells "glass"
+          const m = [(A[k][0] + B[k + 1][0]) / 2, (A[k][1] + B[k + 1][1]) / 2];
+          g.appendChild(el("line", { x1: m[0] - 18, y1: m[1] - 10, x2: m[0] + 14, y2: m[1] + 8, stroke: "rgba(255,255,255,0.55)", "stroke-width": 2.2, "stroke-linecap": "round" }));
+          glass.appendChild(g);
+          const cx = (A[k][0] + A[k + 1][0] + B[k][0] + B[k + 1][0]) / 4, cy = (A[k][1] + A[k + 1][1] + B[k][1] + B[k + 1][1]) / 4;
+          shards.push({ g, cx, cy, ring: k, rot: (rnd() - 0.5) * 140, dx: (cx - CX) * 0.08 + (rnd() - 0.5) * 60, delay: k * 0.07 + rnd() * 0.25 });
+        }
+      }
+      // crack lines drawn on top (radials + ring segments)
+      const crack = el("g", { fill: "none", "stroke-linejoin": "round" });
+      radial.forEach((r) => {
+        crack.appendChild(el("polyline", { points: pts(r), stroke: "rgba(0,0,0,0.35)", "stroke-width": 4.5 }));
+        crack.appendChild(el("polyline", { points: pts(r), stroke: "#FFFFFF", "stroke-width": 1.8 }));
+      });
+      glass.appendChild(crack);
+
+      // ---- timeline
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      gsap.set("#coin", { scale: 0, opacity: 0 });
+      tl.to("#coin", { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2.2)" }, T_APPEAR)
+        .to("#coin", { y: -12, duration: 0.9, ease: "sine.inOut", yoyo: true, repeat: 1 }, T_APPEAR + 0.45);
+      [0, 1, 2, 3].forEach((i) => {
+        tl.fromTo("#s" + i, { scale: 0, opacity: 0, rotate: 0 }, { scale: 1, opacity: 1, rotate: 90, duration: 0.35, ease: "back.out(2)" }, T_APPEAR + 0.15 + i * 0.12)
+          .to("#s" + i, { scale: 0.4, opacity: 0, duration: 0.5, ease: "power2.in" }, T_SPIN + 0.4 + i * 0.05);
+      });
+      // fake-3D coin: scaleX swings through 0 twice per turn; edge shows when thin
+      const turn = 0.4;
+      for (let n = 0; n < 4; n++) {
+        tl.to("#coin .face", { scaleX: n % 2 ? 1 : -1, duration: turn, ease: "sine.inOut" }, T_SPIN + n * turn)
+          .to("#coin .edge", { scaleX: n % 2 ? 1 : -1, duration: turn, ease: "sine.inOut" }, T_SPIN + n * turn);
+      }
+      tl.to("#coin", { scale: 1.6, duration: 0.6, ease: "back.out(1.6)" }, T_GROW);
+      // fly at the lens
+      tl.to("#anchor", { x: CX - {{PALM_X}}, y: CY - {{PALM_Y}}, duration: T_BREAK - T_ZOOM, ease: "power3.in" }, T_ZOOM)
+        .fromTo("#coin", { scale: 1.6 }, { scale: 9, duration: T_BREAK - T_ZOOM, ease: "power4.in" }, T_ZOOM)
+        .set("#coin", { opacity: 0 }, T_BREAK)
+        .to("#flash", { opacity: 0.85, duration: 0.04 }, T_BREAK)
+        .to("#flash", { opacity: 0, duration: 0.25, ease: "power2.out" }, T_BREAK + 0.04)
+        .set("#glass", { opacity: 1 }, T_BREAK)
+        .fromTo("#glass", { scale: 1.04, transformOrigin: `${CX}px ${CY}px` }, { scale: 1, duration: 0.18, ease: "power2.out" }, T_BREAK);
+      shards.forEach((s) => {
+        const t0 = T_FALL + s.delay;
+        tl.to(s.g, { x: s.dx, y: 1100 + s.ring * 60, rotate: s.rot, opacity: 0, transformOrigin: `${s.cx}px ${s.cy}px`,
+          duration: 1.5, ease: "power2.in" }, t0);
+      });
+      tl.to(crack, { opacity: 0, duration: 0.4 }, T_FALL + 0.15);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

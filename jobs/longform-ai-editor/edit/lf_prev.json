@@ -1,0 +1,3122 @@
+{
+ "fps": 25,
+ "cam": {
+  "path": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\cam_proxy.mp4",
+  "offset": 36.165,
+  "px": 1.0
+ },
+ "scr": {
+  "path": "D:\\october videos\\ai editor\\2026-10-06 21-27-13.mp4",
+  "offset": -234.106
+ },
+ "wav": "D:\\october videos\\ai editor\\ai editor.wav",
+ "grade": "eq=contrast=1.07:saturation=1.05:brightness=0.025:gamma=1.05,colorbalance=rs=-0.015:bs=0.03:rm=0.015:bm=-0.005,vignette=angle=0.3",
+ "bubble": {
+  "x": 1520,
+  "y": 660,
+  "d": 360,
+  "size": 520,
+  "cx": 1001,
+  "cy": 470
+ },
+ "segments": [
+  {
+   "type": "clip",
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\intro\\intro_preview.mkv"
+  },
+  {
+   "m0": 9.16,
+   "m1": 10.84,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 13.44,
+   "m1": 17.68,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.14,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W2"
+  },
+  {
+   "m0": 17.68,
+   "m1": 21.88,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 22.12,
+   "m1": 22.72,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.1236,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W+"
+  },
+  {
+   "m0": 24.32,
+   "m1": 29.32,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 531,
+   "shot": "L"
+  },
+  {
+   "m0": 29.48,
+   "m1": 37.48,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1135,
+   "cy": 567,
+   "shot": "M"
+  },
+  {
+   "m0": 38.12,
+   "m1": 40.96,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1069,
+   "cy": 531,
+   "shot": "T"
+  },
+  {
+   "m0": 50.32,
+   "m1": 54.6,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1145,
+   "cy": 544,
+   "shot": "M"
+  },
+  {
+   "m0": 54.96,
+   "m1": 55.36,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.325,
+   "cx": 1145,
+   "cy": 544,
+   "shot": "M+"
+  },
+  {
+   "m0": 55.56,
+   "m1": 59.76,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 507,
+   "shot": "LT"
+  },
+  {
+   "m0": 61.52,
+   "m1": 63.44,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 63.84,
+   "m1": 66.12,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "open",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1126,
+   "cy": 489,
+   "shot": "T"
+  },
+  {
+   "m0": 73.12,
+   "m1": 78.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 537,
+   "shot": "L2"
+  },
+  {
+   "m0": 78.52,
+   "m1": 85.52,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1068,
+   "cy": 555,
+   "shot": "M"
+  },
+  {
+   "m0": 88.08,
+   "m1": 92.0,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1076,
+   "cy": 493,
+   "shot": "T"
+  },
+  {
+   "m0": 92.32,
+   "m1": 92.8,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.643,
+   "cx": 1076,
+   "cy": 493,
+   "shot": "T+"
+  },
+  {
+   "m0": 93.04,
+   "m1": 95.24,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 542,
+   "shot": "L"
+  },
+  {
+   "m0": 95.6,
+   "m1": 98.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 515,
+   "shot": "LT"
+  },
+  {
+   "m0": 104.72,
+   "m1": 108.0,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "promise",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 115.52,
+   "m1": 121.96,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1123,
+   "cy": 521,
+   "shot": "M"
+  },
+  {
+   "m0": 121.96,
+   "m1": 128.28,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 533,
+   "shot": "L2"
+  },
+  {
+   "m0": 129.76,
+   "m1": 133.12,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 533,
+   "shot": "L"
+  },
+  {
+   "m0": 133.36,
+   "m1": 134.2,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.325,
+   "cx": 1152,
+   "cy": 533,
+   "shot": "L+"
+  },
+  {
+   "m0": 134.88,
+   "m1": 140.72,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 518,
+   "shot": "LT"
+  },
+  {
+   "m0": 141.44,
+   "m1": 142.4,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.484,
+   "cx": 1234,
+   "cy": 518,
+   "shot": "LT+"
+  },
+  {
+   "m0": 143.72,
+   "m1": 146.92,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1055,
+   "cy": 511,
+   "shot": "T"
+  },
+  {
+   "m0": 149.68,
+   "m1": 153.36,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "why",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1143,
+   "cy": 508,
+   "shot": "M"
+  },
+  {
+   "m0": 158.76,
+   "m1": 161.32,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "sub",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 163.16,
+   "m1": 169.0,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "sub",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 555,
+   "shot": "L2"
+  },
+  {
+   "m0": 169.0,
+   "m1": 171.96,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "editors",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1087,
+   "cy": 509,
+   "shot": "T"
+  },
+  {
+   "m0": 172.12,
+   "m1": 176.8,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "editors",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 550,
+   "shot": "L"
+  },
+  {
+   "m0": 176.8,
+   "m1": 181.36,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "editors",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1110,
+   "cy": 550,
+   "shot": "M"
+  },
+  {
+   "m0": 181.36,
+   "m1": 186.2,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "editors",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1061,
+   "cy": 516,
+   "shot": "T"
+  },
+  {
+   "m0": 186.4,
+   "m1": 188.56,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "editors",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 242.48,
+   "m1": 248.0,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1177,
+   "cy": 556,
+   "shot": "M"
+  },
+  {
+   "m0": 248.0,
+   "m1": 253.6,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 545,
+   "shot": "LT"
+  },
+  {
+   "m0": 253.6,
+   "m1": 259.24,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 568,
+   "shot": "L2"
+  },
+  {
+   "m0": 259.32,
+   "m1": 265.12,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 556,
+   "shot": "L"
+  },
+  {
+   "m0": 265.12,
+   "m1": 271.08,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 545,
+   "shot": "LT"
+  },
+  {
+   "m0": 272.52,
+   "m1": 277.8,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 572,
+   "shot": "L2"
+  },
+  {
+   "m0": 282.24,
+   "m1": 286.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "time",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 559,
+   "shot": "L"
+  },
+  {
+   "m0": 293.28,
+   "m1": 299.04,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    245,
+    45,
+    1440,
+    810
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1069,
+    438
+   ]
+  },
+  {
+   "m0": 299.04,
+   "m1": 305.4,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    325,
+    90,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1069,
+    438
+   ]
+  },
+  {
+   "m0": 308.44,
+   "m1": 314.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_skill",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1101,
+   "cy": 507,
+   "shot": "T"
+  },
+  {
+   "m0": 319.84,
+   "m1": 325.4,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    245,
+    45,
+    1440,
+    810
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1007,
+    445
+   ]
+  },
+  {
+   "m0": 325.4,
+   "m1": 330.88,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    325,
+    90,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1007,
+    445
+   ]
+  },
+  {
+   "m0": 330.88,
+   "m1": 336.44,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    245,
+    45,
+    1440,
+    810
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1007,
+    445
+   ]
+  },
+  {
+   "m0": 337.0,
+   "m1": 340.64,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_skill",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1133,
+   "cy": 555,
+   "shot": "M"
+  },
+  {
+   "m0": 346.44,
+   "m1": 351.64,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    325,
+    90,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1015,
+    441
+   ]
+  },
+  {
+   "m0": 351.64,
+   "m1": 356.68,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    245,
+    45,
+    1440,
+    810
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1015,
+    441
+   ]
+  },
+  {
+   "m0": 358.4,
+   "m1": 362.08,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 362.92,
+   "m1": 365.8,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    325,
+    90,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1032,
+    434
+   ]
+  },
+  {
+   "m0": 366.0,
+   "m1": 370.64,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1123,
+   "cy": 518,
+   "shot": "T"
+  },
+  {
+   "m0": 370.92,
+   "m1": 372.48,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1040,
+    458
+   ]
+  },
+  {
+   "m0": 375.64,
+   "m1": 376.32,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.643,
+   "cx": 1123,
+   "cy": 518,
+   "shot": "scr+"
+  },
+  {
+   "m0": 376.76,
+   "m1": 381.44,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    240,
+    60,
+    1600,
+    900
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1087,
+    473
+   ]
+  },
+  {
+   "m0": 381.76,
+   "m1": 386.96,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1109,
+   "cy": 569,
+   "shot": "M"
+  },
+  {
+   "m0": 388.4,
+   "m1": 395.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    0,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1072,
+    453
+   ]
+  },
+  {
+   "m0": 395.92,
+   "m1": 397.88,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    0,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1077,
+    455
+   ]
+  },
+  {
+   "m0": 399.0,
+   "m1": 404.8,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    0,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1049,
+    463
+   ]
+  },
+  {
+   "m0": 404.8,
+   "m1": 410.4,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    0,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1049,
+    463
+   ]
+  },
+  {
+   "m0": 410.4,
+   "m1": 416.24,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    0,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1049,
+    463
+   ]
+  },
+  {
+   "m0": 416.92,
+   "m1": 423.12,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1029,
+   "cy": 525,
+   "shot": "T"
+  },
+  {
+   "m0": 423.36,
+   "m1": 428.68,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    240,
+    60,
+    1600,
+    900
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    936,
+    470
+   ]
+  },
+  {
+   "m0": 428.68,
+   "m1": 433.96,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    936,
+    470
+   ]
+  },
+  {
+   "m0": 433.96,
+   "m1": 439.44,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    240,
+    60,
+    1600,
+    900
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    936,
+    470
+   ]
+  },
+  {
+   "m0": 439.68,
+   "m1": 441.96,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 442.44,
+   "m1": 444.88,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1005,
+    462
+   ]
+  },
+  {
+   "m0": 445.32,
+   "m1": 446.08,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_scratch",
+   "type": "cam",
+   "zoom": 1.1236,
+   "cx": 990,
+   "cy": 560,
+   "shot": "scr+"
+  },
+  {
+   "m0": 448.2,
+   "m1": 454.04,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "install",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1104,
+   "cy": 554,
+   "shot": "M"
+  },
+  {
+   "m0": 454.04,
+   "m1": 459.84,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "install",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 543,
+   "shot": "LT"
+  },
+  {
+   "m0": 460.24,
+   "m1": 461.88,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "install",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1072,
+   "cy": 526,
+   "shot": "T"
+  },
+  {
+   "m0": 512.68,
+   "m1": 518.2,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1001,
+    447
+   ]
+  },
+  {
+   "m0": 518.2,
+   "m1": 523.8,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    204,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1001,
+    447
+   ]
+  },
+  {
+   "m0": 535.68,
+   "m1": 541.64,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    430,
+    210,
+    1400,
+    788
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    999,
+    446
+   ]
+  },
+  {
+   "m0": 541.64,
+   "m1": 547.68,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    100,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    999,
+    446
+   ]
+  },
+  {
+   "m0": 548.04,
+   "m1": 553.4,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    430,
+    120,
+    1400,
+    788
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    972,
+    440
+   ]
+  },
+  {
+   "m0": 553.4,
+   "m1": 558.32,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    100,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    972,
+    440
+   ]
+  },
+  {
+   "m0": 558.32,
+   "m1": 563.68,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    430,
+    120,
+    1400,
+    788
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    972,
+    440
+   ]
+  },
+  {
+   "m0": 563.68,
+   "m1": 568.8,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    100,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    972,
+    440
+   ]
+  },
+  {
+   "m0": 569.24,
+   "m1": 574.8,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    430,
+    120,
+    1400,
+    788
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    960,
+    458
+   ]
+  },
+  {
+   "m0": 574.8,
+   "m1": 579.6,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    100,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    960,
+    458
+   ]
+  },
+  {
+   "m0": 579.88,
+   "m1": 585.6,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    430,
+    120,
+    1400,
+    788
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    972,
+    481
+   ]
+  },
+  {
+   "m0": 585.76,
+   "m1": 589.16,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_guide",
+   "type": "scr",
+   "crop": [
+    400,
+    120,
+    1477,
+    831
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    996,
+    436
+   ]
+  },
+  {
+   "m0": 607.44,
+   "m1": 613.56,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 554,
+   "shot": "L2"
+  },
+  {
+   "m0": 613.56,
+   "m1": 619.88,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 542,
+   "shot": "L"
+  },
+  {
+   "m0": 620.04,
+   "m1": 627.32,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 534,
+   "shot": "M"
+  },
+  {
+   "m0": 627.44,
+   "m1": 629.44,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 528,
+   "shot": "LT"
+  },
+  {
+   "m0": 629.68,
+   "m1": 635.2,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 570,
+   "shot": "L2"
+  },
+  {
+   "m0": 635.2,
+   "m1": 640.48,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 558,
+   "shot": "L"
+  },
+  {
+   "m0": 642.16,
+   "m1": 646.52,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "inputs",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 649.68,
+   "m1": 654.76,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_frames",
+   "type": "scr",
+   "crop": [
+    290,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1048,
+    447
+   ]
+  },
+  {
+   "m0": 654.76,
+   "m1": 659.92,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "s_frames",
+   "type": "scr",
+   "crop": [
+    290,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1048,
+    447
+   ]
+  },
+  {
+   "m0": 659.92,
+   "m1": 665.12,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_frames",
+   "type": "scr",
+   "crop": [
+    290,
+    0,
+    1280,
+    720
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1048,
+    447
+   ]
+  },
+  {
+   "m0": 665.12,
+   "m1": 669.56,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1122,
+   "cy": 518,
+   "shot": "T"
+  },
+  {
+   "m0": 669.56,
+   "m1": 674.52,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1171,
+   "cy": 552,
+   "shot": "M"
+  },
+  {
+   "m0": 674.8,
+   "m1": 678.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 552,
+   "shot": "LT"
+  },
+  {
+   "m0": 679.64,
+   "m1": 683.16,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1038,
+   "cy": 512,
+   "shot": "T"
+  },
+  {
+   "m0": 683.92,
+   "m1": 688.76,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 574,
+   "shot": "L2"
+  },
+  {
+   "m0": 688.76,
+   "m1": 693.44,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 562,
+   "shot": "L"
+  },
+  {
+   "m0": 697.0,
+   "m1": 702.04,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 702.04,
+   "m1": 707.08,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1095,
+   "cy": 559,
+   "shot": "M"
+  },
+  {
+   "m0": 707.2,
+   "m1": 709.04,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "tip",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1056,
+   "cy": 525,
+   "shot": "T"
+  },
+  {
+   "m0": 717.36,
+   "m1": 719.04,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "output",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 543,
+   "shot": "LT"
+  },
+  {
+   "m0": 719.28,
+   "m1": 720.8,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "output",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 575,
+   "shot": "L2"
+  },
+  {
+   "m0": 722.0,
+   "m1": 728.96,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "output",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1147,
+   "cy": 550,
+   "shot": "M"
+  },
+  {
+   "m0": 729.12,
+   "m1": 734.8,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "output",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 735.44,
+   "m1": 740.68,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "s_reel",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1029,
+    454
+   ]
+  },
+  {
+   "m0": 740.68,
+   "m1": 745.68,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "s_reel",
+   "type": "scr",
+   "crop": [
+    40,
+    0,
+    1840,
+    1035
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1029,
+    454
+   ]
+  },
+  {
+   "m0": 749.52,
+   "m1": 755.32,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "doc",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1109,
+   "cy": 531,
+   "shot": "T"
+  },
+  {
+   "m0": 755.32,
+   "m1": 761.12,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "doc",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1158,
+   "cy": 565,
+   "shot": "M"
+  },
+  {
+   "m0": 761.12,
+   "m1": 766.84,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "doc",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1109,
+   "cy": 531,
+   "shot": "T"
+  },
+  {
+   "m0": 767.52,
+   "m1": 769.64,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "doc",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 556,
+   "shot": "L"
+  },
+  {
+   "m0": 770.0,
+   "m1": 777.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "doc",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 576,
+   "shot": "LT"
+  },
+  {
+   "m0": 777.84,
+   "m1": 780.36,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "doc",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 785.36,
+   "m1": 791.36,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "projects",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1179,
+   "cy": 526,
+   "shot": "M"
+  },
+  {
+   "m0": 791.36,
+   "m1": 797.32,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "projects",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 538,
+   "shot": "L2"
+  },
+  {
+   "m0": 797.48,
+   "m1": 798.84,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "projects",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 557,
+   "shot": "L"
+  },
+  {
+   "m0": 798.96,
+   "m1": 806.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "projects",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 536,
+   "shot": "LT"
+  },
+  {
+   "m0": 814.64,
+   "m1": 821.4,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1070,
+   "cy": 501,
+   "shot": "T"
+  },
+  {
+   "m0": 821.68,
+   "m1": 824.84,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 541,
+   "shot": "L2"
+  },
+  {
+   "m0": 825.44,
+   "m1": 830.4,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 526,
+   "shot": "L"
+  },
+  {
+   "m0": 830.4,
+   "m1": 835.24,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 515,
+   "shot": "LT"
+  },
+  {
+   "m0": 835.24,
+   "m1": 839.92,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 538,
+   "shot": "L2"
+  },
+  {
+   "m0": 839.92,
+   "m1": 844.88,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 526,
+   "shot": "L"
+  },
+  {
+   "m0": 845.2,
+   "m1": 848.6,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1113,
+   "cy": 503,
+   "shot": "M"
+  },
+  {
+   "m0": 849.6,
+   "m1": 851.6,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "rule",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 852.4,
+   "m1": 858.64,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 500,
+   "shot": "LT"
+  },
+  {
+   "m0": 858.64,
+   "m1": 864.96,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 523,
+   "shot": "L2"
+  },
+  {
+   "m0": 869.44,
+   "m1": 875.2,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1067,
+   "cy": 498,
+   "shot": "T"
+  },
+  {
+   "m0": 875.2,
+   "m1": 881.24,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1116,
+   "cy": 532,
+   "shot": "M"
+  },
+  {
+   "m0": 881.32,
+   "m1": 884.12,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1060,
+   "cy": 511,
+   "shot": "T"
+  },
+  {
+   "m0": 884.68,
+   "m1": 889.76,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 523,
+   "shot": "L"
+  },
+  {
+   "m0": 889.76,
+   "m1": 895.2,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 512,
+   "shot": "LT"
+  },
+  {
+   "m0": 901.28,
+   "m1": 906.52,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 530,
+   "shot": "L2"
+  },
+  {
+   "m0": 906.52,
+   "m1": 911.76,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 912.32,
+   "m1": 915.64,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 526,
+   "shot": "L"
+  },
+  {
+   "m0": 917.12,
+   "m1": 921.04,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 523,
+   "shot": "LT"
+  },
+  {
+   "m0": 921.64,
+   "m1": 925.88,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 579,
+   "shot": "L2"
+  },
+  {
+   "m0": 925.88,
+   "m1": 930.24,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1150,
+   "cy": 567,
+   "shot": "M"
+  },
+  {
+   "m0": 931.2,
+   "m1": 934.2,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1037,
+   "cy": 523,
+   "shot": "T"
+  },
+  {
+   "m0": 934.68,
+   "m1": 935.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cta",
+   "type": "cam",
+   "zoom": 1.643,
+   "cx": 1037,
+   "cy": 523,
+   "shot": "T+"
+  },
+  {
+   "m0": 935.52,
+   "m1": 940.64,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1159,
+   "cy": 539,
+   "shot": "M"
+  },
+  {
+   "m0": 940.64,
+   "m1": 946.0,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 946.64,
+   "m1": 950.24,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 541,
+   "shot": "L"
+  },
+  {
+   "m0": 950.48,
+   "m1": 952.24,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1057,
+   "cy": 508,
+   "shot": "T"
+  },
+  {
+   "m0": 952.56,
+   "m1": 953.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.643,
+   "cx": 1057,
+   "cy": 508,
+   "shot": "T+"
+  },
+  {
+   "m0": 954.8,
+   "m1": 961.44,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 540,
+   "shot": "LT"
+  },
+  {
+   "m0": 961.64,
+   "m1": 963.0,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1129,
+   "cy": 567,
+   "shot": "M"
+  },
+  {
+   "m0": 963.68,
+   "m1": 968.24,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1085,
+   "cy": 500,
+   "shot": "T"
+  },
+  {
+   "m0": 968.24,
+   "m1": 972.72,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 972.92,
+   "m1": 974.96,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1142,
+   "cy": 543,
+   "shot": "M"
+  },
+  {
+   "m0": 975.4,
+   "m1": 982.08,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1030,
+   "cy": 519,
+   "shot": "T"
+  },
+  {
+   "m0": 983.92,
+   "m1": 989.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1122,
+   "cy": 510,
+   "shot": "M"
+  },
+  {
+   "m0": 989.64,
+   "m1": 992.4,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 992.64,
+   "m1": 995.44,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 563,
+   "shot": "L2"
+  },
+  {
+   "m0": 996.84,
+   "m1": 1001.16,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1089,
+   "cy": 495,
+   "shot": "T"
+  },
+  {
+   "m0": 1001.36,
+   "m1": 1006.0,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1132,
+   "cy": 533,
+   "shot": "M"
+  },
+  {
+   "m0": 1006.0,
+   "m1": 1010.6,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1083,
+   "cy": 499,
+   "shot": "T"
+  },
+  {
+   "m0": 1011.28,
+   "m1": 1013.92,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 1015.12,
+   "m1": 1019.6,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 544,
+   "shot": "L"
+  },
+  {
+   "m0": 1019.6,
+   "m1": 1024.4,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 533,
+   "shot": "LT"
+  },
+  {
+   "m0": 1028.0,
+   "m1": 1031.32,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 567,
+   "shot": "L2"
+  },
+  {
+   "m0": 1031.64,
+   "m1": 1035.0,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 558,
+   "shot": "L"
+  },
+  {
+   "m0": 1035.52,
+   "m1": 1037.4,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1100,
+   "cy": 550,
+   "shot": "M"
+  },
+  {
+   "m0": 1038.04,
+   "m1": 1042.24,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1059,
+   "cy": 514,
+   "shot": "T"
+  },
+  {
+   "m0": 1042.48,
+   "m1": 1048.24,
+   "fade_in": true,
+   "fade_out": false,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1136,
+   "cy": 538,
+   "shot": "M"
+  },
+  {
+   "m0": 1048.24,
+   "m1": 1053.68,
+   "fade_in": false,
+   "fade_out": false,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.06,
+   "cx": 990,
+   "cy": 560,
+   "shot": "W"
+  },
+  {
+   "m0": 1053.68,
+   "m1": 1059.24,
+   "fade_in": false,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 527,
+   "shot": "LT"
+  },
+  {
+   "m0": 1060.64,
+   "m1": 1063.48,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 567,
+   "shot": "L2"
+  },
+  {
+   "m0": 1068.8,
+   "m1": 1071.8,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "cost",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1152,
+   "cy": 536,
+   "shot": "L"
+  },
+  {
+   "m0": 1073.28,
+   "m1": 1080.28,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "outro",
+   "type": "cam",
+   "zoom": 1.4,
+   "cx": 1234,
+   "cy": 523,
+   "shot": "LT"
+  },
+  {
+   "m0": 1080.48,
+   "m1": 1087.08,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "outro",
+   "type": "cam",
+   "zoom": 1.55,
+   "cx": 1084,
+   "cy": 480,
+   "shot": "T"
+  },
+  {
+   "m0": 1087.4,
+   "m1": 1088.64,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "outro",
+   "type": "cam",
+   "zoom": 1.25,
+   "cx": 1022,
+   "cy": 549,
+   "shot": "M"
+  },
+  {
+   "m0": 1090.64,
+   "m1": 1095.72,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "outro",
+   "type": "cam",
+   "zoom": 1.12,
+   "cx": 1063,
+   "cy": 554,
+   "shot": "L2"
+  },
+  {
+   "m0": 1096.08,
+   "m1": 1096.56,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "outro",
+   "type": "cam",
+   "zoom": 1.1872,
+   "cx": 1063,
+   "cy": 554,
+   "shot": "L2+"
+  }
+ ],
+ "overlays": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\lower\\render.webm",
+   "start": 42.54
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_opus\\render.webm",
+   "start": 49.82
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_cuts\\render.webm",
+   "start": 54.22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_break\\render.webm",
+   "start": 75.36
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_cost\\render.webm",
+   "start": 83.76
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_vs\\render.webm",
+   "start": 98.48
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_bottle\\render.webm",
+   "start": 117.72
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_fro\\render.webm",
+   "start": 127.29
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sub1\\render.webm",
+   "start": 140.49
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_10x\\render.webm",
+   "start": 151.15
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_day\\render.webm",
+   "start": 176.2
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_hrs\\render.webm",
+   "start": 180.6
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_ai1h\\render.webm",
+   "start": 186.52
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\chip_res\\render.webm",
+   "start": 197.24
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec1\\render.webm",
+   "start": 203.36
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec2\\render.webm",
+   "start": 252.18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec3\\render.webm",
+   "start": 329.64
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_self\\render.webm",
+   "start": 338.52
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec4\\render.webm",
+   "start": 342.94
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec5\\render.webm",
+   "start": 406.34
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_raw\\render.webm",
+   "start": 410.52
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_brand\\render.webm",
+   "start": 426.64
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_style\\render.webm",
+   "start": 435.6
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec6\\render.webm",
+   "start": 443.16
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_95\\render.webm",
+   "start": 468.4
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_fix\\render.webm",
+   "start": 477.96
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_sync\\render.webm",
+   "start": 497.36
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_meta\\render.webm",
+   "start": 541.0
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_proj\\render.webm",
+   "start": 562.18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_ctx\\render.webm",
+   "start": 566.1
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_80\\render.webm",
+   "start": 579.66
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec7\\render.webm",
+   "start": 583.78
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\rule\\render.webm",
+   "start": 585.48
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_solo\\render.webm",
+   "start": 608.94
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_emp\\render.webm",
+   "start": 613.64
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\chip_wa\\render.webm",
+   "start": 638.54
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\chip_sk\\render.webm",
+   "start": 645.46
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\chip_ig\\render.webm",
+   "start": 656.1
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sub2\\render.webm",
+   "start": 660.72
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\sec8\\render.webm",
+   "start": 675.16
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_ed\\render.webm",
+   "start": 685.88
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_glob\\render.webm",
+   "start": 695.4
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_plan\\render.webm",
+   "start": 725.64
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_5h\\render.webm",
+   "start": 744.86
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_120\\render.webm",
+   "start": 750.46
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_lim\\render.webm",
+   "start": 755.23
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_max\\render.webm",
+   "start": 781.64
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\kw_100\\render.webm",
+   "start": 784.51
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\compare\\render.webm",
+   "start": 789.56
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\gfx\\end\\render.webm",
+   "start": 804.08
+  }
+ ],
+ "sfx": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 49.84,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 54.24,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 75.38,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 83.78,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 98.5,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 117.74,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 127.31,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 141.79,
+   "gain_db": -14
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 151.17,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 176.22,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 180.62,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 186.54,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 197.221,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 203.078,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 203.22,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 215.198,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 221.438,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 238.038,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 241.678,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 251.918,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 252.04,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 255.598,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 258.478,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 263.118,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 264.678,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 265.358,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 270.038,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 275.238,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 301.718,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 307.918,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 323.998,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 326.278,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 328.718,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 329.5,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 338.54,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 342.758,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 342.8,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 406.118,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 406.2,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 410.54,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 426.66,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 435.62,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 442.998,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 443.02,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 458.438,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 468.42,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 477.98,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 497.38,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 512.518,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 522.758,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 541.02,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 562.2,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 566.12,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 579.68,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 583.64,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 586.48,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 591.28,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 597.18,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 608.96,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 613.66,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 638.521,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 645.441,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 656.081,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 662.02,
+   "gain_db": -14
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 675.02,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 685.9,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 695.42,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 725.66,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 744.88,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 750.48,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 755.25,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 781.66,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 784.53,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 789.541,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 804.061,
+   "gain_db": -19
+  }
+ ],
+ "music": {
+  "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\music\\bg-feelgood-builder.mp3",
+  "gain_db": -27
+ },
+ "out": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\longform_preview.mp4",
+ "preset": "veryfast",
+ "crf": 21
+}

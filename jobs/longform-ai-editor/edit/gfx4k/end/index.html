@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #wrap { position: absolute; left: 1150px; top: 200px; width: 700px; }
+      #k { color: #3AB0D8; font-weight: 800; font-size: 26px; letter-spacing: 0.24em; }
+      #t { color: #FFFFFF; font-weight: 900; font-size: 66px; line-height: 1.02; letter-spacing: -0.03em; margin-top: 10px; text-shadow: 0 6px 26px rgba(12,14,15,0.55); }
+      #t span { color: #3AB0D8; }
+      #cards { margin-top: 28px; display: grid; gap: 14px; }
+      .c { display: flex; align-items: center; gap: 16px; padding: 16px 20px; border-radius: 20px; background: rgba(12,14,15,0.88); border: 1px solid rgba(58,176,216,0.35);
+        color: #FFFFFF; font-weight: 800; font-size: 28px; }
+      .c i { width: 46px; height: 46px; border-radius: 13px; background: #1A9FD1; display: flex; align-items: center; justify-content: center; font-style: normal; font-size: 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6.0" data-width="1920" data-height="1080">
+      <div id="wrap" class="clip" data-start="0" data-duration="6.0" data-track-index="0">
+        <div id="k">NEXT VIDEO</div>
+        <div id="t">What a <span>long-form</span> edit costs with AI</div>
+        <div id="cards">
+          <div class="c" id="c1"><i>▶</i>Subscribe so you don't miss it</div>
+          <div class="c" id="c2"><i>↓</i>Guide + community links in the description</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const DUR = 6.0;
+      gsap.set("#wrap", { opacity: 0 });
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#wrap", { opacity: 1 }, 0)
+        .fromTo("#k", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 0)
+        .fromTo("#t", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "expo.out" }, 0.1)
+        .fromTo("#c1", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 0.4, ease: "back.out(1.6)" }, 0.6)
+        .fromTo("#c2", { opacity: 0, x: 50 }, { opacity: 1, x: 0, duration: 0.4, ease: "back.out(1.6)" }, 0.85);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

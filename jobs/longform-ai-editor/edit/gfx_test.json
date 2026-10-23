@@ -1,0 +1,5 @@
+[
+ {"id": "test_kw", "tpl": "kw", "dur": 1.8, "vars": {"KICK": "Step 1", "MAIN": "Raw <span class=\"hl\">footage</span> folder"}},
+ {"id": "test_sec", "tpl": "section", "dur": 1.8, "vars": {"NUM": "01", "STEP": "STEP 1", "TITLE": "Set up Claude Code", "SUB": "New project, one folder, your raw footage"}},
+ {"id": "test_lt", "tpl": "lower", "dur": 3.5, "vars": {"NAME": "PARAS ARORA", "ROLE": "Founder ? Exponential World AI"}}
+]

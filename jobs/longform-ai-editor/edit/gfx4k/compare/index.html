@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #wrap { position: absolute; left: 1150px; top: 170px; width: 720px; }
+      #ttl { color: #3AB0D8; font-weight: 800; font-size: 26px; letter-spacing: 0.24em; margin-bottom: 14px; }
+      .col { border-radius: 26px; padding: 26px 30px; margin-bottom: 18px; }
+      .h { background: rgba(12,14,15,0.9); border: 1px solid rgba(223,221,223,0.18); }
+      .a { background: linear-gradient(135deg, rgba(26,159,209,0.95), rgba(17,50,76,0.95)); border: 1px solid #3AB0D8; }
+      .who { color: #DFDDDF; font-weight: 800; font-size: 24px; letter-spacing: 0.18em; }
+      .a .who { color: #EAF6FB; }
+      .price { color: #FFFFFF; font-weight: 900; font-size: 70px; letter-spacing: -0.03em; line-height: 1.05; margin-top: 6px; }
+      .price small { font-size: 30px; font-weight: 800; letter-spacing: 0; }
+      .meta { color: #DFDDDF; font-weight: 600; font-size: 24px; margin-top: 6px; }
+      .a .meta { color: #FFFFFF; }
+      #note { color: #9AA3A8; font-weight: 600; font-size: 18px; margin-top: 4px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="5.4" data-width="1920" data-height="1080">
+      <div id="wrap" class="clip" data-start="0" data-duration="5.4" data-track-index="0">
+        <div id="ttl">PER REEL · MY NUMBERS</div>
+        <div class="col h" id="c1"><div class="who">HUMAN EDITOR</div><div class="price">₹500–1,000</div><div class="meta">3–4 hours · rounds of back-and-forth</div></div>
+        <div class="col a" id="c2"><div class="who">CLAUDE (MAX PLAN)</div><div class="price">~₹100</div><div class="meta">~1 hour · it checks its own work</div></div>
+        <div id="note">Estimates from my own tests. Your costs will vary.</div>
+      </div>
+    </div>
+    <script>
+      const DUR = 5.4;
+      gsap.set("#wrap", { opacity: 0 });
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#wrap", { opacity: 1 }, 0)
+        .fromTo("#ttl", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0)
+        .fromTo("#c1", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 0.1)
+        .fromTo("#c2", { opacity: 0, x: 60, scale: 0.96 }, { opacity: 1, x: 0, scale: 1, duration: 0.5, ease: "back.out(1.6)" }, 0.7)
+        .fromTo("#note", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 1.1)
+        .to("#wrap", { opacity: 0, x: 40, duration: 0.3, ease: "power2.in" }, DUR - 0.3);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

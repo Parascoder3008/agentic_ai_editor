@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; }
+      #orbit { position: absolute; inset: 0; }
+      .card { position: absolute; left: 0; top: 0; width: 135px; height: 240px; margin: -120px 0 0 -67px;
+        border-radius: 16px; overflow: hidden; border: 3px solid #FFFFFF; background: #11324C;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45); opacity: 0; }
+      .card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .card .play { position: absolute; left: 10px; bottom: 10px; display: flex; align-items: center; gap: 6px;
+        color: #FFFFFF; font-weight: 800; font-size: 15px; text-shadow: 0 1px 4px rgba(0,0,0,0.8); }
+      .card .play svg { width: 16px; height: 16px; }
+      .card .shade { position: absolute; inset: 0; background: #0C0E0F; opacity: 0; }
+      .boop { position: absolute; color: #FFFFFF; font-weight: 800; font-size: 46px; letter-spacing: 0.02em;
+        padding: 6px 18px; border-radius: 14px; background: #1A9FD1; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10.8" data-width="1080" data-height="1920">
+      <div id="orbit" class="clip" data-start="0" data-duration="10.8" data-track-index="0"></div>
+      <div class="boop clip" id="boop1" data-start="0" data-duration="10.8" data-track-index="1" style="left:650px;top:140px">BOOP!</div>
+      <div class="boop clip" id="boop2" data-start="0" data-duration="10.8" data-track-index="2" style="left:650px;top:1100px">BOOP!</div>
+    </div>
+    <script>
+      // ---- timing (seconds from overlay start) — matched to the spoken words
+      const T_IN = 0.36;     // "reels" (overlay starts at output 52.70 s)
+      const T_CLICK = 6.49;  // "click"
+      const T_HIT = 8.36;    // "head" — lands on the head in the edited half
+      const T_HIT2 = 9.43;   // "ye kya kiya" — hits again in the ORIGINAL half
+      const DUR = 10.8;
+      // ---- geometry (top-half coords; ORIGINAL half = +960)
+      const CX = 514, CY = 530, RX = 340, RY = 85;
+      const HEAD = { x: 518, y: 215 };
+      const N = 8, TURNS = 1.25;          // 1.25 turns => card 0 sits at the front (θ = π/2) on the click
+
+      const orbit = document.getElementById("orbit");
+      const play = '<svg viewBox="0 0 24 24"><path d="M6 4 L20 12 L6 20 Z" fill="#FFFFFF"/></svg>';
+      const cards = [];
+      for (let i = 0; i < N; i++) {
+        const c = document.createElement("div");
+        c.className = "card";
+        c.innerHTML = `<img src="img/r${i + 1}.jpg"><div class="play">${play}REEL</div><div class="shade"></div>`;
+        orbit.appendChild(c); cards.push(c);
+      }
+      const E = { bo: gsap.parseEase("back.out(1.4)"), sio: gsap.parseEase("sine.inOut"), po2: gsap.parseEase("power2.out"),
+        pi2: gsap.parseEase("power2.in"), pi3: gsap.parseEase("power3.in"), pi: gsap.parseEase("power2.in") };
+      const clamp = (v) => Math.max(0, Math.min(1, v));
+      const seg = (t, a, b) => clamp((t - a) / (b - a));
+      const lerp = (a, b, k) => a + (b - a) * k;
+      const squash = (t, at) => { const k = seg(t, at, at + 0.16); return k > 0 && k < 1 ? Math.sin(k * Math.PI) : 0; };
+      const bop = (id, t, at) => {
+        const k = seg(t, at, at + 0.18), out = seg(t, at + 0.8, at + 1.1);
+        gsap.set(id, { opacity: k * (1 - out), scale: 0.5 + 0.5 * E.bo(k), y: -30 * out });
+      };
+
+      // one pure function of time drives everything => identical on any seek order
+      const render = (t) => {
+        const k = E.bo(seg(t, T_IN, T_IN + 0.8));
+        const a = Math.PI * 2 * TURNS * E.sio(seg(t, T_IN, T_CLICK));
+        cards.forEach((c, i) => {
+          const th = a + Math.PI / 2 + (i / N) * Math.PI * 2;
+          const depth = Math.sin(th);
+          let x = CX + Math.cos(th) * RX * k, y = CY + depth * RY * k;
+          let s = (0.72 + 0.28 * (depth + 1) / 2) * k, rot = Math.cos(th) * -10, op = clamp(k), z = Math.round((depth + 1) * 10);
+          let shade = (1 - (depth + 1) / 2) * 0.55;
+          if (i === 0 && t >= T_CLICK) {           // the card that gets "clicked"
+            shade = 0; z = 50;
+            const up = E.po2(seg(t, T_CLICK, T_HIT - 0.35)), down = E.pi3(seg(t, T_HIT - 0.35, T_HIT));
+            const rise = E.po2(seg(t, T_HIT + 0.16, T_HIT + 0.46)), fall = E.pi2(seg(t, T_HIT + 0.46, T_HIT2));
+            const gone = E.pi(seg(t, T_HIT2 + 0.16, T_HIT2 + 1.06));
+            x = lerp(lerp(CX, HEAD.x, up), HEAD.x + 260, gone) + 20 * fall;
+            y = CY + RY;
+            y = lerp(y, HEAD.y - 360, up); y = lerp(y, HEAD.y - 72, down); y = lerp(y, HEAD.y - 220, rise);
+            y = lerp(y, HEAD.y + 960 - 72, fall); y = lerp(y, 2200, gone);
+            s = lerp(1, 1.15, up); rot = lerp(lerp(8 * up, -6, down), 14, rise) * (1 - fall) - 10 * fall + 80 * gone;
+            const sq = Math.max(squash(t, T_HIT), squash(t, T_HIT2));
+            gsap.set(c, { x, y, scaleX: s * (1 + 0.25 * sq), scaleY: s * (1 - 0.12 * sq), rotation: rot, zIndex: z, opacity: 1 });
+            gsap.set(c.querySelector(".shade"), { opacity: 0 });
+            return;
+          }
+          if (i !== 0) {                            // the rest of the orbit leaves after the click
+            const leave = E.pi2(seg(t, T_CLICK + 0.1 + i * 0.03, T_CLICK + 0.5 + i * 0.03));
+            op *= 1 - leave; s *= 1 - 0.6 * leave;
+          }
+          gsap.set(c, { x, y, scale: s, rotation: rot, zIndex: z, opacity: op });
+          gsap.set(c.querySelector(".shade"), { opacity: shade });
+        });
+        bop("#boop1", t, T_HIT); bop("#boop2", t, T_HIT2);
+      };
+      const clock = { t: 0 };
+      render(0);
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.to(clock, { t: DUR, duration: DUR, ease: "none", onUpdate: () => render(clock.t) }, 0);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

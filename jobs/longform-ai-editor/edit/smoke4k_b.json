@@ -1,0 +1,705 @@
+{
+ "fps": 25,
+ "cam": {
+  "path": "D:\\october videos\\ai editor\\C7443.MP4",
+  "offset": 36.165,
+  "px": 2.0
+ },
+ "scr": {
+  "path": "D:\\october videos\\ai editor\\2026-10-06 21-27-13.mp4",
+  "offset": -234.106
+ },
+ "wav": "D:\\october videos\\ai editor\\ai editor.wav",
+ "grade": "eq=contrast=1.07:saturation=1.05:brightness=0.025:gamma=1.05,colorbalance=rs=-0.015:bs=0.03:rm=0.015:bm=-0.005,vignette=angle=0.3",
+ "bubble": {
+  "x": 1520,
+  "y": 660,
+  "d": 360,
+  "size": 520,
+  "cx": 1001,
+  "cy": 470
+ },
+ "segments": [
+  {
+   "m0": 308.44,
+   "m1": 314.68,
+   "fade_in": true,
+   "fade_out": true,
+   "sec": "s_skill",
+   "type": "scr",
+   "crop": [
+    245,
+    45,
+    1440,
+    810
+   ],
+   "bubble": true,
+   "bubble_xy": [
+    1520,
+    660
+   ],
+   "face": [
+    1027,
+    437
+   ]
+  }
+ ],
+ "overlays": [],
+ "sfx": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 48.16,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 51.96,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 72.5,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 80.7,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 94.26,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 113.5,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 122.23,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 135.95,
+   "gain_db": -14
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 145.33,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 170.38,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 174.78,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 180.7,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 190.981,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 196.98,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 208.958,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 215.198,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 231.438,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 235.078,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 245.318,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 245.44,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 249.038,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 251.678,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 256.318,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 261.518,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 286.438,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 292.638,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 308.718,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 310.998,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 313.438,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 314.22,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 323.26,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 325.478,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 325.52,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 386.238,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 386.32,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 390.66,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 406.78,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 415.74,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 423.158,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 423.18,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 438.398,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 448.38,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 457.94,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 477.34,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 492.238,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 502.478,
+   "gain_db": -22
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 520.74,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 541.92,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 545.84,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 559.4,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 563.36,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 566.2,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 571.0,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 576.9,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 588.68,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 593.38,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 616.761,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 623.681,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 634.321,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 640.26,
+   "gain_db": -14
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 653.26,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 662.62,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 671.42,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 701.66,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 720.4,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 726.0,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 730.77,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 757.18,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 760.05,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 764.621,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 777.701,
+   "gain_db": -19
+  }
+ ],
+ "music": {
+  "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\music_score.wav",
+  "gain_db": 0,
+  "sidechain": false,
+  "score": {
+   "length": 783.28,
+   "blocks": [
+    {
+     "t0": 0.0,
+     "t1": 2.02,
+     "cue": "hook",
+     "level": 0,
+     "start": "fade",
+     "end": "riser"
+    },
+    {
+     "t0": 2.02,
+     "t1": 21.19,
+     "cue": "hook",
+     "level": 3,
+     "start": "hit",
+     "end": "riser"
+    },
+    {
+     "t0": 21.19,
+     "t1": 39.52,
+     "cue": "hook",
+     "level": 4,
+     "start": "hit",
+     "end": "cut"
+    },
+    {
+     "t0": 39.52,
+     "t1": 42.4,
+     "cue": "hook",
+     "level": 0,
+     "start": "drop",
+     "end": "riser",
+     "riser": 1.4
+    },
+    {
+     "t0": 42.4,
+     "t1": 197.17,
+     "cue": "story",
+     "level": 1,
+     "level_at": [
+      [
+       134.65,
+       2
+      ]
+     ],
+     "start": "hit",
+     "drums_in": 2,
+     "end": "riser"
+    },
+    {
+     "t0": 197.17,
+     "t1": 245.63,
+     "cue": "build",
+     "level": 1,
+     "start": "hit",
+     "end": "riser",
+     "build": "roll"
+    },
+    {
+     "t0": 245.63,
+     "t1": 314.41,
+     "cue": "build",
+     "level": 2,
+     "start": "hit",
+     "end": "riser"
+    },
+    {
+     "t0": 314.41,
+     "t1": 325.71,
+     "cue": "build",
+     "level": 3,
+     "start": "hit",
+     "end": "riser",
+     "build": "roll"
+    },
+    {
+     "t0": 325.71,
+     "t1": 386.51,
+     "cue": "build",
+     "level": 3,
+     "start": "hit",
+     "end": "riser"
+    },
+    {
+     "t0": 386.51,
+     "t1": 423.37,
+     "cue": "build",
+     "level": 4,
+     "start": "hit",
+     "end": "riser",
+     "build": "roll"
+    },
+    {
+     "t0": 423.37,
+     "t1": 520.37,
+     "cue": "build",
+     "level": 4,
+     "start": "hit",
+     "end": "tapestop"
+    },
+    {
+     "t0": 525.434,
+     "t1": 563.55,
+     "cue": "build",
+     "level": 5,
+     "start": "drop",
+     "end": "riser"
+    },
+    {
+     "t0": 563.55,
+     "t1": 653.45,
+     "cue": "reflect",
+     "level": 1,
+     "level_at": [
+      [
+       616.78,
+       2
+      ]
+     ],
+     "start": "hit",
+     "end": "riser",
+     "build": "roll"
+    },
+    {
+     "t0": 653.45,
+     "t1": 764.74,
+     "cue": "numbers",
+     "level": 3,
+     "start": "hit",
+     "end": "riser",
+     "riser": 2
+    },
+    {
+     "t0": 764.74,
+     "t1": 777.77,
+     "cue": "numbers",
+     "level": 4,
+     "start": "hit",
+     "end": "riser"
+    },
+    {
+     "t0": 777.77,
+     "t1": 783.28,
+     "cue": "outro",
+     "level": 4,
+     "start": "hit",
+     "end": "ring",
+     "ring": 0.7
+    }
+   ],
+   "events": [
+    {
+     "type": "dip",
+     "t0": 447.76,
+     "t1": 450.56
+    },
+    {
+     "type": "bell",
+     "t": 448.48,
+     "note": 88
+    },
+    {
+     "type": "bell",
+     "t": 566.2,
+     "note": 76
+    },
+    {
+     "type": "bell",
+     "t": 571.0,
+     "note": 79
+    },
+    {
+     "type": "bell",
+     "t": 576.9,
+     "note": 84
+    },
+    {
+     "type": "lift",
+     "t0": 196.82,
+     "t1": 198.76999999999998,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 245.28,
+     "t1": 247.23,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 314.06,
+     "t1": 316.01000000000005,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 325.35999999999996,
+     "t1": 327.31,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 386.15999999999997,
+     "t1": 388.11,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 423.02,
+     "t1": 424.97,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 563.1999999999999,
+     "t1": 565.15,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 653.1,
+     "t1": 655.0500000000001,
+     "db": 6
+    },
+    {
+     "type": "lift",
+     "t0": 1.72,
+     "t1": 2.92,
+     "db": 4
+    },
+    {
+     "type": "lift",
+     "t0": 20.89,
+     "t1": 22.09,
+     "db": 4
+    },
+    {
+     "type": "lift",
+     "t0": 42.1,
+     "t1": 43.3,
+     "db": 4
+    },
+    {
+     "type": "lift",
+     "t0": 134.65,
+     "t1": 139.65,
+     "db": 3
+    },
+    {
+     "type": "lift",
+     "t0": 638.96,
+     "t1": 643.36,
+     "db": 3
+    },
+    {
+     "type": "lift",
+     "t0": 764.39,
+     "t1": 766.04,
+     "db": 5
+    }
+   ],
+   "duck": [
+    {
+     "t0": 0.0,
+     "t1": 42.4,
+     "speech": -15,
+     "gap": -7
+    },
+    {
+     "t0": 42.4,
+     "t1": 777.77,
+     "speech": -18,
+     "gap": -9
+    },
+    {
+     "t0": 777.77,
+     "t1": 1000000000.0,
+     "speech": -15,
+     "gap": -7
+    }
+   ]
+  }
+ },
+ "voice_gain": [
+  [
+   0.0,
+   42.4,
+   -5.0
+  ]
+ ],
+ "out": "C:\\Users\\PARAS ARORA\\AI_Editor\\inbox\\longform-ai-editor\\edit\\smoke4k_b.mp4",
+ "preset": "medium",
+ "crf": 18,
+ "out_scale": 2
+}

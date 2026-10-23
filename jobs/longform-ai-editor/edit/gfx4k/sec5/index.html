@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800;900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #card { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 80% at 30% 50%, #11324C 0%, #0C0E0F 72%); overflow: hidden; }
+      #num { position: absolute; right: 150px; top: 170px; font-weight: 900; font-size: 700px; line-height: 0.8; letter-spacing: -0.06em;
+        color: transparent; -webkit-text-stroke: 5px rgba(58,176,216,0.45); }
+      #step { position: absolute; left: 150px; top: 330px; color: #3AB0D8; font-weight: 800; font-size: 34px; letter-spacing: 0.3em; }
+      #title { position: absolute; left: 146px; top: 390px; width: 1500px; color: #FFFFFF; font-weight: 900; font-size: 120px;
+        line-height: 1.0; letter-spacing: -0.035em; }
+      #sub { position: absolute; left: 150px; top: 640px; color: #DFDDDF; font-weight: 600; font-size: 38px; }
+      #bar { position: absolute; left: 150px; top: 610px; width: 220px; height: 10px; border-radius: 5px; background: #1A9FD1; transform-origin: left center; }
+      #wipe { position: absolute; inset: 0; background: #1A9FD1; transform-origin: left center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="1.8" data-width="1920" data-height="1080">
+      <div id="card" class="clip" data-start="0" data-duration="1.8" data-track-index="0">
+        <div id="num">4</div>
+        <div id="step">STEP 4</div>
+        <div id="title">Feed it like an editor</div>
+        <div id="bar"></div>
+        <div id="sub">Raw footage · brand colours · a style to copy</div>
+        <div id="wipe"></div>
+      </div>
+    </div>
+    <script>
+      const DUR = 1.8;
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // blue wipe reveals the card, card holds, blue wipe hands back to footage
+      tl.fromTo("#wipe", { scaleX: 1, transformOrigin: "right center" }, { scaleX: 0, duration: 0.32, ease: "power3.inOut" }, 0)
+        .fromTo("#num", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 0.12)
+        .fromTo("#step", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out" }, 0.2)
+        .fromTo("#title", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: "expo.out" }, 0.26)
+        .fromTo("#bar", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.inOut" }, 0.4)
+        .fromTo("#sub", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.5)
+        .fromTo("#card", { scale: 1 }, { scale: 1.03, duration: DUR, ease: "none" }, 0)
+        .fromTo("#wipe", { scaleX: 0, transformOrigin: "left center" }, { scaleX: 1, duration: 0.28, ease: "power3.in", immediateRender: false }, DUR - 0.32)
+        .to("#card", { opacity: 0, duration: 0.04 }, DUR - 0.04);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

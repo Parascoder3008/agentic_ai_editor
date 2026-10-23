@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; overflow: hidden;
+        background: radial-gradient(ellipse at 30% 0%, #11324C 0%, #0C0E0F 65%); }
+      #win { position: absolute; left: 36px; top: 36px; width: 1008px; height: 888px; border-radius: 28px;
+        background: rgba(17,50,76,0.35); border: 1px solid rgba(58,176,216,0.28); overflow: hidden; }
+      #chrome { height: 64px; display: flex; align-items: center; gap: 12px; padding: 0 26px;
+        border-bottom: 1px solid rgba(58,176,216,0.18); }
+      .dot { width: 14px; height: 14px; border-radius: 50%; background: rgba(223,221,223,0.25); }
+      #brand { margin-left: 14px; font-weight: 700; font-size: 22px; color: #DFDDDF; }
+      #brand b { color: #3AB0D8; }
+      #tabs { position: absolute; left: 26px; top: 86px; display: flex; gap: 12px; }
+      .tab { padding: 12px 20px; border-radius: 16px; font-weight: 800; font-size: 24px; letter-spacing: 0.04em;
+        background: rgba(12,14,15,0.6); border: 1px solid rgba(58,176,216,0.25); color: #DFDDDF; }
+      .tab.on { background: #1A9FD1; color: #FFFFFF; border-color: #3AB0D8; }
+      .scene { position: absolute; left: 26px; top: 170px; width: 640px; height: 690px; }
+      .prompt { height: 72px; border-radius: 18px; background: rgba(12,14,15,0.75); border: 1px solid rgba(58,176,216,0.35);
+        display: flex; align-items: center; padding: 0 24px; font-size: 26px; font-weight: 500; color: #FFFFFF; white-space: pre; }
+      .prompt .lbl { color: #3AB0D8; font-weight: 800; margin-right: 14px; }
+      .caret { display: inline-block; width: 3px; height: 30px; background: #3AB0D8; margin-left: 3px; }
+      .h { font-weight: 800; font-size: 30px; margin: 22px 0 14px; color: #FFFFFF; }
+      .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+      .chip { padding: 14px 16px; border-radius: 16px; background: rgba(17,50,76,0.75); border: 1px solid rgba(58,176,216,0.3);
+        font-size: 21px; font-weight: 600; line-height: 1.25; }
+      .chip small { display: block; color: #3AB0D8; font-weight: 800; font-size: 17px; letter-spacing: 0.14em; margin-bottom: 6px; }
+      .mail { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 14px; background: rgba(12,14,15,0.55);
+        margin-bottom: 10px; font-size: 23px; }
+      .tag { min-width: 104px; text-align: center; padding: 6px 10px; border-radius: 10px; font-weight: 800; font-size: 16px; letter-spacing: 0.1em; }
+      .tag.u { background: #1A9FD1; } .tag.f { background: #11324C; border: 1px solid #3AB0D8; } .tag.n { background: rgba(223,221,223,0.18); }
+      .btn { display: inline-block; padding: 14px 30px; border-radius: 14px; background: #1A9FD1; font-weight: 800; font-size: 24px; }
+      .line { height: 16px; border-radius: 8px; background: rgba(223,221,223,0.22); margin: 12px 0; transform-origin: left center; }
+      .bar { height: 22px; border-radius: 11px; background: rgba(223,221,223,0.15); overflow: hidden; }
+      .fill { height: 100%; width: 100%; background: linear-gradient(90deg, #1A9FD1, #3AB0D8); transform-origin: left center; }
+      .stat { display: flex; justify-content: space-between; font-size: 24px; font-weight: 600; margin: 18px 0 10px; color: #DFDDDF; }
+      .ok { color: #3AB0D8; font-weight: 800; }
+      #disc { position: absolute; right: 26px; top: 22px; font-size: 16px; color: #DFDDDF; letter-spacing: 0.04em; }
+      .os { display: flex; align-items: center; gap: 20px; padding: 22px 24px; margin-bottom: 16px; border-radius: 22px;
+        background: rgba(12,14,15,0.6); border: 1px solid rgba(58,176,216,0.25); }
+      .os .n { width: 64px; height: 64px; border-radius: 18px; background: #11324C; display: flex; align-items: center; justify-content: center;
+        font-weight: 900; font-size: 30px; color: #3AB0D8; }
+      .os .tt { font-weight: 900; font-size: 34px; } .os .dd { font-weight: 500; font-size: 20px; color: #DFDDDF; margin-top: 4px; }
+      #cursor { position: absolute; left: 0; top: 0; width: 40px; height: 40px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="21.7" data-width="1080" data-height="1920">
+      <div id="stage" class="clip" data-start="0" data-duration="21.7" data-track-index="0">
+        <div id="win">
+          <div id="chrome"><div class="dot"></div><div class="dot"></div><div class="dot"></div>
+            <div id="brand">Claude · <b>Paras AI OS</b></div></div>
+          <div id="tabs">
+            <div class="tab" id="tabC">CONTENT OS</div>
+            <div class="tab" id="tabB">BUSINESS OS</div>
+            <div class="tab" id="tabM">MONEY OS</div>
+          </div>
+
+          <!-- the three systems (intro) -->
+          <div class="scene" id="scIntro">
+            <div class="h" style="margin-top:6px">3 operating systems</div>
+            <div class="os" id="osC"><div class="n">01</div><div><div class="tt">Content OS</div><div class="dd">Ideas, scripts, every platform</div></div></div>
+            <div class="os" id="osB"><div class="n">02</div><div><div class="tt">Business OS</div><div class="dd">Inbox, webinars, workshops, clients</div></div></div>
+            <div class="os" id="osM"><div class="n">03</div><div><div class="tt">Money OS</div><div class="dd">Portfolio bots and rules checks</div></div></div>
+          </div>
+
+          <!-- Business OS · inbox -->
+          <div class="scene" id="scMail">
+            <div class="prompt"><span class="lbl">›</span><span class="typed" data-text="Sort today's inbox and draft replies"></span><span class="caret"></span></div>
+            <div class="h">Inbox · 6 new</div>
+            <div class="mail" id="m1"><span class="tag u">URGENT</span>Client: workshop venue confirmation</div>
+            <div class="mail" id="m2"><span class="tag f">FYI</span>Webinar replay is ready</div>
+            <div class="mail" id="m3"><span class="tag n">NEWS</span>New Claude model release notes</div>
+            <div class="mail" id="m4"><span class="tag u">URGENT</span>DFY lead asks for a proposal</div>
+            <div class="chip" id="draft" style="margin-top:16px"><small>DRAFT REPLY</small>Hi! Sharing the venue details and the agenda for Saturday...</div>
+            <div style="margin-top:16px"><span class="btn" id="approve">Approve ✓</span></div>
+          </div>
+
+          <!-- Content OS · ideation -->
+          <div class="scene" id="scIdea">
+            <div class="prompt"><span class="lbl">›</span><span class="typed" data-text="Give me 6 reel hooks on AI agents"></span><span class="caret"></span></div>
+            <div class="h">Hook ideas</div>
+            <div class="grid">
+              <div class="chip" id="i1"><small>HOOK 01</small>Maine apne editor ko chhutti de di</div>
+              <div class="chip" id="i2"><small>HOOK 02</small>1 take. Zero editing. Full reel.</div>
+              <div class="chip" id="i3"><small>HOOK 03</small>Claude ne mera inbox sambhaal liya</div>
+              <div class="chip" id="i4"><small>HOOK 04</small>3 OS jo mera business chalate hain</div>
+              <div class="chip" id="i5"><small>HOOK 05</small>Script likhna ab 2 minute ka kaam</div>
+              <div class="chip" id="i6"><small>HOOK 06</small>AI agent vs virtual assistant</div>
+            </div>
+          </div>
+
+          <!-- Content OS · script -->
+          <div class="scene" id="scScript">
+            <div class="prompt"><span class="lbl">›</span><span class="typed" data-text="Write the script for hook 01"></span><span class="caret"></span></div>
+            <div class="h">Script · 45 sec reel</div>
+            <div class="chip" id="sc1"><small>HOOK</small>Bhai, maine video editor ko chhutti de di.</div>
+            <div class="line" id="l1" style="width:92%"></div><div class="line" id="l2" style="width:78%"></div>
+            <div class="line" id="l3" style="width:86%"></div><div class="line" id="l4" style="width:60%"></div>
+            <div class="chip" id="sc2" style="margin-top:14px"><small>CTA</small>Comment EDIT, guide DM mein.</div>
+          </div>
+
+          <!-- Business OS · webinars & workshops -->
+          <div class="scene" id="scWeb">
+            <div class="prompt"><span class="lbl">›</span><span class="typed" data-text="Set up Saturday's webinar and reminders"></span><span class="caret"></span></div>
+            <div class="h">Webinars &amp; workshops</div>
+            <div class="chip" id="w1"><small>WEBINAR · SAT 7 PM</small>AI for Entrepreneurs — live</div>
+            <div class="stat"><span>Registrations</span><span class="ok" id="regs">0</span></div>
+            <div class="bar"><div class="fill" id="regbar"></div></div>
+            <div class="stat"><span>WhatsApp reminders</span><span class="ok" id="rem">Scheduled ✓</span></div>
+            <div class="stat"><span>Workshop seats</span><span class="ok" id="seats">Open</span></div>
+          </div>
+
+          <!-- Money OS · bots -->
+          <div class="scene" id="scMoney">
+            <div class="prompt"><span class="lbl">›</span><span class="typed" data-text="Run my portfolio rules check"></span><span class="caret"></span></div>
+            <div class="h">Portfolio bot · <span class="ok">running</span></div>
+            <svg id="chart" viewBox="0 0 956 260" width="640" height="174">
+              <path id="cpath" d="M0,200 C80,180 120,210 190,170 S310,120 380,150 S520,90 600,110 S760,70 830,80 S920,60 956,64"
+                fill="none" stroke="#3AB0D8" stroke-width="5" stroke-linecap="round" />
+            </svg>
+            <div class="stat"><span>Allocation rules</span><span class="ok" id="r1">Checked ✓</span></div>
+            <div class="stat"><span>Risk limits</span><span class="ok" id="r2">Within limits ✓</span></div>
+            <div class="stat"><span>Rebalance</span><span class="ok" id="r3">Auto-scheduled ✓</span></div>
+          </div>
+          <div id="disc">Illustrative demo · Educational content, not financial advice</div>
+        </div>
+        <svg id="cursor" viewBox="0 0 24 24"><path d="M3 2 L3 20 L8 15 L11.5 22 L14.5 20.6 L11 13.8 L18 13.8 Z" fill="#FFFFFF" stroke="#0C0E0F" stroke-width="1.4"/></svg>
+      </div>
+    </div>
+    <script>
+      // ---- cue times (seconds from overlay start) — matched to spoken words
+      // overlay starts at output 26.90 s ("side pe le jao")
+      const CUE = { intro: 0.0, content: 3.76, business: 4.99, money: 6.97, mail: 7.6, idea: 10.51, script: 12.2, web: 14.0, money2: 15.9, end: 21.7 };
+
+      // split typed prompts into per-letter spans (deterministic)
+      document.querySelectorAll(".typed").forEach((t) => {
+        t.innerHTML = [...t.dataset.text].map((c) => `<span class="ch">${c === " " ? "&nbsp;" : c}</span>`).join("");
+      });
+      const scenes = ["#scMail", "#scIdea", "#scScript", "#scWeb", "#scMoney"];
+      gsap.set(scenes, { opacity: 0 });
+      gsap.set(".ch", { opacity: 0 });
+      gsap.set(["#m1","#m2","#m3","#m4","#draft","#approve","#i1","#i2","#i3","#i4","#i5","#i6","#sc1","#sc2","#w1","#cpath"], { opacity: 0 });
+      gsap.set([".line", "#regbar"], { scaleX: 0 });
+      gsap.set("#cursor", { x: 900, y: 860, opacity: 0 });
+
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#win", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, CUE.intro);
+      const tabOn = (id, t) => tl.to(id, { backgroundColor: "#1A9FD1", color: "#FFFFFF", scale: 1.06, duration: 0.25, ease: "back.out(2)" }, t)
+        .to(id, { scale: 1, duration: 0.2 }, t + 0.25);
+      const tabOff = (id, t) => tl.to(id, { backgroundColor: "rgba(12,14,15,0.6)", color: "#DFDDDF", duration: 0.25 }, t);
+      tabOn("#tabC", CUE.content); tabOn("#tabB", CUE.business); tabOn("#tabM", CUE.money);
+      gsap.set(["#osC", "#osB", "#osM"], { opacity: 0.25 });
+      tl.fromTo("#scIntro", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, CUE.intro + 0.3)
+        .to("#scIntro", { opacity: 0, duration: 0.25 }, CUE.mail - 0.25);
+      [["#osC", CUE.content], ["#osB", CUE.business], ["#osM", CUE.money]].forEach(([id, t]) =>
+        tl.to(id, { opacity: 1, borderColor: "#3AB0D8", backgroundColor: "rgba(17,50,76,0.85)", duration: 0.25, ease: "power2.out" }, t)
+          .fromTo(id + " .n", { scale: 1 }, { scale: 1.15, backgroundColor: "#1A9FD1", color: "#FFFFFF", duration: 0.2, yoyo: true, repeat: 1 }, t));
+      const type = (scene, t) => {
+        const chars = document.querySelectorAll(scene + " .ch");
+        chars.forEach((c, i) => tl.set(c, { opacity: 1 }, t + 0.15 + i * 0.015));
+        return t + 0.15 + chars.length * 0.015;
+      };
+      const show = (scene, t, tEnd, tabId) => {
+        tl.fromTo(scene, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, t)
+          .to(scene, { opacity: 0, duration: 0.25 }, tEnd - 0.25);
+        ["#tabC", "#tabB", "#tabM"].forEach((x) => (x === tabId ? tabOn(x, t) : tabOff(x, t)));
+        return type(scene, t);
+      };
+      const pop = (ids, t, gap) => ids.forEach((id, i) =>
+        tl.fromTo(id, { opacity: 0, scale: 0.9, y: 14 }, { opacity: 1, scale: 1, y: 0, duration: 0.3, ease: "back.out(2)" }, t + i * gap));
+
+      // Business OS · inbox
+      let t = show("#scMail", CUE.mail, CUE.idea, "#tabB");
+      pop(["#m1", "#m2", "#m3", "#m4"], t + 0.05, 0.18);
+      pop(["#draft"], t + 0.95, 0);
+      // Content OS · ideation
+      t = show("#scIdea", CUE.idea, CUE.script, "#tabC");
+      pop(["#i1", "#i2", "#i3", "#i4", "#i5", "#i6"], t + 0.05, 0.1);
+      // Content OS · script
+      t = show("#scScript", CUE.script, CUE.web, "#tabC");
+      pop(["#sc1"], t + 0.1, 0);
+      ["#l1", "#l2", "#l3", "#l4"].forEach((id, i) => tl.to(id, { scaleX: 1, duration: 0.3, ease: "power2.out" }, t + 0.2 + i * 0.12));
+      pop(["#sc2"], t + 0.7, 0);
+      // Business OS · webinars
+      t = show("#scWeb", CUE.web, CUE.money2, "#tabB");
+      pop(["#w1"], t + 0.1, 0);
+      const regs = { v: 0 };
+      tl.to(regs, { v: 248, duration: 0.8, ease: "power2.out", onUpdate: () => { document.getElementById("regs").textContent = Math.round(regs.v); } }, t + 0.4)
+        .to("#regbar", { scaleX: 0.62, duration: 0.8, ease: "power2.out" }, t + 0.4);
+      // Money OS · bots (no returns / profit claims — process status only)
+      t = show("#scMoney", CUE.money2, CUE.end, "#tabM");
+      const len = document.getElementById("cpath").getTotalLength();
+      gsap.set("#cpath", { strokeDasharray: len, strokeDashoffset: len });
+      tl.set("#cpath", { opacity: 1 }, t).to("#cpath", { strokeDashoffset: 0, duration: 2.0, ease: "power2.inOut" }, t)
+        .fromTo(["#r1", "#r2", "#r3"], { opacity: 0 }, { opacity: 1, duration: 0.3, stagger: 0.45 }, t + 1.2);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

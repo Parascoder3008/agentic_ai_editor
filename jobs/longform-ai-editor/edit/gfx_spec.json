@@ -1,0 +1,465 @@
+[
+ {
+  "id": "lower",
+  "tpl": "lower",
+  "dur": 3.6,
+  "vars": {
+   "NAME": "PARAS ARORA",
+   "ROLE": "Founder · Exponential World AI"
+  }
+ },
+ {
+  "id": "kw_opus",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Edited by",
+   "MAIN": "Claude <span class=\"hl\">Opus 5.5</span>"
+  }
+ },
+ {
+  "id": "kw_cuts",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "My manual cuts",
+   "MAIN": "<span class=\"hl\">Zero</span>"
+  }
+ },
+ {
+  "id": "kw_break",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "This video",
+   "MAIN": "Full process <span class=\"hl\">breakdown</span>"
+  }
+ },
+ {
+  "id": "kw_cost",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "At the end",
+   "MAIN": "<span class=\"hl\">Cost</span> breakdown"
+  }
+ },
+ {
+  "id": "kw_vs",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "Editor vs AI",
+   "MAIN": "Cost · <span class=\"hl\">Quality</span>"
+  }
+ },
+ {
+  "id": "kw_bottle",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "The real problem",
+   "MAIN": "Editing = <span class=\"hl\">bottleneck</span>"
+  }
+ },
+ {
+  "id": "kw_fro",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Freelancers",
+   "MAIN": "Endless <span class=\"hl\">back &amp; forth</span>"
+  }
+ },
+ {
+  "id": "sub1",
+  "tpl": "sub",
+  "dur": 5.0,
+  "vars": {}
+ },
+ {
+  "id": "kw_10x",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Editors",
+   "MAIN": "Become <span class=\"hl\">10x</span> with AI"
+  }
+ },
+ {
+  "id": "kw_day",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Normal editor",
+   "MAIN": "Up to <span class=\"hl\">1 day</span>"
+  }
+ },
+ {
+  "id": "kw_hrs",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Even at 100%",
+   "MAIN": "<span class=\"hl\">3–4 hrs</span> a reel"
+  }
+ },
+ {
+  "id": "kw_ai1h",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Claude",
+   "MAIN": "~<span class=\"hl\">1 hour</span>"
+  }
+ },
+ {
+  "id": "chip_res",
+  "tpl": "chip",
+  "dur": 3.6,
+  "vars": {
+   "TOP": "300",
+   "ICON": "<svg viewBox=\"0 0 24 24\"><path fill=\"#FFFFFF\" d=\"M6 2h8l6 6v14H6zM14 3.5V9h5.5\" /><path d=\"M9 13h8M9 17h6\" stroke=\"#1A9FD1\" stroke-width=\"1.8\"/></svg>",
+   "T1": "Every resource",
+   "T2": "Linked in the <b>description</b>"
+  }
+ },
+ {
+  "id": "sec1",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "",
+   "STEP": "HOW I SET IT UP",
+   "TITLE": "1 skill + 2 GitHub repos",
+   "SUB": "video-use · HyperFrames — both free"
+  }
+ },
+ {
+  "id": "sec2",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "1",
+   "STEP": "STEP 1",
+   "TITLE": "Create your AI employee",
+   "SUB": "Claude → Code → New project → AI Editor folder"
+  }
+ },
+ {
+  "id": "sec3",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "2",
+   "STEP": "STEP 2",
+   "TITLE": "Install everything",
+   "SUB": "Paste the guide — it installs itself"
+  }
+ },
+ {
+  "id": "kw_self",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Paste the guide",
+   "MAIN": "It <span class=\"hl\">installs itself</span>"
+  }
+ },
+ {
+  "id": "sec4",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "3",
+   "STEP": "STEP 3",
+   "TITLE": "What you need",
+   "SUB": "A $20 Claude plan + free open-source tools"
+  }
+ },
+ {
+  "id": "sec5",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "4",
+   "STEP": "STEP 4",
+   "TITLE": "Feed it like an editor",
+   "SUB": "Raw footage · brand colours · a style to copy"
+  }
+ },
+ {
+  "id": "kw_raw",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "New folder",
+   "MAIN": "<span class=\"hl\">raw footage</span>"
+  }
+ },
+ {
+  "id": "kw_brand",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Also give it",
+   "MAIN": "Brand <span class=\"hl\">guidelines</span>"
+  }
+ },
+ {
+  "id": "kw_style",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Bonus",
+   "MAIN": "A style to <span class=\"hl\">copy</span>"
+  }
+ },
+ {
+  "id": "sec6",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "5",
+   "STEP": "STEP 5",
+   "TITLE": "Let it edit",
+   "SUB": "Frame by frame — then demand 9.5/10"
+  }
+ },
+ {
+  "id": "kw_95",
+  "tpl": "kw",
+  "dur": 3.0,
+  "vars": {
+   "KICK": "My #1 prompt tip",
+   "MAIN": "Rate it <span class=\"hl\">9.5/10</span>"
+  }
+ },
+ {
+  "id": "kw_fix",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "It self-checks",
+   "MAIN": "<span class=\"hl\">Fix</span> → re-check"
+  }
+ },
+ {
+  "id": "kw_sync",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Automatically",
+   "MAIN": "Audio <span class=\"hl\">synced</span>"
+  }
+ },
+ {
+  "id": "kw_meta",
+  "tpl": "kw",
+  "dur": 3.0,
+  "vars": {
+   "KICK": "Wait…",
+   "MAIN": "AI editing a video <span class=\"hl\">about AI</span>"
+  }
+ },
+ {
+  "id": "kw_proj",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "One job =",
+   "MAIN": "One <span class=\"hl\">project</span>"
+  }
+ },
+ {
+  "id": "kw_ctx",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Give it",
+   "MAIN": "Skills · assets · <span class=\"hl\">context</span>"
+  }
+ },
+ {
+  "id": "kw_80",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Personal brand",
+   "MAIN": "<span class=\"hl\">80%</span> done by AI"
+  }
+ },
+ {
+  "id": "sec7",
+  "tpl": "section",
+  "dur": 1.6,
+  "vars": {
+   "NUM": "",
+   "STEP": "MY RULE",
+   "TITLE": "10 · 80 · 10",
+   "SUB": "You think. AI executes. You add taste."
+  }
+ },
+ {
+  "id": "rule",
+  "tpl": "rule",
+  "dur": 16.6,
+  "vars": {
+   "T1": "1.0",
+   "T2": "5.8",
+   "T3": "11.7"
+  }
+ },
+ {
+  "id": "kw_solo",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "This channel",
+   "MAIN": "Single-person <span class=\"hl\">AI business</span>"
+  }
+ },
+ {
+  "id": "kw_emp",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Hire",
+   "MAIN": "<span class=\"hl\">AI employees</span>"
+  }
+ },
+ {
+  "id": "chip_wa",
+  "tpl": "chip",
+  "dur": 3.8,
+  "vars": {
+   "TOP": "300",
+   "ICON": "<svg viewBox=\"0 0 24 24\"><path fill=\"#FFFFFF\" d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.6 1.1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z\"/></svg>",
+   "T1": "WhatsApp community",
+   "T2": "Link in the <b>description</b>"
+  }
+ },
+ {
+  "id": "chip_sk",
+  "tpl": "chip",
+  "dur": 3.8,
+  "vars": {
+   "TOP": "300",
+   "ICON": "<svg viewBox=\"0 0 24 24\"><path fill=\"#FFFFFF\" d=\"M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 13c-3.3 0-7 1.6-7 4v3h14v-3c0-2.4-3.7-4-7-4zm8 0c-.5 0-1 0-1.5.1 1.5.9 2.5 2.2 2.5 3.9v3h5v-3c0-2.3-3.3-4-6-4z\"/></svg>",
+   "T1": "Skool community",
+   "T2": "Link in the <b>description</b>"
+  }
+ },
+ {
+  "id": "chip_ig",
+  "tpl": "chip",
+  "dur": 3.4,
+  "vars": {
+   "TOP": "300",
+   "ICON": "<svg viewBox=\"0 0 24 24\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"5\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2.2\"/><circle cx=\"12\" cy=\"12\" r=\"4.2\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2.2\"/><circle cx=\"17.4\" cy=\"6.6\" r=\"1.3\" fill=\"#FFFFFF\"/></svg>",
+   "T1": "This reel is on Instagram",
+   "T2": "Follow for <b>more</b>"
+  }
+ },
+ {
+  "id": "sub2",
+  "tpl": "sub",
+  "dur": 4.4,
+  "vars": {}
+ },
+ {
+  "id": "sec8",
+  "tpl": "section",
+  "dur": 1.8,
+  "vars": {
+   "NUM": "",
+   "STEP": "THE NUMBERS",
+   "TITLE": "What it actually costs",
+   "SUB": "Human editor vs Claude — my real numbers"
+  }
+ },
+ {
+  "id": "kw_ed",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "Human editor",
+   "MAIN": "₹500–1,000 <span class=\"hl\">/ reel</span>"
+  }
+ },
+ {
+  "id": "kw_glob",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "Global clients",
+   "MAIN": "$20–30 <span class=\"hl\">/ reel</span>"
+  }
+ },
+ {
+  "id": "kw_plan",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "This entire edit",
+   "MAIN": "Claude <span class=\"hl\">$20</span> plan"
+  }
+ },
+ {
+  "id": "kw_5h",
+  "tpl": "kw",
+  "dur": 2.4,
+  "vars": {
+   "KICK": "Usage limit resets",
+   "MAIN": "Every <span class=\"hl\">5 hrs</span>"
+  }
+ },
+ {
+  "id": "kw_120",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "$20 plan",
+   "MAIN": "<span class=\"hl\">120</span> limits / month"
+  }
+ },
+ {
+  "id": "kw_lim",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "One limit",
+   "MAIN": "≈ ₹<span class=\"hl\">10–30</span>"
+  }
+ },
+ {
+  "id": "kw_max",
+  "tpl": "kw",
+  "dur": 2.8,
+  "vars": {
+   "KICK": "Max plan · ₹10,000",
+   "MAIN": "~<span class=\"hl\">100 reels</span>"
+  }
+ },
+ {
+  "id": "kw_100",
+  "tpl": "kw",
+  "dur": 2.6,
+  "vars": {
+   "KICK": "Cost per reel",
+   "MAIN": "~₹<span class=\"hl\">100</span>"
+  }
+ },
+ {
+  "id": "compare",
+  "tpl": "compare",
+  "dur": 5.4,
+  "vars": {}
+ },
+ {
+  "id": "end",
+  "tpl": "end",
+  "dur": 6.0,
+  "vars": {}
+ }
+]

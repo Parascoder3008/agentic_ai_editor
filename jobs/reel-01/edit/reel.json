@@ -1,0 +1,382 @@
+{
+ "source": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\src_preview.mkv",
+ "ranges": [
+  [
+   28.88,
+   36.44
+  ],
+  [
+   50.48,
+   52.92
+  ],
+  [
+   73.92,
+   77.32
+  ],
+  [
+   88.4,
+   90.2
+  ],
+  [
+   114.8,
+   117.0
+  ],
+  [
+   118.76,
+   120.8
+  ],
+  [
+   121.52,
+   125.72
+  ],
+  [
+   127.28,
+   128.36
+  ],
+  [
+   130.08,
+   131.28
+  ],
+  [
+   140.24,
+   144.6
+  ],
+  [
+   153.16,
+   157.48
+  ],
+  [
+   159.12,
+   160.88
+  ],
+  [
+   161.68,
+   162.68
+  ],
+  [
+   175.84,
+   181.24
+  ],
+  [
+   189.68,
+   195.6
+  ],
+  [
+   212.96,
+   217.04
+  ],
+  [
+   217.04,
+   218.2
+  ],
+  [
+   218.4,
+   220.68
+  ],
+  [
+   221.28,
+   223.64
+  ],
+  [
+   224.04,
+   225.32
+  ],
+  [
+   225.68,
+   227.24
+  ],
+  [
+   231.68,
+   233.76
+  ],
+  [
+   244.92,
+   247.32
+  ],
+  [
+   248.32,
+   249.24
+  ],
+  [
+   252.28,
+   254.76
+  ],
+  [
+   254.76,
+   255.96
+  ],
+  [
+   266.12,
+   266.48
+  ],
+  [
+   268.16,
+   271.8
+  ],
+  [
+   271.96,
+   275.2
+  ],
+  [
+   282.0,
+   284.32
+  ],
+  [
+   288.84,
+   296.64
+  ],
+  [
+   298.88,
+   300.44
+  ],
+  [
+   303.88,
+   306.64
+  ]
+ ],
+ "fps": 25,
+ "crf": 18,
+ "crop_x": 313,
+ "grade": "eq=contrast=1.08:saturation=1.06:brightness=0.01,colorbalance=rs=-0.01:bs=0.04:rm=0.035:gm=-0.012:bm=-0.02,vignette=angle=0.42",
+ "overlays": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_hook\\render.webm",
+   "start": 0.0,
+   "cutout": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\cutouts\\hook_cut.webm"
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_timeline\\render.webm",
+   "start": 7.55
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_glass\\render.webm",
+   "start": 16.7
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_workflow\\render.webm",
+   "start": 26.9
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_reels\\render.webm",
+   "start": 52.7
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_doc_back\\render.webm",
+   "start": 67.72,
+   "cutout": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\cutouts\\doc_cut.webm",
+   "cutout_filter": "format=rgba,hue=s=0",
+   "front": [
+    "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_doc_front\\render.webm"
+   ]
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_cta\\render.webm",
+   "start": 74.64
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\animations\\slot_end\\render.webm",
+   "start": 81.5
+  }
+ ],
+ "bubble": {
+  "start": 26.9,
+  "end": 48.62,
+  "src_cx": 930,
+  "src_cy": 400,
+  "src_size": 560,
+  "x": 716,
+  "y": 300,
+  "d": 320
+ },
+ "captions": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\captions.ass",
+ "fontsdir": "C:\\Users\\PARAS ARORA\\AI_Editor\\fonts",
+ "fontfile": "C:\\Users\\PARAS ARORA\\AI_Editor\\fonts\\Inter-Bold.ttf",
+ "labels": {
+  "bottom_y": 1480,
+  "bottom": "ORIGINAL TAKE"
+ },
+ "sfx": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_002.mp3",
+   "at": 1.894,
+   "gain_db": -17
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-boom.wav",
+   "at": 2.016,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 2.988,
+   "gain_db": -20
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 7.458,
+   "gain_db": -20
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\timeline-rise.wav",
+   "at": 8.55,
+   "gain_db": -24
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 11.647,
+   "gain_db": -20
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 16.851,
+   "gain_db": -16
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 18.238,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\hook-whoosh.wav",
+   "at": 22.66,
+   "gain_db": -16
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\glass_shatter.wav",
+   "at": 22.992,
+   "gain_db": -15
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_002.mp3",
+   "at": 22.904,
+   "gain_db": -23
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\glass_shatter.wav",
+   "at": 24.092,
+   "gain_db": -23
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 26.788,
+   "gain_db": -20
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 30.657,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 31.887,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 33.867,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 34.497,
+   "gain_db": -21
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 37.407,
+   "gain_db": -21
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 39.097,
+   "gain_db": -21
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 40.897,
+   "gain_db": -21
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 42.817,
+   "gain_db": -21
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_001.mp3",
+   "at": 52.898,
+   "gain_db": -19
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 59.187,
+   "gain_db": -15
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 60.941,
+   "gain_db": -12
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 62.011,
+   "gain_db": -12
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\flare-hit.mp3",
+   "at": 67.716,
+   "gain_db": -26
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_002.mp3",
+   "at": 67.594,
+   "gain_db": -28
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 68.067,
+   "gain_db": -23
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 68.517,
+   "gain_db": -23
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\click.wav",
+   "at": 68.967,
+   "gain_db": -23
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 74.637,
+   "gain_db": -18
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\assets\\.media\\audio\\sfx\\sfx_004.mp3",
+   "at": 75.351,
+   "gain_db": -15
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 81.687,
+   "gain_db": -20
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 85.067,
+   "gain_db": -20
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\sfx\\card-pop.wav",
+   "at": 89.497,
+   "gain_db": -20
+  }
+ ],
+ "music": {
+  "file": "C:\\Users\\PARAS ARORA\\.claude\\skills\\video-edit\\music\\bg-feelgood-builder.mp3",
+  "gain_db": -21
+ },
+ "preset": "veryfast",
+ "out_crf": 20,
+ "out": "C:\\Users\\PARAS ARORA\\Desktop\\edit\\edit\\reel_preview.mp4"
+}
