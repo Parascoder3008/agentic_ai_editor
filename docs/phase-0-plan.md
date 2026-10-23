@@ -183,7 +183,7 @@ Each step ends with a test. "Cloud" means it can be proven here without footage;
 | 4 | `sfx`, `music`, `sound` | reel-05 re-mixed: loudness, true peak and sync match its `qa/final_qa.json` | PC |
 | 5 | `picture`, `mux`, variants; the ~20 effects from your shipped reels move into the catalog | reel-05 re-rendered; frames match the shipped reel at the QA timestamps; each ported effect renders a preview | PC |
 | 6 | `qa`, `kit`, runner `all`, render lock | **Exit test:** your next reel runs from `job.json` end to end, no copied scripts, QA passes | PC |
-| 7 | Herk Edit Kit effects imported into the catalog (MIT code only, no Nate Herk branding) | Each imported effect validates and renders a preview | Cloud + PC |
+| 7 | Herk Edit Kit cards imported into the catalog, re-coloured to our brand, every text slot required | Each imported card validates and renders a preview; no AIS colour or sample text in a render | Cloud + PC |
 
 Step 7 doesn't block the exit test: your next reel uses whatever is in the catalog by then.
 
@@ -197,6 +197,12 @@ Step 7 doesn't block the exit test: your next reel uses whatever is in the catal
   Of the 9 templates, `lf_compare`, `lf_end` and `lf_rule` are one-offs with the long-form's text written in, and
   `keyword-callout` is a hand-edited starter, so they are not in the catalog (see `effects/README.md`).
   **All 5 catalog effects are 16:9; reels need the 9:16 effects that step 5 ports.**
+- **Herk Edit Kit received (23 Oct)** in `vendor/herk-edit-kit` (see its `VENDORED.md`). MIT plus a use permission
+  that covers commercial videos. Its style library has **406 cards, all 16:9 (1920x1080)**: 101 stat, 81 overview,
+  78 section, 73 lower-third, 73 label, each with named text slots and a duration range. Both styles use Nate's AIS
+  colours (accent `#37BDF8`) and 47 cards carry AIS sample text, so cards enter the catalog re-coloured and with every
+  slot required. The AIS identity file and ad image were removed. In 9:16 reels a 16:9 card can only sit in the top strip
+  of a split layout, scaled to 56%; [Guessing] small text may not read on a phone, so step 7 tests that first.
 
 "Exactly" is testable: re-running reel-05's `captions.py` in a cloud session already reproduces the committed
 `captions.ass` and `words_master.json` byte for byte. Any difference a new module introduces is either explained and
