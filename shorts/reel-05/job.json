@@ -5,23 +5,11 @@
   "fps": 25,
   "size": [1080, 1920],
   "sources": {
-    "avatar": {
-      "path": "avatar.mp4",
-      "voice_offset": 0.24,
-      "note": "HeyGen render; voice trimmed by voice_offset so word 1 lands on frame 2"
-    },
-    "hook": {
-      "path": "hook/hook_video.mp4"
-    },
-    "woman": {
-      "path": "broll/woman_1080.mp4"
-    },
-    "salon": {
-      "path": "broll/salon_1080.mp4"
-    },
-    "sleeping": {
-      "path": "broll/sleeping_1080.mp4"
-    }
+    "avatar": {"path": "avatar.mp4", "voice_offset": 0.24, "note": "HeyGen render; voice trimmed by voice_offset so word 1 lands on frame 2"},
+    "hook": {"path": "hook/hook_video.mp4"},
+    "woman": {"path": "broll/woman_1080.mp4"},
+    "salon": {"path": "broll/salon_1080.mp4"},
+    "sleeping": {"path": "broll/sleeping_1080.mp4"}
   },
   "script": "script.txt",
   "timeline": [
@@ -39,33 +27,48 @@
   ],
   "variants": {
     "instagram": {
-      "ranges": [
-        [0.0, 53.8]
-      ],
+      "ranges": [[0.0, 53.8]],
       "freeze": 0.6,
       "mute_voice_after": 53.8,
       "note": "ends on \"comment AGENT ... DM mein\" + freeze; voice muted after the last word"
     },
     "youtube": {
-      "ranges": [
-        [0.0, 49.04],
-        [53.8, 58.0]
-      ],
+      "ranges": [[0.0, 49.04], [53.8, 58.0]],
       "freeze": 0.4,
       "note": "skips the AGENT line; ends on the WhatsApp channel line"
     }
   },
   "captions": {
-    "hide": [
-      [0.0, 5.4]
-    ]
+    "words": {
+      "from": "aligned",
+      "source": "avatar",
+      "file": "edit/fa_out.json",
+      "key": "all",
+      "display": "script.txt",
+      "strip": ":"
+    },
+    "styles": {
+      "Cap": {"size": 70, "outline_color": "#0C0E0F", "back_color": "#0000009B", "outline": 6, "shadow": 2, "margins": [150, 150], "baseline": 1000},
+      "Low": {"size": 66, "outline_color": "#000000", "back_color": "#0F0E0C73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1440}
+    },
+    "highlight": {"color": "#3AB0D8"},
+    "zones": [{"style": "Low", "layouts": ["hook", "broll", "face"], "lead": 0.05}],
+    "hide": [[0.0, 5.4]]
   },
-  "graphics": {
-    "composition": "gfx/index.html"
+  "package": {
+    "prefix": "REEL05",
+    "cover": {
+      "at": 4.6,
+      "frame": "edit/cover_src.png",
+      "shade": {"y": [1180, 1600], "amount": 150, "blur": 60, "color": "#0C0E0F"},
+      "lines": [
+        {"text": "CLAUDE ka apna", "font": "Inter-ExtraBold", "size": 64, "y": 1250, "color": "#FFFFFF"},
+        {"text": "WhatsApp NUMBER", "font": "Inter-Black", "size": 76, "y": 1335, "color": "#1A9FD1"}
+      ],
+      "shadow": [4, 6]
+    }
   },
-  "gates": {
-    "storyboard_approved": true,
-    "final_approved": true
-  },
+  "graphics": {"composition": "gfx/index.html"},
+  "gates": {"storyboard_approved": true, "final_approved": true},
   "notes": "Shipped 2026-10-22 (see VERIFY.md). Ported from edit/plan.py; SFX and music cues move here in steps 3-4."
 }

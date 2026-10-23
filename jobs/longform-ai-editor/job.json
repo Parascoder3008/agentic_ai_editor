@@ -3,26 +3,12 @@
   "title": "Maine video editor ki chhutti kar di (AI editor long-form)",
   "mode": "longform",
   "fps": 25,
-  "size": [
-    1920,
-    1080
-  ],
+  "size": [1920, 1080],
   "language": "hi",
   "sources": {
-    "wav": {
-      "path": "@footage/ai editor/ai editor.wav",
-      "note": "clean voice; the master timeline"
-    },
-    "cam": {
-      "path": "@footage/ai editor/C7443.MP4",
-      "offset": 36.165,
-      "note": "4K camera; cam time = master + offset"
-    },
-    "scr": {
-      "path": "@footage/ai editor/2026-10-06 21-27-13.mp4",
-      "offset": -234.106,
-      "note": "screen recording; scr time = master + offset"
-    }
+    "wav": {"path": "@footage/ai editor/ai editor.wav", "note": "clean voice; the master timeline"},
+    "cam": {"path": "@footage/ai editor/C7443.MP4", "offset": 36.165, "note": "4K camera; cam time = master + offset"},
+    "scr": {"path": "@footage/ai editor/2026-10-06 21-27-13.mp4", "offset": -234.106, "note": "screen recording; scr time = master + offset"}
   },
   "cut": {
     "mode": "spans",
@@ -132,14 +118,7 @@
       [1078.83, 1080.4, "'ki vo main abhi vo' before 'vo is video'"]
     ]
   },
-  "variants": {
-    "youtube": {
-      "note": "the whole video; a 42.40 s intro (intro/intro_final.mkv) plays first (step 5)"
-    }
-  },
-  "gates": {
-    "storyboard_approved": true,
-    "final_approved": true
-  },
+  "variants": {"youtube": {"note": "the whole video; a 42.40 s intro (intro/intro_final.mkv) plays first (step 5)"}},
+  "gates": {"storyboard_approved": true, "final_approved": true},
   "notes": "Shipped 2026-10-07. Ported from edit/body_edl.py. 1063.19-1068.11 (an '80% profitability' claim) is left out of keep on purpose: Constitution section 4, no income or profit claims; flagged to Paras."
 }

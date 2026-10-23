@@ -9,6 +9,8 @@ from dataclasses import dataclass
 from math import gcd
 from pathlib import Path
 
+from . import captions as captions_mod
+from . import package as package_mod
 from .effects import Catalog
 from .settings import Settings, SettingsError, load_settings
 
@@ -16,7 +18,7 @@ MODES = {"footage", "avatar", "client", "longform"}
 LAYOUTS = {"hook", "broll", "face", "split", "card", "full", "screen", "cam"}
 FPS = {24, 25, 30, 50, 60}
 TOP_KEYS = {"id", "title", "mode", "fps", "size", "language", "sources", "script", "cut", "timeline", "variants",
-            "captions", "graphics", "effects", "sfx", "music", "custom", "gates", "notes"}
+            "captions", "package", "graphics", "effects", "sfx", "music", "custom", "gates", "notes"}
 SOURCE_KEYS = {"path", "offset", "voice_offset", "note"}
 SEGMENT_KEYS = {"t", "layout", "src", "in", "speed", "zoom", "note"}
 PIECE_KEYS = {"src", "in", "out", "text", "zoom", "tag", "note"}
@@ -234,11 +236,11 @@ def validate(data, catalog: Catalog | None = None, job_dir: Path | None = None, 
 
     caps = data.get("captions")
     if caps is not None:
-        if not isinstance(caps, dict):
-            c.err("captions", "must be an object")
-        else:
-            for i, s in enumerate(caps.get("hide", [])):
-                c.span(s, f"captions.hide[{i}]")
+        c.errors += captions_mod.check(caps, data)
+        for i, s in enumerate(caps.get("hide", []) if isinstance(caps, dict) else []):
+            c.span(s, f"captions.hide[{i}]")
+    if "package" in data:
+        c.errors += package_mod.check(data["package"], data)
     gfx = data.get("graphics")
     if gfx is not None and (not isinstance(gfx, dict) or ("composition" in gfx and not isinstance(gfx["composition"], str))):
         c.err("graphics", "must be an object; \"composition\" is a path to the job's HyperFrames index.html")
@@ -300,6 +302,32 @@ class Job:
 
     def source(self, name: str, settings: Settings) -> Path:
         return settings.resolve(self.data["sources"][name]["path"], self.dir)
+
+
+def dumps(data, indent: int = 0, width: int = 116, row: int = 170) -> str:
+    """job.json as people read it: anything that fits in `width` stays on one line (a span, a source); a list or
+    object whose entries each fit in `row` gets one entry per line (segments, pieces, styles); the rest is broken up."""
+    one = json.dumps(data, ensure_ascii=False)
+    if not isinstance(data, (dict, list)) or len(one) + indent <= width or not data:
+        return one
+    pad = " " * (indent + 2)
+    if isinstance(data, list):
+        heads, vals = [""] * len(data), list(data)
+    else:
+        heads, vals = [json.dumps(k, ensure_ascii=False) + ": " for k in data], list(data.values())
+    flat = [h + json.dumps(v, ensure_ascii=False) for h, v in zip(heads, vals)]
+    if all(len(f) + indent + 2 <= row for f in flat):
+        items = [pad + f for f in flat]
+    else:
+        items = [pad + h + dumps(v, indent + 2, width, row) for h, v in zip(heads, vals)]
+    o, c = ("[", "]") if isinstance(data, list) else ("{", "}")
+    return o + "\n" + ",\n".join(items) + "\n" + " " * indent + c
+
+
+def save_job(path: str | Path, data: dict) -> Path:
+    f = job_file(path)
+    f.write_text(dumps(data) + "\n", encoding="utf-8")
+    return f
 
 
 def job_file(path: str | Path) -> Path:

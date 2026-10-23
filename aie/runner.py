@@ -5,6 +5,10 @@ inputs haven't changed is skipped; --force runs it anyway.
 
   cut      -> build/pieces.json   frame-exact pieces in output order
   verify   -> build/piece_tx.json, build/joints.txt   every kept piece transcribed alone, every joint reviewed
+  captions -> build/words.json, build/captions.ass    words on the output timeline, styled word-by-word captions
+  package  -> build/publish/<PREFIX>_<variant>.srt, cover.jpg
+
+A stage brings the stages it reads up to date first (captions runs the cut if it changed).
 """
 import hashlib
 import json
@@ -112,7 +116,87 @@ def stage_verify(job: Job, settings: Settings, force: bool = False, log=print) -
     return {"joints": len(js), "flagged": flagged}
 
 
-STAGES = {"cut": stage_cut, "verify": stage_verify}
+def _built_cut(job: Job, settings: Settings, log) -> dict | None:
+    """The cut, brought up to date first, or None for a job whose timeline is written by hand."""
+    return stage_cut(job, settings, False, log) if "cut" in job.data else None
+
+
+def _length(job: Job, built: dict | None) -> float:
+    return built["length"] if built else job.length
+
+
+def stage_captions(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    from . import captions
+    cap = job.data.get("captions") or {}
+    if "words" not in cap:
+        raise StageError('this job has no "captions.words": nothing to caption from')
+    built = _built_cut(job, settings, log)
+    w = cap["words"]
+    files = [w["file"], w.get("display")] if w["from"] == "aligned" else list(w["aligned"].values())
+    stamps = []
+    for f in filter(None, files):
+        p = job.dir / f
+        if not p.exists():
+            raise StageError(f"captions: {f} not found in {job.dir}")
+        stamps.append([f, _stamp(p)])
+    key = _key("captions", cap, job.data.get("timeline"), job.data["size"], job.data["sources"],
+               built and built["key"], stamps)
+    out = job.dir / "build" / "words.json"
+    old = _read(out)
+    if old and old.get("key") == key and (job.dir / "build" / "captions.ass").exists() and not force:
+        log(f"captions: up to date ({len(old['words'])} words)")
+        return old
+    pieces = built["pieces"] if built else None
+    try:
+        words = captions.caption_words(job.dir, job.data, pieces)
+    except ValueError as e:
+        raise StageError(f"captions: {e}") from None
+    ass = captions.build_ass(job.data, words, pieces, _length(job, built))
+    (job.dir / "build").mkdir(exist_ok=True)
+    (job.dir / "build" / "captions.ass").write_text(ass, encoding="utf-8")
+    res = {"key": key, "words": words}
+    _write(out, res)
+    n = ass.count("\nDialogue:")
+    log(f"captions: {len(words)} words, {n} caption events -> {job.dir / 'build' / 'captions.ass'}")
+    return res
+
+
+def stage_package(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    from . import captions, package
+    words = stage_captions(job, settings, False, log)["words"]
+    built = _built_cut(job, settings, lambda *_: None)
+    pkg = job.data.get("package", {})
+    prefix = pkg.get("prefix", job.id.upper().replace("-", ""))
+    pub = job.dir / "build" / "publish"
+    pub.mkdir(parents=True, exist_ok=True)
+    made, length = [], _length(job, built)
+    chunk = (job.data.get("captions") or {}).get("chunk")
+    for name, v in job.data["variants"].items():
+        f = pub / f"{prefix}_{name}.srt"
+        f.write_text(captions.build_srt(words, v.get("ranges", [[0.0, length]]), chunk), encoding="utf-8")
+        made.append(f)
+    cov = pkg.get("cover")
+    if cov:
+        if "frame" in cov:
+            frame = job.dir / cov["frame"]
+        else:
+            picture = job.dir / "build" / "picture.mp4"
+            if not picture.exists():
+                raise StageError("package: the cover needs the composed picture (run the picture stage) or a "
+                                 "\"frame\" image")
+            frame = package.grab_frame(picture, cov["at"], job.dir / "build" / "cover_src.png")
+        if not frame.exists():
+            raise StageError(f"package: cover frame {frame} not found")
+        try:
+            made.append(package.cover(frame, cov, settings.path("fonts"), pub / "cover.jpg"))
+        except ValueError as e:
+            raise StageError(f"package: {e}") from None
+    for f in made:
+        log(f"package: {f}")
+    return {"files": [str(f) for f in made]}
+
+
+STAGES = {"cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "package": stage_package}
 
 
 def run(job: Job, settings: Settings, stage: str, force: bool = False, log=print):

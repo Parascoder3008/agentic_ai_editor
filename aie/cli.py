@@ -21,6 +21,7 @@ from .settings import PATH_KEYS, REPO, SettingsError, load_settings
 
 # Output stays ASCII: a Windows console on cp1252 can't print check marks.
 OK, BAD, WARN = "OK  ", "FAIL", "WARN"
+PIP_NAMES = {"PIL": "pillow", "cv2": "opencv-python", "faster_whisper": "faster-whisper"}
 
 
 def cmd_validate(a) -> int:
@@ -55,7 +56,8 @@ def cmd_run(a) -> int:
         print(f"{BAD} {e}")
         return 1
     except ImportError as e:
-        print(f"{BAD} {a.stage} needs the Python module {e.name!r}: pip install {e.name} "
+        pip = PIP_NAMES.get(e.name, e.name)
+        print(f"{BAD} {a.stage} needs the Python module {e.name!r}: pip install {pip} "
               "(python -m aie doctor lists what's missing)")
         return 1
     return 0

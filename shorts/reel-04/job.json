@@ -5,14 +5,8 @@
   "fps": 30,
   "size": [1080, 1920],
   "sources": {
-    "a": {
-      "path": "@downloads/DJI_20261019161031_0358_D.MP4",
-      "note": "main take"
-    },
-    "b": {
-      "path": "@downloads/DJI_20261019161340_0359_D.MP4",
-      "note": "YouTube CTA take"
-    }
+    "a": {"path": "@downloads/DJI_20261019161031_0358_D.MP4", "note": "main take"},
+    "b": {"path": "@downloads/DJI_20261019161340_0359_D.MP4", "note": "YouTube CTA take"}
   },
   "cut": {
     "mode": "pieces",
@@ -30,29 +24,28 @@
     ]
   },
   "variants": {
-    "instagram": {
-      "ranges": [
-        [0.0, 56.8]
-      ],
-      "note": "shared + IG tail"
+    "instagram": {"ranges": [[0.0, 56.8]], "note": "shared + IG tail"},
+    "youtube": {"ranges": [[0.0, 39.7999], [56.8, 67.5667]], "note": "shared + YT tail"}
+  },
+  "captions": {
+    "words": {"from": "pieces", "aligned": {"a": "edit/fa_a.json", "b": "edit/fa_b.json"}},
+    "text": {
+      "replace": {"claude": "Claude", "ai": "AI", "dm": "DM", "whatsapp": "WhatsApp", "youtube": "YouTube", "chatgpt": "ChatGPT", "about": "About"},
+      "capitalize": "piece_start",
+      "keywords": [{"word": "edit", "after": "do", "as": "EDIT"}],
+      "join": [{"words": ["b", "roll"], "as": "B-roll"}]
     },
-    "youtube": {
-      "ranges": [
-        [0.0, 39.7999],
-        [56.8, 67.5667]
-      ],
-      "note": "shared + YT tail"
-    }
+    "styles": {
+      "Cap": {"size": 62, "outline_color": "#000000", "back_color": "#0C0E0F73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1450},
+      "Pip": {"size": 54, "outline_color": "#000000", "back_color": "#0C0E0F73", "border": "box", "outline": 12, "align": 1, "margins": [92, 600], "baseline": 1112},
+      "Mid": {"size": 60, "outline_color": "#000000", "back_color": "#0C0E0F73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1010}
+    },
+    "highlight": {"color": "#3AB0D8"},
+    "zones": [{"style": "Pip", "t": [8.55, 13.87]}, {"style": "Mid", "t": [31.4, 35.8]}],
+    "break_at_cuts": true
   },
-  "graphics": {
-    "composition": "gfx/index.html"
-  },
-  "custom": [
-    "edit/compose_base.py"
-  ],
-  "gates": {
-    "storyboard_approved": true,
-    "final_approved": true
-  },
+  "graphics": {"composition": "gfx/index.html"},
+  "custom": ["edit/compose_base.py"],
+  "gates": {"storyboard_approved": true, "final_approved": true},
   "notes": "Delivered 2026-10-21 (see VERIFY.md). Ported from edit/edl.py + timeline.json. compose_base.py holds the frame-by-frame effects (paper cut, text-behind, his reel sliding in) until step 5 moves them into the catalog."
 }
