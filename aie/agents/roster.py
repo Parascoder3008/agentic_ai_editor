@@ -43,8 +43,10 @@ ROLES = {
     },
     "Generator": {
         "model": SONNET, "effort": "medium", "iterations": 10, "owns": ["sources", "timeline"],
-        "brief": "You own generated shots: hooks, hero shots and B-roll. Write the prompt, keep within the credit cap, "
-                 "and check every clip for stray logos, silent mouth moves and identity drift before it is used.",
+        "brief": "You own generated shots: hooks, hero shots and B-roll. Write the prompt and make the clip with "
+                 "generate_clip (it keeps within Paras's credit cap), then add it to sources (rights generated) and the "
+                 "timeline. Prompts ask for no logos, no on-screen text and no real people; Paras checks every clip "
+                 "at the storyboard for stray logos, silent mouth moves and identity drift.",
     },
 }
 

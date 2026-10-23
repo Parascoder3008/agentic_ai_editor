@@ -157,6 +157,13 @@ class Toolbox:
             self.changes += 1
         return f"applied {len(ops)} change(s); job.json is valid"
 
+    def generate_clip(self, name: str, prompt: str, seconds: int = 5, aspect: str = "9:16", model: str = "") -> str:
+        from ..connectors import higgsfield, mcp
+        try:
+            return higgsfield.generate(self.dir, name, prompt, seconds, aspect, model or higgsfield.DEFAULT_MODEL)
+        except mcp.MCPError as e:
+            return f"not generated: {e}"
+
     def mark_note(self, note_id: int, status: str, reply: str) -> str:
         if status not in ("fixed", "wontfix"):
             return "status: fixed or wontfix"
@@ -243,4 +250,21 @@ class Toolbox:
             """
             return tb.mark_note(note_id, status, reply)
 
-        return [read_job, read_words, read_report, list_effects, get_style, patch_job, mark_note]
+        out = [read_job, read_words, read_report, list_effects, get_style, patch_job, mark_note]
+        if self.role == "Generator":
+            @beta_tool
+            def generate_clip(name: str, prompt: str, seconds: int = 5, aspect: str = "9:16", model: str = "") -> str:
+                """Generate one shot on Higgsfield into raw/gen_<name>.mp4, within Paras's credit cap.
+
+                It is priced first and refused past the cap; a failed job is reported, never retried.
+
+                Args:
+                    name: file name part, lowercase letters, digits, - or _.
+                    prompt: what the shot shows; no logos, no text, no real people unless Paras asked.
+                    seconds: length in seconds.
+                    aspect: "9:16" for reels, "16:9" for long-form.
+                    model: a Higgsfield model id; empty for the default (Seedance).
+                """
+                return tb.generate_clip(name, prompt, seconds, aspect, model)
+            out.append(generate_clip)
+        return out

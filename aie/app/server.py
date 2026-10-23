@@ -16,6 +16,7 @@ from fastapi.staticfiles import StaticFiles
 
 from .. import runner
 from ..agents import dispatch
+from ..connectors import heygen, mcp
 from ..effects import Catalog
 from ..job import JobError, dumps as job_dumps, validate
 from ..settings import REPO, load_settings
@@ -118,6 +119,7 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
                 "picture": read("build/picture.json"), "mix": read("build/mix.json"),
                 "publish": sorted(f.name for f in (d / "build/publish").glob("*")) if (d / "build/publish").exists() else [],
                 "script": (d / "script.txt").read_text(encoding="utf-8") if (d / "script.txt").exists() else None,
+                "connectors": {n: mcp.missing(n) for n in mcp.SERVERS},
                 "versions": [{**v, "files": json.loads(v["files"])} for v in
                              db.q("select * from versions where project=? order by n", (pid,))]}
 
@@ -151,7 +153,7 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
         """Small brief updates from the avatar studio (pronunciation approved, ...)."""
         f = repo / project(pid)["path"] / "brief.json"
         b = projects._read(f) or {}
-        allowed = {"pron_approved", "topic", "cta", "style", "notes", "look"}
+        allowed = {"topic", "cta", "style", "notes", "look", "voice"}
         if set(body) - allowed:
             raise HTTPException(400, f"brief fields: {sorted(allowed)}")
         b.update(body)
@@ -311,13 +313,38 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
         f.write_text(json.dumps(b, ensure_ascii=False, indent=1), encoding="utf-8")
         return look
 
+    def _heygen(pid: int) -> Path:
+        d = repo / project(pid)["path"]
+        why = mcp.missing("heygen")
+        if why:
+            raise HTTPException(409, f"HeyGen isn't connected: {why} (Connections)")
+        return d
+
+    @app.post("/api/projects/{pid}/avatar/preview")
+    def avatar_preview(pid: int):
+        """Pronunciation gate step 2: HeyGen reads the exact TTS text in the approved voice; the report flags drift."""
+        d = _heygen(pid)
+        try:
+            return heygen.preview(d, settings.path("avatar_rotation"))
+        except (heygen.AvatarError, mcp.MCPError) as e:
+            raise HTTPException(400, str(e))
+
+    @app.post("/api/projects/{pid}/avatar/approve")
+    def avatar_approve(pid: int, body: dict):
+        """Paras listened: the approval is tied to this preview's exact audio."""
+        try:
+            return heygen.approve(repo / project(pid)["path"], bool(body.get("value", True)))
+        except heygen.AvatarError as e:
+            raise HTTPException(409, str(e))
+
     @app.post("/api/projects/{pid}/avatar/render")
     def avatar_render(pid: int):
-        project(pid)
-        if not connections.get("HEYGEN_API_KEY"):
-            raise HTTPException(409, "HeyGen isn't connected (Connections): the avatar render waits for its key")
-        from ..agents import avatar
-        return avatar.render(repo, project(pid))
+        d = _heygen(pid)
+        try:
+            return heygen.start_render(d, on_done=lambda: (worker.submit(pid, "transcribe"),
+                                                           worker.submit(pid, "storyboard")))
+        except heygen.AvatarError as e:
+            raise HTTPException(409, str(e))
 
     # ---------------------------------------------------------------- library
     @app.get("/api/effects")

@@ -1,6 +1,7 @@
 {
  "note": "Paras 2026-10-10: rotate randomly through his recent HeyGen avatars for every new video. Pick with tools/pick_avatar.py (never the same look twice in a row). Add new looks here when he makes them.",
  "voice_note": "These looks default to voice de04577c98fd4a6fb23809e2bad5df96; pilot-01's approved audio used e4e5d6c1e1f34016babe18df3d18a338 (Paras Arora -- 14). Audio is passed as audioUrl after the pronunciation gate, so the look's default voice is not used.",
+ "voice_id": "e4e5d6c1e1f34016babe18df3d18a338",
  "looks": [
   {
    "id": "1307e9a7254f42fb85f1dac4a9bca13b",

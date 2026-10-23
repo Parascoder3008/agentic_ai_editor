@@ -12,9 +12,10 @@ speech = ["faster-whisper", "torch", "torchaudio"]
 qa = ["playwright"]
 app = ["fastapi", "uvicorn", "python-multipart"]
 agents = ["anthropic>=2.2"]          # the Claude API Tool Runner (beta) drives the agent team
+connectors = ["mcp>=2.3,<3"]         # HeyGen and Higgsfield over their MCP servers
 
 [tool.setuptools]
-packages = ["aie", "aie.app", "aie.agents"]
+packages = ["aie", "aie.app", "aie.agents", "aie.connectors"]
 
 [tool.setuptools.package-data]
 aie = ["hyperframes_base/*.json"]

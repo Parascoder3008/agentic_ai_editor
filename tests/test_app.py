@@ -95,8 +95,10 @@ class AppTest(unittest.TestCase):
         made = self.brief(mode="avatar", topic="Kapso", script="Claude ko ab apna WhatsApp number mil sakta hai.")
         p = self.c.get(f"/api/projects/{made['id']}").json()
         self.assertFalse(p["has_job"])
-        self.assertEqual(p["next"], "script")
+        self.assertEqual(p["next"], "avatar")                       # the script is in: next is the avatar studio
         self.assertIn("WhatsApp", p["script"])
+        bare = self.brief(mode="avatar", topic="Kapso")
+        self.assertEqual(self.c.get(f"/api/projects/{bare['id']}").json()["next"], "script")
 
     def test_runs_versions_and_gates(self):
         clip(self.repo / "take.mp4")
@@ -197,10 +199,13 @@ class AppTest(unittest.TestCase):
         self.c.put(f"/api/projects/{pid}/script", json={"file": "script_tts.txt", "text": "{Claude|क्लॉड} का अपना number"})
         self.assertIn("क्लॉड", self.c.post(f"/api/projects/{pid}/avatar/tts").json()["text"])
         self.assertEqual(self.c.put(f"/api/projects/{pid}/script", json={"file": "../x.txt", "text": "x"}).status_code, 400)
-        r = self.c.post(f"/api/projects/{pid}/avatar/render")
-        self.assertEqual(r.status_code, 409)
-        self.assertIn("HeyGen", r.json()["detail"])
-        self.assertEqual(self.c.post(f"/api/projects/{pid}/brief", json={"pron_approved": True}).json()["pron_approved"], True)
+        for step in ("preview", "render"):                       # placeholder mode: both wait for HeyGen's MCP
+            r = self.c.post(f"/api/projects/{pid}/avatar/{step}")
+            self.assertEqual(r.status_code, 409)
+            self.assertIn("HeyGen isn't connected", r.json()["detail"])
+        r = self.c.post(f"/api/projects/{pid}/avatar/approve", json={"value": True})
+        self.assertEqual(r.status_code, 409)                      # nothing heard, nothing to approve
+        self.assertIn("make a voice preview first", r.json()["detail"])
 
     def test_the_pages_and_the_library(self):
         self.assertIn('<div id="app">', self.c.get("/").text)

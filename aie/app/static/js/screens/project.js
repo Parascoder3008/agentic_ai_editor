@@ -64,7 +64,7 @@ export function NextAction({ p, reload, busy }) {
   const go = (h) => () => { location.hash = h; };
   const approve = (g) => async () => { if (await setGate(id, g, true)) { reload(); if (g === "final_approved") runStage(id, "all"); } };
   switch (p.next) {
-    case "script": return html`<${Btn} kind="primary" onClick=${go(`#/p/${id}/avatar`)}>Open the avatar studio<//>`;
+    case "script": case "avatar": case "avatar failed": return html`<${Btn} kind="primary" onClick=${go(`#/p/${id}/avatar`)}>Open the avatar studio<//>`;
     case "brief": return html`<${Btn} disabled title="Add a take to this project's raw/ folder, or make a new brief with footage">Waiting for footage<//>`;
     case "fix job.json": return html`<${Btn} kind="primary" onClick=${go(`#/p/${id}/job`)}>Fix job.json<//>`;
     case "storyboard": return html`<${Btn} kind="primary" disabled=${busy} onClick=${() => runStage(id, "storyboard")}>Build the storyboard<//>`;

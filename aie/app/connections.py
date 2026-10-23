@@ -73,7 +73,8 @@ REGISTRY = [
 ]
 TOOLS = [("ffmpeg", "Renders and audio", "exe"), ("ffprobe", "Media checks", "exe"), ("npx", "HyperFrames graphics", "exe"),
          ("faster_whisper", "Transcription and the QA words check", "module"), ("torchaudio", "Letter timings (CTC)", "module"),
-         ("cv2", "reel-04's frame-by-frame compositor", "module"), ("playwright", "Mobile QA of pages", "module")]
+         ("cv2", "reel-04's frame-by-frame compositor", "module"), ("playwright", "Mobile QA of pages", "module"),
+         ("anthropic", "The agent team (Claude API)", "module"), ("mcp", "HeyGen and Higgsfield over MCP", "module")]
 
 
 def load() -> dict:

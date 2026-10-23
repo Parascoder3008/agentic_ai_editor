@@ -75,7 +75,7 @@ export const ago = (ts) => {
 };
 
 export const NEXT = {
-  "brief": ["Waiting for footage", "warn"], "script": ["Write the script", "warn"], "fix job.json": ["Fix job.json", "err"],
+  "brief": ["Waiting for footage", "warn"], "script": ["Write the script", "warn"], "avatar": ["Avatar studio", "blue"], "avatar failed": ["Avatar render failed", "err"], "fix job.json": ["Fix job.json", "err"],
   "storyboard": ["Build the storyboard", "blue"], "approve storyboard": ["Approve the storyboard", "warn"],
   "render": ["Ready to render", "blue"], "approve final": ["Approve the final", "warn"], "fix QA": ["QA failed", "err"],
   "delivered": ["Delivered", "ok"],

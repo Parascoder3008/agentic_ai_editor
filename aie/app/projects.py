@@ -76,7 +76,11 @@ def state(repo: Path, rel: str, settings, catalog) -> dict:
     gates = (data or {}).get("gates", {}) if isinstance(data, dict) else {}
     done = {s["stage"] for s in info["stages"] if s["done"]}
     if not info["has_job"]:
-        info["next"] = "script" if info["mode"] == "avatar" else "brief"
+        if info["mode"] != "avatar":
+            info["next"] = "brief"
+        else:                                         # the avatar studio's steps, in order
+            info["next"] = ("script" if not (d / "script.txt").exists() else
+                            "avatar" if (brief.get("render") or {}).get("status") != "failed" else "avatar failed")
     elif info["errors"]:
         info["next"] = "fix job.json"
     elif "storyboard" in done and not gates.get("storyboard_approved"):
@@ -160,6 +164,41 @@ def create(repo: Path, brief: dict, uploads: list) -> str:
     return d.relative_to(repo).as_posix()
 
 
+def window(src: list, out: list) -> list:
+    """[w, h, x, y]: the centred window of a source frame with the output's shape."""
+    sw, sh = src
+    if sw / sh > out[0] / out[1]:
+        cw = int(sh * out[0] / out[1]) // 2 * 2
+        return [cw, sh, (sw - cw) // 2, 0]
+    ch = int(sw * out[1] / out[0]) // 2 * 2
+    return [sw, ch, 0, (sh - ch) // 2]
+
+
+def avatar_job(d: Path, brief: dict, video: Path):
+    """The job for a rendered avatar: one face beat over the whole render (the Story Editor plans the beats, effects
+    and B-roll from here), captions from the transcribe stage's words."""
+    size = [1920, 1080] if brief.get("aspect") == "16:9" else [1080, 1920]
+    info = probe(video)
+    fps = min(FPS, key=lambda f: abs(f - info.get("fps", 25)))
+    dur = round(int(info.get("duration", 10.0) * fps) / fps, 3)
+    look = brief.get("look") or {}
+    data = {"id": d.name, "title": brief.get("title", d.name), "mode": "avatar", "fps": fps, "size": size,
+            "language": brief.get("language", "hi"),
+            "sources": {"avatar": {"path": video.relative_to(d).as_posix(), "rights": "generated",
+                                   "note": f"HeyGen render of look {look.get('name', look.get('id', '?'))}"}},
+            "timeline": [{"t": [0.0, dur], "layout": "face", "src": "avatar", "in": 0.0,
+                          "note": "the whole render; the Story Editor plans the beats"}],
+            "layouts": {"face": {"crop": window(info.get("size", size), size)}},
+            "variants": variants(brief.get("platforms", ["instagram", "youtube"])),
+            "captions": {**{k: v for k, v in brand_captions(["avatar"]).items() if k != "break_at_cuts"},
+                         "words": {"from": "aligned", "source": "avatar", "file": "build/words_avatar.json",
+                                   "key": "words"}},
+            "mix": {"voice": "avatar"}, "package": {"prefix": d.name.upper().replace("-", "")[:16]},
+            "gates": {"storyboard_approved": False, "final_approved": False},
+            "notes": "Made by the app from the HeyGen render. Captions come from the transcribe stage."}
+    save_job(d, data)
+
+
 def _footage_job(d: Path, brief: dict, takes: list):
     size = [1920, 1080] if brief.get("aspect") == "16:9" else [1080, 1920]
     names = [chr(ord("a") + i) for i in range(len(takes))]
@@ -168,14 +207,9 @@ def _footage_job(d: Path, brief: dict, takes: list):
     dur = int(info.get("duration", 10.0) * fps) / fps
     rights = "client" if brief["mode"] == "client" else "own"
     cam = {"head": [size[0] // 2, int(size[1] * 0.4)]}
-    sw, sh = info.get("size", size)
-    if abs(sw / sh - size[0] / size[1]) > 0.01:              # a window of the take with the output's shape, centred
-        if sw / sh > size[0] / size[1]:
-            cw = int(sh * size[0] / size[1]) // 2 * 2
-            cam["crop"] = [cw, sh, (sw - cw) // 2, 0]
-        else:
-            ch = int(sw * size[1] / size[0]) // 2 * 2
-            cam["crop"] = [sw, ch, 0, (sh - ch) // 2]
+    src = info.get("size", size)
+    if abs(src[0] / src[1] - size[0] / size[1]) > 0.01:
+        cam["crop"] = window(src, size)
     data = {"id": d.name, "title": brief.get("title", d.name), "mode": brief["mode"], "fps": fps, "size": size,
             "language": brief.get("language", "hi"),
             "sources": {n: {"path": f"raw/{t.name}", "rights": rights} for n, t in zip(names, takes)},
