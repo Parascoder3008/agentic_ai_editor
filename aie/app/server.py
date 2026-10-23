@@ -8,6 +8,7 @@ import contextlib
 import json
 import shutil
 import tempfile
+import threading
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
@@ -296,7 +297,7 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
         try:
             return publisher.write(d, json.loads((d / "job.json").read_text(encoding="utf-8")),
                                    dispatch.make_client(key))
-        except publisher.PublishError as e:
+        except (publisher.PublishError, RuntimeError) as e:
             raise HTTPException(409, str(e))
 
     @app.post("/api/projects/{pid}/nle/resolve")
@@ -383,10 +384,48 @@ def create_app(repo: Path = REPO, data_dir: Path | None = None, settings=None, w
                              "preview": f"/fx/{n}/preview.jpg" if (fx.dir / "preview.jpg").exists() else None}
                             for n, fx in sorted(cat.effects.items())], "errors": cat.errors}
 
+    learning = {}                                     # style name -> the Style Learner's latest word on it
+
     @app.get("/api/styles")
     def styles():
         from ..styles import library
-        return library(settings)
+        return {**library(settings), "learning": learning}
+
+    @app.post("/api/styles/learn")
+    def learn_style(body: dict):
+        """The Style Learner, on a thread: Apify scrapes the profiles, the pack waits for Paras's approval."""
+        from ..agents import learner
+        name = (body.get("name") or "").strip()
+        if not connections.get("APIFY_TOKEN"):
+            raise HTTPException(409, "the Style Learner needs the Apify token (Connections) to read the profiles")
+        key = connections.get("ANTHROPIC_API_KEY")
+        if not key:
+            raise HTTPException(409, "the Style Learner needs the Claude API key (Connections)")
+        if (learning.get(name) or {}).get("status") == "running":
+            return {"message": f"already learning {name}"}
+        try:
+            api = dispatch.make_client(key)
+        except RuntimeError as e:
+            raise HTTPException(409, str(e))
+
+        def go():
+            try:
+                pack = learner.learn(name, body.get("handles") or [], body.get("use", "any"), settings.path("styles"),
+                                     settings, api, log=lambda m: learning.update({name: {"status": "running", "message": m}}))
+                learning[name] = {"status": "done", "message": f"learned from {pack['learned_from']}: approve it to use it"}
+            except Exception as e:                    # the library shows what broke
+                learning[name] = {"status": "failed", "message": f"{type(e).__name__}: {e}"}
+        learning[name] = {"status": "running", "message": "starting"}
+        threading.Thread(target=go, daemon=True, name=f"aie-learn-{name}").start()
+        return {"message": f"learning {name} from {', '.join(body.get('handles') or [])}"}
+
+    @app.post("/api/styles/{name}/approve")
+    def approve_style(name: str, body: dict):
+        from ..agents import learner
+        try:
+            return learner.approve(settings.path("styles"), name, bool(body.get("value", True)))
+        except learner.LearnError as e:
+            raise HTTPException(409, str(e))
 
     @app.get("/api/avatars")
     def avatars():

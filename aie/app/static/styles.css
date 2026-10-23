@@ -182,6 +182,7 @@ dl.kv ul { margin: 0; padding-left: 18px; }
 .note.fixed { opacity: 0.6; }
 .note .t { font: 700 12px var(--mono); color: var(--blue-2); }
 .notes { display: grid; gap: 8px; max-height: 52vh; overflow: auto; padding-right: 2px; }
+.learn { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px 14px; align-items: end; }
 .dispatch { padding: 12px 14px; border-radius: 14px; border: 1px solid var(--line); background: #0E1316; }
 .dispatch-head { all: unset; box-sizing: border-box; width: 100%; display: flex; justify-content: space-between; align-items: center;
   gap: 10px; flex-wrap: wrap; cursor: pointer; }

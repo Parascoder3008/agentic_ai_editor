@@ -118,7 +118,15 @@ class Toolbox:
 
     def get_style(self, name: str) -> str:
         f = (self.settings.path("styles") or self.dir) / name / "style.json"
-        return f.read_text(encoding="utf-8") if f.exists() else f"no style {name!r}"
+        if not f.exists():
+            return f"no style {name!r}"
+        text = f.read_text(encoding="utf-8")
+        pack = json.loads(text)
+        if pack.get("status") == "learned" and not pack.get("approved"):
+            return f"{name} is learned but Paras hasn't approved it yet: don't use it"
+        if pack.get("status") == "to learn":
+            return f"{name} isn't learned yet: only its name and look exist"
+        return text
 
     # ---------------------------------------------------------------- writes
     def patch_job(self, ops: list, why: str) -> str:

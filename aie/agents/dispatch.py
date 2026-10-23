@@ -97,7 +97,11 @@ def _start(repo, db, worker, p, kind):
     if busy(db, p["id"]):
         return {"message": "the agents are already working on this project", "busy": True}
     from ..app import connections
-    return Dispatch(repo, db, worker, p, kind, make_client(connections.get("ANTHROPIC_API_KEY")))
+    try:
+        api = make_client(connections.get("ANTHROPIC_API_KEY"))
+    except RuntimeError as e:
+        return {"message": str(e)}
+    return Dispatch(repo, db, worker, p, kind, api)
 
 
 class Dispatch:

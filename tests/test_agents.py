@@ -392,6 +392,18 @@ class DispatchTest(unittest.TestCase):
         recover(db)                                                          # an app restart ends what it cut off
         self.assertFalse(self.c.get(f"/api/projects/{self.pid}/agents").json()["running"])
 
+    def test_missing_package_says_what_to_install(self):
+        from aie.agents import dispatch, run
+        self.note("caption typo", t=1.0)
+        with mock.patch.dict(os.environ, {"ANTHROPIC_API_KEY": "sk-ant-test"}), \
+                mock.patch.object(dispatch, "make_client", run.client), mock.patch.dict("sys.modules", {"anthropic": None}):
+            r = self.c.post(f"/api/projects/{self.pid}/notes/send").json()
+            self.assertIn('pip install "anthropic>=2.2"', r["message"])
+            r = self.c.post(f"/api/projects/{self.pid}/publish/copy")
+            self.assertEqual(r.status_code, 409)
+            self.assertIn("pip install", r.json()["detail"])
+        self.assertFalse(self.c.get(f"/api/projects/{self.pid}/agents").json()["dispatches"])
+
     def test_plan_from_the_transcript(self):
         (self.dir / "build").mkdir(exist_ok=True)
         (self.dir / "build/words_presenter.json").write_text(json.dumps({"words": [

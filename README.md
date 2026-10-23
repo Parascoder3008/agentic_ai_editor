@@ -8,6 +8,38 @@ https://claude.ai/artifact/Ct4Tz6T4pCBCEaXaid5JAR
 Renders run on the PC only. This repo holds code and docs; footage, renders, music and model weights stay off git
 (see `.gitignore`).
 
+## Start here: the app
+
+```powershell
+pip install -e ".[app,agents,connectors,nle,media,speech]"   # once; speech = faster-whisper and torch (transcribe, QA words)
+python -m aie app                                      # opens http://127.0.0.1:8765
+```
+
+The app runs the whole tool on this PC: **Projects** (every job and its next step), **New brief** (footage, avatar or
+client), each project's **Overview** (pipeline, run logs, the agent team, QA, versions), **Storyboard** (approve it
+before any picture renders), **Review** (frame-accurate player with safe-zone guides; a note at a timecode goes to the
+agent that owns the fix), **Deliveries** (the IG and YT cuts, SRTs, cover, post copy, Drive copy, the Resolve /
+Premiere timeline), **Avatar studio** (script, TTS script, pronunciation preview you approve by ear, look, HeyGen
+render), **Style library** (style packs and the effects catalog; the Style Learner) and **Connections**.
+
+**Try it with no keys:** Projects → "Demo project" makes a reel from generated stand-in footage; build its storyboard,
+approve it, render, review, approve the final. Everything that needs a key says which one and waits.
+
+**Connections** holds every key, MCP server and app path. Values are kept only in `secrets.local.json` (git-ignored;
+the safety hook won't read it) and the app shows only their last four characters.
+
+| Needs | For |
+|---|---|
+| Claude API key | the agent team (notes and failed QA checks to the lane that owns them, "Plan with agents"), the post copy, the Style Learner |
+| HeyGen MCP server URL + token | avatar previews and renders |
+| Higgsfield MCP server URL + token, and a credit cap per reel | generated shots (the Generator agent); nothing is generated without a cap |
+| Apify token | the Style Learner (about $0.25 a learn) |
+| Drive folder, Resolve path | Drive copy after both approvals and a passing QA; importing the timeline into Resolve |
+
+The agent team spends at most `agent_budget_usd` (aie.local.json, default 3.0) per dispatch, then stops and asks.
+Agents only ever change job.json, only the parts their role owns, never the approval gates, and a change that reads as
+an income or return claim is blocked and comes to you as a note. Nothing is ever posted.
+
 ## What is in this repo
 
 | Path | What it is |
@@ -17,6 +49,10 @@ Renders run on the PC only. This repo holds code and docs; footage, renders, mus
 | `.claude/` | Safety hook from the AI OS: blocks destructive commands, secret printing and un-approved sends; denies reads of `.env` and keys |
 | `.gitignore` | Keeps footage, renders, music, model weights and `.env` out of git |
 | `aie/` | The pipeline package: `job.json` validator, effects catalog, machine settings, and the stages from cut to delivery |
+| `aie/app/` | The local web app (FastAPI + SQLite, Preact UI in `static/`) and its render worker |
+| `aie/agents/` | The agent team: roster, guarded tools, the Tool Runner loop, the dispatcher (Producer and QA routing), the Publisher, the Style Learner |
+| `aie/connectors/` | HeyGen and Higgsfield over their MCP servers, and Apify, driven by code with every spend checked first |
+| `styles/` | The style packs (7 built, 18 to learn); `tools/style_preview.py` makes the built packs' previews |
 | `effects/` | The effects catalog, one folder per effect with a preview (see `effects/README.md`); `tools/effect_preview.py` renders and checks them |
 | `docs/phase-0-plan.md` | How Phase 0 is being built, step by step, and its progress |
 | `tools/`, `templates/`, `fonts/` | Shared scripts, HyperFrames templates and the Inter fonts |
@@ -43,6 +79,7 @@ python -m aie run shorts/reel-05 storyboard  # every beat: words, layout, a fram
 python -m aie run shorts/reel-05 picture     # footage by layout + graphics + effects + captions -> build/picture.mp4
 python -m aie run shorts/reel-05 deliver     # every variant, muxed with its audio -> build/publish/REEL05_<variant>.mp4
 python -m aie run shorts/reel-05 all         # everything through the 9.5 QA audit -> build/qa/qa.json + contact sheets
+python -m aie run shorts/reel-05 otio        # the edit as a timeline -> build/nle/<id>.otio (Resolve) and .xml (Premiere)
 python -m unittest discover -s tests         # runs the tests
 ```
 

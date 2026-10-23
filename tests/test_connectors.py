@@ -285,6 +285,92 @@ class HiggsfieldTest(unittest.TestCase):
 
 
 @unittest.skipUnless(HAVE and shutil.which("ffmpeg"), "needs mcp, anthropic, fastapi, httpx, python-multipart, ffmpeg")
+class StyleLearnerTest(unittest.TestCase):
+    """Reels with two hard cuts each, a stand-in model whose first draft breaks the rules (one repair turn)."""
+
+    def setUp(self):
+        from types import SimpleNamespace
+        from aie.settings import load_settings
+        self.tmp = Path(tempfile.mkdtemp())
+        (self.tmp / "srv").mkdir()
+        ff("-f", "lavfi", "-i", "color=c=0x11324C:s=360x640:r=25:d=1", "-f", "lavfi", "-i", "color=c=0xFFFFFF:s=360x640:r=25:d=1",
+           "-f", "lavfi", "-i", "color=c=0x0C0E0F:s=360x640:r=25:d=1", "-filter_complex", "[0][1][2]concat=n=3:v=1",
+           "-pix_fmt", "yuv420p", self.tmp / "srv/reel.mp4")
+        self.files = Files(self.tmp / "srv")
+        self.settings = load_settings(self.tmp / "none.json")
+        self.root = self.tmp / "styles"
+        self.root.mkdir()
+        self.sent = []
+        good = {"title": "Pink pop", "look": "Pink keyword pops on cream", "best_for": "explainers",
+                "type": {"display": "Inter 900"}, "palette": ["#F06A8C", "#F4EFE8", "#1A9FD1"],
+                "captions": {"styles": {"Cap": {"size": 64, "outline_color": "#000000", "back_color": "#00000080",
+                                                "outline": 8, "margins": [150, 150], "baseline": 1400}},
+                             "highlight": {"color": "#F06A8C"}},
+                "layouts": ["camera"], "effects": ["reel-hook"], "sfx": ["pop"], "pacing": {"max_static_s": 2.5},
+                "storyboard": "hook -> point -> CTA", "notes": "copy the pops, not their logo"}
+        drafts = [{**good, "effects": ["glitter-bomb"], "status": "built", "use": "own"}, good]
+
+        def create(**kw):
+            self.sent.append(kw)
+            return SimpleNamespace(stop_reason="end_turn", usage={"input_tokens": 9000, "output_tokens": 800},
+                                   content=[SimpleNamespace(type="text", text="Here it is:\n" + json.dumps(drafts.pop(0)))])
+        self.api = SimpleNamespace(messages=SimpleNamespace(create=create))
+        self.reels = [{"url": f"https://www.instagram.com/reel/{i}/", "owner": "pinkpop", "plays": p, "seconds": 3.0,
+                       "caption": f"reel {i}", "video": self.files.url("reel.mp4"), "cover": None, "posted": None}
+                      for i, p in enumerate([500, 90000, 1200, 70000, 30, 8000, 40000, 2])]
+
+    def tearDown(self):
+        self.files.shutdown()
+        shutil.rmtree(self.tmp, ignore_errors=True)
+
+    def test_learn_measure_repair_approve(self):
+        from aie.agents import learner
+        from aie.agents.tools import Toolbox
+        pack = learner.learn("pink-pop", ["@pinkpop"], "any", self.root, self.settings, self.api,
+                             scrape=lambda handles: self.reels, log=lambda *_: None)
+        saved = json.loads((self.root / "pink-pop/style.json").read_text())
+        self.assertEqual((saved["status"], saved["use"], saved["approved"]), ("learned", "any", False))
+        self.assertEqual((saved["pacing"]["max_static_s"], saved["pacing"]["avg_shot_s"]), (2.5, 1.0))  # 2 cuts in 3 s
+        self.assertEqual(saved["references"], [f"https://www.instagram.com/reel/{i}/" for i in (1, 3, 6, 5, 2, 0)])
+        self.assertTrue((self.root / "pink-pop/preview.jpg").exists())
+        self.assertEqual(len(self.sent), 2)                                         # one repair turn
+        self.assertIn("glitter-bomb", self.sent[1]["messages"][-1]["content"])
+        first = self.sent[0]["messages"][0]["content"]
+        self.assertEqual(sum(b["type"] == "image" for b in first), 6 * 4)           # 4 frames from each top reel
+        self.assertIn("90000 plays", first[0]["text"])
+        self.assertGreater(pack["cost"], 0)
+        self.assertEqual(sorted(p.name for p in (self.root / "pink-pop").iterdir()), ["preview.jpg", "style.json"])
+
+        settings = mock.Mock(path=lambda k: self.root if k == "styles" else self.settings.path(k))
+        box = Toolbox("Story Editor", self.tmp, settings)
+        self.assertIn("hasn't approved it yet", box.get_style("pink-pop"))
+        learner.approve(self.root, "pink-pop")
+        self.assertIn("Pink keyword pops", box.get_style("pink-pop"))
+        from aie.styles import load
+        self.assertEqual(load(self.root)[1], [])
+
+    def test_refusals(self):
+        from aie.agents import learner
+        run = lambda name="x-y", handles=("@a",), use="any": learner.learn(
+            name, list(handles), use, self.root, self.settings, self.api, scrape=lambda h: self.reels[:1], log=lambda *_: None)
+        with self.assertRaisesRegex(learner.LearnError, "lowercase"):
+            run(name="Bad Name")
+        with self.assertRaisesRegex(learner.LearnError, "own reels keep AI-OS Blue"):
+            run(use="own")
+        with self.assertRaisesRegex(learner.LearnError, "1-3 Instagram profiles"):
+            run(handles=())
+        with self.assertRaisesRegex(learner.LearnError, "only 1 reels"):
+            run()
+        with self.assertRaisesRegex(learner.LearnError, "no style"):
+            learner.approve(self.root, "..")
+        (self.root / "built-one").mkdir()
+        (self.root / "built-one/style.json").write_text(json.dumps({"status": "built"}))
+        with self.assertRaisesRegex(learner.LearnError, "built pack"):
+            run(name="built-one")
+        self.assertEqual(self.sent, [])
+
+
+@unittest.skipUnless(HAVE and shutil.which("ffmpeg"), "needs mcp, anthropic, fastapi, httpx, python-multipart, ffmpeg")
 class AvatarRoutesTest(HeyGenTest):
     """The same flow through the app: preview, approve, render, then transcribe and the storyboard are queued."""
 

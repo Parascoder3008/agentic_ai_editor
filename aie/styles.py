@@ -2,7 +2,8 @@
 hits, pacing, storyboard shape). styles/<name>/style.json; the library screen lists them.
 
 status: "built" (made from shipped reels; its components exist), "learned" (made by the Style Learner from a profile)
-or "to learn" (named in the plan; waits for reference profiles and the Style Learner).
+or "to learn" (named in the plan; waits for reference profiles and the Style Learner). A learned pack carries
+"approved": false until Paras approves it once; the agents don't use it before that.
 use: "own" (Paras's brand: AI-OS Blue only), "client" (a client's look; never in Paras's own reels), "any".
 "captions" is a job.json captions block the Story Editor can drop into a job as is.
 """
@@ -15,7 +16,7 @@ STATUS = {"built", "learned", "to learn"}
 USE = {"own", "client", "any"}
 KEYS = {"name", "title", "status", "use", "look", "best_for", "learned_from", "jobs", "type", "palette", "captions",
         "layouts", "effects", "components", "sfx", "hits", "pacing", "storyboard", "references", "notes", "preview",
-        "version"}
+        "version", "approved"}
 
 
 def check(d: Path, data) -> list:

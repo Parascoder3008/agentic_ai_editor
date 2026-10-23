@@ -31,7 +31,10 @@ class Budget:
 
 
 def client(api_key: str):
-    import anthropic
+    try:
+        import anthropic
+    except ImportError:
+        raise RuntimeError('the agents need the Claude API package: pip install "anthropic>=2.2"') from None
     return anthropic.Anthropic(api_key=api_key, max_retries=3)
 
 
