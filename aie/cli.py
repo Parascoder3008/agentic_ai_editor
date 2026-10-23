@@ -8,6 +8,7 @@
   diag ctc JOB A:B...    letter timings in source windows A-B (keeps restarts Whisper drops); --src picks a source
   effects                list the effects catalog; --kind overlay|picture|transition|caption|sound, --format 9:16
   doctor                 check this machine: ffmpeg, Node, Python libraries, aie.local.json paths, fonts, catalog
+  app                    the local web app on http://127.0.0.1:8765 (--port, --no-browser)
 """
 import argparse
 import importlib.util
@@ -166,6 +167,12 @@ def main(argv=None) -> int:
     e.add_argument("--kind", choices=sorted(KINDS))
     e.add_argument("--format", choices=["16:9", "9:16", "1:1"])
     sub.add_parser("doctor", help="check this machine's setup")
+    sub.add_parser("app", help="the local web app (http://127.0.0.1:8765)", add_help=False)
+    if argv is None:
+        argv = sys.argv[1:]
+    if argv[:1] == ["app"]:
+        from .app.__main__ import main as app_main
+        return app_main(argv[1:])
     a = ap.parse_args(argv)
     return {"validate": cmd_validate, "run": cmd_run, "diag": cmd_diag, "effects": cmd_effects,
             "doctor": cmd_doctor}[a.cmd](a)

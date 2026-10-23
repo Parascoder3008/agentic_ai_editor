@@ -3,6 +3,7 @@
 Outputs go to <job>/build/ (git-ignored). Each output records a key made from the stage's inputs, so a stage whose
 inputs haven't changed is skipped; --force runs it anyway.
 
+  transcribe -> build/words_<source>.json   every spoken word with its time (Whisper, on the PC)
   cut      -> build/pieces.json   frame-exact pieces in output order
   verify   -> build/piece_tx.json, build/joints.txt   every kept piece transcribed alone, every joint reviewed
   captions -> build/words.json, build/captions.ass    words on the output timeline, styled word-by-word captions
@@ -69,6 +70,57 @@ def _source(job: Job, settings: Settings, name: str):
     if not p.exists():
         raise StageError(f"source {name!r} not found: {p} (check \"sources\" in job.json and \"roots\" in aie.local.json)")
     return p
+
+
+HINGLISH_PROMPT = ("Umm, toh basically, matlab, haan, achha, uh, dekho, you know, "
+                   "toh main aapko bataata hoon, so yeh AI tool hai, na, theek hai.")
+FILLER_PROMPT = "Umm, uh, so, like, you know, I mean, hmm. Okay, uh, so basically, um."
+
+
+def _spoken_sources(job: Job) -> list:
+    d = job.data
+    cut = d.get("cut") or {}
+    if cut.get("mode") == "spans":
+        return [cut["source"]]
+    if cut.get("mode") == "pieces":
+        return sorted({p["src"] for p in cut["pieces"]})
+    return [n for n, s in d["sources"].items() if "voice_offset" in s] or list(d["sources"])[:1]
+
+
+def stage_transcribe(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
+    """build/words_<source>.json: every spoken word with its time (Whisper, word timestamps, fillers kept so they can
+    be cut). Hinglish jobs come out in Roman script, as tools/transcribe_local.py --hinglish wrote them. A first pass:
+    names are fixed from qa.words and the Proofreader corrects the rest before captions are final."""
+    lang, model = job.data.get("language", "hi"), settings.data["whisper_model"]
+    names = job.data.get("qa", {}).get("words", [])
+    prompt = (HINGLISH_PROMPT if lang == "hi" else FILLER_PROMPT) + (" " + ", ".join(names) + "." if names else "")
+    made, ran = {}, False
+    for name in _spoken_sources(job):
+        src = _source(job, settings, name)
+        out = job.dir / "build" / f"words_{name}.json"
+        key = _key("transcribe", model, lang, prompt, _stamp(src))
+        old = _read(out)
+        if old and old.get("key") == key and not force:
+            made[name] = old
+            continue
+        try:
+            from faster_whisper import WhisperModel
+        except ImportError:
+            raise StageError("transcribe needs faster-whisper and its model (pip install faster-whisper; the model "
+                             "downloads from huggingface.co on first use). Run it on the PC.") from None
+        log(f"transcribe: {src.name} with {model} ...")
+        m = WhisperModel(model, device="cpu", compute_type="int8")
+        segs, info = m.transcribe(str(src), language="en" if lang == "hi" else lang, word_timestamps=True,
+                                  vad_filter=False, condition_on_previous_text=False, initial_prompt=prompt, beam_size=5)
+        words = [{"text": w.word.strip(), "start": round(w.start, 3), "end": round(w.end, 3), "p": round(w.probability, 3)}
+                 for sg in segs for w in (sg.words or []) if w.word.strip()]
+        made[name] = {"key": key, "language": info.language, "words": words}
+        _write(out, made[name])
+        ran = True
+        log(f"transcribe: {len(words)} words -> {out}")
+    if not ran:
+        log("transcribe: up to date (" + ", ".join(f"{n} {len(v['words'])} words" for n, v in made.items()) + ")")
+    return made
 
 
 def stage_cut(job: Job, settings: Settings, force: bool = False, log=print) -> dict:
@@ -343,6 +395,7 @@ def stage_mix(job: Job, settings: Settings, force: bool = False, log=print) -> d
 # ---------------------------------------------------------------- picture
 
 LOCK_FILE = Path(tempfile.gettempdir()) / "aie-render.lock"
+GSAP_CDN = "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
 _lock = {"depth": 0, "file": None}
 
 
@@ -487,6 +540,9 @@ def stage_effects(job: Job, settings: Settings, force: bool = False, log=print) 
         for f in ("package.json", "hyperframes.json", "meta.json"):
             if not (d / f).exists():
                 shutil.copy(base / f, d / f)
+        if settings.data.get("gsap"):                   # offline: GSAP from a local copy instead of the CDN
+            shutil.copy(settings.path("gsap"), d / "gsap.min.js")
+            html = html.replace(GSAP_CDN, "gsap.min.js")
         (d / "index.html").write_text(html, encoding="utf-8")
         copies = {}         # shared files (reel.css) and file parameters (logos, from the job folder)
         for name, src in fx.files(p.get("params", {}), settings.path("templates")).items():
@@ -771,8 +827,11 @@ def stage_qa(job: Job, settings: Settings, force: bool = False, log=print) -> di
 
     canon = list((cap.get("text") or {}).get("replace", {}).values()) + d.get("qa", {}).get("words", [])
     sp = qa.spelling(words, canon)
-    C["spelling"] = qa.check("FAIL" if sp else "OK", "spelling", f"{len(sp)} finding(s)" if sp else
-                             f"{len(words)} caption words against {len(set(canon))} names", findings=sp)
+    C["spelling"] = qa.check("FAIL" if sp else "OK", "spelling", "; ".join(
+        f"'{f['found']}' at {f['at']:.2f} s should be {f['want']}" for f in sp[:4]) + (f" (+{len(sp) - 4} more)" if len(sp) > 4 else "")
+        if sp else
+                             f"{len(words)} caption words against {len(set(canon))} name{'' if len(set(canon)) == 1 else 's'} on the "
+                             "word list", findings=sp)
 
     zone = []
     if size[1] > size[0]:
@@ -793,7 +852,8 @@ def stage_qa(job: Job, settings: Settings, force: bool = False, log=print) -> di
     off = [r for r in ow if r["off"] is None or not -0.15 <= r["off"] <= 0.2]
     C["on_word"] = qa.check("FAIL" if off else "OK", "on_word",
                             "; ".join(f"effects[{r['effect']}] '{r['word']}' " + ("not heard within 2 s" if r["off"] is None
-                                      else f"{r['off']:+.2f} s off") for r in off) or f"{len(ow)} effect(s) placed on words",
+                                      else f"{r['off']:+.2f} s off") for r in off) or (f"{len(ow)} effect{'' if len(ow) == 1 else 's'} on {'its' if len(ow) == 1 else 'their'} word" if ow
+                                      else "no effect is tied to a word"),
                             rows=ow)
 
     if d["mode"] == "client":
@@ -843,7 +903,7 @@ def stage_qa(job: Job, settings: Settings, force: bool = False, log=print) -> di
     return rep
 
 
-STAGES = {"cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "storyboard": stage_storyboard,
+STAGES = {"transcribe": stage_transcribe, "cut": stage_cut, "verify": stage_verify, "captions": stage_captions, "storyboard": stage_storyboard,
           "package": stage_package,
           "voice": stage_voice, "sfx": stage_sfx, "music": stage_music, "mix": stage_mix,
           "graphics": stage_graphics, "effects": stage_effects, "base": stage_base, "picture": stage_picture,

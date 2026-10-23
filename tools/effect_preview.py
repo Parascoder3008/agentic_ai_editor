@@ -3,7 +3,8 @@
 Usage: python tools/effect_preview.py [name ...] [--out DIR] [--gsap FILE]
   name        effects to render (default: every hyperframes-template effect with an "example")
   --out DIR   where the render folders go (default: a temporary folder)
-  --gsap FILE serve GSAP from a local copy, for a browser that can't reach cdn.jsdelivr.net (a cloud session)
+  --gsap FILE serve GSAP from a local copy, for a browser that can't reach cdn.jsdelivr.net (a cloud session);
+              the "gsap" machine setting does the same
 
 Writes effects/<name>/preview.jpg: frames at 20%, 50% and 85% of the effect, over a grey stand-in for footage.
 Checks, per frame: something is drawn; stage effects stay in the top half (y < 966); full-frame effects keep their
@@ -99,8 +100,9 @@ def main():
         for f in ("package.json", "hyperframes.json", "meta.json"):
             shutil.copy(s.path("hyperframes_base") / f, d / f)
         html = fx.html(given, dur, s.path("templates"))
-        if a.gsap:
-            shutil.copy(a.gsap, d / "gsap.min.js")
+        gsap = a.gsap or (s.path("gsap") if s.data.get("gsap") else None)
+        if gsap:
+            shutil.copy(gsap, d / "gsap.min.js")
             html = html.replace(CDN, "gsap.min.js")
         (d / "index.html").write_text(html, encoding="utf-8")
         for n, src in fx.files(given, s.path("templates")).items():

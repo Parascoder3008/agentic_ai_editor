@@ -1,0 +1,17 @@
+{
+  "name": "paper-cut",
+  "title": "Paper cut",
+  "status": "built",
+  "version": 1,
+  "use": "any",
+  "look": "Torn paper sheets, white-border cut-outs of the speaker, 10 fps stop-motion",
+  "best_for": "Playful explainers",
+  "learned_from": "reel-04 (2026-10-21)",
+  "jobs": ["shorts/reel-04"],
+  "type": {"display": "Inter 900"},
+  "palette": ["#F4EFE8", "#1D1B33", "#F06A8C"],
+  "layouts": ["camera"],
+  "components": "shorts/reel-04/edit/compose_base.py (cutout_layers, draw_cutout; matte via hyperframes remove-background)",
+  "sfx": ["rustle", "pop", "thud"],
+  "pacing": {"avg_shot_s": 3.0, "max_static_s": 3}
+}

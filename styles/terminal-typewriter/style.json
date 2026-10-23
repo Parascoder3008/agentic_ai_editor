@@ -1,0 +1,10 @@
+{
+  "name": "terminal-typewriter",
+  "title": "Terminal / typewriter",
+  "status": "to learn",
+  "use": "any",
+  "look": "Mono type-on text, cursor blinks, green-on-black",
+  "best_for": "Code, AI agents",
+  "references": [],
+  "notes": "Waits for 2-3 reference profiles (Paras names them, or the Style Learner proposes two for a yes/no)."
+}

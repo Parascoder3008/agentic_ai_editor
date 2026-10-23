@@ -1,0 +1,26 @@
+{
+  "name": "staircase-world",
+  "title": "Staircase world",
+  "status": "built",
+  "version": 1,
+  "use": "any",
+  "look": "A persistent world the camera climbs, level by level, then grows to full frame for the payoff",
+  "best_for": "Frameworks, levels, roadmaps",
+  "learned_from": "reel-03 (shipped 2026-10-19)",
+  "jobs": ["shorts/reel-03"],
+  "type": {"display": "Inter 900", "body": "Inter 800"},
+  "palette": ["#0C0E0F", "#1A9FD1", "#3AB0D8", "#11324C", "#FFFFFF"],
+  "captions": {
+    "styles": {
+      "Cap": {"size": 70, "outline_color": "#0C0E0F", "back_color": "#0000009B", "outline": 6, "shadow": 2, "margins": [150, 150], "baseline": 1000},
+      "Low": {"size": 66, "outline_color": "#000000", "back_color": "#0F0E0C73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1440}
+    },
+    "highlight": {"color": "#3AB0D8"},
+    "zones": [{"style": "Low", "layouts": ["hook", "broll", "face"], "lead": 0.05}]
+  },
+  "layouts": ["hook", "split", "full"],
+  "components": "shorts/reel-03/gfx/index.html (#world camera, .step levels)",
+  "sfx": ["whoosh", "riser", "chime"],
+  "pacing": {"avg_shot_s": 4.0, "max_static_s": 2.2},
+  "storyboard": "hook -> level 1..4 (camera climbs) -> payoff full frame -> free guide -> CTA"
+}

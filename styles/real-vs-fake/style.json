@@ -1,0 +1,16 @@
+{
+  "name": "real-vs-fake",
+  "title": "Real vs Fake split",
+  "status": "built",
+  "version": 1,
+  "use": "any",
+  "look": "Two-panel compare, REAL / FAKE chips, a glitch flip between them",
+  "best_for": "AI vs real comparisons",
+  "learned_from": "a shipped reel whose job isn't in this repo yet",
+  "type": {"display": "Inter 900"},
+  "palette": ["#0C0E0F", "#3DDC97", "#F85149", "#FFFFFF"],
+  "layouts": ["split"],
+  "sfx": ["glitch", "impact"],
+  "pacing": {"avg_shot_s": 2.5, "max_static_s": 3},
+  "notes": "Its components need importing from the job that shipped it (push that job's folder to the repo)."
+}

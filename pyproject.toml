@@ -10,9 +10,12 @@ dependencies = ["numpy"]
 media = ["scipy", "soundfile", "pillow", "opencv-python"]
 speech = ["faster-whisper", "torch", "torchaudio"]
 qa = ["playwright"]
+app = ["fastapi", "uvicorn", "python-multipart"]
+agents = ["claude-agent-sdk"]
 
 [tool.setuptools]
-packages = ["aie"]
+packages = ["aie", "aie.app", "aie.agents"]
 
 [tool.setuptools.package-data]
 aie = ["hyperframes_base/*.json"]
+"aie.app" = ["static/*.html", "static/*.css", "static/js/*.js", "static/js/screens/*.js", "static/vendor/*"]

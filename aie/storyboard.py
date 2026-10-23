@@ -83,7 +83,9 @@ def boxes(data: dict, beat: dict, catalog) -> list:
         if p["at"] >= t1 or p["at"] + dur <= t0:
             continue
         vals = fx.filled(p.get("params", {}))
-        text = next((str(v) for k, v in vals.items() if fx.kind_of(k) == "text" and v and k not in ("BG", "COLOR", "SIDE")), "")
+        texts = sorted(((not fx.params[k].get("required"), k) for k, v in vals.items()        # the required text first
+                        if fx.kind_of(k) == "text" and v and k not in ("BG", "COLOR", "SIDE")))
+        text = str(vals[texts[0][1]]) if texts else ""
         label = f"#{i + 1} {fx.data['title']} @{p['at']:.2f}" + (f": {html.unescape(text)[:28]}" if text else "")
         if fx.data.get("zone") == "stage":
             box = [0, 0, W, 960]

@@ -1,0 +1,46 @@
+{
+  "name": "ai-os-blue",
+  "title": "AI-OS Blue",
+  "status": "built",
+  "version": 1,
+  "use": "own",
+  "look": "Void + blue, Inter, glass panels; a top-half HyperFrames stage over a presenter card",
+  "best_for": "Paras's own reels (education, AI tools)",
+  "learned_from": "reel-03 and reel-05 (shipped 2026-10-19 / 10-22)",
+  "jobs": ["shorts/reel-05", "shorts/reel-03"],
+  "type": {"display": "Inter 900, -0.02em", "body": "Inter 700/800", "mono": "JetBrains Mono 500/700"},
+  "palette": ["#0C0E0F", "#1A9FD1", "#3AB0D8", "#11324C", "#FFFFFF", "#DFDDDF"],
+  "captions": {
+    "styles": {
+      "Cap": {"size": 70, "outline_color": "#0C0E0F", "back_color": "#0000009B", "outline": 6, "shadow": 2, "margins": [150, 150], "baseline": 1000},
+      "Low": {"size": 66, "outline_color": "#000000", "back_color": "#0F0E0C73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1440}
+    },
+    "highlight": {"color": "#3AB0D8"},
+    "zones": [{"style": "Low", "layouts": ["hook", "broll", "face"], "lead": 0.05}]
+  },
+  "layouts": ["hook", "broll", "split", "face"],
+  "effects": [
+    "reel-big-number",
+    "reel-bubble",
+    "reel-chat",
+    "reel-code",
+    "reel-connect",
+    "reel-counter",
+    "reel-cta-channel",
+    "reel-cta-comment",
+    "reel-guide",
+    "reel-hook",
+    "reel-label",
+    "reel-prompt",
+    "reel-reveal",
+    "reel-rule",
+    "reel-stamp",
+    "reel-step",
+    "reel-terminal"
+  ],
+  "sfx": ["impact", "buzz", "chime", "whoosh", "pop", "tick", "typing", "riser"],
+  "hits": "whoosh into every cut, pop on every card, chime on a payoff; original score (hook house 118, story lo-fi 88)",
+  "pacing": {"avg_shot_s": 5.3, "max_static_s": 3, "stage_change_s": 2.2},
+  "storyboard": "hook (text on frame 1) -> problem B-roll -> answer on the stage -> steps -> one rule -> free guide -> CTA (IG comment / YT channel)",
+  "notes": "The brand of record (CLAUDE.md section 3). Violet and Fraunces are retired; never use them here."
+}

@@ -63,3 +63,9 @@ node_modules/
 .venv/
 __pycache__/
 *.pyc
+
+# ─── The local app ────────────────────────────────────────────────────
+# API keys and connection settings (never committed; the safety hook denies reading them)
+secrets.local.json
+# The app database, run logs and uploads staging
+app_data/

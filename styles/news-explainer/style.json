@@ -1,0 +1,10 @@
+{
+  "name": "news-explainer",
+  "title": "News explainer",
+  "status": "to learn",
+  "use": "any",
+  "look": "Map pins, headline cards, ticker, source tags",
+  "best_for": "Trending topics",
+  "references": [],
+  "notes": "Waits for 2-3 reference profiles (Paras names them, or the Style Learner proposes two for a yes/no)."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "text-behind",
+  "title": "Text behind subject",
+  "status": "built",
+  "version": 1,
+  "use": "any",
+  "look": "A title rises behind the speaker and morphs to a cinematic serif",
+  "best_for": "Openers, reveals",
+  "learned_from": "reel-04 (2026-10-21)",
+  "jobs": ["shorts/reel-04"],
+  "type": {"display": "Inter 900", "accent": "a cinematic serif (client styles only)"},
+  "palette": ["#FFFFFF", "#F2A27E", "#F06A8C"],
+  "layouts": ["camera"],
+  "components": "shorts/reel-04/edit/compose_base.py (title_layer + matte cut1.webm)",
+  "sfx": ["riser", "impact"],
+  "pacing": {"avg_shot_s": 3.0, "max_static_s": 3}
+}

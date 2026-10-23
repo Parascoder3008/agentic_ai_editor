@@ -1,0 +1,32 @@
+{
+  "name": "venom-tech",
+  "title": "Venom Tech",
+  "status": "built",
+  "version": 1,
+  "use": "client",
+  "look": "Pitch-drop hits, yellow numbers with a black stroke, stacked product panels",
+  "best_for": "Tech reviews",
+  "learned_from": "@venomstech, 4 reels (Apify, 2026-10-19)",
+  "jobs": ["shorts/reel-04"],
+  "type": {
+    "display": "Inter 900, -0.035em",
+    "accent": "Instrument Serif italic",
+    "numbers": "yellow #FFD60A, 7px black stroke"
+  },
+  "palette": ["#1D1B33", "#2B1E36", "#F06A8C", "#F4EFE8", "#FFD60A"],
+  "captions": {
+    "styles": {
+      "Cap": {"size": 62, "outline_color": "#000000", "back_color": "#0C0E0F73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1450},
+      "Pip": {"size": 54, "outline_color": "#000000", "back_color": "#0C0E0F73", "border": "box", "outline": 12, "align": 1, "margins": [92, 600], "baseline": 1112},
+      "Mid": {"size": 60, "outline_color": "#000000", "back_color": "#0C0E0F73", "border": "box", "outline": 14, "margins": [150, 150], "baseline": 1010}
+    },
+    "highlight": {"color": "#3AB0D8"},
+    "break_at_cuts": true
+  },
+  "layouts": ["camera"],
+  "components": "shorts/reel-04/edit/compose_base.py (product panels, film strip, before/after wipe)",
+  "sfx": ["pitch_drop", "impact", "whoosh"],
+  "hits": "pitch-drop 920->380 Hz, 0.32 s, with a crash zoom",
+  "pacing": {"avg_shot_s": 3.2, "max_static_s": 3},
+  "storyboard": "hook -> demo beats -> proof -> CTA"
+}

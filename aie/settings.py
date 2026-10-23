@@ -16,6 +16,7 @@ DEFAULTS = {
     "fonts": "fonts",
     "templates": "templates",
     "effects": "effects",
+    "styles": "styles",
     "hyperframes": "hyperframes@0.8.111",
     "hyperframes_base": "aie/hyperframes_base",
     "avatar_rotation": "shorts/avatar_rotation.json",
@@ -23,6 +24,7 @@ DEFAULTS = {
     "herk_kit": None,
     "whisper_model": "large-v3-turbo",
     "chrome": None,              # a Chrome headless shell for HyperFrames, when it can't find or download its own
+    "gsap": None,                # a local gsap.min.js: effect renders use it instead of the CDN (offline machines)
     "min_free_gb": 15,           # renders refuse to start below this much free disk (CLAUDE.md render safety)
 }
 PATH_KEYS = [k for k in DEFAULTS if k not in ("roots", "hyperframes", "whisper_model", "min_free_gb")]
