@@ -1,0 +1,280 @@
+{
+ "Y1": [
+  {
+   "text": "ab",
+   "start": 0.401,
+   "end": 0.501,
+   "score": 0.838
+  },
+  {
+   "text": "iski",
+   "start": 0.561,
+   "end": 0.761,
+   "score": 0.981
+  },
+  {
+   "text": "bana",
+   "start": 0.821,
+   "end": 1.022,
+   "score": 0.951
+  },
+  {
+   "text": "rakhi",
+   "start": 1.042,
+   "end": 1.242,
+   "score": 0.779
+  },
+  {
+   "text": "maine",
+   "start": 1.282,
+   "end": 1.443,
+   "score": 0.83
+  },
+  {
+   "text": "poori",
+   "start": 1.483,
+   "end": 1.663,
+   "score": 0.597
+  },
+  {
+   "text": "guide",
+   "start": 1.743,
+   "end": 2.064,
+   "score": 0.597
+  },
+  {
+   "text": "aapko",
+   "start": 2.184,
+   "end": 2.424,
+   "score": 0.965
+  },
+  {
+   "text": "just",
+   "start": 2.464,
+   "end": 2.665,
+   "score": 0.409
+  },
+  {
+   "text": "about",
+   "start": 2.685,
+   "end": 2.945,
+   "score": 0.782
+  },
+  {
+   "text": "section",
+   "start": 2.965,
+   "end": 3.226,
+   "score": 0.406
+  },
+  {
+   "text": "mein",
+   "start": 3.266,
+   "end": 3.386,
+   "score": 0.474
+  },
+  {
+   "text": "jaake",
+   "start": 3.386,
+   "end": 3.606,
+   "score": 0.996
+  },
+  {
+   "text": "mera",
+   "start": 3.647,
+   "end": 3.827,
+   "score": 0.915
+  },
+  {
+   "text": "whatsapp",
+   "start": 3.847,
+   "end": 4.187,
+   "score": 0.471
+  },
+  {
+   "text": "channel",
+   "start": 4.208,
+   "end": 4.448,
+   "score": 0.542
+  },
+  {
+   "text": "join",
+   "start": 4.468,
+   "end": 4.668,
+   "score": 0.743
+  },
+  {
+   "text": "karna",
+   "start": 4.688,
+   "end": 4.889,
+   "score": 0.82
+  },
+  {
+   "text": "wahan",
+   "start": 4.949,
+   "end": 5.089,
+   "score": 0.365
+  },
+  {
+   "text": "par",
+   "start": 5.109,
+   "end": 5.169,
+   "score": 0.37
+  },
+  {
+   "text": "main",
+   "start": 5.189,
+   "end": 5.289,
+   "score": 0.267
+  },
+  {
+   "text": "guide",
+   "start": 5.309,
+   "end": 5.55,
+   "score": 0.594
+  },
+  {
+   "text": "post",
+   "start": 5.55,
+   "end": 5.77,
+   "score": 0.906
+  },
+  {
+   "text": "kar",
+   "start": 5.81,
+   "end": 5.931,
+   "score": 0.913
+  },
+  {
+   "text": "dunga",
+   "start": 5.991,
+   "end": 6.171,
+   "score": 0.79
+  },
+  {
+   "text": "aur",
+   "start": 6.211,
+   "end": 6.612,
+   "score": 0.33
+  },
+  {
+   "text": "uske",
+   "start": 6.672,
+   "end": 6.872,
+   "score": 0.994
+  },
+  {
+   "text": "through",
+   "start": 6.912,
+   "end": 7.053,
+   "score": 0.359
+  },
+  {
+   "text": "aap",
+   "start": 7.053,
+   "end": 7.133,
+   "score": 0.551
+  },
+  {
+   "text": "apne",
+   "start": 7.173,
+   "end": 7.353,
+   "score": 0.99
+  },
+  {
+   "text": "claude",
+   "start": 7.473,
+   "end": 7.834,
+   "score": 0.377
+  },
+  {
+   "text": "ko",
+   "start": 7.854,
+   "end": 7.894,
+   "score": 0.771
+  },
+  {
+   "text": "ek",
+   "start": 7.954,
+   "end": 8.034,
+   "score": 0.966
+  },
+  {
+   "text": "video",
+   "start": 8.094,
+   "end": 8.315,
+   "score": 0.798
+  },
+  {
+   "text": "editor",
+   "start": 8.335,
+   "end": 8.595,
+   "score": 0.648
+  },
+  {
+   "text": "bana",
+   "start": 8.615,
+   "end": 8.836,
+   "score": 0.887
+  },
+  {
+   "text": "sakte",
+   "start": 8.876,
+   "end": 9.096,
+   "score": 0.807
+  },
+  {
+   "text": "ho",
+   "start": 9.096,
+   "end": 9.156,
+   "score": 0.492
+  },
+  {
+   "text": "baaki",
+   "start": 9.437,
+   "end": 9.637,
+   "score": 0.765
+  },
+  {
+   "text": "aise",
+   "start": 9.677,
+   "end": 9.818,
+   "score": 0.754
+  },
+  {
+   "text": "content",
+   "start": 9.858,
+   "end": 10.178,
+   "score": 0.519
+  },
+  {
+   "text": "ke",
+   "start": 10.218,
+   "end": 10.258,
+   "score": 0.876
+  },
+  {
+   "text": "liye",
+   "start": 10.258,
+   "end": 10.338,
+   "score": 0.325
+  },
+  {
+   "text": "subscribe",
+   "start": 10.379,
+   "end": 10.779,
+   "score": 0.654
+  },
+  {
+   "text": "kar",
+   "start": 10.779,
+   "end": 10.899,
+   "score": 0.965
+  },
+  {
+   "text": "lo",
+   "start": 10.98,
+   "end": 11.04,
+   "score": 0.991
+  }
+ ]
+}

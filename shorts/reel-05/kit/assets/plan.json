@@ -1,0 +1,2299 @@
+{
+ "duration": 54.4,
+ "fps": 25,
+ "scenes": [
+  {
+   "id": "s00",
+   "start": 0.0,
+   "end": 5.4,
+   "layout": "broll",
+   "kind": "hook-flow",
+   "anchor": "Claude",
+   "anchorTime": 0.08
+  },
+  {
+   "id": "s01",
+   "start": 5.4,
+   "end": 9.08,
+   "layout": "broll",
+   "kind": "customer-2am",
+   "anchor": "Socho,",
+   "anchorTime": 5.442
+  },
+  {
+   "id": "s02",
+   "start": 9.08,
+   "end": 11.8,
+   "layout": "split",
+   "kind": "agent-replies",
+   "anchor": "Aur",
+   "anchorTime": 9.243
+  },
+  {
+   "id": "s03",
+   "start": 11.8,
+   "end": 13.12,
+   "layout": "broll",
+   "kind": "owner-booked",
+   "anchor": "aur",
+   "anchorTime": 11.804
+  },
+  {
+   "id": "s04",
+   "start": 13.12,
+   "end": 16.04,
+   "layout": "split",
+   "kind": "free-tool-kapso",
+   "anchor": "Ye",
+   "anchorTime": 13.205
+  },
+  {
+   "id": "s05",
+   "start": 16.04,
+   "end": 21.88,
+   "layout": "split",
+   "kind": "official-api-free-plan",
+   "anchor": "Ye",
+   "anchorTime": 16.206
+  },
+  {
+   "id": "s06",
+   "start": 21.88,
+   "end": 23.8,
+   "layout": "face",
+   "kind": "three-steps",
+   "anchor": "Setup",
+   "anchorTime": 22.048,
+   "holdReason": "Direct address on the speaker's face before the steps; the '3 STEPS' chip lands on 'teen' (2 s)."
+  },
+  {
+   "id": "s07",
+   "start": 23.8,
+   "end": 28.04,
+   "layout": "split",
+   "kind": "step-1-signup",
+   "anchor": "Step",
+   "anchorTime": 23.948
+  },
+  {
+   "id": "s08",
+   "start": 28.04,
+   "end": 32.64,
+   "layout": "split",
+   "kind": "step-2-command",
+   "anchor": "Step",
+   "anchorTime": 28.19
+  },
+  {
+   "id": "s09",
+   "start": 32.64,
+   "end": 37.52,
+   "layout": "split",
+   "kind": "step-3-prompt",
+   "anchor": "Step",
+   "anchorTime": 32.771
+  },
+  {
+   "id": "s10",
+   "start": 37.52,
+   "end": 39.44,
+   "layout": "split",
+   "kind": "claude-writes-code",
+   "anchor": "Baaki",
+   "anchorTime": 37.673
+  },
+  {
+   "id": "s11",
+   "start": 39.44,
+   "end": 42.44,
+   "layout": "broll",
+   "kind": "agent-24h",
+   "anchor": "Aur",
+   "anchorTime": 39.594
+  },
+  {
+   "id": "s12",
+   "start": 42.44,
+   "end": 45.96,
+   "layout": "split",
+   "kind": "rule-permission",
+   "anchor": "Bas",
+   "anchorTime": 42.555
+  },
+  {
+   "id": "s13",
+   "start": 45.96,
+   "end": 49.04,
+   "layout": "split",
+   "kind": "free-guide",
+   "anchor": "Poora",
+   "anchorTime": 46.096
+  },
+  {
+   "id": "s14",
+   "start": 49.04,
+   "end": 54.4,
+   "layout": "split",
+   "kind": "cta-comment-agent",
+   "anchor": "Chahiye",
+   "anchorTime": 49.177,
+   "holdReason": "CTA: keyword pill held, then a 0.6 s freeze (voice muted) for the last read."
+  }
+ ],
+ "events": [
+  {
+   "time": 0.0,
+   "type": "visual-change",
+   "visual": "s00",
+   "anchor": "Claude"
+  },
+  {
+   "time": 0.04,
+   "type": "visual-change",
+   "visual": "s00",
+   "anchor": "Claude"
+  },
+  {
+   "time": 1.4,
+   "type": "visual-change",
+   "visual": "s00",
+   "anchor": "ka"
+  },
+  {
+   "time": 3.1,
+   "type": "visual-change",
+   "visual": "s00",
+   "anchor": "Aur"
+  },
+  {
+   "time": 3.2,
+   "type": "visual-change",
+   "visual": "s00",
+   "anchor": "Aur"
+  },
+  {
+   "time": 5.4,
+   "type": "visual-change",
+   "visual": "s01",
+   "anchor": "Socho,"
+  },
+  {
+   "time": 6.56,
+   "type": "visual-change",
+   "visual": "s01",
+   "anchor": "2"
+  },
+  {
+   "time": 7.48,
+   "type": "visual-change",
+   "visual": "s01",
+   "anchor": "hai"
+  },
+  {
+   "time": 7.92,
+   "type": "visual-change",
+   "visual": "s01",
+   "anchor": "Friday"
+  },
+  {
+   "time": 9.08,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "Aur"
+  },
+  {
+   "time": 9.12,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "Aur"
+  },
+  {
+   "time": 9.5,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "turant"
+  },
+  {
+   "time": 9.78,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "jawab"
+  },
+  {
+   "time": 10.68,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "free"
+  },
+  {
+   "time": 10.9,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "slots"
+  },
+  {
+   "time": 11.22,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "ke"
+  },
+  {
+   "time": 11.32,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "ke"
+  },
+  {
+   "time": 11.56,
+   "type": "visual-change",
+   "visual": "s02",
+   "anchor": "aur"
+  },
+  {
+   "time": 11.8,
+   "type": "visual-change",
+   "visual": "s03",
+   "anchor": "aur"
+  },
+  {
+   "time": 13.12,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "Ye"
+  },
+  {
+   "time": 13.37,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "hota"
+  },
+  {
+   "time": 13.66,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "hai"
+  },
+  {
+   "time": 14.16,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "tool"
+  },
+  {
+   "time": 15.16,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "hai"
+  },
+  {
+   "time": 15.26,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "Kapso."
+  },
+  {
+   "time": 15.51,
+   "type": "visual-change",
+   "visual": "s04",
+   "anchor": "Ye"
+  },
+  {
+   "time": 16.04,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "Ye"
+  },
+  {
+   "time": 16.35,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "Ye"
+  },
+  {
+   "time": 16.85,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "WhatsApp"
+  },
+  {
+   "time": 17.55,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "official"
+  },
+  {
+   "time": 18.13,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "API"
+  },
+  {
+   "time": 18.31,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "se"
+  },
+  {
+   "time": 18.71,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "se"
+  },
+  {
+   "time": 18.91,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "hai."
+  },
+  {
+   "time": 19.5,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "Free"
+  },
+  {
+   "time": 20.18,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "mein"
+  },
+  {
+   "time": 20.81,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "2,000"
+  },
+  {
+   "time": 21.29,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "messages."
+  },
+  {
+   "time": 21.46,
+   "type": "visual-change",
+   "visual": "s05",
+   "anchor": "Setup"
+  },
+  {
+   "time": 21.88,
+   "type": "visual-change",
+   "visual": "s06",
+   "anchor": "Setup"
+  },
+  {
+   "time": 22.67,
+   "type": "visual-change",
+   "visual": "s06",
+   "anchor": "teen"
+  },
+  {
+   "time": 23.8,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "Step"
+  },
+  {
+   "time": 23.95,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "Step"
+  },
+  {
+   "time": 24.21,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "1"
+  },
+  {
+   "time": 24.91,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "Kapso"
+  },
+  {
+   "time": 25.37,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "pe"
+  },
+  {
+   "time": 26.29,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "aur"
+  },
+  {
+   "time": 26.69,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "business"
+  },
+  {
+   "time": 27.33,
+   "type": "visual-change",
+   "visual": "s07",
+   "anchor": "link"
+  },
+  {
+   "time": 28.04,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "Step"
+  },
+  {
+   "time": 28.19,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "Step"
+  },
+  {
+   "time": 28.36,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "2"
+  },
+  {
+   "time": 29.01,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "Ek"
+  },
+  {
+   "time": 30.71,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "skills"
+  },
+  {
+   "time": 30.85,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "skills"
+  },
+  {
+   "time": 30.99,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "Claude"
+  },
+  {
+   "time": 31.13,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "Claude"
+  },
+  {
+   "time": 31.49,
+   "type": "visual-change",
+   "visual": "s08",
+   "anchor": "Code"
+  },
+  {
+   "time": 32.64,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "Step"
+  },
+  {
+   "time": 32.77,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "Step"
+  },
+  {
+   "time": 33.16,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "3"
+  },
+  {
+   "time": 34.57,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "mere"
+  },
+  {
+   "time": 35.36,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "liye"
+  },
+  {
+   "time": 36.16,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "banao"
+  },
+  {
+   "time": 37.01,
+   "type": "visual-change",
+   "visual": "s09",
+   "anchor": "Baaki"
+  },
+  {
+   "time": 37.52,
+   "type": "visual-change",
+   "visual": "s10",
+   "anchor": "Baaki"
+  },
+  {
+   "time": 37.54,
+   "type": "visual-change",
+   "visual": "s10",
+   "anchor": "Baaki"
+  },
+  {
+   "time": 37.97,
+   "type": "visual-change",
+   "visual": "s10",
+   "anchor": "code"
+  },
+  {
+   "time": 39.05,
+   "type": "visual-change",
+   "visual": "s10",
+   "anchor": "hai."
+  },
+  {
+   "time": 39.44,
+   "type": "visual-change",
+   "visual": "s11",
+   "anchor": "Aur"
+  },
+  {
+   "time": 40.84,
+   "type": "visual-change",
+   "visual": "s11",
+   "anchor": "24"
+  },
+  {
+   "time": 42.44,
+   "type": "visual-change",
+   "visual": "s12",
+   "anchor": "Bas"
+  },
+  {
+   "time": 43.21,
+   "type": "visual-change",
+   "visual": "s12",
+   "anchor": "rule"
+  },
+  {
+   "time": 44.31,
+   "type": "visual-change",
+   "visual": "s12",
+   "anchor": "customer"
+  },
+  {
+   "time": 44.96,
+   "type": "visual-change",
+   "visual": "s12",
+   "anchor": "ki"
+  },
+  {
+   "time": 45.96,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "Poora"
+  },
+  {
+   "time": 46.1,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "Poora"
+  },
+  {
+   "time": 46.46,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "setup"
+  },
+  {
+   "time": 46.68,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "aur"
+  },
+  {
+   "time": 46.9,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "ready"
+  },
+  {
+   "time": 47.12,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "prompt"
+  },
+  {
+   "time": 47.76,
+   "type": "visual-change",
+   "visual": "s13",
+   "anchor": "ek"
+  },
+  {
+   "time": 49.04,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "Chahiye"
+  },
+  {
+   "time": 49.56,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "to"
+  },
+  {
+   "time": 49.86,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "karo"
+  },
+  {
+   "time": 50.48,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "comment"
+  },
+  {
+   "time": 50.92,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "karo"
+  },
+  {
+   "time": 51.36,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "Guide"
+  },
+  {
+   "time": 52.16,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "Guide"
+  },
+  {
+   "time": 53.2,
+   "type": "visual-change",
+   "visual": "s14",
+   "anchor": "DM"
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.08,
+   "end": 0.74,
+   "words": [
+    {
+     "text": "Claude",
+     "start": 0.08,
+     "end": 0.4,
+     "sourceStart": 0.08,
+     "sourceEnd": 0.4
+    },
+    {
+     "text": "ko",
+     "start": 0.42,
+     "end": 0.48,
+     "sourceStart": 0.42,
+     "sourceEnd": 0.48
+    },
+    {
+     "text": "ab",
+     "start": 0.64,
+     "end": 0.74,
+     "sourceStart": 0.64,
+     "sourceEnd": 0.74
+    }
+   ]
+  },
+  {
+   "start": 0.8,
+   "end": 1.341,
+   "words": [
+    {
+     "text": "apna",
+     "start": 0.8,
+     "end": 0.98,
+     "sourceStart": 0.8,
+     "sourceEnd": 0.98
+    },
+    {
+     "text": "khud",
+     "start": 1.08,
+     "end": 1.221,
+     "sourceStart": 1.08,
+     "sourceEnd": 1.221
+    },
+    {
+     "text": "ka",
+     "start": 1.281,
+     "end": 1.341,
+     "sourceStart": 1.281,
+     "sourceEnd": 1.341
+    }
+   ]
+  },
+  {
+   "start": 1.361,
+   "end": 2.141,
+   "words": [
+    {
+     "text": "WhatsApp",
+     "start": 1.361,
+     "end": 1.761,
+     "sourceStart": 1.361,
+     "sourceEnd": 1.761
+    },
+    {
+     "text": "number",
+     "start": 1.801,
+     "end": 1.981,
+     "sourceStart": 1.801,
+     "sourceEnd": 1.981
+    },
+    {
+     "text": "mil",
+     "start": 2.021,
+     "end": 2.141,
+     "sourceStart": 2.021,
+     "sourceEnd": 2.141
+    }
+   ]
+  },
+  {
+   "start": 2.181,
+   "end": 2.521,
+   "words": [
+    {
+     "text": "sakta",
+     "start": 2.181,
+     "end": 2.441,
+     "sourceStart": 2.181,
+     "sourceEnd": 2.441
+    },
+    {
+     "text": "hai.",
+     "start": 2.441,
+     "end": 2.521,
+     "sourceStart": 2.441,
+     "sourceEnd": 2.521
+    }
+   ]
+  },
+  {
+   "start": 3.101,
+   "end": 3.761,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 3.101,
+     "end": 3.261,
+     "sourceStart": 3.101,
+     "sourceEnd": 3.261
+    },
+    {
+     "text": "zyada",
+     "start": 3.361,
+     "end": 3.581,
+     "sourceStart": 3.361,
+     "sourceEnd": 3.581
+    },
+    {
+     "text": "tar",
+     "start": 3.641,
+     "end": 3.761,
+     "sourceStart": 3.641,
+     "sourceEnd": 3.761
+    }
+   ]
+  },
+  {
+   "start": 3.801,
+   "end": 4.422,
+   "words": [
+    {
+     "text": "business",
+     "start": 3.801,
+     "end": 4.081,
+     "sourceStart": 3.801,
+     "sourceEnd": 4.081
+    },
+    {
+     "text": "owners",
+     "start": 4.121,
+     "end": 4.322,
+     "sourceStart": 4.121,
+     "sourceEnd": 4.322
+    },
+    {
+     "text": "ko",
+     "start": 4.382,
+     "end": 4.422,
+     "sourceStart": 4.382,
+     "sourceEnd": 4.422
+    }
+   ]
+  },
+  {
+   "start": 4.482,
+   "end": 4.902,
+   "words": [
+    {
+     "text": "ye",
+     "start": 4.482,
+     "end": 4.542,
+     "sourceStart": 4.482,
+     "sourceEnd": 4.542
+    },
+    {
+     "text": "pata",
+     "start": 4.602,
+     "end": 4.762,
+     "sourceStart": 4.602,
+     "sourceEnd": 4.762
+    },
+    {
+     "text": "hi",
+     "start": 4.822,
+     "end": 4.902,
+     "sourceStart": 4.822,
+     "sourceEnd": 4.902
+    }
+   ]
+  },
+  {
+   "start": 4.902,
+   "end": 5.022,
+   "words": [
+    {
+     "text": "nahi.",
+     "start": 4.902,
+     "end": 5.022,
+     "sourceStart": 4.902,
+     "sourceEnd": 5.022
+    }
+   ]
+  },
+  {
+   "start": 5.442,
+   "end": 5.702,
+   "words": [
+    {
+     "text": "Socho,",
+     "start": 5.442,
+     "end": 5.702,
+     "sourceStart": 5.442,
+     "sourceEnd": 5.702
+    }
+   ]
+  },
+  {
+   "start": 6.162,
+   "end": 6.622,
+   "words": [
+    {
+     "text": "raat",
+     "start": 6.162,
+     "end": 6.342,
+     "sourceStart": 6.162,
+     "sourceEnd": 6.342
+    },
+    {
+     "text": "ke",
+     "start": 6.402,
+     "end": 6.482,
+     "sourceStart": 6.402,
+     "sourceEnd": 6.482
+    },
+    {
+     "text": "2",
+     "start": 6.542,
+     "end": 6.622,
+     "sourceStart": 6.542,
+     "sourceEnd": 6.622
+    }
+   ]
+  },
+  {
+   "start": 6.702,
+   "end": 7.583,
+   "words": [
+    {
+     "text": "baje",
+     "start": 6.702,
+     "end": 6.862,
+     "sourceStart": 6.702,
+     "sourceEnd": 6.862
+    },
+    {
+     "text": "customer",
+     "start": 6.922,
+     "end": 7.263,
+     "sourceStart": 6.922,
+     "sourceEnd": 7.263
+    },
+    {
+     "text": "poochta",
+     "start": 7.303,
+     "end": 7.583,
+     "sourceStart": 7.303,
+     "sourceEnd": 7.583
+    }
+   ]
+  },
+  {
+   "start": 7.643,
+   "end": 8.303,
+   "words": [
+    {
+     "text": "hai",
+     "start": 7.643,
+     "end": 7.723,
+     "sourceStart": 7.643,
+     "sourceEnd": 7.723
+    },
+    {
+     "text": "Friday",
+     "start": 7.923,
+     "end": 8.243,
+     "sourceStart": 7.923,
+     "sourceEnd": 8.243
+    },
+    {
+     "text": "ko",
+     "start": 8.243,
+     "end": 8.303,
+     "sourceStart": 8.243,
+     "sourceEnd": 8.303
+    }
+   ]
+  },
+  {
+   "start": 8.343,
+   "end": 8.743,
+   "words": [
+    {
+     "text": "slot",
+     "start": 8.343,
+     "end": 8.603,
+     "sourceStart": 8.343,
+     "sourceEnd": 8.603
+    },
+    {
+     "text": "hai?",
+     "start": 8.663,
+     "end": 8.743,
+     "sourceStart": 8.663,
+     "sourceEnd": 8.743
+    }
+   ]
+  },
+  {
+   "start": 9.243,
+   "end": 10.044,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 9.243,
+     "end": 9.363,
+     "sourceStart": 9.243,
+     "sourceEnd": 9.363
+    },
+    {
+     "text": "turant",
+     "start": 9.503,
+     "end": 9.743,
+     "sourceStart": 9.503,
+     "sourceEnd": 9.743
+    },
+    {
+     "text": "jawab",
+     "start": 9.783,
+     "end": 10.044,
+     "sourceStart": 9.783,
+     "sourceEnd": 10.044
+    }
+   ]
+  },
+  {
+   "start": 10.064,
+   "end": 10.344,
+   "words": [
+    {
+     "text": "aata",
+     "start": 10.064,
+     "end": 10.264,
+     "sourceStart": 10.064,
+     "sourceEnd": 10.264
+    },
+    {
+     "text": "hai,",
+     "start": 10.264,
+     "end": 10.344,
+     "sourceStart": 10.264,
+     "sourceEnd": 10.344
+    }
+   ]
+  },
+  {
+   "start": 10.684,
+   "end": 11.264,
+   "words": [
+    {
+     "text": "free",
+     "start": 10.684,
+     "end": 10.884,
+     "sourceStart": 10.684,
+     "sourceEnd": 10.884
+    },
+    {
+     "text": "slots",
+     "start": 10.904,
+     "end": 11.184,
+     "sourceStart": 10.904,
+     "sourceEnd": 11.184
+    },
+    {
+     "text": "ke",
+     "start": 11.224,
+     "end": 11.264,
+     "sourceStart": 11.224,
+     "sourceEnd": 11.264
+    }
+   ]
+  },
+  {
+   "start": 11.324,
+   "end": 11.524,
+   "words": [
+    {
+     "text": "saath,",
+     "start": 11.324,
+     "end": 11.524,
+     "sourceStart": 11.324,
+     "sourceEnd": 11.524
+    }
+   ]
+  },
+  {
+   "start": 11.804,
+   "end": 12.264,
+   "words": [
+    {
+     "text": "aur",
+     "start": 11.804,
+     "end": 11.904,
+     "sourceStart": 11.804,
+     "sourceEnd": 11.904
+    },
+    {
+     "text": "booking",
+     "start": 11.944,
+     "end": 12.204,
+     "sourceStart": 11.944,
+     "sourceEnd": 12.204
+    },
+    {
+     "text": "ho",
+     "start": 12.224,
+     "end": 12.264,
+     "sourceStart": 12.224,
+     "sourceEnd": 12.264
+    }
+   ]
+  },
+  {
+   "start": 12.324,
+   "end": 12.664,
+   "words": [
+    {
+     "text": "jaati",
+     "start": 12.324,
+     "end": 12.544,
+     "sourceStart": 12.324,
+     "sourceEnd": 12.544
+    },
+    {
+     "text": "hai.",
+     "start": 12.584,
+     "end": 12.664,
+     "sourceStart": 12.584,
+     "sourceEnd": 12.664
+    }
+   ]
+  },
+  {
+   "start": 13.205,
+   "end": 13.665,
+   "words": [
+    {
+     "text": "Ye",
+     "start": 13.205,
+     "end": 13.285,
+     "sourceStart": 13.205,
+     "sourceEnd": 13.285
+    },
+    {
+     "text": "hota",
+     "start": 13.365,
+     "end": 13.545,
+     "sourceStart": 13.365,
+     "sourceEnd": 13.545
+    },
+    {
+     "text": "hai",
+     "start": 13.565,
+     "end": 13.665,
+     "sourceStart": 13.565,
+     "sourceEnd": 13.665
+    }
+   ]
+  },
+  {
+   "start": 13.665,
+   "end": 14.265,
+   "words": [
+    {
+     "text": "ek",
+     "start": 13.665,
+     "end": 13.765,
+     "sourceStart": 13.665,
+     "sourceEnd": 13.765
+    },
+    {
+     "text": "free",
+     "start": 13.845,
+     "end": 14.045,
+     "sourceStart": 13.845,
+     "sourceEnd": 14.045
+    },
+    {
+     "text": "tool",
+     "start": 14.065,
+     "end": 14.265,
+     "sourceStart": 14.065,
+     "sourceEnd": 14.265
+    }
+   ]
+  },
+  {
+   "start": 14.325,
+   "end": 14.405,
+   "words": [
+    {
+     "text": "se.",
+     "start": 14.325,
+     "end": 14.405,
+     "sourceStart": 14.325,
+     "sourceEnd": 14.405
+    }
+   ]
+  },
+  {
+   "start": 14.765,
+   "end": 15.505,
+   "words": [
+    {
+     "text": "Naam",
+     "start": 14.765,
+     "end": 14.965,
+     "sourceStart": 14.765,
+     "sourceEnd": 14.965
+    },
+    {
+     "text": "hai",
+     "start": 15.025,
+     "end": 15.105,
+     "sourceStart": 15.025,
+     "sourceEnd": 15.105
+    },
+    {
+     "text": "Kapso.",
+     "start": 15.185,
+     "end": 15.505,
+     "sourceStart": 15.185,
+     "sourceEnd": 15.505
+    }
+   ]
+  },
+  {
+   "start": 16.206,
+   "end": 16.746,
+   "words": [
+    {
+     "text": "Ye",
+     "start": 16.206,
+     "end": 16.266,
+     "sourceStart": 16.206,
+     "sourceEnd": 16.266
+    },
+    {
+     "text": "Claude",
+     "start": 16.346,
+     "end": 16.666,
+     "sourceStart": 16.346,
+     "sourceEnd": 16.666
+    },
+    {
+     "text": "ko",
+     "start": 16.686,
+     "end": 16.746,
+     "sourceStart": 16.686,
+     "sourceEnd": 16.746
+    }
+   ]
+  },
+  {
+   "start": 16.846,
+   "end": 17.966,
+   "words": [
+    {
+     "text": "WhatsApp",
+     "start": 16.846,
+     "end": 17.246,
+     "sourceStart": 16.846,
+     "sourceEnd": 17.246
+    },
+    {
+     "text": "ke",
+     "start": 17.326,
+     "end": 17.386,
+     "sourceStart": 17.326,
+     "sourceEnd": 17.386
+    },
+    {
+     "text": "official",
+     "start": 17.546,
+     "end": 17.966,
+     "sourceStart": 17.546,
+     "sourceEnd": 17.966
+    }
+   ]
+  },
+  {
+   "start": 18.126,
+   "end": 18.987,
+   "words": [
+    {
+     "text": "API",
+     "start": 18.126,
+     "end": 18.526,
+     "sourceStart": 18.126,
+     "sourceEnd": 18.526
+    },
+    {
+     "text": "se",
+     "start": 18.606,
+     "end": 18.666,
+     "sourceStart": 18.606,
+     "sourceEnd": 18.666
+    },
+    {
+     "text": "jodta",
+     "start": 18.707,
+     "end": 18.987,
+     "sourceStart": 18.707,
+     "sourceEnd": 18.987
+    }
+   ]
+  },
+  {
+   "start": 19.027,
+   "end": 19.107,
+   "words": [
+    {
+     "text": "hai.",
+     "start": 19.027,
+     "end": 19.107,
+     "sourceStart": 19.027,
+     "sourceEnd": 19.107
+    }
+   ]
+  },
+  {
+   "start": 19.527,
+   "end": 20.187,
+   "words": [
+    {
+     "text": "Free",
+     "start": 19.527,
+     "end": 19.747,
+     "sourceStart": 19.527,
+     "sourceEnd": 19.747
+    },
+    {
+     "text": "plan",
+     "start": 19.787,
+     "end": 20.027,
+     "sourceStart": 19.787,
+     "sourceEnd": 20.027
+    },
+    {
+     "text": "mein",
+     "start": 20.087,
+     "end": 20.187,
+     "sourceStart": 20.087,
+     "sourceEnd": 20.187
+    }
+   ]
+  },
+  {
+   "start": 20.247,
+   "end": 21.267,
+   "words": [
+    {
+     "text": "mahine",
+     "start": 20.247,
+     "end": 20.547,
+     "sourceStart": 20.247,
+     "sourceEnd": 20.547
+    },
+    {
+     "text": "ke",
+     "start": 20.587,
+     "end": 20.647,
+     "sourceStart": 20.587,
+     "sourceEnd": 20.647
+    },
+    {
+     "text": "2,000",
+     "start": 20.807,
+     "end": 21.267,
+     "sourceStart": 20.807,
+     "sourceEnd": 21.267
+    }
+   ]
+  },
+  {
+   "start": 21.287,
+   "end": 21.668,
+   "words": [
+    {
+     "text": "messages.",
+     "start": 21.287,
+     "end": 21.668,
+     "sourceStart": 21.287,
+     "sourceEnd": 21.668
+    }
+   ]
+  },
+  {
+   "start": 22.048,
+   "end": 22.848,
+   "words": [
+    {
+     "text": "Setup",
+     "start": 22.048,
+     "end": 22.348,
+     "sourceStart": 22.048,
+     "sourceEnd": 22.348
+    },
+    {
+     "text": "sirf",
+     "start": 22.388,
+     "end": 22.548,
+     "sourceStart": 22.388,
+     "sourceEnd": 22.548
+    },
+    {
+     "text": "teen",
+     "start": 22.668,
+     "end": 22.848,
+     "sourceStart": 22.668,
+     "sourceEnd": 22.848
+    }
+   ]
+  },
+  {
+   "start": 22.888,
+   "end": 23.388,
+   "words": [
+    {
+     "text": "step",
+     "start": 22.888,
+     "end": 23.108,
+     "sourceStart": 22.888,
+     "sourceEnd": 23.108
+    },
+    {
+     "text": "ka",
+     "start": 23.168,
+     "end": 23.228,
+     "sourceStart": 23.168,
+     "sourceEnd": 23.228
+    },
+    {
+     "text": "hai.",
+     "start": 23.308,
+     "end": 23.388,
+     "sourceStart": 23.308,
+     "sourceEnd": 23.388
+    }
+   ]
+  },
+  {
+   "start": 23.948,
+   "end": 24.408,
+   "words": [
+    {
+     "text": "Step",
+     "start": 23.948,
+     "end": 24.168,
+     "sourceStart": 23.948,
+     "sourceEnd": 24.168
+    },
+    {
+     "text": "1",
+     "start": 24.248,
+     "end": 24.408,
+     "sourceStart": 24.248,
+     "sourceEnd": 24.408
+    }
+   ]
+  },
+  {
+   "start": 24.909,
+   "end": 25.569,
+   "words": [
+    {
+     "text": "Kapso",
+     "start": 24.909,
+     "end": 25.189,
+     "sourceStart": 24.909,
+     "sourceEnd": 25.189
+    },
+    {
+     "text": "pe",
+     "start": 25.249,
+     "end": 25.309,
+     "sourceStart": 25.249,
+     "sourceEnd": 25.309
+    },
+    {
+     "text": "sign",
+     "start": 25.369,
+     "end": 25.569,
+     "sourceStart": 25.369,
+     "sourceEnd": 25.569
+    }
+   ]
+  },
+  {
+   "start": 25.569,
+   "end": 25.829,
+   "words": [
+    {
+     "text": "up",
+     "start": 25.569,
+     "end": 25.649,
+     "sourceStart": 25.569,
+     "sourceEnd": 25.649
+    },
+    {
+     "text": "karo,",
+     "start": 25.689,
+     "end": 25.829,
+     "sourceStart": 25.689,
+     "sourceEnd": 25.829
+    }
+   ]
+  },
+  {
+   "start": 26.289,
+   "end": 26.989,
+   "words": [
+    {
+     "text": "aur",
+     "start": 26.289,
+     "end": 26.389,
+     "sourceStart": 26.289,
+     "sourceEnd": 26.389
+    },
+    {
+     "text": "apna",
+     "start": 26.409,
+     "end": 26.649,
+     "sourceStart": 26.409,
+     "sourceEnd": 26.649
+    },
+    {
+     "text": "business",
+     "start": 26.689,
+     "end": 26.989,
+     "sourceStart": 26.689,
+     "sourceEnd": 26.989
+    }
+   ]
+  },
+  {
+   "start": 27.029,
+   "end": 27.69,
+   "words": [
+    {
+     "text": "number",
+     "start": 27.029,
+     "end": 27.249,
+     "sourceStart": 27.029,
+     "sourceEnd": 27.249
+    },
+    {
+     "text": "link",
+     "start": 27.329,
+     "end": 27.49,
+     "sourceStart": 27.329,
+     "sourceEnd": 27.49
+    },
+    {
+     "text": "karo.",
+     "start": 27.55,
+     "end": 27.69,
+     "sourceStart": 27.55,
+     "sourceEnd": 27.69
+    }
+   ]
+  },
+  {
+   "start": 28.19,
+   "end": 28.67,
+   "words": [
+    {
+     "text": "Step",
+     "start": 28.19,
+     "end": 28.41,
+     "sourceStart": 28.19,
+     "sourceEnd": 28.41
+    },
+    {
+     "text": "2",
+     "start": 28.53,
+     "end": 28.67,
+     "sourceStart": 28.53,
+     "sourceEnd": 28.67
+    }
+   ]
+  },
+  {
+   "start": 29.01,
+   "end": 29.65,
+   "words": [
+    {
+     "text": "Ek",
+     "start": 29.01,
+     "end": 29.13,
+     "sourceStart": 29.01,
+     "sourceEnd": 29.13
+    },
+    {
+     "text": "command",
+     "start": 29.21,
+     "end": 29.51,
+     "sourceStart": 29.21,
+     "sourceEnd": 29.51
+    },
+    {
+     "text": "se",
+     "start": 29.59,
+     "end": 29.65,
+     "sourceStart": 29.59,
+     "sourceEnd": 29.65
+    }
+   ]
+  },
+  {
+   "start": 29.75,
+   "end": 30.671,
+   "words": [
+    {
+     "text": "Kapso",
+     "start": 29.75,
+     "end": 30.09,
+     "sourceStart": 29.75,
+     "sourceEnd": 30.09
+    },
+    {
+     "text": "ki",
+     "start": 30.17,
+     "end": 30.23,
+     "sourceStart": 30.17,
+     "sourceEnd": 30.23
+    },
+    {
+     "text": "WhatsApp",
+     "start": 30.29,
+     "end": 30.671,
+     "sourceStart": 30.29,
+     "sourceEnd": 30.671
+    }
+   ]
+  },
+  {
+   "start": 30.711,
+   "end": 31.691,
+   "words": [
+    {
+     "text": "skills",
+     "start": 30.711,
+     "end": 31.011,
+     "sourceStart": 30.711,
+     "sourceEnd": 31.011
+    },
+    {
+     "text": "Claude",
+     "start": 31.111,
+     "end": 31.471,
+     "sourceStart": 31.111,
+     "sourceEnd": 31.471
+    },
+    {
+     "text": "Code",
+     "start": 31.491,
+     "end": 31.691,
+     "sourceStart": 31.491,
+     "sourceEnd": 31.691
+    }
+   ]
+  },
+  {
+   "start": 31.711,
+   "end": 32.111,
+   "words": [
+    {
+     "text": "mein",
+     "start": 31.711,
+     "end": 31.811,
+     "sourceStart": 31.711,
+     "sourceEnd": 31.811
+    },
+    {
+     "text": "daal",
+     "start": 31.831,
+     "end": 31.991,
+     "sourceStart": 31.831,
+     "sourceEnd": 31.991
+    },
+    {
+     "text": "do.",
+     "start": 32.031,
+     "end": 32.111,
+     "sourceStart": 32.031,
+     "sourceEnd": 32.111
+    }
+   ]
+  },
+  {
+   "start": 32.771,
+   "end": 33.252,
+   "words": [
+    {
+     "text": "Step",
+     "start": 32.771,
+     "end": 32.991,
+     "sourceStart": 32.771,
+     "sourceEnd": 32.991
+    },
+    {
+     "text": "3",
+     "start": 33.051,
+     "end": 33.252,
+     "sourceStart": 33.051,
+     "sourceEnd": 33.252
+    }
+   ]
+  },
+  {
+   "start": 33.632,
+   "end": 34.312,
+   "words": [
+    {
+     "text": "Claude",
+     "start": 33.632,
+     "end": 33.932,
+     "sourceStart": 33.632,
+     "sourceEnd": 33.932
+    },
+    {
+     "text": "ko",
+     "start": 33.992,
+     "end": 34.052,
+     "sourceStart": 33.992,
+     "sourceEnd": 34.052
+    },
+    {
+     "text": "bolo",
+     "start": 34.112,
+     "end": 34.312,
+     "sourceStart": 34.112,
+     "sourceEnd": 34.312
+    }
+   ]
+  },
+  {
+   "start": 34.572,
+   "end": 35.192,
+   "words": [
+    {
+     "text": "mere",
+     "start": 34.572,
+     "end": 34.772,
+     "sourceStart": 34.572,
+     "sourceEnd": 34.772
+    },
+    {
+     "text": "business",
+     "start": 34.812,
+     "end": 35.092,
+     "sourceStart": 34.812,
+     "sourceEnd": 35.092
+    },
+    {
+     "text": "ke",
+     "start": 35.132,
+     "end": 35.192,
+     "sourceStart": 35.132,
+     "sourceEnd": 35.192
+    }
+   ]
+  },
+  {
+   "start": 35.232,
+   "end": 35.952,
+   "words": [
+    {
+     "text": "liye",
+     "start": 35.232,
+     "end": 35.332,
+     "sourceStart": 35.232,
+     "sourceEnd": 35.332
+    },
+    {
+     "text": "WhatsApp",
+     "start": 35.352,
+     "end": 35.712,
+     "sourceStart": 35.352,
+     "sourceEnd": 35.712
+    },
+    {
+     "text": "agent",
+     "start": 35.752,
+     "end": 35.952,
+     "sourceStart": 35.752,
+     "sourceEnd": 35.952
+    }
+   ]
+  },
+  {
+   "start": 36.012,
+   "end": 36.773,
+   "words": [
+    {
+     "text": "banao",
+     "start": 36.012,
+     "end": 36.233,
+     "sourceStart": 36.012,
+     "sourceEnd": 36.233
+    },
+    {
+     "text": "jo",
+     "start": 36.293,
+     "end": 36.373,
+     "sourceStart": 36.293,
+     "sourceEnd": 36.373
+    },
+    {
+     "text": "bookings",
+     "start": 36.453,
+     "end": 36.773,
+     "sourceStart": 36.453,
+     "sourceEnd": 36.773
+    }
+   ]
+  },
+  {
+   "start": 36.813,
+   "end": 37.153,
+   "words": [
+    {
+     "text": "sambhale.",
+     "start": 36.813,
+     "end": 37.153,
+     "sourceStart": 36.813,
+     "sourceEnd": 37.153
+    }
+   ]
+  },
+  {
+   "start": 37.673,
+   "end": 38.493,
+   "words": [
+    {
+     "text": "Baaki",
+     "start": 37.673,
+     "end": 37.893,
+     "sourceStart": 37.673,
+     "sourceEnd": 37.893
+    },
+    {
+     "text": "code",
+     "start": 37.973,
+     "end": 38.153,
+     "sourceStart": 37.973,
+     "sourceEnd": 38.153
+    },
+    {
+     "text": "Claude",
+     "start": 38.233,
+     "end": 38.493,
+     "sourceStart": 38.233,
+     "sourceEnd": 38.493
+    }
+   ]
+  },
+  {
+   "start": 38.553,
+   "end": 39.114,
+   "words": [
+    {
+     "text": "khud",
+     "start": 38.553,
+     "end": 38.693,
+     "sourceStart": 38.553,
+     "sourceEnd": 38.693
+    },
+    {
+     "text": "likhta",
+     "start": 38.753,
+     "end": 39.054,
+     "sourceStart": 38.753,
+     "sourceEnd": 39.054
+    },
+    {
+     "text": "hai.",
+     "start": 39.054,
+     "end": 39.114,
+     "sourceStart": 39.054,
+     "sourceEnd": 39.114
+    }
+   ]
+  },
+  {
+   "start": 39.594,
+   "end": 40.274,
+   "words": [
+    {
+     "text": "Aur",
+     "start": 39.594,
+     "end": 39.694,
+     "sourceStart": 39.594,
+     "sourceEnd": 39.694
+    },
+    {
+     "text": "agent",
+     "start": 39.734,
+     "end": 40.034,
+     "sourceStart": 39.734,
+     "sourceEnd": 40.034
+    },
+    {
+     "text": "aapke",
+     "start": 40.074,
+     "end": 40.274,
+     "sourceStart": 40.074,
+     "sourceEnd": 40.274
+    }
+   ]
+  },
+  {
+   "start": 40.314,
+   "end": 41.194,
+   "words": [
+    {
+     "text": "number",
+     "start": 40.314,
+     "end": 40.554,
+     "sourceStart": 40.314,
+     "sourceEnd": 40.554
+    },
+    {
+     "text": "pe",
+     "start": 40.594,
+     "end": 40.654,
+     "sourceStart": 40.594,
+     "sourceEnd": 40.654
+    },
+    {
+     "text": "24",
+     "start": 40.874,
+     "end": 41.194,
+     "sourceStart": 40.874,
+     "sourceEnd": 41.194
+    }
+   ]
+  },
+  {
+   "start": 41.214,
+   "end": 41.894,
+   "words": [
+    {
+     "text": "ghante",
+     "start": 41.214,
+     "end": 41.474,
+     "sourceStart": 41.214,
+     "sourceEnd": 41.474
+    },
+    {
+     "text": "chalta",
+     "start": 41.514,
+     "end": 41.774,
+     "sourceStart": 41.514,
+     "sourceEnd": 41.774
+    },
+    {
+     "text": "hai.",
+     "start": 41.834,
+     "end": 41.894,
+     "sourceStart": 41.834,
+     "sourceEnd": 41.894
+    }
+   ]
+  },
+  {
+   "start": 42.555,
+   "end": 43.395,
+   "words": [
+    {
+     "text": "Bas",
+     "start": 42.555,
+     "end": 42.715,
+     "sourceStart": 42.555,
+     "sourceEnd": 42.715
+    },
+    {
+     "text": "ek",
+     "start": 42.995,
+     "end": 43.155,
+     "sourceStart": 42.995,
+     "sourceEnd": 43.155
+    },
+    {
+     "text": "rule",
+     "start": 43.215,
+     "end": 43.395,
+     "sourceStart": 43.215,
+     "sourceEnd": 43.395
+    }
+   ]
+  },
+  {
+   "start": 43.435,
+   "end": 43.855,
+   "words": [
+    {
+     "text": "yaad",
+     "start": 43.435,
+     "end": 43.575,
+     "sourceStart": 43.435,
+     "sourceEnd": 43.575
+    },
+    {
+     "text": "rakho",
+     "start": 43.615,
+     "end": 43.855,
+     "sourceStart": 43.615,
+     "sourceEnd": 43.855
+    }
+   ]
+  },
+  {
+   "start": 44.395,
+   "end": 45.336,
+   "words": [
+    {
+     "text": "customer",
+     "start": 44.395,
+     "end": 44.795,
+     "sourceStart": 44.395,
+     "sourceEnd": 44.795
+    },
+    {
+     "text": "ki",
+     "start": 44.835,
+     "end": 44.876,
+     "sourceStart": 44.835,
+     "sourceEnd": 44.876
+    },
+    {
+     "text": "permission",
+     "start": 44.956,
+     "end": 45.336,
+     "sourceStart": 44.956,
+     "sourceEnd": 45.336
+    }
+   ]
+  },
+  {
+   "start": 45.396,
+   "end": 45.616,
+   "words": [
+    {
+     "text": "pehle.",
+     "start": 45.396,
+     "end": 45.616,
+     "sourceStart": 45.396,
+     "sourceEnd": 45.616
+    }
+   ]
+  },
+  {
+   "start": 46.096,
+   "end": 46.816,
+   "words": [
+    {
+     "text": "Poora",
+     "start": 46.096,
+     "end": 46.336,
+     "sourceStart": 46.096,
+     "sourceEnd": 46.336
+    },
+    {
+     "text": "setup",
+     "start": 46.376,
+     "end": 46.696,
+     "sourceStart": 46.376,
+     "sourceEnd": 46.696
+    },
+    {
+     "text": "aur",
+     "start": 46.736,
+     "end": 46.816,
+     "sourceStart": 46.736,
+     "sourceEnd": 46.816
+    }
+   ]
+  },
+  {
+   "start": 46.856,
+   "end": 47.576,
+   "words": [
+    {
+     "text": "ready",
+     "start": 46.856,
+     "end": 47.056,
+     "sourceStart": 46.856,
+     "sourceEnd": 47.056
+    },
+    {
+     "text": "prompt",
+     "start": 47.116,
+     "end": 47.416,
+     "sourceStart": 47.116,
+     "sourceEnd": 47.416
+    },
+    {
+     "text": "maine",
+     "start": 47.456,
+     "end": 47.576,
+     "sourceStart": 47.456,
+     "sourceEnd": 47.576
+    }
+   ]
+  },
+  {
+   "start": 47.636,
+   "end": 48.157,
+   "words": [
+    {
+     "text": "ek",
+     "start": 47.636,
+     "end": 47.696,
+     "sourceStart": 47.636,
+     "sourceEnd": 47.696
+    },
+    {
+     "text": "free",
+     "start": 47.756,
+     "end": 47.937,
+     "sourceStart": 47.756,
+     "sourceEnd": 47.937
+    },
+    {
+     "text": "guide",
+     "start": 47.957,
+     "end": 48.157,
+     "sourceStart": 47.957,
+     "sourceEnd": 48.157
+    }
+   ]
+  },
+  {
+   "start": 48.157,
+   "end": 48.577,
+   "words": [
+    {
+     "text": "mein",
+     "start": 48.157,
+     "end": 48.257,
+     "sourceStart": 48.157,
+     "sourceEnd": 48.257
+    },
+    {
+     "text": "daal",
+     "start": 48.277,
+     "end": 48.417,
+     "sourceStart": 48.277,
+     "sourceEnd": 48.417
+    },
+    {
+     "text": "diya",
+     "start": 48.457,
+     "end": 48.577,
+     "sourceStart": 48.457,
+     "sourceEnd": 48.577
+    }
+   ]
+  },
+  {
+   "start": 48.597,
+   "end": 48.677,
+   "words": [
+    {
+     "text": "hai.",
+     "start": 48.597,
+     "end": 48.677,
+     "sourceStart": 48.597,
+     "sourceEnd": 48.677
+    }
+   ]
+  },
+  {
+   "start": 49.177,
+   "end": 49.837,
+   "words": [
+    {
+     "text": "Chahiye",
+     "start": 49.177,
+     "end": 49.417,
+     "sourceStart": 49.177,
+     "sourceEnd": 49.417
+    },
+    {
+     "text": "to",
+     "start": 49.457,
+     "end": 49.517,
+     "sourceStart": 49.457,
+     "sourceEnd": 49.517
+    },
+    {
+     "text": "follow",
+     "start": 49.557,
+     "end": 49.837,
+     "sourceStart": 49.557,
+     "sourceEnd": 49.837
+    }
+   ]
+  },
+  {
+   "start": 49.837,
+   "end": 49.977,
+   "words": [
+    {
+     "text": "karo",
+     "start": 49.837,
+     "end": 49.977,
+     "sourceStart": 49.837,
+     "sourceEnd": 49.977
+    }
+   ]
+  },
+  {
+   "start": 50.317,
+   "end": 50.898,
+   "words": [
+    {
+     "text": "aur",
+     "start": 50.317,
+     "end": 50.437,
+     "sourceStart": 50.317,
+     "sourceEnd": 50.437
+    },
+    {
+     "text": "comment",
+     "start": 50.477,
+     "end": 50.758,
+     "sourceStart": 50.477,
+     "sourceEnd": 50.758
+    },
+    {
+     "text": "karo",
+     "start": 50.778,
+     "end": 50.898,
+     "sourceStart": 50.778,
+     "sourceEnd": 50.898
+    }
+   ]
+  },
+  {
+   "start": 50.978,
+   "end": 51.198,
+   "words": [
+    {
+     "text": "AGENT.",
+     "start": 50.978,
+     "end": 51.198,
+     "sourceStart": 50.978,
+     "sourceEnd": 51.198
+    }
+   ]
+  },
+  {
+   "start": 52.158,
+   "end": 53.118,
+   "words": [
+    {
+     "text": "Guide",
+     "start": 52.158,
+     "end": 52.498,
+     "sourceStart": 52.158,
+     "sourceEnd": 52.498
+    },
+    {
+     "text": "seedha",
+     "start": 52.538,
+     "end": 52.798,
+     "sourceStart": 52.538,
+     "sourceEnd": 52.798
+    },
+    {
+     "text": "aapke",
+     "start": 52.898,
+     "end": 53.118,
+     "sourceStart": 52.898,
+     "sourceEnd": 53.118
+    }
+   ]
+  },
+  {
+   "start": 53.198,
+   "end": 53.558,
+   "words": [
+    {
+     "text": "DM",
+     "start": 53.198,
+     "end": 53.398,
+     "sourceStart": 53.198,
+     "sourceEnd": 53.398
+    },
+    {
+     "text": "mein.",
+     "start": 53.438,
+     "end": 53.558,
+     "sourceStart": 53.438,
+     "sourceEnd": 53.558
+    }
+   ]
+  }
+ ]
+}

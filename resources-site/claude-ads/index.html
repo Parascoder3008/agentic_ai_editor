@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Ads Setup Guide · Free Meta Ads Audit with Claude | AI with Paras</title>
+<meta name="description" content="Step-by-step setup: install Claude Code, add the free Claude Ads plugin, connect your Meta ad data (read-only) and run your first ads audit. Hinglish guide by AI with Paras.">
+<meta property="og:title" content="Claude Ads Setup Guide: Meta Ads audit, minuton mein">
+<meta property="og:description" content="Free Claude plugin. Install → connect → audit. Step-by-step guide by AI with Paras.">
+<meta property="og:image" content="https://aiwithparas-resources.netlify.app/assets/og-claude-ads.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0C0E0F; --blue: #1A9FD1; --blue2: #3AB0D8; --navy: #11324C;
+    --text: #FFFFFF; --muted: #DFDDDF; --glass: rgba(255,255,255,.045); --line: rgba(255,255,255,.09);
+    --ok: #3ddc97; --warn: #ffc53d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--void); color: var(--text); font-family: Inter, system-ui, sans-serif; line-height: 1.6;
+    background-image: radial-gradient(900px 500px at 15% -10%, rgba(17,50,76,.75), transparent 60%),
+                      radial-gradient(700px 420px at 100% 10%, rgba(26,159,209,.16), transparent 60%); }
+  a { color: var(--blue2); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+  header.top { display: flex; align-items: center; gap: 10px; padding: 18px 0; }
+  header.top img { width: 34px; height: 34px; border-radius: 50%; }
+  header.top b { font-weight: 800; letter-spacing: .01em; }
+  header.top span { color: var(--muted); font-size: 13px; margin-left: auto; }
+  .hero { padding: 28px 0 8px; }
+  .kick { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--blue2);
+    border: 1px solid rgba(58,176,216,.4); border-radius: 999px; padding: 6px 14px; }
+  h1 { font-size: clamp(30px, 6.4vw, 46px); line-height: 1.12; font-weight: 900; letter-spacing: -.02em; margin: 16px 0 12px; }
+  h1 em { font-style: normal; color: var(--blue); }
+  .lead { color: var(--muted); font-size: 17px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 6px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800; font-size: 15px;
+    padding: 13px 20px; border-radius: 16px; color: #fff; background: var(--blue); box-shadow: 0 8px 30px rgba(26,159,209,.35); }
+  .btn.ghost { background: transparent; border: 1.5px solid rgba(58,176,216,.55); box-shadow: none; color: var(--text); }
+  .btn:hover { background: var(--blue2); }
+  .btn.ghost:hover { background: rgba(26,159,209,.12); }
+  .card { background: var(--glass); border: 1px solid var(--line); border-radius: 28px; padding: 24px 22px; margin-top: 18px; }
+  .need { display: grid; gap: 10px; margin-top: 10px; }
+  .need div { display: flex; gap: 12px; align-items: flex-start; }
+  .need i { font-style: normal; width: 26px; height: 26px; flex: none; border-radius: 50%; background: rgba(26,159,209,.18);
+    color: var(--blue2); display: grid; place-items: center; font-weight: 800; font-size: 14px; }
+  h2 { font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+  .step { position: relative; }
+  .step .num { position: absolute; top: 22px; right: 22px; font-size: 13px; font-weight: 800; color: var(--blue2);
+    letter-spacing: .16em; }
+  .step h2 { padding-right: 70px; }
+  .step p, .card p { color: var(--muted); margin-top: 8px; }
+  .step p b, .card p b { color: var(--text); }
+  .tabs { display: flex; gap: 8px; margin: 14px 0 6px; flex-wrap: wrap; }
+  .tab { font: inherit; font-size: 13px; font-weight: 700; color: var(--muted); background: transparent; border: 1px solid var(--line);
+    border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+  .tab.on { color: #fff; border-color: var(--blue); background: rgba(26,159,209,.18); }
+  .pane { display: none; } .pane.on { display: block; }
+  .code { position: relative; margin-top: 10px; background: #070909; border: 1px solid rgba(58,176,216,.25); border-radius: 16px;
+    padding: 14px 16px; padding-right: 86px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 14px; color: #e9f7ff;
+    overflow-x: auto; white-space: pre; }
+  .copy { position: absolute; top: 9px; right: 9px; font: 700 12px Inter, sans-serif; color: #fff; background: var(--navy);
+    border: 1px solid rgba(58,176,216,.45); border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+  .copy.done { background: var(--ok); color: #0C0E0F; border-color: var(--ok); }
+  .note { margin-top: 12px; font-size: 14px; color: var(--muted); border-left: 3px solid var(--blue); padding: 6px 0 6px 12px; }
+  .note.warn { border-color: var(--warn); }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+  td { padding: 9px 6px; border-top: 1px solid var(--line); vertical-align: top; color: var(--muted); }
+  td:first-child { font-family: "JetBrains Mono", monospace; color: #e9f7ff; white-space: nowrap; padding-right: 14px; }
+  @media (max-width: 560px) {
+    table, tbody, tr, td { display: block; width: 100%; }
+    tr { border-top: 1px solid var(--line); padding: 8px 0; }
+    td { border: 0; padding: 2px 0; }
+    td:first-child { white-space: normal; word-break: break-all; font-size: 13px; }
+    .code { white-space: pre-wrap; word-break: break-all; font-size: 13px; }
+  }
+  details { border-top: 1px solid var(--line); padding: 12px 0; }
+  details:first-of-type { border-top: 0; }
+  summary { cursor: pointer; font-weight: 700; }
+  details p { margin-top: 6px; }
+  .join { text-align: center; background: linear-gradient(160deg, rgba(17,50,76,.9), rgba(12,14,15,.9)); border-color: rgba(58,176,216,.4); }
+  .join img { width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--blue); }
+  .join h2 { margin-top: 10px; }
+  .join .cta { justify-content: center; }
+  footer { margin-top: 34px; color: #8d9399; font-size: 12.5px; text-align: center; line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <img src="../assets/logo.png" alt="Exponential World AI">
+    <b>AI with Paras</b>
+    <span>Free resource</span>
+  </header>
+
+  <section class="hero">
+    <span class="kick">FREE SETUP GUIDE</span>
+    <h1>Meta Ads audit, <em>minuton mein</em>, free Claude plugin se</h1>
+    <p class="lead"><b>Claude Ads</b> is a free, open-source plugin for Claude Code (33 skills, 25 AI agents). Yeh guide aapko zero se pehle audit tak le jayegi: install karo, ad data connect karo, aur bolo <b>"is hafte ke mere ads audit karo"</b>.</p>
+    <div class="cta">
+      <a class="btn" href="#step1">Setup start karo ↓</a>
+      <a class="btn ghost" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 Join WhatsApp Channel</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Shuru karne se pehle, yeh chahiye</h2>
+    <div class="need">
+      <div><i>1</i><p><b>Claude paid plan:</b> Pro, Max, Team ya Enterprise (ya Console/API account). Free claude.ai plan mein Claude Code nahi chalta.</p></div>
+      <div><i>2</i><p><b>Computer:</b> Windows 10+, macOS 13+, ya Linux. 4 GB+ RAM, internet.</p></div>
+      <div><i>3</i><p><b>Meta Ads Manager access:</b> jis ad account ka audit karna hai, usmein aapka access ho.</p></div>
+    </div>
+  </section>
+
+  <section class="card step" id="step1">
+    <span class="num">STEP 1</span>
+    <h2>Claude Code install karo</h2>
+    <p>Terminal kholo (Windows: <b>PowerShell</b>, Mac: <b>Terminal</b>) aur apne system ki command paste karo.</p>
+    <div class="tabs" data-group="os">
+      <button class="tab on" data-pane="win">Windows</button>
+      <button class="tab" data-pane="mac">Mac / Linux</button>
+      <button class="tab" data-pane="app">Desktop app (no terminal)</button>
+    </div>
+    <div class="pane on" data-pane="win"><div class="code">irm https://claude.ai/install.ps1 | iex</div></div>
+    <div class="pane" data-pane="mac"><div class="code">curl -fsSL https://claude.ai/install.sh | bash</div></div>
+    <div class="pane" data-pane="app"><p>Terminal nahi chahiye? Claude Desktop app download karo: <a href="https://claude.com/download">claude.com/download</a>, aur usmein <b>Code</b> tab kholo.</p></div>
+    <p>Install ke baad <b>naya terminal window</b> kholo aur check karo:</p>
+    <div class="code">claude --version</div>
+    <p class="note">Version number dikhe to install ho gaya. "claude is not recognized" aaye to terminal band karke dobara kholo.</p>
+  </section>
+
+  <section class="card step">
+    <span class="num">STEP 2</span>
+    <h2>Login karo</h2>
+    <p>Ek project folder banao (jaise <b>meta-audit</b>), us folder mein terminal kholo aur Claude Code start karo. Browser khulega, apne Claude account se login karo.</p>
+    <div class="code">claude</div>
+  </section>
+
+  <section class="card step">
+    <span class="num">STEP 3</span>
+    <h2>Claude Ads plugin add karo</h2>
+    <p>Claude Code ke andar yeh do commands ek-ek karke chalao:</p>
+    <div class="code">/plugin marketplace add agricidaniel/claude-ads</div>
+    <div class="code">/plugin install claude-ads@ai-marketing-hub-claude-ads</div>
+    <p class="note">Commands na dikhe to Claude Code band karke dobara <b>claude</b> chalao. Pehle purana version add kiya tha? Neeche Troubleshooting dekho.</p>
+  </section>
+
+  <section class="card step">
+    <span class="num">STEP 4</span>
+    <h2>Apna Meta ads data do (read-only)</h2>
+    <p>Plugin aapke exports ya read-only account access se audit karta hai. Sabse aasaan tareeka:</p>
+    <div class="tabs" data-group="data">
+      <button class="tab on" data-pane="csv">A · Ads Manager export (easiest)</button>
+      <button class="tab" data-pane="conn">B · Meta Ads connector</button>
+    </div>
+    <div class="pane on" data-pane="csv">
+      <p><b>Meta Ads Manager</b> kholo → last 30 days select karo → <b>Campaigns, Ad sets aur Ads</b> ki report <b>Export (CSV)</b> karo. Spend, impressions, clicks, CTR, CPM, results aur cost per result columns rakho. File ko apne <b>meta-audit</b> folder mein save karo.</p>
+    </div>
+    <div class="pane" data-pane="conn">
+      <p>Agar aapke Claude account ke <b>Settings → Connectors</b> mein <b>Meta Ads</b> connector available hai, use connect karo. Yeh read-only data deta hai, export ki zaroorat nahi.</p>
+    </div>
+    <p class="note warn">Access tokens ya passwords kabhi chat mein paste mat karo. Plugin by default <b>read-only</b> hai.</p>
+  </section>
+
+  <section class="card step">
+    <span class="num">STEP 5</span>
+    <h2>Pehla audit chalao 🚀</h2>
+    <p>Pehle ek baar setup (account, KPI aur guardrails profile), phir Meta audit:</p>
+    <div class="code">/claude-ads:ads setup</div>
+    <div class="code">/claude-ads:ads audit meta</div>
+    <p>Ya seedha Hinglish mein bolo: <b>"is hafte ke mere Meta ads audit karo"</b>. Aapko milega: kaunsa ad kaam kar raha hai, kaunsa paisa jala raha hai, tracking gaps, creative fatigue aur next steps.</p>
+  </section>
+
+  <section class="card step">
+    <span class="num">BONUS</span>
+    <h2>Naye ad creatives banao</h2>
+    <p>Image generation provider (jaise <b>Higgsfield MCP</b>) Claude Code mein connect karo, phir:</p>
+    <div class="code">/claude-ads:ads create</div>
+    <p class="note"><b>Safety:</b> account mein koi change aapke approval ke bina nahi hota. <b>/claude-ads:ads launch --draft</b> sirf draft plan banata hai.</p>
+  </section>
+
+  <section class="card">
+    <h2>Commands cheat sheet</h2>
+    <table>
+      <tr><td>/claude-ads:ads setup</td><td>Account, KPI, privacy aur guardrail profile</td></tr>
+      <tr><td>/claude-ads:ads audit meta</td><td>Meta Ads ka evidence-backed audit</td></tr>
+      <tr><td>/claude-ads:ads plan</td><td>Campaign, budget aur measurement plan</td></tr>
+      <tr><td>/claude-ads:ads create</td><td>Ad copy, image aur video assets</td></tr>
+      <tr><td>/claude-ads:ads monitor</td><td>Pacing, delivery, tracking aur fatigue check</td></tr>
+      <tr><td>/claude-ads:ads optimize --draft</td><td>Optimization changes ka draft (apply nahi karta)</td></tr>
+      <tr><td>/claude-ads:ads report</td><td>Report render karta hai</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>Troubleshooting</h2>
+    <details><summary>"claude is not recognized / command not found"</summary>
+      <p>Install ke baad naya terminal kholo. Phir bhi na chale to official guide: <a href="https://code.claude.com/docs/en/troubleshoot-install">Troubleshoot installation</a>.</p></details>
+    <details><summary>Login nahi ho raha / "no access"</summary>
+      <p>Claude Code ke liye Pro, Max, Team, Enterprise ya Console account chahiye. Free plan pe nahi chalta.</p></details>
+    <details><summary>Plugin install error (pehle purana version add kiya tha)</summary>
+      <p>Purana alias hata ke dobara add karo:</p>
+      <div class="code">/plugin marketplace remove agricidaniel-claude-ads</div>
+      <div class="code">/plugin marketplace add agricidaniel/claude-ads</div>
+      <div class="code">/plugin install claude-ads@ai-marketing-hub-claude-ads</div></details>
+    <details><summary>Audit mein data kam aa raha hai</summary>
+      <p>Export mein campaign, ad set aur ad, teeno levels rakho, aur results/cost per result columns zaroor include karo. Missing data ko plugin "unknown" mark karta hai, guess nahi karta.</p></details>
+  </section>
+
+  <section class="card join">
+    <img src="../assets/paras_face.jpg" alt="Paras Arora">
+    <h2>Aise hi free AI tools har hafte</h2>
+    <p>WhatsApp channel join karo: setup guides, new AI tools aur workflows, seedha aapke phone pe.</p>
+    <div class="cta">
+      <a class="btn" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 Join WhatsApp Channel</a>
+      <a class="btn ghost" href="https://github.com/AgriciDaniel/claude-ads">Claude Ads on GitHub</a>
+    </div>
+    <p style="margin-top:12px;font-size:14px">Follow <a href="https://www.instagram.com/ai_with_paras/">@ai_with_paras</a> · Free community: <a href="https://www.skool.com/exponential-world-ai-2398">Skool</a></p>
+  </section>
+
+  <footer>
+    Education only. Results aapke ad account, data aur setup par depend karte hain; koi guaranteed result nahi.<br>
+    Claude Ads is an open-source project by AgriciDaniel (MIT license). Not affiliated with Anthropic or Meta.<br>
+    © Exponential World AI · AI with Paras
+  </footer>
+</div>
+<script>
+  document.querySelectorAll('.code').forEach(function (el) {
+    var b = document.createElement('button');
+    b.className = 'copy'; b.textContent = 'Copy';
+    b.addEventListener('click', function () {
+      var t = el.firstChild.textContent.trim();
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+        b.textContent = 'Copied ✓'; b.classList.add('done');
+        setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('done'); }, 1600);
+      }).catch(function () { b.textContent = 'Select & copy'; });
+    });
+    el.appendChild(b);
+  });
+  document.querySelectorAll('.tabs').forEach(function (tabs) {
+    var card = tabs.parentElement;
+    tabs.querySelectorAll('.tab').forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.querySelectorAll('.tab').forEach(function (x) { x.classList.toggle('on', x === tab); });
+        card.querySelectorAll('.pane').forEach(function (p) { p.classList.toggle('on', p.dataset.pane === tab.dataset.pane); });
+      });
+    });
+  });
+  if (/Mac|iPhone|iPad/.test(navigator.platform || '')) {
+    var mac = document.querySelector('.tab[data-pane="mac"]'); if (mac) mac.click();
+  }
+</script>
+</body>
+</html>

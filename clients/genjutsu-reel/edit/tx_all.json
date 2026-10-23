@@ -1,0 +1,3263 @@
+{
+ "insp": {
+  "lang": "en",
+  "segments": [
+   {
+    "start": 0.6200000000000001,
+    "end": 3.64,
+    "text": " If you don't like your car, you can change it just like that.",
+    "words": [
+     {
+      "text": " If",
+      "start": 0.6200000000000001,
+      "end": 1.02
+     },
+     {
+      "text": " you",
+      "start": 1.02,
+      "end": 1.2
+     },
+     {
+      "text": " don't",
+      "start": 1.2,
+      "end": 1.32
+     },
+     {
+      "text": " like",
+      "start": 1.32,
+      "end": 1.54
+     },
+     {
+      "text": " your",
+      "start": 1.54,
+      "end": 1.72
+     },
+     {
+      "text": " car,",
+      "start": 1.72,
+      "end": 1.92
+     },
+     {
+      "text": " you",
+      "start": 2.44,
+      "end": 2.46
+     },
+     {
+      "text": " can",
+      "start": 2.46,
+      "end": 2.64
+     },
+     {
+      "text": " change",
+      "start": 2.64,
+      "end": 2.84
+     },
+     {
+      "text": " it",
+      "start": 2.84,
+      "end": 3.0
+     },
+     {
+      "text": " just",
+      "start": 3.0,
+      "end": 3.16
+     },
+     {
+      "text": " like",
+      "start": 3.16,
+      "end": 3.32
+     },
+     {
+      "text": " that.",
+      "start": 3.32,
+      "end": 3.64
+     }
+    ]
+   },
+   {
+    "start": 3.8,
+    "end": 5.16,
+    "text": " Don't like the character in the video?",
+    "words": [
+     {
+      "text": " Don't",
+      "start": 3.8,
+      "end": 3.94
+     },
+     {
+      "text": " like",
+      "start": 3.94,
+      "end": 4.12
+     },
+     {
+      "text": " the",
+      "start": 4.12,
+      "end": 4.32
+     },
+     {
+      "text": " character",
+      "start": 4.32,
+      "end": 4.56
+     },
+     {
+      "text": " in",
+      "start": 4.56,
+      "end": 4.72
+     },
+     {
+      "text": " the",
+      "start": 4.72,
+      "end": 4.86
+     },
+     {
+      "text": " video?",
+      "start": 4.86,
+      "end": 5.16
+     }
+    ]
+   },
+   {
+    "start": 5.5,
+    "end": 6.16,
+    "text": " Change that too.",
+    "words": [
+     {
+      "text": " Change",
+      "start": 5.5,
+      "end": 5.72
+     },
+     {
+      "text": " that",
+      "start": 5.72,
+      "end": 5.9
+     },
+     {
+      "text": " too.",
+      "start": 5.9,
+      "end": 6.16
+     }
+    ]
+   },
+   {
+    "start": 6.56,
+    "end": 8.5,
+    "text": " And you can sell anything that you want.",
+    "words": [
+     {
+      "text": " And",
+      "start": 6.56,
+      "end": 6.9
+     },
+     {
+      "text": " you",
+      "start": 6.9,
+      "end": 7.14
+     },
+     {
+      "text": " can",
+      "start": 7.14,
+      "end": 7.3
+     },
+     {
+      "text": " sell",
+      "start": 7.3,
+      "end": 7.54
+     },
+     {
+      "text": " anything",
+      "start": 7.54,
+      "end": 7.88
+     },
+     {
+      "text": " that",
+      "start": 7.88,
+      "end": 8.1
+     },
+     {
+      "text": " you",
+      "start": 8.1,
+      "end": 8.28
+     },
+     {
+      "text": " want.",
+      "start": 8.28,
+      "end": 8.5
+     }
+    ]
+   },
+   {
+    "start": 8.78,
+    "end": 10.92,
+    "text": " Let me show you how you can do this on ChatGPT.",
+    "words": [
+     {
+      "text": " Let",
+      "start": 8.78,
+      "end": 8.94
+     },
+     {
+      "text": " me",
+      "start": 8.94,
+      "end": 9.06
+     },
+     {
+      "text": " show",
+      "start": 9.06,
+      "end": 9.24
+     },
+     {
+      "text": " you",
+      "start": 9.24,
+      "end": 9.42
+     },
+     {
+      "text": " how",
+      "start": 9.42,
+      "end": 9.62
+     },
+     {
+      "text": " you",
+      "start": 9.62,
+      "end": 9.76
+     },
+     {
+      "text": " can",
+      "start": 9.76,
+      "end": 9.88
+     },
+     {
+      "text": " do",
+      "start": 9.88,
+      "end": 9.96
+     },
+     {
+      "text": " this",
+      "start": 9.96,
+      "end": 10.16
+     },
+     {
+      "text": " on",
+      "start": 10.16,
+      "end": 10.38
+     },
+     {
+      "text": " ChatGPT.",
+      "start": 10.38,
+      "end": 10.92
+     }
+    ]
+   },
+   {
+    "start": 11.0,
+    "end": 14.06,
+    "text": " First of all, go on ChatGPT, select plugins and connect Higgs Field.",
+    "words": [
+     {
+      "text": " First",
+      "start": 11.0,
+      "end": 11.12
+     },
+     {
+      "text": " of",
+      "start": 11.12,
+      "end": 11.28
+     },
+     {
+      "text": " all,",
+      "start": 11.28,
+      "end": 11.34
+     },
+     {
+      "text": " go",
+      "start": 11.4,
+      "end": 11.56
+     },
+     {
+      "text": " on",
+      "start": 11.56,
+      "end": 11.68
+     },
+     {
+      "text": " ChatGPT,",
+      "start": 11.68,
+      "end": 12.32
+     },
+     {
+      "text": " select",
+      "start": 12.38,
+      "end": 12.64
+     },
+     {
+      "text": " plugins",
+      "start": 12.64,
+      "end": 13.04
+     },
+     {
+      "text": " and",
+      "start": 13.04,
+      "end": 13.34
+     },
+     {
+      "text": " connect",
+      "start": 13.34,
+      "end": 13.58
+     },
+     {
+      "text": " Higgs",
+      "start": 13.58,
+      "end": 13.8
+     },
+     {
+      "text": " Field.",
+      "start": 13.8,
+      "end": 14.06
+     }
+    ]
+   },
+   {
+    "start": 14.22,
+    "end": 16.18,
+    "text": " Then on the chat, upload your original video",
+    "words": [
+     {
+      "text": " Then",
+      "start": 14.22,
+      "end": 14.4
+     },
+     {
+      "text": " on",
+      "start": 14.4,
+      "end": 14.56
+     },
+     {
+      "text": " the",
+      "start": 14.56,
+      "end": 14.76
+     },
+     {
+      "text": " chat,",
+      "start": 14.76,
+      "end": 14.96
+     },
+     {
+      "text": " upload",
+      "start": 15.04,
+      "end": 15.34
+     },
+     {
+      "text": " your",
+      "start": 15.34,
+      "end": 15.54
+     },
+     {
+      "text": " original",
+      "start": 15.54,
+      "end": 15.84
+     },
+     {
+      "text": " video",
+      "start": 15.84,
+      "end": 16.18
+     }
+    ]
+   },
+   {
+    "start": 16.18,
+    "end": 18.58,
+    "text": " and whatever the characters you want it to swap into,",
+    "words": [
+     {
+      "text": " and",
+      "start": 16.18,
+      "end": 16.52
+     },
+     {
+      "text": " whatever",
+      "start": 16.52,
+      "end": 16.86
+     },
+     {
+      "text": " the",
+      "start": 16.86,
+      "end": 17.18
+     },
+     {
+      "text": " characters",
+      "start": 17.18,
+      "end": 17.42
+     },
+     {
+      "text": " you",
+      "start": 17.42,
+      "end": 17.6
+     },
+     {
+      "text": " want",
+      "start": 17.6,
+      "end": 17.8
+     },
+     {
+      "text": " it",
+      "start": 17.8,
+      "end": 17.92
+     },
+     {
+      "text": " to",
+      "start": 17.92,
+      "end": 18.06
+     },
+     {
+      "text": " swap",
+      "start": 18.06,
+      "end": 18.26
+     },
+     {
+      "text": " into,",
+      "start": 18.26,
+      "end": 18.58
+     }
+    ]
+   },
+   {
+    "start": 18.88,
+    "end": 22.16,
+    "text": " like clothes, location, objects, upload all of it.",
+    "words": [
+     {
+      "text": " like",
+      "start": 18.88,
+      "end": 19.0
+     },
+     {
+      "text": " clothes,",
+      "start": 19.0,
+      "end": 19.46
+     },
+     {
+      "text": " location,",
+      "start": 19.72,
+      "end": 20.1
+     },
+     {
+      "text": " objects,",
+      "start": 20.52,
+      "end": 20.9
+     },
+     {
+      "text": " upload",
+      "start": 21.34,
+      "end": 21.56
+     },
+     {
+      "text": " all",
+      "start": 21.56,
+      "end": 21.92
+     },
+     {
+      "text": " of",
+      "start": 21.92,
+      "end": 22.02
+     },
+     {
+      "text": " it.",
+      "start": 22.02,
+      "end": 22.16
+     }
+    ]
+   },
+   {
+    "start": 22.3,
+    "end": 24.68,
+    "text": " Then in one prompt, type forward slash Jinjitsu",
+    "words": [
+     {
+      "text": " Then",
+      "start": 22.3,
+      "end": 22.5
+     },
+     {
+      "text": " in",
+      "start": 22.5,
+      "end": 22.72
+     },
+     {
+      "text": " one",
+      "start": 22.72,
+      "end": 22.94
+     },
+     {
+      "text": " prompt,",
+      "start": 22.94,
+      "end": 23.22
+     },
+     {
+      "text": " type",
+      "start": 23.34,
+      "end": 23.62
+     },
+     {
+      "text": " forward",
+      "start": 23.62,
+      "end": 23.96
+     },
+     {
+      "text": " slash",
+      "start": 23.96,
+      "end": 24.22
+     },
+     {
+      "text": " Jinjitsu",
+      "start": 24.22,
+      "end": 24.68
+     }
+    ]
+   },
+   {
+    "start": 24.68,
+    "end": 27.56,
+    "text": " and list down all the timestamps where you want transitions to happen.",
+    "words": [
+     {
+      "text": " and",
+      "start": 24.68,
+      "end": 25.06
+     },
+     {
+      "text": " list",
+      "start": 25.06,
+      "end": 25.18
+     },
+     {
+      "text": " down",
+      "start": 25.18,
+      "end": 25.36
+     },
+     {
+      "text": " all",
+      "start": 25.36,
+      "end": 25.54
+     },
+     {
+      "text": " the",
+      "start": 25.54,
+      "end": 25.72
+     },
+     {
+      "text": " timestamps",
+      "start": 25.72,
+      "end": 26.2
+     },
+     {
+      "text": " where",
+      "start": 26.2,
+      "end": 26.4
+     },
+     {
+      "text": " you",
+      "start": 26.4,
+      "end": 26.52
+     },
+     {
+      "text": " want",
+      "start": 26.52,
+      "end": 26.74
+     },
+     {
+      "text": " transitions",
+      "start": 26.74,
+      "end": 27.16
+     },
+     {
+      "text": " to",
+      "start": 27.16,
+      "end": 27.44
+     },
+     {
+      "text": " happen.",
+      "start": 27.44,
+      "end": 27.56
+     }
+    ]
+   },
+   {
+    "start": 27.56,
+    "end": 30.44,
+    "text": " Also tell it to keep the location, the dialogues, the actions",
+    "words": [
+     {
+      "text": " Also",
+      "start": 27.56,
+      "end": 27.98
+     },
+     {
+      "text": " tell",
+      "start": 27.98,
+      "end": 28.1
+     },
+     {
+      "text": " it",
+      "start": 28.1,
+      "end": 28.22
+     },
+     {
+      "text": " to",
+      "start": 28.22,
+      "end": 28.36
+     },
+     {
+      "text": " keep",
+      "start": 28.36,
+      "end": 28.46
+     },
+     {
+      "text": " the",
+      "start": 28.46,
+      "end": 28.68
+     },
+     {
+      "text": " location,",
+      "start": 28.68,
+      "end": 29.08
+     },
+     {
+      "text": " the",
+      "start": 29.36,
+      "end": 29.54
+     },
+     {
+      "text": " dialogues,",
+      "start": 29.54,
+      "end": 29.76
+     },
+     {
+      "text": " the",
+      "start": 29.94,
+      "end": 30.08
+     },
+     {
+      "text": " actions",
+      "start": 30.08,
+      "end": 30.44
+     }
+    ]
+   },
+   {
+    "start": 30.44,
+    "end": 31.86,
+    "text": " identical to the original video.",
+    "words": [
+     {
+      "text": " identical",
+      "start": 30.44,
+      "end": 31.04
+     },
+     {
+      "text": " to",
+      "start": 31.04,
+      "end": 31.26
+     },
+     {
+      "text": " the",
+      "start": 31.26,
+      "end": 31.4
+     },
+     {
+      "text": " original",
+      "start": 31.4,
+      "end": 31.6
+     },
+     {
+      "text": " video.",
+      "start": 31.6,
+      "end": 31.86
+     }
+    ]
+   },
+   {
+    "start": 32.06,
+    "end": 33.22,
+    "text": " Oh, I almost forgot.",
+    "words": [
+     {
+      "text": " Oh,",
+      "start": 32.06,
+      "end": 32.2
+     },
+     {
+      "text": " I",
+      "start": 32.42,
+      "end": 32.66
+     },
+     {
+      "text": " almost",
+      "start": 32.66,
+      "end": 32.88
+     },
+     {
+      "text": " forgot.",
+      "start": 32.88,
+      "end": 33.22
+     }
+    ]
+   },
+   {
+    "start": 33.4,
+    "end": 35.74,
+    "text": " Don't forget to connect Higgs Field on the chat before you press enter.",
+    "words": [
+     {
+      "text": " Don't",
+      "start": 33.4,
+      "end": 33.6
+     },
+     {
+      "text": " forget",
+      "start": 33.6,
+      "end": 33.74
+     },
+     {
+      "text": " to",
+      "start": 33.74,
+      "end": 33.96
+     },
+     {
+      "text": " connect",
+      "start": 33.96,
+      "end": 34.12
+     },
+     {
+      "text": " Higgs",
+      "start": 34.12,
+      "end": 34.36
+     },
+     {
+      "text": " Field",
+      "start": 34.36,
+      "end": 34.46
+     },
+     {
+      "text": " on",
+      "start": 34.46,
+      "end": 34.64
+     },
+     {
+      "text": " the",
+      "start": 34.64,
+      "end": 34.78
+     },
+     {
+      "text": " chat",
+      "start": 34.78,
+      "end": 34.92
+     },
+     {
+      "text": " before",
+      "start": 34.92,
+      "end": 35.2
+     },
+     {
+      "text": " you",
+      "start": 35.2,
+      "end": 35.4
+     },
+     {
+      "text": " press",
+      "start": 35.4,
+      "end": 35.56
+     },
+     {
+      "text": " enter.",
+      "start": 35.56,
+      "end": 35.74
+     }
+    ]
+   },
+   {
+    "start": 35.94,
+    "end": 38.26,
+    "text": " And just like that, you will get the video just like mine.",
+    "words": [
+     {
+      "text": " And",
+      "start": 35.94,
+      "end": 36.1
+     },
+     {
+      "text": " just",
+      "start": 36.1,
+      "end": 36.28
+     },
+     {
+      "text": " like",
+      "start": 36.28,
+      "end": 36.46
+     },
+     {
+      "text": " that,",
+      "start": 36.46,
+      "end": 36.66
+     },
+     {
+      "text": " you",
+      "start": 36.76,
+      "end": 36.8
+     },
+     {
+      "text": " will",
+      "start": 36.8,
+      "end": 36.98
+     },
+     {
+      "text": " get",
+      "start": 36.98,
+      "end": 37.1
+     },
+     {
+      "text": " the",
+      "start": 37.1,
+      "end": 37.3
+     },
+     {
+      "text": " video",
+      "start": 37.3,
+      "end": 37.54
+     },
+     {
+      "text": " just",
+      "start": 37.54,
+      "end": 37.9
+     },
+     {
+      "text": " like",
+      "start": 37.9,
+      "end": 38.12
+     },
+     {
+      "text": " mine.",
+      "start": 38.12,
+      "end": 38.26
+     }
+    ]
+   },
+   {
+    "start": 38.42,
+    "end": 40.56,
+    "text": " Now if you want my prompt guide and the link for the plugin,",
+    "words": [
+     {
+      "text": " Now",
+      "start": 38.42,
+      "end": 38.58
+     },
+     {
+      "text": " if",
+      "start": 38.58,
+      "end": 38.72
+     },
+     {
+      "text": " you",
+      "start": 38.72,
+      "end": 38.86
+     },
+     {
+      "text": " want",
+      "start": 38.86,
+      "end": 38.94
+     },
+     {
+      "text": " my",
+      "start": 38.94,
+      "end": 39.1
+     },
+     {
+      "text": " prompt",
+      "start": 39.1,
+      "end": 39.32
+     },
+     {
+      "text": " guide",
+      "start": 39.32,
+      "end": 39.58
+     },
+     {
+      "text": " and",
+      "start": 39.58,
+      "end": 39.8
+     },
+     {
+      "text": " the",
+      "start": 39.8,
+      "end": 39.92
+     },
+     {
+      "text": " link",
+      "start": 39.92,
+      "end": 40.0
+     },
+     {
+      "text": " for",
+      "start": 40.0,
+      "end": 40.2
+     },
+     {
+      "text": " the",
+      "start": 40.2,
+      "end": 40.36
+     },
+     {
+      "text": " plugin,",
+      "start": 40.36,
+      "end": 40.56
+     }
+    ]
+   },
+   {
+    "start": 40.84,
+    "end": 42.54,
+    "text": " just comment crazy and I'll send you the link.",
+    "words": [
+     {
+      "text": " just",
+      "start": 40.84,
+      "end": 41.02
+     },
+     {
+      "text": " comment",
+      "start": 41.02,
+      "end": 41.24
+     },
+     {
+      "text": " crazy",
+      "start": 41.24,
+      "end": 41.64
+     },
+     {
+      "text": " and",
+      "start": 41.64,
+      "end": 41.94
+     },
+     {
+      "text": " I'll",
+      "start": 41.94,
+      "end": 42.12
+     },
+     {
+      "text": " send",
+      "start": 42.12,
+      "end": 42.22
+     },
+     {
+      "text": " you",
+      "start": 42.22,
+      "end": 42.38
+     },
+     {
+      "text": " the",
+      "start": 42.38,
+      "end": 42.46
+     },
+     {
+      "text": " link.",
+      "start": 42.46,
+      "end": 42.54
+     }
+    ]
+   }
+  ]
+ },
+ "raw": {
+  "lang": "hi",
+  "segments": [
+   {
+    "start": 0.0,
+    "end": 4.02,
+    "text": " बाई आजकल सोश्यल मीडिया पे कुछ भी फ्लेक्स करना बहुत असान है।",
+    "words": [
+     {
+      "text": " बाई",
+      "start": 0.0,
+      "end": 0.84
+     },
+     {
+      "text": " आजकल",
+      "start": 0.84,
+      "end": 1.26
+     },
+     {
+      "text": " सोश्यल",
+      "start": 1.26,
+      "end": 1.74
+     },
+     {
+      "text": " मीडिया",
+      "start": 1.74,
+      "end": 2.06
+     },
+     {
+      "text": " पे",
+      "start": 2.06,
+      "end": 2.14
+     },
+     {
+      "text": " कुछ",
+      "start": 2.14,
+      "end": 2.46
+     },
+     {
+      "text": " भी",
+      "start": 2.46,
+      "end": 2.58
+     },
+     {
+      "text": " फ्लेक्स",
+      "start": 2.58,
+      "end": 2.88
+     },
+     {
+      "text": " करना",
+      "start": 2.88,
+      "end": 3.12
+     },
+     {
+      "text": " बहुत",
+      "start": 3.12,
+      "end": 3.36
+     },
+     {
+      "text": " असान",
+      "start": 3.36,
+      "end": 3.66
+     },
+     {
+      "text": " है।",
+      "start": 3.66,
+      "end": 4.02
+     }
+    ]
+   },
+   {
+    "start": 4.02,
+    "end": 6.58,
+    "text": " जैसे कि मेरे पास रोल्स रॉयस नहीं है।",
+    "words": [
+     {
+      "text": " जैसे",
+      "start": 4.02,
+      "end": 4.32
+     },
+     {
+      "text": " कि",
+      "start": 4.32,
+      "end": 4.5
+     },
+     {
+      "text": " मेरे",
+      "start": 4.5,
+      "end": 4.8
+     },
+     {
+      "text": " पास",
+      "start": 4.8,
+      "end": 5.08
+     },
+     {
+      "text": " रोल्स",
+      "start": 5.08,
+      "end": 5.44
+     },
+     {
+      "text": " रॉयस",
+      "start": 5.44,
+      "end": 5.62
+     },
+     {
+      "text": " नहीं",
+      "start": 5.62,
+      "end": 5.8
+     },
+     {
+      "text": " है।",
+      "start": 5.8,
+      "end": 6.58
+     }
+    ]
+   },
+   {
+    "start": 6.58,
+    "end": 7.62,
+    "text": " बढ़ियान दिख रही है।",
+    "words": [
+     {
+      "text": " बढ़ियान",
+      "start": 6.58,
+      "end": 6.84
+     },
+     {
+      "text": " दिख",
+      "start": 6.84,
+      "end": 7.0
+     },
+     {
+      "text": " रही",
+      "start": 7.0,
+      "end": 7.12
+     },
+     {
+      "text": " है।",
+      "start": 7.12,
+      "end": 7.62
+     }
+    ]
+   },
+   {
+    "start": 7.62,
+    "end": 10.62,
+    "text": " और मेरे कोई हात में वे करोड रॉपी की घड़ी नहीं है।",
+    "words": [
+     {
+      "text": " और",
+      "start": 7.62,
+      "end": 7.8
+     },
+     {
+      "text": " मेरे",
+      "start": 7.8,
+      "end": 8.08
+     },
+     {
+      "text": " कोई",
+      "start": 8.08,
+      "end": 8.18
+     },
+     {
+      "text": " हात",
+      "start": 8.18,
+      "end": 8.5
+     },
+     {
+      "text": " में",
+      "start": 8.5,
+      "end": 8.66
+     },
+     {
+      "text": " वे",
+      "start": 8.66,
+      "end": 8.76
+     },
+     {
+      "text": " करोड",
+      "start": 8.76,
+      "end": 9.02
+     },
+     {
+      "text": " रॉपी",
+      "start": 9.02,
+      "end": 9.28
+     },
+     {
+      "text": " की",
+      "start": 9.28,
+      "end": 9.34
+     },
+     {
+      "text": " घड़ी",
+      "start": 9.34,
+      "end": 9.54
+     },
+     {
+      "text": " नहीं",
+      "start": 9.54,
+      "end": 9.72
+     },
+     {
+      "text": " है।",
+      "start": 9.72,
+      "end": 10.62
+     }
+    ]
+   },
+   {
+    "start": 10.62,
+    "end": 11.700000000000001,
+    "text": " बढ़ियान पे दिख रही है।",
+    "words": [
+     {
+      "text": " बढ़ियान",
+      "start": 10.62,
+      "end": 10.98
+     },
+     {
+      "text": " पे",
+      "start": 10.98,
+      "end": 11.0
+     },
+     {
+      "text": " दिख",
+      "start": 11.0,
+      "end": 11.2
+     },
+     {
+      "text": " रही",
+      "start": 11.2,
+      "end": 11.34
+     },
+     {
+      "text": " है।",
+      "start": 11.34,
+      "end": 11.700000000000001
+     }
+    ]
+   },
+   {
+    "start": 11.7,
+    "end": 14.26,
+    "text": " उसके लावा पीचे मेरे पास कोई मैंचेन नहीं है।",
+    "words": [
+     {
+      "text": " उसके",
+      "start": 11.7,
+      "end": 12.0
+     },
+     {
+      "text": " लावा",
+      "start": 12.0,
+      "end": 12.22
+     },
+     {
+      "text": " पीचे",
+      "start": 12.22,
+      "end": 12.52
+     },
+     {
+      "text": " मेरे",
+      "start": 12.52,
+      "end": 12.7
+     },
+     {
+      "text": " पास",
+      "start": 12.7,
+      "end": 12.8
+     },
+     {
+      "text": " कोई",
+      "start": 12.8,
+      "end": 12.94
+     },
+     {
+      "text": " मैंचेन",
+      "start": 12.94,
+      "end": 13.38
+     },
+     {
+      "text": " नहीं",
+      "start": 13.38,
+      "end": 13.52
+     },
+     {
+      "text": " है।",
+      "start": 13.52,
+      "end": 14.26
+     }
+    ]
+   },
+   {
+    "start": 14.26,
+    "end": 15.44,
+    "text": " बढ़ियान तो दिख रहा है नहीं।",
+    "words": [
+     {
+      "text": " बढ़ियान",
+      "start": 14.26,
+      "end": 14.54
+     },
+     {
+      "text": " तो",
+      "start": 14.54,
+      "end": 14.6
+     },
+     {
+      "text": " दिख",
+      "start": 14.6,
+      "end": 14.82
+     },
+     {
+      "text": " रहा",
+      "start": 14.82,
+      "end": 14.98
+     },
+     {
+      "text": " है",
+      "start": 14.98,
+      "end": 15.02
+     },
+     {
+      "text": " नहीं।",
+      "start": 15.02,
+      "end": 15.44
+     }
+    ]
+   }
+  ]
+ },
+ "gen": {
+  "lang": "hi",
+  "segments": [
+   {
+    "start": 0.0,
+    "end": 4.02,
+    "text": " बाई आजकल सोश्यल मीडिया पे कुछ भी फ्लेक्स करना बहुत असान है।",
+    "words": [
+     {
+      "text": " बाई",
+      "start": 0.0,
+      "end": 0.84
+     },
+     {
+      "text": " आजकल",
+      "start": 0.84,
+      "end": 1.26
+     },
+     {
+      "text": " सोश्यल",
+      "start": 1.26,
+      "end": 1.76
+     },
+     {
+      "text": " मीडिया",
+      "start": 1.76,
+      "end": 2.06
+     },
+     {
+      "text": " पे",
+      "start": 2.06,
+      "end": 2.14
+     },
+     {
+      "text": " कुछ",
+      "start": 2.14,
+      "end": 2.46
+     },
+     {
+      "text": " भी",
+      "start": 2.46,
+      "end": 2.58
+     },
+     {
+      "text": " फ्लेक्स",
+      "start": 2.58,
+      "end": 2.88
+     },
+     {
+      "text": " करना",
+      "start": 2.88,
+      "end": 3.12
+     },
+     {
+      "text": " बहुत",
+      "start": 3.12,
+      "end": 3.36
+     },
+     {
+      "text": " असान",
+      "start": 3.36,
+      "end": 3.66
+     },
+     {
+      "text": " है।",
+      "start": 3.66,
+      "end": 4.02
+     }
+    ]
+   },
+   {
+    "start": 4.02,
+    "end": 6.58,
+    "text": " जैसे कि मेरे पास रोल्स रॉयस नहीं है।",
+    "words": [
+     {
+      "text": " जैसे",
+      "start": 4.02,
+      "end": 4.32
+     },
+     {
+      "text": " कि",
+      "start": 4.32,
+      "end": 4.48
+     },
+     {
+      "text": " मेरे",
+      "start": 4.48,
+      "end": 4.8
+     },
+     {
+      "text": " पास",
+      "start": 4.8,
+      "end": 5.08
+     },
+     {
+      "text": " रोल्स",
+      "start": 5.08,
+      "end": 5.44
+     },
+     {
+      "text": " रॉयस",
+      "start": 5.44,
+      "end": 5.62
+     },
+     {
+      "text": " नहीं",
+      "start": 5.62,
+      "end": 5.78
+     },
+     {
+      "text": " है।",
+      "start": 5.78,
+      "end": 6.58
+     }
+    ]
+   },
+   {
+    "start": 6.58,
+    "end": 7.62,
+    "text": " बडियान दिख रही है।",
+    "words": [
+     {
+      "text": " बडियान",
+      "start": 6.58,
+      "end": 6.84
+     },
+     {
+      "text": " दिख",
+      "start": 6.84,
+      "end": 7.0
+     },
+     {
+      "text": " रही",
+      "start": 7.0,
+      "end": 7.12
+     },
+     {
+      "text": " है।",
+      "start": 7.12,
+      "end": 7.62
+     }
+    ]
+   },
+   {
+    "start": 7.62,
+    "end": 10.62,
+    "text": " और मेरे कोई हात में वे करोड़ रॉपी की घड़ी नहीं है।",
+    "words": [
+     {
+      "text": " और",
+      "start": 7.62,
+      "end": 7.8
+     },
+     {
+      "text": " मेरे",
+      "start": 7.8,
+      "end": 8.08
+     },
+     {
+      "text": " कोई",
+      "start": 8.08,
+      "end": 8.18
+     },
+     {
+      "text": " हात",
+      "start": 8.18,
+      "end": 8.52
+     },
+     {
+      "text": " में",
+      "start": 8.52,
+      "end": 8.66
+     },
+     {
+      "text": " वे",
+      "start": 8.66,
+      "end": 8.76
+     },
+     {
+      "text": " करोड़",
+      "start": 8.76,
+      "end": 9.08
+     },
+     {
+      "text": " रॉपी",
+      "start": 9.08,
+      "end": 9.28
+     },
+     {
+      "text": " की",
+      "start": 9.28,
+      "end": 9.34
+     },
+     {
+      "text": " घड़ी",
+      "start": 9.34,
+      "end": 9.54
+     },
+     {
+      "text": " नहीं",
+      "start": 9.54,
+      "end": 9.74
+     },
+     {
+      "text": " है।",
+      "start": 9.74,
+      "end": 10.62
+     }
+    ]
+   },
+   {
+    "start": 10.62,
+    "end": 11.700000000000001,
+    "text": " बडियान पे दिख रही है।",
+    "words": [
+     {
+      "text": " बडियान",
+      "start": 10.62,
+      "end": 10.98
+     },
+     {
+      "text": " पे",
+      "start": 10.98,
+      "end": 11.02
+     },
+     {
+      "text": " दिख",
+      "start": 11.02,
+      "end": 11.2
+     },
+     {
+      "text": " रही",
+      "start": 11.2,
+      "end": 11.34
+     },
+     {
+      "text": " है।",
+      "start": 11.34,
+      "end": 11.700000000000001
+     }
+    ]
+   },
+   {
+    "start": 11.7,
+    "end": 14.26,
+    "text": " उसके लावा पीछे मेरे पास कोई मैंचेन नहीं है।",
+    "words": [
+     {
+      "text": " उसके",
+      "start": 11.7,
+      "end": 12.0
+     },
+     {
+      "text": " लावा",
+      "start": 12.0,
+      "end": 12.22
+     },
+     {
+      "text": " पीछे",
+      "start": 12.22,
+      "end": 12.52
+     },
+     {
+      "text": " मेरे",
+      "start": 12.52,
+      "end": 12.68
+     },
+     {
+      "text": " पास",
+      "start": 12.68,
+      "end": 12.8
+     },
+     {
+      "text": " कोई",
+      "start": 12.8,
+      "end": 12.94
+     },
+     {
+      "text": " मैंचेन",
+      "start": 12.94,
+      "end": 13.38
+     },
+     {
+      "text": " नहीं",
+      "start": 13.38,
+      "end": 13.52
+     },
+     {
+      "text": " है।",
+      "start": 13.52,
+      "end": 14.26
+     }
+    ]
+   },
+   {
+    "start": 14.26,
+    "end": 15.26,
+    "text": " बडियान तो दिख रहा है नहीं।",
+    "words": [
+     {
+      "text": " बडियान",
+      "start": 14.26,
+      "end": 14.54
+     },
+     {
+      "text": " तो",
+      "start": 14.54,
+      "end": 14.6
+     },
+     {
+      "text": " दिख",
+      "start": 14.6,
+      "end": 14.82
+     },
+     {
+      "text": " रहा",
+      "start": 14.82,
+      "end": 14.98
+     },
+     {
+      "text": " है",
+      "start": 14.98,
+      "end": 15.02
+     },
+     {
+      "text": " नहीं।",
+      "start": 15.02,
+      "end": 15.26
+     }
+    ]
+   }
+  ]
+ },
+ "dji": {
+  "lang": "hi",
+  "segments": [
+   {
+    "start": 0.6599999999999995,
+    "end": 10.18,
+    "text": " और बाई ये करना और बाई ये करना बहुत इजी है मैं नहीं पूरी एक गाईड बना रखी है",
+    "words": [
+     {
+      "text": " और",
+      "start": 0.6599999999999995,
+      "end": 1.22
+     },
+     {
+      "text": " बाई",
+      "start": 1.22,
+      "end": 1.42
+     },
+     {
+      "text": " ये",
+      "start": 1.42,
+      "end": 1.58
+     },
+     {
+      "text": " करना",
+      "start": 1.58,
+      "end": 3.38
+     },
+     {
+      "text": " और",
+      "start": 3.38,
+      "end": 4.74
+     },
+     {
+      "text": " बाई",
+      "start": 4.74,
+      "end": 5.18
+     },
+     {
+      "text": " ये",
+      "start": 5.18,
+      "end": 6.62
+     },
+     {
+      "text": " करना",
+      "start": 6.62,
+      "end": 7.06
+     },
+     {
+      "text": " बहुत",
+      "start": 7.06,
+      "end": 7.38
+     },
+     {
+      "text": " इजी",
+      "start": 7.38,
+      "end": 7.56
+     },
+     {
+      "text": " है",
+      "start": 7.56,
+      "end": 7.7
+     },
+     {
+      "text": " मैं",
+      "start": 7.7,
+      "end": 7.86
+     },
+     {
+      "text": " नहीं",
+      "start": 7.86,
+      "end": 7.94
+     },
+     {
+      "text": " पूरी",
+      "start": 7.94,
+      "end": 8.22
+     },
+     {
+      "text": " एक",
+      "start": 8.22,
+      "end": 8.44
+     },
+     {
+      "text": " गाईड",
+      "start": 8.44,
+      "end": 8.6
+     },
+     {
+      "text": " बना",
+      "start": 8.6,
+      "end": 8.86
+     },
+     {
+      "text": " रखी",
+      "start": 8.86,
+      "end": 9.14
+     },
+     {
+      "text": " है",
+      "start": 9.14,
+      "end": 10.18
+     }
+    ]
+   },
+   {
+    "start": 24.460000000000004,
+    "end": 29.34,
+    "text": " और बाई ये करना नहीं भहुत इजी है मैं नहीं पूरी एक गाईड कर रखी है",
+    "words": [
+     {
+      "text": " और",
+      "start": 24.460000000000004,
+      "end": 24.860000000000003
+     },
+     {
+      "text": " बाई",
+      "start": 24.860000000000003,
+      "end": 25.26
+     },
+     {
+      "text": " ये",
+      "start": 25.26,
+      "end": 25.38
+     },
+     {
+      "text": " करना",
+      "start": 25.38,
+      "end": 25.76
+     },
+     {
+      "text": " नहीं",
+      "start": 25.76,
+      "end": 25.92
+     },
+     {
+      "text": " भहुत",
+      "start": 25.92,
+      "end": 26.12
+     },
+     {
+      "text": " इजी",
+      "start": 26.12,
+      "end": 26.3
+     },
+     {
+      "text": " है",
+      "start": 26.3,
+      "end": 26.44
+     },
+     {
+      "text": " मैं",
+      "start": 26.44,
+      "end": 26.58
+     },
+     {
+      "text": " नहीं",
+      "start": 26.58,
+      "end": 26.76
+     },
+     {
+      "text": " पूरी",
+      "start": 26.76,
+      "end": 28.04
+     },
+     {
+      "text": " एक",
+      "start": 28.04,
+      "end": 28.24
+     },
+     {
+      "text": " गाईड",
+      "start": 28.24,
+      "end": 28.46
+     },
+     {
+      "text": " कर",
+      "start": 28.46,
+      "end": 28.82
+     },
+     {
+      "text": " रखी",
+      "start": 28.82,
+      "end": 29.14
+     },
+     {
+      "text": " है",
+      "start": 29.14,
+      "end": 29.34
+     }
+    ]
+   },
+   {
+    "start": 29.34,
+    "end": 36.5,
+    "text": " आपको अपने चार्ट जीपीटी में जाना है और अपने हिग्स फिल्ड को उसके अंदर कर देना है कनैक्ट",
+    "words": [
+     {
+      "text": " आपको",
+      "start": 29.34,
+      "end": 29.8
+     },
+     {
+      "text": " अपने",
+      "start": 29.8,
+      "end": 29.98
+     },
+     {
+      "text": " चार्ट",
+      "start": 29.98,
+      "end": 30.26
+     },
+     {
+      "text": " जीपीटी",
+      "start": 30.26,
+      "end": 30.58
+     },
+     {
+      "text": " में",
+      "start": 30.58,
+      "end": 30.66
+     },
+     {
+      "text": " जाना",
+      "start": 30.66,
+      "end": 30.92
+     },
+     {
+      "text": " है",
+      "start": 30.92,
+      "end": 30.96
+     },
+     {
+      "text": " और",
+      "start": 30.96,
+      "end": 31.3
+     },
+     {
+      "text": " अपने",
+      "start": 31.3,
+      "end": 31.6
+     },
+     {
+      "text": " हिग्स",
+      "start": 31.6,
+      "end": 32.0
+     },
+     {
+      "text": " फिल्ड",
+      "start": 32.0,
+      "end": 32.2
+     },
+     {
+      "text": " को",
+      "start": 32.2,
+      "end": 32.38
+     },
+     {
+      "text": " उसके",
+      "start": 32.38,
+      "end": 32.62
+     },
+     {
+      "text": " अंदर",
+      "start": 32.62,
+      "end": 32.8
+     },
+     {
+      "text": " कर",
+      "start": 32.8,
+      "end": 33.0
+     },
+     {
+      "text": " देना",
+      "start": 33.0,
+      "end": 33.16
+     },
+     {
+      "text": " है",
+      "start": 33.16,
+      "end": 33.2
+     },
+     {
+      "text": " कनैक्ट",
+      "start": 33.2,
+      "end": 36.5
+     }
+    ]
+   },
+   {
+    "start": 36.5,
+    "end": 42.18,
+    "text": " आ और उसमे अपने magnetic And put the Higgs plug in there",
+    "words": [
+     {
+      "text": " आ",
+      "start": 36.5,
+      "end": 37.5
+     },
+     {
+      "text": " और",
+      "start": 37.5,
+      "end": 37.52
+     },
+     {
+      "text": " उसमे",
+      "start": 37.52,
+      "end": 38.46
+     },
+     {
+      "text": " अपने",
+      "start": 38.46,
+      "end": 39.1
+     },
+     {
+      "text": " magnetic",
+      "start": 39.1,
+      "end": 40.12
+     },
+     {
+      "text": " And",
+      "start": 40.12,
+      "end": 40.12
+     },
+     {
+      "text": " put",
+      "start": 40.12,
+      "end": 40.12
+     },
+     {
+      "text": " the",
+      "start": 40.12,
+      "end": 40.12
+     },
+     {
+      "text": " Higgs",
+      "start": 40.12,
+      "end": 40.4
+     },
+     {
+      "text": " plug",
+      "start": 40.4,
+      "end": 40.88
+     },
+     {
+      "text": " in",
+      "start": 40.88,
+      "end": 42.18
+     },
+     {
+      "text": " there",
+      "start": 42.18,
+      "end": 42.18
+     }
+    ]
+   },
+   {
+    "start": 42.18,
+    "end": 47.12,
+    "text": " और नहीं तो लाए है। And then I will vistaall",
+    "words": [
+     {
+      "text": " और",
+      "start": 42.18,
+      "end": 42.58
+     },
+     {
+      "text": " नहीं",
+      "start": 42.58,
+      "end": 42.6
+     },
+     {
+      "text": " तो",
+      "start": 42.6,
+      "end": 42.7
+     },
+     {
+      "text": " लाए",
+      "start": 42.7,
+      "end": 42.92
+     },
+     {
+      "text": " है।",
+      "start": 42.92,
+      "end": 46.38
+     },
+     {
+      "text": " And",
+      "start": 46.38,
+      "end": 47.04
+     },
+     {
+      "text": " then",
+      "start": 47.04,
+      "end": 47.12
+     },
+     {
+      "text": " I",
+      "start": 47.12,
+      "end": 47.12
+     },
+     {
+      "text": " will",
+      "start": 47.12,
+      "end": 47.12
+     },
+     {
+      "text": " vistaall",
+      "start": 47.12,
+      "end": 47.12
+     }
+    ]
+   },
+   {
+    "start": 47.12,
+    "end": 48.76,
+    "text": " और वर्भी जी मौदवा regrettable आ है। And Bro, this is very easy.",
+    "words": [
+     {
+      "text": " और",
+      "start": 47.12,
+      "end": 47.12
+     },
+     {
+      "text": " वर्भी",
+      "start": 47.12,
+      "end": 47.78
+     },
+     {
+      "text": " जी",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " मौदवा",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " regrettable",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " आ",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " है।",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " And",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " Bro,",
+      "start": 47.78,
+      "end": 47.78
+     },
+     {
+      "text": " this",
+      "start": 47.78,
+      "end": 47.86
+     },
+     {
+      "text": " is",
+      "start": 47.86,
+      "end": 48.14
+     },
+     {
+      "text": " very",
+      "start": 48.14,
+      "end": 48.46
+     },
+     {
+      "text": " easy.",
+      "start": 48.46,
+      "end": 48.76
+     }
+    ]
+   },
+   {
+    "start": 48.76,
+    "end": 50.58,
+    "text": " मैंनेPLE so put a guide on it.",
+    "words": [
+     {
+      "text": " मैंनेPLE",
+      "start": 48.76,
+      "end": 49.32
+     },
+     {
+      "text": " so",
+      "start": 49.32,
+      "end": 49.32
+     },
+     {
+      "text": " put",
+      "start": 49.32,
+      "end": 49.32
+     },
+     {
+      "text": " a",
+      "start": 49.32,
+      "end": 49.32
+     },
+     {
+      "text": " guide",
+      "start": 49.32,
+      "end": 49.7
+     },
+     {
+      "text": " on",
+      "start": 49.7,
+      "end": 50.58
+     },
+     {
+      "text": " it.",
+      "start": 50.58,
+      "end": 50.58
+     }
+    ]
+   },
+   {
+    "start": 50.68,
+    "end": 52.4,
+    "text": " वे नहीं तो cooldown वो जाओगे। Like, if you go on chat GPT",
+    "words": [
+     {
+      "text": " वे",
+      "start": 50.68,
+      "end": 50.82
+     },
+     {
+      "text": " नहीं",
+      "start": 50.82,
+      "end": 50.82
+     },
+     {
+      "text": " तो",
+      "start": 50.82,
+      "end": 50.82
+     },
+     {
+      "text": " cooldown",
+      "start": 50.82,
+      "end": 50.82
+     },
+     {
+      "text": " वो",
+      "start": 50.82,
+      "end": 50.82
+     },
+     {
+      "text": " जाओगे।",
+      "start": 50.82,
+      "end": 50.82
+     },
+     {
+      "text": " Like,",
+      "start": 50.82,
+      "end": 50.82
+     },
+     {
+      "text": " if",
+      "start": 51.24,
+      "end": 51.24
+     },
+     {
+      "text": " you",
+      "start": 51.24,
+      "end": 51.24
+     },
+     {
+      "text": " go",
+      "start": 51.24,
+      "end": 51.24
+     },
+     {
+      "text": " on",
+      "start": 51.24,
+      "end": 51.24
+     },
+     {
+      "text": " chat",
+      "start": 51.24,
+      "end": 51.52
+     },
+     {
+      "text": " GPT",
+      "start": 51.52,
+      "end": 52.4
+     }
+    ]
+   },
+   {
+    "start": 52.4,
+    "end": 54.6,
+    "text": " उस में feature 123 pike",
+    "words": [
+     {
+      "text": " उस",
+      "start": 52.4,
+      "end": 52.78
+     },
+     {
+      "text": " में",
+      "start": 52.78,
+      "end": 53.48
+     },
+     {
+      "text": " feature",
+      "start": 53.48,
+      "end": 54.02
+     },
+     {
+      "text": " 123",
+      "start": 54.02,
+      "end": 54.6
+     },
+     {
+      "text": " pike",
+      "start": 54.6,
+      "end": 54.6
+     }
+    ]
+   },
+   {
+    "start": 54.6,
+    "end": 57.36,
+    "text": " �lungsट्की अपलो गार ہै। it's full switch",
+    "words": [
+     {
+      "text": " �lungsट्की",
+      "start": 54.6,
+      "end": 55.28
+     },
+     {
+      "text": " अपलो",
+      "start": 55.28,
+      "end": 55.28
+     },
+     {
+      "text": " गार",
+      "start": 55.28,
+      "end": 55.28
+     },
+     {
+      "text": " ہै।",
+      "start": 55.28,
+      "end": 55.28
+     },
+     {
+      "text": " it's",
+      "start": 55.28,
+      "end": 56.32
+     },
+     {
+      "text": " full",
+      "start": 56.32,
+      "end": 57.36
+     },
+     {
+      "text": " switch",
+      "start": 57.36,
+      "end": 57.36
+     }
+    ]
+   },
+   {
+    "start": 64.3,
+    "end": 66.48,
+    "text": " अपने प्रूंगिड्विंडीדי काो लिइ explain",
+    "words": [
+     {
+      "text": " अपने",
+      "start": 64.3,
+      "end": 65.32
+     },
+     {
+      "text": " प्रूंगिड्विंडीדי",
+      "start": 65.32,
+      "end": 65.74
+     },
+     {
+      "text": " काो",
+      "start": 65.74,
+      "end": 65.74
+     },
+     {
+      "text": " लिइ",
+      "start": 65.74,
+      "end": 66.48
+     },
+     {
+      "text": " explain",
+      "start": 66.48,
+      "end": 66.48
+     }
+    ]
+   },
+   {
+    "start": 66.48,
+    "end": 82.48,
+    "text": " तो चार्ट जीपिटी सारा काम अपने आप खुद ही कर लेगा फिर अपनी रौ विडियो तो जोभी उसके अंदर चेंजिस भगर होंगे वो खुद ही कर लेगा",
+    "words": [
+     {
+      "text": " तो",
+      "start": 66.48,
+      "end": 66.48
+     },
+     {
+      "text": " चार्ट",
+      "start": 66.48,
+      "end": 67.28
+     },
+     {
+      "text": " जीपिटी",
+      "start": 67.28,
+      "end": 67.54
+     },
+     {
+      "text": " सारा",
+      "start": 67.54,
+      "end": 67.84
+     },
+     {
+      "text": " काम",
+      "start": 67.84,
+      "end": 68.02
+     },
+     {
+      "text": " अपने",
+      "start": 68.02,
+      "end": 68.22
+     },
+     {
+      "text": " आप",
+      "start": 68.22,
+      "end": 68.32
+     },
+     {
+      "text": " खुद",
+      "start": 68.32,
+      "end": 68.48
+     },
+     {
+      "text": " ही",
+      "start": 68.48,
+      "end": 68.5
+     },
+     {
+      "text": " कर",
+      "start": 68.5,
+      "end": 68.66
+     },
+     {
+      "text": " लेगा",
+      "start": 68.66,
+      "end": 74.08
+     },
+     {
+      "text": " फिर",
+      "start": 74.08,
+      "end": 77.18
+     },
+     {
+      "text": " अपनी",
+      "start": 77.18,
+      "end": 79.28
+     },
+     {
+      "text": " रौ",
+      "start": 79.28,
+      "end": 79.62
+     },
+     {
+      "text": " विडियो",
+      "start": 79.62,
+      "end": 79.74
+     },
+     {
+      "text": " तो",
+      "start": 79.74,
+      "end": 80.0
+     },
+     {
+      "text": " जोभी",
+      "start": 80.0,
+      "end": 80.32
+     },
+     {
+      "text": " उसके",
+      "start": 80.32,
+      "end": 80.5
+     },
+     {
+      "text": " अंदर",
+      "start": 80.5,
+      "end": 80.66
+     },
+     {
+      "text": " चेंजिस",
+      "start": 80.66,
+      "end": 81.06
+     },
+     {
+      "text": " भगर",
+      "start": 81.06,
+      "end": 81.28
+     },
+     {
+      "text": " होंगे",
+      "start": 81.28,
+      "end": 81.54
+     },
+     {
+      "text": " वो",
+      "start": 81.54,
+      "end": 81.72
+     },
+     {
+      "text": " खुद",
+      "start": 81.72,
+      "end": 81.94
+     },
+     {
+      "text": " ही",
+      "start": 81.94,
+      "end": 82.08
+     },
+     {
+      "text": " कर",
+      "start": 82.08,
+      "end": 82.22
+     },
+     {
+      "text": " लेगा",
+      "start": 82.22,
+      "end": 82.48
+     }
+    ]
+   },
+   {
+    "start": 89.76,
+    "end": 97.48,
+    "text": " अपनी रौ विडियो देदो चार्ट जीपिटी को जोभी उसमें चेंजिस भगर होंगे वो अपने हिसाब से कर लेगा",
+    "words": [
+     {
+      "text": " अपनी",
+      "start": 89.76,
+      "end": 90.36
+     },
+     {
+      "text": " रौ",
+      "start": 90.36,
+      "end": 90.7
+     },
+     {
+      "text": " विडियो",
+      "start": 90.7,
+      "end": 90.92
+     },
+     {
+      "text": " देदो",
+      "start": 90.92,
+      "end": 91.14
+     },
+     {
+      "text": " चार्ट",
+      "start": 91.14,
+      "end": 91.38
+     },
+     {
+      "text": " जीपिटी",
+      "start": 91.38,
+      "end": 91.68
+     },
+     {
+      "text": " को",
+      "start": 91.68,
+      "end": 92.42
+     },
+     {
+      "text": " जोभी",
+      "start": 92.42,
+      "end": 94.34
+     },
+     {
+      "text": " उसमें",
+      "start": 94.34,
+      "end": 95.3
+     },
+     {
+      "text": " चेंजिस",
+      "start": 95.3,
+      "end": 95.66
+     },
+     {
+      "text": " भगर",
+      "start": 95.66,
+      "end": 95.86
+     },
+     {
+      "text": " होंगे",
+      "start": 95.86,
+      "end": 96.28
+     },
+     {
+      "text": " वो",
+      "start": 96.28,
+      "end": 96.44
+     },
+     {
+      "text": " अपने",
+      "start": 96.44,
+      "end": 96.68
+     },
+     {
+      "text": " हिसाब",
+      "start": 96.68,
+      "end": 96.98
+     },
+     {
+      "text": " से",
+      "start": 96.98,
+      "end": 97.08
+     },
+     {
+      "text": " कर",
+      "start": 97.08,
+      "end": 97.24
+     },
+     {
+      "text": " लेगा",
+      "start": 97.24,
+      "end": 97.53999999999999
+     }
+    ]
+   },
+   {
+    "start": 101.64000000000001,
+    "end": 107.76,
+    "text": " लेकिन बाई लेकिन लेकिन है लेकिन एक चीज़ जो कोई नहीं बताता जब भी आप हिकश्पिल्ड बगर यूस करते है",
+    "words": [
+     {
+      "text": " लेकिन",
+      "start": 101.64000000000001,
+      "end": 102.16000000000001
+     },
+     {
+      "text": " बाई",
+      "start": 102.16000000000001,
+      "end": 102.68
+     },
+     {
+      "text": " लेकिन",
+      "start": 102.68,
+      "end": 104.22
+     },
+     {
+      "text": " लेकिन",
+      "start": 104.22,
+      "end": 105.08
+     },
+     {
+      "text": " है",
+      "start": 105.08,
+      "end": 105.2
+     },
+     {
+      "text": " लेकिन",
+      "start": 105.2,
+      "end": 105.2
+     },
+     {
+      "text": " एक",
+      "start": 105.2,
+      "end": 105.24
+     },
+     {
+      "text": " चीज़",
+      "start": 105.24,
+      "end": 105.44
+     },
+     {
+      "text": " जो",
+      "start": 105.44,
+      "end": 105.52
+     },
+     {
+      "text": " कोई",
+      "start": 105.52,
+      "end": 105.72
+     },
+     {
+      "text": " नहीं",
+      "start": 105.72,
+      "end": 105.9
+     },
+     {
+      "text": " बताता",
+      "start": 105.9,
+      "end": 106.24
+     },
+     {
+      "text": " जब",
+      "start": 106.24,
+      "end": 106.48
+     },
+     {
+      "text": " भी",
+      "start": 106.48,
+      "end": 106.52
+     },
+     {
+      "text": " आप",
+      "start": 106.52,
+      "end": 106.64
+     },
+     {
+      "text": " हिकश्पिल्ड",
+      "start": 106.64,
+      "end": 107.02
+     },
+     {
+      "text": " बगर",
+      "start": 107.02,
+      "end": 107.28
+     },
+     {
+      "text": " यूस",
+      "start": 107.28,
+      "end": 107.54
+     },
+     {
+      "text": " करते",
+      "start": 107.54,
+      "end": 107.76
+     },
+     {
+      "text": " है",
+      "start": 107.76,
+      "end": 107.76
+     }
+    ]
+   },
+   {
+    "start": 107.76,
+    "end": 116.54,
+    "text": " और इस टाइप के विडियो आप बनाते उसके अंदर आपके क्रेडिट्स लेकते हैं और ऐसके अंदर खरचा आथा है",
+    "words": [
+     {
+      "text": " और",
+      "start": 107.76,
+      "end": 107.88
+     },
+     {
+      "text": " इस",
+      "start": 107.88,
+      "end": 108.94
+     },
+     {
+      "text": " टाइप",
+      "start": 108.94,
+      "end": 109.1
+     },
+     {
+      "text": " के",
+      "start": 109.1,
+      "end": 109.22
+     },
+     {
+      "text": " विडियो",
+      "start": 109.22,
+      "end": 109.5
+     },
+     {
+      "text": " आप",
+      "start": 109.5,
+      "end": 109.64
+     },
+     {
+      "text": " बनाते",
+      "start": 109.64,
+      "end": 109.98
+     },
+     {
+      "text": " उसके",
+      "start": 109.98,
+      "end": 110.32
+     },
+     {
+      "text": " अंदर",
+      "start": 110.32,
+      "end": 110.52
+     },
+     {
+      "text": " आपके",
+      "start": 110.52,
+      "end": 110.78
+     },
+     {
+      "text": " क्रेडिट्स",
+      "start": 110.78,
+      "end": 111.24
+     },
+     {
+      "text": " लेकते",
+      "start": 111.24,
+      "end": 111.46
+     },
+     {
+      "text": " हैं",
+      "start": 111.46,
+      "end": 111.66
+     },
+     {
+      "text": " और",
+      "start": 111.66,
+      "end": 114.68
+     },
+     {
+      "text": " ऐसके",
+      "start": 114.68,
+      "end": 115.38
+     },
+     {
+      "text": " अंदर",
+      "start": 115.38,
+      "end": 115.66
+     },
+     {
+      "text": " खरचा",
+      "start": 115.66,
+      "end": 116.08
+     },
+     {
+      "text": " आथा",
+      "start": 116.08,
+      "end": 116.4
+     },
+     {
+      "text": " है",
+      "start": 116.4,
+      "end": 116.66000000000001
+     }
+    ]
+   },
+   {
+    "start": 124.6,
+    "end": 132.66,
+    "text": " बद अगर देखा जाए है महंगी गडि, रोल्स रोईस और मेंशेंट से तो सबस्ताए है अगर फ्लेक्स करना हो तो.",
+    "words": [
+     {
+      "text": " बद",
+      "start": 124.6,
+      "end": 125.16
+     },
+     {
+      "text": " अगर",
+      "start": 125.16,
+      "end": 125.72
+     },
+     {
+      "text": " देखा",
+      "start": 125.72,
+      "end": 126.06
+     },
+     {
+      "text": " जाए",
+      "start": 126.06,
+      "end": 126.3
+     },
+     {
+      "text": " है",
+      "start": 126.3,
+      "end": 126.42
+     },
+     {
+      "text": " महंगी",
+      "start": 126.42,
+      "end": 128.08
+     },
+     {
+      "text": " गडि,",
+      "start": 128.08,
+      "end": 128.4
+     },
+     {
+      "text": " रोल्स",
+      "start": 128.54,
+      "end": 129.02
+     },
+     {
+      "text": " रोईस",
+      "start": 129.02,
+      "end": 129.28
+     },
+     {
+      "text": " और",
+      "start": 129.28,
+      "end": 129.42
+     },
+     {
+      "text": " मेंशेंट",
+      "start": 129.42,
+      "end": 130.04
+     },
+     {
+      "text": " से",
+      "start": 130.04,
+      "end": 130.08
+     },
+     {
+      "text": " तो",
+      "start": 130.08,
+      "end": 130.22
+     },
+     {
+      "text": " सबस्ताए",
+      "start": 130.22,
+      "end": 130.68
+     },
+     {
+      "text": " है",
+      "start": 130.68,
+      "end": 130.8
+     },
+     {
+      "text": " अगर",
+      "start": 130.8,
+      "end": 131.1
+     },
+     {
+      "text": " फ्लेक्स",
+      "start": 131.1,
+      "end": 131.4
+     },
+     {
+      "text": " करना",
+      "start": 131.4,
+      "end": 131.66
+     },
+     {
+      "text": " हो",
+      "start": 131.66,
+      "end": 131.82
+     },
+     {
+      "text": " तो.",
+      "start": 131.82,
+      "end": 132.66
+     }
+    ]
+   },
+   {
+    "start": 137.62,
+    "end": 143.44,
+    "text": " अगर आपको पूरी गाईड चीये तो अगर आपको पूरी गाईड चीये प्लेक्स आपके दीएम में भेज़ दॉनग।",
+    "words": [
+     {
+      "text": " अगर",
+      "start": 137.62,
+      "end": 138.18
+     },
+     {
+      "text": " आपको",
+      "start": 138.18,
+      "end": 138.42
+     },
+     {
+      "text": " पूरी",
+      "start": 138.42,
+      "end": 138.64
+     },
+     {
+      "text": " गाईड",
+      "start": 138.64,
+      "end": 138.92
+     },
+     {
+      "text": " चीये",
+      "start": 138.92,
+      "end": 139.2
+     },
+     {
+      "text": " तो",
+      "start": 139.2,
+      "end": 139.64
+     },
+     {
+      "text": " अगर",
+      "start": 139.64,
+      "end": 139.8
+     },
+     {
+      "text": " आपको",
+      "start": 139.8,
+      "end": 140.02
+     },
+     {
+      "text": " पूरी",
+      "start": 140.02,
+      "end": 140.26
+     },
+     {
+      "text": " गाईड",
+      "start": 140.26,
+      "end": 140.52
+     },
+     {
+      "text": " चीये",
+      "start": 140.52,
+      "end": 140.8
+     },
+     {
+      "text": " प्लेक्स",
+      "start": 140.8,
+      "end": 141.78
+     },
+     {
+      "text": " आपके",
+      "start": 141.78,
+      "end": 142.22
+     },
+     {
+      "text": " दीएम",
+      "start": 142.22,
+      "end": 142.48
+     },
+     {
+      "text": " में",
+      "start": 142.48,
+      "end": 143.06
+     },
+     {
+      "text": " भेज़",
+      "start": 143.06,
+      "end": 143.36
+     },
+     {
+      "text": " दॉनग।",
+      "start": 143.36,
+      "end": 143.44
+     }
+    ]
+   },
+   {
+    "start": 143.44,
+    "end": 148.0,
+    "text": " बस पालो कर लेना वन्हां दीम नहीं जायागा बस पालो कर लेना वन्हां दीम नहीं जायागा",
+    "words": [
+     {
+      "text": " बस",
+      "start": 143.44,
+      "end": 143.6
+     },
+     {
+      "text": " पालो",
+      "start": 143.6,
+      "end": 143.88
+     },
+     {
+      "text": " कर",
+      "start": 143.88,
+      "end": 144.02
+     },
+     {
+      "text": " लेना",
+      "start": 144.02,
+      "end": 144.2
+     },
+     {
+      "text": " वन्हां",
+      "start": 144.2,
+      "end": 144.38
+     },
+     {
+      "text": " दीम",
+      "start": 144.38,
+      "end": 144.62
+     },
+     {
+      "text": " नहीं",
+      "start": 144.62,
+      "end": 144.8
+     },
+     {
+      "text": " जायागा",
+      "start": 144.8,
+      "end": 145.92
+     },
+     {
+      "text": " बस",
+      "start": 145.92,
+      "end": 146.32
+     },
+     {
+      "text": " पालो",
+      "start": 146.32,
+      "end": 146.72
+     },
+     {
+      "text": " कर",
+      "start": 146.72,
+      "end": 146.82
+     },
+     {
+      "text": " लेना",
+      "start": 146.82,
+      "end": 147.02
+     },
+     {
+      "text": " वन्हां",
+      "start": 147.02,
+      "end": 147.24
+     },
+     {
+      "text": " दीम",
+      "start": 147.24,
+      "end": 147.44
+     },
+     {
+      "text": " नहीं",
+      "start": 147.44,
+      "end": 147.56
+     },
+     {
+      "text": " जायागा",
+      "start": 147.56,
+      "end": 148.0
+     }
+    ]
+   },
+   {
+    "start": 148.8,
+    "end": 151.96,
+    "text": " और पूरी गाईड चीए तो हमारा WhatsApp चानल जॉइन कर लो",
+    "words": [
+     {
+      "text": " और",
+      "start": 148.8,
+      "end": 149.28
+     },
+     {
+      "text": " पूरी",
+      "start": 149.28,
+      "end": 149.72
+     },
+     {
+      "text": " गाईड",
+      "start": 149.72,
+      "end": 150.0
+     },
+     {
+      "text": " चीए",
+      "start": 150.0,
+      "end": 150.2
+     },
+     {
+      "text": " तो",
+      "start": 150.2,
+      "end": 150.36
+     },
+     {
+      "text": " हमारा",
+      "start": 150.36,
+      "end": 150.7
+     },
+     {
+      "text": " WhatsApp",
+      "start": 150.7,
+      "end": 151.02
+     },
+     {
+      "text": " चानल",
+      "start": 151.02,
+      "end": 151.38
+     },
+     {
+      "text": " जॉइन",
+      "start": 151.38,
+      "end": 151.62
+     },
+     {
+      "text": " कर",
+      "start": 151.62,
+      "end": 151.82
+     },
+     {
+      "text": " लो",
+      "start": 151.82,
+      "end": 151.96
+     }
+    ]
+   },
+   {
+    "start": 151.96,
+    "end": 156.22,
+    "text": " अबाउट सेक्षण में मिल जाएगा यूट्यूब के उसके अंदर आपको पूरी गाईड मिल जाएगी",
+    "words": [
+     {
+      "text": " अबाउट",
+      "start": 151.96,
+      "end": 152.32
+     },
+     {
+      "text": " सेक्षण",
+      "start": 152.32,
+      "end": 152.58
+     },
+     {
+      "text": " में",
+      "start": 152.58,
+      "end": 152.64
+     },
+     {
+      "text": " मिल",
+      "start": 152.64,
+      "end": 152.78
+     },
+     {
+      "text": " जाएगा",
+      "start": 152.78,
+      "end": 153.02
+     },
+     {
+      "text": " यूट्यूब",
+      "start": 153.02,
+      "end": 153.48
+     },
+     {
+      "text": " के",
+      "start": 153.48,
+      "end": 153.7
+     },
+     {
+      "text": " उसके",
+      "start": 153.7,
+      "end": 154.54
+     },
+     {
+      "text": " अंदर",
+      "start": 154.54,
+      "end": 154.72
+     },
+     {
+      "text": " आपको",
+      "start": 154.72,
+      "end": 155.04
+     },
+     {
+      "text": " पूरी",
+      "start": 155.04,
+      "end": 155.38
+     },
+     {
+      "text": " गाईड",
+      "start": 155.38,
+      "end": 155.6
+     },
+     {
+      "text": " मिल",
+      "start": 155.6,
+      "end": 155.76
+     },
+     {
+      "text": " जाएगी",
+      "start": 155.76,
+      "end": 156.22
+     }
+    ]
+   },
+   {
+    "start": 157.72,
+    "end": 159.8,
+    "text": " बाकी असे खौंट्रेट के लिए सब्सक्राइब कर दो",
+    "words": [
+     {
+      "text": " बाकी",
+      "start": 157.72,
+      "end": 158.2
+     },
+     {
+      "text": " असे",
+      "start": 158.2,
+      "end": 158.6
+     },
+     {
+      "text": " खौंट्रेट",
+      "start": 158.6,
+      "end": 158.9
+     },
+     {
+      "text": " के",
+      "start": 158.9,
+      "end": 159.0
+     },
+     {
+      "text": " लिए",
+      "start": 159.0,
+      "end": 159.1
+     },
+     {
+      "text": " सब्सक्राइब",
+      "start": 159.1,
+      "end": 159.48
+     },
+     {
+      "text": " कर",
+      "start": 159.48,
+      "end": 159.66
+     },
+     {
+      "text": " दो",
+      "start": 159.66,
+      "end": 159.8
+     }
+    ]
+   }
+  ]
+ }
+}

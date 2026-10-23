@@ -1,0 +1,59 @@
+{
+ "instagram": {
+  "duration": 54.4,
+  "lufs": -13.9,
+  "true_peak_dbfs": -4.2,
+  "sync_ms_per_range": [
+   4.0
+  ],
+  "masked_words": [
+   {
+    "word": "hai.",
+    "master_t": 12.58,
+    "clean": 0.76,
+    "final": 0.32
+   },
+   {
+    "word": "hai.",
+    "master_t": 23.31,
+    "clean": 0.92,
+    "final": 0.44
+   },
+   {
+    "word": "pehle.",
+    "master_t": 45.4,
+    "clean": 0.77,
+    "final": 0.4
+   }
+  ]
+ },
+ "youtube": {
+  "duration": 53.64,
+  "lufs": -13.9,
+  "true_peak_dbfs": -4.1,
+  "sync_ms_per_range": [
+   4.0,
+   4.0
+  ],
+  "masked_words": [
+   {
+    "word": "hai.",
+    "master_t": 12.58,
+    "clean": 0.76,
+    "final": 0.32
+   },
+   {
+    "word": "hai.",
+    "master_t": 23.31,
+    "clean": 0.92,
+    "final": 0.34
+   },
+   {
+    "word": "pehle.",
+    "master_t": 45.4,
+    "clean": 0.77,
+    "final": 0.43
+   }
+  ]
+ }
+}

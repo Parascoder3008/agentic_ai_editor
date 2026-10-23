@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude ka WhatsApp Agent · Free Setup Guide | AI with Paras</title>
+<meta name="description" content="Claude ko apna WhatsApp number do: Kapso free plan, ek command se WhatsApp skills, aur ready prompt se booking agent. Hinglish setup guide by AI with Paras.">
+<meta property="og:title" content="Claude ka apna WhatsApp number: booking agent setup">
+<meta property="og:description" content="Kapso + Claude Code: 3 steps, ready prompt, aur WhatsApp ke rules. Free guide by AI with Paras.">
+<meta property="og:image" content="https://aiwithparas-resources.netlify.app/assets/og-whatsapp-agent.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0C0E0F; --blue: #1A9FD1; --blue2: #3AB0D8; --navy: #11324C;
+    --text: #FFFFFF; --muted: #DFDDDF; --glass: rgba(255,255,255,.045); --line: rgba(255,255,255,.09);
+    --ok: #3ddc97; --warn: #ffc53d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--void); color: var(--text); font-family: Inter, system-ui, sans-serif; line-height: 1.6;
+    background-image: radial-gradient(900px 500px at 15% -10%, rgba(17,50,76,.75), transparent 60%),
+                      radial-gradient(700px 420px at 100% 10%, rgba(26,159,209,.16), transparent 60%); }
+  a { color: var(--blue2); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+  header.top { display: flex; align-items: center; gap: 10px; padding: 18px 0; }
+  header.top img { width: 34px; height: 34px; border-radius: 50%; }
+  header.top b { font-weight: 800; letter-spacing: .01em; }
+  header.top span { color: var(--muted); font-size: 13px; margin-left: auto; }
+  .hero { padding: 28px 0 8px; }
+  .kick { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--blue2);
+    border: 1px solid rgba(58,176,216,.4); border-radius: 999px; padding: 6px 14px; }
+  h1 { font-size: clamp(30px, 6.4vw, 46px); line-height: 1.12; font-weight: 900; letter-spacing: -.02em; margin: 16px 0 12px; }
+  h1 em { font-style: normal; color: var(--blue); }
+  .lead { color: var(--muted); font-size: 17px; }
+  .facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
+  .facts div { border: 1px solid rgba(58,176,216,.35); border-radius: 18px; background: linear-gradient(180deg, rgba(58,176,216,.16), rgba(17,50,76,.2));
+    padding: 12px 10px; text-align: center; font-size: 13px; font-weight: 700; color: var(--muted); }
+  .facts b { display: block; font-size: 22px; font-weight: 900; color: var(--text); }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 6px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800; font-size: 15px;
+    padding: 13px 20px; border-radius: 16px; color: #fff; background: var(--blue); box-shadow: 0 8px 30px rgba(26,159,209,.35); }
+  .btn.ghost { background: transparent; border: 1.5px solid rgba(58,176,216,.55); box-shadow: none; color: var(--text); }
+  .btn:hover { background: var(--blue2); }
+  .btn.ghost:hover { background: rgba(26,159,209,.12); }
+  .card { background: var(--glass); border: 1px solid var(--line); border-radius: 28px; padding: 24px 22px; margin-top: 18px; }
+  h2 { font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+  h3 { font-size: 16px; font-weight: 800; margin-top: 16px; }
+  .step { position: relative; }
+  .step .num { position: absolute; top: 22px; right: 22px; font-size: 13px; font-weight: 800; color: var(--blue2); letter-spacing: .16em; }
+  .step h2 { padding-right: 90px; }
+  .step p, .card p, .card li { color: var(--muted); margin-top: 8px; }
+  .step p b, .card p b, .card li b { color: var(--text); }
+  .card ol, .card ul { padding-left: 20px; margin-top: 6px; }
+  .opts { display: grid; gap: 8px; margin-top: 12px; }
+  .opts div { border: 1px solid rgba(58,176,216,.3); border-radius: 16px; padding: 12px 14px; color: var(--muted); font-size: 15px; }
+  .opts b { color: var(--text); }
+  .tag { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 800; letter-spacing: .08em; color: var(--blue2);
+    border: 1px solid rgba(58,176,216,.4); border-radius: 999px; padding: 4px 10px; }
+  .os { margin-top: 10px; font-size: 12px; font-weight: 800; letter-spacing: .12em; color: var(--blue2); }
+  .code { position: relative; margin-top: 6px; background: #070909; border: 1px solid rgba(58,176,216,.25); border-radius: 16px;
+    padding: 14px 16px; padding-right: 86px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 14px; color: #e9f7ff;
+    white-space: pre-wrap; word-break: break-word; }
+  .copy { position: absolute; top: 9px; right: 9px; font: 700 12px Inter, sans-serif; color: #fff; background: var(--navy);
+    border: 1px solid rgba(58,176,216,.45); border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+  .copy.done { background: var(--ok); color: #0C0E0F; border-color: var(--ok); }
+  .note { margin-top: 12px; font-size: 14px; color: var(--muted); border-left: 3px solid var(--blue); padding: 6px 0 6px 12px; }
+  .note.warn { border-color: var(--warn); }
+  .hire { background: linear-gradient(160deg, rgba(26,159,209,.22), rgba(17,50,76,.55)); border-color: rgba(58,176,216,.55); }
+  .join { text-align: center; background: linear-gradient(160deg, rgba(17,50,76,.9), rgba(12,14,15,.9)); border-color: rgba(58,176,216,.4); }
+  .join img { width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--blue); }
+  .join h2 { margin-top: 10px; }
+  .join .cta { justify-content: center; }
+  footer { margin-top: 34px; color: #8d9399; font-size: 12.5px; text-align: center; line-height: 1.7; }
+  @media (max-width: 560px) { .facts div { font-size: 11px; padding: 10px 6px; } .facts b { font-size: 18px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <img src="../assets/logo.png" alt="Exponential World AI">
+    <b>AI with Paras</b>
+    <span>Free guide</span>
+  </header>
+
+  <section class="hero">
+    <span class="kick">FREE GUIDE · WHATSAPP AGENT</span>
+    <h1>Claude ko apna <em>WhatsApp number</em> do</h1>
+    <p class="lead">Raat ke 2 baje customer poochta hai "Friday ko slot hai?" aur turant jawab jaata hai, free slots ke saath, booking confirm. Yeh setup <b>Kapso</b> (WhatsApp ka official API) aur <b>Claude Code</b> se hota hai. Neeche 3 steps, ready prompt, aur woh rules jo follow karne zaroori hain.</p>
+    <div class="facts">
+      <div><b>₹0</b>Kapso free plan</div>
+      <div><b>2,000</b>messages / mahina</div>
+      <div><b>3</b>steps</div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="#s1">Step 1 se shuru karo ↓</a>
+      <a class="btn ghost" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 Join WhatsApp Channel</a>
+    </div>
+  </section>
+
+  <section class="card step" id="s1">
+    <span class="num">STEP 1</span>
+    <h2>Kapso account + WhatsApp number</h2>
+    <ol>
+      <li><a href="https://app.kapso.ai">app.kapso.ai</a> pe sign up karo (free plan).</li>
+      <li><b>Connected numbers → Connect new number</b> kholo aur ek option chuno:</li>
+    </ol>
+    <div class="opts">
+      <div><b>Instant setup:</b> Kapso ka pre-verified number. Testing ke liye sabse fast, SMS verification nahi chahiye.</div>
+      <div><b>WhatsApp Business App:</b> aapka current business number, jo WhatsApp Business app mein chal raha hai. App bhi chalta rahega, agent bhi. QR code se pair hota hai.</div>
+      <div><b>Bring your own SIM:</b> ek naya dedicated number sirf agent ke liye.</div>
+    </div>
+    <p>Phir Meta ka signup khulta hai: Facebook se login karo, Business portfolio aur WhatsApp Business account chuno (ya naya banao), <b>Confirm</b>, phir <b>Finish</b>. Kapso mein number <b>connected</b> dikhega.</p>
+    <p class="note">Meta ke rules number connect hone ke baad bhi lagte hain: business info (naam, address, website) complete rakho. Display name review, business verification aur template approval Meta karta hai.</p>
+    <p class="note">Sirf test karna hai? <b>WhatsApp → Sandbox → Add Test Number</b> se apne phone pe safely test karo, bina asli number connect kiye.</p>
+  </section>
+
+  <section class="card step" id="s2">
+    <span class="num">STEP 2</span>
+    <h2>Ek command: WhatsApp skills Claude Code mein</h2>
+    <p>Claude Code wale computer pe terminal kholo aur yeh chalao:</p>
+    <div class="code">npx skills add gokapso/agent-skills</div>
+    <p>Isse 4 skills aati hain: <b>integrate-whatsapp</b> (number, webhooks, messages, templates), <b>automate-whatsapp</b> (workflows, agents, database), <b>observe-whatsapp</b> (logs, debugging) aur <b>integrate-whatsapp-calling</b> (WhatsApp calls).</p>
+    <p>Phir Kapso dashboard (<a href="https://app.kapso.ai">app.kapso.ai</a>) se API key banao aur set karo:</p>
+    <div class="os">MAC / LINUX</div>
+    <div class="code">export KAPSO_API_BASE_URL="https://api.kapso.ai"
+export KAPSO_API_KEY="your-api-key"</div>
+    <div class="os">WINDOWS (POWERSHELL)</div>
+    <div class="code">$env:KAPSO_API_BASE_URL="https://api.kapso.ai"
+$env:KAPSO_API_KEY="your-api-key"</div>
+    <p class="note warn">API key password jaisi hai: kisi ko share mat karo, screenshot mein mat dikhao, aur code ke saath GitHub pe mat daalo.</p>
+  </section>
+
+  <section class="card step" id="s3">
+    <span class="num">STEP 3</span>
+    <h2>Claude ko bolo: booking agent banao</h2>
+    <p>Claude Code mein yeh prompt paste karo. Brackets wali cheezein apne business se bhar do:</p>
+    <div class="code">Kapso ki WhatsApp skills use karke mere business ke liye ek WhatsApp booking agent banao.
+
+Business: [naam], [city]
+Services aur price: [service 1 - ₹___], [service 2 - ₹___]
+Timings: [Mon-Sat, 10am-8pm]
+
+Agent ko yeh karna hai:
+1. Customer slot pooche to agle 7 din ke 3 free slots buttons mein dikhao.
+2. Customer slot chune to booking confirm karo (naam, service, time), bookings ek database table mein save karo, aur confirmation message bhejo.
+3. Prices aur FAQs sirf upar diye data se batao. Jo nahi pata, bolo "main team se confirm karke batata hoon" aur mujhe notify karo.
+4. Hinglish mein, short aur polite replies.
+5. Kisi ko pehle message mat bhejo jab tak usne opt-in na kiya ho. 24 ghante ki chuppi ke baad sirf approved template bhejo.
+
+Pehle plan dikhao, phir build karo, aur Kapso Sandbox pe test karke mujhe batao.</div>
+    <p>Claude code likhta hai, aap review karte ho. Agent aapke connected number pe 24 ghante chalta hai.</p>
+  </section>
+
+  <section class="card">
+    <h2>⚠️ WhatsApp ke rules (zaroori)</h2>
+    <ul>
+      <li><b>Permission pehle:</b> sirf unhi customers ko message karo jinhone opt-in kiya hai.</li>
+      <li><b>24-ghante ka window:</b> customer ke last message ke 24 ghante baad sirf Meta-approved template bhej sakte ho.</li>
+      <li><b>Billing:</b> Kapso free plan mein 2,000 messages/mahina, aur <b>bheje + aaye dono gine jaate hain</b>. Meta ke WhatsApp charges Kapso plan se alag hain.</li>
+      <li><b>Limits badal sakte hain:</b> setup se pehle <a href="https://kapso.com/pricing">kapso.com/pricing</a> check karo.</li>
+    </ul>
+  </section>
+
+  <section class="card hire">
+    <h2>Yeh agent apne business mein lagwana hai?</h2>
+    <p>Main businesses ke liye <b>AI implementation</b> karta hoon (WhatsApp agents, enquiry handling, follow-ups, reports) aur unki <b>team ko AI training</b> deta hoon.</p>
+    <div class="cta">
+      <a class="btn" href="https://parasarora.in/">📞 Free discovery call book karo</a>
+      <a class="btn ghost" href="https://www.instagram.com/ai_with_paras/">💬 DM "SETUP" on Instagram</a>
+    </div>
+    <p style="font-size:14px">AI tool ya software brand ho? Collaborations ke liye Instagram pe DM karo: <a href="https://www.instagram.com/ai_with_paras/">@ai_with_paras</a>.</p>
+  </section>
+
+  <section class="card join">
+    <img src="../assets/paras_face.jpg" alt="Paras Arora">
+    <h2>Aise hi free AI guides har hafte</h2>
+    <p>WhatsApp channel join karo: setup guides, new AI tools aur business workflows, seedha aapke phone pe.</p>
+    <div class="cta">
+      <a class="btn" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 Join WhatsApp Channel</a>
+      <a class="btn ghost" href="https://www.skool.com/exponential-world-ai-2398">Free Skool community</a>
+    </div>
+  </section>
+
+  <footer>
+    Education only. Plans, limits aur Meta ke rules badal sakte hain; Kapso ke docs aur pricing page se verified, October 2026.<br>
+    Sources: <a href="https://kapso.com/pricing">Kapso pricing</a> ·
+    <a href="https://docs.kapso.ai/docs/how-to/whatsapp/connect-whatsapp">Connect WhatsApp</a> ·
+    <a href="https://docs.kapso.ai/docs/how-to/whatsapp/use-sandbox-for-testing">Kapso Sandbox</a> ·
+    <a href="https://github.com/gokapso/agent-skills">gokapso/agent-skills</a><br>
+    Not affiliated with Kapso, Meta, WhatsApp or Anthropic. © Exponential World AI · AI with Paras
+  </footer>
+</div>
+<script>
+  document.querySelectorAll('.code').forEach(function (el) {
+    var b = document.createElement('button');
+    b.className = 'copy'; b.textContent = 'Copy';
+    b.addEventListener('click', function () {
+      var t = el.firstChild.textContent.trim();
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+        b.textContent = 'Copied ✓'; b.classList.add('done');
+        setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('done'); }, 1600);
+      }).catch(function () { b.textContent = 'Select & copy'; });
+    });
+    el.appendChild(b);
+  });
+</script>
+</body>
+</html>

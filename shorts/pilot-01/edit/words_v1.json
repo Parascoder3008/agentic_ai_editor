@@ -1,0 +1,804 @@
+{
+ "words": [
+  {
+   "text": "Abb",
+   "start": 0.341,
+   "end": 0.461
+  },
+  {
+   "text": "aap",
+   "start": 0.501,
+   "end": 0.622
+  },
+  {
+   "text": "bhi",
+   "start": 0.662,
+   "end": 0.743
+  },
+  {
+   "text": "Meta",
+   "start": 0.863,
+   "end": 1.125
+  },
+  {
+   "text": "ads",
+   "start": 1.225,
+   "end": 1.386
+  },
+  {
+   "text": "agency",
+   "start": 1.406,
+   "end": 1.768
+  },
+  {
+   "text": "ki",
+   "start": 1.848,
+   "end": 1.908
+  },
+  {
+   "text": "chhutti",
+   "start": 1.969,
+   "end": 2.21
+  },
+  {
+   "text": "kar",
+   "start": 2.251,
+   "end": 2.396
+  },
+  {
+   "text": "do!",
+   "start": 2.396,
+   "end": 2.458
+  },
+  {
+   "text": "Maine",
+   "start": 3.313,
+   "end": 3.636
+  },
+  {
+   "text": "is",
+   "start": 3.656,
+   "end": 3.697
+  },
+  {
+   "text": "secret",
+   "start": 3.717,
+   "end": 4.08
+  },
+  {
+   "text": "Claude",
+   "start": 4.101,
+   "end": 4.363
+  },
+  {
+   "text": "plugin",
+   "start": 4.383,
+   "end": 4.646
+  },
+  {
+   "text": "ko",
+   "start": 4.686,
+   "end": 4.747
+  },
+  {
+   "text": "test",
+   "start": 4.848,
+   "end": 5.03
+  },
+  {
+   "text": "kiya,",
+   "start": 5.1,
+   "end": 5.242
+  },
+  {
+   "text": "ghanton",
+   "start": 5.706,
+   "end": 6.09
+  },
+  {
+   "text": "ka",
+   "start": 6.15,
+   "end": 6.211
+  },
+  {
+   "text": "audit",
+   "start": 6.231,
+   "end": 6.574
+  },
+  {
+   "text": "minuton",
+   "start": 6.594,
+   "end": 6.938
+  },
+  {
+   "text": "mein",
+   "start": 6.978,
+   "end": 7.059
+  },
+  {
+   "text": "ho",
+   "start": 7.079,
+   "end": 7.119
+  },
+  {
+   "text": "gaya.",
+   "start": 7.18,
+   "end": 7.365
+  },
+  {
+   "text": "Dikhata",
+   "start": 7.661,
+   "end": 7.987
+  },
+  {
+   "text": "hoon",
+   "start": 8.048,
+   "end": 8.17
+  },
+  {
+   "text": "kaise!",
+   "start": 8.211,
+   "end": 8.476
+  },
+  {
+   "text": "Plugin",
+   "start": 8.96,
+   "end": 9.242
+  },
+  {
+   "text": "ka",
+   "start": 9.303,
+   "end": 9.363
+  },
+  {
+   "text": "naam",
+   "start": 9.423,
+   "end": 9.605
+  },
+  {
+   "text": "hai",
+   "start": 9.665,
+   "end": 9.725
+  },
+  {
+   "text": "Claude",
+   "start": 9.786,
+   "end": 10.108
+  },
+  {
+   "text": "Ads.",
+   "start": 10.128,
+   "end": 10.369
+  },
+  {
+   "text": "GitHub",
+   "start": 10.58,
+   "end": 11.106
+  },
+  {
+   "text": "par",
+   "start": 11.126,
+   "end": 11.419
+  },
+  {
+   "text": "free",
+   "start": 11.439,
+   "end": 11.809
+  },
+  {
+   "text": "hai,",
+   "start": 11.829,
+   "end": 12.199
+  },
+  {
+   "text": "9,800",
+   "start": 12.219,
+   "end": 12.668
+  },
+  {
+   "text": "se",
+   "start": 12.688,
+   "end": 12.902
+  },
+  {
+   "text": "zyada",
+   "start": 12.922,
+   "end": 13.37
+  },
+  {
+   "text": "stars.",
+   "start": 13.704,
+   "end": 13.969
+  },
+  {
+   "text": "33",
+   "start": 14.24,
+   "end": 14.509
+  },
+  {
+   "text": "skills,",
+   "start": 14.529,
+   "end": 15.279
+  },
+  {
+   "text": "25",
+   "start": 15.299,
+   "end": 15.568
+  },
+  {
+   "text": "AI",
+   "start": 15.588,
+   "end": 15.856
+  },
+  {
+   "text": "agents:",
+   "start": 15.876,
+   "end": 16.626
+  },
+  {
+   "text": "audit,",
+   "start": 16.646,
+   "end": 17.3
+  },
+  {
+   "text": "competitor",
+   "start": 17.633,
+   "end": 18.139
+  },
+  {
+   "text": "research,",
+   "start": 18.179,
+   "end": 18.563
+  },
+  {
+   "text": "budget.",
+   "start": 18.746,
+   "end": 19.09
+  },
+  {
+   "text": "Claude",
+   "start": 19.503,
+   "end": 19.807
+  },
+  {
+   "text": "Code",
+   "start": 19.807,
+   "end": 20.05
+  },
+  {
+   "text": "mein",
+   "start": 20.05,
+   "end": 20.131
+  },
+  {
+   "text": "install",
+   "start": 20.151,
+   "end": 20.455
+  },
+  {
+   "text": "karo,",
+   "start": 20.535,
+   "end": 20.697
+  },
+  {
+   "text": "ad",
+   "start": 20.819,
+   "end": 20.859
+  },
+  {
+   "text": "account",
+   "start": 20.93,
+   "end": 21.394
+  },
+  {
+   "text": "connect",
+   "start": 21.415,
+   "end": 21.718
+  },
+  {
+   "text": "karo.",
+   "start": 21.738,
+   "end": 21.879
+  },
+  {
+   "text": "Ab",
+   "start": 22.383,
+   "end": 22.484
+  },
+  {
+   "text": "bolo:",
+   "start": 22.524,
+   "end": 22.726
+  },
+  {
+   "text": "is",
+   "start": 23.109,
+   "end": 23.19
+  },
+  {
+   "text": "hafte",
+   "start": 23.23,
+   "end": 23.553
+  },
+  {
+   "text": "ke",
+   "start": 23.593,
+   "end": 23.674
+  },
+  {
+   "text": "mere",
+   "start": 23.694,
+   "end": 23.856
+  },
+  {
+   "text": "ads",
+   "start": 23.977,
+   "end": 24.219
+  },
+  {
+   "text": "audit",
+   "start": 24.259,
+   "end": 24.36
+  },
+  {
+   "text": "karo.",
+   "start": 24.573,
+   "end": 24.699
+  },
+  {
+   "text": "Boom!",
+   "start": 25.063,
+   "end": 25.229
+  },
+  {
+   "text": "Kaunsa",
+   "start": 25.582,
+   "end": 25.904
+  },
+  {
+   "text": "ad",
+   "start": 25.924,
+   "end": 26.024
+  },
+  {
+   "text": "kaam",
+   "start": 26.065,
+   "end": 26.246
+  },
+  {
+   "text": "kar",
+   "start": 26.306,
+   "end": 26.427
+  },
+  {
+   "text": "raha",
+   "start": 26.467,
+   "end": 26.628
+  },
+  {
+   "text": "hai,",
+   "start": 26.648,
+   "end": 26.729
+  },
+  {
+   "text": "kaunsa",
+   "start": 26.809,
+   "end": 26.93
+  },
+  {
+   "text": "paisa",
+   "start": 27.111,
+   "end": 27.333
+  },
+  {
+   "text": "jala",
+   "start": 27.413,
+   "end": 27.614
+  },
+  {
+   "text": "raha",
+   "start": 27.675,
+   "end": 27.795
+  },
+  {
+   "text": "hai,",
+   "start": 27.795,
+   "end": 27.896
+  },
+  {
+   "text": "sab",
+   "start": 27.976,
+   "end": 28.117
+  },
+  {
+   "text": "saamne.",
+   "start": 28.178,
+   "end": 28.48
+  },
+  {
+   "text": "Higgsfield",
+   "start": 28.69,
+   "end": 29.314
+  },
+  {
+   "text": "MCP",
+   "start": 29.334,
+   "end": 29.549
+  },
+  {
+   "text": "jodo,",
+   "start": 29.569,
+   "end": 29.9
+  },
+  {
+   "text": "aur",
+   "start": 29.92,
+   "end": 30.134
+  },
+  {
+   "text": "7",
+   "start": 30.154,
+   "end": 30.251
+  },
+  {
+   "text": "naye",
+   "start": 30.271,
+   "end": 30.544
+  },
+  {
+   "text": "ad",
+   "start": 30.564,
+   "end": 30.72
+  },
+  {
+   "text": "creatives",
+   "start": 31.005,
+   "end": 31.432
+  },
+  {
+   "text": "bhi",
+   "start": 31.453,
+   "end": 31.534
+  },
+  {
+   "text": "ready.",
+   "start": 31.575,
+   "end": 31.779
+  },
+  {
+   "text": "Aur",
+   "start": 32.352,
+   "end": 32.452
+  },
+  {
+   "text": "aapke",
+   "start": 32.492,
+   "end": 32.714
+  },
+  {
+   "text": "approval",
+   "start": 32.754,
+   "end": 33.096
+  },
+  {
+   "text": "ke",
+   "start": 33.156,
+   "end": 33.216
+  },
+  {
+   "text": "bina,",
+   "start": 33.256,
+   "end": 33.437
+  },
+  {
+   "text": "account",
+   "start": 33.719,
+   "end": 33.92
+  },
+  {
+   "text": "mein",
+   "start": 33.92,
+   "end": 34.0
+  },
+  {
+   "text": "kuch",
+   "start": 34.061,
+   "end": 34.242
+  },
+  {
+   "text": "change",
+   "start": 34.323,
+   "end": 34.606
+  },
+  {
+   "text": "nahi",
+   "start": 34.606,
+   "end": 34.727
+  },
+  {
+   "text": "hota.",
+   "start": 34.747,
+   "end": 34.949
+  },
+  {
+   "text": "Maine",
+   "start": 35.462,
+   "end": 35.784
+  },
+  {
+   "text": "is",
+   "start": 35.804,
+   "end": 35.844
+  },
+  {
+   "text": "Claude",
+   "start": 35.904,
+   "end": 36.246
+  },
+  {
+   "text": "Ads",
+   "start": 36.266,
+   "end": 36.407
+  },
+  {
+   "text": "plugin",
+   "start": 36.427,
+   "end": 36.728
+  },
+  {
+   "text": "ka",
+   "start": 36.769,
+   "end": 36.849
+  },
+  {
+   "text": "direct",
+   "start": 36.929,
+   "end": 37.05
+  },
+  {
+   "text": "link",
+   "start": 37.261,
+   "end": 37.483
+  },
+  {
+   "text": "aur",
+   "start": 37.583,
+   "end": 37.644
+  },
+  {
+   "text": "setup",
+   "start": 37.704,
+   "end": 37.966
+  },
+  {
+   "text": "guide",
+   "start": 38.026,
+   "end": 38.247
+  },
+  {
+   "text": "apne",
+   "start": 38.247,
+   "end": 38.428
+  },
+  {
+   "text": "WhatsApp",
+   "start": 38.489,
+   "end": 38.69
+  },
+  {
+   "text": "channel",
+   "start": 38.894,
+   "end": 39.138
+  },
+  {
+   "text": "mein",
+   "start": 39.199,
+   "end": 39.28
+  },
+  {
+   "text": "daal",
+   "start": 39.321,
+   "end": 39.483
+  },
+  {
+   "text": "diya",
+   "start": 39.544,
+   "end": 39.666
+  },
+  {
+   "text": "hai.",
+   "start": 39.727,
+   "end": 39.809
+  },
+  {
+   "text": "Agar",
+   "start": 40.305,
+   "end": 40.467
+  },
+  {
+   "text": "aapko",
+   "start": 40.507,
+   "end": 40.69
+  },
+  {
+   "text": "WhatsApp",
+   "start": 40.73,
+   "end": 41.095
+  },
+  {
+   "text": "channel",
+   "start": 41.095,
+   "end": 41.338
+  },
+  {
+   "text": "ka",
+   "start": 41.338,
+   "end": 41.379
+  },
+  {
+   "text": "link",
+   "start": 41.379,
+   "end": 41.46
+  },
+  {
+   "text": "chahiye",
+   "start": 41.672,
+   "end": 41.873
+  },
+  {
+   "text": "to",
+   "start": 41.934,
+   "end": 41.994
+  },
+  {
+   "text": "abhi",
+   "start": 42.055,
+   "end": 42.196
+  },
+  {
+   "text": "follow",
+   "start": 42.256,
+   "end": 42.498
+  },
+  {
+   "text": "karke",
+   "start": 42.538,
+   "end": 42.639
+  },
+  {
+   "text": "comment",
+   "start": 42.639,
+   "end": 42.8
+  },
+  {
+   "text": "karo",
+   "start": 43.127,
+   "end": 43.27
+  },
+  {
+   "text": "META.",
+   "start": 43.331,
+   "end": 43.536
+  },
+  {
+   "text": "Link",
+   "start": 44.182,
+   "end": 44.363
+  },
+  {
+   "text": "seedha",
+   "start": 44.403,
+   "end": 44.624
+  },
+  {
+   "text": "aapke",
+   "start": 44.644,
+   "end": 44.845
+  },
+  {
+   "text": "DM",
+   "start": 44.946,
+   "end": 45.167
+  },
+  {
+   "text": "mein",
+   "start": 45.227,
+   "end": 45.328
+  },
+  {
+   "text": "bhej",
+   "start": 45.348,
+   "end": 45.468
+  },
+  {
+   "text": "dunga.",
+   "start": 45.529,
+   "end": 45.75
+  },
+  {
+   "text": "Toh",
+   "start": 46.104,
+   "end": 46.205
+  },
+  {
+   "text": "abhi",
+   "start": 46.205,
+   "end": 46.327
+  },
+  {
+   "text": "channel",
+   "start": 46.388,
+   "end": 46.651
+  },
+  {
+   "text": "ke",
+   "start": 46.692,
+   "end": 46.753
+  },
+  {
+   "text": "description",
+   "start": 46.834,
+   "end": 47.178
+  },
+  {
+   "text": "mein",
+   "start": 47.178,
+   "end": 47.259
+  },
+  {
+   "text": "di",
+   "start": 47.259,
+   "end": 47.3
+  },
+  {
+   "text": "gayi",
+   "start": 47.442,
+   "end": 47.584
+  },
+  {
+   "text": "link",
+   "start": 47.624,
+   "end": 47.786
+  },
+  {
+   "text": "se",
+   "start": 47.827,
+   "end": 47.888
+  },
+  {
+   "text": "hamare",
+   "start": 47.928,
+   "end": 48.192
+  },
+  {
+   "text": "WhatsApp",
+   "start": 48.232,
+   "end": 48.637
+  },
+  {
+   "text": "channel",
+   "start": 48.637,
+   "end": 48.799
+  },
+  {
+   "text": "ko",
+   "start": 48.799,
+   "end": 48.84
+  },
+  {
+   "text": "join",
+   "start": 49.015,
+   "end": 49.261
+  },
+  {
+   "text": "kar",
+   "start": 49.282,
+   "end": 49.384
+  },
+  {
+   "text": "lo.",
+   "start": 49.466,
+   "end": 49.528
+  }
+ ]
+}

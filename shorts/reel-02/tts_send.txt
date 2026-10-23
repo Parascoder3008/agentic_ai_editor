@@ -1,0 +1,14 @@
+ये free GitHub tool क्लॉड को आपकी पूरी YouTube team बना देता है।
+Script, title, thumbnail, retention, सब एक जगह।
+दिखाता हूँ कैसे!
+इसका नाम है YouTube Agent Skill. GitHub पर free है, one thousand से ज़्यादा stars, और इसमें eleven skills हैं।
+एक skill twenty one hook formulas से आपकी script लिखती है।
+दूसरी, title और thumbnail को एक साथ check करती है।
+तीसरी, आपका retention data पढ़ के बताती है कि लोग किस second पे video छोड़ रहे हैं।
+और एक skill आपके नीश के viral videos ढूँढ के, उनका formula बता देती है।
+Install करना simple है। बस क्लॉड Code में GitHub link paste करो और बोलो, install कर दो।
+कोई API key नहीं, कोई signup नहीं।
+और ये ख़ुद कुछ post नहीं करता। लिखता ये है, upload आप करते हो।
+इसका direct link और पूरा setup guide मैंने ready कर दिया है।
+चाहिए तो follow करो और comment करो स्किल। Link सीधा आपके DM में।
+तो channel के description में दी गई link से हमारा WhatsApp channel join कर लो।

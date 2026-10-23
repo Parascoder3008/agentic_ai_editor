@@ -1,0 +1,1494 @@
+{
+ "L1": [
+  {
+   "text": "ye",
+   "start": 15.11,
+   "end": 15.17,
+   "score": 0.992
+  },
+  {
+   "text": "jo",
+   "start": 15.21,
+   "end": 15.271,
+   "score": 0.916
+  },
+  {
+   "text": "aap",
+   "start": 15.271,
+   "end": 15.351,
+   "score": 0.226
+  },
+  {
+   "text": "video",
+   "start": 15.351,
+   "end": 15.531,
+   "score": 0.78
+  },
+  {
+   "text": "dekh",
+   "start": 15.571,
+   "end": 15.711,
+   "score": 0.918
+  },
+  {
+   "text": "rahe",
+   "start": 15.711,
+   "end": 15.792,
+   "score": 0.237
+  },
+  {
+   "text": "ho",
+   "start": 15.792,
+   "end": 15.832,
+   "score": 0.005
+  },
+  {
+   "text": "na",
+   "start": 15.872,
+   "end": 15.912,
+   "score": 0.969
+  },
+  {
+   "text": "ye",
+   "start": 16.112,
+   "end": 16.192,
+   "score": 0.993
+  },
+  {
+   "text": "mere",
+   "start": 16.232,
+   "end": 16.393,
+   "score": 0.991
+  },
+  {
+   "text": "studio",
+   "start": 16.413,
+   "end": 16.713,
+   "score": 0.874
+  },
+  {
+   "text": "mein",
+   "start": 16.773,
+   "end": 16.853,
+   "score": 0.495
+  },
+  {
+   "text": "kisi",
+   "start": 16.934,
+   "end": 17.154,
+   "score": 0.995
+  },
+  {
+   "text": "bhi",
+   "start": 17.234,
+   "end": 17.294,
+   "score": 0.963
+  },
+  {
+   "text": "editor",
+   "start": 17.415,
+   "end": 17.715,
+   "score": 0.71
+  },
+  {
+   "text": "ne",
+   "start": 17.735,
+   "end": 17.775,
+   "score": 0.446
+  },
+  {
+   "text": "edit",
+   "start": 17.795,
+   "end": 17.955,
+   "score": 0.777
+  },
+  {
+   "text": "nahi",
+   "start": 17.976,
+   "end": 18.096,
+   "score": 0.288
+  },
+  {
+   "text": "kari",
+   "start": 18.136,
+   "end": 18.256,
+   "score": 0.955
+  },
+  {
+   "text": "hai",
+   "start": 18.296,
+   "end": 18.376,
+   "score": 0.019
+  },
+  {
+   "text": "ye",
+   "start": 18.416,
+   "end": 18.496,
+   "score": 0.991
+  },
+  {
+   "text": "poori",
+   "start": 18.617,
+   "end": 18.857,
+   "score": 0.573
+  },
+  {
+   "text": "ki",
+   "start": 18.917,
+   "end": 18.977,
+   "score": 0.988
+  },
+  {
+   "text": "poori",
+   "start": 19.058,
+   "end": 19.238,
+   "score": 0.575
+  },
+  {
+   "text": "ai",
+   "start": 19.438,
+   "end": 19.679,
+   "score": 0.609
+  },
+  {
+   "text": "se",
+   "start": 19.779,
+   "end": 19.859,
+   "score": 0.994
+  },
+  {
+   "text": "edit",
+   "start": 19.959,
+   "end": 20.16,
+   "score": 0.921
+  },
+  {
+   "text": "hui",
+   "start": 20.22,
+   "end": 20.32,
+   "score": 0.977
+  },
+  {
+   "text": "hai",
+   "start": 20.34,
+   "end": 20.42,
+   "score": 0.001
+  }
+ ],
+ "L2": [
+  {
+   "text": "ab",
+   "start": 20.781,
+   "end": 20.841,
+   "score": 0.895
+  },
+  {
+   "text": "main",
+   "start": 20.881,
+   "end": 21.002,
+   "score": 0.549
+  },
+  {
+   "text": "bolun",
+   "start": 21.022,
+   "end": 21.302,
+   "score": 0.602
+  },
+  {
+   "text": "isko",
+   "start": 21.403,
+   "end": 21.623,
+   "score": 0.976
+  },
+  {
+   "text": "ki",
+   "start": 21.764,
+   "end": 21.844,
+   "score": 0.984
+  },
+  {
+   "text": "bhai",
+   "start": 21.904,
+   "end": 22.024,
+   "score": 0.798
+  },
+  {
+   "text": "mere",
+   "start": 22.104,
+   "end": 22.225,
+   "score": 0.646
+  },
+  {
+   "text": "ko",
+   "start": 22.245,
+   "end": 22.305,
+   "score": 0.944
+  },
+  {
+   "text": "upar",
+   "start": 22.445,
+   "end": 22.646,
+   "score": 0.966
+  },
+  {
+   "text": "top",
+   "start": 22.746,
+   "end": 22.907,
+   "score": 0.929
+  },
+  {
+   "text": "left",
+   "start": 22.987,
+   "end": 23.207,
+   "score": 0.664
+  },
+  {
+   "text": "corner",
+   "start": 23.248,
+   "end": 23.508,
+   "score": 0.525
+  },
+  {
+   "text": "mein",
+   "start": 23.548,
+   "end": 23.629,
+   "score": 0.498
+  },
+  {
+   "text": "le",
+   "start": 23.629,
+   "end": 23.729,
+   "score": 0.836
+  },
+  {
+   "text": "ja",
+   "start": 23.749,
+   "end": 23.809,
+   "score": 0.994
+  },
+  {
+   "text": "aur",
+   "start": 23.949,
+   "end": 24.03,
+   "score": 0.977
+  },
+  {
+   "text": "neeche",
+   "start": 24.11,
+   "end": 24.351,
+   "score": 0.497
+  },
+  {
+   "text": "ki",
+   "start": 24.391,
+   "end": 24.451,
+   "score": 0.987
+  },
+  {
+   "text": "taraf",
+   "start": 24.491,
+   "end": 24.651,
+   "score": 0.791
+  },
+  {
+   "text": "laga",
+   "start": 24.712,
+   "end": 24.892,
+   "score": 0.937
+  },
+  {
+   "text": "de",
+   "start": 24.972,
+   "end": 25.052,
+   "score": 0.986
+  },
+  {
+   "text": "meri",
+   "start": 25.113,
+   "end": 25.333,
+   "score": 0.908
+  },
+  {
+   "text": "poori",
+   "start": 25.353,
+   "end": 25.554,
+   "score": 0.596
+  },
+  {
+   "text": "reel",
+   "start": 25.674,
+   "end": 25.855,
+   "score": 0.281
+  },
+  {
+   "text": "aur",
+   "start": 26.316,
+   "end": 26.396,
+   "score": 0.981
+  },
+  {
+   "text": "dikhaye",
+   "start": 26.456,
+   "end": 26.717,
+   "score": 0.716
+  },
+  {
+   "text": "usmein",
+   "start": 26.737,
+   "end": 26.938,
+   "score": 0.629
+  },
+  {
+   "text": "badhiya",
+   "start": 26.978,
+   "end": 27.178,
+   "score": 0.825
+  },
+  {
+   "text": "badhiya",
+   "start": 27.218,
+   "end": 27.419,
+   "score": 0.751
+  },
+  {
+   "text": "graphics",
+   "start": 27.499,
+   "end": 27.86,
+   "score": 0.76
+  }
+ ],
+ "L3": [
+  {
+   "text": "uske",
+   "start": 27.98,
+   "end": 28.201,
+   "score": 0.978
+  },
+  {
+   "text": "alawa",
+   "start": 28.241,
+   "end": 28.522,
+   "score": 0.538
+  },
+  {
+   "text": "main",
+   "start": 28.622,
+   "end": 28.803,
+   "score": 0.746
+  },
+  {
+   "text": "agar",
+   "start": 28.903,
+   "end": 29.084,
+   "score": 0.952
+  },
+  {
+   "text": "aage",
+   "start": 29.204,
+   "end": 29.404,
+   "score": 0.734
+  },
+  {
+   "text": "aa",
+   "start": 29.404,
+   "end": 29.465,
+   "score": 0.952
+  },
+  {
+   "text": "jaun",
+   "start": 29.485,
+   "end": 29.705,
+   "score": 0.74
+  },
+  {
+   "text": "mere",
+   "start": 29.765,
+   "end": 30.006,
+   "score": 0.993
+  },
+  {
+   "text": "peeche",
+   "start": 30.086,
+   "end": 30.307,
+   "score": 0.563
+  },
+  {
+   "text": "aa",
+   "start": 30.367,
+   "end": 30.427,
+   "score": 0.934
+  },
+  {
+   "text": "jaaye",
+   "start": 30.447,
+   "end": 30.588,
+   "score": 0.663
+  },
+  {
+   "text": "text",
+   "start": 30.648,
+   "end": 30.909,
+   "score": 0.744
+  },
+  {
+   "text": "aur",
+   "start": 31.23,
+   "end": 31.35,
+   "score": 0.968
+  },
+  {
+   "text": "us",
+   "start": 31.37,
+   "end": 31.45,
+   "score": 0.733
+  },
+  {
+   "text": "text",
+   "start": 31.551,
+   "end": 31.791,
+   "score": 0.734
+  },
+  {
+   "text": "ka",
+   "start": 31.831,
+   "end": 31.871,
+   "score": 0.862
+  },
+  {
+   "text": "font",
+   "start": 32.012,
+   "end": 32.313,
+   "score": 0.513
+  },
+  {
+   "text": "thoda",
+   "start": 32.353,
+   "end": 32.533,
+   "score": 0.934
+  },
+  {
+   "text": "cinematic",
+   "start": 32.634,
+   "end": 33.155,
+   "score": 0.688
+  },
+  {
+   "text": "lagna",
+   "start": 33.215,
+   "end": 33.436,
+   "score": 0.994
+  },
+  {
+   "text": "chahiye",
+   "start": 33.496,
+   "end": 33.737,
+   "score": 0.676
+  },
+  {
+   "text": "wo",
+   "start": 34.018,
+   "end": 34.098,
+   "score": 0.287
+  },
+  {
+   "text": "bhi",
+   "start": 34.158,
+   "end": 34.218,
+   "score": 0.739
+  },
+  {
+   "text": "ye",
+   "start": 34.278,
+   "end": 34.318,
+   "score": 0.657
+  },
+  {
+   "text": "kar",
+   "start": 34.379,
+   "end": 34.479,
+   "score": 0.997
+  },
+  {
+   "text": "deta",
+   "start": 34.539,
+   "end": 34.74,
+   "score": 0.993
+  },
+  {
+   "text": "hai",
+   "start": 34.78,
+   "end": 34.84,
+   "score": 0.574
+  }
+ ],
+ "L4": [
+  {
+   "text": "uske",
+   "start": 35.141,
+   "end": 35.321,
+   "score": 0.997
+  },
+  {
+   "text": "alawa",
+   "start": 35.341,
+   "end": 35.522,
+   "score": 0.597
+  },
+  {
+   "text": "main",
+   "start": 35.582,
+   "end": 35.682,
+   "score": 0.692
+  },
+  {
+   "text": "bolun",
+   "start": 35.702,
+   "end": 35.943,
+   "score": 0.79
+  },
+  {
+   "text": "ki",
+   "start": 35.963,
+   "end": 36.023,
+   "score": 0.826
+  },
+  {
+   "text": "mere",
+   "start": 36.143,
+   "end": 36.344,
+   "score": 0.993
+  },
+  {
+   "text": "haath",
+   "start": 36.404,
+   "end": 36.624,
+   "score": 0.987
+  },
+  {
+   "text": "mein",
+   "start": 36.684,
+   "end": 36.765,
+   "score": 0.498
+  },
+  {
+   "text": "jo",
+   "start": 36.785,
+   "end": 36.865,
+   "score": 0.994
+  },
+  {
+   "text": "products",
+   "start": 36.925,
+   "end": 37.286,
+   "score": 0.623
+  },
+  {
+   "text": "hain",
+   "start": 37.286,
+   "end": 37.406,
+   "score": 0.127
+  },
+  {
+   "text": "isko",
+   "start": 37.426,
+   "end": 37.587,
+   "score": 0.991
+  },
+  {
+   "text": "highlight",
+   "start": 37.667,
+   "end": 38.088,
+   "score": 0.422
+  },
+  {
+   "text": "kar",
+   "start": 38.148,
+   "end": 38.248,
+   "score": 0.998
+  },
+  {
+   "text": "de",
+   "start": 38.288,
+   "end": 38.368,
+   "score": 0.996
+  },
+  {
+   "text": "aur",
+   "start": 38.749,
+   "end": 38.89,
+   "score": 0.996
+  },
+  {
+   "text": "uske",
+   "start": 38.99,
+   "end": 39.19,
+   "score": 0.998
+  },
+  {
+   "text": "baad",
+   "start": 39.231,
+   "end": 39.351,
+   "score": 0.965
+  },
+  {
+   "text": "isme",
+   "start": 39.391,
+   "end": 39.551,
+   "score": 0.988
+  },
+  {
+   "text": "se",
+   "start": 39.591,
+   "end": 39.652,
+   "score": 0.995
+  },
+  {
+   "text": "kuch",
+   "start": 39.672,
+   "end": 39.852,
+   "score": 0.952
+  },
+  {
+   "text": "graphics",
+   "start": 39.892,
+   "end": 40.333,
+   "score": 0.863
+  },
+  {
+   "text": "nikaale",
+   "start": 40.373,
+   "end": 40.614,
+   "score": 0.912
+  },
+  {
+   "text": "meri",
+   "start": 40.654,
+   "end": 40.794,
+   "score": 0.937
+  },
+  {
+   "text": "ghadi",
+   "start": 40.834,
+   "end": 41.015,
+   "score": 0.981
+  },
+  {
+   "text": "mein",
+   "start": 41.075,
+   "end": 41.155,
+   "score": 0.497
+  },
+  {
+   "text": "se",
+   "start": 41.175,
+   "end": 41.256,
+   "score": 0.981
+  },
+  {
+   "text": "aur",
+   "start": 41.576,
+   "end": 41.677,
+   "score": 0.996
+  },
+  {
+   "text": "phir",
+   "start": 41.717,
+   "end": 41.837,
+   "score": 0.992
+  },
+  {
+   "text": "us",
+   "start": 41.857,
+   "end": 41.917,
+   "score": 0.982
+  },
+  {
+   "text": "graphics",
+   "start": 41.957,
+   "end": 42.238,
+   "score": 0.864
+  },
+  {
+   "text": "ko",
+   "start": 42.258,
+   "end": 42.318,
+   "score": 0.995
+  },
+  {
+   "text": "wapas",
+   "start": 42.358,
+   "end": 42.599,
+   "score": 0.799
+  },
+  {
+   "text": "le",
+   "start": 42.659,
+   "end": 42.719,
+   "score": 0.998
+  },
+  {
+   "text": "jaaye",
+   "start": 42.779,
+   "end": 42.92,
+   "score": 0.79
+  }
+ ],
+ "L5": [
+  {
+   "text": "aur",
+   "start": 51.611,
+   "end": 51.711,
+   "score": 0.986
+  },
+  {
+   "text": "iske",
+   "start": 51.751,
+   "end": 51.911,
+   "score": 0.992
+  },
+  {
+   "text": "baad",
+   "start": 51.951,
+   "end": 52.072,
+   "score": 0.902
+  },
+  {
+   "text": "main",
+   "start": 52.092,
+   "end": 52.192,
+   "score": 0.428
+  },
+  {
+   "text": "bolun",
+   "start": 52.212,
+   "end": 52.412,
+   "score": 0.637
+  },
+  {
+   "text": "ki",
+   "start": 52.432,
+   "end": 52.493,
+   "score": 0.937
+  },
+  {
+   "text": "mera",
+   "start": 52.553,
+   "end": 52.753,
+   "score": 0.994
+  },
+  {
+   "text": "bana",
+   "start": 52.813,
+   "end": 52.954,
+   "score": 0.996
+  },
+  {
+   "text": "de",
+   "start": 53.034,
+   "end": 53.094,
+   "score": 0.993
+  },
+  {
+   "text": "paper",
+   "start": 53.214,
+   "end": 53.515,
+   "score": 0.598
+  },
+  {
+   "text": "cut",
+   "start": 53.575,
+   "end": 53.755,
+   "score": 0.331
+  },
+  {
+   "text": "effect",
+   "start": 53.835,
+   "end": 54.176,
+   "score": 0.314
+  },
+  {
+   "text": "aur",
+   "start": 54.276,
+   "end": 54.417,
+   "score": 0.993
+  },
+  {
+   "text": "mujhe",
+   "start": 54.517,
+   "end": 54.737,
+   "score": 0.988
+  },
+  {
+   "text": "ek",
+   "start": 54.877,
+   "end": 54.998,
+   "score": 0.992
+  },
+  {
+   "text": "side",
+   "start": 55.058,
+   "end": 55.318,
+   "score": 0.64
+  },
+  {
+   "text": "mein",
+   "start": 55.318,
+   "end": 55.399,
+   "score": 0.281
+  },
+  {
+   "text": "le",
+   "start": 55.399,
+   "end": 55.459,
+   "score": 0.739
+  },
+  {
+   "text": "jaake",
+   "start": 55.479,
+   "end": 55.639,
+   "score": 0.768
+  },
+  {
+   "text": "meri",
+   "start": 55.699,
+   "end": 55.86,
+   "score": 0.982
+  },
+  {
+   "text": "screen",
+   "start": 55.94,
+   "end": 56.361,
+   "score": 0.493
+  },
+  {
+   "text": "par",
+   "start": 56.421,
+   "end": 56.541,
+   "score": 0.346
+  },
+  {
+   "text": "saare",
+   "start": 56.601,
+   "end": 56.862,
+   "score": 0.847
+  },
+  {
+   "text": "mere",
+   "start": 56.902,
+   "end": 57.022,
+   "score": 0.872
+  },
+  {
+   "text": "ek",
+   "start": 57.082,
+   "end": 57.122,
+   "score": 0.932
+  },
+  {
+   "text": "product",
+   "start": 57.162,
+   "end": 57.483,
+   "score": 0.689
+  },
+  {
+   "text": "ke",
+   "start": 57.523,
+   "end": 57.583,
+   "score": 0.987
+  },
+  {
+   "text": "b",
+   "start": 57.663,
+   "end": 57.683,
+   "score": 0.986
+  },
+  {
+   "text": "roll",
+   "start": 57.824,
+   "end": 57.964,
+   "score": 0.72
+  },
+  {
+   "text": "laga",
+   "start": 58.004,
+   "end": 58.164,
+   "score": 0.996
+  },
+  {
+   "text": "de",
+   "start": 58.224,
+   "end": 58.305,
+   "score": 0.991
+  },
+  {
+   "text": "aur",
+   "start": 58.665,
+   "end": 58.786,
+   "score": 0.991
+  },
+  {
+   "text": "uske",
+   "start": 58.806,
+   "end": 58.966,
+   "score": 0.994
+  },
+  {
+   "text": "baad",
+   "start": 58.986,
+   "end": 59.126,
+   "score": 0.947
+  },
+  {
+   "text": "finally",
+   "start": 59.166,
+   "end": 59.547,
+   "score": 0.522
+  },
+  {
+   "text": "main",
+   "start": 59.567,
+   "end": 59.667,
+   "score": 0.48
+  },
+  {
+   "text": "aaun",
+   "start": 59.667,
+   "end": 59.808,
+   "score": 0.072
+  },
+  {
+   "text": "aur",
+   "start": 59.888,
+   "end": 59.988,
+   "score": 0.989
+  },
+  {
+   "text": "bolun",
+   "start": 60.048,
+   "end": 60.309,
+   "score": 0.798
+  },
+  {
+   "text": "bhai",
+   "start": 60.309,
+   "end": 60.489,
+   "score": 0.666
+  },
+  {
+   "text": "saab",
+   "start": 60.549,
+   "end": 60.71,
+   "score": 0.518
+  },
+  {
+   "text": "bye",
+   "start": 60.73,
+   "end": 60.95,
+   "score": 0.277
+  }
+ ],
+ "L6": [
+  {
+   "text": "ab",
+   "start": 62.081,
+   "end": 62.161,
+   "score": 0.995
+  },
+  {
+   "text": "ye",
+   "start": 62.242,
+   "end": 62.302,
+   "score": 0.722
+  },
+  {
+   "text": "sab",
+   "start": 62.362,
+   "end": 62.483,
+   "score": 0.995
+  },
+  {
+   "text": "kuch",
+   "start": 62.523,
+   "end": 62.683,
+   "score": 0.907
+  },
+  {
+   "text": "aap",
+   "start": 62.784,
+   "end": 62.984,
+   "score": 0.55
+  },
+  {
+   "text": "bhi",
+   "start": 63.025,
+   "end": 63.105,
+   "score": 0.963
+  },
+  {
+   "text": "kar",
+   "start": 63.165,
+   "end": 63.286,
+   "score": 0.993
+  },
+  {
+   "text": "sakte",
+   "start": 63.346,
+   "end": 63.587,
+   "score": 0.784
+  },
+  {
+   "text": "ho",
+   "start": 63.587,
+   "end": 63.627,
+   "score": 0.32
+  },
+  {
+   "text": "bahut",
+   "start": 63.808,
+   "end": 64.109,
+   "score": 0.892
+  },
+  {
+   "text": "aasaan",
+   "start": 64.149,
+   "end": 64.41,
+   "score": 0.759
+  },
+  {
+   "text": "hai",
+   "start": 64.41,
+   "end": 64.47,
+   "score": 0.216
+  }
+ ],
+ "L7": [
+  {
+   "text": "aapko",
+   "start": 64.49,
+   "end": 64.79,
+   "score": 0.857
+  },
+  {
+   "text": "apne",
+   "start": 64.85,
+   "end": 65.05,
+   "score": 0.994
+  },
+  {
+   "text": "claude",
+   "start": 65.211,
+   "end": 65.591,
+   "score": 0.427
+  },
+  {
+   "text": "ko",
+   "start": 65.671,
+   "end": 65.731,
+   "score": 0.993
+  },
+  {
+   "text": "ek",
+   "start": 65.831,
+   "end": 65.931,
+   "score": 0.985
+  },
+  {
+   "text": "video",
+   "start": 66.071,
+   "end": 66.372,
+   "score": 0.791
+  },
+  {
+   "text": "editor",
+   "start": 66.552,
+   "end": 66.852,
+   "score": 0.738
+  },
+  {
+   "text": "ki",
+   "start": 66.892,
+   "end": 66.932,
+   "score": 0.968
+  },
+  {
+   "text": "tarah",
+   "start": 66.972,
+   "end": 67.132,
+   "score": 0.517
+  },
+  {
+   "text": "convert",
+   "start": 67.152,
+   "end": 67.513,
+   "score": 0.454
+  },
+  {
+   "text": "karna",
+   "start": 67.553,
+   "end": 67.753,
+   "score": 0.924
+  },
+  {
+   "text": "hai",
+   "start": 67.753,
+   "end": 67.813,
+   "score": 0.136
+  },
+  {
+   "text": "ab",
+   "start": 68.213,
+   "end": 68.333,
+   "score": 0.996
+  },
+  {
+   "text": "iski",
+   "start": 68.493,
+   "end": 68.714,
+   "score": 0.994
+  },
+  {
+   "text": "ek",
+   "start": 68.774,
+   "end": 68.854,
+   "score": 0.988
+  },
+  {
+   "text": "bana",
+   "start": 68.894,
+   "end": 69.014,
+   "score": 0.996
+  },
+  {
+   "text": "rakhi",
+   "start": 69.094,
+   "end": 69.294,
+   "score": 0.795
+  },
+  {
+   "text": "maine",
+   "start": 69.334,
+   "end": 69.494,
+   "score": 0.939
+  },
+  {
+   "text": "poori",
+   "start": 69.534,
+   "end": 69.714,
+   "score": 0.597
+  },
+  {
+   "text": "guide",
+   "start": 69.795,
+   "end": 70.075,
+   "score": 0.593
+  },
+  {
+   "text": "aap",
+   "start": 70.195,
+   "end": 70.335,
+   "score": 0.986
+  },
+  {
+   "text": "comment",
+   "start": 70.415,
+   "end": 70.715,
+   "score": 0.56
+  },
+  {
+   "text": "kar",
+   "start": 70.755,
+   "end": 70.835,
+   "score": 0.992
+  },
+  {
+   "text": "do",
+   "start": 70.895,
+   "end": 70.956,
+   "score": 0.946
+  },
+  {
+   "text": "edit",
+   "start": 71.056,
+   "end": 71.256,
+   "score": 0.882
+  },
+  {
+   "text": "main",
+   "start": 71.356,
+   "end": 71.436,
+   "score": 0.244
+  },
+  {
+   "text": "aapke",
+   "start": 71.456,
+   "end": 71.656,
+   "score": 0.981
+  },
+  {
+   "text": "dm",
+   "start": 71.696,
+   "end": 71.956,
+   "score": 0.981
+  },
+  {
+   "text": "mein",
+   "start": 71.976,
+   "end": 72.076,
+   "score": 0.489
+  },
+  {
+   "text": "bhej",
+   "start": 72.097,
+   "end": 72.237,
+   "score": 0.955
+  },
+  {
+   "text": "dunga",
+   "start": 72.277,
+   "end": 72.437,
+   "score": 0.782
+  },
+  {
+   "text": "follow",
+   "start": 72.497,
+   "end": 72.737,
+   "score": 0.41
+  },
+  {
+   "text": "kar",
+   "start": 72.737,
+   "end": 72.837,
+   "score": 0.902
+  },
+  {
+   "text": "lena",
+   "start": 72.917,
+   "end": 73.037,
+   "score": 0.963
+  },
+  {
+   "text": "warna",
+   "start": 73.097,
+   "end": 73.237,
+   "score": 0.587
+  },
+  {
+   "text": "dm",
+   "start": 73.338,
+   "end": 73.518,
+   "score": 0.926
+  },
+  {
+   "text": "nahi",
+   "start": 73.558,
+   "end": 73.658,
+   "score": 0.491
+  },
+  {
+   "text": "jaayega",
+   "start": 73.658,
+   "end": 73.878,
+   "score": 0.752
+  },
+  {
+   "text": "aur",
+   "start": 74.278,
+   "end": 74.418,
+   "score": 0.988
+  },
+  {
+   "text": "bhai",
+   "start": 74.479,
+   "end": 74.679,
+   "score": 0.986
+  },
+  {
+   "text": "aap",
+   "start": 74.699,
+   "end": 74.799,
+   "score": 0.949
+  },
+  {
+   "text": "apni",
+   "start": 74.839,
+   "end": 75.079,
+   "score": 0.921
+  },
+  {
+   "text": "editing",
+   "start": 75.099,
+   "end": 75.379,
+   "score": 0.688
+  },
+  {
+   "text": "ghar",
+   "start": 75.399,
+   "end": 75.499,
+   "score": 0.716
+  },
+  {
+   "text": "baithe",
+   "start": 75.519,
+   "end": 75.74,
+   "score": 0.53
+  },
+  {
+   "text": "karwa",
+   "start": 75.78,
+   "end": 75.94,
+   "score": 0.668
+  },
+  {
+   "text": "sakte",
+   "start": 76.02,
+   "end": 76.16,
+   "score": 0.565
+  },
+  {
+   "text": "ho",
+   "start": 76.16,
+   "end": 76.2,
+   "score": 0.212
+  }
+ ],
+ "L8": [
+  {
+   "text": "ab",
+   "start": 138.561,
+   "end": 138.681,
+   "score": 0.99
+  },
+  {
+   "text": "obviously",
+   "start": 138.741,
+   "end": 139.142,
+   "score": 0.51
+  },
+  {
+   "text": "ai",
+   "start": 139.283,
+   "end": 139.504,
+   "score": 0.511
+  },
+  {
+   "text": "hai",
+   "start": 139.564,
+   "end": 139.664,
+   "score": 0.313
+  },
+  {
+   "text": "to",
+   "start": 139.684,
+   "end": 139.744,
+   "score": 0.95
+  },
+  {
+   "text": "kharcha",
+   "start": 139.865,
+   "end": 140.106,
+   "score": 0.848
+  },
+  {
+   "text": "to",
+   "start": 140.166,
+   "end": 140.226,
+   "score": 0.557
+  },
+  {
+   "text": "lagega",
+   "start": 140.266,
+   "end": 140.527,
+   "score": 0.932
+  },
+  {
+   "text": "ab",
+   "start": 140.647,
+   "end": 140.748,
+   "score": 0.974
+  },
+  {
+   "text": "editor",
+   "start": 140.828,
+   "end": 141.129,
+   "score": 0.756
+  },
+  {
+   "text": "se",
+   "start": 141.169,
+   "end": 141.229,
+   "score": 0.98
+  },
+  {
+   "text": "zyada",
+   "start": 141.33,
+   "end": 141.55,
+   "score": 0.743
+  },
+  {
+   "text": "lagega",
+   "start": 141.611,
+   "end": 141.891,
+   "score": 0.945
+  },
+  {
+   "text": "ya",
+   "start": 141.972,
+   "end": 142.012,
+   "score": 0.725
+  },
+  {
+   "text": "kam",
+   "start": 142.152,
+   "end": 142.313,
+   "score": 0.994
+  },
+  {
+   "text": "wo",
+   "start": 142.714,
+   "end": 142.794,
+   "score": 0.335
+  },
+  {
+   "text": "main",
+   "start": 142.915,
+   "end": 143.035,
+   "score": 0.657
+  },
+  {
+   "text": "bataunga",
+   "start": 143.055,
+   "end": 143.416,
+   "score": 0.742
+  },
+  {
+   "text": "uske",
+   "start": 143.437,
+   "end": 143.597,
+   "score": 0.974
+  },
+  {
+   "text": "liye",
+   "start": 143.597,
+   "end": 143.697,
+   "score": 0.557
+  },
+  {
+   "text": "follow",
+   "start": 143.798,
+   "end": 144.079,
+   "score": 0.377
+  },
+  {
+   "text": "kar",
+   "start": 144.099,
+   "end": 144.199,
+   "score": 0.945
+  },
+  {
+   "text": "lena",
+   "start": 144.259,
+   "end": 144.42,
+   "score": 0.938
+  }
+ ]
+}

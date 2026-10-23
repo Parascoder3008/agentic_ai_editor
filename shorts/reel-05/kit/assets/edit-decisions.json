@@ -1,0 +1,20 @@
+{
+ "duration": 54.4,
+ "fps": 25,
+ "keeps": [
+  {
+   "sourceStart": 0.0,
+   "sourceEnd": 53.8,
+   "start": 0.0,
+   "end": 53.8
+  }
+ ],
+ "removals": [
+  {
+   "sourceStart": 53.8,
+   "sourceEnd": 58.0,
+   "reason": "YouTube-only CTA line; Instagram ends on the comment CTA, voice muted in the freeze"
+  }
+ ],
+ "note": "Voice is a pronunciation-gated clone read with no flubs, so no silence/mistake cuts were needed."
+}

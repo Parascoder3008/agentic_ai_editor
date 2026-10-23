@@ -1,0 +1,56 @@
+{
+ "out": "reel.mp4",
+ "music": {
+  "file": "music_score.wav",
+  "score": {
+   "length": 47.96,
+   "blocks": [
+    {
+     "t0": 0.0,
+     "t1": 2.583,
+     "cue": "hook",
+     "level": 3,
+     "start": "hit",
+     "end": "riser",
+     "riser": 1
+    },
+    {
+     "t0": 2.583,
+     "t1": 22.887,
+     "cue": "build",
+     "level": 2,
+     "start": "hit",
+     "end": "riser",
+     "build": "roll",
+     "riser": 2
+    },
+    {
+     "t0": 22.887,
+     "t1": 33.493,
+     "cue": "numbers",
+     "level": 3,
+     "start": "hit",
+     "end": "riser"
+    },
+    {
+     "t0": 33.493,
+     "t1": 47.96,
+     "cue": "outro",
+     "level": 2,
+     "start": "hit",
+     "end": "ring",
+     "ring": 0.7
+    }
+   ],
+   "events": [],
+   "duck": [
+    {
+     "t0": 0.0,
+     "t1": 49.160000000000004,
+     "speech": -16,
+     "gap": -8
+    }
+   ]
+  }
+ }
+}

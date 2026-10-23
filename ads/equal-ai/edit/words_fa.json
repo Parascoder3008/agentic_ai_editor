@@ -1,0 +1,1432 @@
+{
+ "v1": [
+  {
+   "text": "Meeting",
+   "start": 0.585,
+   "end": 0.931,
+   "score": 0.52
+  },
+  {
+   "text": "mein",
+   "start": 0.952,
+   "end": 1.094,
+   "score": 0.375
+  },
+  {
+   "text": "ho,",
+   "start": 1.094,
+   "end": 1.155,
+   "score": 0.271
+  }
+ ],
+ "v2": [
+  {
+   "text": "gym",
+   "start": 3.051,
+   "end": 3.232,
+   "score": 0.305
+  },
+  {
+   "text": "mein",
+   "start": 3.292,
+   "end": 3.433,
+   "score": 0.395
+  },
+  {
+   "text": "ho,",
+   "start": 3.433,
+   "end": 3.493,
+   "score": 0.352
+  }
+ ],
+ "v3": [
+  {
+   "text": "ya",
+   "start": 5.17,
+   "end": 5.271,
+   "score": 0.483
+  },
+  {
+   "text": "raat",
+   "start": 5.411,
+   "end": 5.612,
+   "score": 0.691
+  },
+  {
+   "text": "ko",
+   "start": 5.672,
+   "end": 5.732,
+   "score": 0.732
+  },
+  {
+   "text": "kaam",
+   "start": 5.812,
+   "end": 5.993,
+   "score": 0.595
+  },
+  {
+   "text": "kar",
+   "start": 6.053,
+   "end": 6.174,
+   "score": 0.778
+  },
+  {
+   "text": "rahe",
+   "start": 6.214,
+   "end": 6.294,
+   "score": 0.485
+  },
+  {
+   "text": "ho.",
+   "start": 6.314,
+   "end": 6.354,
+   "score": 0.345
+  }
+ ],
+ "v4": [
+  {
+   "text": "Koi",
+   "start": 6.821,
+   "end": 6.982,
+   "score": 0.718
+  },
+  {
+   "text": "hai",
+   "start": 7.062,
+   "end": 7.183,
+   "score": 0.796
+  },
+  {
+   "text": "jo",
+   "start": 7.284,
+   "end": 7.344,
+   "score": 0.584
+  },
+  {
+   "text": "aapki",
+   "start": 7.425,
+   "end": 7.666,
+   "score": 0.823
+  },
+  {
+   "text": "saari",
+   "start": 7.868,
+   "end": 8.169,
+   "score": 0.893
+  },
+  {
+   "text": "call",
+   "start": 8.29,
+   "end": 8.512,
+   "score": 0.449
+  },
+  {
+   "text": "sambhal",
+   "start": 8.592,
+   "end": 8.854,
+   "score": 0.585
+  },
+  {
+   "text": "leta",
+   "start": 8.914,
+   "end": 9.115,
+   "score": 0.858
+  },
+  {
+   "text": "hai.",
+   "start": 9.136,
+   "end": 9.196,
+   "score": 0.181
+  }
+ ],
+ "s1": [
+  {
+   "text": "aur",
+   "start": 10.051,
+   "end": 10.152,
+   "score": 0.978
+  },
+  {
+   "text": "salary",
+   "start": 10.273,
+   "end": 10.635,
+   "score": 0.626
+  },
+  {
+   "text": "bhi",
+   "start": 10.715,
+   "end": 10.776,
+   "score": 0.776
+  },
+  {
+   "text": "nahi",
+   "start": 10.816,
+   "end": 10.917,
+   "score": 0.377
+  },
+  {
+   "text": "maangta,",
+   "start": 10.917,
+   "end": 11.239,
+   "score": 0.781
+  }
+ ],
+ "s2": [
+  {
+   "text": "kyunki",
+   "start": 11.56,
+   "end": 11.78,
+   "score": 0.74
+  },
+  {
+   "text": "ye",
+   "start": 11.84,
+   "end": 11.88,
+   "score": 0.354
+  },
+  {
+   "text": "assistant",
+   "start": 11.941,
+   "end": 12.401,
+   "score": 0.647
+  },
+  {
+   "text": "jo",
+   "start": 12.441,
+   "end": 12.481,
+   "score": 0.514
+  },
+  {
+   "text": "hai,",
+   "start": 12.521,
+   "end": 12.621,
+   "score": 0.03
+  },
+  {
+   "text": "wo",
+   "start": 12.621,
+   "end": 12.681,
+   "score": 0.105
+  },
+  {
+   "text": "mere",
+   "start": 12.742,
+   "end": 12.942,
+   "score": 0.933
+  },
+  {
+   "text": "phone",
+   "start": 13.062,
+   "end": 13.362,
+   "score": 0.712
+  },
+  {
+   "text": "mein",
+   "start": 13.362,
+   "end": 13.522,
+   "score": 0.502
+  },
+  {
+   "text": "hai,",
+   "start": 13.563,
+   "end": 13.903,
+   "score": 0.0
+  },
+  {
+   "text": "jiska",
+   "start": 13.903,
+   "end": 14.203,
+   "score": 0.837
+  },
+  {
+   "text": "naam",
+   "start": 14.303,
+   "end": 14.484,
+   "score": 0.93
+  },
+  {
+   "text": "hai",
+   "start": 14.484,
+   "end": 14.564,
+   "score": 0.004
+  },
+  {
+   "text": "bhai,",
+   "start": 14.564,
+   "end": 14.704,
+   "score": 0.931
+  },
+  {
+   "text": "Equal",
+   "start": 14.884,
+   "end": 15.184,
+   "score": 0.213
+  },
+  {
+   "text": "AI.",
+   "start": 15.305,
+   "end": 15.425,
+   "score": 0.654
+  }
+ ],
+ "s3": [
+  {
+   "text": "Number",
+   "start": 15.945,
+   "end": 16.246,
+   "score": 0.663
+  },
+  {
+   "text": "saved",
+   "start": 16.346,
+   "end": 16.626,
+   "score": 0.574
+  },
+  {
+   "text": "ho",
+   "start": 16.666,
+   "end": 16.746,
+   "score": 0.78
+  },
+  {
+   "text": "ya",
+   "start": 16.906,
+   "end": 17.047,
+   "score": 0.867
+  },
+  {
+   "text": "phir",
+   "start": 17.067,
+   "end": 17.207,
+   "score": 0.821
+  },
+  {
+   "text": "unknown",
+   "start": 17.287,
+   "end": 17.587,
+   "score": 0.382
+  },
+  {
+   "text": "number",
+   "start": 17.607,
+   "end": 17.908,
+   "score": 0.657
+  },
+  {
+   "text": "ho,",
+   "start": 17.928,
+   "end": 17.968,
+   "score": 0.475
+  },
+  {
+   "text": "Equal",
+   "start": 18.428,
+   "end": 18.769,
+   "score": 0.21
+  },
+  {
+   "text": "AI",
+   "start": 18.869,
+   "end": 18.989,
+   "score": 0.524
+  },
+  {
+   "text": "call",
+   "start": 19.109,
+   "end": 19.369,
+   "score": 0.286
+  },
+  {
+   "text": "uthata",
+   "start": 19.369,
+   "end": 19.59,
+   "score": 0.694
+  },
+  {
+   "text": "hai,",
+   "start": 19.63,
+   "end": 19.75,
+   "score": 0.977
+  }
+ ],
+ "s4": [
+  {
+   "text": "aur",
+   "start": 20.131,
+   "end": 20.293,
+   "score": 0.988
+  },
+  {
+   "text": "bhai",
+   "start": 20.374,
+   "end": 20.536,
+   "score": 0.929
+  },
+  {
+   "text": "meri",
+   "start": 20.616,
+   "end": 20.839,
+   "score": 0.988
+  },
+  {
+   "text": "jagah",
+   "start": 20.899,
+   "end": 21.101,
+   "score": 0.948
+  },
+  {
+   "text": "pe",
+   "start": 21.122,
+   "end": 21.182,
+   "score": 0.737
+  },
+  {
+   "text": "baat",
+   "start": 21.223,
+   "end": 21.384,
+   "score": 0.95
+  },
+  {
+   "text": "karta",
+   "start": 21.445,
+   "end": 21.667,
+   "score": 0.995
+  },
+  {
+   "text": "hai.",
+   "start": 21.667,
+   "end": 21.748,
+   "score": 0.32
+  }
+ ],
+ "s5": [
+  {
+   "text": "Aur",
+   "start": 22.01,
+   "end": 22.11,
+   "score": 0.987
+  },
+  {
+   "text": "call",
+   "start": 22.17,
+   "end": 22.35,
+   "score": 0.463
+  },
+  {
+   "text": "ke",
+   "start": 22.41,
+   "end": 22.47,
+   "score": 0.992
+  },
+  {
+   "text": "baad",
+   "start": 22.51,
+   "end": 22.611,
+   "score": 0.935
+  },
+  {
+   "text": "mujhe",
+   "start": 22.651,
+   "end": 22.771,
+   "score": 0.654
+  },
+  {
+   "text": "actually",
+   "start": 22.811,
+   "end": 23.131,
+   "score": 0.372
+  },
+  {
+   "text": "batata",
+   "start": 23.151,
+   "end": 23.471,
+   "score": 0.947
+  },
+  {
+   "text": "bhi",
+   "start": 23.511,
+   "end": 23.571,
+   "score": 0.296
+  },
+  {
+   "text": "hai",
+   "start": 23.571,
+   "end": 23.671,
+   "score": 0.041
+  },
+  {
+   "text": "ki",
+   "start": 23.691,
+   "end": 23.751,
+   "score": 0.534
+  },
+  {
+   "text": "kisne",
+   "start": 23.831,
+   "end": 24.172,
+   "score": 0.993
+  },
+  {
+   "text": "call",
+   "start": 24.252,
+   "end": 24.472,
+   "score": 0.43
+  },
+  {
+   "text": "kiya,",
+   "start": 24.552,
+   "end": 24.712,
+   "score": 0.98
+  },
+  {
+   "text": "kyun",
+   "start": 24.872,
+   "end": 25.093,
+   "score": 0.745
+  },
+  {
+   "text": "kiya,",
+   "start": 25.153,
+   "end": 25.313,
+   "score": 0.986
+  },
+  {
+   "text": "aur",
+   "start": 25.393,
+   "end": 25.473,
+   "score": 0.978
+  },
+  {
+   "text": "uski",
+   "start": 25.513,
+   "end": 25.693,
+   "score": 0.993
+  },
+  {
+   "text": "poori",
+   "start": 25.813,
+   "end": 26.053,
+   "score": 0.597
+  },
+  {
+   "text": "ki",
+   "start": 26.113,
+   "end": 26.193,
+   "score": 0.628
+  },
+  {
+   "text": "poori",
+   "start": 26.253,
+   "end": 26.434,
+   "score": 0.599
+  },
+  {
+   "text": "summary",
+   "start": 26.534,
+   "end": 26.854,
+   "score": 0.555
+  },
+  {
+   "text": "aur",
+   "start": 26.934,
+   "end": 26.994,
+   "score": 0.943
+  },
+  {
+   "text": "transcription",
+   "start": 27.074,
+   "end": 27.635,
+   "score": 0.551
+  },
+  {
+   "text": "de",
+   "start": 27.655,
+   "end": 27.715,
+   "score": 0.917
+  },
+  {
+   "text": "deta",
+   "start": 27.755,
+   "end": 27.915,
+   "score": 0.732
+  },
+  {
+   "text": "hai.",
+   "start": 27.915,
+   "end": 27.995,
+   "score": 0.412
+  }
+ ],
+ "s6": [
+  {
+   "text": "Kisi",
+   "start": 28.456,
+   "end": 28.637,
+   "score": 0.943
+  },
+  {
+   "text": "ko",
+   "start": 28.678,
+   "end": 28.738,
+   "score": 0.972
+  },
+  {
+   "text": "call",
+   "start": 28.798,
+   "end": 28.999,
+   "score": 0.44
+  },
+  {
+   "text": "back",
+   "start": 29.06,
+   "end": 29.241,
+   "score": 0.635
+  },
+  {
+   "text": "chahiye?",
+   "start": 29.301,
+   "end": 29.543,
+   "score": 0.706
+  },
+  {
+   "text": "Ek",
+   "start": 29.784,
+   "end": 29.905,
+   "score": 0.945
+  },
+  {
+   "text": "tap.",
+   "start": 30.005,
+   "end": 30.186,
+   "score": 0.968
+  },
+  {
+   "text": "WhatsApp",
+   "start": 30.589,
+   "end": 31.031,
+   "score": 0.608
+  },
+  {
+   "text": "pe",
+   "start": 31.072,
+   "end": 31.132,
+   "score": 0.757
+  },
+  {
+   "text": "reply",
+   "start": 31.172,
+   "end": 31.514,
+   "score": 0.61
+  },
+  {
+   "text": "chahiye?",
+   "start": 31.575,
+   "end": 31.816,
+   "score": 0.691
+  },
+  {
+   "text": "Ek",
+   "start": 31.957,
+   "end": 32.078,
+   "score": 0.957
+  },
+  {
+   "text": "tap.",
+   "start": 32.158,
+   "end": 32.319,
+   "score": 0.944
+  }
+ ],
+ "s7": [
+  {
+   "text": "Aur",
+   "start": 32.641,
+   "end": 32.762,
+   "score": 0.324
+  },
+  {
+   "text": "dekho",
+   "start": 32.842,
+   "end": 33.024,
+   "score": 0.392
+  },
+  {
+   "text": "bhai,",
+   "start": 33.084,
+   "end": 33.225,
+   "score": 0.637
+  },
+  {
+   "text": "ye",
+   "start": 33.265,
+   "end": 33.326,
+   "score": 0.852
+  },
+  {
+   "text": "mere",
+   "start": 33.406,
+   "end": 33.567,
+   "score": 0.686
+  },
+  {
+   "text": "paas",
+   "start": 33.567,
+   "end": 33.729,
+   "score": 0.876
+  },
+  {
+   "text": "call",
+   "start": 33.789,
+   "end": 33.99,
+   "score": 0.458
+  },
+  {
+   "text": "aa",
+   "start": 34.051,
+   "end": 34.111,
+   "score": 0.979
+  },
+  {
+   "text": "raha",
+   "start": 34.151,
+   "end": 34.252,
+   "score": 0.5
+  },
+  {
+   "text": "hai",
+   "start": 34.252,
+   "end": 34.333,
+   "score": 0.164
+  },
+  {
+   "text": "isi",
+   "start": 34.353,
+   "end": 34.474,
+   "score": 0.844
+  },
+  {
+   "text": "assistant",
+   "start": 34.534,
+   "end": 34.977,
+   "score": 0.604
+  },
+  {
+   "text": "se.",
+   "start": 35.037,
+   "end": 35.138,
+   "score": 0.865
+  }
+ ],
+ "s8": [
+  {
+   "text": "I",
+   "start": 35.561,
+   "end": 35.581,
+   "score": 0.063
+  },
+  {
+   "text": "am",
+   "start": 35.601,
+   "end": 35.662,
+   "score": 0.165
+  },
+  {
+   "text": "Equal,",
+   "start": 35.823,
+   "end": 36.145,
+   "score": 0.441
+  },
+  {
+   "text": "your",
+   "start": 36.386,
+   "end": 36.547,
+   "score": 0.315
+  },
+  {
+   "text": "personal",
+   "start": 36.587,
+   "end": 37.01,
+   "score": 0.218
+  },
+  {
+   "text": "call",
+   "start": 37.05,
+   "end": 37.272,
+   "score": 0.253
+  },
+  {
+   "text": "assistant.",
+   "start": 37.272,
+   "end": 37.715,
+   "score": 0.154
+  }
+ ],
+ "s9": [
+  {
+   "text": "Main",
+   "start": 37.835,
+   "end": 37.975,
+   "score": 0.591
+  },
+  {
+   "text": "isko",
+   "start": 37.975,
+   "end": 38.115,
+   "score": 0.685
+  },
+  {
+   "text": "instruction",
+   "start": 38.176,
+   "end": 38.636,
+   "score": 0.48
+  },
+  {
+   "text": "de",
+   "start": 38.696,
+   "end": 38.756,
+   "score": 0.865
+  },
+  {
+   "text": "sakta",
+   "start": 38.816,
+   "end": 38.977,
+   "score": 0.657
+  },
+  {
+   "text": "hoon",
+   "start": 38.997,
+   "end": 39.137,
+   "score": 0.236
+  },
+  {
+   "text": "ki",
+   "start": 39.157,
+   "end": 39.217,
+   "score": 0.719
+  },
+  {
+   "text": "kaun",
+   "start": 39.357,
+   "end": 39.597,
+   "score": 0.813
+  },
+  {
+   "text": "se",
+   "start": 39.678,
+   "end": 39.758,
+   "score": 0.676
+  },
+  {
+   "text": "calls",
+   "start": 39.878,
+   "end": 40.178,
+   "score": 0.538
+  },
+  {
+   "text": "ko",
+   "start": 40.238,
+   "end": 40.298,
+   "score": 0.912
+  },
+  {
+   "text": "kaise",
+   "start": 40.439,
+   "end": 40.739,
+   "score": 0.939
+  },
+  {
+   "text": "handle",
+   "start": 40.799,
+   "end": 41.119,
+   "score": 0.63
+  },
+  {
+   "text": "karna",
+   "start": 41.139,
+   "end": 41.4,
+   "score": 0.87
+  },
+  {
+   "text": "hai,",
+   "start": 41.42,
+   "end": 41.52,
+   "score": 0.074
+  }
+ ],
+ "s10": [
+  {
+   "text": "jaise",
+   "start": 41.841,
+   "end": 42.041,
+   "score": 0.953
+  },
+  {
+   "text": "agar",
+   "start": 42.101,
+   "end": 42.262,
+   "score": 0.983
+  },
+  {
+   "text": "bhai",
+   "start": 42.302,
+   "end": 42.462,
+   "score": 0.912
+  },
+  {
+   "text": "delivery",
+   "start": 42.522,
+   "end": 42.843,
+   "score": 0.56
+  },
+  {
+   "text": "wale",
+   "start": 42.863,
+   "end": 43.024,
+   "score": 0.747
+  },
+  {
+   "text": "call",
+   "start": 43.064,
+   "end": 43.224,
+   "score": 0.268
+  },
+  {
+   "text": "kar",
+   "start": 43.284,
+   "end": 43.385,
+   "score": 0.907
+  },
+  {
+   "text": "rahe",
+   "start": 43.465,
+   "end": 43.545,
+   "score": 0.246
+  },
+  {
+   "text": "hon,",
+   "start": 43.545,
+   "end": 43.605,
+   "score": 0.523
+  },
+  {
+   "text": "to",
+   "start": 43.625,
+   "end": 43.665,
+   "score": 0.961
+  },
+  {
+   "text": "bhai",
+   "start": 43.685,
+   "end": 43.826,
+   "score": 0.862
+  },
+  {
+   "text": "parcel",
+   "start": 43.886,
+   "end": 44.227,
+   "score": 0.666
+  },
+  {
+   "text": "mere",
+   "start": 44.267,
+   "end": 44.407,
+   "score": 0.897
+  },
+  {
+   "text": "reception",
+   "start": 44.467,
+   "end": 44.828,
+   "score": 0.409
+  },
+  {
+   "text": "pe",
+   "start": 44.888,
+   "end": 44.928,
+   "score": 0.979
+  },
+  {
+   "text": "chhudwa",
+   "start": 44.969,
+   "end": 45.249,
+   "score": 0.478
+  },
+  {
+   "text": "do.",
+   "start": 45.269,
+   "end": 45.329,
+   "score": 0.984
+  }
+ ],
+ "s11": [
+  {
+   "text": "Ye",
+   "start": 45.67,
+   "end": 45.711,
+   "score": 0.198
+  },
+  {
+   "text": "Hindi,",
+   "start": 45.811,
+   "end": 46.092,
+   "score": 0.862
+  },
+  {
+   "text": "English,",
+   "start": 46.193,
+   "end": 46.494,
+   "score": 0.652
+  },
+  {
+   "text": "yahan",
+   "start": 46.494,
+   "end": 46.675,
+   "score": 0.396
+  },
+  {
+   "text": "tak",
+   "start": 46.675,
+   "end": 46.795,
+   "score": 0.775
+  },
+  {
+   "text": "ki",
+   "start": 46.855,
+   "end": 46.916,
+   "score": 0.932
+  },
+  {
+   "text": "se",
+   "start": 47.418,
+   "end": 47.538,
+   "score": 0.953
+  },
+  {
+   "text": "zyada",
+   "start": 47.779,
+   "end": 48.141,
+   "score": 0.781
+  },
+  {
+   "text": "languages",
+   "start": 48.321,
+   "end": 49.044,
+   "score": 0.365
+  },
+  {
+   "text": "mein",
+   "start": 49.165,
+   "end": 49.325,
+   "score": 0.517
+  },
+  {
+   "text": "answer",
+   "start": 49.466,
+   "end": 49.787,
+   "score": 0.564
+  },
+  {
+   "text": "kar",
+   "start": 49.848,
+   "end": 49.948,
+   "score": 0.98
+  },
+  {
+   "text": "sakta",
+   "start": 49.988,
+   "end": 50.249,
+   "score": 0.951
+  },
+  {
+   "text": "hai.",
+   "start": 50.269,
+   "end": 50.35,
+   "score": 0.092
+  }
+ ],
+ "s12": [
+  {
+   "text": "Aur",
+   "start": 50.571,
+   "end": 50.691,
+   "score": 0.875
+  },
+  {
+   "text": "India",
+   "start": 50.752,
+   "end": 50.913,
+   "score": 0.354
+  },
+  {
+   "text": "mein",
+   "start": 50.953,
+   "end": 51.033,
+   "score": 0.335
+  },
+  {
+   "text": "almost",
+   "start": 51.053,
+   "end": 51.536,
+   "score": 0.685
+  },
+  {
+   "text": "lakh",
+   "start": 51.576,
+   "end": 51.777,
+   "score": 0.811
+  },
+  {
+   "text": "se",
+   "start": 51.798,
+   "end": 51.898,
+   "score": 0.926
+  },
+  {
+   "text": "zyada",
+   "start": 51.938,
+   "end": 52.16,
+   "score": 0.835
+  },
+  {
+   "text": "log",
+   "start": 52.24,
+   "end": 52.441,
+   "score": 0.92
+  },
+  {
+   "text": "is",
+   "start": 52.542,
+   "end": 52.642,
+   "score": 0.862
+  },
+  {
+   "text": "app",
+   "start": 52.763,
+   "end": 52.884,
+   "score": 0.612
+  },
+  {
+   "text": "ko",
+   "start": 52.944,
+   "end": 53.004,
+   "score": 0.902
+  },
+  {
+   "text": "roz",
+   "start": 53.085,
+   "end": 53.286,
+   "score": 0.62
+  },
+  {
+   "text": "use",
+   "start": 53.386,
+   "end": 53.547,
+   "score": 0.211
+  },
+  {
+   "text": "karte",
+   "start": 53.547,
+   "end": 53.789,
+   "score": 0.942
+  },
+  {
+   "text": "hain.",
+   "start": 53.789,
+   "end": 53.869,
+   "score": 0.0
+  }
+ ],
+ "s13": [
+  {
+   "text": "Jaise",
+   "start": 54.13,
+   "end": 54.35,
+   "score": 0.966
+  },
+  {
+   "text": "bade-bade",
+   "start": 54.43,
+   "end": 54.871,
+   "score": 0.91
+  },
+  {
+   "text": "bosses",
+   "start": 54.911,
+   "end": 55.211,
+   "score": 0.391
+  },
+  {
+   "text": "hote",
+   "start": 55.231,
+   "end": 55.431,
+   "score": 0.767
+  },
+  {
+   "text": "hain,",
+   "start": 55.491,
+   "end": 55.791,
+   "score": 0.231
+  },
+  {
+   "text": "apne",
+   "start": 56.452,
+   "end": 56.652,
+   "score": 0.987
+  },
+  {
+   "text": "call",
+   "start": 56.712,
+   "end": 56.892,
+   "score": 0.378
+  },
+  {
+   "text": "ke",
+   "start": 56.972,
+   "end": 57.052,
+   "score": 0.994
+  },
+  {
+   "text": "liye",
+   "start": 57.092,
+   "end": 57.232,
+   "score": 0.739
+  },
+  {
+   "text": "ek",
+   "start": 57.292,
+   "end": 57.392,
+   "score": 0.909
+  },
+  {
+   "text": "assistant",
+   "start": 57.553,
+   "end": 57.953,
+   "score": 0.695
+  },
+  {
+   "text": "rakhte",
+   "start": 58.013,
+   "end": 58.233,
+   "score": 0.883
+  },
+  {
+   "text": "hain,",
+   "start": 58.233,
+   "end": 58.333,
+   "score": 0.08
+  },
+  {
+   "text": "aapke",
+   "start": 58.393,
+   "end": 58.633,
+   "score": 0.987
+  },
+  {
+   "text": "paas",
+   "start": 58.693,
+   "end": 58.874,
+   "score": 0.671
+  },
+  {
+   "text": "ek",
+   "start": 58.934,
+   "end": 59.014,
+   "score": 0.945
+  },
+  {
+   "text": "assistant",
+   "start": 59.094,
+   "end": 59.514,
+   "score": 0.691
+  },
+  {
+   "text": "aapke",
+   "start": 59.594,
+   "end": 59.774,
+   "score": 0.99
+  },
+  {
+   "text": "phone",
+   "start": 59.834,
+   "end": 60.054,
+   "score": 0.784
+  },
+  {
+   "text": "mein",
+   "start": 60.054,
+   "end": 60.155,
+   "score": 0.486
+  },
+  {
+   "text": "aa",
+   "start": 60.175,
+   "end": 60.255,
+   "score": 0.921
+  },
+  {
+   "text": "jayega.",
+   "start": 60.255,
+   "end": 60.535,
+   "score": 0.798
+  }
+ ],
+ "s14": [
+  {
+   "text": "Abhi",
+   "start": 60.995,
+   "end": 61.156,
+   "score": 0.721
+  },
+  {
+   "text": "Equal",
+   "start": 61.236,
+   "end": 61.456,
+   "score": 0.218
+  },
+  {
+   "text": "app",
+   "start": 61.496,
+   "end": 61.616,
+   "score": 0.618
+  },
+  {
+   "text": "download",
+   "start": 61.677,
+   "end": 62.017,
+   "score": 0.601
+  },
+  {
+   "text": "karo,",
+   "start": 62.037,
+   "end": 62.197,
+   "score": 0.978
+  },
+  {
+   "text": "Play",
+   "start": 62.278,
+   "end": 62.458,
+   "score": 0.499
+  },
+  {
+   "text": "Store",
+   "start": 62.498,
+   "end": 62.778,
+   "score": 0.785
+  },
+  {
+   "text": "aur",
+   "start": 62.799,
+   "end": 62.879,
+   "score": 0.557
+  },
+  {
+   "text": "App",
+   "start": 62.919,
+   "end": 63.059,
+   "score": 0.599
+  },
+  {
+   "text": "Store",
+   "start": 63.059,
+   "end": 63.319,
+   "score": 0.717
+  },
+  {
+   "text": "se.",
+   "start": 63.319,
+   "end": 63.4,
+   "score": 0.888
+  }
+ ],
+ "s15": [
+  {
+   "text": "Arre",
+   "start": 64.001,
+   "end": 64.161,
+   "score": 0.55
+  },
+  {
+   "text": "yaar,",
+   "start": 64.221,
+   "end": 64.422,
+   "score": 0.861
+  },
+  {
+   "text": "phir",
+   "start": 64.482,
+   "end": 64.622,
+   "score": 0.95
+  },
+  {
+   "text": "call",
+   "start": 64.703,
+   "end": 64.863,
+   "score": 0.43
+  },
+  {
+   "text": "aa",
+   "start": 64.863,
+   "end": 64.923,
+   "score": 0.512
+  },
+  {
+   "text": "raha",
+   "start": 64.923,
+   "end": 65.003,
+   "score": 0.15
+  },
+  {
+   "text": "hai...",
+   "start": 65.003,
+   "end": 65.124,
+   "score": 0.558
+  },
+  {
+   "text": "koi",
+   "start": 65.505,
+   "end": 65.645,
+   "score": 0.989
+  },
+  {
+   "text": "baat",
+   "start": 65.685,
+   "end": 65.866,
+   "score": 0.878
+  },
+  {
+   "text": "nahi,",
+   "start": 65.926,
+   "end": 66.026,
+   "score": 0.394
+  },
+  {
+   "text": "mera",
+   "start": 66.066,
+   "end": 66.227,
+   "score": 0.908
+  },
+  {
+   "text": "assistant",
+   "start": 66.287,
+   "end": 66.708,
+   "score": 0.68
+  },
+  {
+   "text": "handle",
+   "start": 66.708,
+   "end": 66.968,
+   "score": 0.603
+  },
+  {
+   "text": "kar",
+   "start": 66.988,
+   "end": 67.089,
+   "score": 0.933
+  },
+  {
+   "text": "lega.",
+   "start": 67.149,
+   "end": 67.309,
+   "score": 0.984
+  }
+ ]
+}

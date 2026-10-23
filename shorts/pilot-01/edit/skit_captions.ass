@@ -1,0 +1,36 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter,64,&H00FFFFFF,&H00FFFFFF,&H000F0E0C,&H00000000,-1,0,0,0,100,100,0,0,1,5,0,2,60,60,490,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.34,0:00:00.66,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Yaar,{\c&HFFFFFF&}
+Dialogue: 0,0:00:00.72,0:00:01.10,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}agency{\c&HFFFFFF&} ne phir
+Dialogue: 0,0:00:01.10,0:00:01.22,Cap,,0,0,0,,agency {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ne{\c&HFFFFFF&} phir
+Dialogue: 0,0:00:01.22,0:00:01.38,Cap,,0,0,0,,agency ne {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}phir{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.38,0:00:01.67,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}report{\c&HFFFFFF&} bheji...
+Dialogue: 0,0:00:01.67,0:00:02.00,Cap,,0,0,0,,report {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bheji...{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.09,0:00:02.41,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ads{\c&HFFFFFF&} phir flop.
+Dialogue: 0,0:00:02.41,0:00:02.59,Cap,,0,0,0,,ads {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}phir{\c&HFFFFFF&} flop.
+Dialogue: 0,0:00:02.59,0:00:02.95,Cap,,0,0,0,,ads phir {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}flop.{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.17,0:00:03.61,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Agency{\c&HFFFFFF&} ki chhutti
+Dialogue: 0,0:00:03.61,0:00:03.73,Cap,,0,0,0,,Agency {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ki{\c&HFFFFFF&} chhutti
+Dialogue: 0,0:00:03.73,0:00:04.09,Cap,,0,0,0,,Agency ki {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}chhutti{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.09,0:00:04.29,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&} do.
+Dialogue: 0,0:00:04.29,0:00:04.49,Cap,,0,0,0,,kar {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}do.{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.89,0:00:05.15,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Huh?{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.19,0:00:05.36,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Toh{\c&HFFFFFF&} ads kaun
+Dialogue: 0,0:00:05.36,0:00:05.59,Cap,,0,0,0,,Toh {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ads{\c&HFFFFFF&} kaun
+Dialogue: 0,0:00:05.59,0:00:05.78,Cap,,0,0,0,,Toh ads {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kaun{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.78,0:00:06.24,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}dekhega?{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.62,0:00:06.94,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Claude.{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.94,0:00:07.54,Cap,,0,0,0,,{\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Dikhata{\c&HFFFFFF&} hoon kaise.
+Dialogue: 0,0:00:07.54,0:00:07.68,Cap,,0,0,0,,Dikhata {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hoon{\c&HFFFFFF&} kaise.
+Dialogue: 0,0:00:07.68,0:00:08.04,Cap,,0,0,0,,Dikhata hoon {\c&HD19F1A&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kaise.{\c&HFFFFFF&}

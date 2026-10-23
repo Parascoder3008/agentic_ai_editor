@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      /* stage = the top half during split beats; hidden over full-frame footage */
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 28%, #11324C 0%, #0C0E0F 70%); }
+      #stage::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, transparent, #1A9FD1, transparent); }
+      .ui { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; }
+      .chip { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; padding: 12px 34px 14px; border-radius: 999px;
+        font-weight: 900; font-size: 42px; letter-spacing: 0.04em; background: #1A9FD1; white-space: nowrap; top: 214px; }
+      .chip small { font-weight: 700; font-size: 34px; opacity: 0.85; }
+      .card { position: absolute; border-radius: 28px; background: rgba(15,26,34,0.92); border: 2px solid rgba(58,176,216,0.45);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.45); }
+      .lab { font-weight: 700; font-size: 26px; color: #DFDDDF; letter-spacing: 0.08em; }
+      .mono { font-family: "JetBrains Mono", monospace; }
+      .btn { position: absolute; height: 84px; border-radius: 20px; font-weight: 900; font-size: 34px; text-align: center; padding-top: 22px; }
+      .stamp { position: absolute; font-weight: 900; letter-spacing: 0.06em; border: 6px solid; border-radius: 18px; padding: 6px 22px; }
+      .logo { position: absolute; border-radius: 50%; background: #0F1A22; border: 4px solid #3AB0D8; box-shadow: 0 0 50px rgba(26,159,209,0.45); }
+      .logo img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+      /* WhatsApp-style chat (dark theme), the product being taught */
+      .wa { position: absolute; border-radius: 34px; background: #0B141A; border: 2px solid #26343C; overflow: hidden; box-shadow: 0 24px 60px rgba(0,0,0,0.55); }
+      .wa .hd { position: absolute; left: 0; right: 0; top: 0; height: 104px; background: #1F2C34; }
+      .wa .av { position: absolute; left: 28px; top: 20px; width: 64px; height: 64px; border-radius: 50%; background: #4A5560; }
+      .wa .nm { position: absolute; left: 112px; top: 18px; font-weight: 800; font-size: 32px; }
+      .wa .st { position: absolute; left: 112px; top: 58px; font-weight: 600; font-size: 24px; color: #8696A0; }
+      .msg { position: absolute; padding: 18px 26px; border-radius: 22px; font-weight: 700; font-size: 34px; line-height: 1.3; white-space: nowrap; }
+      .msg.in { left: 30px; background: #202C33; border-top-left-radius: 6px; }
+      .msg.out { right: 30px; background: #005C4B; border-top-right-radius: 6px; }
+      .msg .tm { font-weight: 600; font-size: 20px; color: #8FB3A9; margin-left: 14px; }
+      .slot { position: absolute; width: 250px; height: 76px; border-radius: 18px; background: #0B141A; border: 2px solid #25D366; color: #25D366;
+        font-weight: 800; font-size: 32px; text-align: center; padding-top: 16px; }
+      .dot { display: inline-block; width: 16px; height: 16px; border-radius: 50%; background: #8696A0; margin: 0 5px; }
+      .row { height: 62px; margin-bottom: 12px; border-radius: 16px; background: rgba(58,176,216,0.14); border: 2px solid rgba(58,176,216,0.4);
+        font-weight: 800; font-size: 30px; padding: 12px 20px; }
+      .row span { color: #3AB0D8; }
+      .ok { color: #3DDC97; }
+      /* full-frame labels over footage */
+      .ff { position: absolute; left: 0; right: 0; text-align: center; font-weight: 900; letter-spacing: -0.01em; line-height: 1.05;
+        text-shadow: 0 4px 0 rgba(0,0,0,0.55), 0 0 28px rgba(0,0,0,0.75); }
+      .ffchip { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; padding: 14px 36px 16px; border-radius: 999px;
+        font-weight: 900; font-size: 46px; background: #1A9FD1; box-shadow: 0 10px 40px rgba(0,0,0,0.5); white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <!-- authored on the ALIGNED clock (edit/fa_out.json word times); compose.py plays this overlay from plan.OFF (0.24 s)
+         so it matches the trimmed voice. The renderer ignores tl.shiftChildren, so never shift inside the page. -->
+    <div id="root" data-composition-id="main" data-start="0.0" data-duration="58.24" data-width="1080" data-height="1920">
+      <div id="stage">
+        <!-- 1 · chat: Claude's agent answers at 2 AM (9.30 - 12.05) -->
+        <div class="ui" id="uChat">
+          <div class="chip" id="cChat">&#x1F916; CLAUDE <small>· jawab de raha hai</small></div>
+          <div class="wa" id="phone" style="left:150px;top:300px;width:780px;height:640px">
+            <div class="hd"><div class="av"></div><div class="nm">Customer</div><div class="st">online · 2:04 AM</div></div>
+            <div class="msg in" id="m1" style="top:132px">Friday ko slot hai? &#x1F5D3;&#xFE0F;<span class="tm">2:04</span></div>
+            <div class="msg in" id="typ" style="top:236px;padding:22px 26px"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+            <div class="msg out" id="m2" style="top:236px">Haan ji! Friday ke free slots &#x1F447;<span class="tm">2:04 &#x2713;&#x2713;</span></div>
+            <div class="slot" id="s1" style="left:230px;top:340px">11:00 AM</div>
+            <div class="slot" id="s2" style="left:500px;top:340px">4:00 PM</div>
+            <div class="msg in" id="m3" style="top:448px">4:00 PM please &#x1F64F;<span class="tm">2:05</span></div>
+            <div class="msg out" id="m4" style="top:548px">&#x2705; Booked: Friday, 4 PM<span class="tm">2:05 &#x2713;&#x2713;</span></div>
+          </div>
+        </div>
+
+        <!-- 2 · free tool reveal (13.35 - 16.30) -->
+        <div class="ui" id="uKap">
+          <div class="chip" id="cFree">FREE TOOL</div>
+          <div id="mys" style="position:absolute;left:400px;top:340px;width:280px;height:280px;border-radius:40px;border:4px dashed rgba(58,176,216,0.6);
+            text-align:center;font-weight:900;font-size:180px;line-height:270px;color:rgba(223,221,223,0.5)">?</div>
+          <img id="kLogo" src="assets/kapso.png" style="position:absolute;left:400px;top:330px;width:280px;height:280px;border-radius:56px;box-shadow:0 0 70px rgba(26,159,209,0.55)" />
+          <div id="kName" style="position:absolute;left:0;right:0;top:650px;text-align:center;font-weight:900;font-size:110px;letter-spacing:-0.02em">Kapso</div>
+          <div id="kUrl" class="lab" style="position:absolute;left:0;right:0;top:790px;text-align:center;font-size:32px;color:#3AB0D8">kapso.com</div>
+        </div>
+
+        <!-- 3 · Claude <-> WhatsApp via the official API (16.30 - 19.70) -->
+        <div class="ui" id="uApi">
+          <div class="chip" id="cApi">OFFICIAL <small>WhatsApp</small> API</div>
+          <div class="logo" id="lgC" style="left:110px;top:400px;width:280px;height:280px"><img src="assets/claude.svg" style="width:150px;height:150px" /></div>
+          <div class="logo" id="lgW" style="left:690px;top:400px;width:280px;height:280px"><img src="assets/whatsapp.svg" style="width:170px;height:170px" /></div>
+          <div class="lab" style="position:absolute;left:110px;width:280px;top:705px;text-align:center;font-size:34px;color:#FFFFFF" id="tC">Claude</div>
+          <div class="lab" style="position:absolute;left:690px;width:280px;top:705px;text-align:center;font-size:34px;color:#FFFFFF" id="tW">WhatsApp</div>
+          <div id="pipe" style="position:absolute;left:390px;top:532px;width:300px;height:16px;border-radius:8px;background:#3AB0D8;transform-origin:0 50%;box-shadow:0 0 30px rgba(58,176,216,0.8)"></div>
+          <div id="pk1" style="position:absolute;left:390px;top:524px;width:32px;height:32px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 24px #FFFFFF"></div>
+          <div id="pk2" style="position:absolute;left:390px;top:524px;width:32px;height:32px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 24px #FFFFFF"></div>
+        </div>
+
+        <!-- 4 · free plan (19.70 - 22.10) -->
+        <div class="ui" id="uPlan">
+          <div class="card" id="plan" style="left:170px;top:280px;width:740px;height:560px;text-align:center;background:linear-gradient(160deg,#11324C,#0C0E0F)">
+            <div class="lab" style="margin-top:46px;color:#3AB0D8;font-size:32px">KAPSO · FREE PLAN</div>
+            <div id="cnt" style="margin-top:34px;font-weight:900;font-size:190px;letter-spacing:-0.03em;line-height:1;color:#FFFFFF;text-shadow:0 0 50px rgba(26,159,209,0.6)">0</div>
+            <div id="per" style="margin-top:22px;font-weight:800;font-size:48px">messages / mahina</div>
+            <div id="note" class="lab" style="margin-top:30px;font-size:28px;letter-spacing:0.02em;color:#8696A0">Meta ke WhatsApp charges alag · bheje + aaye, dono gine jaate hain</div>
+          </div>
+        </div>
+
+        <!-- 5 · step 1: sign up + link number (24.05 - 28.25) -->
+        <div class="ui" id="uS1">
+          <div class="chip" id="cS1">STEP 1 <small>· Kapso</small></div>
+          <div class="card" id="k1" style="left:140px;top:300px;width:800px;height:600px">
+            <img src="assets/kapso.png" style="position:absolute;left:40px;top:36px;width:84px;height:84px;border-radius:20px" />
+            <div style="position:absolute;left:146px;top:52px;font-weight:900;font-size:44px">Kapso</div>
+            <div class="btn" id="sup" style="left:40px;top:160px;width:720px;background:#1A9FD1;color:#FFFFFF">Sign up &#x2192;</div>
+            <div class="lab" id="nlb" style="position:absolute;left:44px;top:290px">WHATSAPP BUSINESS NUMBER</div>
+            <div id="nfd" class="mono" style="position:absolute;left:40px;top:336px;width:720px;height:96px;border-radius:18px;border:2px solid #3AB0D8;
+              background:#0B141A;font-weight:700;font-size:40px;padding:22px 26px;color:#FFFFFF"><span id="nty"></span></div>
+            <div id="lnk" style="position:absolute;left:40px;top:470px;width:720px;height:88px;border-radius:18px;background:rgba(61,220,151,0.14);
+              border:2px solid #3DDC97;font-weight:900;font-size:40px;text-align:center;padding-top:18px" class="ok">&#x2713; Number linked</div>
+          </div>
+          <div id="cur1" style="position:absolute;left:600px;top:540px;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:60px solid #FFFFFF;transform:rotate(-30deg);filter:drop-shadow(0 4px 6px #000)"></div>
+        </div>
+
+        <!-- 6 · step 2: one command in Claude Code (28.25 - 32.80) -->
+        <div class="ui" id="uS2">
+          <div class="chip" id="cS2">STEP 2 <small>· 1 command</small></div>
+          <div class="card" id="term" style="left:70px;top:300px;width:940px;height:600px;background:#0A0F12">
+            <div style="position:absolute;left:30px;top:28px"><span class="dot" style="background:#F85149"></span><span class="dot" style="background:#E2A33B"></span><span class="dot" style="background:#3DDC97"></span></div>
+            <div class="lab" style="position:absolute;right:34px;top:24px;color:#3AB0D8">CLAUDE CODE · TERMINAL</div>
+            <div class="mono" style="position:absolute;left:36px;top:92px;right:30px;font-weight:700;font-size:34px;line-height:1.5;white-space:pre-wrap"><span style="color:#3AB0D8">$ </span><span id="cmd"></span></div>
+            <div class="mono" id="sk" style="position:absolute;left:36px;top:236px;font-weight:700;font-size:31px;line-height:1.65;color:#DFDDDF">
+              <div id="k_1"><span class="ok">&#x2713;</span> integrate-whatsapp</div>
+              <div id="k_2"><span class="ok">&#x2713;</span> automate-whatsapp</div>
+              <div id="k_3"><span class="ok">&#x2713;</span> observe-whatsapp</div>
+              <div id="k_4"><span class="ok">&#x2713;</span> integrate-whatsapp-calling</div>
+            </div>
+          </div>
+          <div class="stamp" id="sk4" style="left:640px;top:800px;font-size:40px;color:#3AB0D8;border-color:#3AB0D8;transform:rotate(-6deg);background:#0A0F12">4 SKILLS</div>
+        </div>
+
+        <!-- 7 · step 3: tell Claude (32.80 - 37.75) -->
+        <div class="ui" id="uS3">
+          <div class="chip" id="cS3">STEP 3 <small>· Claude ko bolo</small></div>
+          <div class="card" id="pc" style="left:70px;top:300px;width:940px;height:560px">
+            <img src="assets/claude.svg" style="position:absolute;left:36px;top:32px;width:64px;height:64px" />
+            <div style="position:absolute;left:120px;top:42px;font-weight:900;font-size:40px">Claude Code</div>
+            <div id="ptx" style="position:absolute;left:40px;top:140px;right:40px;font-weight:800;font-size:50px;line-height:1.3"></div>
+            <div id="snd" style="position:absolute;right:36px;bottom:32px;width:92px;height:92px;border-radius:50%;background:#1A9FD1;text-align:center;font-weight:900;font-size:52px;line-height:88px">&#x2191;</div>
+          </div>
+        </div>
+
+        <!-- 8 · Claude writes the code (37.75 - 39.70) -->
+        <div class="ui" id="uCode">
+          <div class="chip" id="cCode">CODE <small>· Claude khud likhta hai</small></div>
+          <div class="card" id="cc" style="left:70px;top:300px;width:940px;height:600px;background:#0A0F12;overflow:hidden">
+            <div class="mono" id="code" style="position:absolute;left:36px;top:30px;right:30px;font-weight:500;font-size:28px;line-height:1.55;color:#DFDDDF;white-space:pre"></div>
+          </div>
+          <div class="stamp" id="live" style="left:560px;top:760px;font-size:44px;color:#3DDC97;border-color:#3DDC97;transform:rotate(-6deg);background:#0A0F12">&#x25CF; AGENT LIVE</div>
+        </div>
+
+        <!-- 9 · the one rule (42.55 - 46.20) -->
+        <div class="ui" id="uRule">
+          <div class="chip" id="cRule" style="background:#E2A33B;color:#0C0E0F">&#x26A0;&#xFE0F; 1 RULE</div>
+          <div class="card" id="rc" style="left:120px;top:320px;width:840px;height:520px;text-align:center">
+            <div style="margin-top:56px;font-weight:900;font-size:62px;line-height:1.15">Customer ki<br><span style="color:#3AB0D8">PERMISSION</span> pehle</div>
+            <div class="lab" style="margin-top:34px;font-size:30px">OPT-IN BINA MESSAGE NAHI</div>
+            <div id="tg" style="position:absolute;left:310px;top:380px;width:220px;height:100px;border-radius:50px;background:#2A333B;border:3px solid #4A5560">
+              <div id="kn" style="position:absolute;left:8px;top:8px;width:78px;height:78px;border-radius:50%;background:#DFDDDF"></div>
+            </div>
+            <div id="tgl" style="position:absolute;left:560px;top:400px;font-weight:900;font-size:44px;color:#8696A0">OPT-IN</div>
+          </div>
+        </div>
+
+        <!-- 10 · free guide (46.20 - 49.25) -->
+        <div class="ui" id="uGuide">
+          <div class="card" id="guide" style="left:170px;top:250px;width:740px;height:620px;background:linear-gradient(160deg,#11324C,#0C0E0F)">
+            <div class="lab" style="position:absolute;left:44px;top:40px;color:#3AB0D8">FREE GUIDE</div>
+            <div style="position:absolute;left:44px;top:84px;font-weight:900;font-size:60px;line-height:1.05">Claude ka<br>WhatsApp agent</div>
+            <div id="tabs" style="position:absolute;left:44px;top:270px;right:44px"></div>
+            <div class="stamp" id="free" style="left:470px;top:40px;font-size:40px;color:#3AB0D8;border-color:#3AB0D8;transform:rotate(8deg)">FREE</div>
+          </div>
+        </div>
+
+        <!-- 11 · CTA Instagram (49.25 - 54.05) -->
+        <div class="ui" id="uCta">
+          <div class="btn" id="fol" style="left:330px;top:250px;width:420px;background:#2A333B;color:#FFFFFF">+ FOLLOW</div>
+          <div class="lab" style="position:absolute;left:0;right:0;top:400px;text-align:center;font-size:34px" id="cmt">COMMENT KARO</div>
+          <div id="kw" style="position:absolute;left:0;right:0;margin:0 auto;top:460px;width:660px;height:190px;border-radius:40px;background:#1A9FD1;text-align:center;font-weight:900;font-size:130px;line-height:190px;box-shadow:0 0 70px rgba(26,159,209,0.6)">AGENT</div>
+          <div class="card" id="dm" style="left:250px;top:700px;width:580px;height:120px;text-align:center;padding-top:30px;font-weight:800;font-size:40px">&#x2709; Guide &#x2192; aapke DM</div>
+        </div>
+
+        <!-- 12 · CTA YouTube (54.05 - 58.24) -->
+        <div class="ui" id="uYt">
+          <div class="card" id="wac" style="left:140px;top:280px;width:800px;height:330px;text-align:center">
+            <div class="lab" style="margin-top:40px;color:#3AB0D8">FREE GUIDE + DAILY AI TIPS</div>
+            <div style="margin-top:20px;font-weight:900;font-size:68px">WhatsApp channel</div>
+            <div class="btn" id="join" style="left:250px;top:210px;width:300px;background:#1A9FD1;color:#FFFFFF">JOIN</div>
+          </div>
+          <div id="desc" style="position:absolute;left:0;right:0;top:660px;text-align:center;font-weight:800;font-size:44px">Link description mein <span id="arr" style="display:inline-block;color:#3AB0D8">&#x2193;</span></div>
+        </div>
+      </div>
+
+      <!-- full-frame labels over footage -->
+      <div id="hk1" class="ff" style="top:1250px"><div style="font-size:62px">CLAUDE ka apna</div><div style="font-size:76px;color:#3AB0D8;white-space:nowrap">WhatsApp NUMBER</div></div>
+      <div id="hk2" class="ff" style="top:1250px"><div style="font-size:60px">Zyada tar owners ko</div><div style="font-size:94px;color:#3AB0D8;white-space:nowrap">PATA HI NAHI &#x1F92B;</div></div>
+      <div id="bub" class="msg in" style="left:150px;top:210px;font-size:46px;padding:22px 32px;box-shadow:0 14px 40px rgba(0,0,0,0.6)">Friday ko slot hai? &#x1F5D3;&#xFE0F;</div>
+      <div id="bkd" class="ffchip" style="top:250px;background:#3DDC97;color:#0C0E0F">&#x2705; BOOKED · Fri 4 PM</div>
+      <div id="st3" class="ffchip" style="top:205px">SETUP = 3 STEPS</div>
+      <div id="h24" class="ff" style="top:250px"><div style="font-size:132px;color:#3AB0D8">24 GHANTE</div><div style="font-size:54px">agent ON, aap so rahe ho &#x1F634;</div></div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const $ = (s) => document.querySelector(s);
+      const pop = (sel, t, d = 0.28) => tl.fromTo(sel, { opacity: 0, scale: 0.86, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2)" }, t);
+      const hide = (sel, t, d = 0.18) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const slam = (sel, t, rot = -6) => tl.fromTo(sel, { opacity: 0, scale: 2.2, rotation: rot }, { opacity: 1, scale: 1, rotation: rot, duration: 0.16, ease: "power4.in" }, t);
+      const type = (sel, text, t0, t1) => {
+        const el = $(sel), p = { n: 0 };
+        tl.fromTo(p, { n: 0 }, { n: text.length, duration: t1 - t0, ease: "none", onUpdate: () => { el.textContent = text.slice(0, Math.round(p.n)); } }, t0);
+      };
+      const show = (sel, t0, t1) => { tl.set(sel, { opacity: 1 }, t0); tl.set(sel, { opacity: 0 }, t1); };
+
+      const UIS = ["#uChat", "#uKap", "#uApi", "#uPlan", "#uS1", "#uS2", "#uS3", "#uCode", "#uRule", "#uGuide", "#uCta", "#uYt"];
+      gsap.set(["#stage", ...UIS, "#hk1", "#hk2", "#bub", "#bkd", "#st3", "#h24"], { opacity: 0 });
+      gsap.set(["#cChat", "#phone", "#m1", "#typ", "#m2", "#s1", "#s2", "#m3", "#m4", "#cFree", "#mys", "#kLogo", "#kName", "#kUrl",
+                "#cApi", "#lgC", "#lgW", "#tC", "#tW", "#pk1", "#pk2", "#plan", "#per", "#note", "#cS1", "#k1", "#nlb", "#nfd", "#lnk", "#cur1",
+                "#cS2", "#term", "#k_1", "#k_2", "#k_3", "#k_4", "#sk4", "#cS3", "#pc", "#cCode", "#cc", "#live", "#cRule", "#rc",
+                "#guide", "#free", "#fol", "#cmt", "#kw", "#dm", "#wac", "#desc"], { opacity: 0 });
+      gsap.set("#pipe", { scaleX: 0 });
+
+      // stage visible only on split beats; full-frame footage elsewhere (compose.py SEGMENTS)
+      show("#stage", 9.32, 12.04); show("#stage", 13.36, 22.12); show("#stage", 24.04, 39.68); show("#stage", 42.68, 58.24);
+
+      // ---- hook (0 - 5.40): text on frame 1, swaps on "Aur zyada tar"
+      tl.fromTo("#hk1", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.in" }, 0.04);
+      tl.to("#hk1", { scale: 1.03, duration: 3.0, ease: "none" }, 0.18);
+      hide("#hk1", 3.22, 0.1);
+      tl.fromTo("#hk2", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.in" }, 3.34);
+      hide("#hk2", 5.30, 0.1);
+
+      // ---- 2 AM customer (5.40 - 9.30): her message pops on "Friday"
+      pop("#bub", 8.16, 0.3); hide("#bub", 9.22, 0.08);
+
+      // ---- chat: Claude's agent replies (9.30 - 12.05)
+      show("#uChat", 9.32, 12.04);
+      pop("#cChat", 9.36); pop("#phone", 9.32, 0.22); tl.set("#m1", { opacity: 1 }, 9.32);
+      pop("#typ", 9.74, 0.2); hide("#typ", 9.98, 0.05);
+      pop("#m2", 10.02); pop("#s1", 10.92, 0.22); pop("#s2", 11.14, 0.22);
+      tl.to("#s2", { backgroundColor: "#25D366", color: "#0B141A", scale: 0.92, duration: 0.1, yoyo: true, repeat: 1 }, 11.46)
+        .to("#s2", { backgroundColor: "#25D366", color: "#0B141A", duration: 0.05 }, 11.66);
+      pop("#m3", 11.56, 0.22); pop("#m4", 11.80, 0.22);
+
+      // ---- salon B-roll (12.05 - 13.35): no label; his grin + thumbs-up carry "booking ho jaati hai"
+
+      // ---- free tool reveal (13.35 - 16.30)
+      show("#uKap", 13.36, 16.28);
+      pop("#cFree", 13.61); pop("#mys", 13.90, 0.3);
+      tl.to("#mys", { rotation: 6, duration: 0.12, yoyo: true, repeat: 5 }, 14.4);
+      hide("#mys", 15.36, 0.06);
+      tl.fromTo("#kLogo", { opacity: 0, scale: 0.4, rotation: -20 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.35, ease: "back.out(2.2)" }, 15.40);
+      pop("#kName", 15.50); pop("#kUrl", 15.75, 0.2);
+
+      // ---- official API (16.30 - 19.70)
+      show("#uApi", 16.28, 19.68);
+      pop("#lgC", 16.59, 0.3); pop("#tC", 16.65, 0.2); pop("#lgW", 17.09, 0.3); pop("#tW", 17.15, 0.2);
+      tl.to("#pipe", { scaleX: 1, duration: 0.35, ease: "power2.out" }, 17.79);
+      pop("#cApi", 18.37);
+      [["#pk1", 18.55], ["#pk2", 18.95], ["#pk1", 19.15]].forEach(([s, t]) => {
+        tl.fromTo(s, { opacity: 1, x: 0 }, { x: 268, duration: 0.42, ease: "none", immediateRender: false }, t).set(s, { opacity: 0 }, t + 0.42);
+      });
+
+      // ---- free plan (19.70 - 22.10)
+      show("#uPlan", 19.68, 22.12);
+      pop("#plan", 19.74, 0.3);
+      const cnt = { n: 0 };
+      tl.fromTo(cnt, { n: 0 }, { n: 2000, duration: 0.65, ease: "power2.out", onUpdate: () => { $("#cnt").textContent = Math.round(cnt.n).toLocaleString("en-IN"); } }, 20.42);
+      tl.to("#cnt", { scale: 1.12, duration: 0.12, yoyo: true, repeat: 1 }, 21.05);
+      pop("#per", 21.53, 0.22); pop("#note", 21.70, 0.2);
+
+      // ---- face beat (22.10 - 24.05)
+      pop("#st3", 22.91, 0.24); hide("#st3", 23.96, 0.08);
+
+      // ---- step 1 (24.05 - 28.25)
+      show("#uS1", 24.04, 28.28);
+      pop("#cS1", 24.19); pop("#k1", 24.45, 0.3);
+      tl.fromTo("#cur1", { opacity: 0, x: 220, y: 160 }, { opacity: 1, x: 0, y: -280, duration: 0.45, ease: "power2.out" }, 25.15)
+        .to("#sup", { scale: 0.93, duration: 0.08, yoyo: true, repeat: 1 }, 25.61)
+        .to("#cur1", { opacity: 0, duration: 0.15 }, 25.85);
+      pop("#nlb", 26.53, 0.2); pop("#nfd", 26.6, 0.22);
+      type("#nty", "+91 ●●●●● ●●●●●", 26.93, 27.50);
+      pop("#lnk", 27.57, 0.26);
+
+      // ---- step 2 (28.25 - 32.80)
+      show("#uS2", 28.28, 32.88);
+      pop("#cS2", 28.43); pop("#term", 28.6, 0.3);
+      type("#cmd", "npx skills add gokapso/agent-skills", 29.25, 30.80);
+      ["#k_1", "#k_2", "#k_3", "#k_4"].forEach((s, i) => pop(s, 30.95 + i * 0.14, 0.18));
+      slam("#sk4", 31.73);
+
+      // ---- step 3 (32.80 - 37.75)
+      show("#uS3", 32.88, 37.76);
+      pop("#cS3", 33.01); pop("#pc", 33.4, 0.3);
+      type("#ptx", "Mere business ke liye WhatsApp agent banao jo bookings sambhale", 34.81, 37.0);
+      tl.to("#snd", { scale: 0.85, backgroundColor: "#3AB0D8", duration: 0.1, yoyo: true, repeat: 1 }, 37.25);
+
+      // ---- code (37.75 - 39.70)
+      show("#uCode", 37.76, 39.68);
+      pop("#cc", 37.78, 0.22); pop("#cCode", 38.21);
+      $("#code").textContent = [
+        "// booking agent · runs on your WhatsApp number",
+        "on('message', async (msg) => {",
+        "  const ask = await claude.read(msg.text);",
+        "  if (ask.intent === 'booking') {",
+        "    const free = await calendar.freeSlots(ask.day);",
+        "    return wa.sendButtons(msg.from, free);",
+        "  }",
+        "  if (ask.slotPicked) {",
+        "    await calendar.book(ask.slotPicked, msg.from);",
+        "    return wa.send(msg.from, 'Booked ✅');",
+        "  }",
+        "  return wa.send(msg.from, await claude.reply(ask));",
+        "});",
+        "",
+        "// opt-in check before any template message",
+        "if (!contact.optedIn) return;",
+        "deploy({ number: process.env.WA_NUMBER });",
+      ].join("\n");
+      tl.fromTo("#code", { y: 120 }, { y: -170, duration: 1.85, ease: "none" }, 37.8);
+      slam("#live", 39.29);
+
+      // ---- 24 hours (39.70 - 42.55)
+      tl.fromTo("#h24", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.16, ease: "power4.in" }, 41.08);
+      hide("#h24", 42.45, 0.08);
+
+      // ---- the one rule (42.55 - 46.20)
+      show("#uRule", 42.68, 46.20);
+      slam("#cRule", 43.45, 0); pop("#rc", 44.55, 0.3);
+      tl.to("#kn", { x: 120, backgroundColor: "#FFFFFF", duration: 0.25, ease: "power2.out" }, 45.20)
+        .to("#tg", { backgroundColor: "#3DDC97", borderColor: "#3DDC97", duration: 0.2 }, 45.20)
+        .to("#tgl", { color: "#3DDC97", duration: 0.2 }, 45.20);
+
+      // ---- free guide (46.20 - 49.25)
+      show("#uGuide", 46.20, 49.28);
+      pop("#guide", 46.34, 0.32);
+      const tabs = [["1", "Kapso sign up + number"], ["2", "Skills ka 1 command"], ["3", "Ready prompt: booking agent"], ["4", "WhatsApp rules: opt-in"]], tb = $("#tabs");
+      tabs.forEach(([n, t], i) => {
+        const el = document.createElement("div"); el.className = "row"; el.id = "tb" + i;
+        el.innerHTML = `<span>${n}</span> &nbsp;${t}`; tb.appendChild(el);
+        gsap.set(el, { opacity: 0 }); pop("#tb" + i, 46.7 + i * 0.22, 0.24);
+      });
+      slam("#free", 48.00, 8);
+
+      // ---- CTA Instagram (49.25 - 54.05)
+      show("#uCta", 49.28, 54.04);
+      pop("#fol", 49.80); tl.to("#fol", { backgroundColor: "#1A9FD1", duration: 0.15 }, 50.10);
+      pop("#cmt", 50.72);
+      tl.fromTo("#kw", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 51.16)
+        .to("#kw", { scale: 1.06, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, 51.6);
+      pop("#dm", 52.40, 0.3);
+      tl.to("#dm", { borderColor: "#3AB0D8", backgroundColor: "rgba(26,159,209,0.25)", duration: 0.2 }, 53.44);
+
+      // ---- CTA YouTube (54.05 - 58.24)
+      show("#uYt", 54.04, 58.24);
+      pop("#wac", 54.34, 0.32); pop("#desc", 54.80);
+      tl.to("#arr", { y: 14, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 55.3);
+      tl.to("#join", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 57.44)
+        .to("#join", { backgroundColor: "#3AB0D8", duration: 0.15 }, 57.55);
+
+      window.__safe = () => ["#hk1 div", "#hk2 div", "#h24 div", "#bub", "#st3", ".chip", "#kw", "#fol", "#dm", "#desc"].flatMap(q => [...document.querySelectorAll(q)])
+        .map(e => { const r = e.getBoundingClientRect(); const w = e.scrollWidth > e.clientWidth ? e.scrollWidth : r.width;
+          const span = document.createRange(); span.selectNodeContents(e); const t = span.getBoundingClientRect();
+          return [e.id || e.textContent.trim().slice(0, 18), Math.round(t.left), Math.round(t.right)]; });
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

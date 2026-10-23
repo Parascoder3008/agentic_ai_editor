@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude ke 4 Levels · Free Guide for Business Owners | AI with Paras</title>
+<meta name="description" content="Claude ko chatbot se apna assistant banao: Chat, Projects, Connectors (Gmail, Calendar, Drive) aur Scheduled tasks. Har level ka setup aur ready prompts. Hinglish guide by AI with Paras.">
+<meta property="og:title" content="Claude ke 4 Levels: chatbot se assistant tak">
+<meta property="og:description" content="Har level ka setup + ready prompts. Free guide by AI with Paras.">
+<meta property="og:image" content="https://aiwithparas-resources.netlify.app/assets/og-claude-levels.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --void: #0C0E0F; --blue: #1A9FD1; --blue2: #3AB0D8; --navy: #11324C;
+    --text: #FFFFFF; --muted: #DFDDDF; --glass: rgba(255,255,255,.045); --line: rgba(255,255,255,.09);
+    --ok: #3ddc97; --warn: #ffc53d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--void); color: var(--text); font-family: Inter, system-ui, sans-serif; line-height: 1.6;
+    background-image: radial-gradient(900px 500px at 15% -10%, rgba(17,50,76,.75), transparent 60%),
+                      radial-gradient(700px 420px at 100% 10%, rgba(26,159,209,.16), transparent 60%); }
+  a { color: var(--blue2); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px 64px; }
+  header.top { display: flex; align-items: center; gap: 10px; padding: 18px 0; }
+  header.top img { width: 34px; height: 34px; border-radius: 50%; }
+  header.top b { font-weight: 800; letter-spacing: .01em; }
+  header.top span { color: var(--muted); font-size: 13px; margin-left: auto; }
+  .hero { padding: 28px 0 8px; }
+  .kick { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .2em; color: var(--blue2);
+    border: 1px solid rgba(58,176,216,.4); border-radius: 999px; padding: 6px 14px; }
+  h1 { font-size: clamp(30px, 6.4vw, 46px); line-height: 1.12; font-weight: 900; letter-spacing: -.02em; margin: 16px 0 12px; }
+  h1 em { font-style: normal; color: var(--blue); }
+  .lead { color: var(--muted); font-size: 17px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 6px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 800; font-size: 15px;
+    padding: 13px 20px; border-radius: 16px; color: #fff; background: var(--blue); box-shadow: 0 8px 30px rgba(26,159,209,.35); }
+  .btn.ghost { background: transparent; border: 1.5px solid rgba(58,176,216,.55); box-shadow: none; color: var(--text); }
+  .btn:hover { background: var(--blue2); }
+  .btn.ghost:hover { background: rgba(26,159,209,.12); }
+  .card { background: var(--glass); border: 1px solid var(--line); border-radius: 28px; padding: 24px 22px; margin-top: 18px; }
+  h2 { font-size: 22px; font-weight: 800; letter-spacing: -.01em; }
+  .ladder { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 14px; align-items: end; }
+  .ladder a { text-decoration: none; color: var(--text); border: 1px solid rgba(58,176,216,.35); border-radius: 18px 18px 6px 6px;
+    background: linear-gradient(180deg, rgba(58,176,216,.2), rgba(17,50,76,.2)); padding: 10px 8px; font-size: 13px; font-weight: 700; text-align: center; }
+  .ladder a b { display: block; font-size: 26px; font-weight: 900; color: var(--blue2); }
+  .ladder a:nth-child(1) { min-height: 90px; } .ladder a:nth-child(2) { min-height: 120px; }
+  .ladder a:nth-child(3) { min-height: 150px; } .ladder a:nth-child(4) { min-height: 180px; border-color: var(--blue); }
+  .step { position: relative; }
+  .step .num { position: absolute; top: 22px; right: 22px; font-size: 13px; font-weight: 800; color: var(--blue2); letter-spacing: .16em; }
+  .step h2 { padding-right: 90px; }
+  .step p, .card p, .card li { color: var(--muted); margin-top: 8px; }
+  .step p b, .card p b, .card li b { color: var(--text); }
+  .card ol, .card ul { padding-left: 20px; margin-top: 6px; }
+  .tag { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 800; letter-spacing: .08em; color: var(--blue2);
+    border: 1px solid rgba(58,176,216,.4); border-radius: 999px; padding: 4px 10px; }
+  .code { position: relative; margin-top: 10px; background: #070909; border: 1px solid rgba(58,176,216,.25); border-radius: 16px;
+    padding: 14px 16px; padding-right: 86px; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 14px; color: #e9f7ff;
+    white-space: pre-wrap; word-break: break-word; }
+  .copy { position: absolute; top: 9px; right: 9px; font: 700 12px Inter, sans-serif; color: #fff; background: var(--navy);
+    border: 1px solid rgba(58,176,216,.45); border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+  .copy.done { background: var(--ok); color: #0C0E0F; border-color: var(--ok); }
+  .note { margin-top: 12px; font-size: 14px; color: var(--muted); border-left: 3px solid var(--blue); padding: 6px 0 6px 12px; }
+  .note.warn { border-color: var(--warn); }
+  .hire { background: linear-gradient(160deg, rgba(26,159,209,.22), rgba(17,50,76,.55)); border-color: rgba(58,176,216,.55); }
+  .join { text-align: center; background: linear-gradient(160deg, rgba(17,50,76,.9), rgba(12,14,15,.9)); border-color: rgba(58,176,216,.4); }
+  .join img { width: 84px; height: 84px; border-radius: 50%; border: 3px solid var(--blue); }
+  .join h2 { margin-top: 10px; }
+  .join .cta { justify-content: center; }
+  footer { margin-top: 34px; color: #8d9399; font-size: 12.5px; text-align: center; line-height: 1.7; }
+  @media (max-width: 560px) { .ladder a { font-size: 11px; padding: 8px 4px; } .ladder a b { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <img src="../assets/logo.png" alt="Exponential World AI">
+    <b>AI with Paras</b>
+    <span>Free guide</span>
+  </header>
+
+  <section class="hero">
+    <span class="kick">FREE GUIDE · 4 LEVELS</span>
+    <h1>Claude ko <em>chatbot</em> se apna <em>assistant</em> banao</h1>
+    <p class="lead">Zyada tar log Claude ko sirf Level 1 pe use karte hain: sawaal poocha, jawab copy kiya. Is guide mein har level ka setup aur ready prompts hain, taaki Claude aapke business ka kaam khud karne lage.</p>
+    <div class="ladder">
+      <a href="#l1"><b>1</b>Chat</a><a href="#l2"><b>2</b>Projects</a><a href="#l3"><b>3</b>Connectors</a><a href="#l4"><b>4</b>Scheduled tasks</a>
+    </div>
+    <div class="cta">
+      <a class="btn" href="#l1">Level 1 se shuru karo ↓</a>
+      <a class="btn ghost" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 Join WhatsApp Channel</a>
+    </div>
+  </section>
+
+  <section class="card step" id="l1">
+    <span class="num">LEVEL 1</span>
+    <h2>Chat: behtar prompt, behtar jawab</h2>
+    <p>Level 1 bura nahi hai, bas adhoora hai. Ek line ka sawaal generic jawab deta hai. Har prompt mein yeh 4 cheezein do: <b>kaun ho, kya context hai, kya chahiye, kis format mein</b>.</p>
+    <div class="code">Tum meri boutique ke social media manager ho.
+Context: Lajpat Nagar, Delhi mein women's ethnic wear store. Customers 25-45 age, budget ₹1,500-₹5,000.
+Task: Diwali silk saree collection ke liye 3 Instagram captions likho.
+Format: Hinglish, har caption 2 lines, ek call to action, 3 hashtags.</div>
+    <p class="note">Problem: har nayi chat mein yeh context dobara likhna padta hai. Isi ka solution Level 2 hai.</p>
+  </section>
+
+  <section class="card step" id="l2">
+    <span class="num">LEVEL 2</span>
+    <h2>Projects: business context ek baar daalo</h2>
+    <ol>
+      <li>Claude mein left side se <b>Projects</b> kholo (ya <a href="https://claude.ai/projects">claude.ai/projects</a>) → <b>+ New Project</b>.</li>
+      <li>Project knowledge mein <b>+</b> dabake apni files daalo: <b>price list, FAQs, services, brand tone</b> (PDF, Doc, text).</li>
+      <li><b>Set project instructions</b> pe click karke neeche wale instructions paste karo → <b>Save instructions</b>.</li>
+    </ol>
+    <div class="code">Tum [Business Name] ke assistant ho. Hamesha project files mein di gayi prices, FAQs aur policies use karo; jo files mein nahi hai, use guess mat karo, mujhse poocho.
+Tone: friendly, simple Hinglish, short sentences.
+Har customer reply mein: seedha jawab, ek helpful detail, aur ek clear next step (call, visit ya WhatsApp).</div>
+    <p>Ab is project ki har chat aapke business ki bhasha mein jawab degi. <span class="tag">ALL PLANS · FREE: MAX 5 PROJECTS</span></p>
+  </section>
+
+  <section class="card step" id="l3">
+    <span class="num">LEVEL 3</span>
+    <h2>Connectors: Gmail, Calendar, Drive jodo</h2>
+    <ol>
+      <li>Claude mein <b>Customize → Connectors</b> kholo aur <b>Gmail, Google Calendar, Google Drive</b> apne Google account se connect karo.</li>
+      <li>Kisi bhi chat mein <b>+</b> → <b>Connectors</b> se inhe on/off kar sakte ho.</li>
+      <li>Team/Enterprise plan pe pehle admin ko <b>Organization settings → Connectors</b> mein enable karna hota hai.</li>
+    </ol>
+    <p>Phir aise bolo:</p>
+    <div class="code">Gmail mein pichhle 2 din ki customer enquiries dhoondo. Har ek ka reply draft karo (prices project files se), aur jinhone call maanga hai unke liye Thursday shaam 4-6 ke beech calendar slot suggest karo. Kuch bhi bhejne se pehle mujhe dikhao.</div>
+    <p class="note">By default Claude <b>har action (send, reply, share) se pehle aapka approval maangta hai</b>. Attachments ka content Claude nahi padh sakta, sirf unki details.</p>
+  </section>
+
+  <section class="card step" id="l4">
+    <span class="num">LEVEL 4</span>
+    <h2>Scheduled tasks: roz apne aap</h2>
+    <p>Yahan Claude chatbot nahi, aapka assistant ban jaata hai. Ek baar bolo, aur kaam roz time pe hota hai.</p>
+    <ol>
+      <li>Kisi bhi chat mein task aur timing describe karo (neeche wala prompt), Claude ke sawaalon ka jawab do.</li>
+      <li>Proposed name, schedule aur instructions review karo → <b>Schedule</b>.</li>
+      <li>Ya <b>Scheduled</b> page → <b>New task</b> → frequency choose karo (hourly, daily, weekdays, weekly).</li>
+    </ol>
+    <div class="code">Har subah 9 baje: Gmail se kal ki saari customer enquiries padho aur mujhe ek summary bhejo. Har enquiry ke liye: naam, kya chahiye, urgency (high/medium/low), aur ek suggested reply. Sabse urgent wali sabse upar.</div>
+    <p class="note">Scheduled tasks remotely chalte hain, <b>laptop band ho tab bhi</b>. Sirf jo task aapke computer ki local files use karta hai, woh tabhi chalta hai jab computer on ho.</p>
+    <span class="tag">PAID PLANS: PRO · MAX · TEAM · ENTERPRISE</span>
+  </section>
+
+  <section class="card hire">
+    <h2>Yeh setup apne business mein karwana hai?</h2>
+    <p>Main businesses ke liye <b>AI implementation</b> karta hoon (enquiry handling, follow-ups, reports, content) aur unki <b>team ko AI training</b> deta hoon, taaki Level 4 sirf video mein nahi, aapke daily kaam mein ho.</p>
+    <div class="cta">
+      <a class="btn" href="https://parasarora.in/">📞 Free discovery call book karo</a>
+      <a class="btn ghost" href="https://www.instagram.com/ai_with_paras/">💬 DM "SETUP" on Instagram</a>
+    </div>
+    <p style="font-size:14px">AI tool ya software brand ho? Collaborations ke liye Instagram pe DM karo: <a href="https://www.instagram.com/ai_with_paras/">@ai_with_paras</a>.</p>
+  </section>
+
+  <section class="card join">
+    <img src="../assets/paras_face.jpg" alt="Paras Arora">
+    <h2>Aise hi free AI guides har hafte</h2>
+    <p>WhatsApp channel join karo: setup guides, new AI tools aur business workflows, seedha aapke phone pe.</p>
+    <div class="cta">
+      <a class="btn" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 Join WhatsApp Channel</a>
+      <a class="btn ghost" href="https://www.skool.com/exponential-world-ai-2398">Free Skool community</a>
+    </div>
+  </section>
+
+  <footer>
+    Education only. Features aur limits aapke Claude plan aur region par depend karte hain; Anthropic ke help centre se verified, October 2026.<br>
+    Sources: <a href="https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects">Projects</a> ·
+    <a href="https://support.claude.com/en/articles/10166901-use-google-workspace-connectors">Google Workspace connectors</a> ·
+    <a href="https://support.claude.com/en/articles/13854387-schedule-recurring-tasks-in-claude-cowork">Scheduled tasks</a><br>
+    Not affiliated with Anthropic or Google. © Exponential World AI · AI with Paras
+  </footer>
+</div>
+<script>
+  document.querySelectorAll('.code').forEach(function (el) {
+    var b = document.createElement('button');
+    b.className = 'copy'; b.textContent = 'Copy';
+    b.addEventListener('click', function () {
+      var t = el.firstChild.textContent.trim();
+      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+        b.textContent = 'Copied ✓'; b.classList.add('done');
+        setTimeout(function () { b.textContent = 'Copy'; b.classList.remove('done'); }, 1600);
+      }).catch(function () { b.textContent = 'Select & copy'; });
+    });
+    el.appendChild(b);
+  });
+</script>
+</body>
+</html>

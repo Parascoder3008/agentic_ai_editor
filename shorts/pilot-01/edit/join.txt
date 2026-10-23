@@ -1,0 +1,2 @@
+file 'C:/Users/PARAS ARORA/AI_Editor/shorts/pilot-01/edit/part_skit.mkv'
+file 'C:/Users/PARAS ARORA/AI_Editor/shorts/pilot-01/edit/part_body.mkv'

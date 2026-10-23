@@ -1,0 +1,21 @@
+-> REEL03_instagram.mp4 55.48s | I:         -13.9 LUFS Peak:       -5.0 dBFS
+-> REEL03_youtube.mp4 54.94s | I:         -14.0 LUFS Peak:       -5.1 dBFS
+plan: 11 scenes, 83 events, 63 caption groups, 158 words, duration 55.48
+{
+  "ok": true,
+  "errors": [],
+  "metrics": {
+    "duration": 55.48,
+    "retainedWords": 158,
+    "scenes": 11,
+    "averageShotSeconds": 5.043636363636363,
+    "visualEvents": 83,
+    "maxEventGap": 2.4000000000000004,
+    "speakerShare": 0.8478731074260996
+  }
+}
+{
+  "ok": true,
+  "errors": [],
+  "scenes": 3
+}

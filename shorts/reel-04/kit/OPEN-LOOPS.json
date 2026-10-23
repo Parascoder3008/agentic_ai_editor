@@ -1,0 +1,44 @@
+[
+ {
+  "id": "main",
+  "question": "Can Claude really do the edits he is asking for, on this same video?",
+  "object": "The Claude prompt bar",
+  "setup": 5.71,
+  "updates": [
+   {
+    "time": 8.55,
+    "state": "corner done"
+   },
+   {
+    "time": 17.9,
+    "state": "cinematic text done"
+   },
+   {
+    "time": 27.4,
+    "state": "watch graphics done"
+   },
+   {
+    "time": 34.4,
+    "state": "B-roll done"
+   }
+  ],
+  "closure": 36.06,
+  "resolution": "Every instruction ticked; he comes back and says bye",
+  "supportingSpeech": "finally main aaun aur bolun bhai saab bye"
+ },
+ {
+  "id": "cost",
+  "question": "Is AI editing cheaper than an editor?",
+  "object": "AI vs Editor cost card",
+  "setup": 52.2,
+  "updates": [
+   {
+    "time": 53.23,
+    "state": "AI ₹? vs Editor ₹?"
+   }
+  ],
+  "closure": 56.06,
+  "resolution": "Deliberately carried to the next video (follow CTA)",
+  "supportingSpeech": "wo main bataunga, uske liye follow kar lena"
+ }
+]

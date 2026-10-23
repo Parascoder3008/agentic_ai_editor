@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,500;0,700;0,800;0,900;1,700&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      .scene { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; overflow: hidden; }
+      .bg { background: radial-gradient(ellipse at 50% 30%, #11324C 0%, #0C0E0F 72%); }
+      .card { position: absolute; border-radius: 28px; background: rgba(17,50,76,0.62); border: 2px solid rgba(58,176,216,0.45); }
+      .chip { position: absolute; display: inline-block; padding: 12px 30px 14px; border-radius: 999px; font-weight: 800;
+        font-size: 40px; letter-spacing: 0.02em; white-space: nowrap; }
+      .chip.blue { background: #1A9FD1; color: #FFFFFF; }
+      .chip.line { border: 3px solid #3AB0D8; color: #FFFFFF; background: rgba(12,14,15,0.7); }
+      .kick { font-weight: 800; font-size: 30px; letter-spacing: 0.28em; color: #DFDDDF; }
+      .big { font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+      .center { left: 0; right: 0; text-align: center; }
+      .mono { font-family: "JetBrains Mono", monospace; }
+      .ok { color: #3FB950; } .bad { color: #F85149; }
+      .redact { display: inline-block; height: 26px; border-radius: 8px; background: #3A4651; vertical-align: middle; }
+
+      /* S1 hook (transparent: Higgsfield clip plays underneath) */
+      #s1 .scrim { position: absolute; left: 0; top: 380px; width: 1080px; height: 580px;
+        background: linear-gradient(to bottom, rgba(12,14,15,0) 0%, rgba(12,14,15,0.82) 55%, rgba(12,14,15,0.92) 100%); }
+      #h1 { position: absolute; top: 560px; text-align: center; font-size: 96px; }
+      #h1 span { display: inline-block; margin: 0 12px; }
+      #strike { position: absolute; left: -6px; top: 46%; width: 0; height: 12px; border-radius: 6px; background: #F85149; }
+      #h2 { position: absolute; left: 0; right: 0; margin: 0 auto; top: 700px; width: 940px; text-align: center;
+        padding: 18px 0 24px; border-radius: 28px; background: #1A9FD1; font-size: 76px; }
+
+      /* S2 hours -> minutes */
+      #s2 .cmp { top: 260px; width: 440px; height: 330px; text-align: center; padding-top: 52px; }
+      #s2 .cmp .kick { font-size: 26px; }
+      #s2 .cmp .big { margin-top: 40px; font-size: 86px; }
+      #s2x { position: absolute; left: 56px; top: 165px; width: 0; height: 14px; border-radius: 7px; background: #F85149; }
+
+      /* S3 GitHub */
+      #gh { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; transform-origin: 0 0; }
+      #gh img { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; }
+      .ring { position: absolute; border: 5px solid #1A9FD1; border-radius: 14px; box-shadow: 0 0 0 6px rgba(26,159,209,0.25); }
+
+      /* S4 stats */
+      #s4 .stat { top: 90px; width: 450px; height: 380px; text-align: center; padding-top: 40px; }
+      #s4 .stat .big { font-size: 200px; color: #3AB0D8; }
+      #s4 .stat .kick { margin-top: 16px; font-size: 36px; color: #FFFFFF; letter-spacing: 0.18em; }
+
+      /* S5 terminal */
+      #term { left: 40px; top: 60px; width: 1000px; height: 800px; background: #0A1015; border-color: rgba(58,176,216,0.35); }
+      #term .bar { height: 64px; border-bottom: 2px solid rgba(58,176,216,0.2); padding: 18px 26px; }
+      #term .dot { display: inline-block; width: 22px; height: 22px; border-radius: 50%; background: #3A4651; margin-right: 10px; }
+      #term .ttl { position: absolute; left: 0; right: 0; top: 16px; text-align: center; font-weight: 700; font-size: 26px; color: #DFDDDF; }
+      .tl { position: absolute; left: 34px; font-size: 27px; white-space: pre; color: #DFDDDF; }
+      #prompt { left: 26px; right: 26px; top: 560px; height: 110px; border-radius: 20px; background: #11324C;
+        border: 2px solid #1A9FD1; padding: 30px 28px; font-size: 38px; font-weight: 700; color: #FFFFFF; }
+      #caret { display: inline-block; width: 18px; height: 40px; background: #3AB0D8; vertical-align: -6px; margin-left: 4px; }
+
+      /* S6 audit card */
+      #rep { left: 50px; top: 60px; width: 980px; height: 800px; }
+      #rep .hd { padding: 34px 40px 0; }
+      .row { position: absolute; left: 34px; right: 34px; height: 120px; border-radius: 22px; background: rgba(12,14,15,0.55);
+        border: 2px solid rgba(223,221,223,0.12); padding: 0 30px; }
+      .row .nm { position: absolute; left: 30px; top: 22px; font-weight: 700; font-size: 34px; }
+      .row .mt { position: absolute; left: 30px; top: 72px; font-weight: 500; font-size: 24px; color: #DFDDDF; }
+      .row .tag { position: absolute; right: 26px; top: 34px; padding: 8px 22px 10px; border-radius: 999px; font-weight: 900;
+        font-size: 30px; letter-spacing: 0.06em; background: #3A4651; color: #DFDDDF; }
+
+      /* S7 creatives grid */
+      .tile { position: absolute; width: 213px; height: 284px; border-radius: 18px; overflow: hidden; border: 3px solid rgba(58,176,216,0.5); }
+      .tile img { width: 100%; height: 100%; display: block; }
+
+      /* S8 approval */
+      #gate { left: 90px; top: 70px; width: 900px; height: 600px; text-align: center; }
+      .btn { position: absolute; top: 440px; width: 330px; height: 96px; border-radius: 22px; font-weight: 900; font-size: 38px;
+        letter-spacing: 0.06em; padding-top: 24px; }
+      #banner { position: absolute; left: 0; right: 0; margin: 0 auto; top: 720px; width: 960px; text-align: center; padding: 18px 0 22px;
+        border-radius: 24px; background: #1A9FD1; font-weight: 900; font-size: 62px; }
+
+      /* S9 / S11 / S12 phone-style cards */
+      .panelcard { left: 90px; top: 50px; width: 900px; height: 820px; background: #0F1A22; border-color: rgba(58,176,216,0.35); }
+      .hdr { position: absolute; left: 0; right: 0; top: 0; height: 120px; border-bottom: 2px solid rgba(58,176,216,0.2); }
+      .pfp { position: absolute; width: 76px; height: 76px; border-radius: 50%; overflow: hidden; }
+      .pfp img { width: 100%; height: 100%; }
+      .msg { position: absolute; border-radius: 24px; background: #11324C; border: 2px solid rgba(58,176,216,0.4); }
+      .lnk { position: absolute; left: 26px; right: 26px; height: 120px; border-radius: 18px; background: rgba(12,14,15,0.6);
+        border: 3px solid rgba(58,176,216,0.25); padding: 20px 26px; }
+      .lnk .a { font-weight: 800; font-size: 34px; } .lnk .b { margin-top: 8px; font-weight: 500; font-size: 26px; color: #3AB0D8; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0.0" data-duration="47.96" data-width="1080" data-height="1920">
+
+      <!-- S1 hook -->
+      <div id="s1" class="scene clip" data-start="0.0" data-duration="2.583" data-track-index="0">
+        <div class="scrim"></div>
+        <div id="h1" class="big center"><span id="h1a">META</span><span id="h1b">ADS</span><span id="h1c" style="position:relative">AGENCY<i id="strike"></i></span></div>
+        <div id="h2" class="big">= 1 FREE CLAUDE PLUGIN</div>
+      </div>
+
+      <!-- S2 secret plugin, hours -> minutes -->
+      <div id="s2" class="scene bg clip" data-start="2.583" data-duration="5.095" data-track-index="0">
+        <div id="s2k" class="chip line" style="left:0;right:0;margin:0 auto;width:640px;top:90px;text-align:center">SECRET CLAUDE PLUGIN</div>
+        <div id="s2t" class="chip blue" style="left:0;right:0;margin:0 auto;width:330px;top:170px;text-align:center;font-size:34px">TESTED &#x2713;</div>
+        <div id="s2a" class="card cmp" style="left:70px"><div class="kick">AUDIT BY HAND</div><div class="big" style="color:#DFDDDF">HOURS</div><div id="s2x"></div></div>
+        <div id="s2b" class="card cmp" style="left:570px;border-color:#1A9FD1"><div class="kick">WITH CLAUDE ADS</div><div class="big" style="color:#3AB0D8">MINUTES</div></div>
+        <div id="s2d" class="big center" style="position:absolute;top:690px;font-size:64px">DEKHO KAISE &#x2193;</div>
+      </div>
+
+      <!-- S3 GitHub proof (real screenshot) -->
+      <div id="s3" class="scene clip" data-start="7.678" data-duration="4.964" data-track-index="0" style="background:#0D1117">
+        <div id="gh">
+          <img src="assets/gh_desk.png" alt="" />
+          <div id="r1" class="ring" style="left:22px;top:178px;width:150px;height:58px"></div>
+          <div id="r2" class="ring" style="left:768px;top:748px;width:116px;height:44px"></div>
+          <div id="r3" class="ring" style="left:944px;top:182px;width:108px;height:46px"></div>
+        </div>
+        <div id="g1" class="chip blue" style="left:0;right:0;margin:0 auto;width:560px;text-align:center;top:760px">CLAUDE ADS PLUGIN</div>
+        <div id="g2" class="chip blue" style="left:0;right:0;margin:0 auto;width:620px;text-align:center;top:60px">FREE &#xB7; OPEN SOURCE</div>
+        <div id="g3" class="chip blue" style="left:0;right:0;margin:0 auto;width:640px;text-align:center;top:760px">&#x2605; 9,800+ STARS</div>
+      </div>
+
+      <!-- S4 33 skills / 25 agents -->
+      <div id="s4" class="scene bg clip" data-start="12.642" data-duration="5.005" data-track-index="0">
+        <div id="c1" class="card stat" style="left:60px"><div id="n1" class="big">0</div><div class="kick">SKILLS</div></div>
+        <div id="c2" class="card stat" style="left:570px"><div id="n2" class="big">0</div><div class="kick">AI AGENTS</div></div>
+        <div id="k1" class="chip line" style="left:0;right:0;margin:0 auto;width:300px;text-align:center;top:520px">AUDIT</div>
+        <div id="k2" class="chip line" style="left:0;right:0;margin:0 auto;width:560px;text-align:center;top:620px">COMPETITOR RESEARCH</div>
+        <div id="k3" class="chip line" style="left:0;right:0;margin:0 auto;width:300px;text-align:center;top:720px">BUDGET</div>
+      </div>
+
+      <!-- S5 install + connect + prompt -->
+      <div id="s5" class="scene bg clip" data-start="17.647" data-duration="5.142" data-track-index="0">
+        <div id="term" class="card">
+          <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+          <div class="ttl">Claude Code</div>
+          <div id="t1" class="tl mono" style="top:100px"></div>
+          <div id="t2" class="tl mono" style="top:152px"></div>
+          <div id="t3" class="tl mono ok" style="top:220px"></div>
+          <div id="t4" class="tl mono ok" style="top:270px"></div>
+          <div id="t5" class="tl mono" style="top:340px;color:#3AB0D8"></div>
+          <div id="prompt" class="card"><span style="color:#3AB0D8">&gt; </span><span id="ptxt"></span><span id="caret"></span></div>
+          <div id="t6" class="tl mono" style="top:710px;color:#3AB0D8;font-size:28px"></div>
+        </div>
+      </div>
+
+      <!-- S6 audit report (real account, names generalised, numbers redacted) -->
+      <div id="s6" class="scene bg clip" data-start="22.789" data-duration="4.041" data-track-index="0">
+        <div id="rep" class="card">
+          <div class="hd"><div class="kick">META ADS AUDIT &#xB7; TOP FINDINGS</div></div>
+          <div id="w1" class="row" style="top:110px"><div class="nm">Reel &#xB7; AI funnel framework</div>
+            <div class="mt">cost / lead &#x20B9; <span class="redact" style="width:90px"></span></div><div class="tag">WORKING</div></div>
+          <div id="w2" class="row" style="top:250px"><div class="nm">Reel &#xB7; AI-powered agents</div>
+            <div class="mt">cost / lead &#x20B9; <span class="redact" style="width:90px"></span></div><div class="tag">WORKING</div></div>
+          <div id="b1" class="row" style="top:390px"><div class="nm">Image ad &#xB7; free course</div>
+            <div class="mt">cost / lead &#x20B9; <span class="redact" style="width:190px"></span></div><div class="tag">BURNING</div></div>
+          <div id="b2" class="row" style="top:530px"><div class="nm">Video ad &#xB7; no result tracked</div>
+            <div class="mt">spend &#x20B9; <span class="redact" style="width:190px"></span></div><div class="tag">BURNING</div></div>
+          <div id="sum" class="center" style="position:absolute;top:690px;font-weight:800;font-size:34px">2 working &#xB7; 2 burning &#xB7; sab saamne</div>
+        </div>
+      </div>
+
+      <!-- S7 Higgsfield MCP -> 7 creatives (real Higgsfield generations) -->
+      <div id="s7" class="scene bg clip" data-start="26.83" data-duration="3.535" data-track-index="0">
+        <div id="m1" class="chip line" style="left:70px;top:40px;font-size:34px">CLAUDE ADS</div>
+        <div id="mlink" style="position:absolute;left:360px;top:70px;width:0;height:8px;border-radius:4px;background:#1A9FD1"></div>
+        <div id="m2" class="chip blue" style="left:640px;top:40px;font-size:34px">HIGGSFIELD MCP</div>
+        <div id="mlab" class="big center" style="position:absolute;top:150px;font-size:52px">7 NEW AD CREATIVES <span id="mok" style="color:#3FB950">&#x2713; READY</span></div>
+        <div class="tile" id="a1" style="left:90px;top:230px"><img src="assets/ad1.jpg" alt="" /></div>
+        <div class="tile" id="a2" style="left:319px;top:230px"><img src="assets/ad2.jpg" alt="" /></div>
+        <div class="tile" id="a3" style="left:548px;top:230px"><img src="assets/ad3.jpg" alt="" /></div>
+        <div class="tile" id="a4" style="left:777px;top:230px"><img src="assets/ad4.jpg" alt="" /></div>
+        <div class="tile" id="a5" style="left:204px;top:530px"><img src="assets/ad5.jpg" alt="" /></div>
+        <div class="tile" id="a6" style="left:433px;top:530px"><img src="assets/ad6.jpg" alt="" /></div>
+        <div class="tile" id="a7" style="left:662px;top:530px"><img src="assets/ad7.jpg" alt="" /></div>
+      </div>
+
+      <!-- S8 approval gate -->
+      <div id="s8" class="scene bg clip" data-start="30.365" data-duration="3.128" data-track-index="0">
+        <div id="gate" class="card">
+          <svg style="position:absolute;left:400px;top:46px" width="100" height="110" viewBox="0 0 100 110">
+            <rect x="12" y="48" width="76" height="58" rx="12" fill="#1A9FD1" />
+            <path d="M28 48 V32 a22 22 0 0 1 44 0 V48" fill="none" stroke="#3AB0D8" stroke-width="10" stroke-linecap="round" />
+          </svg>
+          <div class="big center" style="position:absolute;top:190px;font-size:50px">Apply 3 changes to<br />your ad account?</div>
+          <div class="center" style="position:absolute;top:340px;font-weight:500;font-size:30px;color:#DFDDDF">Pause 2 ads &#xB7; shift budget &#xB7; add 7 creatives</div>
+          <div id="ap" class="btn" style="left:100px;background:#1A9FD1">APPROVE</div>
+          <div id="rj" class="btn" style="left:470px;border:3px solid #3AB0D8;padding-top:21px">REJECT</div>
+        </div>
+        <div id="banner" class="big">NO APPROVAL = NO CHANGE</div>
+      </div>
+
+      <!-- S9 WhatsApp channel post -->
+      <div id="s9" class="scene bg clip" data-start="33.493" data-duration="4.468" data-track-index="0">
+        <div class="card panelcard">
+          <div class="hdr">
+            <div class="pfp" style="left:28px;top:22px"><img src="assets/pfp.jpg" alt="" /></div>
+            <div style="position:absolute;left:126px;top:24px;font-weight:800;font-size:34px">ai_with_paras</div>
+            <div id="wa" style="position:absolute;left:126px;top:68px;font-weight:700;font-size:24px;color:#3FB950">WhatsApp Channel</div>
+          </div>
+          <div id="post" class="msg" style="left:28px;top:160px;width:844px;height:600px">
+            <div style="position:absolute;left:28px;top:26px;font-weight:800;font-size:38px">Claude Ads plugin &#x2014; free</div>
+            <div style="position:absolute;left:28px;top:84px;font-weight:500;font-size:28px;color:#DFDDDF">Meta ads audit inside Claude Code</div>
+            <div id="l1" class="lnk" style="top:160px"><div class="a">Direct link</div><div class="b">github.com/AgriciDaniel/claude-ads</div></div>
+            <div id="l2" class="lnk" style="top:310px"><div class="a">Setup guide</div><div class="b">Step-by-step: install &#x2192; connect &#x2192; audit</div></div>
+            <div style="position:absolute;right:30px;bottom:24px;font-weight:500;font-size:22px;color:#DFDDDF">&#x2713;&#x2713;</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- S10 follow + comment META -->
+      <div id="s10" class="scene bg clip" data-start="37.961" data-duration="3.912" data-track-index="0">
+        <div id="q" class="big center" style="position:absolute;top:70px;font-size:54px">WhatsApp channel ka<br />link chahiye?</div>
+        <div id="st1" class="card" style="left:90px;top:270px;width:900px;height:150px">
+          <div class="kick" style="position:absolute;left:40px;top:28px">STEP 1</div>
+          <div class="big" style="position:absolute;left:40px;top:70px;font-size:56px">FOLLOW <span style="color:#3AB0D8">@ai_with_paras</span></div>
+        </div>
+        <div id="st2" class="card" style="left:90px;top:450px;width:900px;height:390px;text-align:center">
+          <div class="kick" style="margin-top:34px">STEP 2 &#xB7; COMMENT</div>
+          <div id="kw" class="big" style="display:inline-block;margin-top:26px;padding:10px 54px 22px;border-radius:26px;background:#1A9FD1;font-size:190px">META</div>
+        </div>
+      </div>
+
+      <!-- S11 DM -->
+      <div id="s11" class="scene bg clip" data-start="41.873" data-duration="1.874" data-track-index="0">
+        <div class="card panelcard">
+          <div class="hdr">
+            <div class="pfp" style="left:28px;top:22px"><img src="assets/pfp.jpg" alt="" /></div>
+            <div style="position:absolute;left:126px;top:24px;font-weight:800;font-size:34px">ai_with_paras</div>
+            <div style="position:absolute;left:126px;top:68px;font-weight:500;font-size:24px;color:#DFDDDF">Direct message</div>
+          </div>
+          <div id="you" class="msg" style="right:28px;top:170px;padding:20px 30px;background:#1A9FD1;border:0;font-weight:900;font-size:40px">META</div>
+          <div id="dm" class="msg" style="left:28px;top:290px;width:700px;height:300px">
+            <div style="position:absolute;left:28px;top:26px;font-weight:700;font-size:34px">Yeh raha WhatsApp<br />channel ka link</div>
+            <div class="lnk" style="top:150px"><div class="a">Join the channel</div><div class="b">Claude Ads link + setup guide</div></div>
+          </div>
+          <svg id="plane" style="position:absolute;left:760px;top:640px" width="96" height="96" viewBox="0 0 24 24">
+            <path d="M2 11.5 21 3l-7.5 18-2.6-7.4z" fill="#3AB0D8" /><path d="M10.9 13.6 21 3" stroke="#0F1A22" stroke-width="1.2" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- S12 profile link -> join -->
+      <div id="s12" class="scene bg clip" data-start="43.747" data-duration="4.213" data-track-index="0">
+        <div class="card panelcard">
+          <div class="pfp" style="left:60px;top:60px;width:170px;height:170px;border:4px solid #1A9FD1"><img src="assets/pfp.jpg" alt="" /></div>
+          <div style="position:absolute;left:270px;top:92px;font-weight:900;font-size:44px">ai_with_paras</div>
+          <div style="position:absolute;left:270px;top:152px;font-weight:500;font-size:28px;color:#DFDDDF">AI tools &#xB7; Claude &#xB7; automation</div>
+          <div id="bio" class="lnk" style="top:290px;left:60px;right:60px">
+            <svg style="position:absolute;left:24px;top:36px" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#3AB0D8" stroke-width="2.4" stroke-linecap="round">
+              <path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1" /><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" />
+            </svg>
+            <div class="a" style="margin-left:66px">WhatsApp channel link</div><div class="b" style="margin-left:66px">Link in description</div>
+          </div>
+          <div id="join" class="big" style="position:absolute;left:60px;right:60px;top:480px;height:150px;border-radius:26px;background:#1A9FD1;
+            text-align:center;padding-top:44px;font-size:50px">JOIN WHATSAPP CHANNEL</div>
+          <svg id="tap" style="position:absolute;left:640px;top:360px" width="70" height="70" viewBox="0 0 70 70">
+            <circle cx="35" cy="35" r="26" fill="rgba(255,255,255,0.35)" /><circle cx="35" cy="35" r="33" fill="none" stroke="#FFFFFF" stroke-width="3" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const pop = (sel, t, d = 0.28) => tl.fromTo(sel, { opacity: 0, scale: 0.86, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2)" }, t);
+      const enter = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.25, ease: "power3.out" }, t);
+      const leave = (sel, t) => tl.to(sel, { opacity: 0, y: -30, duration: 0.18, ease: "power2.in" }, t);
+      const type = (sel, text, t0, t1) => {
+        const el = document.querySelector(sel), p = { n: 0 };
+        tl.fromTo(p, { n: 0 }, { n: text.length, duration: t1 - t0, ease: "none",
+          onUpdate: () => { el.textContent = text.slice(0, Math.round(p.n)); } }, t0);
+      };
+      const count = (sel, to, t0, d) => {
+        const el = document.querySelector(sel), p = { n: 0 };
+        tl.fromTo(p, { n: 0 }, { n: to, duration: d, ease: "power2.out",
+          onUpdate: () => { el.textContent = String(Math.round(p.n)); } }, t0);
+      };
+
+      // S1 hook — word times from the avatar audio (force-aligned)
+      tl.fromTo("#h1", { scale: 1.08 }, { scale: 1, duration: 0.35, ease: "power3.out" }, 0.0);   // title on frame 1 (scroll-stop); slam stays on "chhutti"
+      tl.fromTo("#h2", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.16, ease: "power4.in" }, 1.687)
+        .fromTo(["#h1", "#h2"], { x: 0 }, { x: 12, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, 1.822)
+        .fromTo("#strike", { width: "0%" }, { width: "104%", duration: 0.2, ease: "power2.out" }, 2.16)
+        .to("#h2", { scale: 1.04, duration: 0.9, ease: "none" }, 1.858)
+        .to("#s1", { opacity: 0, duration: 0.12 }, 2.539);
+
+      // S2
+      enter("#s2", 2.583);
+      // big centre title while he says "secret Claude plugin ko test kiya", then it docks to the top for the compare
+      tl.fromTo("#s2k", { opacity: 0, scale: 1.2, y: 250 }, { opacity: 1, scale: 1.45, y: 250, duration: 0.28, ease: "back.out(2)" }, 2.882)
+        .fromTo("#s2t", { opacity: 0, scale: 1.0, y: 330 }, { opacity: 1, scale: 1.3, y: 330, duration: 0.28, ease: "back.out(2)" }, 4.244)
+        .to("#s2k", { scale: 1, y: 0, duration: 0.35, ease: "power3.inOut" }, 4.67)
+        .to("#s2t", { scale: 1, y: 0, duration: 0.35, ease: "power3.inOut" }, 4.67);
+      pop("#s2a", 4.846, 0.32); pop("#s2b", 5.857, 0.32);
+      tl.fromTo("#s2x", { width: 0 }, { width: 330, duration: 0.2, ease: "power2.out" }, 5.857)
+        .to("#s2a", { opacity: 0.6, duration: 0.2 }, 5.962)
+        .to("#s2b", { scale: 1.06, duration: 0.25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 6.197);
+      pop("#s2d", 6.802); leave("#s2", 7.573);
+
+      // S3 GitHub: zoom to the repo title, MIT chip, then the star counter
+      tl.fromTo("#gh", { scale: 1.0, x: 0, y: 0 }, { scale: 1.7, x: 0, y: 0, duration: 0.6, ease: "power2.inOut" }, 7.708);
+      pop("#r1", 8.591); pop("#g1", 8.591);
+      tl.to("#g1", { opacity: 0, duration: 0.12 }, 9.309);
+      tl.to("#gh", { scale: 2.0, x: -952, y: -960, duration: 0.5, ease: "power2.inOut" }, 9.344);
+      pop("#r2", 9.649); pop("#g2", 9.825);
+      tl.to("#g2", { opacity: 0, duration: 0.12 }, 10.167);
+      tl.to("#gh", { scale: 2.2, x: -1296, y: -100, duration: 0.55, ease: "power3.inOut" }, 10.183);
+      pop("#r3", 11.44); pop("#g3", 11.737);
+      tl.to("#g3", { scale: 1.06, duration: 0.3, yoyo: true, repeat: 1, ease: "sine.inOut" }, 12.323);
+      leave("#s3", 12.514);
+
+      // S4
+      enter("#s4", 12.642); pop("#c1", 12.678); count("#n1", 33, 12.706, 0.55);
+      pop("#c2", 13.802); count("#n2", 25, 13.829, 0.55);
+      pop("#k1", 15.37); pop("#k2", 16.045); pop("#k3", 17.17); leave("#s4", 17.504);
+
+      // S5 terminal (commands are the README's install lines)
+      enter("#s5", 17.647);
+      type("#t1", "> /plugin marketplace add agricidaniel/claude-ads", 17.766, 18.348);
+      type("#t2", "> /plugin install claude-ads@ai-marketing-hub-claude-ads", 18.407, 19.077);
+      type("#t3", "✓ claude-ads installed · 33 skills · 25 agents", 19.204, 19.508);
+      type("#t4", "✓ Meta Ads account connected (read-only)", 19.764, 20.056);
+      type("#ptxt", "is hafte ke mere ads audit karo", 20.447, 22.309);
+      tl.fromTo("#caret", { opacity: 1 }, { opacity: 0, duration: 0.25, yoyo: true, repeat: 9, ease: "steps(1)" }, 17.647);
+      type("#t6", "● running /ads audit meta …", 22.424, 22.654);
+      leave("#s5", 22.672);
+
+      // S6 Boom: audit card slams on "Boom!" (25.06)
+      tl.fromTo("#rep", { opacity: 0, scale: 1.25 }, { opacity: 1, scale: 1, duration: 0.14, ease: "power4.in" }, 22.789)
+        .fromTo("#rep", { x: 0 }, { x: 10, duration: 0.05, yoyo: true, repeat: 3, ease: "none" }, 22.917);
+      ["#w1", "#w2", "#b1", "#b2"].forEach((s, i) => enter(s, 22.947 + i * 0.07));
+      tl.to(["#w1 .tag", "#w2 .tag"], { backgroundColor: "#3FB950", color: "#0C0E0F", duration: 0.15 }, 23.408)
+        .to(["#w1", "#w2"], { borderColor: "#3FB950", duration: 0.15 }, 23.408)
+        .to(["#b1 .tag", "#b2 .tag"], { backgroundColor: "#F85149", color: "#FFFFFF", duration: 0.15 }, 25.27)
+        .to(["#b1", "#b2"], { borderColor: "#F85149", duration: 0.15 }, 25.27)
+        .to(["#b1 .tag", "#b2 .tag"], { scale: 1.12, duration: 0.18, yoyo: true, repeat: 3, ease: "sine.inOut" }, 25.496);
+      pop("#sum", 26.235); leave("#s6", 26.677);
+
+      // S7
+      enter("#s7", 26.83); pop("#m1", 26.88); pop("#m2", 26.972);
+      tl.fromTo("#mlink", { width: 0 }, { width: 270, duration: 0.5, ease: "power2.inOut" }, 27.367);
+      ["#a1", "#a2", "#a3", "#a4", "#a5", "#a6", "#a7"].forEach((s, i) => pop(s, 28.669 + i * 0.1, 0.3));
+      pop("#mlab", 29.329);
+      tl.fromTo("#mok", { opacity: 0 }, { opacity: 1, duration: 0.15 }, 30.128);
+      leave("#s7", 30.272);
+
+      // S8
+      enter("#s8", 30.365); pop("#gate", 30.396, 0.3);
+      tl.to("#ap", { scale: 1.08, duration: 0.22, yoyo: true, repeat: 3, ease: "sine.inOut" }, 31.188);
+      tl.fromTo("#banner", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.15, ease: "power4.in" }, 32.637);
+      leave("#s8", 33.401);
+
+      // S9
+      enter("#s9", 33.493); pop("#post", 33.654, 0.32);
+      tl.to("#l1", { borderColor: "#1A9FD1", backgroundColor: "rgba(26,159,209,0.18)", duration: 0.2 }, 34.996)
+        .to("#l2", { borderColor: "#1A9FD1", backgroundColor: "rgba(26,159,209,0.18)", duration: 0.2 }, 35.791)
+        .to("#wa", { scale: 1.12, transformOrigin: "0 50%", duration: 0.2, yoyo: true, repeat: 1 }, 36.597);
+      leave("#s9", 37.904);
+
+      // S10
+      enter("#s10", 37.961); pop("#q", 38.095); pop("#st1", 40.382); pop("#st2", 40.979);
+      tl.fromTo("#kw", { scale: 0.6 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 41.318)
+        .to("#kw", { scale: 1.06, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, 41.629);
+      leave("#s10", 41.792);
+
+      // S11
+      enter("#s11", 41.873); pop("#you", 41.9); pop("#dm", 42.254, 0.32);
+      tl.fromTo("#plane", { x: -260, y: 120, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, 42.743);
+      leave("#s11", 43.637);
+
+      // S12
+      enter("#s12", 43.747);
+      tl.to("#bio", { borderColor: "#1A9FD1", backgroundColor: "rgba(26,159,209,0.2)", duration: 0.2 }, 44.694);
+      tl.fromTo("#tap", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.2 }, 45.524)
+        .to("#tap", { scale: 0.85, duration: 0.12, yoyo: true, repeat: 1 }, 45.773)
+        .to("#tap", { x: -170, y: 160, duration: 0.35, ease: "power2.inOut" }, 46.201)
+        .to("#tap", { scale: 0.85, duration: 0.12, yoyo: true, repeat: 1 }, 47.327);
+      pop("#join", 46.458, 0.32);
+      tl.to("#join", { scale: 1.05, duration: 0.25, yoyo: true, repeat: 1, ease: "sine.inOut" }, 47.327);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

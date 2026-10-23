@@ -1,0 +1,142 @@
+{
+ "S": [
+  {
+   "text": "yaar",
+   "start": 0.341,
+   "end": 0.541,
+   "score": 0.97
+  },
+  {
+   "text": "agency",
+   "start": 0.722,
+   "end": 1.063,
+   "score": 0.132
+  },
+  {
+   "text": "ne",
+   "start": 1.103,
+   "end": 1.143,
+   "score": 0.993
+  },
+  {
+   "text": "phir",
+   "start": 1.223,
+   "end": 1.344,
+   "score": 0.997
+  },
+  {
+   "text": "report",
+   "start": 1.384,
+   "end": 1.604,
+   "score": 0.805
+  },
+  {
+   "text": "bheji",
+   "start": 1.665,
+   "end": 1.885,
+   "score": 0.995
+  },
+  {
+   "text": "ads",
+   "start": 2.086,
+   "end": 2.346,
+   "score": 0.707
+  },
+  {
+   "text": "phir",
+   "start": 2.407,
+   "end": 2.547,
+   "score": 0.996
+  },
+  {
+   "text": "flop",
+   "start": 2.587,
+   "end": 2.828,
+   "score": 0.692
+  },
+  {
+   "text": "agency",
+   "start": 3.169,
+   "end": 3.59,
+   "score": 0.142
+  },
+  {
+   "text": "ki",
+   "start": 3.61,
+   "end": 3.67,
+   "score": 0.987
+  },
+  {
+   "text": "chhutti",
+   "start": 3.73,
+   "end": 4.011,
+   "score": 0.661
+  },
+  {
+   "text": "kar",
+   "start": 4.091,
+   "end": 4.212,
+   "score": 0.996
+  },
+  {
+   "text": "do",
+   "start": 4.292,
+   "end": 4.372,
+   "score": 0.985
+  },
+  {
+   "text": "hain",
+   "start": 4.893,
+   "end": 5.034,
+   "score": 0.7
+  },
+  {
+   "text": "toh",
+   "start": 5.194,
+   "end": 5.274,
+   "score": 0.66
+  },
+  {
+   "text": "ads",
+   "start": 5.355,
+   "end": 5.555,
+   "score": 0.716
+  },
+  {
+   "text": "kaun",
+   "start": 5.595,
+   "end": 5.736,
+   "score": 0.533
+  },
+  {
+   "text": "dekhega",
+   "start": 5.776,
+   "end": 6.117,
+   "score": 0.986
+  },
+  {
+   "text": "klod",
+   "start": 6.618,
+   "end": 6.919,
+   "score": 0.901
+  },
+  {
+   "text": "dikhata",
+   "start": 6.939,
+   "end": 7.501,
+   "score": 0.989
+  },
+  {
+   "text": "hoon",
+   "start": 7.541,
+   "end": 7.661,
+   "score": 0.078
+  },
+  {
+   "text": "kaise",
+   "start": 7.681,
+   "end": 7.922,
+   "score": 0.988
+  }
+ ]
+}

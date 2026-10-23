@@ -1,0 +1,73 @@
+{
+ "out": "equal_ad.mp4",
+ "music": {
+  "file": "music.wav",
+  "score": {
+   "length": 70.19,
+   "blocks": [
+    {
+     "t0": 0.0,
+     "t1": 9.85,
+     "cue": "build",
+     "level": 1,
+     "start": "none",
+     "end": "riser",
+     "riser": 1
+    },
+    {
+     "t0": 9.85,
+     "t1": 35.42,
+     "cue": "hook",
+     "level": 2,
+     "start": "hit",
+     "end": "cut"
+    },
+    {
+     "t0": 35.42,
+     "t1": 67.59,
+     "cue": "hook",
+     "level": 2,
+     "start": "none",
+     "end": "riser",
+     "riser": 1
+    },
+    {
+     "t0": 67.59,
+     "t1": 70.19,
+     "cue": "hook",
+     "level": 3,
+     "start": "hit",
+     "end": "ring",
+     "ring": 0.8
+    }
+   ],
+   "events": [
+    {
+     "type": "dip",
+     "t0": 35.3,
+     "t1": 37.9
+    },
+    {
+     "type": "lift",
+     "t0": 67.59,
+     "t1": 71.19,
+     "db": 8
+    },
+    {
+     "type": "lift",
+     "t0": 9.8,
+     "t1": 11.7,
+     "db": -6
+    }
+   ],
+   "duck": [
+    {
+     "t0": 0.0,
+     "t1": 71.19,
+     "speech": -17,
+     "gap": -10
+    }
+   ]
+  }
+ }
+}

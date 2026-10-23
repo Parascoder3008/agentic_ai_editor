@@ -1,0 +1,233 @@
+{
+ "title": "Reel 03 · Claude ke 4 Levels (with Flow hook)",
+ "audio": "pron/preview_v1.wav",
+ "look": "edit/look.jpg",
+ "look_y0": 260,
+ "hooks": [
+  "(recorded) Claude ke 4 levels hain, aur zyada tar business owners Level 1 pe hi atke hain.",
+  "Aap Claude sirf chat ke liye use karte ho? Toh aap Level 1 pe ho.",
+  "Claude roz subah 9 baje aapke liye kaam kar sakta hai, bina aapke bole. Par uske liye Level 4 chahiye."
+ ],
+ "directions": [
+  {
+   "name": "Staircase world (recommended).",
+   "pitch": "One persistent glass staircase in the top half; the camera climbs one step per level, and each level's object (chat bubble, folder, plugs, clock) stays on its step. The 'YOU?' marker planted in beat 3 lands on step 4 in beat 15, which closes the loop."
+  },
+  {
+   "name": "Phone that upgrades.",
+   "pitch": "One stylised phone; its screen changes per level (chat, project, connected apps, 9 AM notification). Simple and relatable, but it risks looking like a fake Claude app screen, so it needs care."
+  },
+  {
+   "name": "Meera's morning.",
+   "pitch": "A boutique owner's morning gets easier at each level. Most emotional, but needs more scenes and text, so it's harder to read in 55 s."
+  }
+ ],
+ "beats": [
+  {
+   "n": 1,
+   "t0": 0.0,
+   "t1": 2.9,
+   "words": "Claude ke 4 levels hain, aur",
+   "layout": "full",
+   "still": "edit/hook_0.7.jpg",
+   "text": "LEVEL 1",
+   "caption": "4 LEVELS hain",
+   "visual": "Google Flow shot of you (your Flow avatar, grey hoodie): night, stressed, forehead rub, then frantic copy-paste typing, phone buzzing. Big 'LEVEL 1' from frame 1.",
+   "sfx": "phone buzzes, fast typing, low hum; a soft hit on frame 1",
+   "why": "Relatable pain on the first frame; works muted. Two quick cuts, nothing held more than 1.5 s."
+  },
+  {
+   "n": 2,
+   "t0": 2.9,
+   "t1": 4.9,
+   "words": "zyada tar business owners Level 1 pe hi atke hain.",
+   "layout": "full",
+   "still": "edit/hook_3.9.jpg",
+   "text": "LEVEL 4",
+   "caption": "LEVEL 1 pe",
+   "visual": "Hard cut to morning sun: the same you, calm, smirking at the camera with the phone in hand (0.9x slow-motion). 'LEVEL 4' in brand blue.",
+   "sfx": "whoosh into a quiet morning room tone + one soft notification ding",
+   "why": "Contrast = curiosity: 'what does the Level 4 guy know?' The voice says most are stuck at Level 1 while the Level 4 guy smirks. Then cut to your avatar asking 'Aap kaunse level pe ho?'"
+  },
+  {
+   "n": 3,
+   "t0": 5.1,
+   "t1": 7.0,
+   "words": "Aap kaunse level pe ho? Dekhte hain.",
+   "layout": "face",
+   "text": "",
+   "caption": "AAP KAUNSE LEVEL?",
+   "visual": "Full-frame face, direct address. A glowing 'YOU?' marker is planted on the staircase as we cut back.",
+   "sfx": "short whoosh into the next beat",
+   "why": "Opens the main loop (where are you?) with the face carrying the question; breaks the split pattern early."
+  },
+  {
+   "n": 4,
+   "t0": 7.5,
+   "t1": 11.0,
+   "words": "Level 1: Chat. Sawaal poocha, jawab copy kiya. Bas.",
+   "layout": "split",
+   "text": "LEVEL 1 · CHAT",
+   "caption": "jawab COPY kiya",
+   "visual": "Step 1: question bubble 'Instagram caption likh do' -> generic grey answer; a copy icon clicks.",
+   "sfx": "pop on the bubble, click on 'copy'",
+   "why": "Viewer recognises themselves; grey, flat colour = 'basic'."
+  },
+  {
+   "n": 5,
+   "t0": 11.5,
+   "t1": 14.6,
+   "words": "Level 2: Projects. Apni price list,",
+   "layout": "split",
+   "text": "LEVEL 2 · PROJECTS",
+   "caption": "PROJECTS",
+   "visual": "Camera climbs to step 2: a folder labelled 'Mera Business' opens.",
+   "sfx": "step-up whoosh, folder open",
+   "why": "Each level = one climb, so the viewer always knows where they are."
+  },
+  {
+   "n": 6,
+   "t0": 14.6,
+   "t1": 17.6,
+   "words": "FAQs aur brand ki tone ek baar Project mein daal do.",
+   "layout": "split",
+   "text": "Price list · FAQs · Brand tone",
+   "caption": "EK BAAR daal do",
+   "visual": "Three cards drop into the folder, each landing on its spoken word.",
+   "sfx": "three paper contacts, on the words",
+   "why": "Concrete objects instead of a definition; 'ek baar' = low effort."
+  },
+  {
+   "n": 7,
+   "t0": 18.0,
+   "t1": 20.6,
+   "words": "Ab har jawab aapke business ki bhasha mein aata hai.",
+   "layout": "split",
+   "text": "",
+   "caption": "AAPKE BUSINESS ki",
+   "visual": "The same question from beat 4 now gets a blue answer naming the shop and its price.",
+   "sfx": "soft chime",
+   "why": "Callback to beat 4: same question, better answer = visible change of state."
+  },
+  {
+   "n": 8,
+   "t0": 21.1,
+   "t1": 24.7,
+   "words": "Level 3: Connectors. Gmail, Calendar aur Drive jodo.",
+   "layout": "split",
+   "text": "LEVEL 3 · CONNECTORS",
+   "caption": "Gmail · Calendar · Drive",
+   "visual": "Step 3: three text chips (Gmail, Calendar, Drive; no logos) plug into a 'Claude' hub, one per word.",
+   "sfx": "three plug-in clicks",
+   "why": "Text chips instead of redrawn logos (kit rule: never fake a brand mark)."
+  },
+  {
+   "n": 9,
+   "t0": 25.0,
+   "t1": 27.9,
+   "words": "Ab Claude khud emails padh ke reply draft karta hai,",
+   "layout": "split",
+   "text": "",
+   "caption": "reply DRAFT",
+   "visual": "An enquiry email opens; a reply drafts itself line by line.",
+   "sfx": "light typing ticks",
+   "why": "Shows the action and its result, not just a label."
+  },
+  {
+   "n": 10,
+   "t0": 27.9,
+   "t1": 29.8,
+   "words": "aur meeting calendar mein daal deta hai.",
+   "layout": "split",
+   "text": "",
+   "caption": "CALENDAR mein",
+   "visual": "A calendar slot fills: 'Thu 4:00 PM · Client call'.",
+   "sfx": "pop as the slot fills",
+   "why": "Second concrete result; quick, under 2 s."
+  },
+  {
+   "n": 11,
+   "t0": 30.2,
+   "t1": 32.2,
+   "words": "Aur bhejne se pehle aapse poochta hai.",
+   "layout": "split",
+   "text": "Send? [Approve]",
+   "caption": "PEHLE poochta",
+   "visual": "An approval card; a cursor taps 'Approve' and a check mark lands.",
+   "sfx": "click + small success tone",
+   "why": "Trust beat; true by default (Anthropic help centre: each action needs your approval)."
+  },
+  {
+   "n": 12,
+   "t0": 32.7,
+   "t1": 35.4,
+   "words": "Level 4: Scheduled tasks.",
+   "layout": "split",
+   "text": "LEVEL 4 · SCHEDULED TASKS",
+   "caption": "SCHEDULED TASKS",
+   "visual": "Camera reaches step 4: a large clock reads 9:00 AM. Small tag: 'Paid plan'.",
+   "sfx": "biggest step-up whoosh, clock tick",
+   "why": "Top of the staircase; the 'Paid plan' tag keeps it honest."
+  },
+  {
+   "n": 13,
+   "t0": 35.4,
+   "t1": 38.9,
+   "words": "Ek baar bolo: har subah 9 baje kal ki saari enquiries ki summary bhejo.",
+   "layout": "split",
+   "text": "\"Har subah 9 baje: enquiries ki summary\"",
+   "caption": "HAR SUBAH 9 baje",
+   "visual": "The instruction types into a single card, then the card pins itself to the clock.",
+   "sfx": "typing, then a pin click",
+   "why": "Shows the exact instruction the viewer can copy (it's in the guide)."
+  },
+  {
+   "n": 14,
+   "t0": 39.4,
+   "t1": 42.6,
+   "words": "Aur ye roz apne aap hota hai, laptop band ho tab bhi.",
+   "layout": "split",
+   "text": "Mon · Tue · Wed …",
+   "caption": "laptop BAND ho",
+   "visual": "Days flip Mon to Sun; a summary arrives at 9:00 each day while a closed laptop sits beside it.",
+   "sfx": "seven soft notification pings, fast",
+   "why": "Repetition shows 'automatic'; the closed laptop proves the claim visually (runs remotely per the help centre)."
+  },
+  {
+   "n": 15,
+   "t0": 43.1,
+   "t1": 46.2,
+   "words": "Yahan Claude chatbot nahi, aapka assistant ban jaata hai.",
+   "layout": "full",
+   "text": "Chatbot -> ASSISTANT",
+   "caption": "aapka ASSISTANT",
+   "visual": "Full-screen staircase with the face in a circle: the 'YOU?' marker from beat 3 climbs to step 4 and glows.",
+   "sfx": "rising tone, landing hit",
+   "why": "Payoff closes the open loop from beat 3; the layout change marks the climax."
+  },
+  {
+   "n": 16,
+   "t0": 46.6,
+   "t1": 50.3,
+   "words": "Har level ka setup aur ready prompts maine ek free guide mein daal diye hain.",
+   "layout": "split",
+   "text": "FREE GUIDE · 4 Levels",
+   "caption": "FREE GUIDE",
+   "visual": "A guide cover with 4 tabs (Chat, Projects, Connectors, Scheduled) slides in.",
+   "sfx": "paper slide",
+   "why": "Shows exactly what they get before the ask."
+  },
+  {
+   "n": 17,
+   "t0": 50.6,
+   "t1": 54.7,
+   "words": "(IG) Chahiye to follow karo aur comment karo LEVEL. Guide seedha aapke DM mein.",
+   "layout": "split",
+   "text": "Comment  LEVEL",
+   "caption": "comment LEVEL",
+   "visual": "Big 'Comment LEVEL' pill + follow button; a DM icon pops. YT cut swaps this beat for: 'WhatsApp channel · link in description' (55.0-59.0 s).",
+   "sfx": "pop on LEVEL, gentle outro hit",
+   "why": "Keyword CTA (44% of niche outliers use it); separate YT ending, since YT has no comment-to-DM."
+  }
+ ]
+}

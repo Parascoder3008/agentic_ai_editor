@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Using Claude as Your Video Editor</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif; color: #1b1b1b; font-size: 10.5pt; line-height: 1.55; margin: 0; }
+  h1 { font-size: 26pt; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+  h2 { font-size: 15pt; margin: 26px 0 8px; padding-top: 6px; border-top: 1.5px solid #222; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 16px 0 4px; page-break-after: avoid; }
+  p { margin: 6px 0; }
+  ul, ol { margin: 6px 0 6px 20px; padding: 0; }
+  li { margin: 3px 0; }
+  .sub { color: #555; font-size: 11.5pt; margin-bottom: 18px; }
+  .toc { columns: 2; column-gap: 28px; font-size: 10pt; margin: 10px 0 0; padding-left: 18px; }
+  pre, code { font-family: Consolas, "Courier New", monospace; font-size: 9pt; }
+  pre { background: #f4f4f4; border: 1px solid #ddd; border-radius: 6px; padding: 9px 11px; white-space: pre-wrap; word-break: break-word; margin: 6px 0 10px; page-break-inside: avoid; }
+  code { background: #f1f1f1; padding: 0 3px; border-radius: 3px; }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0 12px; font-size: 9.5pt; page-break-inside: avoid; }
+  th, td { border: 1px solid #cfcfcf; padding: 5px 7px; text-align: left; vertical-align: top; }
+  th { background: #efefef; }
+  .note { border-left: 3px solid #333; padding: 4px 10px; margin: 8px 0; background: #fafafa; }
+  .warn { border-left-color: #b00; }
+  .box { border: 1px solid #ccc; border-radius: 6px; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+  .label { font-size: 8.5pt; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #555; margin-top: 10px; }
+  .page-break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<h1>Using Claude as Your Video Editor</h1>
+<p class="sub">A working playbook for short-form video (Reels, Shorts) and talking-head edits: setup, filming, the edit pipeline, avatar videos, generated shots, quality checks and the mistakes that cost the most time.</p>
+
+<ol class="toc">
+  <li>How it works</li>
+  <li>One-time setup</li>
+  <li>How to film for Claude</li>
+  <li>The edit pipeline, step by step</li>
+  <li>Storyboard before rendering</li>
+  <li>Graphics, captions and layout</li>
+  <li>Sound: SFX, music, loudness</li>
+  <li>Compose and export</li>
+  <li>Quality checks (the 9.5 bar)</li>
+  <li>Avatar videos (no camera)</li>
+  <li>Generated hooks and B-roll</li>
+  <li>Editing for a client</li>
+  <li>Publishing</li>
+  <li>Mistakes that cost the most time</li>
+  <li>Prompt library</li>
+</ol>
+
+<h2>1. How it works</h2>
+<p>Claude Code runs on your computer and can read files, write scripts and run command-line tools. A video editor, for Claude, is a set of those tools: <b>ffmpeg</b> cuts, crops and mixes; a local speech model transcribes; an HTML animation tool renders motion graphics; Python scripts lay everything out frame by frame. You describe the edit in plain language, Claude plans it, writes the scripts, renders, checks its own output and shows you the result.</p>
+<p>Three things make this work well:</p>
+<ul>
+  <li><b>Word-level timing.</b> Every cut, caption and effect is pinned to the exact time a word is spoken.</li>
+  <li><b>A storyboard gate.</b> You approve the plan before anything renders, so you never wait 20 minutes for the wrong edit.</li>
+  <li><b>Measured QA.</b> Claude checks the final file with numbers (sync, loudness, safe zones, masked words) instead of trusting its own plan.</li>
+</ul>
+
+<h2>2. One-time setup</h2>
+<table>
+  <tr><th>Tool</th><th>What it does</th><th>Install</th></tr>
+  <tr><td>Claude Code</td><td>The agent that edits</td><td>From the Claude desktop app or the CLI installer</td></tr>
+  <tr><td>ffmpeg + ffprobe</td><td>Cutting, scaling, mixing, encoding, loudness</td><td><code>winget install ffmpeg</code> / <code>brew install ffmpeg</code></td></tr>
+  <tr><td>Python 3 + numpy, scipy, soundfile, Pillow, opencv-python</td><td>Frame and audio scripts</td><td><code>pip install numpy scipy soundfile pillow opencv-python</code></td></tr>
+  <tr><td>faster-whisper</td><td>Free local transcription with word times</td><td><code>pip install faster-whisper</code></td></tr>
+  <tr><td>torch + torchaudio</td><td>Forced alignment (MMS_FA): exact word and letter timing for known text</td><td><code>pip install torch torchaudio</code></td></tr>
+  <tr><td>Node.js 20+</td><td>Runs the motion-graphics renderer</td><td>nodejs.org</td></tr>
+  <tr><td>HyperFrames</td><td>HTML + GSAP animations rendered to video, including transparent WebM</td><td><code>npx hyperframes</code> (no install needed)</td></tr>
+  <tr><td>Playwright (optional)</td><td>Screenshots of pages, PDF output, layout measurement</td><td><code>pip install playwright</code> then <code>playwright install chromium</code></td></tr>
+</table>
+<p><b>Skills worth adding</b> to Claude Code: a video-editing skill (transcribe, plan cuts, render with an EDL), a HyperFrames skill set, and a short-form editing kit with story rules and plan validators. Skills give Claude tested recipes instead of improvising each time.</p>
+
+<h3>Folder layout (one folder per video)</h3>
+<pre>project/
+  CLAUDE.md          editing rules Claude reads every session (template below)
+  fonts/             your brand fonts (TTF)
+  tools/             shared scripts: transcribe, align, captions, music, compose
+  jobs/reel-01/
+    src/             raw footage
+    edit/            transcripts, plan, scripts, intermediate renders
+    gfx/             HyperFrames composition (index.html) + render.webm
+    qa/              contact sheets, QA numbers
+    publish/         final files, cover, captions (.srt), post copy</pre>
+
+<h3>CLAUDE.md template (your standing rules)</h3>
+<pre># Video editing rules
+- Formats: Reels/Shorts 1080x1920 at 25 or 30 fps. Long-form 1920x1080.
+- Language: [Hinglish / English]. Captions stay in Roman script. Fix names in the transcript before planning.
+- Brand: fonts [..], colours [..]. No other colours except status (ok/warn/error).
+- Safe zone (Instagram): text inside x 90-930, y 200-1560. Nothing on the right rail (x > 930, y 1000-1700).
+- Storyboard first. Nothing renders until I reply "approved".
+- Cuts: snap to word boundaries with 30-200 ms padding; remove fillers, false starts and pauses over 0.4 s.
+- Sound: original or licensed music only. SFX at most +3 dB over the voice and ducked under speech.
+- Render audio and video separately, then mux. Never mix both in one ffmpeg graph.
+- QA before showing me anything: sync, loudness (-14 LUFS, -1.5 dBTP), safe zone, no repeated or clipped words.</pre>
+
+<h2>3. How to film for Claude</h2>
+<ul>
+  <li>One take, landscape 16:9 on a tripod (it gets reframed to 9:16 later), eye level, face well lit.</li>
+  <li>Use a lavalier or USB mic. Clean audio matters more than resolution: transcription, cuts and voice cloning all depend on it.</li>
+  <li><b>Say the edits out loud</b> if you like ("zoom in on my hand", "show the website here"), then pause. Claude can turn spoken instructions into edits and cut the instructions out.</li>
+  <li>Pause for a second after each line. Pauses make clean cut points.</li>
+  <li>Hold still where an effect lands (a product in hand, pointing at something).</li>
+  <li>Keep your flubs. Just repeat the line; Claude keeps the last clean take.</li>
+  <li>Name screen recordings in speaking order: <code>01-website.mp4</code>, <code>02-dashboard.png</code>.</li>
+</ul>
+
+<h2>4. The edit pipeline, step by step</h2>
+<ol>
+  <li><b>Intake.</b> Probe every file (duration, fps, HDR, audio channels). Make a 1-frame-per-second contact sheet and look at it.</li>
+  <li><b>Transcribe</b> locally with word timestamps. Give the model a list of names and brand words; fix what it mishears before planning.</li>
+  <li><b>Find the hidden mistakes.</b> Speech models quietly delete restarts ("main ne… maine kiya"). Force-align the transcript to the audio at letter level and check short-window energy around every planned cut. Re-transcribe each candidate cut to confirm no word repeats or gets clipped.</li>
+  <li><b>Plan the cut</b> as a list of kept ranges (an EDL). Every edge sits in a pause, on the frame grid (multiples of 1/fps).</li>
+  <li><b>Storyboard</b> (section 5) and wait for approval.</li>
+  <li><b>Build the layers:</b> base picture (crops, punch-ins, B-roll), graphics overlay, captions, SFX, music.</li>
+  <li><b>Compose:</b> picture and sound separately, then mux; export one version per platform.</li>
+  <li><b>QA</b> (section 9), fix, re-check.</li>
+  <li><b>Package:</b> cover, captions (.srt), post copy per platform.</li>
+</ol>
+<div class="note">Keep a single <b>plan file</b> (segments, cut times, variant ranges) that every script imports. When one time changes, everything moves together.</div>
+
+<h2>5. Storyboard before rendering</h2>
+<p>Ask Claude for <b>3 edit directions and 3 hook options</b> in one message. After you pick, it builds a storyboard page: one numbered row per beat with the time, the exact words, the layout (face only / split screen / full-screen demo with a face bubble), a still with every caption and graphic drawn at its real position, the SFX, and one line on why. You reply by beat number ("Beat 4: full screen"). Render only on "approved".</p>
+<p><b>Retention rules</b> that work for short-form:</p>
+<ul>
+  <li>Hook text on screen within 1 second, on frame 1 if possible.</li>
+  <li>No static shot longer than about 3 seconds: punch in, cut to B-roll or change layout.</li>
+  <li>Open a question early and close it late (an "open loop").</li>
+  <li>Effects land on the spoken word, within -0.15 / +0.2 s.</li>
+</ul>
+
+<h2>6. Graphics, captions and layout</h2>
+<h3>Layouts</h3>
+<ul>
+  <li><b>Split:</b> top half = graphics or screen recording, bottom half = you, in a rounded card.</li>
+  <li><b>Full-frame demo</b> with your face in a circle bubble.</li>
+  <li><b>Face only</b> for direct-address lines (a short punch-in on landscape footage works for about 2 s before it looks soft).</li>
+  <li><b>Full-frame B-roll</b> with a short label on top.</li>
+</ul>
+<h3>Motion graphics with HyperFrames</h3>
+<p>Graphics are an HTML page with a GSAP timeline, rendered to a transparent WebM and laid over the base video. Ask Claude to keep one timeline, pin every animation to word times, and run <code>npx hyperframes lint</code> before rendering. Use <code>npx hyperframes snapshot --at 3.0,10.5</code> to check layouts in seconds instead of waiting for a full render.</p>
+<div class="note warn"><b>Renderer gotcha:</b> author the graphics on the same clock as the audio and shift them in the compose step if needed. Moving the whole timeline inside the page (for example <code>timeline.shiftChildren</code>) was applied to some elements and not others by the renderer.</div>
+<h3>Captions</h3>
+<ul>
+  <li>One to three words per caption, the current word highlighted in your accent colour.</li>
+  <li>Use force-aligned word times from the final audio, not the TTS provider's subtitle file (those can run a quarter-second early).</li>
+  <li>Split layouts: captions at the seam between graphics and face. Full-frame shots: lower, on a dark box, above the platform UI.</li>
+  <li>Hide captions while big on-screen text says the same thing.</li>
+</ul>
+<h3>Measure the safe zone, don't eyeball it</h3>
+<p>Ask Claude to measure every text element's real width in a headless browser and fail if anything leaves x 90-930. Long words at large sizes ("WhatsApp NUMBER" at 100 px) quietly run under the like/comment buttons. Remember that zoom animations make text wider at their peak.</p>
+
+<h2>7. Sound: SFX, music, loudness</h2>
+<ul>
+  <li><b>SFX</b> can be synthesized in Python (pops, ticks, whooshes, chimes, impacts): royalty-free by construction. Place each one on its visual event.</li>
+  <li><b>Whooshes swallow words.</b> Keep a whoosh's peak at least 0.15 s before the next word starts. One peaking inside a word turned "Plugin" into "lagin".</li>
+  <li>Duck all effects about 6 dB while the voice is active; keep them at most +3 dB over the voice.</li>
+  <li><b>Music:</b> generate an original score to picture (hits on cuts, risers into reveals, level automated against the voice) or use a licensed library. Never use unlicensed tracks.</li>
+  <li><b>Loudness:</b> two-pass loudnorm to -14 LUFS integrated, -1.5 dBTP true peak, per exported version.</li>
+</ul>
+
+<h2>8. Compose and export</h2>
+<ol>
+  <li>Build the <b>base picture</b> from the plan: each segment trimmed, scaled, cropped (or placed in a card) and concatenated.</li>
+  <li>Overlay the graphics WebM, then burn captions (ASS subtitles with your font).</li>
+  <li>Mix the <b>sound separately</b>: voice + SFX + music → limiter → loudness per version.</li>
+  <li>Cut picture and sound with the same ranges for each platform, then mux.</li>
+</ol>
+<div class="note warn">Mixing audio and video in one ffmpeg filter graph caused up to 0.77 s of drift on a 70 s ad. Separate renders + mux fixed it completely.</div>
+<p><b>One render, several versions:</b> record one ending with both calls to action, then cut an Instagram version (comment-keyword CTA, short freeze on the last frame) and a YouTube version (subscribe / link-in-description CTA).</p>
+
+<h2>9. Quality checks (the 9.5 bar)</h2>
+<p>Have Claude score the edit out of 10 and refuse to show anything under 9.5, listing what it checked. The checks:</p>
+<table>
+  <tr><th>Check</th><th>Pass line</th><th>How</th></tr>
+  <tr><td>No repeated, clipped or masked word</td><td>0 findings</td><td>Re-transcribe each kept piece and each joint from the final file; force-align the script to the final mix and compare word scores with the clean voice</td></tr>
+  <tr><td>A/V sync</td><td>≤ 10 ms</td><td>Cross-correlate the final audio against the voice track per range</td></tr>
+  <tr><td>Loudness</td><td>-14 LUFS, ≤ -1.5 dBTP</td><td><code>ffmpeg -af ebur128=peak=true</code></td></tr>
+  <tr><td>Safe zone</td><td>Text inside x 90-930, y 200-1560</td><td>Measured widths + contact sheet with the platform UI zones shaded</td></tr>
+  <tr><td>Cuts on the frame grid, on spoken anchors</td><td>Every edge</td><td>Plan validator</td></tr>
+  <tr><td>Overlay matches picture</td><td>Same frame</td><td>Pull the 3 frames either side of every cut from the final file and look</td></tr>
+  <tr><td>Hook</td><td>Text within 1 s; nothing static over ~3 s</td><td>Frame strip of the first 3 s</td></tr>
+  <tr><td>Generated shots clean</td><td>No stray logos, no silent mouth movement</td><td>Strip at 10 fps</td></tr>
+  <tr><td>Claims</td><td>Every product fact sourced</td><td>Official docs / pricing pages, noted in a research file</td></tr>
+</table>
+<p>Write the numbers into a <code>VERIFY.md</code> next to the files.</p>
+
+<h2>10. Avatar videos (no camera)</h2>
+<ol>
+  <li><b>Script</b> in your voice, 50-60 s, one idea, hook in the first line.</li>
+  <li><b>Pronunciation gate.</b> Write a TTS version of the script: Hindi words in Devanagari, English words in Latin, numbers spelled out, tricky words pinned (for example "Claude" written as क्लॉड). Generate an audio-only preview, transcribe it, flag every word that drifted, and listen to the flagged spots. Nothing goes to the avatar until you approve the audio.</li>
+  <li><b>Render the avatar from the approved audio file</b> (audio-driven lip sync), not from text. The words and timing then match the preview exactly.</li>
+  <li><b>Edit</b> exactly like a camera take; skip the mistake-cutting step.</li>
+</ol>
+<h3>Getting a voice that sounds like you</h3>
+<ul>
+  <li><b>Source audio is everything.</b> Use 1-3 minutes of your own clean, energetic speech recorded on a good mic (a lecture or podcast recording works). Phone-call audio or noisy rooms give a flat clone.</li>
+  <li>Instant clone settings that worked: highest similarity, background-noise removal <b>off</b> when the source is already clean.</li>
+  <li>A professional clone (trained on 20+ minutes) is usually better, but may need a paid voice slot.</li>
+  <li>The best option when it really matters: record the script yourself on your phone and lip-sync the avatar to your real voice.</li>
+</ul>
+
+<h2>11. Generated hooks and B-roll</h2>
+<p>Text-to-video tools (Google Flow with Veo/Omni models, Higgsfield, Runway, Seedance) are good for hooks and illustrative B-roll: a customer texting at 2 AM, a shop owner giving a thumbs-up, your own likeness in a scene.</p>
+<h3>Prompt formula</h3>
+<pre>Vertical 9:16, [camera style: cinematic handheld / slow push-in], [time + light].
+[Who] [doing what], [the one action that matters], [ending pose].
+Mouth stays closed, nobody speaks. Plain phone with no logo, no visible branding, no text on screen.
+Ambient room sound only, no dialogue, no music.</pre>
+<h3>Rules</h3>
+<ul>
+  <li>Get the prompt right before spending credits; one 10-second clip at a time.</li>
+  <li>To use your own likeness, add your saved avatar/character as a reference to each prompt (it is consumed per prompt in some tools).</li>
+  <li>Download the 1080p upscale, not the 720p original.</li>
+  <li><b>Check every clip</b> at 10 fps: models add logos (laptop apples, phone camera bumps) and move mouths even when told not to. Use only the clean ranges.</li>
+  <li>Always mute generated audio; your voice-over carries the scene.</li>
+  <li>Generated speech in Hindi/Hinglish rarely comes out right. Generate the visuals, then add dialogue from approved TTS and a lip-sync tool.</li>
+  <li>When driving a web app through Claude: don't press Send while the app's assistant is still busy. The Send button often becomes Stop and cancels the job.</li>
+</ul>
+
+<h2>12. Editing for a client</h2>
+<ul>
+  <li><b>Use only the client's assets:</b> their footage, their reels, their products, their links. Never your own clips or offers.</li>
+  <li>Learn their style from their best-performing reels: scrape their profile (an Instagram reel scraper gives play counts and video URLs), pick the outliers, and study captions, colours, cut pace and signature sounds (one client's winning reels used a falling-pitch "drop" sound on every punchline).</li>
+  <li>Combine with any reference style they send, then confirm the mix in the storyboard.</li>
+  <li>Leave the client's links as placeholders in the post copy.</li>
+  <li>Deliver through a shared drive folder: final versions, cover, captions, post copy.</li>
+</ul>
+
+<h2>13. Publishing</h2>
+<ul>
+  <li>Host the final MP4 at a public URL first; most posting APIs fetch from a URL.</li>
+  <li>Instagram via API: some connectors mangle <code>#</code>, <code>&amp;</code> and <code>+</code> in captions, so put hashtags (max 4) in the first comment.</li>
+  <li>YouTube: shared API quotas run out; a social scheduler with a direct YouTube connection is more reliable. Set the category and tags after upload.</li>
+  <li>Comment-keyword → DM automations: whole-word keyword, a follow check with a fallback, 2-3 public reply variants.</li>
+  <li>Approve every post yourself before it goes live; record the IDs of everything that was posted.</li>
+</ul>
+
+<h2>14. Mistakes that cost the most time</h2>
+<table>
+  <tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr>
+  <tr><td>Repeated half-words in the final cut</td><td>The transcript hid a restart</td><td>Letter-level alignment + energy checks + re-transcribe every joint</td></tr>
+  <tr><td>Audio slowly drifts out of sync</td><td>Audio and video in one ffmpeg graph</td><td>Render separately, then mux</td></tr>
+  <tr><td>A word disappears under an effect</td><td>Whoosh peak inside the word</td><td>Peak ≥ 0.15 s before the next word; duck SFX under speech</td></tr>
+  <tr><td>Graphics flash a frame early or late at cuts</td><td>Cuts not on the frame grid, or graphics on a different clock</td><td>All cuts at multiples of 1/fps; one plan file; offset the overlay in compose</td></tr>
+  <tr><td>Text under the like/comment buttons</td><td>Eyeballed sizes</td><td>Measure real widths; include zoom peaks</td></tr>
+  <tr><td>Captions slightly early</td><td>Provider subtitle file</td><td>Force-align words on the final audio</td></tr>
+  <tr><td>Avatar mispronounces names</td><td>TTS guessing Roman-script Hindi</td><td>Pronunciation gate with Devanagari + pinned words</td></tr>
+  <tr><td>Cloned voice sounds flat</td><td>Short or noisy sample</td><td>Clean lav-mic sample, max similarity, or record yourself</td></tr>
+  <tr><td>Hook opens on dead air</td><td>TTS lead-in silence before the first word</td><td>Trim the lead-in so the first word lands within the first few frames</td></tr>
+  <tr><td>A generated job silently cancelled</td><td>Send pressed while the web app's assistant was busy</td><td>Wait until the button reads Send/Start again</td></tr>
+</table>
+
+<h2 class="page-break">15. Prompt library</h2>
+
+<div class="label">Setup</div>
+<pre>Read CLAUDE.md. Set up a new job folder jobs/[name]/ with src, edit, gfx, qa, publish. Probe every file in src/ (duration, fps, HDR, audio) and make a 1 fps contact sheet. Tell me what you see.</pre>
+
+<div class="label">Transcribe and find mistakes</div>
+<pre>Transcribe src/[take].mp4 locally with word timestamps. Names to fix: [list]. Then find every restart, repeat and filler, including ones the transcript hides: force-align at letter level and check energy around each candidate cut. List what you'd cut with times; don't render yet.</pre>
+
+<div class="label">Storyboard</div>
+<pre>Give me 3 edit directions and 3 hook-text options in one message. After I pick, build storyboard.html: numbered beats with time, exact words, layout, a still with every caption/graphic at its real 1080x1920 position, SFX, and why. Render nothing until I say approved.</pre>
+
+<div class="label">Build</div>
+<pre>Build the approved storyboard. One plan file for all cut times. Graphics in HyperFrames (lint + snapshot first), captions 1-3 words with the current word highlighted, synthesized SFX on each visual event (whoosh peaks 0.15 s before words), original score. Render picture and sound separately, then mux. Export Instagram and YouTube versions.</pre>
+
+<div class="label">QA</div>
+<pre>QA the final files before showing me: re-transcribe every joint, check masked words against the clean voice, sync per range (≤10 ms), loudness (-14 LUFS, ≤-1.5 dBTP), measured safe zone, frames either side of every cut, hook in the first 3 s. Score it out of 10, fix anything under 9.5, and write VERIFY.md with the numbers.</pre>
+
+<div class="label">Avatar video</div>
+<pre>Write a 55-second script on [topic] in my voice with the hook first. Make the TTS version (Devanagari for Hindi, Latin for English, numbers spelled out, pin tricky names). Generate an audio preview with my cloned voice, transcribe it and flag drifted words. After I approve the audio, render the avatar [look] from that exact audio file, then edit it with the normal pipeline.</pre>
+
+<div class="label">Generated B-roll</div>
+<pre>Plan [n] generated shots for this script: one hook with my likeness and [n-1] B-roll scenes. Write each prompt with the formula (9:16, camera, light, one action, mouth closed, no logos, no text, no music). Generate one at a time, download the 1080p upscale, and check each at 10 fps for logos and mouth movement before using it.</pre>
+
+<div class="label">Client edit</div>
+<pre>This is a client job: use only the client's footage and their own reels. Scrape their profile, find their best-performing reels, and describe their style (captions, colours, pace, signature sounds). Combine it with this reference: [file]. Leave their links as placeholders.</pre>
+
+</body>
+</html>

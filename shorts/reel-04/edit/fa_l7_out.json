@@ -1,0 +1,292 @@
+{
+ "L7": [
+  {
+   "text": "aapko",
+   "start": 64.49,
+   "end": 64.79,
+   "score": 0.857
+  },
+  {
+   "text": "apne",
+   "start": 64.85,
+   "end": 65.05,
+   "score": 0.994
+  },
+  {
+   "text": "claude",
+   "start": 65.211,
+   "end": 65.591,
+   "score": 0.427
+  },
+  {
+   "text": "ko",
+   "start": 65.671,
+   "end": 65.731,
+   "score": 0.993
+  },
+  {
+   "text": "ek",
+   "start": 65.831,
+   "end": 65.931,
+   "score": 0.985
+  },
+  {
+   "text": "video",
+   "start": 66.071,
+   "end": 66.372,
+   "score": 0.791
+  },
+  {
+   "text": "editor",
+   "start": 66.552,
+   "end": 66.852,
+   "score": 0.738
+  },
+  {
+   "text": "ki",
+   "start": 66.892,
+   "end": 66.932,
+   "score": 0.968
+  },
+  {
+   "text": "tarah",
+   "start": 66.972,
+   "end": 67.132,
+   "score": 0.517
+  },
+  {
+   "text": "convert",
+   "start": 67.152,
+   "end": 67.513,
+   "score": 0.454
+  },
+  {
+   "text": "karna",
+   "start": 67.553,
+   "end": 67.753,
+   "score": 0.924
+  },
+  {
+   "text": "hai",
+   "start": 67.753,
+   "end": 67.813,
+   "score": 0.136
+  },
+  {
+   "text": "ab",
+   "start": 68.213,
+   "end": 68.333,
+   "score": 0.996
+  },
+  {
+   "text": "iski",
+   "start": 68.493,
+   "end": 68.714,
+   "score": 0.994
+  },
+  {
+   "text": "ek",
+   "start": 68.774,
+   "end": 68.854,
+   "score": 0.988
+  },
+  {
+   "text": "bana",
+   "start": 68.894,
+   "end": 69.014,
+   "score": 0.996
+  },
+  {
+   "text": "rakhi",
+   "start": 69.094,
+   "end": 69.294,
+   "score": 0.795
+  },
+  {
+   "text": "maine",
+   "start": 69.334,
+   "end": 69.494,
+   "score": 0.939
+  },
+  {
+   "text": "poori",
+   "start": 69.534,
+   "end": 69.714,
+   "score": 0.597
+  },
+  {
+   "text": "guide",
+   "start": 69.795,
+   "end": 70.075,
+   "score": 0.593
+  },
+  {
+   "text": "aap",
+   "start": 70.195,
+   "end": 70.335,
+   "score": 0.986
+  },
+  {
+   "text": "comment",
+   "start": 70.415,
+   "end": 70.715,
+   "score": 0.56
+  },
+  {
+   "text": "kar",
+   "start": 70.755,
+   "end": 70.835,
+   "score": 0.992
+  },
+  {
+   "text": "do",
+   "start": 70.895,
+   "end": 70.956,
+   "score": 0.946
+  },
+  {
+   "text": "edit",
+   "start": 71.056,
+   "end": 71.256,
+   "score": 0.882
+  },
+  {
+   "text": "main",
+   "start": 71.356,
+   "end": 71.436,
+   "score": 0.244
+  },
+  {
+   "text": "aapke",
+   "start": 71.456,
+   "end": 71.656,
+   "score": 0.981
+  },
+  {
+   "text": "dm",
+   "start": 71.696,
+   "end": 71.956,
+   "score": 0.981
+  },
+  {
+   "text": "mein",
+   "start": 71.976,
+   "end": 72.076,
+   "score": 0.489
+  },
+  {
+   "text": "bhej",
+   "start": 72.097,
+   "end": 72.237,
+   "score": 0.955
+  },
+  {
+   "text": "dunga",
+   "start": 72.277,
+   "end": 72.437,
+   "score": 0.782
+  },
+  {
+   "text": "follow",
+   "start": 72.497,
+   "end": 72.737,
+   "score": 0.41
+  },
+  {
+   "text": "kar",
+   "start": 72.737,
+   "end": 72.837,
+   "score": 0.902
+  },
+  {
+   "text": "lena",
+   "start": 72.917,
+   "end": 73.037,
+   "score": 0.963
+  },
+  {
+   "text": "warna",
+   "start": 73.097,
+   "end": 73.237,
+   "score": 0.587
+  },
+  {
+   "text": "dm",
+   "start": 73.338,
+   "end": 73.518,
+   "score": 0.926
+  },
+  {
+   "text": "nahi",
+   "start": 73.558,
+   "end": 73.658,
+   "score": 0.491
+  },
+  {
+   "text": "jaayega",
+   "start": 73.658,
+   "end": 73.878,
+   "score": 0.752
+  },
+  {
+   "text": "aur",
+   "start": 74.278,
+   "end": 74.418,
+   "score": 0.988
+  },
+  {
+   "text": "bhai",
+   "start": 74.479,
+   "end": 74.679,
+   "score": 0.986
+  },
+  {
+   "text": "aap",
+   "start": 74.699,
+   "end": 74.799,
+   "score": 0.949
+  },
+  {
+   "text": "apni",
+   "start": 74.839,
+   "end": 75.079,
+   "score": 0.921
+  },
+  {
+   "text": "editing",
+   "start": 75.099,
+   "end": 75.379,
+   "score": 0.688
+  },
+  {
+   "text": "ghar",
+   "start": 75.399,
+   "end": 75.499,
+   "score": 0.716
+  },
+  {
+   "text": "baithe",
+   "start": 75.519,
+   "end": 75.74,
+   "score": 0.53
+  },
+  {
+   "text": "karwa",
+   "start": 75.78,
+   "end": 75.94,
+   "score": 0.668
+  },
+  {
+   "text": "sakte",
+   "start": 76.02,
+   "end": 76.16,
+   "score": 0.565
+  },
+  {
+   "text": "ho",
+   "start": 76.16,
+   "end": 76.2,
+   "score": 0.212
+  }
+ ]
+}

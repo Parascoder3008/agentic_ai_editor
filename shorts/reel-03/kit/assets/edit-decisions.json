@@ -1,0 +1,20 @@
+{
+ "duration": 55.48,
+ "fps": 25,
+ "keeps": [
+  {
+   "sourceStart": 0.0,
+   "sourceEnd": 54.88,
+   "start": 0.0,
+   "end": 54.88
+  }
+ ],
+ "removals": [
+  {
+   "sourceStart": 54.88,
+   "sourceEnd": 59.1,
+   "reason": "YouTube-only CTA line; Instagram ends on the comment CTA"
+  }
+ ],
+ "note": "Voice is a pronunciation-gated TTS read with no flubs, so no silence/mistake cuts were needed."
+}

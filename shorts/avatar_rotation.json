@@ -1,0 +1,82 @@
+{
+ "note": "Paras 2026-10-10: rotate randomly through his recent HeyGen avatars for every new video. Pick with tools/pick_avatar.py (never the same look twice in a row). Add new looks here when he makes them.",
+ "voice_note": "These looks default to voice de04577c98fd4a6fb23809e2bad5df96; pilot-01's approved audio used e4e5d6c1e1f34016babe18df3d18a338 (Paras Arora -- 14). Audio is passed as audioUrl after the pronunciation gate, so the look's default voice is not used.",
+ "looks": [
+  {
+   "id": "1307e9a7254f42fb85f1dac4a9bca13b",
+   "name": "Cleaned Look",
+   "type": "photo_avatar",
+   "orientation": "landscape"
+  },
+  {
+   "id": "b45887cb5308403ea9da34c26d55f5ce",
+   "name": "Content creator in grey hoodie",
+   "type": "photo_avatar",
+   "orientation": "portrait"
+  },
+  {
+   "id": "77edce75dd3344c893dd069b7622fc44",
+   "name": "Content creator in black hoodie",
+   "type": "photo_avatar",
+   "orientation": "portrait"
+  },
+  {
+   "id": "68ef87be9f3f484aa2fb75dc37f29413",
+   "name": "Person in grey sweater",
+   "type": "photo_avatar",
+   "orientation": "portrait"
+  },
+  {
+   "id": "59d586f730e64fc6b73fd74f18dbe221",
+   "name": "Podcaster in olive shirt",
+   "type": "photo_avatar",
+   "orientation": "portrait"
+  },
+  {
+   "id": "15d1dcda47e44b6dadcb866a08170143",
+   "name": "Podcaster in a blue hoodie",
+   "type": "photo_avatar",
+   "orientation": "portrait"
+  },
+  {
+   "id": "b36a814cfbf0479dbce323bd488d9641",
+   "name": "Motion Look",
+   "type": "digital_twin",
+   "orientation": "landscape"
+  },
+  {
+   "id": "5c086454a0734834b755b64601135d1e",
+   "name": "Paras Arora -- 15 (black crew-neck tee, desk, orange wall)",
+   "type": "digital_twin",
+   "orientation": "landscape"
+  }
+ ],
+ "history": [
+  {
+   "id": "b36a814cfbf0479dbce323bd488d9641",
+   "name": "Motion Look",
+   "job": "pilot-01-v2",
+   "date": "2026-10-10"
+  },
+  {
+   "id": "15d1dcda47e44b6dadcb866a08170143",
+   "name": "Podcaster in a blue hoodie",
+   "job": "reel-02",
+   "date": "2026-10-11",
+   "why": "random pick was olive shirt, whose purple/pink backdrop breaks the brand (violet retired); re-picked the on-brand navy look"
+  },
+  {
+   "id": "b45887cb5308403ea9da34c26d55f5ce",
+   "name": "Content creator in grey hoodie",
+   "job": "reel-03",
+   "date": "2026-10-19"
+  },
+  {
+   "id": "5c086454a0734834b755b64601135d1e",
+   "name": "Paras Arora -- 15 (black tee)",
+   "job": "reel-05",
+   "date": "2026-10-22",
+   "why": "Paras asked for 'the new black tshirt one'; voice = instant model voice 84c9815d (lecture mic), Avatar V, audioUrl = approved preview"
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{Claude|क्लॉड} को अब अपना ख़ुद का WhatsApp number मिल सकता है। और ज़्यादातर business owners को ये पता ही नहीं।
+सोचो, रात के दो बजे customer पूछता है: Friday को slot है?
+और तुरंत जवाब आता है, free slots के साथ, और booking हो जाती है।
+ये होता है एक free tool से। नाम है {Kapso|कैप्सो}।
+ये {Claude|क्लॉड} को WhatsApp के official {API|ए पी आई} से जोड़ता है। Free plan में महीने के two thousand messages।
+Setup सिर्फ़ तीन step का है।
+Step one: {Kapso|कैप्सो} पे sign up करो, और अपना business number link करो।
+Step two: एक command से {Kapso|कैप्सो} की WhatsApp skills {Claude|क्लॉड} Code में डाल दो।
+Step three: {Claude|क्लॉड} को बोलो: मेरे business के लिए WhatsApp agent बनाओ जो bookings सँभाले।
+बाक़ी code {Claude|क्लॉड} ख़ुद लिखता है। और agent आपके number पे चौबीस घंटे चलता है।
+बस एक rule याद रखो: customer की permission पहले।
+पूरा setup और ready prompt मैंने एक free guide में डाल दिया है।
+चाहिए तो follow करो और comment करो {AGENT|एजेंट}। Guide सीधा आपके DM में।
+तो channel के description में दी गई link से हमारा WhatsApp channel join कर लो।

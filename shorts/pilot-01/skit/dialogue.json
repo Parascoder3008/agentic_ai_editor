@@ -1,0 +1,38 @@
+[
+ {
+  "speaker": "friend",
+  "line": 0,
+  "shot": 0,
+  "start": 0.12,
+  "end": 2.944,
+  "tempo": 1.106,
+  "fits": true
+ },
+ {
+  "speaker": "man",
+  "line": 0,
+  "shot": 1,
+  "start": 3.12,
+  "end": 4.44,
+  "tempo": 1.0,
+  "fits": true
+ },
+ {
+  "speaker": "friend",
+  "line": 1,
+  "shot": 2,
+  "start": 4.87,
+  "end": 6.367,
+  "tempo": 1.0,
+  "fits": true
+ },
+ {
+  "speaker": "man",
+  "line": 1,
+  "shot": 3,
+  "start": 6.62,
+  "end": 8.006,
+  "tempo": 1.026,
+  "fits": true
+ }
+]

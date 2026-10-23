@@ -1,0 +1,223 @@
+"""16:9 long-form compose: camera (punch-in framing), screen recording (+ face bubble), pre-rendered clips,
+transparent overlays, voice from the clean WAV, music + SFX, -14 LUFS master (gain -> gentle comp -> limiter).
+
+Master timeline = the clean WAV. Sources map onto it with fixed offsets:
+  cam_time = master + cam.offset        scr_time = master + scr.offset
+
+config JSON:
+{
+ "fps": 25,
+ "cam": {"path": "...", "offset": 36.165, "px": 1.0},     # px = source pixels per 1920-space pixel (proxy 1.0, 4K 2.0)
+ "scr": {"path": "...", "offset": -234.106},
+ "wav": "...",
+ "grade": "<ffmpeg filter for camera shots>",
+ "bubble": {"x": 1520, "y": 660, "d": 360, "size": 560, "cx": 930, "cy": 400},   # face bubble on screen shots
+ "segments": [
+   {"type": "clip", "file": "intro.mkv"},
+   {"type": "cam", "m0": 41.2, "m1": 47.9, "zoom": 1.0, "cx": 960, "cy": 540},
+   {"type": "scr", "m0": 250.0, "m1": 262.4, "crop": [0, 0, 1920, 1080], "bubble": true}
+ ],
+ "overlays": [{"file": "kw01/render.webm", "start": 63.4}],     # OUTPUT-timeline seconds
+ "sfx": [{"file": "...", "at": 63.4, "gain_db": -18}],
+ "music": {"file": "...", "gain_db": -24},    # + "sidechain": false for a pre-automated score (score_music.py)
+ "voice_gain": [[0.0, 42.4, -5.0]],          # optional dB trims on the voice track (output time), e.g. match a louder intro
+ "out": "longform.mp4", "preset": "veryfast", "crf": 20
+}
+
+Usage: python longform_compose.py cfg.json [segments|mix|all] [--from N]
+"""
+import json
+import re
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+FADE = 0.03
+
+
+def run(cmd):
+    p = subprocess.run(cmd, capture_output=True, text=True)
+    if p.returncode:
+        sys.exit("ffmpeg failed:\n" + " ".join(map(str, cmd))[:900] + "\n" + p.stderr[-2500:])
+    return p
+
+
+def dur_of(f):
+    return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(f)],
+                                capture_output=True, text=True).stdout)
+
+
+def frames(t, fps):
+    return round(t * fps) / fps
+
+
+def timeline(cfg):
+    """Output start/end of every segment (frame-exact)."""
+    fps, t, out = cfg["fps"], 0.0, []
+    for s in cfg["segments"]:
+        d = dur_of(s["file"]) if s["type"] == "clip" else s["m1"] - s["m0"]
+        d = frames(d, fps)
+        out.append((t, t + d))
+        t += d
+    return out
+
+
+def size(cfg):
+    """output frame size: layout stays in 1920x1080 space, "out_scale": 2 renders it at 3840x2160."""
+    S = cfg.get("out_scale", 1)
+    return 1920 * S, 1080 * S
+
+
+def cam_crop(cfg, zoom, cx, cy):
+    px = cfg["cam"]["px"]
+    w, h = 1920 / zoom, 1080 / zoom
+    x = min(max(cx - w / 2, 0), 1920 - w)
+    y = min(max(cy - h / 2, 0), 1080 - h)
+    W, H = size(cfg)
+    return f"crop={int(w * px)}:{int(h * px)}:{int(x * px)}:{int(y * px)},scale={W}:{H}:flags=lanczos"
+
+
+def bubble_chain(cfg, label_in, label_out, face=None):
+    b, px = dict(cfg["bubble"]), cfg["cam"]["px"]
+    if face:   # follow the tracked face (crop box centred slightly below the face so shoulders show)
+        b["cx"], b["cy"] = face[0], face[1] + 40
+    S = cfg.get("out_scale", 1)
+    d = b["d"] * S
+    r, ring = d // 2, 8 * S
+    D = f"hypot(X-{r},Y-{r})"
+    s = b["size"]
+    return (f"{label_in}crop={int(s * px)}:{int(s * px)}:{int((b['cx'] - s / 2) * px)}:{int((b['cy'] - s / 2) * px)},"
+            f"scale={d}:{d},{cfg.get('grade', 'null')},format=rgba,"
+            f"geq=r='if(gt({D},{r - ring}),26,r(X,Y))':g='if(gt({D},{r - ring}),159,g(X,Y))':"
+            f"b='if(gt({D},{r - ring}),209,b(X,Y))':a='if(lte({D},{r - 1}),255,if(lte({D},{r}),128,0))'{label_out}")
+
+
+def render_segment(cfg, i, seg, t0, t1, wd: Path):
+    fps, d = cfg["fps"], round(t1 - t0, 4)
+    W, H = size(cfg)
+    S = cfg.get("out_scale", 1)
+    out = wd / f"seg_{i:04d}.mkv"
+    inputs, fc = [], []
+    if seg["type"] == "clip":
+        inputs += ["-i", seg["file"]]
+        fc.append(f"[0:v]fps={fps},scale={W}:{H}:flags=lanczos,format=yuv420p[base]")
+        audio = ["-map", "0:a"]
+    else:
+        m0 = seg["m0"]
+        if seg["type"] == "cam":
+            inputs += ["-ss", f"{m0 + cfg['cam']['offset']:.3f}", "-t", f"{d:.3f}", "-i", cfg["cam"]["path"]]
+            fc.append(f"[0:v]fps={fps},{cam_crop(cfg, seg.get('zoom', 1.0), seg.get('cx', 960), seg.get('cy', 540))},"
+                      f"{cfg.get('grade', 'null')},format=yuv420p[base]")
+        else:  # screen
+            x, y, w, h = seg.get("crop") or [0, 0, 1920, 1080]
+            inputs += ["-ss", f"{m0 + cfg['scr']['offset']:.3f}", "-t", f"{d:.3f}", "-i", cfg["scr"]["path"]]
+            chain = f"[0:v]fps={fps},crop={w}:{h}:{x}:{y},scale={W}:{H}:flags=lanczos,format=yuv420p"
+            if seg.get("bubble", True):
+                inputs += ["-ss", f"{m0 + cfg['cam']['offset']:.3f}", "-t", f"{d:.3f}", "-i", cfg["cam"]["path"]]
+                fc.append(chain + "[scr]")
+                fc.append(bubble_chain(cfg, f"[1:v]fps={fps},", "[bub]", seg.get("face")))
+                bx, by = seg.get("bubble_xy", [cfg["bubble"]["x"], cfg["bubble"]["y"]])
+                fc.append(f"[scr][bub]overlay={bx * S}:{by * S}:shortest=1,format=yuv420p[base]")
+            else:
+                fc.append(chain + "[base]")
+        inputs += ["-ss", f"{m0:.3f}", "-t", f"{d:.3f}", "-i", cfg["wav"]]
+        audio = ["-map", f"{len([a for a in inputs if a == '-i']) - 1}:a"]
+    # overlays touching this segment (trimmed in, never seeked: seeking an alpha webm drops the alpha)
+    cur, k = "[base]", len([a for a in inputs if a == "-i"])
+    for ov in cfg.get("overlays", []):
+        o0 = ov["start"]; o1 = o0 + (ov.get("dur") or ov.setdefault("_dur", dur_of(ov["file"])))
+        if o1 <= t0 or o0 >= t1:
+            continue
+        stamp = Path(ov["file"]).with_name(".rendered")      # graphics may still be rendering in parallel
+        for _ in range(720):
+            if Path(ov["file"]).exists() and stamp.exists():
+                break
+            time.sleep(10)
+        inputs += ["-c:v", "libvpx-vp9", "-i", ov["file"]]
+        skip = max(0.0, t0 - o0)            # how much of the overlay already played before this segment
+        place = max(0.0, o0 - t0)           # where it starts inside this segment
+        fc.append(f"[{k}:v]format=rgba,scale={W}:{H}:flags=lanczos,trim=start={skip:.3f},setpts=PTS-STARTPTS+{place:.3f}/TB[o{k}]")
+        fc.append(f"{cur}[o{k}]overlay=0:0:eof_action=pass:format=auto[v{k}]")
+        cur, k = f"[v{k}]", k + 1
+    fc.append(f"{cur}format=yuv420p[vout]")
+    af = "aformat=sample_rates=48000:channel_layouts=stereo"
+    if seg.get("fade_in", True):      # internal splits of one continuous take keep their audio untouched
+        af += f",afade=t=in:st=0:d={FADE}"
+    if seg.get("fade_out", True):
+        af += f",afade=t=out:st={d - FADE:.3f}:d={FADE}"
+    run(["ffmpeg", "-y", "-v", "error", *inputs, "-filter_complex", ";".join(fc), "-map", "[vout]", *audio,
+         "-af", af, "-t", f"{d:.3f}", "-r", str(fps), "-c:v", "libx264", "-preset", cfg.get("preset", "veryfast"),
+         "-crf", str(cfg.get("crf", 20)), "-pix_fmt", "yuv420p", "-c:a", "pcm_s16le", "-ar", "48000", str(out)])
+    return out
+
+
+def segments(cfg, wd, start=0):
+    tl = timeline(cfg)
+    for i, (seg, (t0, t1)) in enumerate(zip(cfg["segments"], tl)):
+        if i < start and (wd / f"seg_{i:04d}.mkv").exists():
+            continue
+        render_segment(cfg, i, seg, t0, t1, wd)
+        print(f"seg {i:03d} {seg['type']:4s} out {t0:7.2f}-{t1:7.2f}", flush=True)
+    (wd / "concat.txt").write_text("".join(f"file '{(wd / f'seg_{i:04d}.mkv').as_posix()}'\n"
+                                           for i in range(len(tl))), encoding="utf-8")
+    run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", str(wd / "concat.txt"), "-c", "copy", str(wd / "base.mkv")])
+    print(f"base.mkv {tl[-1][1]:.2f}s ({len(tl)} segments)")
+
+
+def mix(cfg, wd):
+    base = wd / "base.mkv"
+    vg = "".join(f"volume={db}dB:enable='between(t,{a},{b})'," for a, b, db in cfg.get("voice_gain", []))
+    inputs, aud = ["-i", str(base)], [f"[0:a]aformat=sample_rates=48000:channel_layouts=stereo,{vg}asplit=2[voice][key]"]
+    mixl, n = ["[voice]"], 1
+    m = cfg.get("music")
+    if m:
+        inputs += ["-stream_loop", "-1", "-i", m["file"]]
+        aud.append(f"[{n}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={m['gain_db']}dB[bed]")
+        if m.get("sidechain", True):
+            aud.append("[bed][key]sidechaincompress=threshold=0.03:ratio=8:attack=20:release=400[duck]")
+            mixl.append("[duck]")
+        else:                                  # pre-automated score (tools/score_music.py)
+            aud.append("[key]anullsink")
+            mixl.append("[bed]")
+        n += 1
+    else:
+        aud.append("[key]anullsink")
+    for j, s in enumerate(cfg.get("sfx", [])):
+        inputs += ["-i", s["file"]]
+        ms = int(round(s["at"] * 1000))
+        aud.append(f"[{n}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={s.get('gain_db', -18)}dB,adelay={ms}|{ms}[s{j}]")
+        mixl.append(f"[s{j}]"); n += 1
+    aud.append(f"{''.join(mixl)}amix=inputs={len(mixl)}:normalize=0:duration=first[amix]")
+    pre = wd / "mix.wav"
+    run(["ffmpeg", "-y", "-v", "error", *inputs, "-filter_complex", ";".join(aud), "-map", "[amix]", "-c:a", "pcm_s16le", str(pre)])
+    # master: static gain to -14, gentle 2:1 comp, trim, peak limiter (no loudnorm AGC pumping the music)
+    i1 = loudness(pre)[0]
+    chain = lambda trim: (f"volume={-14 - i1:.2f}dB,acompressor=threshold=-21dB:ratio=2:attack=10:release=150:knee=6,"
+                          f"volume={trim:.2f}dB,alimiter=limit=0.8:attack=3:release=60:level=disabled")
+    af = chain(-14 - loudness(pre, chain(0))[0])
+    run(["ffmpeg", "-y", "-v", "error", "-i", str(base), "-i", str(pre), "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+         "-af", af, "-ar", "48000", "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", cfg["out"]])
+    i, tp = loudness(cfg["out"])
+    print(f"done: {cfg['out']}  (pre-master {i1:.1f} LUFS -> master {i:.1f} LUFS, true peak {tp:.1f} dBTP)")
+
+
+def loudness(src, af=None):
+    """(integrated LUFS, true peak dBTP) of src's audio, optionally through a filter chain."""
+    r = run(["ffmpeg", "-nostats", "-v", "info", "-i", str(src), "-map", "0:a", "-af", (af + "," if af else "") + "ebur128=peak=true",
+             "-f", "null", "-"]).stderr
+    r = r[r.rfind("Summary:"):]
+    return float(re.search(r"I:\s+(-?[\d.]+) LUFS", r).group(1)), float(re.search(r"Peak:\s+(-?[\d.]+) dBFS", r).group(1))
+
+
+if __name__ == "__main__":
+    cfg_path = Path(sys.argv[1]).resolve()          # absolute: concat.txt entries resolve relative to its own folder
+    cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
+    wd = cfg_path.parent / Path(cfg["out"]).stem
+    wd.mkdir(exist_ok=True)
+    what = sys.argv[2] if len(sys.argv) > 2 else "all"
+    start = int(sys.argv[sys.argv.index("--from") + 1]) if "--from" in sys.argv else 0
+    if what in ("segments", "all"):
+        segments(cfg, wd, start)
+    if what in ("mix", "all"):
+        mix(cfg, wd)

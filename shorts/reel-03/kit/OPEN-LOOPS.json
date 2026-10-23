@@ -1,0 +1,29 @@
+[
+ {
+  "id": "main",
+  "question": "Which level am I on, and what does Level 4 look like?",
+  "object": "The 'YOU?' marker planted on step 1 of the staircase",
+  "setup": 5.16,
+  "updates": [
+   {
+    "time": 7.42,
+    "state": "YOU? drops onto step 1 among the crowd"
+   },
+   {
+    "time": 11.5,
+    "state": "Camera climbs to step 2"
+   },
+   {
+    "time": 21.06,
+    "state": "Step 3"
+   },
+   {
+    "time": 32.66,
+    "state": "Step 4 reached"
+   }
+  ],
+  "closure": 45.13,
+  "resolution": "YOU? climbs to step 4 and the frame lands on ASSISTANT",
+  "supportingSpeech": "Yahan Claude chatbot nahi, aapka assistant ban jaata hai"
+ }
+]

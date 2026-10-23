@@ -1,0 +1,102 @@
+[
+ {
+  "n": 1,
+  "start": 0.1,
+  "end": 4.681,
+  "text": "Claude ke 4 levels hain, aur zyada tar business owners Level 1 pe hi atke hain.",
+  "low": [
+   "hain,"
+  ]
+ },
+ {
+  "n": 2,
+  "start": 5.141,
+  "end": 7.021,
+  "text": "Aap kaunse level pe ho? Dekhte hain.",
+  "low": []
+ },
+ {
+  "n": 3,
+  "start": 7.521,
+  "end": 11.042,
+  "text": "Level 1: Chat. Sawaal poocha, jawab copy kiya. Bas.",
+  "low": []
+ },
+ {
+  "n": 4,
+  "start": 11.502,
+  "end": 17.603,
+  "text": "Level 2: Projects. Apni price list, FAQs aur brand ki tone ek baar Project mein daal do.",
+  "low": []
+ },
+ {
+  "n": 5,
+  "start": 18.003,
+  "end": 20.623,
+  "text": "Ab har jawab aapke business ki bhasha mein aata hai.",
+  "low": []
+ },
+ {
+  "n": 6,
+  "start": 21.063,
+  "end": 24.724,
+  "text": "Level 3: Connectors. Gmail, Calendar aur Drive jodo.",
+  "low": []
+ },
+ {
+  "n": 7,
+  "start": 25.024,
+  "end": 29.805,
+  "text": "Ab Claude khud emails padh ke reply draft karta hai, aur meeting calendar mein daal deta hai.",
+  "low": []
+ },
+ {
+  "n": 8,
+  "start": 30.245,
+  "end": 32.145,
+  "text": "Aur bhejne se pehle aapse poochta hai.",
+  "low": []
+ },
+ {
+  "n": 9,
+  "start": 32.665,
+  "end": 38.866,
+  "text": "Level 4: Scheduled tasks. Ek baar bolo: har subah 9 baje kal ki saari enquiries ki summary bhejo.",
+  "low": []
+ },
+ {
+  "n": 10,
+  "start": 39.386,
+  "end": 42.566,
+  "text": "Aur ye roz apne aap hota hai, laptop band ho tab bhi.",
+  "low": []
+ },
+ {
+  "n": 11,
+  "start": 43.147,
+  "end": 46.207,
+  "text": "Yahan Claude chatbot nahi, aapka assistant ban jaata hai.",
+  "low": []
+ },
+ {
+  "n": 12,
+  "start": 46.567,
+  "end": 50.248,
+  "text": "Har level ka setup aur ready prompts maine ek free guide mein daal diye hain.",
+  "low": []
+ },
+ {
+  "n": 13,
+  "start": 50.548,
+  "end": 54.668,
+  "text": "Chahiye to follow karo aur comment karo LEVEL. Guide seedha aapke DM mein.",
+  "low": []
+ },
+ {
+  "n": 14,
+  "start": 55.028,
+  "end": 59.009,
+  "text": "Toh channel ke description mein di gayi link se hamara WhatsApp channel join kar lo.",
+  "low": []
+ }
+]

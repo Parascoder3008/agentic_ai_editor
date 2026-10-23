@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      :root { --lime: #D2F620; --ink: #0B0B0B; }
+      .abs { position: absolute; }
+      .chip { position: absolute; padding: 8px 20px 10px; border-radius: 12px; font-weight: 900; font-size: 40px; letter-spacing: 0.04em; white-space: nowrap; }
+      .chip.lime { background: var(--lime); color: var(--ink); }
+      .chip.white { background: #FFFFFF; color: var(--ink); }
+      .claim { position: absolute; right: 26px; padding: 8px 18px 10px; border-radius: 14px; background: rgba(11,11,11,0.78);
+        border: 3px solid var(--lime); font-weight: 800; font-size: 34px; white-space: nowrap; }
+      .claim b { color: var(--lime); }
+      #title { position: absolute; left: 0; right: 0; top: 206px; text-align: center; font-weight: 900; font-size: 84px; letter-spacing: -0.01em; }
+      #title span { color: var(--lime); }
+      /* step stage */
+      #stage { position: absolute; left: 60px; top: 215px; width: 960px; height: 635px; border-radius: 28px; overflow: hidden;
+        background: linear-gradient(180deg, #161616, #0E0E0E); border: 2px solid rgba(210,246,32,0.35); }
+      .sc { position: absolute; left: 0; top: 0; width: 960px; height: 635px; }
+      .step { position: absolute; left: 40px; top: 36px; padding: 6px 18px 8px; border-radius: 999px; background: var(--lime); color: var(--ink);
+        font-weight: 900; font-size: 30px; letter-spacing: 0.08em; }
+      .head { position: absolute; left: 40px; right: 40px; top: 100px; font-weight: 900; font-size: 54px; line-height: 1.1; }
+      .node { position: absolute; padding: 18px 26px 20px; border-radius: 20px; background: #1E1E1E; border: 2px solid #3A3A3A;
+        font-weight: 800; font-size: 36px; white-space: nowrap; }
+      .node.on { border-color: var(--lime); box-shadow: 0 0 30px rgba(210,246,32,0.35); }
+      .arrow { position: absolute; font-weight: 900; font-size: 46px; color: var(--lime); }
+      .thumb { position: absolute; width: 400px; height: 225px; border-radius: 18px; overflow: hidden; border: 3px solid #3A3A3A; }
+      .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      .thumb .lab { position: absolute; left: 10px; top: 10px; padding: 3px 12px 5px; border-radius: 8px; font-weight: 900; font-size: 22px; }
+      .tag { position: absolute; padding: 8px 16px 10px; border-radius: 12px; border: 2px solid var(--lime); font-weight: 800; font-size: 28px; color: #FFFFFF; background: rgba(210,246,32,0.08); }
+      .row { position: absolute; left: 40px; right: 40px; height: 104px; border-radius: 20px; background: #1C1C1C; border: 2px solid #333;
+        font-weight: 800; font-size: 42px; padding: 26px 30px; }
+      .row i { position: absolute; right: 30px; top: 20px; font-style: normal; font-size: 50px; }
+      .mono { font-family: "JetBrains Mono", monospace; }
+      /* full-frame overlays */
+      .ff { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+      .pill { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; padding: 10px 46px 16px; border-radius: 36px;
+        background: var(--lime); color: var(--ink); font-weight: 900; text-align: center; }
+      .note { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; padding: 10px 26px 12px; border-radius: 16px;
+        background: rgba(11,11,11,0.82); border: 2px solid rgba(255,255,255,0.25); font-weight: 800; font-size: 40px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0.0" data-duration="63.12" data-width="1080" data-height="1920">
+
+      <!-- ===== SPLIT (0 - 15.36) ===== -->
+      <div id="split" class="clip" data-start="0.0" data-duration="15.36" data-track-index="0" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+        <div id="title">ChatGPT x <span>GENJUTSU</span></div>
+        <div id="fake" class="chip white" style="left:26px;top:350px">FAKE ✗</div>
+        <div id="real" class="chip lime" style="left:138px;top:1056px">REAL ✓</div>
+        <div id="cl1" class="claim" style="top:356px">Rolls Royce <b>✓</b></div>
+        <div id="cl2" class="claim" style="top:428px">₹1 Cr ki ghadi <b>✓</b></div>
+        <div id="cl3" class="claim" style="top:500px">Mansion <b>✓</b></div>
+      </div>
+
+      <!-- ===== HOW-TO STAGE (15.36 - end; hidden on full-frame beats) ===== -->
+      <div id="stage" class="clip" data-start="15.36" data-duration="47.76" data-track-index="1">
+        <div id="sc0" class="sc">
+          <div class="head" style="top:70px;font-size:76px;text-align:center;left:0;right:0">Kaise banaye? 👇</div>
+          <div id="i1" class="node on" style="left:120px;top:250px">ChatGPT</div>
+          <div class="arrow" id="ix" style="left:430px;top:262px">✕</div>
+          <div id="i2" class="node on" style="left:520px;top:250px">Higgsfield</div>
+          <div id="i3" class="tag" style="left:0;right:0;margin:0 auto;width:max-content;top:420px;font-size:34px">📘 Poori guide ready</div>
+        </div>
+        <div id="sc1" class="sc">
+          <div class="step">STEP 1</div>
+          <div class="head">ChatGPT mein Higgsfield connect karo</div>
+          <div id="n1" class="node" style="left:40px;top:330px">ChatGPT</div>
+          <div id="a1" class="arrow" style="left:262px;top:342px">→</div>
+          <div id="n2" class="node" style="left:320px;top:330px">Plugins</div>
+          <div id="a2" class="arrow" style="left:512px;top:342px">→</div>
+          <div id="n3" class="node" style="left:570px;top:330px">Higgsfield</div>
+          <div id="ok1" class="tag" style="left:570px;top:470px;font-size:32px">✓ Connected</div>
+        </div>
+        <div id="sc2" class="sc">
+          <div class="step">STEP 2</div>
+          <div class="head">Raw video upload karo</div>
+          <div id="t1" class="thumb" style="left:40px;top:290px"><img src="assets/raw_6.jpg" alt="" /><div class="lab" style="background:#fff;color:#0B0B0B">ORIGINAL</div></div>
+          <div id="a3" class="arrow" style="left:452px;top:372px">→</div>
+          <div id="t2" class="thumb" style="left:520px;top:290px;border-color:var(--lime)"><img src="assets/ai_6.jpg" alt="" /><div class="lab" style="background:var(--lime);color:#0B0B0B">AI VIDEO</div></div>
+          <div id="g1" class="tag" style="left:520px;top:540px">Car</div>
+          <div id="g2" class="tag" style="left:620px;top:540px">Outfit</div>
+          <div id="g3" class="tag" style="left:752px;top:540px">Location</div>
+        </div>
+        <div id="sc3" class="sc">
+          <div class="step">STEP 3</div>
+          <div class="head">Guide wala prompt daalo</div>
+          <div id="pbox" class="abs" style="left:40px;top:250px;width:880px;height:170px;border-radius:20px;background:#1C1C1C;border:2px solid #3A3A3A;padding:26px 28px">
+            <div id="ptxt" class="mono" style="font-size:30px;line-height:1.45;color:#EDEDED"></div>
+          </div>
+          <div id="bar" class="abs" style="left:40px;top:460px;width:880px;height:26px;border-radius:13px;background:#262626;overflow:hidden">
+            <div id="fill" style="width:0;height:100%;background:var(--lime)"></div>
+          </div>
+          <div id="done" class="tag" style="left:40px;top:520px;font-size:34px">✓ ChatGPT ne khud bana diya</div>
+        </div>
+        <div id="sc4" class="sc">
+          <div class="step" style="background:#FFB020">⚠ JO KOI NAHI BATATA</div>
+          <div class="head">Har video pe credits lagte hain</div>
+          <div class="abs" style="left:40px;top:300px;font-weight:800;font-size:30px;color:#BDBDBD">CREDITS</div>
+          <div id="cbar" class="abs" style="left:40px;top:350px;width:880px;height:60px;border-radius:16px;background:#262626;overflow:hidden">
+            <div id="cfill" style="width:100%;height:100%;background:linear-gradient(90deg,#FFB020,var(--lime))"></div>
+          </div>
+          <div id="rs" class="tag" style="left:40px;top:470px;font-size:38px;border-color:#FFB020;background:rgba(255,176,32,0.1)">₹ Kharcha aata hai</div>
+        </div>
+        <div id="sc5" class="sc">
+          <div class="head" style="top:44px">Sabse sasta flex kaunsa?</div>
+          <div id="r1" class="row" style="top:160px">Rolls Royce <i>❌</i></div>
+          <div id="r2" class="row" style="top:290px">Mansion <i>❌</i></div>
+          <div id="r3" class="row" style="top:420px;border-color:var(--lime);background:rgba(210,246,32,0.12)">AI video <i>✅</i></div>
+        </div>
+        <div id="sc6" class="sc">
+          <div class="head" style="top:120px;font-size:80px;text-align:center;left:0;right:0">📘 FREE GUIDE</div>
+          <div class="tag" style="left:0;right:0;margin:0 auto;width:max-content;top:300px;font-size:38px">Har step + prompt</div>
+        </div>
+        <div id="sc8" class="sc">
+          <div class="head" style="top:70px;text-align:center;left:0;right:0;font-size:64px">📲 WhatsApp channel</div>
+          <div id="w1" class="node on" style="left:0;right:0;margin:0 auto;width:max-content;top:230px">YouTube → About section ↓</div>
+          <div id="w2" class="tag" style="left:0;right:0;margin:0 auto;width:max-content;top:420px;font-size:38px">Poori guide wahan milegi</div>
+        </div>
+      </div>
+
+      <!-- ===== FULL-FRAME OVERLAYS ===== -->
+      <div id="ff1" class="ff clip" data-start="33.24" data-duration="3.04" data-track-index="2">
+        <div id="kn" class="note" style="top:250px;font-size:46px;border-color:#FFB020">⚠ Jo koi nahi batata 👀</div>
+      </div>
+      <div id="ff2" class="ff clip" data-start="47.68" data-duration="4.56" data-track-index="2">
+        <div id="cm" class="note" style="top:212px;font-size:34px;padding:6px 20px 8px">COMMENT KARO 👇</div>
+        <div id="kw" class="pill" style="top:278px;font-size:118px;line-height:136px;padding:6px 44px 10px">FLEX</div>
+        <div id="dm" class="note" style="top:440px;font-size:34px;padding:6px 20px 8px">📩 Guide seedha DM mein</div>
+        <div id="fo" class="note" style="top:1250px;border-color:var(--lime)">+ Follow kar lena</div>
+      </div>
+      <div id="ff3" class="ff clip" data-start="60.92" data-duration="2.20" data-track-index="2">
+        <div id="sb" class="pill" style="top:300px;font-size:96px;line-height:120px;background:#FF2D2D;color:#fff">SUBSCRIBE 🔔</div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const $ = (s) => document.querySelector(s);
+      const pop = (sel, t, d = 0.26) => tl.fromTo(sel, { opacity: 0, scale: 0.85, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2)", immediateRender: false }, t);
+      const show = (sel, t) => tl.set(sel, { opacity: 1 }, t);
+      const hide = (sel, t) => tl.set(sel, { opacity: 0 }, t);
+      const type = (sel, text, t0, t1) => {
+        const el = $(sel), p = { n: 0 };
+        tl.fromTo(p, { n: 0 }, { n: text.length, duration: t1 - t0, ease: "none", immediateRender: false,
+          onUpdate: () => { el.textContent = text.slice(0, Math.round(p.n)); } }, t0);
+      };
+      gsap.set(["#real", "#fake", "#cl1", "#cl2", "#cl3", "#title",
+                ".sc", "#i1", "#ix", "#i2", "#i3", "#n1", "#a1", "#n2", "#a2", "#n3", "#ok1", "#t1", "#a3", "#t2", "#g1", "#g2", "#g3",
+                "#pbox", "#bar", "#done", "#rs", "#r1", "#r2", "#r3", "#w1", "#w2", "#kn", "#cm", "#kw", "#dm", "#fo", "#sb"], { opacity: 0 });
+
+      // ---- split: title + REAL/FAKE on frame 1 (hook text within 1 s)
+      pop("#title", 0.0, 0.3); pop("#fake", 0.10); pop("#real", 0.18);
+      tl.to("#fake", { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1 }, 0.9);
+      pop("#cl1", 5.11); pop("#cl2", 8.76); pop("#cl3", 12.91);
+      // reveal: the tags glitch-flip as he finishes "badhiya toh dikh raha hai na"
+      const flip = (sel, t) => tl.fromTo(sel, { x: 0 }, { x: 7, duration: 0.04, yoyo: true, repeat: 5, immediateRender: false }, t)
+                                 .fromTo(sel, { opacity: 1 }, { opacity: 0.25, duration: 0.03, yoyo: true, repeat: 3, immediateRender: false }, t);
+      flip("#fake", 14.86); flip("#real", 14.94);                                    // label text swaps mid-glitch (onUpdate below)
+      // seek-safe text: set the right label for any frame (renderer seeks out of order)
+      tl.eventCallback("onUpdate", () => {
+        const t = tl.time();
+        $("#fake").textContent = t >= 14.98 ? "AI VIDEO ✨" : "FAKE ✗";        // AI video (top)
+        $("#real").textContent = t >= 15.06 ? "ORIGINAL" : "REAL ✓";         // original footage (inset)
+      });
+
+      // ---- stage scenes
+      const scene = (id, t0, t1) => { show(id, t0); hide(id, t1); };
+      tl.fromTo("#stage", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, 15.36);
+      scene("#sc0", 15.36, 19.92); pop("#i1", 15.70); pop("#ix", 15.85); pop("#i2", 16.00); pop("#i3", 18.54);
+      scene("#sc1", 19.92, 24.16); pop("#n1", 20.39); pop("#a1", 20.80); pop("#n2", 21.00); pop("#a2", 21.71); pop("#n3", 22.03);
+      tl.to("#n3", { borderColor: "#D2F620", boxShadow: "0 0 30px rgba(210,246,32,0.45)", duration: 0.2 }, 23.61); pop("#ok1", 23.61);
+      scene("#sc2", 24.16, 29.36); pop("#t1", 24.58, 0.3); pop("#a3", 26.60); pop("#t2", 26.98, 0.32);
+      pop("#g1", 27.33); pop("#g2", 27.59); pop("#g3", 27.85);
+      tl.to("#t2", { boxShadow: "0 0 50px rgba(210,246,32,0.7)", duration: 0.25, yoyo: true, repeat: 1 }, 28.37);
+      scene("#sc3", 29.36, 33.24); pop("#pbox", 29.40);
+      type("#ptxt", "Car → Rolls Royce, outfit → blazer, background → mansion. Dialogue aur actions same rakho.", 29.54, 31.05);
+      pop("#bar", 31.10); tl.to("#fill", { width: "100%", duration: 1.55, ease: "power1.inOut" }, 31.15); pop("#done", 32.42);
+      hide("#stage", 33.24); show("#stage", 36.28);                                   // full-frame beat 1
+      scene("#sc4", 36.28, 41.28);
+      tl.to("#cfill", { width: "22%", duration: 0.9, ease: "power2.inOut" }, 38.29); pop("#rs", 40.30);
+      scene("#sc5", 41.28, 45.44); pop("#r1", 43.22); pop("#r2", 44.10); pop("#r3", 44.87, 0.32);
+      tl.to("#r3", { scale: 1.04, duration: 0.18, yoyo: true, repeat: 1 }, 45.10);
+      // IG tail
+      scene("#sc6", 45.44, 47.68);
+      hide("#stage", 47.68); show("#stage", 52.24);                                   // full-frame CTA (IG)
+      // YT tail: the comparison holds through "agar flex karna ho to", then WhatsApp
+      tl.set(["#r1", "#r2", "#r3"], { opacity: 1, scale: 1, y: 0 }, 52.24); scene("#sc5", 52.24, 53.48);
+      scene("#sc8", 53.48, 60.92); pop("#w1", 56.63); pop("#w2", 59.68);
+      hide("#stage", 60.92);
+
+      // ---- full-frame overlays
+      pop("#kn", 33.32);
+      pop("#cm", 47.70); tl.fromTo("#kw", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.5)", immediateRender: false }, 48.30)
+        .to("#kw", { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1 }, 48.65);
+      pop("#dm", 48.73); pop("#fo", 50.44);
+      pop("#sb", 62.26, 0.3);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

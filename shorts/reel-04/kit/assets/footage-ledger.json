@@ -1,0 +1,24 @@
+[
+ {
+  "scene": "s02",
+  "sourceSceneId": "venomstech-rtx5090-reel",
+  "asset": "assets/rtx5090_pc.mp4",
+  "sha256": "cdbfe03a9b9223c5582b3c095a41251a5324315fc1566ac5fe01ef58a7438b67",
+  "sourceStart": 34.5,
+  "sourceEnd": 37.92,
+  "framing": {
+   "9x16": "420x747 film-strip card bottom-right; his 12-lakh product cards land on 'graphics'"
+  }
+ },
+ {
+  "scene": "s10",
+  "sourceSceneId": "venomstech-ddr5-and-cooler-renders",
+  "asset": "assets/product-broll.mp4",
+  "sha256": "6499dce6ac0a2e54b390116820201e5618fe743a1aed24bff1b72a45a530599d",
+  "sourceStart": 0.0,
+  "sourceEnd": 3.73,
+  "framing": {
+   "9x16": "Two rounded panels on cream: DDR5 render (ddr5_ram reel 32.3 s) over the cooler-mount render (laptop_vs_pc reel 32.05 s, 0.75x)"
+  }
+ }
+]

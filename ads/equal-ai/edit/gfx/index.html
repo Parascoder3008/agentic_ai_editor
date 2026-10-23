@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=block" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+#root { position: relative; width: 1080px; height: 1920px; font-family: Poppins, sans-serif; color: #fff; }
+.abs { position: absolute; }
+/* incoming-call banner (top of screen, like a real notification) */
+.ban { left: 50px; width: 980px; top: 235px; height: 190px; border-radius: 40px; overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+.ban .st { position: absolute; inset: 0; padding: 34px 38px; display: flex; align-items: center; gap: 28px; }
+.ban .call { background: rgba(22,24,27,.94); }
+.ban .eq { background: linear-gradient(135deg, #12B347 0%, #3B9802 100%); opacity: 0; }
+.av { width: 112px; height: 112px; border-radius: 50%; flex: none; display: flex; align-items: center; justify-content: center; }
+.call .av { background: #3A3F45; font-size: 58px; font-weight: 700; color: #C9CED4; }
+.eq .av { background: #fff; }
+.eq .av img { width: 112px; height: 112px; border-radius: 50%; }
+.tx { flex: 1; min-width: 0; }
+.k { font-size: 27px; font-weight: 600; opacity: .8; letter-spacing: .02em; }
+.n { font-size: 44px; font-weight: 800; line-height: 1.15; white-space: nowrap; }
+.btns { display: flex; gap: 22px; }
+.btn { width: 84px; height: 84px; border-radius: 50%; }
+.btn.r { background: #FF3B30; } .btn.g { background: #34C759; }
+.dots span { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: #fff; margin-left: 8px; }
+.msg { position: absolute; left: 50px; width: 980px; top: 445px; padding: 30px 40px 34px; border-radius: 34px;
+  background: #fff; color: #0E2A12; box-shadow: 0 18px 50px rgba(0,0,0,.35); }
+.msg .k { color: #12B347; opacity: 1; font-weight: 700; }
+.msg .m { font-size: 42px; font-weight: 700; line-height: 1.25; margin-top: 6px; }
+/* stickers / pills */
+.pill { display: inline-flex; align-items: center; gap: 18px; padding: 18px 34px 20px; border-radius: 999px;
+  background: #12B347; font-weight: 800; font-size: 44px; box-shadow: 0 14px 40px rgba(0,0,0,.35); white-space: nowrap; }
+#logo { left: 425px; top: 1000px; width: 230px; height: 230px; border-radius: 56px; overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+#logo img { width: 230px; height: 230px; }
+#salary { left: 0; right: 0; top: 1010px; text-align: center; }
+#salary .s { position: relative; display: inline-block; font-size: 120px; font-weight: 900; letter-spacing: -.02em;
+  padding: 0 34px; background: rgba(14,16,18,.82); border-radius: 30px; }
+#salary .x { position: absolute; left: 20px; top: 50%; height: 16px; width: 0; border-radius: 8px; background: #FF3B30; }
+/* AI voice card */
+#ai { left: 100px; width: 830px; top: 1060px; padding: 34px 40px 40px; border-radius: 40px;
+  background: linear-gradient(135deg, #12B347 0%, #3B9802 100%); box-shadow: 0 20px 60px rgba(0,0,0,.45); }
+#ai .hd { display: flex; align-items: center; gap: 18px; font-size: 32px; font-weight: 700; }
+#ai .hd img { width: 64px; height: 64px; border-radius: 16px; }
+#ai .wave { display: flex; gap: 8px; align-items: center; height: 60px; margin-left: auto; }
+#ai .wave i { display: block; width: 10px; height: 20px; border-radius: 5px; background: #fff; }
+#ai .q { font-size: 52px; font-weight: 800; line-height: 1.2; margin-top: 22px; }
+#ai .q span { opacity: .25; }
+/* instruction card */
+#ins { left: 100px; width: 830px; top: 960px; padding: 30px 38px 36px; border-radius: 36px; background: #fff; color: #10251A;
+  box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+#ins .k { color: #12B347; opacity: 1; font-weight: 800; font-size: 30px; }
+#ins .t { font-size: 44px; font-weight: 700; line-height: 1.25; margin-top: 10px; min-height: 110px; }
+#ins .cur { display: inline-block; width: 4px; height: 46px; background: #12B347; vertical-align: -8px; margin-left: 4px; }
+/* counter */
+#cnt { left: 0; right: 0; top: 960px; text-align: center; }
+#cnt .num { display: inline-block; font-size: 150px; font-weight: 900; letter-spacing: -.03em; padding: 0 40px;
+  background: #12B347; border-radius: 36px; line-height: 1.15; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+#cnt .sub { margin-top: 22px; font-size: 46px; font-weight: 800; display: inline-block; padding: 10px 30px;
+  background: rgba(14,16,18,.82); border-radius: 22px; }
+/* store badges */
+.badge { top: 1060px; height: 130px; padding: 0 42px; border-radius: 30px; background: #000; display: flex; align-items: center; gap: 22px;
+  border: 3px solid rgba(255,255,255,.85); box-shadow: 0 16px 44px rgba(0,0,0,.45); }
+.badge .sm { font-size: 24px; font-weight: 600; opacity: .85; line-height: 1; }
+.badge .lg { font-size: 46px; font-weight: 800; line-height: 1.1; }
+#bp { left: 70px; } #ba { left: 520px; }
+/* personal-assistant lower third */
+#pa { left: 0; right: 0; top: 1080px; text-align: center; }
+/* end card */
+#endc { left: 0; top: 0; width: 1080px; height: 1920px; background: radial-gradient(ellipse at 50% 30%, #A6E22A 0%, #12B347 45%, #0B6E2C 100%);
+  text-align: center; }
+#endc .ic { position: absolute; left: 340px; top: 430px; width: 400px; height: 400px; border-radius: 90px; overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0,40,10,.45); }
+#endc .ic img { width: 400px; height: 400px; }
+#endc .h { position: absolute; left: 0; right: 0; top: 930px; font-size: 92px; font-weight: 900; line-height: 1.05; letter-spacing: -.02em; }
+#endc .sub { position: absolute; left: 0; right: 0; top: 1150px; font-size: 46px; font-weight: 600; opacity: .95; }
+#endc .cta { position: absolute; left: 190px; width: 700px; top: 1290px; height: 130px; border-radius: 999px; background: #fff;
+  color: #0B6E2C; font-size: 54px; font-weight: 900; line-height: 130px; box-shadow: 0 20px 50px rgba(0,40,10,.35); }
+#endc .st { position: absolute; left: 0; right: 0; top: 1470px; font-size: 38px; font-weight: 700; opacity: .95; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="70.190" data-width="1080" data-height="1920">
+<div id="b1" class="abs ban clip" data-start="0.960" data-duration="1.490" data-track-index="1"><div class="st call"><div class="av">?</div><div class="tx"><div class="k">Incoming call</div><div class="n">Unknown number</div></div><div class="btns"><div class="btn r"></div><div class="btn g"></div></div></div><div class="st eq"><div class="av"><img src="assets/icon.png"></div><div class="tx"><div class="k">Equal AI · on it</div><div class="n">Equal AI is answering<span class="dots"><span></span><span></span><span></span></span></div></div></div></div>
+<div id="b2" class="abs ban clip" data-start="3.200" data-duration="1.800" data-track-index="2"><div class="st call"><div class="av">?</div><div class="tx"><div class="k">Incoming call</div><div class="n">Unknown number</div></div><div class="btns"><div class="btn r"></div><div class="btn g"></div></div></div><div class="st eq"><div class="av"><img src="assets/icon.png"></div><div class="tx"><div class="k">Equal AI · on it</div><div class="n">Equal AI is answering<span class="dots"><span></span><span></span><span></span></span></div></div></div></div>
+<div id="b3" class="abs ban clip" data-start="5.880" data-duration="3.850" data-track-index="3"><div class="st call"><div class="av">?</div><div class="tx"><div class="k">Incoming call</div><div class="n">Unknown number</div></div><div class="btns"><div class="btn r"></div><div class="btn g"></div></div></div><div class="st eq"><div class="av"><img src="assets/icon.png"></div><div class="tx"><div class="k">Equal AI · on it</div><div class="n">Equal AI is answering<span class="dots"><span></span><span></span><span></span></span></div></div></div></div>
+<div id="m3" class="abs msg clip" data-start="7.550" data-duration="2.180" data-track-index="4"><div class="k">Caller intent</div><div class="m">Delivery agent is at the gate with your parcel.</div></div>
+<div id="salary" class="abs clip" data-start="10.273" data-duration="1.207" data-track-index="5"><span class="s">Salary<span class="x"></span></span></div>
+<div id="logo" class="abs clip" data-start="14.884" data-duration="0.691" data-track-index="6"><img src="assets/icon.png"></div>
+<div id="ai" class="abs clip" data-start="35.420" data-duration="2.335" data-track-index="7"><div class="hd"><img src="assets/icon.png">Equal AI is speaking<div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="q"><span id="aw0">I </span><span id="aw1">am </span><span id="aw2">Equal, </span><span id="aw3">your </span><span id="aw4">personal </span><span id="aw5">call </span><span id="aw6">assistant. </span></div></div>
+<div id="ins" class="abs clip" data-start="38.176" data-duration="4.224" data-track-index="8"><div class="k">TELL EQUAL</div><div class="t"><span id="inst"></span><span class="cur"></span></div></div>
+<div id="cnt" class="abs clip" data-start="50.652" data-duration="3.308" data-track-index="9"><div class="num"><span id="cn">0</span> Lakh+</div><br><div class="sub">log roz use karte hain</div></div>
+<div id="pa" class="abs clip" data-start="59.834" data-duration="0.911" data-track-index="10"><span class="pill"><img src="assets/icon.png" style="width:70px;height:70px;border-radius:18px">Your Personal AI Assistant</span></div>
+<div id="bp" class="abs badge clip" data-start="62.278" data-duration="1.362" data-track-index="11"><svg width="64" height="70" viewBox="0 0 32 35"><path d="M2 2 L30 17.5 L2 33 Z" fill="#34C759"/></svg><div><div class="sm">GET IT ON</div><div class="lg">Play Store</div></div></div>
+<div id="ba" class="abs badge clip" data-start="62.920" data-duration="0.720" data-track-index="11"><svg width="60" height="70" viewBox="0 0 30 35"><circle cx="15" cy="20" r="13" fill="#fff"/><circle cx="20" cy="5" r="4" fill="#fff"/></svg><div><div class="sm">DOWNLOAD ON THE</div><div class="lg">App Store</div></div></div>
+<div id="b12" class="abs ban clip" data-start="64.332" data-duration="3.258" data-track-index="12"><div class="st call"><div class="av">?</div><div class="tx"><div class="k">Incoming call</div><div class="n">Unknown number</div></div><div class="btns"><div class="btn r"></div><div class="btn g"></div></div></div><div class="st eq"><div class="av"><img src="assets/icon.png"></div><div class="tx"><div class="k">Equal AI · on it</div><div class="n">Equal AI is answering<span class="dots"><span></span><span></span><span></span></span></div></div></div></div>
+<div id="endc" class="abs clip" data-start="67.590" data-duration="2.600" data-track-index="13"><div class="ic"><img src="assets/icon.png"></div><div class="h">Your Personal<br>AI Assistant</div><div class="sub">for your calls and more</div><div class="cta">Download Equal AI</div><div class="st">Search &ldquo;Equal AI&rdquo; on Play Store &amp; App Store</div></div>
+</div>
+<script>
+const tl = gsap.timeline({ paused: true });
+const pop = (s, t, d = 0.3) => tl.fromTo(s, { opacity: 0, scale: 0.8, y: 30 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2)" }, t);
+const out = (s, t) => tl.to(s, { opacity: 0, y: -24, duration: 0.18, ease: "power2.in" }, t);
+const drop = (s, t) => tl.fromTo(s, { opacity: 0, y: -160 }, { opacity: 1, y: 0, duration: 0.34, ease: "back.out(1.6)" }, t);
+const swap = (b, t) => { tl.to(b + " .call", { opacity: 0, duration: 0.18 }, t).to(b + " .eq", { opacity: 1, duration: 0.18 }, t); };
+const dots = (b, t0, t1) => tl.fromTo(b + " .dots span", { opacity: 0.3 }, { opacity: 1, duration: 0.25, stagger: 0.12, repeat: Math.max(1, Math.floor((t1 - t0) / 0.6)), yoyo: true }, t0);
+drop("#b1", 0.960); swap("#b1", 1.660); dots("#b1", 1.660, 2.450); out("#b1", 2.250);
+drop("#b2", 3.200); swap("#b2", 3.950); dots("#b2", 3.950, 5.000); out("#b2", 4.800);
+drop("#b3", 5.880); swap("#b3", 6.550); dots("#b3", 6.550, 9.730); out("#b3", 9.530);
+pop("#m3", 7.550); out("#m3", 9.530);
+pop("#salary", 10.273); tl.to("#salary .x", { width: 360, duration: 0.22, ease: "power2.out" }, 10.816); out("#salary", 11.280);
+tl.fromTo("#logo", { opacity: 0, scale: 0.3, rotation: -14 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.4)" }, 14.884); out("#logo", 15.395);
+pop("#ai", 35.420);
+tl.to("#aw0", { opacity: 1, duration: 0.08 }, 35.561);
+tl.to("#aw1", { opacity: 1, duration: 0.08 }, 35.601);
+tl.to("#aw2", { opacity: 1, duration: 0.08 }, 35.823);
+tl.to("#aw3", { opacity: 1, duration: 0.08 }, 36.386);
+tl.to("#aw4", { opacity: 1, duration: 0.08 }, 36.587);
+tl.to("#aw5", { opacity: 1, duration: 0.08 }, 37.050);
+tl.to("#aw6", { opacity: 1, duration: 0.08 }, 37.272);
+tl.fromTo("#ai .wave i", { scaleY: 0.4 }, { scaleY: 2.2, duration: 0.16, stagger: { each: 0.05, repeat: -1, yoyo: true }, ease: "sine.inOut" }, 35.420); out("#ai", 37.555);
+pop("#ins", 38.176); (() => { const full = "Delivery wala call kare → bolo parcel reception pe chhod do"; const o = { n: 0 }; tl.to(o, { n: full.length, duration: 1.9, ease: "none", onUpdate: () => { document.getElementById("inst").textContent = full.slice(0, Math.round(o.n)); } }, 39.357); })(); out("#ins", 42.200);
+pop("#cnt", 50.652); (() => { const o = { n: 0 }; tl.to(o, { n: 10, duration: 0.9, ease: "power2.out", onUpdate: () => { document.getElementById("cn").textContent = Math.round(o.n); } }, 50.802); })(); out("#cnt", 53.760);
+pop("#pa", 59.834); out("#pa", 60.545);
+pop("#bp", 62.278); out("#bp", 63.440);
+pop("#ba", 62.920); out("#ba", 63.440);
+drop("#b12", 64.332); swap("#b12", 65.505); dots("#b12", 65.505, 67.590); out("#b12", 67.390);
+tl.fromTo("#endc", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 67.590); tl.fromTo("#endc .ic", { scale: 0.4, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)" }, 67.670); tl.fromTo(["#endc .h", "#endc .sub"], { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, stagger: 0.1, ease: "power3.out" }, 67.890); tl.fromTo("#endc .cta", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 68.190); tl.to("#endc .cta", { scale: 1.05, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 68.590); tl.fromTo("#endc .st", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 68.390);
+window.__timelines = window.__timelines || {};
+window.__timelines["main"] = tl;
+</script>
+</body>
+</html>

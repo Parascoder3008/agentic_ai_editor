@@ -1,0 +1,17 @@
+{
+ "out": "reel.mp4",
+ "music": {
+  "file": "music_score.wav",
+  "score": {
+   "length": 59.6,
+   "blocks": [
+    {"t0": 0.0, "t1": 5.0, "cue": "hook", "level": 3, "start": "hit", "end": "riser", "riser": 1},
+    {"t0": 5.0, "t1": 43.05, "cue": "build", "level": 2, "start": "hit", "end": "riser", "build": "roll", "riser": 2},
+    {"t0": 43.05, "t1": 46.48, "cue": "hook", "level": 4, "start": "hit", "end": "cut"},
+    {"t0": 46.48, "t1": 59.6, "cue": "outro", "level": 2, "start": "hit", "end": "ring", "ring": 0.7}
+   ],
+   "events": [],
+   "duck": [{"t0": 0.0, "t1": 60.6, "speech": -16, "gap": -8}]
+  }
+ }
+}

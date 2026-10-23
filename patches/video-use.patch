@@ -1,0 +1,39 @@
+diff --git a/helpers/render.py b/helpers/render.py
+index b1efdcc..0551cc9 100644
+--- a/helpers/render.py
++++ b/helpers/render.py
+@@ -23,6 +23,7 @@ from __future__ import annotations
+ 
+ import argparse
+ import json
++import os
+ import re
+ import subprocess
+ import sys
+@@ -652,7 +653,9 @@ def build_final_composite(
+     inputs: list[str] = ["-i", str(base_path)]
+     for ov in overlays:
+         ov_path = resolve_path(ov["file"], edit_dir)
+-        inputs += ["-i", str(ov_path)]
++        # native vp9 decoder drops alpha; libvpx keeps transparent HyperFrames overlays
++        decoder = ["-c:v", "libvpx-vp9"] if ov_path.suffix.lower() == ".webm" else []
++        inputs += [*decoder, "-i", str(ov_path)]
+ 
+     filter_parts: list[str] = []
+     # PTS-shift every overlay so its frame 0 lands at start_in_output
+@@ -674,9 +677,13 @@ def build_final_composite(
+ 
+     # Subtitles LAST — Rule 1
+     if has_subs:
+-        subs_abs = str(subtitles_path.resolve()).replace(":", r"\:").replace("'", r"\'")
++        def esc(p):  # ffmpeg filter args: forward slashes, escaped colon/quote (Windows-safe)
++            return Path(p).resolve().as_posix().replace(":", r"\:").replace("'", r"\'")
++        style = os.environ.get("VIDEO_USE_SUB_STYLE", SUB_FORCE_STYLE)
++        fonts = os.environ.get("VIDEO_USE_FONTS_DIR")
++        fonts_arg = f":fontsdir='{esc(fonts)}'" if fonts else ""
+         filter_parts.append(
+-            f"{current}subtitles='{subs_abs}':force_style='{SUB_FORCE_STYLE}'[outv]"
++            f"{current}subtitles='{esc(subtitles_path)}'{fonts_arg}:force_style='{style}'[outv]"
+         )
+         out_label = "[outv]"
+     else:

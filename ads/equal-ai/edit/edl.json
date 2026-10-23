@@ -1,0 +1,304 @@
+{
+ "offset": 21.22,
+ "intro_end": 9.85,
+ "intro": [
+  {
+   "id": "v1",
+   "lav": [
+    32.915,
+    34.035
+   ],
+   "at": 0.3,
+   "text": "Meeting mein ho,"
+  },
+  {
+   "id": "v2",
+   "lav": [
+    34.52,
+    35.545
+   ],
+   "at": 2.85,
+   "text": "gym mein ho,"
+  },
+  {
+   "id": "v3",
+   "lav": [
+    42.565,
+    44.15
+   ],
+   "at": 5.05,
+   "text": "ya raat ko kaam kar rahe ho."
+  },
+  {
+   "id": "v4",
+   "lav": [
+    44.79,
+    47.95
+   ],
+   "at": 6.68,
+   "text": "Koi hai jo aapki saari call sambhal leta hai."
+  }
+ ],
+ "body": [
+  {
+   "id": "s1",
+   "lav": [
+    58.04,
+    59.67
+   ],
+   "cam": [
+    79.26,
+    80.89
+   ],
+   "out": [
+    9.85,
+    11.48
+   ],
+   "text": "aur salary bhi nahi maangta,",
+   "kind": "cam"
+  },
+  {
+   "id": "s2",
+   "lav": [
+    65.275,
+    69.42
+   ],
+   "cam": [
+    86.495,
+    90.64
+   ],
+   "out": [
+    11.48,
+    15.625
+   ],
+   "text": "kyunki ye assistant jo hai, wo mere phone mein hai, jiska naam hai bhai, Equal AI.",
+   "kind": "cam"
+  },
+  {
+   "id": "s3",
+   "lav": [
+    269.02,
+    273.385
+   ],
+   "cam": [
+    290.24,
+    294.605
+   ],
+   "out": [
+    15.625,
+    19.99
+   ],
+   "text": "Number saved ho ya phir unknown number ho, Equal AI call uthata hai,",
+   "kind": "cam"
+  },
+  {
+   "id": "s4",
+   "lav": [
+    275.265,
+    277.225
+   ],
+   "cam": [
+    296.485,
+    298.445
+   ],
+   "out": [
+    19.99,
+    21.95
+   ],
+   "text": "aur bhai meri jagah pe baat karta hai.",
+   "kind": "cam"
+  },
+  {
+   "id": "s5",
+   "lav": [
+    290.3,
+    296.585
+   ],
+   "cam": [
+    311.52,
+    317.805
+   ],
+   "out": [
+    21.95,
+    28.235
+   ],
+   "text": "Aur call ke baad mujhe actually batata bhi hai ki kisne call kiya, kyun kiya, aur uski poori ki poori summary aur transcription de deta hai.",
+   "kind": "cam"
+  },
+  {
+   "id": "s6",
+   "lav": [
+    307.855,
+    312.1
+   ],
+   "cam": [
+    329.075,
+    333.32
+   ],
+   "out": [
+    28.235,
+    32.48
+   ],
+   "text": "Kisi ko call back chahiye? Ek tap. WhatsApp pe reply chahiye? Ek tap.",
+   "kind": "cam"
+  },
+  {
+   "id": "s7",
+   "lav": [
+    734.58,
+    737.52
+   ],
+   "cam": [
+    755.8,
+    758.74
+   ],
+   "out": [
+    32.48,
+    35.42
+   ],
+   "text": "Aur dekho bhai, ye mere paas call aa raha hai isi assistant se.",
+   "kind": "cam"
+  },
+  {
+   "id": "s8",
+   "lav": [
+    741.72,
+    744.055
+   ],
+   "cam": [
+    762.94,
+    765.275
+   ],
+   "out": [
+    35.42,
+    37.755
+   ],
+   "text": "I am Equal, your personal call assistant.",
+   "kind": "ai_voice"
+  },
+  {
+   "id": "s9",
+   "lav": [
+    321.96,
+    325.745
+   ],
+   "cam": [
+    343.18,
+    346.965
+   ],
+   "out": [
+    37.755,
+    41.54
+   ],
+   "text": "Main isko instruction de sakta hoon ki kaun se calls ko kaise handle karna hai,",
+   "kind": "cam"
+  },
+  {
+   "id": "s10",
+   "lav": [
+    333.37,
+    337.4
+   ],
+   "cam": [
+    354.59,
+    358.62
+   ],
+   "out": [
+    41.54,
+    45.57
+   ],
+   "text": "jaise agar bhai delivery wale call kar rahe hon, to bhai parcel mere reception pe chhudwa do.",
+   "kind": "cam"
+  },
+  {
+   "id": "s11",
+   "lav": [
+    361.375,
+    366.255
+   ],
+   "cam": [
+    382.595,
+    387.475
+   ],
+   "out": [
+    45.57,
+    50.45
+   ],
+   "text": "Ye Hindi, English, yahan tak ki 9 se zyada languages mein answer kar sakta hai.",
+   "kind": "cam"
+  },
+  {
+   "id": "s12",
+   "lav": [
+    452.605,
+    456.165
+   ],
+   "cam": [
+    473.825,
+    477.385
+   ],
+   "out": [
+    50.45,
+    54.01
+   ],
+   "text": "Aur India mein almost 10 lakh se zyada log is app ko roz use karte hain.",
+   "kind": "cam"
+  },
+  {
+   "id": "s13",
+   "lav": [
+    788.255,
+    795.04
+   ],
+   "cam": [
+    809.475,
+    816.26
+   ],
+   "out": [
+    54.01,
+    60.795
+   ],
+   "text": "Jaise bade-bade bosses hote hain, apne call ke liye ek assistant rakhte hain, aapke paas ek assistant aapke phone mein aa jayega.",
+   "kind": "cam"
+  },
+  {
+   "id": "s14",
+   "lav": [
+    493.74,
+    496.585
+   ],
+   "cam": [
+    514.96,
+    517.805
+   ],
+   "out": [
+    60.795,
+    63.64
+   ],
+   "text": "Abhi Equal app download karo, Play Store aur App Store se.",
+   "kind": "cam"
+  },
+  {
+   "id": "s15",
+   "lav": [
+    504.395,
+    508.345
+   ],
+   "cam": [
+    525.615,
+    529.565
+   ],
+   "out": [
+    63.64,
+    67.59
+   ],
+   "text": "Arre yaar, phir call aa raha hai... koi baat nahi, mera assistant handle kar lega.",
+   "kind": "cam"
+  }
+ ],
+ "end_card": [
+  67.59,
+  70.19
+ ],
+ "length": 70.19
+}

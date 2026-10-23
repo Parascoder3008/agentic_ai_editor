@@ -1,0 +1,54 @@
+{
+ "guide": {
+  "url": "https://aiwithparas-resources.netlify.app/whatsapp-agent/",
+  "netlify_deploy": "6ada4641224cc8453ff1d316",
+  "status": "live"
+ },
+ "hosted": {
+  "instagram_mp4": "https://d2ol7oe51mr4n9.cloudfront.net/user_3FZpRgwnljm9ZrKGYP3UJ2Xl3X0/ad55670f-5965-4dee-bb88-41a18c046125.mp4",
+  "youtube_mp4": "https://d2ol7oe51mr4n9.cloudfront.net/user_3FZpRgwnljm9ZrKGYP3UJ2Xl3X0/369188b5-2b95-40b5-849a-c7fdf0b55011.mp4",
+  "cover_jpg": "https://d2ol7oe51mr4n9.cloudfront.net/user_3FZpRgwnljm9ZrKGYP3UJ2Xl3X0/11cc35eb-f041-4442-8894-4c937f6772a0.jpg"
+ },
+ "instagram": {
+  "permalink": "https://www.instagram.com/reel/Dezg0s_khXk/",
+  "media_id": "17987050160888976",
+  "container_id": "18112094213191510",
+  "hashtag_comment_id": "18120375190973766",
+  "published_utc": "2026-10-22T17:25:18Z",
+  "status": "live"
+ },
+ "youtube": {
+  "via": "GHL social planner",
+  "ghl_post_id": "6ada477bc950a5c67a549b9d",
+  "account": "@parasarora_ai",
+  "scheduled_utc": "2026-10-22T17:45:00Z",
+  "status": "scheduled"
+ },
+ "facebook": {
+  "via": "GHL social planner",
+  "ghl_post_id": "6ada4787197b41f0cf78c332",
+  "page": "Paras Arora AI for Business",
+  "type": "reel (YouTube cut)",
+  "scheduled_utc": "2026-10-22T17:45:00Z",
+  "status": "scheduled"
+ },
+ "linkedin": {
+  "via": "GHL social planner",
+  "ghl_post_id": "6ada478c5ee8ab4ef3655bbc",
+  "profile": "Paras Arora",
+  "scheduled_utc": "2026-10-22T17:45:00Z",
+  "status": "scheduled"
+ },
+ "autodm": {
+  "status": "blocked",
+  "reason": "SuperProfile list_content -> META_UNAVAILABLE (Instagram token); prepare_automation needs a verified contentId",
+  "fix": "Paras reconnects Instagram at https://superprofile.bio/creator/agent-access (operation afbb942f411a76953f05f2ad2b243ac692de93a24b54acd2312dc5017a08c8da), then AGENT automation: follow gate 3 tries -> send_anyway, guide button"
+ },
+ "x": {
+  "via": "Chrome (x.com, @aroraparas3008)",
+  "url": "https://x.com/aroraparas3008/status/2113321998579540433",
+  "video": "REEL05_x.mp4 (720p, YouTube cut)",
+  "published_utc": "2026-10-22T17:30Z",
+  "status": "live"
+ }
+}

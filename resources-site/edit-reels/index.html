@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Free playbook: let Claude edit your reels from one raw take. Setup prompt, filming rules, every editing prompt, and every fix. By Paras Arora, AI with Paras.">
+<meta property="og:title" content="Let Claude edit your reels: the free playbook">
+<meta property="og:description" content="One raw take, zero editing apps. Setup, prompts and fixes from my Claude Opus edit.">
+<meta property="og:image" content="https://aiwithparas-resources.netlify.app/assets/og-edit-reels.jpg">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.png">
+<title>Let Claude Edit Your Reels · Free Playbook | AI with Paras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=block" rel="stylesheet">
+<style>
+  @page { size: A5; margin: 0; }
+  :root{
+    --void:#0C0E0F; --navy:#11324C; --blue:#1A9FD1; --blue-br:#3AB0D8;
+    --ink:#FFFFFF; --muted:#DFDDDF; --dim:#9AA3A8;
+    --glass:rgba(255,255,255,.045); --glass-line:rgba(255,255,255,.09);
+    --line:rgba(26,159,209,.28); --line-soft:rgba(223,221,223,.10);
+    --sans:Inter,"Segoe UI",system-ui,sans-serif;
+    --mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--void);color:var(--ink);font-family:var(--sans);
+    -webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-size:9.6pt;line-height:1.55}
+  .page{width:148mm;height:210mm;padding:13mm 12mm 14mm;position:relative;break-after:page;overflow:hidden;
+    background:radial-gradient(ellipse 120% 55% at 50% -8%, rgba(17,50,76,.55) 0%, rgba(12,14,15,0) 70%), var(--void)}
+  .page:last-child{break-after:auto}
+  .pnum{position:absolute;bottom:6mm;left:12mm;right:12mm;display:flex;justify-content:space-between;
+    font-size:7pt;color:var(--dim);letter-spacing:.08em}
+
+  /* cover */
+  .cover{display:flex;flex-direction:column;justify-content:space-between;min-height:182mm}
+  .logo{height:9mm}
+  .brandline{font-family:var(--mono);font-size:7.2pt;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-br);margin:9mm 0 4mm}
+  h1{font-size:29pt;line-height:1.02;margin:0 0 4mm;font-weight:900;letter-spacing:-.03em}
+  h1 span{color:var(--blue)}
+  .deck{font-size:12pt;color:var(--muted);margin:0 0 6mm;line-height:1.35;max-width:105mm}
+  .kw{display:inline-flex;align-items:center;gap:3mm;font-weight:800;font-size:9pt;letter-spacing:.14em;
+    padding:2.4mm 4.5mm;border-radius:999px;background:var(--blue);color:#fff}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin:8mm 0 0}
+  .stat{background:var(--glass);border:1px solid var(--glass-line);border-radius:5mm;padding:3.5mm 3.5mm}
+  .stat b{display:block;font-size:15pt;font-weight:900;letter-spacing:-.02em;color:var(--ink)}
+  .stat span{font-size:7.4pt;color:var(--muted)}
+  .byline{font-size:8.6pt;color:var(--muted);margin:0}
+  .byline b{color:var(--ink)}
+  .credit{font-size:7.6pt;color:var(--dim);margin:1.5mm 0 0;font-style:italic}
+
+  /* sections */
+  .eyebrow{font-family:var(--mono);font-size:7pt;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin:0 0 1.5mm}
+  h2{font-size:17pt;line-height:1.1;margin:0 0 3mm;font-weight:800;letter-spacing:-.02em}
+  h3{font-size:11pt;margin:5mm 0 1.5mm;font-weight:800;letter-spacing:-.01em}
+  h3 .n{display:inline-block;min-width:6.5mm;color:var(--blue-br);font-variant-numeric:tabular-nums}
+  p{margin:2.2mm 0}
+  .muted{color:var(--muted)}
+  ul.clean{list-style:none;margin:2mm 0;padding:0}
+  ul.clean li{position:relative;padding:1.2mm 0 1.2mm 6mm;border-bottom:1px solid var(--line-soft)}
+  ul.clean li:last-child{border-bottom:0}
+  ul.clean li::before{content:"";position:absolute;left:0;top:2.6mm;width:2.4mm;height:2.4mm;border-radius:.8mm;border:1.3px solid var(--blue)}
+  b,strong{font-weight:700}
+
+  .tools{display:grid;grid-template-columns:1fr;gap:2mm;margin-top:3mm}
+  .tool{display:grid;grid-template-columns:30mm 1fr 15mm;gap:3mm;align-items:center;background:var(--glass);
+    border:1px solid var(--glass-line);border-radius:4mm;padding:2.6mm 3.5mm}
+  .tool .t{font-weight:800}
+  .tool .d{color:var(--muted);font-size:8.6pt}
+  .tool .c{font-size:7.6pt;color:var(--blue-br);font-weight:700;text-align:right}
+
+  .prompt{margin:2.5mm 0 3mm;border:1px solid var(--line);border-radius:4.5mm;overflow:hidden;break-inside:avoid;
+    background:linear-gradient(180deg,rgba(17,50,76,.55),rgba(17,50,76,.28))}
+  .prompt .hd{display:flex;justify-content:space-between;align-items:center;padding:1.8mm 3.5mm;
+    border-bottom:1px solid var(--line);font-family:var(--mono);font-size:6.8pt;letter-spacing:.16em;color:var(--blue-br);text-transform:uppercase}
+  .prompt .bd{padding:3mm 3.5mm;font-family:var(--mono);font-size:8pt;line-height:1.55;color:#EAF6FB;white-space:pre-wrap}
+  .say{margin:1.5mm 0 1mm;font-size:8.6pt;color:var(--muted)}
+  .say i{color:var(--ink);font-style:italic}
+
+  .note{background:var(--glass);border:1px solid var(--glass-line);border-left:1.2mm solid var(--blue);border-radius:3.5mm;
+    padding:3mm 3.8mm;margin:3mm 0;break-inside:avoid;font-size:8.8pt}
+  .note .lbl{font-weight:800;color:var(--blue-br);font-size:7.4pt;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:.8mm}
+
+  .fix{display:grid;grid-template-columns:1fr;gap:0;margin:2mm 0;break-inside:avoid;border:1px solid var(--glass-line);border-radius:4mm;overflow:hidden}
+  .fix .p{padding:2.4mm 3.5mm;background:rgba(255,255,255,.03);font-weight:700}
+  .fix .s{padding:2.4mm 3.5mm;color:var(--muted);font-size:8.6pt;border-top:1px solid var(--glass-line)}
+  .fix .s b{color:var(--blue-br)}
+
+  .check li{padding-left:7mm}
+  .check li::before{border-radius:1mm;width:3mm;height:3mm;top:2.3mm}
+
+  .cta{margin-top:5mm;background:linear-gradient(135deg,rgba(26,159,209,.22),rgba(17,50,76,.55));border:1px solid var(--line);
+    border-radius:7mm;padding:6mm;break-inside:avoid}
+  .cta h2{margin-bottom:2mm}
+  .btn{display:inline-block;margin-top:2mm;background:var(--blue);color:#fff;font-weight:800;text-decoration:none;
+    padding:2.6mm 5mm;border-radius:999px;font-size:9pt}
+  .foot{margin-top:5mm;font-size:7.2pt;color:var(--dim)}
+
+  .webbar{display:none}
+  @media screen {
+    body{font-size:15px;padding:0 16px 48px;
+      background-image:radial-gradient(900px 500px at 15% -10%, rgba(17,50,76,.75), transparent 60%)}
+    .webbar{display:flex;align-items:center;justify-content:space-between;gap:10px;max-width:620px;margin:0 auto;padding:16px 0}
+    .webbar a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .webbar a.dl{background:var(--blue);color:#fff;padding:9px 16px;border-radius:999px;font-weight:800}
+    .page{width:auto;max-width:620px;height:auto;margin:0 auto 16px;padding:28px 22px;border:1px solid var(--glass-line);
+      border-radius:28px;overflow:visible}
+    .pnum{display:none}
+    .cover{min-height:0;gap:28px}
+    h1{font-size:clamp(32px,9vw,46px)}
+    .deck{max-width:none}
+    .stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+    .tool{grid-template-columns:1fr;gap:2px}
+    .tool .c{text-align:left}
+    .prompt .bd{font-size:12.5px;overflow-wrap:anywhere}
+    .prompt .hd button{all:unset;cursor:pointer;color:var(--blue-br);font:inherit;letter-spacing:inherit;text-transform:inherit}
+    .prompt .hd button:focus-visible{outline:2px solid var(--blue-br);outline-offset:3px;border-radius:4px}
+    .cta .btn{margin-right:8px}
+  }
+  @media print { .webbar{display:none} }
+</style>
+</head>
+<body>
+<nav class="webbar"><a href="../">← All free resources</a><a class="dl" href="Let-Claude-Edit-Your-Reels.pdf" download>Download PDF</a></nav>
+
+<!-- ============ COVER ============ -->
+<section class="page">
+  <div class="cover">
+    <div>
+      <img class="logo" src="../assets/logo.png" alt="Exponential World AI">
+      <p class="brandline">Exponential World AI · Free Playbook</p>
+      <h1>Let Claude edit<br>your reels.<br><span>One raw take. Zero editing apps.</span></h1>
+      <p class="deck">The exact setup, every prompt, and every mistake from the reel where I gave my video editor a holiday.</p>
+      <span class="kw">KEYWORD · EDIT</span>
+      <div class="stats">
+        <div class="stat"><b>5:09</b><span>raw take, Hinglish, with retakes</span></div>
+        <div class="stat"><b>1:32</b><span>finished reel after the cut</span></div>
+        <div class="stat"><b>₹0</b><span>software cost beyond a Claude plan</span></div>
+      </div>
+    </div>
+    <div>
+      <p class="byline">From <b>Paras Arora</b> · Exponential World AI</p>
+      <p class="credit">Format inspired by @vibha.in.progress. Every step, prompt and fix below is from my own reel.</p>
+    </div>
+  </div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>01</span></div>
+</section>
+
+<!-- ============ 01 + 02 ============ -->
+<section class="page">
+  <p class="eyebrow">Read this first</p>
+  <h2>What this actually is</h2>
+  <p>I shot one raw take on a tripod — talking, re-saying lines, asking for effects out loud. Then I handed it to <b>Claude</b> inside Claude Code. It cut the pauses and retakes, graded the colour, built every motion graphic, wrote the captions, mixed the sound, and checked its own work.</p>
+  <div class="note"><span class="lbl">Honest note</span>It is not one prompt and done. It took a plan, a first preview, and a few rounds of notes. That's normal — it's how you'd work with a human editor too. Section 08 lists everything that broke so you can skip it.</div>
+
+  <p class="eyebrow" style="margin-top:6mm">01 · What you need</p>
+  <div class="tools">
+    <div class="tool"><span class="t">Claude Code</span><span class="d">Your editor. You talk, it builds the edit. Easiest via the Claude desktop app → Code tab.</span><span class="c">Claude plan</span></div>
+    <div class="tool"><span class="t">HyperFrames</span><span class="d">Open-source (by HeyGen). Turns motion graphics into video. No timeline, no After Effects.</span><span class="c">Free</span></div>
+    <div class="tool"><span class="t">video-use</span><span class="d">Open-source (by Browser Use). Transcript-driven cutting, captions, grading.</span><span class="c">Free</span></div>
+    <div class="tool"><span class="t">Whisper</span><span class="d">Claude's ears — writes down every word with exact timing.</span><span class="c">Free</span></div>
+    <div class="tool"><span class="t">FFmpeg</span><span class="d">Claude's eyes and scissors — frames, cuts, layering.</span><span class="c">Free</span></div>
+    <div class="tool"><span class="t">Node.js + Python</span><span class="d">The engines underneath. Install once, forget.</span><span class="c">Free</span></div>
+  </div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>02</span></div>
+</section>
+
+<section class="page">
+  <p class="eyebrow">02 · Install everything with one prompt</p>
+  <h2>Let Claude set itself up</h2>
+  <p>Open Claude Code in any empty folder and paste this. It asks before each install.</p>
+  <div class="prompt"><div class="hd"><span>Prompt · setup</span><span>copy</span></div><div class="bd">I'm not technical, so do everything for me and explain each step simply.
+I want you to edit my videos.
+
+1. Check this computer for Node.js 22+, FFmpeg, Python 3 and Whisper
+   (faster-whisper on Windows, whisper-cpp on Mac). Install what's missing.
+2. Set up these open-source projects as skills:
+   github.com/heygen-com/hyperframes
+   github.com/browser-use/video-use
+3. Run "npx hyperframes doctor" and fix whatever it flags.
+4. Finish with a plain list of what's installed.
+Ask me before each install.</div></div>
+  <div class="note"><span class="lbl">Before you render</span>Keep at least <b>15 GB free</b> and close heavy apps. Video renders are hungry — on my laptop, low RAM was the first warning the tools gave me.</div>
+  <div class="note"><span class="lbl">Mac or Windows?</span>Both work. I edited this reel on a Windows laptop — Claude handled the Windows-specific fixes itself.</div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>03</span></div>
+</section>
+
+<section class="page">
+  <p class="eyebrow">03 · Film it right</p>
+  <h2>Five minutes that decide everything</h2>
+  <ul class="clean">
+    <li><b>Landscape (16:9) on a tripod.</b> The split-screen stacks two landscape halves.</li>
+    <li><b>Light on your face, 1 metre off the wall.</b> Clean edges = clean cut-outs.</li>
+    <li><b>Say the effect out loud, then pause.</b> <i>"Claude ka logo yahan lao."</i> Pause. Claude times the effect to that exact word.</li>
+    <li><b>Hold still where an effect lands.</b> Open palm 2 sec for the logo. Arms crossed for the documentary. Hand on head for the "hit".</li>
+    <li><b>Keep your flubs.</b> Re-say the line. Claude keeps the clean take and cuts the rest.</li>
+    <li><b>Separate mic? Fine.</b> I recorded on a lav and cleaned it in Audacity — Claude synced it to the camera by matching the waveforms.</li>
+    <li><b>Hinglish? Fine.</b> Just tell Claude up front (see the trick on the next page).</li>
+  </ul>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>04</span></div>
+</section>
+
+<!-- ============ 04 + 05 ============ -->
+<section class="page">
+  <p class="eyebrow">04 · Give Claude eyes and ears</p>
+  <h2>Everything gets timed to a word</h2>
+  <p>Put your video (and separate audio, if any) in a folder, open Claude Code there, and paste:</p>
+  <div class="prompt"><div class="hd"><span>Prompt · transcribe + look</span><span>copy</span></div><div class="bd">My raw video is in this folder. [If you have one:] My clean audio
+was recorded separately — sync it to the camera audio first.
+
+Transcribe every word with a timestamp. I speak Hinglish:
+write captions in Roman script (not Devanagari), and use
+forced alignment so every word has an exact start and end.
+
+Then pull one frame per second and look at them.
+Tell me what I say, when I say it, and what's in the shot.
+Spell these right: [your name], [your brand], Claude, Opus.</div></div>
+  <div class="note"><span class="lbl">The Hinglish trick (learned the hard way)</span>Plain Whisper either <b>translates</b> Hinglish into English or gets stuck repeating words. What worked: transcribe in Hindi in <b>short chunks</b>, let Claude rewrite each line in Roman Hinglish, then <b>force-align</b> every word back to the audio. Ask for exactly that and you'll skip an hour of my pain.</div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>05</span></div>
+</section>
+
+<section class="page">
+  <p class="eyebrow">05 · Plan before Claude builds anything</p>
+  <h2>Changes on paper are free</h2>
+  <div class="prompt"><div class="hd"><span>Prompt · beat sheet</span><span>copy</span></div><div class="bd">Before you build anything, write a beat sheet as a table:
+start/end time, my exact words, what appears on screen, sound effect.
+
+Format: 9:16 reel. Top half = the edited video.
+Bottom half = my ORIGINAL take, so people see the before/after.
+Keep text out of the bottom 20% and away from the right edge.
+Brand: [your colours], [your font].
+Wait for my OK before you build.</div></div>
+  <p class="muted">A change in the beat sheet costs one line. A change after a render costs a re-render.</p>
+
+  <p class="eyebrow" style="margin-top:6mm">06 · Every edit in my reel, with the prompt</p>
+  <h2>Steal these</h2>
+
+  <h3><span class="n">1</span>Cut the dead pauses and bad takes</h3>
+  <p class="say">On camera: <i>"…jahan pe bhi main ruka tha, bad pauses, bad takes — maine kuch nahi kiya."</i></p>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">Cut every pause longer than 0.45 sec and every repeated or flubbed
+line. Never cut inside a word — snap each cut into silence.
+Tell me the new length. While I talk about bad takes, show an editing
+timeline: my real waveform, pauses grey, bad takes red. A "Claude"
+playhead sweeps and the counter drops from raw length to final length.</div></div>
+  <p class="muted">Mine: <b>5:09 → 1:32</b>, 32 cuts, none audible.</p>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>06</span></div>
+</section>
+
+<section class="page">
+  <h3 style="margin-top:0"><span class="n">2</span>The colour grade</h3>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">Grade only the top (edited) half: a bit more contrast, warmer skin,
+slightly cooler shadows, soft vignette. Leave the bottom original
+untouched so the difference is obvious. Show me before/after first.</div></div>
+
+  <h3><span class="n">3</span>The hook — a giant word behind you</h3>
+  <p class="say">On camera: <i>"Bhai, maine apne video editor ki chhutti kar di."</i></p>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">For the first 3 seconds, cut me out of the background. Put my words
+on a dark brand background, word by word as I say them. On
+"chhutti", slam CHHUTTI in huge letters BEHIND me with a thud.
+Make sure the word fits the frame and isn't hidden by my head.</div></div>
+  <h3><span class="n">4</span>Logo on your palm → glass breaks</h3>
+  <p class="say">On camera: <i>"Claude ka logo yahan lao… 3D mein spin karo… camera mein jaake hit kare, aur glass break ho jaye."</i></p>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">On "yahan", put the Claude logo on my open palm with a few sparkles.
+On "spin", spin it like a thick 3D coin (fake the 3D in 2D).
+On "camera", fly it at the lens. On "hit", crack glass across the
+WHOLE screen, both halves. On "break", let the shards fall.</div></div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>07</span></div>
+</section>
+
+<section class="page">
+  <h3 style="margin-top:0"><span class="n">5</span>The workflow demo</h3>
+  <p class="say">On camera: <i>"Mere ko side pe le jao, aur mere teen operating systems dikhao."</i></p>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">Shrink me into a round webcam bubble on the right, face centred.
+Turn the rest into a product demo timed to my words: my 3 systems
+(Content OS, Business OS, Money OS) light up as I name them, then
+show ideation, script writing, webinars and the bot dashboard.
+Use made-up names. Label it "illustrative demo".</div></div>
+  <h3><span class="n">6</span>Your reels orbit you — then one hits your head</h3>
+  <p class="say">On camera: <i>"Meri reels le ke aao… when I click one, let it hit my head."</i> (grab your head) <i>"Oh no, ye kya kiya?"</i></p>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">Orbit my reel covers around my hand on a tilted oval — back cards
+dimmer, front cards sharp. On "click", one card breaks out, drops on
+my head in the top video with a boop, bounces, then falls into the
+ORIGINAL video and hits me again.</div></div>
+  <p class="muted">Tip: give Claude your Instagram handle to pull your real reel covers.</p>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>08</span></div>
+</section>
+
+<section class="page">
+  <h3 style="margin-top:0"><span class="n">7</span>The documentary ending</h3>
+  <p class="say">On camera: <i>"…aisa lage ki main ek documentary shoot kar raha hoon."</i> (arms crossed)</p>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">On "documentary", flash to a black-and-white cut-out of me in front
+of a big brand-coloured circle. Stamp "ONE MAN." "ONE TAKE."
+"ZERO EDITING." one at a time with a camera click — all ABOVE my
+head. Add a name bar and "A FILM BY CLAUDE OPUS".</div></div>
+
+  <h3><span class="n">8</span>The call to action</h3>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">On "comment", show a COMMENT "EDIT" card over my torso (never
+over a face). Pulse the word on the exact frame I say it.</div></div>
+  <h3><span class="n">+</span>Captions that feel like part of the video</h3>
+  <div class="prompt"><div class="hd"><span>Prompt</span><span>copy</span></div><div class="bd">Word-by-word captions synced to the transcript, in my brand font.
+The word I'm saying turns my brand colour. Hide captions whenever big
+text is already on screen.</div></div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>09</span></div>
+</section>
+
+<section class="page">
+
+    <p class="eyebrow">07 · Give notes like a director</p>
+  <h2>One change per line, with the time</h2>
+  <p>Say what you want to see, not how to code it. Real notes from my reel:</p>
+  <ul class="clean">
+    <li><b>0:02</b> — the big word is cut off on the right. Make it fit.</li>
+    <li><b>1:09</b> — my head hides "ZERO EDITING". Move it up.</li>
+    <li><b>1:08</b> — the sound effects are louder than my voice. Bring them under me.</li>
+    <li><b>1:15</b> — the card covers my face in the original. Move it to my chest.</li>
+  </ul>
+
+  <p class="eyebrow" style="margin-top:7mm">This reel, by the numbers</p>
+  <div class="stats" style="margin-top:2mm">
+    <div class="stat"><b>32</b><span>cuts, every one snapped into silence</span></div>
+    <div class="stat"><b>9</b><span>motion graphics, each timed to a spoken word</span></div>
+    <div class="stat"><b>35</b><span>sound effects, mixed under my voice</span></div>
+    <div class="stat"><b>3</b><span>self-review passes before I saw a frame</span></div>
+    <div class="stat"><b>9</b><span>problems Claude caught and fixed itself</span></div>
+    <div class="stat"><b>0</b><span>editing apps opened</span></div>
+  </div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>10</span></div>
+</section>
+
+<!-- ============ 08 WHAT BROKE ============ -->
+<section class="page">
+  <p class="eyebrow">08 · What broke (so you skip it)</p>
+  <h2>Every problem, and the one-line fix</h2>
+  <div class="fix"><div class="p">The transcript came back in English, not what I said.</div><div class="s">Whisper translates Hinglish. <b>Fix:</b> "Transcribe in Hindi in short chunks, rewrite in Roman Hinglish, force-align the words."</div></div>
+  <div class="fix"><div class="p">My separate audio was 21 seconds out of sync.</div><div class="s"><b>Fix:</b> "Sync my audio file to the camera audio by matching the waveforms." It found the offset to the millisecond.</div></div>
+  <div class="fix"><div class="p">Effects drifted half a second late by the end.</div><div class="s"><b>Fix:</b> "Make every cut a whole number of frames." Tiny rounding adds up over 30+ cuts.</div></div>
+  <div class="fix"><div class="p">The cut-out came out empty / the black-and-white step erased me.</div><div class="s"><b>Fix:</b> "Check every cut-out over a solid colour before you use it." Claude found a known quirk and fixed it.</div></div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>11</span></div>
+</section>
+
+<section class="page">
+  <p class="eyebrow">08 · What broke (continued)</p>
+  <div class="fix"><div class="p">Sound effects drowned my voice.</div><div class="s"><b>Fix:</b> "Measure the levels. Effects no more than 3 dB above my voice."</div></div>
+  <div class="fix"><div class="p">Text hidden behind my head, cards over my face.</div><div class="s"><b>Fix:</b> "Before showing me, check a frame at every effect moment over the real footage."</div></div>
+  <div class="fix"><div class="p">Renders crawling / failing.</div><div class="s"><b>Fix:</b> "Render one thing at a time with one worker." Close the preview and other apps.</div></div>
+  <div class="note"><span class="lbl">The one prompt that saves the most time</span>"Before you show me anything, review your own work: frames at every effect, audio levels, every cut boundary. Fix what's below standard, then show me."</div>
+  <div class="note"><span class="lbl">Start here</span>Your first reel: just <b>#1 (cuts)</b> + <b>captions</b> + <b>one</b> big effect. Ship it. Add the glass and the orbit on reel two.</div>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>12</span></div>
+</section>
+
+<!-- ============ 09 CHECKLIST + CTA ============ -->
+<section class="page">
+  <p class="eyebrow">09 · Your checklist</p>
+  <h2>From raw take to posted reel</h2>
+  <ul class="clean check">
+    <li>Claude Code + HyperFrames + video-use installed (02)</li>
+    <li>One landscape take, effects said out loud, flubs kept (03)</li>
+    <li>Transcript with exact word timings + frames (04)</li>
+    <li>Beat sheet approved before any build (05)</li>
+    <li>Pick <b>3 or 4 edits</b> from 06 for your first reel — not all eight</li>
+    <li>Notes with timestamps until it feels right (07)</li>
+    <li>Final render, then post with "Upload at highest quality" ON in Instagram settings</li>
+  </ul>
+  <div class="cta">
+    <p class="eyebrow">Keep going</p>
+    <h2>Want the full system, not just this reel?</h2>
+    <p>I share my AI workflows — content, business and automation — inside the free Exponential World community. Come build with us.</p>
+    <a class="btn" href="https://www.skool.com/exponential-world-ai-2398">Join the free community →</a><a class="btn" href="https://whatsapp.com/channel/0029Vb89QG1HltYFE2iFAf1y">📲 WhatsApp channel</a>
+    <p class="muted" style="margin-top:3mm;font-size:8.4pt">If you make a reel with this, tag me — I genuinely want to see it.</p>
+  </div>
+  <p class="foot">Exponential World AI · Education only — no income or earnings guarantees. Tools are third-party and open-source; their features and setup steps may change. Claude is a product of Anthropic; HyperFrames by HeyGen; video-use by Browser Use.</p>
+  <div class="pnum"><span>LET CLAUDE EDIT YOUR REELS</span><span>13</span></div>
+</section>
+
+<script>
+document.querySelectorAll('.prompt .hd span:last-child').forEach(function (s) {
+  var b = document.createElement('button'); b.type = 'button'; b.textContent = 'copy';
+  b.setAttribute('aria-label', 'Copy this prompt'); s.replaceWith(b);
+  b.addEventListener('click', function () {
+    var t = b.closest('.prompt').querySelector('.bd').innerText;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(
+      function () { b.textContent = 'copied ✓'; setTimeout(function () { b.textContent = 'copy'; }, 1500); },
+      function () { b.textContent = 'select + copy'; });
+  });
+});
+</script>
+</body>
+</html>

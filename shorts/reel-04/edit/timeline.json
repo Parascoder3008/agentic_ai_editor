@@ -1,0 +1,171 @@
+{
+ "fps": 30,
+ "length": 67.5667,
+ "end_shared": 39.7999,
+ "pieces": [
+  {
+   "file": "a",
+   "src": [
+    15.0667,
+    26.0
+   ],
+   "text": "ye jo aap video dekh rahe ho \u2026 meri poori reel",
+   "zoom": 1.0,
+   "tag": "shared",
+   "out": [
+    0.0,
+    10.9333
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    26.2667,
+    43.0333
+   ],
+   "text": "aur dikhaye usmein badhiya graphics \u2026 wapas le jaaye",
+   "zoom": 1.0,
+   "tag": "shared",
+   "out": [
+    10.9333,
+    27.6999
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    51.5667,
+    61.2333
+   ],
+   "text": "aur iske baad main bolun \u2026 bhai saab bye",
+   "zoom": 1.06,
+   "tag": "shared",
+   "out": [
+    27.6999,
+    37.3665
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    62.0333,
+    64.4667
+   ],
+   "text": "ab ye sab kuch aap bhi kar sakte ho bahut aasaan hai",
+   "zoom": 1.0,
+   "tag": "shared",
+   "out": [
+    37.3665,
+    39.7999
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    64.4667,
+    67.8667
+   ],
+   "text": "aapko apne claude ko \u2026 convert karna hai",
+   "zoom": 1.0,
+   "tag": "ig",
+   "out": [
+    39.7999,
+    43.1999
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    68.1667,
+    73.9667
+   ],
+   "text": "ab iski ek bana rakhi \u2026 dm nahi jaayega",
+   "zoom": 1.08,
+   "tag": "ig",
+   "out": [
+    43.1999,
+    48.9999
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    74.2333,
+    76.1667
+   ],
+   "text": "aur bhai aap apni editing \u2026 karwa sakte ho",
+   "zoom": 1.0,
+   "tag": "ig",
+   "out": [
+    48.9999,
+    50.9333
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    138.5333,
+    142.4667
+   ],
+   "text": "ab obviously ai hai \u2026 zyada lagega ya kam",
+   "zoom": 1.08,
+   "tag": "ig",
+   "out": [
+    50.9333,
+    54.8667
+   ]
+  },
+  {
+   "file": "a",
+   "src": [
+    142.6,
+    144.5333
+   ],
+   "text": "wo main bataunga uske liye follow kar lena",
+   "zoom": 1.0,
+   "tag": "ig",
+   "out": [
+    54.8667,
+    56.8
+   ]
+  },
+  {
+   "file": "b",
+   "src": [
+    0.3333,
+    11.1
+   ],
+   "text": "ab iski bana rakhi \u2026 subscribe kar lo",
+   "zoom": 1.04,
+   "tag": "yt",
+   "out": [
+    56.8,
+    67.5667
+   ]
+  }
+ ],
+ "files": {
+  "a": "C:\\Users\\PARAS ARORA\\Downloads\\DJI_20261019161031_0358_D.MP4",
+  "b": "C:\\Users\\PARAS ARORA\\Downloads\\DJI_20261019161340_0359_D.MP4"
+ },
+ "ig": {
+  "ranges": [
+   [
+    0.0,
+    56.8
+   ]
+  ]
+ },
+ "yt": {
+  "ranges": [
+   [
+    0.0,
+    39.7999
+   ],
+   [
+    56.8,
+    67.5667
+   ]
+  ]
+ }
+}

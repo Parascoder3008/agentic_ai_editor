@@ -1,0 +1,41 @@
+{
+ "source": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\avatar_v2.mp4",
+ "ranges": [
+  [
+   0.0,
+   47.96
+  ]
+ ],
+ "fps": 25,
+ "crf": 16,
+ "crop_x": 320,
+ "grade": "null",
+ "overlays": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\edit\\hook_top.mp4",
+   "start": 0.0
+  },
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\gfx\\top\\render.webm",
+   "start": 0.0
+  }
+ ],
+ "captions": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\edit\\captions.ass",
+ "fontsdir": "C:\\Users\\PARAS ARORA\\AI_Editor\\fonts",
+ "fontfile": "C:\\Users\\PARAS ARORA\\AI_Editor\\fonts\\Inter-Bold.ttf",
+ "sfx": [
+  {
+   "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\edit\\sfx.wav",
+   "at": 0.0,
+   "gain_db": 0
+  }
+ ],
+ "music": {
+  "file": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\edit\\music_score.wav",
+  "gain_db": 0,
+  "sidechain": false
+ },
+ "preset": "medium",
+ "out_crf": 18,
+ "out": "C:\\Users\\PARAS ARORA\\AI_Editor\\shorts\\pilot-01\\REEL_v2_full.mp4"
+}

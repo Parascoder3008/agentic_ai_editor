@@ -1,0 +1,10 @@
+{
+ "guide": {"url": "https://aiwithparas-resources.netlify.app/claude-levels/", "netlify_deploy": "6ad70b0c3f058ee02b47b337", "status": "live"},
+ "instagram": {"permalink": "https://www.instagram.com/reel/DetM3aYDkWQ/", "media_id": "18637343083032073", "container_id": "18111698912191510",
+               "hashtag_comment_id": "18070419578775164", "published_utc": "2026-10-20T06:35:08Z", "status": "live"},
+ "youtube": {"url": "https://youtube.com/shorts/bu7H3pCdUbs", "video_id": "bu7H3pCdUbs", "ghl_post_id": "6ad70c04dd0cb550effd23ec",
+             "published_utc": "2026-10-20T06:51:41Z", "tags_category_set": true, "status": "live"},
+ "autodm": {"status": "blocked",
+            "reason": "SuperProfile Instagram token revoked/expired (Meta code 190 since 2026-10-19T04:03Z); list_content returns META_UNAVAILABLE",
+            "fix": "Paras reconnects Instagram at https://superprofile.bio/creator/agent-access (operation 0b1fcab7ef378558f4597962614644684cd83317ee76852d0a2d4e6ba7fa7e26), then create LEVEL + SETUP automations per POST-PACKAGE.md"}
+}

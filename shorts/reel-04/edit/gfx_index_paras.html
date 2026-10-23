@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="watch.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      :root { --void: #0C0E0F; --blue: #1A9FD1; --bright: #3AB0D8; --navy: #11324C; --muted: #DFDDDF; }
+      .a { position: absolute; }
+      .c { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; }
+      .glass { background: rgba(12,14,15,0.80); border: 2px solid rgba(58,176,216,0.45); border-radius: 28px;
+        box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
+      .pill { padding: 12px 34px 16px; border-radius: 26px; font-weight: 900; white-space: nowrap; }
+      .blue { background: var(--blue); color: #FFFFFF; box-shadow: 0 0 40px rgba(26,159,209,0.55); }
+      .chip { padding: 10px 22px 12px; border-radius: 18px; font-weight: 800; font-size: 34px; white-space: nowrap; }
+      /* prompt bar */
+      #bar { left: 90px; top: 212px; width: 840px; height: 128px; padding: 16px 22px; }
+      #bar .ic { position: absolute; left: 22px; top: 20px; width: 50px; height: 50px; border-radius: 50%; background: var(--blue);
+        font-size: 30px; font-weight: 900; text-align: center; line-height: 50px; }
+      #bar .lb { position: absolute; left: 86px; top: 18px; font-size: 24px; font-weight: 800; color: var(--bright); letter-spacing: 0.04em; }
+      #btext { position: absolute; left: 86px; top: 54px; right: 150px; font-size: 34px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+      #caret { display: inline-block; width: 3px; height: 38px; background: var(--bright); vertical-align: -6px; margin-left: 3px; }
+      #bdone { position: absolute; right: 20px; top: 38px; padding: 8px 16px 10px; border-radius: 14px; font-size: 28px; font-weight: 900;
+        background: var(--blue); }
+      #bsend { position: absolute; right: 22px; top: 38px; width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(58,176,216,0.6);
+        text-align: center; line-height: 46px; font-size: 30px; font-weight: 900; color: var(--bright); }
+      /* spotlight */
+      #dim { left: 0; top: 0; width: 1080px; height: 1920px; }
+      #ring { width: 270px; height: 270px; border-radius: 50%; border: 6px solid var(--bright); box-shadow: 0 0 40px rgba(58,176,216,0.8), inset 0 0 30px rgba(58,176,216,0.4); }
+      .tile { width: 168px; height: 118px; padding-top: 10px; text-align: center; font-size: 46px; line-height: 54px; }
+      .tile b { display: block; font-size: 25px; font-weight: 800; line-height: 30px; }
+      #flash { left: 0; top: 0; width: 1080px; height: 1920px; background: #FFFFFF; }
+      /* CTA */
+      .box { padding: 22px 30px 24px; font-size: 42px; font-weight: 900; white-space: nowrap; }
+      #cvA { font-size: 64px; font-weight: 900; color: var(--bright); }
+      #kw { font-size: 132px; line-height: 150px; padding: 4px 56px 14px; }
+      .vs { width: 330px; padding: 18px 10px 20px; text-align: center; font-size: 40px; font-weight: 900; }
+      .vs i { display: block; font-style: normal; font-size: 64px; color: var(--bright); }
+      #sb { background: #E53935; color: #FFFFFF; font-size: 70px; padding: 14px 44px 20px; border-radius: 22px; box-shadow: 0 0 40px rgba(229,57,53,0.5); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="67.57" data-width="1080" data-height="1920">
+      <div id="all" class="clip" data-start="0" data-duration="67.57" data-track-index="0" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+        <!-- spotlight (under everything else) -->
+        <div id="dim" class="a"></div>
+        <div id="ring" class="a"></div>
+        <div id="plabel" class="a chip blue" style="font-size:30px">⌚ PRODUCT</div>
+        <!-- hook -->
+        <div id="h1" class="c pill glass" style="top:246px;font-size:86px">❌ 0 EDITORS</div>
+        <div id="h2" class="c pill blue" style="top:384px;font-size:86px">✅ 100% AI EDIT</div>
+        <!-- prompt bar -->
+        <div id="bar" class="a glass">
+          <div class="ic">✳</div><div class="lb">CLAUDE · AI EDITOR</div>
+          <div id="btext"><span id="bt"></span><span id="caret"></span></div>
+          <div id="bsend">↑</div><div id="bdone">✓ Done</div>
+        </div>
+        <!-- card layout: graphics chips + reel tag -->
+        <div id="c1" class="a chip glass" style="left:520px;top:432px">✨ Motion graphics</div>
+        <div id="c2" class="a chip glass" style="left:520px;top:522px">💬 Captions</div>
+        <div id="c3" class="a chip glass" style="left:520px;top:612px">🔊 SFX + music</div>
+        <div id="rt" class="a chip blue" style="left:520px;top:716px;font-size:28px;padding:6px 16px 8px">📼 Meri reel</div>
+        <!-- graphics out of the watch -->
+        <div id="k1" class="a tile glass">✂️<b>Cuts</b></div>
+        <div id="k2" class="a tile glass">💬<b>Captions</b></div>
+        <div id="k3" class="a tile glass">🎵<b>Music</b></div>
+        <div id="k4" class="a tile glass">✨<b>Motion</b></div>
+        <div id="k5" class="a tile glass">🔍<b>Zoom</b></div>
+        <div id="k6" class="a tile glass">🎞️<b>B-roll</b></div>
+        <!-- B-roll product tag -->
+        <div id="ptag" class="c chip glass" style="top:362px;font-size:32px">🚀 Exponential Accelerator · Resource Hub</div>
+        <!-- bye + outro of the demo -->
+        <div id="bye" class="c" style="top:300px;font-size:168px;font-weight:900;letter-spacing:-0.02em;text-shadow:0 8px 0 #1A9FD1, 0 0 40px rgba(0,0,0,0.5)">BYE 👋</div>
+        <div id="aap" class="c pill glass" style="top:262px;font-size:62px">Aap bhi kar sakte ho 👇</div>
+        <div id="easy" class="c chip blue" style="top:392px;font-size:40px">✅ Bahut aasaan</div>
+        <!-- CTA: shared by IG + YT -->
+        <div id="cv" class="c" style="top:258px;display:flex;align-items:center;gap:18px">
+          <div id="cvL" class="box glass">✳ Claude</div><div id="cvA">➜</div><div id="cvR" class="box blue" style="border-radius:28px">🎬 Video Editor</div>
+        </div>
+        <div id="guide" class="c chip glass" style="top:258px;font-size:42px">📘 Poori guide · step-by-step</div>
+        <div id="cm" class="c chip glass" style="top:230px;font-size:38px">COMMENT KARO 👇</div>
+        <div id="kw" class="c pill blue">EDIT</div>
+        <div id="dm" class="c chip glass" style="top:478px;font-size:36px">📩 Guide seedha DM mein</div>
+        <div id="fo" class="c chip blue" style="top:1250px;font-size:38px">+ Follow kar lena</div>
+        <div id="home" class="c chip glass" style="top:262px;font-size:46px">🏠 Ghar baithe editing</div>
+        <div id="cost" class="c chip glass" style="top:246px;font-size:44px">💸 AI = thoda kharcha</div>
+        <div id="vsA" class="a vs glass" style="left:150px;top:350px">🤖 AI<i>₹ ?</i></div>
+        <div id="vsB" class="a vs glass" style="left:600px;top:350px">👨‍💻 Editor<i>₹ ?</i></div>
+        <div id="vsX" class="a" style="left:510px;top:400px;font-size:44px;font-weight:900;color:#DFDDDF">vs</div>
+        <div id="p2" class="c chip glass" style="top:258px;font-size:42px">Kaun sasta? Agle video mein 👀</div>
+        <div id="fo2" class="c pill blue" style="top:372px;font-size:84px">+ FOLLOW 🔔</div>
+        <div id="yab" class="c chip glass" style="top:258px;font-size:42px">▶ YouTube → About section ⬇</div>
+        <div id="ywa" class="c chip blue" style="top:372px;font-size:44px">💬 WhatsApp channel join karo</div>
+        <div id="ypo" class="c chip glass" style="top:478px;font-size:38px">📘 Guide wahan post hogi</div>
+        <div id="sb" class="c" style="top:300px">SUBSCRIBE 🔔</div>
+        <div id="flash" class="a"></div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const $ = (s) => document.querySelector(s);
+      const ALL = ["#dim", "#ring", "#plabel", "#h1", "#h2", "#bar", "#bdone", "#c1", "#c2", "#c3", "#rt", "#k1", "#k2", "#k3", "#k4", "#k5", "#k6",
+                   "#ptag", "#bye", "#aap", "#easy", "#cv", "#guide", "#cm", "#kw", "#dm", "#fo", "#home", "#cost", "#vsA", "#vsB", "#vsX",
+                   "#p2", "#fo2", "#yab", "#ywa", "#ypo", "#sb", "#flash"];
+      gsap.set(ALL, { opacity: 0 });
+      const pop = (sel, t, d = 0.28) => tl.fromTo(sel, { opacity: 0, scale: 0.8, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2.2)", immediateRender: false }, t);
+      const out = (sel, t, d = 0.16) => tl.to(sel, { opacity: 0, duration: d, ease: "power1.in" }, t);
+      const win = (sel, t0, t1, d) => { pop(sel, t0, d); out(sel, t1 - 0.16); };
+
+      // ---- hook (text on screen within 1 s)
+      win("#h1", 0.05, 5.62, 0.3); win("#h2", 4.37, 5.62, 0.32);
+      tl.to("#h1", { opacity: 0.45, duration: 0.2 }, 4.37);
+
+      // ---- Claude prompt bar: each instruction types while he says it, ticks on the word where the edit lands
+      const PROMPTS = [[5.75, 7.90, 8.55, "Mujhe top-left corner mein le ja"],
+                       [8.90, 11.00, 12.30, "Neeche meri reel + graphics laga"],
+                       [12.70, 14.90, 15.40, "Mere peeche text daal"],
+                       [15.90, 17.20, 17.90, "Ab font cinematic kar"],
+                       [19.85, 22.20, 22.45, "Haath ka product highlight kar"],
+                       [23.42, 25.00, 27.40, "Ghadi se graphics nikaal + wapas"],
+                       [27.80, 29.30, 29.95, "Paper cut effect bana"],
+                       [30.40, 33.80, 34.40, "Side mein le ja + B-roll laga"],
+                       [34.80, 35.80, 36.06, "Wapas aa ke bye bol"]];
+      tl.fromTo("#bar", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, 5.66);
+      tl.to("#bar", { opacity: 0, y: -40, duration: 0.25, ease: "power2.in" }, 36.45);          // out before "bye"
+      PROMPTS.forEach(([a, b, d]) => { tl.fromTo("#bar", { borderColor: "rgba(58,176,216,1)", boxShadow: "0 0 60px rgba(58,176,216,0.7)" },
+                                                 { borderColor: "rgba(58,176,216,0.45)", boxShadow: "0 18px 50px rgba(0,0,0,0.45)", duration: 0.5, immediateRender: false }, d); });
+
+      // ---- card layout extras (he is in the top-left corner, his reel below)
+      win("#rt", 10.85, 13.87); win("#c1", 11.64, 13.87); win("#c2", 11.88, 13.87); win("#c3", 12.17, 13.87);
+
+      // ---- graphics come out of the watch (25.04) and go back in (27.02)
+      const TILES = [["#k1", 190, 430], ["#k2", 380, 405], ["#k3", 570, 395], ["#k4", 760, 410], ["#k5", 190, 640], ["#k6", 190, 850]];
+      const W0 = [667, 829], W1 = [714, 869];                      // tracked dial at 25.04 and 27.02
+      TILES.forEach(([s, x, y], i) => {
+        tl.fromTo(s, { x: W0[0] - 84, y: W0[1] - 59, scale: 0.15, opacity: 0, rotation: -25 },
+                     { x: x - 84, y: y - 59, scale: 1, opacity: 1, rotation: (i % 2 ? 4 : -4), duration: 0.55, ease: "back.out(1.6)", immediateRender: false }, 25.04 + i * 0.06);
+        tl.to(s, { y: y - 59 - 10, duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, 25.7 + i * 0.05);
+        tl.to(s, { x: W1[0] - 84, y: W1[1] - 59, scale: 0.12, opacity: 0, rotation: 0, duration: 0.38, ease: "power3.in" }, 27.02 + (5 - i) * 0.04);
+      });
+      tl.fromTo("#ring", { scale: 1.6 }, { scale: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, 27.30);
+
+      // cut out of the watch beat (jump cut 1.00 -> 1.06): two-frame flash
+      tl.fromTo("#flash", { opacity: 0.85 }, { opacity: 0, duration: 0.14, immediateRender: false }, 27.70);
+
+      tl.fromTo("#bye", { opacity: 0, scale: 0.3, rotation: -8 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.3, ease: "back.out(2.6)", immediateRender: false }, 36.86);
+      out("#bye", 37.18);                                   // gone before the 37.37 cut
+      win("#aap", 38.12, 39.80); win("#easy", 39.48, 39.80, 0.2);
+
+      // ---- IG tail
+      win("#cv", 40.54, 43.20); tl.fromTo("#cvA", { x: -20 }, { x: 14, duration: 0.3, yoyo: true, repeat: 3, immediateRender: false }, 42.48);
+      win("#guide", 44.70, 45.40);
+      win("#cm", 45.45, 49.00); tl.fromTo("#kw", { opacity: 0, scale: 0.4, y: 0 }, { opacity: 1, scale: 1, duration: 0.32, ease: "back.out(2.6)", immediateRender: false }, 46.05);
+      tl.set("#kw", { top: 300 }, 0); out("#kw", 48.84);
+      tl.to("#kw", { scale: 1.07, duration: 0.18, yoyo: true, repeat: 1 }, 46.45);
+      win("#dm", 46.73, 49.00); win("#fo", 47.53, 49.00);
+      win("#home", 50.17, 50.93);
+      win("#cost", 52.20, 54.87);
+      win("#vsA", 53.23, 54.87); win("#vsX", 53.40, 54.87); win("#vsB", 53.57, 54.87);
+      tl.to(["#vsA i", "#vsB i"], { scale: 1.25, duration: 0.2, yoyo: true, repeat: 3, ease: "sine.inOut" }, 54.37);
+      pop("#p2", 55.30); pop("#fo2", 56.06); tl.set(["#p2", "#fo2"], { opacity: 0 }, 56.80);   // held on the IG end freeze
+      tl.to("#fo2", { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1 }, 56.40);
+      // ---- YT tail (master 56.80-67.57)
+      win("#guide", 58.15, 59.12);
+      win("#yab", 59.15, 61.70); win("#ywa", 60.31, 63.80);
+      win("#ypo", 61.78, 63.80);
+      win("#cv", 63.94, 66.70);
+      tl.fromTo("#sb", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2.4)", immediateRender: false }, 66.85);
+      tl.to("#sb", { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1 }, 67.20);
+
+      // ---- frame-exact state from the clock (seek-safe): prompt text, ✓, spotlight on the tracked watch
+      const SPOT = [22.33, 27.45];
+      const watchAt = (t) => {
+        const W = window.WATCH; if (t <= W[0][0]) return W[0];
+        const i = Math.min(W.length - 1, Math.max(0, Math.round((Math.min(t, 27.45) - W[0][0]) * 30)));
+        return W[i];
+      };
+      tl.eventCallback("onUpdate", () => {
+        const t = tl.time();
+        let p = null; for (const q of PROMPTS) if (t >= q[0]) p = q;
+        if (p) {
+          const n = Math.round(Math.min(1, Math.max(0, (t - p[0]) / (p[1] - p[0]))) * p[3].length);
+          $("#bt").textContent = p[3].slice(0, n);
+          const done = t >= p[2];
+          $("#bdone").style.opacity = done ? 1 : 0; $("#bsend").style.opacity = done ? 0 : 1;
+          $("#caret").style.opacity = (!done && Math.floor(t * 3) % 2 === 0) || t < p[1] ? 1 : 0;
+        }
+        const a = t < SPOT[0] || t >= SPOT[1] + 0.3 ? 0 : Math.min(1, (t - SPOT[0]) / 0.25, (SPOT[1] + 0.3 - t) / 0.3);
+        const [, x, y] = watchAt(t);
+        $("#dim").style.opacity = a;
+        $("#dim").style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(4,6,8,0) 0px, rgba(4,6,8,0) 128px, rgba(4,6,8,0.68) 215px)`;
+        $("#ring").style.opacity = a; $("#ring").style.left = (x - 135) + "px"; $("#ring").style.top = (y - 135) + "px";
+        const la = t < 22.45 || t >= 25.0 ? 0 : Math.min(1, (t - 22.45) / 0.2, (25.0 - t) / 0.15);
+        $("#plabel").style.opacity = la; $("#plabel").style.left = (x - 60) + "px"; $("#plabel").style.top = (y - 248) + "px";
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

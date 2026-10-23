@@ -1,0 +1,242 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter,60,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,4,1,2,140,140,982,1
+Style: Mid,Inter,60,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,0,0,1,4,1,2,140,140,898,1
+Style: Low,Inter,62,&H00FFFFFF,&H00FFFFFF,&H00000000,&H8C0B0B0B,-1,0,0,0,100,100,0,0,3,14,0,2,150,150,470,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.56,0:00:00.88,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Bhai{\c&HFFFFFF&} aajkal social
+Dialogue: 0,0:00:00.88,0:00:01.28,Mid,,0,0,0,,Bhai {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aajkal{\c&HFFFFFF&} social
+Dialogue: 0,0:00:01.28,0:00:01.64,Mid,,0,0,0,,Bhai aajkal {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}social{\c&HFFFFFF&}
+Dialogue: 0,0:00:01.64,0:00:01.96,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}media{\c&HFFFFFF&} pe kuch
+Dialogue: 0,0:00:01.96,0:00:02.19,Mid,,0,0,0,,media {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}pe{\c&HFFFFFF&} kuch
+Dialogue: 0,0:00:02.19,0:00:02.43,Mid,,0,0,0,,media pe {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kuch{\c&HFFFFFF&}
+Dialogue: 0,0:00:02.43,0:00:02.57,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bhi{\c&HFFFFFF&} flex karna
+Dialogue: 0,0:00:02.57,0:00:02.85,Mid,,0,0,0,,bhi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}flex{\c&HFFFFFF&} karna
+Dialogue: 0,0:00:02.85,0:00:03.13,Mid,,0,0,0,,bhi flex {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}karna{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.13,0:00:03.33,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bahut{\c&HFFFFFF&} aasaan hai
+Dialogue: 0,0:00:03.33,0:00:03.65,Mid,,0,0,0,,bahut {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aasaan{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:03.65,0:00:03.87,Mid,,0,0,0,,bahut aasaan {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:03.98,0:00:04.28,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Jaise{\c&HFFFFFF&} ki mere
+Dialogue: 0,0:00:04.28,0:00:04.53,Mid,,0,0,0,,Jaise {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ki{\c&HFFFFFF&} mere
+Dialogue: 0,0:00:04.53,0:00:04.79,Mid,,0,0,0,,Jaise ki {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mere{\c&HFFFFFF&}
+Dialogue: 0,0:00:04.79,0:00:05.11,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}paas{\c&HFFFFFF&} Rolls Royce
+Dialogue: 0,0:00:05.11,0:00:05.37,Mid,,0,0,0,,paas {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Rolls{\c&HFFFFFF&} Royce
+Dialogue: 0,0:00:05.37,0:00:05.61,Mid,,0,0,0,,paas Rolls {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Royce{\c&HFFFFFF&}
+Dialogue: 0,0:00:05.61,0:00:05.83,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}nahi{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:05.83,0:00:06.06,Mid,,0,0,0,,nahi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:06.55,0:00:06.81,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Badhiya{\c&HFFFFFF&} dikh rahi
+Dialogue: 0,0:00:06.81,0:00:06.95,Mid,,0,0,0,,Badhiya {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}dikh{\c&HFFFFFF&} rahi
+Dialogue: 0,0:00:06.95,0:00:07.14,Mid,,0,0,0,,Badhiya dikh {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}rahi{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.14,0:00:07.36,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:07.63,0:00:07.81,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Aur{\c&HFFFFFF&} mere koi
+Dialogue: 0,0:00:07.81,0:00:08.05,Mid,,0,0,0,,Aur {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mere{\c&HFFFFFF&} koi
+Dialogue: 0,0:00:08.05,0:00:08.23,Mid,,0,0,0,,Aur mere {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}koi{\c&HFFFFFF&}
+Dialogue: 0,0:00:08.23,0:00:08.52,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}haath{\c&HFFFFFF&} mein crore
+Dialogue: 0,0:00:08.52,0:00:08.76,Mid,,0,0,0,,haath {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mein{\c&HFFFFFF&} crore
+Dialogue: 0,0:00:08.76,0:00:09.06,Mid,,0,0,0,,haath mein {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}crore{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.06,0:00:09.26,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}rupay{\c&HFFFFFF&} ki ghadi
+Dialogue: 0,0:00:09.26,0:00:09.34,Mid,,0,0,0,,rupay {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ki{\c&HFFFFFF&} ghadi
+Dialogue: 0,0:00:09.34,0:00:09.56,Mid,,0,0,0,,rupay ki {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ghadi{\c&HFFFFFF&}
+Dialogue: 0,0:00:09.56,0:00:09.77,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}nahi{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:09.77,0:00:10.00,Mid,,0,0,0,,nahi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:10.58,0:00:10.85,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Badhiya{\c&HFFFFFF&} humpe dikh
+Dialogue: 0,0:00:10.85,0:00:11.01,Mid,,0,0,0,,Badhiya {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}humpe{\c&HFFFFFF&} dikh
+Dialogue: 0,0:00:11.01,0:00:11.19,Mid,,0,0,0,,Badhiya humpe {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}dikh{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.19,0:00:11.35,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}rahi{\c&HFFFFFF&} hai Uske
+Dialogue: 0,0:00:11.35,0:00:11.73,Mid,,0,0,0,,rahi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&} Uske
+Dialogue: 0,0:00:11.73,0:00:11.95,Mid,,0,0,0,,rahi hai {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Uske{\c&HFFFFFF&}
+Dialogue: 0,0:00:11.95,0:00:12.19,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}alawa{\c&HFFFFFF&} peeche mere
+Dialogue: 0,0:00:12.19,0:00:12.49,Mid,,0,0,0,,alawa {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}peeche{\c&HFFFFFF&} mere
+Dialogue: 0,0:00:12.49,0:00:12.63,Mid,,0,0,0,,alawa peeche {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mere{\c&HFFFFFF&}
+Dialogue: 0,0:00:12.63,0:00:12.77,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}paas{\c&HFFFFFF&} koi mansion
+Dialogue: 0,0:00:12.77,0:00:12.91,Mid,,0,0,0,,paas {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}koi{\c&HFFFFFF&} mansion
+Dialogue: 0,0:00:12.91,0:00:13.32,Mid,,0,0,0,,paas koi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mansion{\c&HFFFFFF&}
+Dialogue: 0,0:00:13.32,0:00:13.52,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}nahi{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:13.52,0:00:13.76,Mid,,0,0,0,,nahi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.23,0:00:14.51,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Badhiya{\c&HFFFFFF&} toh dikh
+Dialogue: 0,0:00:14.51,0:00:14.61,Mid,,0,0,0,,Badhiya {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}toh{\c&HFFFFFF&} dikh
+Dialogue: 0,0:00:14.61,0:00:14.78,Mid,,0,0,0,,Badhiya toh {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}dikh{\c&HFFFFFF&}
+Dialogue: 0,0:00:14.78,0:00:14.90,Mid,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}raha{\c&HFFFFFF&} hai na
+Dialogue: 0,0:00:14.90,0:00:14.98,Mid,,0,0,0,,raha {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&} na
+Dialogue: 0,0:00:14.98,0:00:15.16,Mid,,0,0,0,,raha hai {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}na{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.40,0:00:15.54,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Aur{\c&HFFFFFF&} bhai ye
+Dialogue: 0,0:00:15.54,0:00:15.70,Cap,,0,0,0,,Aur {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bhai{\c&HFFFFFF&} ye
+Dialogue: 0,0:00:15.70,0:00:15.82,Cap,,0,0,0,,Aur bhai {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ye{\c&HFFFFFF&}
+Dialogue: 0,0:00:15.82,0:00:16.12,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}karna{\c&HFFFFFF&} na bahut
+Dialogue: 0,0:00:16.12,0:00:16.24,Cap,,0,0,0,,karna {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}na{\c&HFFFFFF&} bahut
+Dialogue: 0,0:00:16.24,0:00:16.50,Cap,,0,0,0,,karna na {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bahut{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.50,0:00:16.72,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}easy{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:16.72,0:00:16.84,Cap,,0,0,0,,easy {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:16.90,0:00:17.08,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Maine{\c&HFFFFFF&} na poori
+Dialogue: 0,0:00:17.08,0:00:17.18,Cap,,0,0,0,,Maine {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}na{\c&HFFFFFF&} poori
+Dialogue: 0,0:00:17.18,0:00:17.38,Cap,,0,0,0,,Maine na {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}poori{\c&HFFFFFF&}
+Dialogue: 0,0:00:17.38,0:00:17.50,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ek{\c&HFFFFFF&} guide create
+Dialogue: 0,0:00:17.50,0:00:17.80,Cap,,0,0,0,,ek {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}guide{\c&HFFFFFF&} create
+Dialogue: 0,0:00:17.80,0:00:18.12,Cap,,0,0,0,,ek guide {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}create{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.12,0:00:18.29,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&} rakhi hai
+Dialogue: 0,0:00:18.29,0:00:18.52,Cap,,0,0,0,,kar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}rakhi{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:18.52,0:00:18.73,Cap,,0,0,0,,kar rakhi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:18.93,0:00:19.11,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aapko{\c&HFFFFFF&} apne ChatGPT
+Dialogue: 0,0:00:19.11,0:00:19.35,Cap,,0,0,0,,aapko {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}apne{\c&HFFFFFF&} ChatGPT
+Dialogue: 0,0:00:19.35,0:00:19.91,Cap,,0,0,0,,aapko apne {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ChatGPT{\c&HFFFFFF&}
+Dialogue: 0,0:00:19.91,0:00:20.03,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mein{\c&HFFFFFF&} jaana hai
+Dialogue: 0,0:00:20.03,0:00:20.21,Cap,,0,0,0,,mein {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jaana{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:20.21,0:00:20.39,Cap,,0,0,0,,mein jaana {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:20.43,0:00:20.67,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aur{\c&HFFFFFF&} apne Higgsfield
+Dialogue: 0,0:00:20.67,0:00:20.99,Cap,,0,0,0,,aur {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}apne{\c&HFFFFFF&} Higgsfield
+Dialogue: 0,0:00:20.99,0:00:21.61,Cap,,0,0,0,,aur apne {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Higgsfield{\c&HFFFFFF&}
+Dialogue: 0,0:00:21.61,0:00:21.73,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ko{\c&HFFFFFF&} uske andar
+Dialogue: 0,0:00:21.73,0:00:21.97,Cap,,0,0,0,,ko {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}uske{\c&HFFFFFF&} andar
+Dialogue: 0,0:00:21.97,0:00:22.19,Cap,,0,0,0,,ko uske {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}andar{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.19,0:00:22.33,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&} dena hai
+Dialogue: 0,0:00:22.33,0:00:22.49,Cap,,0,0,0,,kar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}dena{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:22.49,0:00:22.57,Cap,,0,0,0,,kar dena {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:22.57,0:00:22.99,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}connect{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.04,0:00:23.18,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Phir{\c&HFFFFFF&} apni raw
+Dialogue: 0,0:00:23.18,0:00:23.42,Cap,,0,0,0,,Phir {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}apni{\c&HFFFFFF&} raw
+Dialogue: 0,0:00:23.42,0:00:23.58,Cap,,0,0,0,,Phir apni {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}raw{\c&HFFFFFF&}
+Dialogue: 0,0:00:23.58,0:00:23.82,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}video{\c&HFFFFFF&} de do
+Dialogue: 0,0:00:23.82,0:00:23.90,Cap,,0,0,0,,video {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}de{\c&HFFFFFF&} do
+Dialogue: 0,0:00:23.90,0:00:24.00,Cap,,0,0,0,,video de {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}do{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.00,0:00:24.52,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ChatGPT{\c&HFFFFFF&}
+Dialogue: 0,0:00:24.64,0:00:24.77,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Jo{\c&HFFFFFF&} bhi usmein
+Dialogue: 0,0:00:24.77,0:00:24.86,Cap,,0,0,0,,Jo {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bhi{\c&HFFFFFF&} usmein
+Dialogue: 0,0:00:24.86,0:00:25.07,Cap,,0,0,0,,Jo bhi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}usmein{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.07,0:00:25.41,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}changes{\c&HFFFFFF&} vagairah karne
+Dialogue: 0,0:00:25.41,0:00:25.67,Cap,,0,0,0,,changes {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}vagairah{\c&HFFFFFF&} karne
+Dialogue: 0,0:00:25.67,0:00:25.85,Cap,,0,0,0,,changes vagairah {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}karne{\c&HFFFFFF&}
+Dialogue: 0,0:00:25.85,0:00:26.07,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}honge{\c&HFFFFFF&} wo apne
+Dialogue: 0,0:00:26.07,0:00:26.19,Cap,,0,0,0,,honge {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}wo{\c&HFFFFFF&} apne
+Dialogue: 0,0:00:26.19,0:00:26.45,Cap,,0,0,0,,honge wo {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}apne{\c&HFFFFFF&}
+Dialogue: 0,0:00:26.45,0:00:26.73,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hisaab{\c&HFFFFFF&} se kar
+Dialogue: 0,0:00:26.73,0:00:26.83,Cap,,0,0,0,,hisaab {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}se{\c&HFFFFFF&} kar
+Dialogue: 0,0:00:26.83,0:00:27.01,Cap,,0,0,0,,hisaab se {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.01,0:00:27.29,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}lega{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.40,0:00:27.54,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Jo{\c&HFFFFFF&} guide main
+Dialogue: 0,0:00:27.54,0:00:27.82,Cap,,0,0,0,,Jo {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}guide{\c&HFFFFFF&} main
+Dialogue: 0,0:00:27.82,0:00:27.91,Cap,,0,0,0,,Jo guide {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}main{\c&HFFFFFF&}
+Dialogue: 0,0:00:27.91,0:00:28.09,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aapko{\c&HFFFFFF&} bata raha
+Dialogue: 0,0:00:28.09,0:00:28.31,Cap,,0,0,0,,aapko {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bata{\c&HFFFFFF&} raha
+Dialogue: 0,0:00:28.31,0:00:28.43,Cap,,0,0,0,,aapko bata {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}raha{\c&HFFFFFF&}
+Dialogue: 0,0:00:28.43,0:00:28.57,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hoon{\c&HFFFFFF&} wo daaloge
+Dialogue: 0,0:00:28.57,0:00:28.73,Cap,,0,0,0,,hoon {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}wo{\c&HFFFFFF&} daaloge
+Dialogue: 0,0:00:28.73,0:00:29.05,Cap,,0,0,0,,hoon wo {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}daaloge{\c&HFFFFFF&}
+Dialogue: 0,0:00:29.05,0:00:29.15,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}to{\c&HFFFFFF&} ChatGPT saara
+Dialogue: 0,0:00:29.15,0:00:29.71,Cap,,0,0,0,,to {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ChatGPT{\c&HFFFFFF&} saara
+Dialogue: 0,0:00:29.71,0:00:29.95,Cap,,0,0,0,,to ChatGPT {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}saara{\c&HFFFFFF&}
+Dialogue: 0,0:00:29.95,0:00:30.14,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kaam{\c&HFFFFFF&} apne aap
+Dialogue: 0,0:00:30.14,0:00:30.32,Cap,,0,0,0,,kaam {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}apne{\c&HFFFFFF&} aap
+Dialogue: 0,0:00:30.32,0:00:30.42,Cap,,0,0,0,,kaam apne {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aap{\c&HFFFFFF&}
+Dialogue: 0,0:00:30.42,0:00:30.56,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}khud{\c&HFFFFFF&} hi kar
+Dialogue: 0,0:00:30.56,0:00:30.64,Cap,,0,0,0,,khud {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hi{\c&HFFFFFF&} kar
+Dialogue: 0,0:00:30.64,0:00:30.80,Cap,,0,0,0,,khud hi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&}
+Dialogue: 0,0:00:30.80,0:00:31.08,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}lega{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.20,0:00:31.48,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Lekin{\c&HFFFFFF&} ek cheez
+Dialogue: 0,0:00:31.48,0:00:31.62,Low,,0,0,0,,Lekin {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ek{\c&HFFFFFF&} cheez
+Dialogue: 0,0:00:31.62,0:00:31.80,Low,,0,0,0,,Lekin ek {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}cheez{\c&HFFFFFF&}
+Dialogue: 0,0:00:31.80,0:00:31.92,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jo{\c&HFFFFFF&} koi nahi
+Dialogue: 0,0:00:31.92,0:00:32.14,Low,,0,0,0,,jo {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}koi{\c&HFFFFFF&} nahi
+Dialogue: 0,0:00:32.14,0:00:32.26,Low,,0,0,0,,jo koi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}nahi{\c&HFFFFFF&}
+Dialogue: 0,0:00:32.26,0:00:32.68,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}batata{\c&HFFFFFF&} jab bhi
+Dialogue: 0,0:00:32.68,0:00:32.82,Low,,0,0,0,,batata {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jab{\c&HFFFFFF&} bhi
+Dialogue: 0,0:00:32.82,0:00:32.92,Low,,0,0,0,,batata jab {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bhi{\c&HFFFFFF&}
+Dialogue: 0,0:00:32.92,0:00:33.04,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aap{\c&HFFFFFF&} Higgsfield vagairah
+Dialogue: 0,0:00:33.04,0:00:33.42,Low,,0,0,0,,aap {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Higgsfield{\c&HFFFFFF&} vagairah
+Dialogue: 0,0:00:33.42,0:00:33.80,Low,,0,0,0,,aap Higgsfield {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}vagairah{\c&HFFFFFF&}
+Dialogue: 0,0:00:33.80,0:00:33.95,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}use{\c&HFFFFFF&} karte
+Dialogue: 0,0:00:33.95,0:00:34.08,Low,,0,0,0,,use {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}karte{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.13,0:00:34.27,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Aur{\c&HFFFFFF&} is type
+Dialogue: 0,0:00:34.27,0:00:34.41,Cap,,0,0,0,,Aur {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}is{\c&HFFFFFF&} type
+Dialogue: 0,0:00:34.41,0:00:34.59,Cap,,0,0,0,,Aur is {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}type{\c&HFFFFFF&}
+Dialogue: 0,0:00:34.59,0:00:34.69,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ke{\c&HFFFFFF&} videos aap
+Dialogue: 0,0:00:34.69,0:00:35.03,Cap,,0,0,0,,ke {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}videos{\c&HFFFFFF&} aap
+Dialogue: 0,0:00:35.03,0:00:35.15,Cap,,0,0,0,,ke videos {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aap{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.15,0:00:35.48,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}banate{\c&HFFFFFF&}
+Dialogue: 0,0:00:35.53,0:00:35.77,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Usmein{\c&HFFFFFF&} aapke credits
+Dialogue: 0,0:00:35.77,0:00:36.01,Cap,,0,0,0,,Usmein {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aapke{\c&HFFFFFF&} credits
+Dialogue: 0,0:00:36.01,0:00:36.40,Cap,,0,0,0,,Usmein aapke {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}credits{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.40,0:00:36.63,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}lagte{\c&HFFFFFF&} hain
+Dialogue: 0,0:00:36.63,0:00:36.72,Cap,,0,0,0,,lagte {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hain{\c&HFFFFFF&}
+Dialogue: 0,0:00:36.80,0:00:37.06,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}And{\c&HFFFFFF&} obviously uske
+Dialogue: 0,0:00:37.06,0:00:37.52,Cap,,0,0,0,,And {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}obviously{\c&HFFFFFF&} uske
+Dialogue: 0,0:00:37.52,0:00:37.70,Cap,,0,0,0,,And obviously {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}uske{\c&HFFFFFF&}
+Dialogue: 0,0:00:37.70,0:00:37.94,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}andar{\c&HFFFFFF&} kharcha aata
+Dialogue: 0,0:00:37.94,0:00:38.34,Cap,,0,0,0,,andar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kharcha{\c&HFFFFFF&} aata
+Dialogue: 0,0:00:38.34,0:00:38.56,Cap,,0,0,0,,andar kharcha {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aata{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.56,0:00:38.78,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:38.86,0:00:39.02,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}But{\c&HFFFFFF&} agar dekha
+Dialogue: 0,0:00:39.02,0:00:39.24,Cap,,0,0,0,,But {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}agar{\c&HFFFFFF&} dekha
+Dialogue: 0,0:00:39.24,0:00:39.54,Cap,,0,0,0,,But agar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}dekha{\c&HFFFFFF&}
+Dialogue: 0,0:00:39.54,0:00:39.82,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jaaye{\c&HFFFFFF&} mehngi gaadi
+Dialogue: 0,0:00:39.82,0:00:40.28,Cap,,0,0,0,,jaaye {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mehngi{\c&HFFFFFF&} gaadi
+Dialogue: 0,0:00:40.28,0:00:40.66,Cap,,0,0,0,,jaaye mehngi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}gaadi{\c&HFFFFFF&}
+Dialogue: 0,0:00:40.74,0:00:41.16,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Rolls{\c&HFFFFFF&} Royce aur
+Dialogue: 0,0:00:41.16,0:00:41.47,Cap,,0,0,0,,Rolls {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Royce{\c&HFFFFFF&} aur
+Dialogue: 0,0:00:41.47,0:00:41.62,Cap,,0,0,0,,Rolls Royce {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aur{\c&HFFFFFF&}
+Dialogue: 0,0:00:41.62,0:00:42.15,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mansion{\c&HFFFFFF&} se to
+Dialogue: 0,0:00:42.15,0:00:42.27,Cap,,0,0,0,,mansion {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}se{\c&HFFFFFF&} to
+Dialogue: 0,0:00:42.27,0:00:42.39,Cap,,0,0,0,,mansion se {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}to{\c&HFFFFFF&}
+Dialogue: 0,0:00:42.39,0:00:42.69,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}sasta{\c&HFFFFFF&} hi hai
+Dialogue: 0,0:00:42.69,0:00:42.83,Cap,,0,0,0,,sasta {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hi{\c&HFFFFFF&} hai
+Dialogue: 0,0:00:42.83,0:00:43.07,Cap,,0,0,0,,sasta hi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}hai{\c&HFFFFFF&}
+Dialogue: 0,0:00:43.11,0:00:43.31,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}agar{\c&HFFFFFF&} flex karna
+Dialogue: 0,0:00:43.31,0:00:43.61,Cap,,0,0,0,,agar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}flex{\c&HFFFFFF&} karna
+Dialogue: 0,0:00:43.61,0:00:43.87,Cap,,0,0,0,,agar flex {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}karna{\c&HFFFFFF&}
+Dialogue: 0,0:00:43.87,0:00:43.99,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ho{\c&HFFFFFF&} to
+Dialogue: 0,0:00:43.99,0:00:44.16,Cap,,0,0,0,,ho {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}to{\c&HFFFFFF&}
+Dialogue: 0,0:00:44.18,0:00:44.52,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Comment{\c&HFFFFFF&} kar do
+Dialogue: 0,0:00:44.52,0:00:44.66,Low,,0,0,0,,Comment {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&} do
+Dialogue: 0,0:00:44.66,0:00:44.78,Low,,0,0,0,,Comment kar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}do{\c&HFFFFFF&}
+Dialogue: 0,0:00:44.78,0:00:45.20,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}FLEX{\c&HFFFFFF&} aapke DM
+Dialogue: 0,0:00:45.20,0:00:45.55,Low,,0,0,0,,FLEX {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aapke{\c&HFFFFFF&} DM
+Dialogue: 0,0:00:45.55,0:00:45.79,Low,,0,0,0,,FLEX aapke {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}DM{\c&HFFFFFF&}
+Dialogue: 0,0:00:45.79,0:00:45.89,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mein{\c&HFFFFFF&} poori guide
+Dialogue: 0,0:00:45.89,0:00:46.07,Low,,0,0,0,,mein {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}poori{\c&HFFFFFF&} guide
+Dialogue: 0,0:00:46.07,0:00:46.41,Low,,0,0,0,,mein poori {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}guide{\c&HFFFFFF&}
+Dialogue: 0,0:00:46.41,0:00:46.61,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}bhej{\c&HFFFFFF&} doonga
+Dialogue: 0,0:00:46.61,0:00:46.80,Low,,0,0,0,,bhej {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}doonga{\c&HFFFFFF&}
+Dialogue: 0,0:00:46.84,0:00:47.02,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Bas{\c&HFFFFFF&} follow kar
+Dialogue: 0,0:00:47.02,0:00:47.26,Low,,0,0,0,,Bas {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}follow{\c&HFFFFFF&} kar
+Dialogue: 0,0:00:47.26,0:00:47.36,Low,,0,0,0,,Bas follow {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&}
+Dialogue: 0,0:00:47.36,0:00:47.55,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}lena{\c&HFFFFFF&} warna DM
+Dialogue: 0,0:00:47.55,0:00:47.81,Low,,0,0,0,,lena {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}warna{\c&HFFFFFF&} DM
+Dialogue: 0,0:00:47.81,0:00:48.03,Low,,0,0,0,,lena warna {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}DM{\c&HFFFFFF&}
+Dialogue: 0,0:00:48.03,0:00:48.11,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}nahi{\c&HFFFFFF&} jaayega
+Dialogue: 0,0:00:48.11,0:00:48.49,Low,,0,0,0,,nahi {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jaayega{\c&HFFFFFF&}
+Dialogue: 0,0:00:48.59,0:00:48.95,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Hamara{\c&HFFFFFF&} WhatsApp channel
+Dialogue: 0,0:00:48.95,0:00:49.35,Cap,,0,0,0,,Hamara {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}WhatsApp{\c&HFFFFFF&} channel
+Dialogue: 0,0:00:49.35,0:00:49.65,Cap,,0,0,0,,Hamara WhatsApp {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}channel{\c&HFFFFFF&}
+Dialogue: 0,0:00:49.65,0:00:49.91,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}join{\c&HFFFFFF&} kar lo
+Dialogue: 0,0:00:49.91,0:00:50.05,Cap,,0,0,0,,join {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&} lo
+Dialogue: 0,0:00:50.05,0:00:50.23,Cap,,0,0,0,,join kar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}lo{\c&HFFFFFF&}
+Dialogue: 0,0:00:50.23,0:00:50.55,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}About{\c&HFFFFFF&} section mein
+Dialogue: 0,0:00:50.55,0:00:50.81,Cap,,0,0,0,,About {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}section{\c&HFFFFFF&} mein
+Dialogue: 0,0:00:50.81,0:00:50.89,Cap,,0,0,0,,About section {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mein{\c&HFFFFFF&}
+Dialogue: 0,0:00:50.89,0:00:51.03,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mil{\c&HFFFFFF&} jaayega YouTube
+Dialogue: 0,0:00:51.03,0:00:51.29,Cap,,0,0,0,,mil {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jaayega{\c&HFFFFFF&} YouTube
+Dialogue: 0,0:00:51.29,0:00:51.71,Cap,,0,0,0,,mil jaayega {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}YouTube{\c&HFFFFFF&}
+Dialogue: 0,0:00:51.71,0:00:51.89,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ke{\c&HFFFFFF&}
+Dialogue: 0,0:00:52.03,0:00:52.28,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Uske{\c&HFFFFFF&} andar aapko
+Dialogue: 0,0:00:52.28,0:00:52.48,Cap,,0,0,0,,Uske {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}andar{\c&HFFFFFF&} aapko
+Dialogue: 0,0:00:52.48,0:00:52.76,Cap,,0,0,0,,Uske andar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aapko{\c&HFFFFFF&}
+Dialogue: 0,0:00:52.76,0:00:53.12,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}poori{\c&HFFFFFF&} guide mil
+Dialogue: 0,0:00:53.12,0:00:53.36,Cap,,0,0,0,,poori {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}guide{\c&HFFFFFF&} mil
+Dialogue: 0,0:00:53.36,0:00:53.52,Cap,,0,0,0,,poori guide {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}mil{\c&HFFFFFF&}
+Dialogue: 0,0:00:53.52,0:00:53.84,Cap,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}jaayegi{\c&HFFFFFF&}
+Dialogue: 0,0:00:53.87,0:00:54.11,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}Baaki{\c&HFFFFFF&} aise content
+Dialogue: 0,0:00:54.11,0:00:54.27,Low,,0,0,0,,Baaki {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}aise{\c&HFFFFFF&} content
+Dialogue: 0,0:00:54.27,0:00:54.62,Low,,0,0,0,,Baaki aise {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}content{\c&HFFFFFF&}
+Dialogue: 0,0:00:54.62,0:00:54.67,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}ke{\c&HFFFFFF&} liye subscribe
+Dialogue: 0,0:00:54.67,0:00:54.78,Low,,0,0,0,,ke {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}liye{\c&HFFFFFF&} subscribe
+Dialogue: 0,0:00:54.78,0:00:55.16,Low,,0,0,0,,ke liye {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}subscribe{\c&HFFFFFF&}
+Dialogue: 0,0:00:55.16,0:00:55.30,Low,,0,0,0,,{\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}kar{\c&HFFFFFF&} do
+Dialogue: 0,0:00:55.30,0:00:55.50,Low,,0,0,0,,kar {\c&H20F6D2&\fscx112\fscy112\t(0,90,\fscx100\fscy100)}do{\c&HFFFFFF&}

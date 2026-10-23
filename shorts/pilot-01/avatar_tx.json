@@ -1,0 +1,979 @@
+{
+"words": [
+{
+"text": "अब",
+"start": 0.202,
+"end": 0.502,
+"prob": 0.882
+},
+{
+"text": "आप",
+"start": 0.502,
+"end": 0.662,
+"prob": 0.973
+},
+{
+"text": "भी",
+"start": 0.662,
+"end": 0.782,
+"prob": 0.976
+},
+{
+"text": "Meta",
+"start": 0.782,
+"end": 1.182,
+"prob": 0.937
+},
+{
+"text": "Ads",
+"start": 1.182,
+"end": 1.322,
+"prob": 0.817
+},
+{
+"text": "Agency",
+"start": 1.322,
+"end": 1.642,
+"prob": 0.95
+},
+{
+"text": "की",
+"start": 1.642,
+"end": 1.922,
+"prob": 0.994
+},
+{
+"text": "छुट्तिगर्दो,",
+"start": 1.922,
+"end": 2.482,
+"prob": 0.8
+},
+{
+"text": "मेन",
+"start": 2.882,
+"end": 3.562,
+"prob": 0.789
+},
+{
+"text": "इस",
+"start": 3.562,
+"end": 3.702,
+"prob": 0.936
+},
+{
+"text": "Secret",
+"start": 3.702,
+"end": 3.982,
+"prob": 0.636
+},
+{
+"text": "Claude",
+"start": 3.982,
+"end": 4.322,
+"prob": 0.52
+},
+{
+"text": "Plugin",
+"start": 4.322,
+"end": 4.622,
+"prob": 0.683
+},
+{
+"text": "को",
+"start": 4.622,
+"end": 4.782,
+"prob": 0.997
+},
+{
+"text": "टेस्ट",
+"start": 4.782,
+"end": 5.062,
+"prob": 0.943
+},
+{
+"text": "किया,",
+"start": 5.062,
+"end": 5.322,
+"prob": 0.998
+},
+{
+"text": "घंटाउन",
+"start": 5.662,
+"end": 6.102,
+"prob": 0.864
+},
+{
+"text": "का",
+"start": 6.102,
+"end": 6.242,
+"prob": 0.994
+},
+{
+"text": "Audit",
+"start": 6.242,
+"end": 6.522,
+"prob": 0.701
+},
+{
+"text": "Minuton",
+"start": 6.522,
+"end": 6.902,
+"prob": 0.882
+},
+{
+"text": "में",
+"start": 6.902,
+"end": 7.042,
+"prob": 0.997
+},
+{
+"text": "हो",
+"start": 7.042,
+"end": 7.142,
+"prob": 0.997
+},
+{
+"text": "गया,",
+"start": 7.142,
+"end": 7.362,
+"prob": 0.947
+},
+{
+"text": "दिखाता",
+"start": 7.602,
+"end": 8.022,
+"prob": 0.993
+},
+{
+"text": "हून",
+"start": 8.022,
+"end": 8.162,
+"prob": 0.897
+},
+{
+"text": "कैसे,",
+"start": 8.162,
+"end": 8.502,
+"prob": 0.997
+},
+{
+"text": "Plugin",
+"start": 8.822,
+"end": 9.222,
+"prob": 0.796
+},
+{
+"text": "का",
+"start": 9.222,
+"end": 9.422,
+"prob": 0.998
+},
+{
+"text": "नाम",
+"start": 9.422,
+"end": 9.642,
+"prob": 0.986
+},
+{
+"text": "है",
+"start": 9.642,
+"end": 9.762,
+"prob": 0.993
+},
+{
+"text": "Claude",
+"start": 9.762,
+"end": 10.042,
+"prob": 0.968
+},
+{
+"text": "Ads,",
+"start": 10.042,
+"end": 10.302,
+"prob": 0.982
+},
+{
+"text": "GitHub",
+"start": 10.802,
+"end": 11.022,
+"prob": 0.749
+},
+{
+"text": "पर",
+"start": 11.022,
+"end": 11.382,
+"prob": 0.998
+},
+{
+"text": "Free",
+"start": 11.382,
+"end": 11.622,
+"prob": 0.796
+},
+{
+"text": "है,",
+"start": 11.622,
+"end": 11.862,
+"prob": 0.995
+},
+{
+"text": "9800",
+"start": 12.082,
+"end": 13.002,
+"prob": 0.94
+},
+{
+"text": "से",
+"start": 13.002,
+"end": 13.342,
+"prob": 0.989
+},
+{
+"text": "जायदा",
+"start": 13.342,
+"end": 13.702,
+"prob": 0.891
+},
+{
+"text": "स्टार्स,",
+"start": 13.702,
+"end": 14.002,
+"prob": 0.944
+},
+{
+"text": "33",
+"start": 14.378,
+"end": 14.798,
+"prob": 0.992
+},
+{
+"text": "Skills,",
+"start": 14.798,
+"end": 15.218,
+"prob": 0.181
+},
+{
+"text": "25",
+"start": 15.418,
+"end": 15.838,
+"prob": 0.998
+},
+{
+"text": "AI",
+"start": 15.838,
+"end": 16.258,
+"prob": 0.994
+},
+{
+"text": "Agents,",
+"start": 16.258,
+"end": 16.718,
+"prob": 0.814
+},
+{
+"text": "Audit,",
+"start": 16.898,
+"end": 17.418,
+"prob": 0.974
+},
+{
+"text": "Competitor",
+"start": 17.558,
+"end": 18.098,
+"prob": 0.982
+},
+{
+"text": "Research,",
+"start": 18.098,
+"end": 18.378,
+"prob": 0.995
+},
+{
+"text": "Budget.",
+"start": 18.698,
+"end": 18.938,
+"prob": 0.992
+},
+{
+"text": "Claude",
+"start": 19.238,
+"end": 19.758,
+"prob": 0.506
+},
+{
+"text": "Code",
+"start": 19.758,
+"end": 19.958,
+"prob": 0.843
+},
+{
+"text": "में",
+"start": 19.958,
+"end": 20.178,
+"prob": 0.977
+},
+{
+"text": "install",
+"start": 20.178,
+"end": 20.358,
+"prob": 0.547
+},
+{
+"text": "करो,",
+"start": 20.358,
+"end": 20.698,
+"prob": 0.964
+},
+{
+"text": "add",
+"start": 20.878,
+"end": 21.038,
+"prob": 0.275
+},
+{
+"text": "account",
+"start": 21.038,
+"end": 21.278,
+"prob": 0.974
+},
+{
+"text": "connect",
+"start": 21.278,
+"end": 21.598,
+"prob": 0.849
+},
+{
+"text": "करो.",
+"start": 21.598,
+"end": 21.898,
+"prob": 0.996
+},
+{
+"text": "अब",
+"start": 22.218,
+"end": 22.498,
+"prob": 0.989
+},
+{
+"text": "बोलो,",
+"start": 22.498,
+"end": 22.758,
+"prob": 0.992
+},
+{
+"text": "इस",
+"start": 23.038,
+"end": 23.198,
+"prob": 0.998
+},
+{
+"text": "हफ्ते",
+"start": 23.198,
+"end": 23.538,
+"prob": 0.77
+},
+{
+"text": "के",
+"start": 23.538,
+"end": 23.658,
+"prob": 0.997
+},
+{
+"text": "मेरे",
+"start": 23.658,
+"end": 23.918,
+"prob": 0.991
+},
+{
+"text": "ads",
+"start": 23.918,
+"end": 24.158,
+"prob": 0.652
+},
+{
+"text": "audit",
+"start": 24.158,
+"end": 24.398,
+"prob": 0.946
+},
+{
+"text": "करो,",
+"start": 24.398,
+"end": 24.738,
+"prob": 0.998
+},
+{
+"text": "बूम,",
+"start": 24.938,
+"end": 25.278,
+"prob": 0.904
+},
+{
+"text": "कौन",
+"start": 25.478,
+"end": 25.818,
+"prob": 0.973
+},
+{
+"text": "साथ",
+"start": 25.818,
+"end": 26.018,
+"prob": 0.808
+},
+{
+"text": "काम",
+"start": 26.018,
+"end": 26.258,
+"prob": 0.983
+},
+{
+"text": "कर",
+"start": 26.258,
+"end": 26.438,
+"prob": 0.995
+},
+{
+"text": "रहा",
+"start": 26.438,
+"end": 26.598,
+"prob": 0.988
+},
+{
+"text": "है,",
+"start": 26.598,
+"end": 26.698,
+"prob": 0.998
+},
+{
+"text": "कौन",
+"start": 26.778,
+"end": 27.018,
+"prob": 0.997
+},
+{
+"text": "सा",
+"start": 27.018,
+"end": 27.098,
+"prob": 0.998
+},
+{
+"text": "पैसा",
+"start": 27.098,
+"end": 27.378,
+"prob": 0.993
+},
+{
+"text": "जला",
+"start": 27.378,
+"end": 27.638,
+"prob": 0.886
+},
+{
+"text": "रहा",
+"start": 27.638,
+"end": 27.798,
+"prob": 0.999
+},
+{
+"text": "है,",
+"start": 27.798,
+"end": 27.878,
+"prob": 0.999
+},
+{
+"text": "सब",
+"start": 27.938,
+"end": 28.138,
+"prob": 0.993
+},
+{
+"text": "सामने,",
+"start": 28.138,
+"end": 28.518,
+"prob": 0.992
+},
+{
+"text": "Higgsfield",
+"start": 28.818,
+"end": 29.258,
+"prob": 0.542
+},
+{
+"text": "MCP",
+"start": 29.258,
+"end": 29.638,
+"prob": 0.821
+},
+{
+"text": "जोडो,",
+"start": 29.638,
+"end": 29.938,
+"prob": 0.957
+},
+{
+"text": "और",
+"start": 30.118,
+"end": 30.238,
+"prob": 0.997
+},
+{
+"text": "7",
+"start": 30.238,
+"end": 30.458,
+"prob": 0.892
+},
+{
+"text": "नए",
+"start": 30.458,
+"end": 30.738,
+"prob": 0.951
+},
+{
+"text": "ad",
+"start": 30.738,
+"end": 30.938,
+"prob": 0.864
+},
+{
+"text": "creatives",
+"start": 30.938,
+"end": 31.378,
+"prob": 0.971
+},
+{
+"text": "भी",
+"start": 31.378,
+"end": 31.538,
+"prob": 0.988
+},
+{
+"text": "ready,",
+"start": 31.538,
+"end": 31.718,
+"prob": 0.757
+},
+{
+"text": "और",
+"start": 32.238,
+"end": 32.478,
+"prob": 0.998
+},
+{
+"text": "आपके",
+"start": 32.478,
+"end": 32.738,
+"prob": 0.998
+},
+{
+"text": "approval",
+"start": 32.738,
+"end": 32.958,
+"prob": 0.978
+},
+{
+"text": "के",
+"start": 32.958,
+"end": 33.218,
+"prob": 0.995
+},
+{
+"text": "भीना,",
+"start": 33.218,
+"end": 33.518,
+"prob": 0.85
+},
+{
+"text": "account",
+"start": 33.698,
+"end": 33.918,
+"prob": 0.76
+},
+{
+"text": "में",
+"start": 33.918,
+"end": 34.138,
+"prob": 0.998
+},
+{
+"text": "कुछ",
+"start": 34.138,
+"end": 34.298,
+"prob": 0.99
+},
+{
+"text": "change",
+"start": 34.298,
+"end": 34.518,
+"prob": 0.979
+},
+{
+"text": "नहीं",
+"start": 34.518,
+"end": 34.738,
+"prob": 0.999
+},
+{
+"text": "होता,",
+"start": 34.738,
+"end": 34.998,
+"prob": 0.999
+},
+{
+"text": "Main",
+"start": 35.242,
+"end": 35.682,
+"prob": 0.325
+},
+{
+"text": "is",
+"start": 35.682,
+"end": 35.882,
+"prob": 0.972
+},
+{
+"text": "Claude",
+"start": 35.882,
+"end": 36.202,
+"prob": 0.634
+},
+{
+"text": "Ads",
+"start": 36.202,
+"end": 36.342,
+"prob": 0.857
+},
+{
+"text": "plugin",
+"start": 36.342,
+"end": 36.622,
+"prob": 0.58
+},
+{
+"text": "का",
+"start": 36.622,
+"end": 36.942,
+"prob": 0.994
+},
+{
+"text": "direct",
+"start": 36.942,
+"end": 37.122,
+"prob": 0.762
+},
+{
+"text": "link",
+"start": 37.122,
+"end": 37.402,
+"prob": 0.998
+},
+{
+"text": "और",
+"start": 37.402,
+"end": 37.662,
+"prob": 0.993
+},
+{
+"text": "setup",
+"start": 37.662,
+"end": 37.902,
+"prob": 0.922
+},
+{
+"text": "guide",
+"start": 37.902,
+"end": 38.142,
+"prob": 0.995
+},
+{
+"text": "अपने",
+"start": 38.142,
+"end": 38.462,
+"prob": 0.998
+},
+{
+"text": "WhatsApp",
+"start": 38.462,
+"end": 38.682,
+"prob": 0.898
+},
+{
+"text": "channel",
+"start": 38.682,
+"end": 39.062,
+"prob": 0.583
+},
+{
+"text": "में",
+"start": 39.062,
+"end": 39.302,
+"prob": 0.999
+},
+{
+"text": "दाल",
+"start": 39.302,
+"end": 39.502,
+"prob": 0.962
+},
+{
+"text": "दिया",
+"start": 39.502,
+"end": 39.702,
+"prob": 0.994
+},
+{
+"text": "है।",
+"start": 39.702,
+"end": 40.242,
+"prob": 0.834
+},
+{
+"text": "अगर",
+"start": 40.242,
+"end": 40.462,
+"prob": 0.995
+},
+{
+"text": "आपको",
+"start": 40.462,
+"end": 40.702,
+"prob": 0.998
+},
+{
+"text": "WhatsApp",
+"start": 40.702,
+"end": 40.902,
+"prob": 0.98
+},
+{
+"text": "channel",
+"start": 40.902,
+"end": 41.262,
+"prob": 0.992
+},
+{
+"text": "का",
+"start": 41.262,
+"end": 41.442,
+"prob": 0.995
+},
+{
+"text": "link",
+"start": 41.442,
+"end": 41.582,
+"prob": 0.98
+},
+{
+"text": "चाहिए",
+"start": 41.582,
+"end": 41.882,
+"prob": 0.987
+},
+{
+"text": "तो",
+"start": 41.882,
+"end": 42.002,
+"prob": 0.819
+},
+{
+"text": "अभी",
+"start": 42.002,
+"end": 42.202,
+"prob": 0.993
+},
+{
+"text": "follow",
+"start": 42.202,
+"end": 42.422,
+"prob": 0.939
+},
+{
+"text": "करके",
+"start": 42.422,
+"end": 42.762,
+"prob": 0.987
+},
+{
+"text": "comment",
+"start": 42.762,
+"end": 43.002,
+"prob": 0.996
+},
+{
+"text": "करो",
+"start": 43.002,
+"end": 43.282,
+"prob": 0.998
+},
+{
+"text": "Meta.",
+"start": 43.282,
+"end": 43.582,
+"prob": 0.61
+},
+{
+"text": "Link",
+"start": 44.01,
+"end": 44.33,
+"prob": 0.253
+},
+{
+"text": "सीधा",
+"start": 44.33,
+"end": 44.61,
+"prob": 0.958
+},
+{
+"text": "आपके",
+"start": 44.61,
+"end": 44.89,
+"prob": 0.994
+},
+{
+"text": "DM",
+"start": 44.89,
+"end": 45.11,
+"prob": 0.931
+},
+{
+"text": "में",
+"start": 45.11,
+"end": 45.31,
+"prob": 0.998
+},
+{
+"text": "भे",
+"start": 45.31,
+"end": 45.47,
+"prob": 0.988
+},
+{
+"text": "दूंगा,",
+"start": 45.47,
+"end": 45.83,
+"prob": 0.798
+},
+{
+"text": "तो",
+"start": 45.97,
+"end": 46.19,
+"prob": 0.995
+},
+{
+"text": "अभी",
+"start": 46.19,
+"end": 46.37,
+"prob": 0.985
+},
+{
+"text": "चैनल",
+"start": 46.37,
+"end": 46.65,
+"prob": 0.934
+},
+{
+"text": "के",
+"start": 46.65,
+"end": 46.77,
+"prob": 0.892
+},
+{
+"text": "description",
+"start": 46.77,
+"end": 46.97,
+"prob": 0.699
+},
+{
+"text": "में",
+"start": 46.97,
+"end": 47.35,
+"prob": 0.998
+},
+{
+"text": "दीगई,",
+"start": 47.35,
+"end": 47.55,
+"prob": 0.791
+},
+{
+"text": "link",
+"start": 47.61,
+"end": 47.75,
+"prob": 0.536
+},
+{
+"text": "से",
+"start": 47.75,
+"end": 47.91,
+"prob": 0.999
+},
+{
+"text": "हमारे",
+"start": 47.91,
+"end": 48.23,
+"prob": 0.998
+},
+{
+"text": "WhatsApp",
+"start": 48.23,
+"end": 48.43,
+"prob": 0.919
+},
+{
+"text": "channel",
+"start": 48.43,
+"end": 48.79,
+"prob": 0.077
+},
+{
+"text": "को",
+"start": 48.79,
+"end": 49.01,
+"prob": 0.995
+},
+{
+"text": "join",
+"start": 49.01,
+"end": 49.15,
+"prob": 0.82
+},
+{
+"text": "कर",
+"start": 49.15,
+"end": 49.41,
+"prob": 0.997
+},
+{
+"text": "लो.",
+"start": 49.41,
+"end": 49.53,
+"prob": 0.97
+}
+],
+"chunks": [
+[
+0.2,
+14.2,
+"अब आप भी Meta Ads Agency की छुट्तिगर्दो, मेन इस Secret Claude Plugin को टेस्ट किया, घंटाउन का Audit Minuton में हो गया, दिखाता हून कैसे, Plugin का नाम है Claude Ads, GitHub पर Free है, 9800 से जायदा स्टार्स,"
+],
+[
+14.38,
+22.01,
+"33 Skills, 25 AI Agents, Audit, Competitor Research, Budget. Claude Code में install करो, add account connect करो."
+],
+[
+22.22,
+35.03,
+"अब बोलो, इस हफ्ते के मेरे ads audit करो, बूम, कौन साथ काम कर रहा है, कौन सा पैसा जला रहा है, सब सामने, Higgsfield MCP जोडो, और 7 नए ad creatives भी ready, और आपके approval के भीना, account में कुछ change नहीं होता,"
+],
+[
+35.24,
+43.83,
+"Main is Claude Ads plugin का direct link और setup guide अपने WhatsApp channel में दाल दिया है। अगर आपको WhatsApp channel का link चाहिए तो अभी follow करके comment करो Meta."
+],
+[
+44.01,
+49.65,
+"Link सीधा आपके DM में भे दूंगा, तो अभी चैनल के description में दीगई, link से हमारे WhatsApp channel को join कर लो."
+]
+]
+}

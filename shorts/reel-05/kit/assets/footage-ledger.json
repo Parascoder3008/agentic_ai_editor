@@ -1,0 +1,46 @@
+[
+ {
+  "scene": "s00",
+  "sourceSceneId": "flow-paras-night-phone",
+  "asset": "assets/hook-flow.mp4",
+  "sha256": "abcade8330ca0355f081fbcfcbabafaba6001662fd984f1702667ad16b879b96",
+  "sourceStart": 0.0,
+  "sourceEnd": 5.4,
+  "framing": {
+   "9x16": "Three moments of one Flow shot (1.75-3.15, 4.40-6.20, 6.90-9.10); mouth closed; hook text low over the desk"
+  }
+ },
+ {
+  "scene": "s01",
+  "sourceSceneId": "flow-customer-2am",
+  "asset": "assets/customer-2am.mp4",
+  "sha256": "7e26e84f10e9933c88f4675c2b6ac69345f6f66d9b118f33c7139fd62a03d5a5",
+  "sourceStart": 1.2,
+  "sourceEnd": 6.2,
+  "framing": {
+   "9x16": "Typing, the 2:04 clock, close-up; her message bubble at the top"
+  }
+ },
+ {
+  "scene": "s03",
+  "sourceSceneId": "flow-salon-owner",
+  "asset": "assets/owner-booked.mp4",
+  "sha256": "177ff6e5354b38f411bee778d132b7bf5994264f7cd2302fba82c7b5d429c7ce",
+  "sourceStart": 4.9,
+  "sourceEnd": 6.22,
+  "framing": {
+   "9x16": "Grin at the phone into a thumbs-up; no label"
+  }
+ },
+ {
+  "scene": "s11",
+  "sourceSceneId": "flow-owner-asleep",
+  "asset": "assets/agent-24h.mp4",
+  "sha256": "fdb7bc731d0eb496dfb53699024ddb095566b0e811cd97761d161adf8af33a7a",
+  "sourceStart": 5.2,
+  "sourceEnd": 8.2,
+  "framing": {
+   "9x16": "Phone pulses on the nightstand while he sleeps; 24 GHANTE above"
+  }
+ }
+]

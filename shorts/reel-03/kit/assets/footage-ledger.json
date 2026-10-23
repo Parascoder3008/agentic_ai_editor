@@ -1,0 +1,35 @@
+[
+ {
+  "scene": "s00",
+  "sourceSceneId": "flow-night-forehead",
+  "asset": "assets/hook-night-a.mp4",
+  "sha256": "23be2506af4f414d98d4aaef6d47f7dff22f35507dcf9b77c124068db3ff6a0b",
+  "sourceStart": 0.15,
+  "sourceEnd": 1.55,
+  "framing": {
+   "9x16": "Full frame; face and sticky notes visible; LEVEL 1 above the head"
+  }
+ },
+ {
+  "scene": "s01",
+  "sourceSceneId": "flow-night-typing",
+  "asset": "assets/hook-night-b.mp4",
+  "sha256": "23be2506af4f414d98d4aaef6d47f7dff22f35507dcf9b77c124068db3ff6a0b",
+  "sourceStart": 5.3,
+  "sourceEnd": 7.02,
+  "framing": {
+   "9x16": "Full frame; typing hands and lit phone visible"
+  }
+ },
+ {
+  "scene": "s02",
+  "sourceSceneId": "flow-morning-smirk",
+  "asset": "assets/hook-morning.mp4",
+  "sha256": "063b82842d12efee0c74b25c5ee3f6371f3f9c90b8ea2d7602039ee72e3dc426",
+  "sourceStart": 8.2,
+  "sourceEnd": 9.89,
+  "framing": {
+   "9x16": "Close-up smirk; mouth closed; no laptop/Apple logo in frame"
+  }
+ }
+]

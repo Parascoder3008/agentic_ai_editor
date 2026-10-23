@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,600;0,700;0,800;0,900;1,900&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@600&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="watch.js"></script>
+    <script src="words.js"></script>
+    <style>
+      /* client style (ref: "Clauditing" reel) + the client's own numbers look (yellow, outlined) */
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      :root { --navy: #1D1B33; --plum: #2B1E36; --coral: #F2A27E; --pink: #F06A8C; --cream: #F4EFE8; --yellow: #FFD60A; }
+      .a { position: absolute; }
+      .c { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; }
+      .heavy { font-weight: 900; letter-spacing: -0.035em; text-shadow: 0 8px 30px rgba(0,0,0,0.45); }
+      .serif { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em;
+        background: linear-gradient(180deg, #FFC7A8 5%, #FF8FB0 60%, #FF6F98 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+        filter: drop-shadow(0 3px 0 rgba(20,10,25,0.85)) drop-shadow(0 6px 18px rgba(0,0,0,0.55)) drop-shadow(0 0 24px rgba(240,106,140,0.6));
+        padding: 0 0.12em 0.08em; }
+      .num { font-weight: 900; color: var(--yellow); -webkit-text-stroke: 7px #111; paint-order: stroke fill; letter-spacing: -0.02em;
+        text-shadow: 0 8px 0 rgba(0,0,0,0.35); }
+      .card { background: var(--navy); border-radius: 22px; box-shadow: 0 18px 50px rgba(0,0,0,0.45); }
+      .chip { padding: 12px 24px 14px; border-radius: 18px; font-weight: 800; font-size: 34px; white-space: nowrap;
+        background: rgba(43,30,54,0.92); border: 2px solid rgba(240,106,140,0.45); box-shadow: 0 14px 40px rgba(0,0,0,0.4); }
+      .pinkpill { padding: 12px 34px 14px; border-radius: 999px; background: linear-gradient(90deg, var(--pink), #FF7FA3); font-weight: 800;
+        font-size: 38px; white-space: nowrap; box-shadow: 0 0 34px rgba(240,106,140,0.7); }
+      /* sticker = selected text box: dark fill, pink outline, four handles */
+      .stk { padding: 6px 30px 14px; background: var(--navy); border: 4px solid var(--pink); font-weight: 900; letter-spacing: -0.03em; white-space: nowrap; }
+      .stk i { position: absolute; width: 18px; height: 18px; background: #FFFFFF; border: 4px solid var(--pink); }
+      .stk i:nth-child(1) { left: -11px; top: -11px; } .stk i:nth-child(2) { right: -11px; top: -11px; }
+      .stk i:nth-child(3) { left: -11px; bottom: -11px; } .stk i:nth-child(4) { right: -11px; bottom: -11px; }
+      /* prompt card */
+      #bar { left: 90px; top: 214px; width: 840px; height: 118px; padding: 14px 24px; }
+      #bar .lb { position: absolute; left: 26px; top: 16px; font-family: "JetBrains Mono", monospace; font-size: 20px; font-weight: 600; color: #A49DC0; letter-spacing: 0.14em; }
+      #btext { position: absolute; left: 26px; top: 50px; right: 120px; font-size: 34px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+      #caret { display: inline-block; width: 3px; height: 36px; background: var(--coral); vertical-align: -6px; margin-left: 3px; }
+      #bsend { position: absolute; right: 22px; top: 31px; width: 58px; height: 58px; border-radius: 50%; background: var(--coral); color: var(--navy);
+        text-align: center; line-height: 56px; font-size: 32px; font-weight: 900; }
+      #bdone { position: absolute; right: 18px; top: 33px; padding: 8px 14px 10px; border-radius: 14px; font-size: 26px; font-weight: 900; background: var(--pink); }
+      #cnt { right: 150px; top: 340px; font-size: 76px; line-height: 80px; }
+      /* kinetic captions */
+      #cap { left: 0; right: 0; text-align: center; white-space: nowrap; }
+      #cap.w { font-weight: 900; font-size: 116px; letter-spacing: -0.04em; text-shadow: 0 8px 30px rgba(0,0,0,0.5); }
+      #ghost { left: 0; right: 0; text-align: center; font-weight: 800; font-size: 46px; color: rgba(255,255,255,0.55); white-space: nowrap; }
+      /* spotlight */
+      #dim { left: 0; top: 0; width: 1080px; height: 1920px; }
+      #ring { width: 270px; height: 270px; border-radius: 50%; border: 6px solid var(--pink); box-shadow: 0 0 44px rgba(240,106,140,0.85), inset 0 0 30px rgba(240,106,140,0.4); }
+      .tile { width: 168px; height: 118px; padding-top: 10px; text-align: center; font-size: 46px; line-height: 54px; border-radius: 22px;
+        background: rgba(43,30,54,0.92); border: 2px solid rgba(240,106,140,0.5); box-shadow: 0 14px 40px rgba(0,0,0,0.45); }
+      .tile b { display: block; font-size: 25px; font-weight: 800; line-height: 30px; }
+      #flash { left: 0; top: 0; width: 1080px; height: 1920px; background: #FFFFFF; }
+      /* before/after wipe */
+      #wline { top: 0; width: 6px; height: 1920px; background: #FFFFFF; box-shadow: 0 0 18px rgba(0,0,0,0.35); }
+      #whandle { width: 64px; height: 64px; border-radius: 50%; background: #FFFFFF; color: #222; font-weight: 900; font-size: 30px; text-align: center; line-height: 62px; top: 1436px; }
+      .wl { top: 1512px; padding: 6px 16px 8px; border-radius: 12px; background: rgba(255,255,255,0.92); color: #222; font-family: "JetBrains Mono", monospace; font-size: 24px; font-weight: 600; }
+      /* comment bar */
+      #cbar { left: 140px; top: 236px; width: 790px; height: 92px; border-radius: 999px; background: #FFFFFF; color: #222; box-shadow: 0 14px 40px rgba(0,0,0,0.35); }
+      #cbar .av { position: absolute; left: 18px; top: 16px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--coral), var(--pink)); }
+      #ctext { position: absolute; left: 98px; top: 22px; font-size: 38px; font-weight: 800; }
+      #cbar .post { position: absolute; right: 30px; top: 26px; font-size: 32px; font-weight: 800; color: #3897F0; }
+      .vs { width: 330px; padding: 16px 10px 18px; text-align: center; font-size: 40px; font-weight: 900; }
+      #sb { background: #E53935; color: #FFFFFF; font-size: 70px; padding: 14px 44px 20px; border-radius: 22px; font-weight: 900; box-shadow: 0 0 40px rgba(229,57,53,0.5); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="67.57" data-width="1080" data-height="1920">
+      <div id="all" class="clip" data-start="0" data-duration="67.57" data-track-index="0" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+        <div id="dim" class="a"></div>
+        <div id="ring" class="a"></div>
+        <div id="plabel" class="a pinkpill" style="font-size:30px;padding:8px 22px 10px">⌚ PRODUCT</div>
+        <!-- kinetic captions -->
+        <div id="ghost" class="a"></div>
+        <div id="cap" class="a w"></div>
+        <!-- hook -->
+        <div id="h0" class="c" style="top:226px;text-align:center"><span class="num" style="font-size:190px;line-height:190px">0</span>
+          <div class="heavy" style="font-size:64px;margin-top:-6px">EDITORS</div></div>
+        <div id="h1" class="c" style="top:214px;text-align:center"><div class="heavy" style="font-size:132px;line-height:130px">Poori AI</div>
+          <div class="serif" style="font-size:172px;line-height:150px">se edit.</div></div>
+        <!-- prompt card + client-style edit counter -->
+        <div id="bar" class="a card">
+          <div class="lb">TO CLAUDE</div>
+          <div id="btext"><span id="bt"></span><span id="caret"></span></div>
+          <div id="bsend">↑</div><div id="bdone">✓ Done</div>
+        </div>
+        <div id="cnt" class="a num">#1</div>
+        <!-- card layout -->
+        <div id="c1" class="a chip" style="left:520px;top:440px">✨ Motion graphics</div>
+        <div id="c2" class="a chip" style="left:520px;top:530px">💬 Captions</div>
+        <div id="c3" class="a chip" style="left:520px;top:620px">🔊 SFX + music</div>
+        <div id="rt" class="a pinkpill" style="left:540px;top:712px;font-size:26px;padding:6px 18px 8px">📼 Meri reel</div>
+        <!-- graphics out of the watch -->
+        <div id="k1" class="a tile">✂️<b>Cuts</b></div>
+        <div id="k2" class="a tile">💬<b>Captions</b></div>
+        <div id="k3" class="a tile">🎵<b>Music</b></div>
+        <div id="k4" class="a tile">✨<b>Motion</b></div>
+        <div id="k5" class="a tile">🔍<b>Zoom</b></div>
+        <div id="k6" class="a tile">🎞️<b>B-roll</b></div>
+        <!-- before / after wipe into the paper world -->
+        <div id="wline" class="a"></div>
+        <div id="whandle" class="a">‹ ›</div>
+        <div id="wb" class="a wl">before</div>
+        <div id="wa" class="a wl">after</div>
+        <!-- product B-roll label (client video style: bold italic product name between panels) -->
+        <div id="plab" class="c" style="top:884px;font-size:52px;font-weight:900;font-style:italic;color:#151515;letter-spacing:-0.02em">Gaming PC Build ⚡</div>
+        <!-- headlines -->
+        <div id="bye" class="c" style="top:250px;text-align:center"><div class="heavy" style="font-size:118px;line-height:116px">Bhai saab</div>
+          <div class="serif" style="font-size:190px;line-height:160px">bye.</div></div>
+        <div id="aap" class="c" style="top:258px;text-align:center"><div class="heavy" style="font-size:84px;line-height:92px">Aap bhi kar sakte ho</div></div>
+        <div id="easy" class="c serif" style="top:350px;font-size:150px;line-height:150px">bahut aasaan.</div>
+        <!-- CTA (IG + YT) -->
+        <div id="stc" class="c stk" style="top:248px;font-size:104px"><i></i><i></i><i></i><i></i>CLAUDE</div>
+        <div id="ved" class="c serif" style="top:392px;font-size:120px;line-height:130px">→ video editor.</div>
+        <div id="guide" class="c chip" style="top:262px;font-size:42px">📘 Poori guide · step-by-step</div>
+        <div id="cbar" class="a"><div class="av"></div><div id="ctext"><span id="ct"></span><span style="display:inline-block;width:3px;height:40px;background:#222;vertical-align:-7px"></span></div><div class="post">Post</div></div>
+        <div id="cm" class="c" style="top:356px;font-size:38px;font-weight:800;text-shadow:0 4px 18px rgba(0,0,0,0.6)">comment 👇</div>
+        <div id="ste" class="c stk" style="top:410px;font-size:150px;line-height:160px"><i></i><i></i><i></i><i></i>EDIT</div>
+        <div id="dm" class="c chip" style="top:620px;font-size:36px">📩 Guide seedha DM mein</div>
+        <div id="fo" class="c pinkpill" style="top:1090px">✓ Following</div>
+        <div id="home" class="c chip" style="top:262px;font-size:46px">🏠 Ghar baithe editing</div>
+        <div id="cost" class="c chip" style="top:246px;font-size:44px">💸 AI = thoda kharcha</div>
+        <div id="vsA" class="a vs card" style="left:150px;top:350px">🤖 AI<div class="num" style="font-size:84px;line-height:96px">₹?</div></div>
+        <div id="vsB" class="a vs card" style="left:600px;top:350px">👨‍💻 Editor<div class="num" style="font-size:84px;line-height:96px">₹?</div></div>
+        <div id="vsX" class="a serif" style="left:494px;top:410px;font-size:90px">vs</div>
+        <div id="p2" class="c chip" style="top:262px;font-size:42px">Kaun sasta? Agle video mein 👀</div>
+        <div id="fo2" class="c pinkpill" style="top:390px;font-size:76px;padding:14px 48px 18px">✓ Following</div>
+        <div id="yab" class="c chip" style="top:262px;font-size:42px">▶ YouTube → About section ⬇</div>
+        <div id="ywa" class="c pinkpill" style="top:376px;font-size:42px">💬 WhatsApp channel join karo</div>
+        <div id="ypo" class="c chip" style="top:478px;font-size:38px">📘 Guide wahan post hogi</div>
+        <div id="sb" class="c" style="top:300px">SUBSCRIBE 🔔</div>
+        <div id="flash" class="a"></div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const $ = (s) => document.querySelector(s);
+      const ALL = ["#dim", "#ring", "#plabel", "#h0", "#h1", "#bar", "#bdone", "#cnt", "#c1", "#c2", "#c3", "#rt", "#k1", "#k2", "#k3", "#k4", "#k5", "#k6",
+                   "#wline", "#whandle", "#wb", "#wa", "#plab", "#bye", "#aap", "#easy", "#stc", "#ved", "#guide", "#cbar", "#cm", "#ste", "#dm", "#fo",
+                   "#home", "#cost", "#vsA", "#vsB", "#vsX", "#p2", "#fo2", "#yab", "#ywa", "#ypo", "#sb", "#flash"];
+      gsap.set(ALL, { opacity: 0 });
+      const pop = (sel, t, d = 0.28) => tl.fromTo(sel, { opacity: 0, scale: 0.8, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2.2)", immediateRender: false }, t);
+      const out = (sel, t, d = 0.14) => tl.to(sel, { opacity: 0, duration: d, ease: "power1.in" }, t);
+      const win = (sel, t0, t1, d) => { pop(sel, t0, d); out(sel, t1 - 0.14); };
+      const slam = (sel, t) => tl.fromTo(sel, { opacity: 0, scale: 1.6, filter: "blur(14px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.22, ease: "power3.out", immediateRender: false }, t);
+
+      // ---- hook: yellow "0 EDITORS" on frame 1, then the headline slams on "AI" (pitch-drop hit)
+      win("#h0", 0.05, 4.37, 0.3);
+      slam("#h1", 4.37); out("#h1", 5.56);
+
+      // ---- prompt card: each instruction types while he says it; ✓ + yellow counter on the word it executes
+      const PROMPTS = [[5.75, 7.90, 8.55, "Mujhe top-left corner mein le ja"],
+                       [8.90, 11.00, 12.30, "Neeche meri reel + graphics laga"],
+                       [12.70, 14.90, 15.40, "Mere peeche text daal"],
+                       [15.90, 17.20, 17.90, "Ab font cinematic kar"],
+                       [19.85, 22.20, 22.45, "Haath ka product highlight kar"],
+                       [23.42, 25.00, 27.40, "Ghadi se graphics nikaal + wapas"],
+                       [27.80, 29.30, 29.95, "Paper cut effect bana"],
+                       [30.40, 33.80, 34.40, "Side mein le ja + B-roll laga"],
+                       [34.80, 35.80, 36.06, "Wapas aa ke bye bol"]];
+      tl.fromTo("#bar", { opacity: 0, y: -40 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", immediateRender: false }, 5.66);
+      tl.to("#bar", { opacity: 0, y: -40, duration: 0.25, ease: "power2.in" }, 36.45);
+      PROMPTS.forEach(([a, b, d], i) => {
+        tl.fromTo("#bar", { boxShadow: "0 0 70px rgba(240,106,140,0.85)" }, { boxShadow: "0 18px 50px rgba(0,0,0,0.45)", duration: 0.5, immediateRender: false }, d);
+        tl.fromTo("#cnt", { opacity: 0, scale: 1.8, rotation: -8 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.24, ease: "back.out(2.6)", immediateRender: false }, d);
+        tl.to("#cnt", { opacity: 0, duration: 0.2 }, Math.min(d + 1.1, (PROMPTS[i + 1] || [99])[0] + 0.5, 36.4));
+      });
+
+      // ---- card layout extras
+      win("#rt", 10.85, 13.87); win("#c1", 11.64, 13.87); win("#c2", 11.88, 13.87); win("#c3", 12.17, 13.87);
+
+      // ---- graphics out of the watch (25.04) and back in (27.02)
+      const TILES = [["#k1", 190, 430], ["#k2", 380, 405], ["#k3", 570, 395], ["#k4", 760, 410], ["#k5", 190, 640], ["#k6", 190, 850]];
+      const W0 = [667, 829], W1 = [714, 869];
+      TILES.forEach(([s, x, y], i) => {
+        tl.fromTo(s, { x: W0[0] - 84, y: W0[1] - 59, scale: 0.15, opacity: 0, rotation: -25 },
+                     { x: x - 84, y: y - 59, scale: 1, opacity: 1, rotation: (i % 2 ? 4 : -4), duration: 0.55, ease: "back.out(1.6)", immediateRender: false }, 25.04 + i * 0.06);
+        tl.to(s, { y: y - 59 - 10, duration: 0.6, yoyo: true, repeat: 1, ease: "sine.inOut" }, 25.7 + i * 0.05);
+        tl.to(s, { x: W1[0] - 84, y: W1[1] - 59, scale: 0.12, opacity: 0, rotation: 0, duration: 0.38, ease: "power3.in" }, 27.02 + (5 - i) * 0.04);
+      });
+      tl.fromTo("#ring", { scale: 1.6 }, { scale: 1, duration: 0.3, ease: "power2.out", immediateRender: false }, 27.30);
+      tl.fromTo("#flash", { opacity: 0.85 }, { opacity: 0, duration: 0.14, immediateRender: false }, 27.70);
+
+      // ---- before/after wipe (line position mirrors compose_base.py WIPE) + product label
+      tl.set(["#wline", "#whandle", "#wb", "#wa"], { opacity: 1 }, 29.40); tl.to(["#wline", "#whandle", "#wb", "#wa"], { opacity: 0, duration: 0.2 }, 29.80);
+      win("#plab", 32.30, 35.78);
+
+      // ---- bye + "aap bhi kar sakte ho"
+      slam("#bye", 36.86); out("#bye", 37.18);
+      win("#aap", 38.12, 39.80); slam("#easy", 39.48); out("#easy", 39.66);
+
+      // ---- IG tail
+      slam("#stc", 40.54); out("#stc", 43.06); pop("#ved", 41.40, 0.3); out("#ved", 43.06);
+      win("#guide", 44.70, 45.40);
+      pop("#cbar", 45.40, 0.25); out("#cbar", 48.86); win("#cm", 45.45, 46.05);
+      slam("#ste", 46.05); out("#ste", 48.86); tl.to("#ste", { scale: 1.06, duration: 0.16, yoyo: true, repeat: 1 }, 46.45);
+      win("#dm", 46.73, 49.00); pop("#fo", 47.53, 0.3); out("#fo", 48.86);
+      win("#home", 50.17, 50.93);
+      win("#cost", 52.20, 54.87);
+      win("#vsA", 53.23, 54.87); win("#vsX", 53.40, 54.87); win("#vsB", 53.57, 54.87);
+      tl.to(["#vsA .num", "#vsB .num"], { scale: 1.3, duration: 0.18, yoyo: true, repeat: 3, ease: "sine.inOut" }, 54.37);
+      pop("#p2", 55.30); slam("#fo2", 56.06); tl.set(["#p2", "#fo2"], { opacity: 0 }, 56.80);          // held on the IG end freeze
+      // ---- YT tail (master 56.80-67.57)
+      win("#guide", 58.15, 59.12);
+      win("#yab", 59.15, 61.70); win("#ywa", 60.31, 63.80); win("#ypo", 61.78, 63.80);
+      slam("#stc", 63.94); out("#stc", 66.70); pop("#ved", 64.80, 0.3); out("#ved", 66.70);
+      slam("#sb", 66.85); tl.to("#sb", { scale: 1.06, duration: 0.18, yoyo: true, repeat: 1 }, 67.20);
+
+      // ---- frame-exact state from the clock (seek-safe)
+      const SPOT = [22.33, 27.45];
+      const watchAt = (t) => { const W = window.WATCH; if (t <= W[0][0]) return W[0];
+        return W[Math.min(W.length - 1, Math.max(0, Math.round((Math.min(t, 27.45) - W[0][0]) * 30)))]; };
+      const sm = (u) => { u = Math.min(1, Math.max(0, u)); return u * u * (3 - 2 * u); };
+      // caption placement + where captions hide (headlines, stickers, B-roll beat)
+      const HIDE = [[4.37, 5.66], [31.40, 35.80], [36.86, 37.37], [39.48, 39.80], [40.54, 41.30], [46.05, 46.70], [56.06, 56.80], [63.94, 64.70], [66.85, 67.60]];
+      const capPos = (t) => (t >= 8.55 && t < 13.87) ? { top: 1068, left: 92, size: 78, align: "left" }
+                          : (t >= 22.33 && t < 27.45) ? { top: 1430, left: 0, size: 112, align: "center" }
+                          : { top: 1210, left: 0, size: 116, align: "center" };
+      const W = window.WORDS;
+      tl.eventCallback("onUpdate", () => {
+        const t = tl.time();
+        // prompt card
+        let p = null, idx = -1; PROMPTS.forEach((q, i) => { if (t >= q[0]) { p = q; idx = i; } });
+        if (p) {
+          const n = Math.round(Math.min(1, Math.max(0, (t - p[0]) / (p[1] - p[0]))) * p[3].length);
+          $("#bt").textContent = p[3].slice(0, n);
+          const done = t >= p[2];
+          $("#bdone").style.opacity = done ? 1 : 0; $("#bsend").style.opacity = done ? 0 : 1;
+          $("#caret").style.opacity = (!done && (Math.floor(t * 3) % 2 === 0 || t < p[1])) ? 1 : 0;
+          $("#cnt").textContent = "#" + (idx + 1 - (done ? 0 : 1) || 1);
+        }
+        // spotlight on the tracked watch
+        const a = t < SPOT[0] || t >= SPOT[1] + 0.3 ? 0 : Math.min(1, (t - SPOT[0]) / 0.25, (SPOT[1] + 0.3 - t) / 0.3);
+        const [, x, y] = watchAt(t);
+        $("#dim").style.opacity = a;
+        $("#dim").style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(10,6,16,0) 0px, rgba(10,6,16,0) 128px, rgba(10,6,16,0.7) 215px)`;
+        $("#ring").style.opacity = a; $("#ring").style.left = (x - 135) + "px"; $("#ring").style.top = (y - 135) + "px";
+        const la = t < 22.45 || t >= 25.0 ? 0 : Math.min(1, (t - 22.45) / 0.2, (25.0 - t) / 0.15);
+        $("#plabel").style.opacity = la; $("#plabel").style.left = (x - 70) + "px"; $("#plabel").style.top = (y - 250) + "px";
+        // wipe line
+        const xl = 1080 * (1 - sm((t - 29.40) / 0.40));
+        $("#wline").style.left = (xl - 3) + "px"; $("#whandle").style.left = (xl - 32) + "px";
+        $("#wb").style.left = (xl - 140) + "px"; $("#wa").style.left = (xl + 22) + "px";
+        // comment bar types the keyword
+        const ck = "EDIT"; $("#ct").textContent = t < 45.45 ? "" : ck.slice(0, Math.round(Math.min(1, (t - 45.45) / 0.45) * ck.length));
+        // kinetic captions: one word, blur-in; the previous word ghosts above it
+        let i = -1; for (let k = 0; k < W.length; k++) { if (W[k][0] <= t + 1e-3) i = k; else break; }
+        const cap = $("#cap"), gh = $("#ghost");
+        const hidden = HIDE.some(([h0, h1]) => t >= h0 && t < h1);
+        if (i < 0 || hidden || t > W[i][1] + 0.45) { cap.style.opacity = 0; gh.style.opacity = 0; return; }
+        const [ws, we, txt, acc] = W[i], pos = capPos(t), u = Math.min(1, (t - ws) / 0.12);
+        cap.textContent = txt;
+        cap.className = "a " + (acc ? "serif" : "w");
+        cap.style.fontSize = (acc ? pos.size * 1.3 : pos.size) + "px";
+        cap.style.top = (pos.top - (acc ? pos.size * 0.2 : 0)) + "px";
+        cap.style.textAlign = pos.align; cap.style.left = pos.left + "px";
+        cap.style.opacity = Math.min(1, u * 1.6) * (t > we + 0.3 ? Math.max(0, 1 - (t - we - 0.3) / 0.15) : 1);
+        cap.style.transform = `scale(${1.12 - 0.12 * u})`; cap.style.transformOrigin = pos.align === "left" ? "left center" : "center";
+        cap.style.filter = (acc ? "drop-shadow(0 3px 0 rgba(20,10,25,0.85)) drop-shadow(0 6px 18px rgba(0,0,0,0.55)) drop-shadow(0 0 24px rgba(240,106,140,0.6)) " : "") + `blur(${(1 - u) * 12}px)`;
+        const prev = i > 0 && ws - W[i - 1][1] < 0.45 ? W[i - 1][2] : "";
+        gh.textContent = prev; gh.style.top = (pos.top - 62) + "px"; gh.style.textAlign = pos.align; gh.style.left = pos.left + "px";
+        gh.style.fontSize = (pos.size * 0.4) + "px"; gh.style.opacity = prev ? 0.55 : 0;
+      });
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

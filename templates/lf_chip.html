@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800;900&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1920px; height: 1080px; font-family: Inter, sans-serif; }
+      #chip { position: absolute; right: 80px; top: {{TOP}}px; display: flex; align-items: center; gap: 22px;
+        padding: 22px 34px 22px 22px; border-radius: 28px; background: rgba(17,50,76,0.95); border: 2px solid rgba(58,176,216,0.6);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+      .ico { width: 76px; height: 76px; border-radius: 20px; background: #1A9FD1; display: flex; align-items: center; justify-content: center; flex: none; }
+      .ico svg { width: 44px; height: 44px; }
+      .t1 { color: #FFFFFF; font-weight: 900; font-size: 42px; line-height: 1.08; }
+      .t2 { color: #DFDDDF; font-weight: 500; font-size: 26px; margin-top: 4px; }
+      .t2 b { color: #3AB0D8; font-weight: 800; }
+      #arrow { width: 34px; height: 34px; margin-left: 6px; flex: none; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="1920" data-height="1080">
+      <div id="chip" class="clip" data-start="0" data-duration="{{DUR}}" data-track-index="0">
+        <div class="ico">{{ICON}}</div>
+        <div><div class="t1">{{T1}}</div><div class="t2">{{T2}}</div></div>
+        <svg id="arrow" viewBox="0 0 24 24"><path d="M12 4v13m0 0l-6-6m6 6l6-6" stroke="#3AB0D8" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </div>
+    <script>
+      const DUR = {{DUR}};
+      gsap.set("#chip", { opacity: 0 });
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#chip", { opacity: 0, x: 80, scale: 0.94 }, { opacity: 1, x: 0, scale: 1, duration: 0.45, ease: "back.out(1.6)" }, 0)
+        .to("#arrow", { y: 8, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: Math.max(1, Math.floor((DUR - 1.2) / 0.4)) }, 0.5)
+        .to("#chip", { opacity: 0, x: 50, duration: 0.3, ease: "power2.in" }, DUR - 0.3);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

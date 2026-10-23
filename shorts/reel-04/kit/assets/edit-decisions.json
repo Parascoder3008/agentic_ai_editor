@@ -1,0 +1,84 @@
+{
+ "duration": 57.4,
+ "fps": 30,
+ "keeps": [
+  {
+   "sourceStart": 15.0667,
+   "sourceEnd": 26.0,
+   "start": 0.0,
+   "end": 10.9333,
+   "file": "a"
+  },
+  {
+   "sourceStart": 26.2667,
+   "sourceEnd": 43.0333,
+   "start": 10.9333,
+   "end": 27.6999,
+   "file": "a"
+  },
+  {
+   "sourceStart": 51.5667,
+   "sourceEnd": 61.2333,
+   "start": 27.6999,
+   "end": 37.3665,
+   "file": "a"
+  },
+  {
+   "sourceStart": 62.0333,
+   "sourceEnd": 64.4667,
+   "start": 37.3665,
+   "end": 39.7999,
+   "file": "a"
+  },
+  {
+   "sourceStart": 64.4667,
+   "sourceEnd": 67.8667,
+   "start": 39.7999,
+   "end": 43.1999,
+   "file": "a"
+  },
+  {
+   "sourceStart": 68.1667,
+   "sourceEnd": 73.9667,
+   "start": 43.1999,
+   "end": 48.9999,
+   "file": "a"
+  },
+  {
+   "sourceStart": 74.2333,
+   "sourceEnd": 76.1667,
+   "start": 48.9999,
+   "end": 50.9333,
+   "file": "a"
+  },
+  {
+   "sourceStart": 138.5333,
+   "sourceEnd": 142.4667,
+   "start": 50.9333,
+   "end": 54.8667,
+   "file": "a"
+  },
+  {
+   "sourceStart": 142.6,
+   "sourceEnd": 144.5333,
+   "start": 54.8667,
+   "end": 56.8,
+   "file": "a"
+  }
+ ],
+ "removals": [
+  {
+   "reason": "count-in '3,2,1 and go' and the first false start (0-15.07)"
+  },
+  {
+   "reason": "abandoned 'mera jo chashma hai isko...' line + 'aur, aur iske baad' restarts (43.03-51.57)"
+  },
+  {
+   "reason": "five retakes of the cost line; kept the clean one at 138.53"
+  },
+  {
+   "reason": "pauses >= 0.3 s trimmed at 26.0, 67.87, 73.97, 142.47"
+  }
+ ],
+ "note": "Every edge measured on 5 ms energy + CTC letters; restarts Whisper hides were checked line by line."
+}

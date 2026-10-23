@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=JetBrains+Mono:wght@500;700&display=block" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 1080px; height: 1920px; font-family: Inter, sans-serif; color: #FFFFFF; }
+      /* stage = the top half during split beats; grows to full frame for the payoff */
+      #stage { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; overflow: hidden;
+        background: radial-gradient(ellipse at 50% 28%, #11324C 0%, #0C0E0F 70%); }
+      #stage::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, transparent, #1A9FD1, transparent); }
+      #world { position: absolute; left: 0; top: 0; width: 2400px; height: 1400px; transform-origin: 0 0; }
+      .step { position: absolute; width: 460px; height: 900px; border-radius: 28px 28px 0 0;
+        background: linear-gradient(180deg, rgba(58,176,216,0.22), rgba(17,50,76,0.25) 30%, rgba(12,14,15,0.2));
+        border: 2px solid rgba(58,176,216,0.35); border-bottom: none; }
+      .step .num { position: absolute; left: 30px; top: 20px; font-weight: 900; font-size: 64px; color: rgba(223,221,223,0.35); }
+      .step .nm { position: absolute; right: 30px; top: 38px; font-weight: 800; font-size: 30px; letter-spacing: 0.12em; color: rgba(223,221,223,0.4); }
+      .step.on { border-color: #3AB0D8; box-shadow: 0 -10px 60px rgba(26,159,209,0.45); }
+      .step.on .num, .step.on .nm { color: #FFFFFF; }
+      .person { position: absolute; width: 34px; height: 60px; }
+      .person::before { content: ""; position: absolute; left: 7px; top: 0; width: 20px; height: 20px; border-radius: 50%; background: #6B7680; }
+      .person::after { content: ""; position: absolute; left: 0; top: 23px; width: 34px; height: 37px; border-radius: 14px 14px 4px 4px; background: #4A5560; }
+      #you { position: absolute; width: 150px; height: 150px; }
+      #you .pin { position: absolute; left: 39px; top: 70px; width: 72px; height: 72px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
+        background: #1A9FD1; box-shadow: 0 0 40px rgba(58,176,216,0.9); }
+      #you .lb { position: absolute; left: 0; right: 0; top: 0; text-align: center; font-weight: 900; font-size: 46px; color: #3AB0D8; text-shadow: 0 2px 10px #000; }
+      /* screen-space UI (cards) */
+      .ui { position: absolute; left: 0; top: 0; width: 1080px; height: 960px; }
+      .chip { position: absolute; left: 0; right: 0; margin: 0 auto; width: max-content; padding: 12px 34px 14px; border-radius: 999px;
+        font-weight: 900; font-size: 42px; letter-spacing: 0.04em; background: #1A9FD1; white-space: nowrap; top: 214px; }
+      .chip small { font-weight: 700; font-size: 34px; opacity: 0.85; }
+      .card { position: absolute; border-radius: 28px; background: rgba(15,26,34,0.92); border: 2px solid rgba(58,176,216,0.45);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.45); }
+      .bub { position: absolute; padding: 22px 30px; border-radius: 28px; font-weight: 700; font-size: 36px; line-height: 1.3; }
+      .bub.me { right: 70px; background: #1A9FD1; border-bottom-right-radius: 8px; }
+      .bub.ai { left: 70px; background: #2A333B; color: #DFDDDF; border-bottom-left-radius: 8px; }
+      .bar { display: block; height: 18px; border-radius: 9px; background: #4A5560; margin: 12px 0; }
+      .stamp { position: absolute; font-weight: 900; letter-spacing: 0.06em; border: 6px solid; border-radius: 18px; padding: 6px 22px; }
+      .file { position: absolute; width: 250px; height: 92px; border-radius: 18px; background: #11324C; border: 2px solid #3AB0D8;
+        font-weight: 800; font-size: 32px; text-align: center; padding-top: 24px; }
+      .app { position: absolute; width: 230px; height: 84px; border-radius: 999px; background: #0C0E0F; border: 3px solid #3AB0D8;
+        font-weight: 800; font-size: 34px; text-align: center; padding-top: 18px; }
+      .wire { position: absolute; height: 4px; background: #3AB0D8; transform-origin: 0 50%; }
+      .mono { font-family: "JetBrains Mono", monospace; }
+      .lab { font-weight: 700; font-size: 26px; color: #DFDDDF; letter-spacing: 0.08em; }
+      .btn { position: absolute; height: 84px; border-radius: 20px; font-weight: 900; font-size: 34px; text-align: center; padding-top: 22px; }
+      .day { position: absolute; width: 112px; height: 150px; border-radius: 20px; background: #11324C; border: 2px solid rgba(58,176,216,0.4); text-align: center; }
+      .day b { display: block; margin-top: 14px; font-size: 28px; font-weight: 800; color: #DFDDDF; }
+      .day i { display: block; margin-top: 18px; font-style: normal; font-size: 26px; font-weight: 800; color: #3AB0D8; }
+      #big1, #big2 { position: absolute; left: 0; right: 0; text-align: center; font-weight: 900; letter-spacing: -0.02em; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0.0" data-duration="59.1" data-width="1080" data-height="1920">
+      <div id="stage" class="clip" data-start="7.40" data-duration="51.70" data-track-index="0">
+        <div id="world">
+          <div class="step" id="st1" style="left:140px;top:760px"><div class="num">1</div><div class="nm">CHAT</div></div>
+          <div class="step" id="st2" style="left:660px;top:640px"><div class="num">2</div><div class="nm">PROJECTS</div></div>
+          <div class="step" id="st3" style="left:1180px;top:520px"><div class="num">3</div><div class="nm">CONNECTORS</div></div>
+          <div class="step" id="st4" style="left:1700px;top:400px"><div class="num">4</div><div class="nm">SCHEDULED</div></div>
+          <div id="crowd"></div>
+          <div id="you" style="left:295px;top:600px"><div class="lb">YOU?</div><div class="pin"></div></div>
+        </div>
+
+        <!-- Level 1 -->
+        <div class="ui" id="u1">
+          <div class="chip" id="c1">LEVEL 1 <small>· CHAT</small></div>
+          <div class="bub me" id="q1" style="top:340px">Instagram caption likh do</div>
+          <div class="bub ai" id="a1" style="top:470px;width:600px"><span class="bar" style="width:520px"></span><span class="bar" style="width:440px"></span><span class="bar" style="width:300px"></span></div>
+          <div class="btn" id="cp1" style="left:690px;top:520px;width:250px;background:#2A333B;color:#DFDDDF">&#x2398; COPY</div>
+          <div class="stamp" id="bas" style="left:660px;top:700px;font-size:60px;color:#DFDDDF;border-color:#DFDDDF;transform:rotate(-8deg)">BAS.</div>
+        </div>
+
+        <!-- Level 2 -->
+        <div class="ui" id="u2">
+          <div class="chip" id="c2">LEVEL 2 <small>· PROJECTS</small></div>
+          <div class="card" id="fold" style="left:250px;top:330px;width:580px;height:330px">
+            <div style="position:absolute;left:34px;top:-34px;width:220px;height:50px;border-radius:18px 18px 0 0;background:rgba(15,26,34,0.92);border:2px solid rgba(58,176,216,0.45);border-bottom:none"></div>
+            <div style="position:absolute;left:40px;top:28px;font-weight:900;font-size:44px">&#x1F4C1; Mera Business</div>
+            <div class="lab" style="position:absolute;left:44px;top:96px">PROJECT KNOWLEDGE</div>
+          </div>
+          <div class="file" id="f1" style="left:272px;top:540px;width:176px;font-size:28px">Price list</div>
+          <div class="file" id="f2" style="left:452px;top:540px;width:176px;font-size:28px">FAQs</div>
+          <div class="file" id="f3" style="left:632px;top:540px;width:176px;font-size:28px">Brand tone</div>
+          <div class="stamp" id="ekb" style="left:690px;top:690px;font-size:52px;color:#3AB0D8;border-color:#3AB0D8;transform:rotate(-6deg)">EK BAAR</div>
+          <div class="bub me" id="q2" style="top:310px">Instagram caption likh do</div>
+          <div class="bub ai" id="a2" style="top:440px;width:820px;background:#11324C;border:2px solid #3AB0D8;color:#FFFFFF;font-size:34px"><span id="a2t"></span></div>
+        </div>
+
+        <!-- Level 3 -->
+        <div class="ui" id="u3">
+          <div class="chip" id="c3">LEVEL 3 <small>· CONNECTORS</small></div>
+          <div id="hub" style="position:absolute;left:420px;top:420px;width:240px;height:240px;border-radius:50%;background:#11324C;border:4px solid #3AB0D8;box-shadow:0 0 60px rgba(26,159,209,0.5);text-align:center;padding-top:88px;font-weight:900;font-size:46px">Claude</div>
+          <div class="wire" id="w1" style="left:540px;top:540px;width:330px;transform:rotate(-150deg)"></div>
+          <div class="wire" id="w2" style="left:540px;top:540px;width:330px;transform:rotate(-30deg)"></div>
+          <div class="wire" id="w3" style="left:540px;top:540px;width:170px;transform:rotate(90deg)"></div>
+          <div class="app" id="g1" style="left:95px;top:330px">Gmail</div>
+          <div class="app" id="g2" style="left:755px;top:330px">Calendar</div>
+          <div class="app" id="g3" style="left:425px;top:700px">Drive</div>
+          <div class="card" id="mail" style="left:110px;top:310px;width:860px;height:300px">
+            <div class="lab" style="position:absolute;left:36px;top:26px">NEW ENQUIRY · GMAIL</div>
+            <div style="position:absolute;left:36px;top:70px;font-weight:800;font-size:38px">"Bridal lehenga ka price kya hai?"</div>
+            <div style="position:absolute;left:36px;top:140px;right:36px;height:2px;background:rgba(58,176,216,0.3)"></div>
+            <div class="lab" style="position:absolute;left:36px;top:160px;color:#3AB0D8">CLAUDE · DRAFT REPLY</div>
+            <div id="drt" style="position:absolute;left:36px;top:200px;right:36px;font-weight:700;font-size:32px;color:#DFDDDF"></div>
+          </div>
+          <div class="card" id="cal" style="left:250px;top:640px;width:580px;height:150px">
+            <div class="lab" style="position:absolute;left:30px;top:22px">CALENDAR · THU</div>
+            <div id="slot" style="position:absolute;left:30px;top:62px;right:30px;height:64px;border-radius:14px;background:#1A9FD1;font-weight:800;font-size:32px;padding:12px 20px">4:00 PM · Client call</div>
+          </div>
+          <div class="card" id="gate" style="left:140px;top:330px;width:800px;height:430px;text-align:center">
+            <div style="margin-top:46px;font-weight:900;font-size:48px">Send this reply?</div>
+            <div class="lab" style="margin-top:16px">CLAUDE ASKS FIRST</div>
+            <div class="btn" id="ap" style="left:90px;top:250px;width:300px;background:#1A9FD1;color:#FFFFFF">APPROVE</div>
+            <div class="btn" style="left:410px;top:250px;width:300px;background:#2A333B;color:#DFDDDF">EDIT</div>
+            <div id="tick" style="position:absolute;left:0;right:0;top:120px;font-size:200px;font-weight:900;color:#3AB0D8;line-height:1">&#x2713;</div>
+          </div>
+          <div id="cursor" style="position:absolute;left:330px;top:640px;width:0;height:0;border-left:26px solid transparent;border-right:26px solid transparent;border-bottom:60px solid #FFFFFF;transform:rotate(-30deg);filter:drop-shadow(0 4px 6px #000)"></div>
+        </div>
+
+        <!-- Level 4 -->
+        <div class="ui" id="u4">
+          <div class="chip" id="c4">LEVEL 4 <small>· SCHEDULED TASKS</small></div>
+          <div class="stamp" id="paid" style="left:770px;top:300px;font-size:30px;color:#DFDDDF;border-color:#DFDDDF;border-width:3px;border-radius:999px">PAID PLAN</div>
+          <div id="clock" style="position:absolute;left:415px;top:290px;width:250px;height:250px;border-radius:50%;border:8px solid #3AB0D8;background:#0F1A22;box-shadow:0 0 50px rgba(26,159,209,0.4)">
+            <div id="hh" style="position:absolute;left:115px;top:55px;width:12px;height:70px;border-radius:6px;background:#FFFFFF;transform-origin:6px 70px;transform:rotate(-90deg)"></div>
+            <div id="mh" style="position:absolute;left:117px;top:25px;width:8px;height:100px;border-radius:4px;background:#3AB0D8;transform-origin:4px 100px"></div>
+            <div style="position:absolute;left:-40px;right:-40px;top:258px;text-align:center;font-weight:900;font-size:48px">9:00 AM</div>
+          </div>
+          <div class="card" id="pr" style="left:90px;top:330px;width:900px;height:250px">
+            <div class="lab" style="position:absolute;left:36px;top:28px">SCHEDULED TASK · DAILY</div>
+            <div id="prt" style="position:absolute;left:36px;top:76px;right:36px;font-weight:800;font-size:40px;line-height:1.3"></div>
+          </div>
+          <div id="week"></div>
+          <div id="lap" style="position:absolute;left:400px;top:648px;width:280px;height:140px">
+            <div style="position:absolute;left:20px;top:0;width:240px;height:120px;border-radius:14px 14px 4px 4px;background:#2A333B;border:3px solid #4A5560"></div>
+            <div style="position:absolute;left:0;top:116px;width:280px;height:22px;border-radius:4px 4px 12px 12px;background:#4A5560"></div>
+            <div class="lab" style="position:absolute;left:0;right:0;top:44px;text-align:center;color:#DFDDDF">LAPTOP OFF</div>
+          </div>
+        </div>
+
+        <!-- Payoff (full frame) -->
+        <div id="pay" style="position:absolute;left:0;top:0;width:1080px;height:1920px">
+          <div id="big1" style="top:330px;font-size:120px;color:#DFDDDF">CHATBOT<div id="x1" style="position:absolute;left:230px;top:66px;width:0;height:16px;border-radius:8px;background:#F85149"></div></div>
+          <div id="big2" style="top:1290px;font-size:128px;color:#3AB0D8;text-shadow:0 0 40px rgba(26,159,209,0.6)">ASSISTANT</div>
+        </div>
+
+        <!-- Free guide -->
+        <div class="ui" id="u5">
+          <div class="card" id="guide" style="left:170px;top:250px;width:740px;height:600px;background:linear-gradient(160deg,#11324C,#0C0E0F)">
+            <div class="lab" style="position:absolute;left:44px;top:40px;color:#3AB0D8">FREE GUIDE</div>
+            <div style="position:absolute;left:44px;top:84px;font-weight:900;font-size:64px;line-height:1.05">Claude ke<br>4 Levels</div>
+            <div id="tabs" style="position:absolute;left:44px;top:270px;right:44px"></div>
+            <div class="stamp" id="free" style="left:470px;top:40px;font-size:40px;color:#3AB0D8;border-color:#3AB0D8;transform:rotate(8deg)">FREE</div>
+          </div>
+        </div>
+
+        <!-- CTA Instagram -->
+        <div class="ui" id="u6">
+          <div class="btn" id="fol" style="left:330px;top:250px;width:420px;background:#2A333B;color:#FFFFFF">+ FOLLOW</div>
+          <div class="lab" style="position:absolute;left:0;right:0;top:400px;text-align:center;font-size:34px" id="cmt">COMMENT KARO</div>
+          <div id="kw" style="position:absolute;left:0;right:0;margin:0 auto;top:460px;width:620px;height:190px;border-radius:40px;background:#1A9FD1;text-align:center;font-weight:900;font-size:130px;line-height:190px;box-shadow:0 0 70px rgba(26,159,209,0.6)">LEVEL</div>
+          <div class="card" id="dm" style="left:250px;top:700px;width:580px;height:120px;text-align:center;padding-top:30px;font-weight:800;font-size:40px">&#x2709; Guide &#x2192; aapke DM</div>
+        </div>
+
+        <!-- CTA YouTube -->
+        <div class="ui" id="u7">
+          <div class="card" id="wa" style="left:140px;top:280px;width:800px;height:330px;text-align:center">
+            <div class="lab" style="margin-top:40px;color:#3AB0D8">FREE GUIDE + DAILY AI TIPS</div>
+            <div style="margin-top:20px;font-weight:900;font-size:68px">WhatsApp channel</div>
+            <div class="btn" id="join" style="left:250px;top:210px;width:300px;background:#1A9FD1;color:#FFFFFF">JOIN</div>
+          </div>
+          <div id="desc" style="position:absolute;left:0;right:0;top:660px;text-align:center;font-weight:800;font-size:44px">Link description mein <span id="arr" style="display:inline-block;color:#3AB0D8">&#x2193;</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const $ = (s) => document.querySelector(s);
+      const pop = (sel, t, d = 0.28) => tl.fromTo(sel, { opacity: 0, scale: 0.86, y: 24 }, { opacity: 1, scale: 1, y: 0, duration: d, ease: "back.out(2)" }, t);
+      const hide = (sel, t, d = 0.18) => tl.to(sel, { opacity: 0, duration: d, ease: "power2.in" }, t);
+      const drop = (sel, t) => tl.fromTo(sel, { opacity: 0, y: -260, rotation: -8 }, { opacity: 1, y: 0, rotation: 0, duration: 0.42, ease: "bounce.out" }, t);
+      const slam = (sel, t, rot = -8) => tl.fromTo(sel, { opacity: 0, scale: 2.2, rotation: rot }, { opacity: 1, scale: 1, rotation: rot, duration: 0.16, ease: "power4.in" }, t);
+      const type = (sel, text, t0, t1) => {
+        const el = $(sel), p = { n: 0 };
+        tl.fromTo(p, { n: 0 }, { n: text.length, duration: t1 - t0, ease: "none", onUpdate: () => { el.textContent = text.slice(0, Math.round(p.n)); } }, t0);
+      };
+      // camera: put step k's centre at screen x 540, its top at screen y 820
+      const cam = (k) => ({ x: 170 - (k - 1) * 520, y: 60 + (k - 1) * 120, scale: 1 });
+      const glow = (k, t) => tl.add(() => { [1, 2, 3, 4].forEach(i => $("#st" + i).classList.toggle("on", i === k)); }, t);
+
+      // crowd on step 1 (the people stuck at Level 1)
+      const crowd = $("#crowd");
+      for (let i = 0; i < 14; i++) {
+        const p = document.createElement("div"); p.className = "person";
+        p.style.left = (160 + (i % 7) * 58 + (i > 6 ? 26 : 0)) + "px"; p.style.top = (i > 6 ? 712 : 690) + "px";
+        crowd.appendChild(p);
+      }
+      gsap.set(["#u1", "#u2", "#u3", "#u4", "#u5", "#u6", "#u7", "#pay"], { opacity: 0 });
+      gsap.set(["#q1", "#a1", "#cp1", "#bas", "#c1", "#c2", "#fold", "#f1", "#f2", "#f3", "#ekb", "#q2", "#a2", "#c3", "#hub", "#g1", "#g2", "#g3",
+                "#mail", "#cal", "#gate", "#tick", "#cursor", "#c4", "#paid", "#clock", "#pr", "#lap", "#big1", "#big2", "#guide", "#fol", "#cmt", "#kw", "#dm",
+                "#wa", "#desc", "#free"], { opacity: 0 });
+      gsap.set(".wire", { scaleX: 0 });
+      gsap.set("#world", { x: 120, y: 330, scale: 0.36 });   // overview: all 4 steps in view
+
+      // ---- overview (7.25): 4 steps, crowd on step 1, YOU? planted
+      tl.fromTo("#world", { scale: 0.33 }, { scale: 0.36, duration: 0.5, ease: "power2.out" }, 7.40);
+      tl.fromTo("#you", { opacity: 0, y: -120 }, { opacity: 1, y: 0, duration: 0.35, ease: "bounce.out" }, 7.42);
+      tl.to("#you", { opacity: 0, duration: 0.2 }, 8.05);   // parked: it returns for the payoff climb
+
+      // ---- Level 1 · Chat (7.52 - 11.3)
+      tl.to("#world", { ...cam(1), duration: 0.45, ease: "power3.inOut" }, 7.85); glow(1, 7.85);
+      tl.to("#u1", { opacity: 1, duration: 0.01 }, 7.85); pop("#c1", 8.0);
+      pop("#q1", 8.88); pop("#a1", 9.74);
+      pop("#cp1", 10.0, 0.2); tl.to("#cp1", { scale: 0.88, duration: 0.08, yoyo: true, repeat: 1 }, 10.12)
+        .to("#cp1", { backgroundColor: "#3A4651", duration: 0.1 }, 10.2);
+      slam("#bas", 10.84);
+      tl.to(["#q1", "#a1", "#cp1"], { filter: "grayscale(1) brightness(0.7)", duration: 0.3 }, 10.9);
+      hide("#u1", 11.32);
+
+      // ---- Level 2 · Projects (11.50 - 20.9)
+      tl.to("#world", { ...cam(2), duration: 0.55, ease: "power3.inOut" }, 11.5); glow(2, 11.5);
+      tl.to("#you", { x: 520, y: -120, duration: 0.55, ease: "power3.inOut" }, 11.5);
+      tl.to("#u2", { opacity: 1, duration: 0.01 }, 11.5); pop("#c2", 11.86);
+      pop("#fold", 12.3, 0.32);
+      drop("#f1", 13.64); drop("#f2", 14.52); drop("#f3", 15.28);
+      slam("#ekb", 16.34, -6);
+      hide(["#fold", "#f1", "#f2", "#f3", "#ekb"], 17.75);
+      pop("#q2", 18.0); pop("#a2", 18.4);
+      type("#a2t", "✨ Is Diwali, Meera Boutique ki silk sarees ₹2,499 se. Lajpat Nagar aao, ya DM karo!", 18.45, 20.3);
+      tl.to("#a2", { boxShadow: "0 0 60px rgba(26,159,209,0.7)", duration: 0.25, yoyo: true, repeat: 1 }, 19.74);
+      hide("#u2", 20.72);
+
+      // ---- Level 3 · Connectors (21.06 - 32.4)
+      tl.to("#world", { ...cam(3), duration: 0.55, ease: "power3.inOut" }, 21.06); glow(3, 21.06);
+      tl.to("#you", { x: 1040, y: -240, duration: 0.55, ease: "power3.inOut" }, 21.06);
+      tl.to("#u3", { opacity: 1, duration: 0.01 }, 21.06); pop("#c3", 21.38); pop("#hub", 21.82, 0.32);
+      [["#g1", "#w1", 22.86], ["#g2", "#w2", 23.38], ["#g3", "#w3", 24.16]].forEach(([g, w, t]) => {
+        tl.to(w, { scaleX: 1, duration: 0.25, ease: "power2.out" }, t - 0.05); pop(g, t);
+      });
+      tl.to("#hub", { scale: 1.08, duration: 0.18, yoyo: true, repeat: 1 }, 24.5);
+      hide(["#hub", "#g1", "#g2", "#g3", ".wire"], 24.85, 0.15);
+      pop("#mail", 25.98, 0.3);
+      type("#drt", "Namaste! Bridal lehenga ₹18,000 se start. Kal 4 baje call karein?", 26.76, 27.95);
+      pop("#cal", 28.3, 0.3);
+      tl.fromTo("#slot", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.3, ease: "power2.out" }, 28.64);
+      hide(["#mail", "#cal"], 30.05);
+      pop("#gate", 30.25, 0.3);
+      tl.fromTo("#cursor", { opacity: 0, x: 260, y: 200 }, { opacity: 1, x: 0, y: 0, duration: 0.6, ease: "power2.out" }, 30.95)
+        .to("#ap", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 31.61)
+        .to("#cursor", { opacity: 0, duration: 0.15 }, 31.9)
+        .to(["#ap", "#gate .btn"], { opacity: 0.15, duration: 0.15 }, 32.0);
+      pop("#tick", 32.05, 0.25);
+      hide("#u3", 32.5);
+
+      // ---- Level 4 · Scheduled tasks (32.66 - 43.0)
+      tl.to("#world", { ...cam(4), duration: 0.6, ease: "power3.inOut" }, 32.66); glow(4, 32.66);
+      tl.to("#you", { x: 1560, y: -360, duration: 0.6, ease: "power3.inOut" }, 32.66);
+      tl.to("#u4", { opacity: 1, duration: 0.01 }, 32.66); pop("#c4", 32.98);
+      pop("#clock", 33.47, 0.32);
+      tl.fromTo("#mh", { rotation: -180 }, { rotation: 0, duration: 0.6, ease: "power3.out" }, 33.5);
+      pop("#paid", 33.97, 0.25);
+      hide(["#clock", "#paid"], 34.6);
+      pop("#pr", 34.69, 0.3);
+      type("#prt", "Har subah 9 baje: kal ki saari enquiries ki summary bhejo", 35.09, 38.6);
+      tl.to("#c4", { opacity: 0, duration: 0.2 }, 38.85);   // the shrunken task card takes the chip's place
+      tl.to("#pr", { y: -95, scale: 0.8, duration: 0.35, ease: "power3.inOut" }, 38.95)
+        .to("#pr", { opacity: 0, duration: 0.2 }, 41.2);
+      const days = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"], wk = $("#week");
+      days.forEach((d, i) => {
+        const el = document.createElement("div"); el.className = "day"; el.id = "d" + i;
+        el.style.left = (64 + i * 136) + "px"; el.style.top = "470px";
+        el.innerHTML = `<b>${d}</b><i>9:00<br>&#x2713;</i>`; wk.appendChild(el);
+        gsap.set(el, { opacity: 0 }); pop("#d" + i, 39.75 + i * 0.16, 0.22);
+      });
+      pop("#lap", 41.41, 0.3);
+      tl.to("#lap", { y: 8, duration: 0.12, yoyo: true, repeat: 1 }, 41.87);
+      hide("#u4", 42.95);
+
+      // ---- Payoff: stage grows to full frame, YOU climbs 1 -> 4 (43.1 - 46.3)
+      tl.to("#stage", { height: 1920, duration: 0.35, ease: "power3.inOut" }, 43.05);
+      tl.to("#world", { x: -35, y: 380, scale: 0.5, duration: 0.45, ease: "power3.inOut" }, 43.05);   // stairs fill y 580-1210 between CHATBOT and ASSISTANT
+      tl.set("#you", { x: 0, y: 0, scale: 1.9, transformOrigin: "50% 100%" }, 43.05);
+      tl.to("#you", { opacity: 1, duration: 0.2 }, 43.3);
+      tl.to("#pay", { opacity: 1, duration: 0.01 }, 43.1);
+      pop("#big1", 43.45);
+      tl.to("#x1", { width: 620, duration: 0.25, ease: "power2.out" }, 44.29)
+        .to("#big1", { opacity: 0.45, duration: 0.2 }, 44.4);
+      tl.to("#you", { keyframes: [{ x: 520, y: -120 }, { x: 1040, y: -240 }, { x: 1560, y: -360 }], duration: 1.1, ease: "power1.inOut" }, 44.0);
+      glow(4, 45.1);
+      tl.fromTo("#big2", { opacity: 0, scale: 1.6 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power4.in" }, 45.13)
+        .to("#big2", { scale: 1.04, duration: 0.8, ease: "none" }, 45.31);
+      tl.to(["#pay", "#you"], { opacity: 0, duration: 0.15 }, 46.43);
+      tl.to("#stage", { height: 960, duration: 0.3, ease: "power3.inOut" }, 46.48);
+      tl.to("#world", { ...cam(4), duration: 0.3, ease: "power3.inOut" }, 46.48);
+
+      // ---- Free guide (46.57 - 50.5)
+      tl.to("#u5", { opacity: 1, duration: 0.01 }, 46.57);
+      tl.to("#world", { opacity: 0.35, duration: 0.3 }, 46.57);
+      pop("#guide", 46.81, 0.32);
+      const tabs = [["1", "Chat: better prompts"], ["2", "Projects: business context"], ["3", "Connectors: Gmail, Calendar"], ["4", "Scheduled tasks: daily"]], tb = $("#tabs");
+      tabs.forEach(([n, t], i) => {
+        const el = document.createElement("div"); el.id = "tb" + i;
+        el.style.cssText = "height:62px;margin-bottom:12px;border-radius:16px;background:rgba(58,176,216,0.14);border:2px solid rgba(58,176,216,0.4);font-weight:800;font-size:30px;padding:12px 20px";
+        el.innerHTML = `<span style="color:#3AB0D8">LEVEL ${n}</span> &nbsp;${t}`; tb.appendChild(el);
+        gsap.set(el, { opacity: 0 }); pop("#tb" + i, 47.25 + i * 0.22, 0.24);
+      });
+      slam("#free", 48.99, 8);
+      hide("#u5", 50.4);
+
+      // ---- CTA Instagram (50.55 - 54.95)
+      tl.to("#u6", { opacity: 1, duration: 0.01 }, 50.5);
+      pop("#fol", 51.03); tl.to("#fol", { backgroundColor: "#1A9FD1", duration: 0.15 }, 51.35);
+      pop("#cmt", 51.99);
+      tl.fromTo("#kw", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 52.35)
+        .to("#kw", { scale: 1.06, duration: 0.2, yoyo: true, repeat: 1, ease: "sine.inOut" }, 52.75);
+      pop("#dm", 53.29, 0.3);
+      tl.to("#dm", { borderColor: "#3AB0D8", backgroundColor: "rgba(26,159,209,0.25)", duration: 0.2 }, 54.25);
+      hide("#u6", 54.9, 0.1);
+
+      // ---- CTA YouTube (55.03 - 59.1)
+      tl.to("#u7", { opacity: 1, duration: 0.01 }, 54.98);
+      pop("#wa", 55.19, 0.32); pop("#desc", 55.71);
+      tl.to("#arr", { y: 14, duration: 0.25, yoyo: true, repeat: 5, ease: "sine.inOut" }, 56.0);
+      tl.to("#join", { scale: 0.9, duration: 0.08, yoyo: true, repeat: 1 }, 58.49)
+        .to("#join", { backgroundColor: "#3AB0D8", duration: 0.15 }, 58.6);
+
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

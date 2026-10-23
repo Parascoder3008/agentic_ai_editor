@@ -1,0 +1,1126 @@
+{
+ "all": [
+  {
+   "text": "Claude",
+   "start": 0.32,
+   "end": 0.64,
+   "score": 0.358
+  },
+  {
+   "text": "ko",
+   "start": 0.66,
+   "end": 0.72,
+   "score": 0.978
+  },
+  {
+   "text": "ab",
+   "start": 0.88,
+   "end": 0.98,
+   "score": 0.965
+  },
+  {
+   "text": "apna",
+   "start": 1.04,
+   "end": 1.22,
+   "score": 0.977
+  },
+  {
+   "text": "khud",
+   "start": 1.32,
+   "end": 1.461,
+   "score": 0.944
+  },
+  {
+   "text": "ka",
+   "start": 1.521,
+   "end": 1.581,
+   "score": 0.969
+  },
+  {
+   "text": "WhatsApp",
+   "start": 1.601,
+   "end": 2.001,
+   "score": 0.496
+  },
+  {
+   "text": "number",
+   "start": 2.041,
+   "end": 2.221,
+   "score": 0.654
+  },
+  {
+   "text": "mil",
+   "start": 2.261,
+   "end": 2.381,
+   "score": 0.966
+  },
+  {
+   "text": "sakta",
+   "start": 2.421,
+   "end": 2.681,
+   "score": 0.973
+  },
+  {
+   "text": "hai.",
+   "start": 2.681,
+   "end": 2.761,
+   "score": 0.944
+  },
+  {
+   "text": "Aur",
+   "start": 3.341,
+   "end": 3.501,
+   "score": 0.986
+  },
+  {
+   "text": "zyada",
+   "start": 3.601,
+   "end": 3.821,
+   "score": 0.777
+  },
+  {
+   "text": "tar",
+   "start": 3.881,
+   "end": 4.001,
+   "score": 0.983
+  },
+  {
+   "text": "business",
+   "start": 4.041,
+   "end": 4.321,
+   "score": 0.48
+  },
+  {
+   "text": "owners",
+   "start": 4.361,
+   "end": 4.562,
+   "score": 0.192
+  },
+  {
+   "text": "ko",
+   "start": 4.622,
+   "end": 4.662,
+   "score": 0.976
+  },
+  {
+   "text": "ye",
+   "start": 4.722,
+   "end": 4.782,
+   "score": 0.759
+  },
+  {
+   "text": "pata",
+   "start": 4.842,
+   "end": 5.002,
+   "score": 0.987
+  },
+  {
+   "text": "hi",
+   "start": 5.062,
+   "end": 5.142,
+   "score": 0.413
+  },
+  {
+   "text": "nahi.",
+   "start": 5.142,
+   "end": 5.262,
+   "score": 0.459
+  },
+  {
+   "text": "Socho,",
+   "start": 5.682,
+   "end": 5.942,
+   "score": 0.812
+  },
+  {
+   "text": "raat",
+   "start": 6.402,
+   "end": 6.582,
+   "score": 0.976
+  },
+  {
+   "text": "ke",
+   "start": 6.642,
+   "end": 6.722,
+   "score": 0.981
+  },
+  {
+   "text": "do",
+   "start": 6.782,
+   "end": 6.862,
+   "score": 0.951
+  },
+  {
+   "text": "baje",
+   "start": 6.942,
+   "end": 7.102,
+   "score": 0.832
+  },
+  {
+   "text": "customer",
+   "start": 7.162,
+   "end": 7.503,
+   "score": 0.477
+  },
+  {
+   "text": "poochta",
+   "start": 7.543,
+   "end": 7.823,
+   "score": 0.578
+  },
+  {
+   "text": "hai:",
+   "start": 7.883,
+   "end": 7.963,
+   "score": 0.973
+  },
+  {
+   "text": "Friday",
+   "start": 8.163,
+   "end": 8.483,
+   "score": 0.409
+  },
+  {
+   "text": "ko",
+   "start": 8.483,
+   "end": 8.543,
+   "score": 0.965
+  },
+  {
+   "text": "slot",
+   "start": 8.583,
+   "end": 8.843,
+   "score": 0.966
+  },
+  {
+   "text": "hai?",
+   "start": 8.903,
+   "end": 8.983,
+   "score": 0.972
+  },
+  {
+   "text": "Aur",
+   "start": 9.483,
+   "end": 9.603,
+   "score": 0.988
+  },
+  {
+   "text": "turant",
+   "start": 9.743,
+   "end": 9.983,
+   "score": 0.816
+  },
+  {
+   "text": "jawab",
+   "start": 10.023,
+   "end": 10.284,
+   "score": 0.717
+  },
+  {
+   "text": "aata",
+   "start": 10.304,
+   "end": 10.504,
+   "score": 0.907
+  },
+  {
+   "text": "hai,",
+   "start": 10.504,
+   "end": 10.584,
+   "score": 0.943
+  },
+  {
+   "text": "free",
+   "start": 10.924,
+   "end": 11.124,
+   "score": 0.191
+  },
+  {
+   "text": "slots",
+   "start": 11.144,
+   "end": 11.424,
+   "score": 0.932
+  },
+  {
+   "text": "ke",
+   "start": 11.464,
+   "end": 11.504,
+   "score": 0.953
+  },
+  {
+   "text": "saath,",
+   "start": 11.564,
+   "end": 11.764,
+   "score": 0.95
+  },
+  {
+   "text": "aur",
+   "start": 12.044,
+   "end": 12.144,
+   "score": 0.99
+  },
+  {
+   "text": "booking",
+   "start": 12.184,
+   "end": 12.444,
+   "score": 0.567
+  },
+  {
+   "text": "ho",
+   "start": 12.464,
+   "end": 12.504,
+   "score": 0.947
+  },
+  {
+   "text": "jaati",
+   "start": 12.564,
+   "end": 12.784,
+   "score": 0.951
+  },
+  {
+   "text": "hai.",
+   "start": 12.824,
+   "end": 12.904,
+   "score": 0.759
+  },
+  {
+   "text": "Ye",
+   "start": 13.445,
+   "end": 13.525,
+   "score": 0.813
+  },
+  {
+   "text": "hota",
+   "start": 13.605,
+   "end": 13.785,
+   "score": 0.961
+  },
+  {
+   "text": "hai",
+   "start": 13.805,
+   "end": 13.905,
+   "score": 0.215
+  },
+  {
+   "text": "ek",
+   "start": 13.905,
+   "end": 14.005,
+   "score": 0.973
+  },
+  {
+   "text": "free",
+   "start": 14.085,
+   "end": 14.285,
+   "score": 0.246
+  },
+  {
+   "text": "tool",
+   "start": 14.305,
+   "end": 14.505,
+   "score": 0.489
+  },
+  {
+   "text": "se.",
+   "start": 14.565,
+   "end": 14.645,
+   "score": 0.95
+  },
+  {
+   "text": "Naam",
+   "start": 15.005,
+   "end": 15.205,
+   "score": 0.989
+  },
+  {
+   "text": "hai",
+   "start": 15.265,
+   "end": 15.345,
+   "score": 0.944
+  },
+  {
+   "text": "Kapso.",
+   "start": 15.425,
+   "end": 15.745,
+   "score": 0.964
+  },
+  {
+   "text": "Ye",
+   "start": 16.446,
+   "end": 16.506,
+   "score": 0.765
+  },
+  {
+   "text": "Claude",
+   "start": 16.586,
+   "end": 16.906,
+   "score": 0.368
+  },
+  {
+   "text": "ko",
+   "start": 16.926,
+   "end": 16.986,
+   "score": 0.981
+  },
+  {
+   "text": "WhatsApp",
+   "start": 17.086,
+   "end": 17.486,
+   "score": 0.531
+  },
+  {
+   "text": "ke",
+   "start": 17.566,
+   "end": 17.626,
+   "score": 0.966
+  },
+  {
+   "text": "official",
+   "start": 17.786,
+   "end": 18.206,
+   "score": 0.51
+  },
+  {
+   "text": "API",
+   "start": 18.366,
+   "end": 18.766,
+   "score": 0.718
+  },
+  {
+   "text": "se",
+   "start": 18.846,
+   "end": 18.906,
+   "score": 0.961
+  },
+  {
+   "text": "jodta",
+   "start": 18.947,
+   "end": 19.227,
+   "score": 0.985
+  },
+  {
+   "text": "hai.",
+   "start": 19.267,
+   "end": 19.347,
+   "score": 0.929
+  },
+  {
+   "text": "Free",
+   "start": 19.767,
+   "end": 19.987,
+   "score": 0.24
+  },
+  {
+   "text": "plan",
+   "start": 20.027,
+   "end": 20.267,
+   "score": 0.949
+  },
+  {
+   "text": "mein",
+   "start": 20.327,
+   "end": 20.427,
+   "score": 0.494
+  },
+  {
+   "text": "mahine",
+   "start": 20.487,
+   "end": 20.787,
+   "score": 0.978
+  },
+  {
+   "text": "ke",
+   "start": 20.827,
+   "end": 20.887,
+   "score": 0.934
+  },
+  {
+   "text": "twothousand",
+   "start": 21.047,
+   "end": 21.507,
+   "score": 0.207
+  },
+  {
+   "text": "messages.",
+   "start": 21.527,
+   "end": 21.908,
+   "score": 0.363
+  },
+  {
+   "text": "Setup",
+   "start": 22.288,
+   "end": 22.588,
+   "score": 0.64
+  },
+  {
+   "text": "sirf",
+   "start": 22.628,
+   "end": 22.788,
+   "score": 0.678
+  },
+  {
+   "text": "teen",
+   "start": 22.908,
+   "end": 23.088,
+   "score": 0.205
+  },
+  {
+   "text": "step",
+   "start": 23.128,
+   "end": 23.348,
+   "score": 0.803
+  },
+  {
+   "text": "ka",
+   "start": 23.408,
+   "end": 23.468,
+   "score": 0.963
+  },
+  {
+   "text": "hai.",
+   "start": 23.548,
+   "end": 23.628,
+   "score": 0.923
+  },
+  {
+   "text": "Step",
+   "start": 24.188,
+   "end": 24.408,
+   "score": 0.513
+  },
+  {
+   "text": "one",
+   "start": 24.488,
+   "end": 24.648,
+   "score": 0.17
+  },
+  {
+   "text": "Kapso",
+   "start": 25.149,
+   "end": 25.429,
+   "score": 0.97
+  },
+  {
+   "text": "pe",
+   "start": 25.489,
+   "end": 25.549,
+   "score": 0.968
+  },
+  {
+   "text": "sign",
+   "start": 25.609,
+   "end": 25.809,
+   "score": 0.716
+  },
+  {
+   "text": "up",
+   "start": 25.809,
+   "end": 25.889,
+   "score": 0.467
+  },
+  {
+   "text": "karo,",
+   "start": 25.929,
+   "end": 26.069,
+   "score": 0.981
+  },
+  {
+   "text": "aur",
+   "start": 26.529,
+   "end": 26.629,
+   "score": 0.992
+  },
+  {
+   "text": "apna",
+   "start": 26.649,
+   "end": 26.889,
+   "score": 0.968
+  },
+  {
+   "text": "business",
+   "start": 26.929,
+   "end": 27.229,
+   "score": 0.484
+  },
+  {
+   "text": "number",
+   "start": 27.269,
+   "end": 27.489,
+   "score": 0.644
+  },
+  {
+   "text": "link",
+   "start": 27.569,
+   "end": 27.73,
+   "score": 0.603
+  },
+  {
+   "text": "karo.",
+   "start": 27.79,
+   "end": 27.93,
+   "score": 0.988
+  },
+  {
+   "text": "Step",
+   "start": 28.43,
+   "end": 28.65,
+   "score": 0.687
+  },
+  {
+   "text": "two",
+   "start": 28.77,
+   "end": 28.91,
+   "score": 0.159
+  },
+  {
+   "text": "Ek",
+   "start": 29.25,
+   "end": 29.37,
+   "score": 0.968
+  },
+  {
+   "text": "command",
+   "start": 29.45,
+   "end": 29.75,
+   "score": 0.421
+  },
+  {
+   "text": "se",
+   "start": 29.83,
+   "end": 29.89,
+   "score": 0.969
+  },
+  {
+   "text": "Kapso",
+   "start": 29.99,
+   "end": 30.33,
+   "score": 0.976
+  },
+  {
+   "text": "ki",
+   "start": 30.41,
+   "end": 30.47,
+   "score": 0.989
+  },
+  {
+   "text": "WhatsApp",
+   "start": 30.53,
+   "end": 30.911,
+   "score": 0.546
+  },
+  {
+   "text": "skills",
+   "start": 30.951,
+   "end": 31.251,
+   "score": 0.796
+  },
+  {
+   "text": "Claude",
+   "start": 31.351,
+   "end": 31.711,
+   "score": 0.368
+  },
+  {
+   "text": "Code",
+   "start": 31.731,
+   "end": 31.931,
+   "score": 0.495
+  },
+  {
+   "text": "mein",
+   "start": 31.951,
+   "end": 32.051,
+   "score": 0.489
+  },
+  {
+   "text": "daal",
+   "start": 32.071,
+   "end": 32.231,
+   "score": 0.982
+  },
+  {
+   "text": "do.",
+   "start": 32.271,
+   "end": 32.351,
+   "score": 0.986
+  },
+  {
+   "text": "Step",
+   "start": 33.011,
+   "end": 33.231,
+   "score": 0.753
+  },
+  {
+   "text": "three",
+   "start": 33.291,
+   "end": 33.492,
+   "score": 0.449
+  },
+  {
+   "text": "Claude",
+   "start": 33.872,
+   "end": 34.172,
+   "score": 0.373
+  },
+  {
+   "text": "ko",
+   "start": 34.232,
+   "end": 34.292,
+   "score": 0.896
+  },
+  {
+   "text": "bolo:",
+   "start": 34.352,
+   "end": 34.552,
+   "score": 0.994
+  },
+  {
+   "text": "mere",
+   "start": 34.812,
+   "end": 35.012,
+   "score": 0.987
+  },
+  {
+   "text": "business",
+   "start": 35.052,
+   "end": 35.332,
+   "score": 0.487
+  },
+  {
+   "text": "ke",
+   "start": 35.372,
+   "end": 35.432,
+   "score": 0.967
+  },
+  {
+   "text": "liye",
+   "start": 35.472,
+   "end": 35.572,
+   "score": 0.732
+  },
+  {
+   "text": "WhatsApp",
+   "start": 35.592,
+   "end": 35.952,
+   "score": 0.555
+  },
+  {
+   "text": "agent",
+   "start": 35.992,
+   "end": 36.192,
+   "score": 0.402
+  },
+  {
+   "text": "banao",
+   "start": 36.252,
+   "end": 36.473,
+   "score": 0.951
+  },
+  {
+   "text": "jo",
+   "start": 36.533,
+   "end": 36.613,
+   "score": 0.99
+  },
+  {
+   "text": "bookings",
+   "start": 36.693,
+   "end": 37.013,
+   "score": 0.493
+  },
+  {
+   "text": "sambhale.",
+   "start": 37.053,
+   "end": 37.393,
+   "score": 0.725
+  },
+  {
+   "text": "Baaki",
+   "start": 37.913,
+   "end": 38.133,
+   "score": 0.949
+  },
+  {
+   "text": "code",
+   "start": 38.213,
+   "end": 38.393,
+   "score": 0.471
+  },
+  {
+   "text": "Claude",
+   "start": 38.473,
+   "end": 38.733,
+   "score": 0.378
+  },
+  {
+   "text": "khud",
+   "start": 38.793,
+   "end": 38.933,
+   "score": 0.97
+  },
+  {
+   "text": "likhta",
+   "start": 38.993,
+   "end": 39.294,
+   "score": 0.986
+  },
+  {
+   "text": "hai.",
+   "start": 39.294,
+   "end": 39.354,
+   "score": 0.877
+  },
+  {
+   "text": "Aur",
+   "start": 39.834,
+   "end": 39.934,
+   "score": 0.994
+  },
+  {
+   "text": "agent",
+   "start": 39.974,
+   "end": 40.274,
+   "score": 0.497
+  },
+  {
+   "text": "aapke",
+   "start": 40.314,
+   "end": 40.514,
+   "score": 0.936
+  },
+  {
+   "text": "number",
+   "start": 40.554,
+   "end": 40.794,
+   "score": 0.641
+  },
+  {
+   "text": "pe",
+   "start": 40.834,
+   "end": 40.894,
+   "score": 0.814
+  },
+  {
+   "text": "chaubees",
+   "start": 41.114,
+   "end": 41.434,
+   "score": 0.035
+  },
+  {
+   "text": "ghante",
+   "start": 41.454,
+   "end": 41.714,
+   "score": 0.839
+  },
+  {
+   "text": "chalta",
+   "start": 41.754,
+   "end": 42.014,
+   "score": 0.821
+  },
+  {
+   "text": "hai.",
+   "start": 42.074,
+   "end": 42.134,
+   "score": 0.895
+  },
+  {
+   "text": "Bas",
+   "start": 42.795,
+   "end": 42.955,
+   "score": 0.976
+  },
+  {
+   "text": "ek",
+   "start": 43.235,
+   "end": 43.395,
+   "score": 0.969
+  },
+  {
+   "text": "rule",
+   "start": 43.455,
+   "end": 43.635,
+   "score": 0.741
+  },
+  {
+   "text": "yaad",
+   "start": 43.675,
+   "end": 43.815,
+   "score": 0.99
+  },
+  {
+   "text": "rakho:",
+   "start": 43.855,
+   "end": 44.095,
+   "score": 0.916
+  },
+  {
+   "text": "customer",
+   "start": 44.635,
+   "end": 45.035,
+   "score": 0.441
+  },
+  {
+   "text": "ki",
+   "start": 45.075,
+   "end": 45.116,
+   "score": 0.984
+  },
+  {
+   "text": "permission",
+   "start": 45.196,
+   "end": 45.576,
+   "score": 0.595
+  },
+  {
+   "text": "pehle.",
+   "start": 45.636,
+   "end": 45.856,
+   "score": 0.765
+  },
+  {
+   "text": "Poora",
+   "start": 46.336,
+   "end": 46.576,
+   "score": 0.594
+  },
+  {
+   "text": "setup",
+   "start": 46.616,
+   "end": 46.936,
+   "score": 0.683
+  },
+  {
+   "text": "aur",
+   "start": 46.976,
+   "end": 47.056,
+   "score": 0.939
+  },
+  {
+   "text": "ready",
+   "start": 47.096,
+   "end": 47.296,
+   "score": 0.53
+  },
+  {
+   "text": "prompt",
+   "start": 47.356,
+   "end": 47.656,
+   "score": 0.791
+  },
+  {
+   "text": "maine",
+   "start": 47.696,
+   "end": 47.816,
+   "score": 0.801
+  },
+  {
+   "text": "ek",
+   "start": 47.876,
+   "end": 47.936,
+   "score": 0.971
+  },
+  {
+   "text": "free",
+   "start": 47.996,
+   "end": 48.177,
+   "score": 0.229
+  },
+  {
+   "text": "guide",
+   "start": 48.197,
+   "end": 48.397,
+   "score": 0.558
+  },
+  {
+   "text": "mein",
+   "start": 48.397,
+   "end": 48.497,
+   "score": 0.484
+  },
+  {
+   "text": "daal",
+   "start": 48.517,
+   "end": 48.657,
+   "score": 0.992
+  },
+  {
+   "text": "diya",
+   "start": 48.697,
+   "end": 48.817,
+   "score": 0.943
+  },
+  {
+   "text": "hai.",
+   "start": 48.837,
+   "end": 48.917,
+   "score": 0.636
+  },
+  {
+   "text": "Chahiye",
+   "start": 49.417,
+   "end": 49.657,
+   "score": 0.493
+  },
+  {
+   "text": "to",
+   "start": 49.697,
+   "end": 49.757,
+   "score": 0.895
+  },
+  {
+   "text": "follow",
+   "start": 49.797,
+   "end": 50.077,
+   "score": 0.387
+  },
+  {
+   "text": "karo",
+   "start": 50.077,
+   "end": 50.217,
+   "score": 0.836
+  },
+  {
+   "text": "aur",
+   "start": 50.557,
+   "end": 50.677,
+   "score": 0.978
+  },
+  {
+   "text": "comment",
+   "start": 50.717,
+   "end": 50.998,
+   "score": 0.302
+  },
+  {
+   "text": "karo",
+   "start": 51.018,
+   "end": 51.138,
+   "score": 0.931
+  },
+  {
+   "text": "AGENT.",
+   "start": 51.218,
+   "end": 51.438,
+   "score": 0.442
+  },
+  {
+   "text": "Guide",
+   "start": 52.398,
+   "end": 52.738,
+   "score": 0.578
+  },
+  {
+   "text": "seedha",
+   "start": 52.778,
+   "end": 53.038,
+   "score": 0.623
+  },
+  {
+   "text": "aapke",
+   "start": 53.138,
+   "end": 53.358,
+   "score": 0.932
+  },
+  {
+   "text": "DM",
+   "start": 53.438,
+   "end": 53.638,
+   "score": 0.986
+  },
+  {
+   "text": "mein.",
+   "start": 53.678,
+   "end": 53.798,
+   "score": 0.481
+  },
+  {
+   "text": "Toh",
+   "start": 54.199,
+   "end": 54.279,
+   "score": 0.66
+  },
+  {
+   "text": "channel",
+   "start": 54.339,
+   "end": 54.639,
+   "score": 0.551
+  },
+  {
+   "text": "ke",
+   "start": 54.679,
+   "end": 54.719,
+   "score": 0.979
+  },
+  {
+   "text": "description",
+   "start": 54.799,
+   "end": 55.239,
+   "score": 0.514
+  },
+  {
+   "text": "mein",
+   "start": 55.279,
+   "end": 55.379,
+   "score": 0.49
+  },
+  {
+   "text": "di",
+   "start": 55.399,
+   "end": 55.479,
+   "score": 0.984
+  },
+  {
+   "text": "gayi",
+   "start": 55.579,
+   "end": 55.719,
+   "score": 0.731
+  },
+  {
+   "text": "link",
+   "start": 55.759,
+   "end": 55.939,
+   "score": 0.617
+  },
+  {
+   "text": "se",
+   "start": 56.019,
+   "end": 56.099,
+   "score": 0.969
+  },
+  {
+   "text": "hamara",
+   "start": 56.399,
+   "end": 56.679,
+   "score": 0.969
+  },
+  {
+   "text": "WhatsApp",
+   "start": 56.739,
+   "end": 57.1,
+   "score": 0.523
+  },
+  {
+   "text": "channel",
+   "start": 57.14,
+   "end": 57.4,
+   "score": 0.545
+  },
+  {
+   "text": "join",
+   "start": 57.44,
+   "end": 57.66,
+   "score": 0.748
+  },
+  {
+   "text": "kar",
+   "start": 57.7,
+   "end": 57.8,
+   "score": 0.984
+  },
+  {
+   "text": "lo.",
+   "start": 57.86,
+   "end": 57.92,
+   "score": 0.984
+  }
+ ]
+}

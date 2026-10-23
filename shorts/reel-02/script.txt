@@ -1,0 +1,14 @@
+Ye free GitHub tool Claude ko aapki poori YouTube team bana deta hai.
+Script, title, thumbnail, retention, sab ek jagah.
+Dikhata hoon kaise!
+Iska naam hai YouTube Agent Skill. GitHub par free hai, 1,000 se zyada stars, aur isme 11 skills hain.
+Ek skill 21 hook formulas se aapki script likhti hai.
+Doosri, title aur thumbnail ko ek saath check karti hai.
+Teesri, aapka retention data padh ke batati hai ki log kis second pe video chhod rahe hain.
+Aur ek skill aapke niche ke viral videos dhoondh ke, unka formula bata deti hai.
+Install karna simple hai. Bas Claude Code mein GitHub link paste karo aur bolo, install kar do.
+Koi API key nahi, koi signup nahi.
+Aur ye khud kuch post nahi karta. Likhta ye hai, upload aap karte ho.
+Iska direct link aur poora setup guide maine ready kar diya hai.
+Chahiye to follow karo aur comment karo SKILL. Link seedha aapke DM mein.
+Toh channel ke description mein di gayi link se hamara WhatsApp channel join kar lo.

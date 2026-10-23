@@ -1,0 +1,346 @@
+{
+ "S1": [
+  {
+   "text": "bhai",
+   "start": 0.56,
+   "end": 0.701,
+   "score": 0.767
+  },
+  {
+   "text": "aajkal",
+   "start": 0.881,
+   "end": 1.202,
+   "score": 0.963
+  },
+  {
+   "text": "social",
+   "start": 1.282,
+   "end": 1.603,
+   "score": 0.631
+  },
+  {
+   "text": "media",
+   "start": 1.644,
+   "end": 1.904,
+   "score": 0.794
+  },
+  {
+   "text": "pe",
+   "start": 1.964,
+   "end": 2.025,
+   "score": 0.928
+  },
+  {
+   "text": "kuch",
+   "start": 2.185,
+   "end": 2.386,
+   "score": 0.972
+  },
+  {
+   "text": "bhi",
+   "start": 2.426,
+   "end": 2.486,
+   "score": 0.929
+  },
+  {
+   "text": "flex",
+   "start": 2.566,
+   "end": 2.767,
+   "score": 0.478
+  },
+  {
+   "text": "karna",
+   "start": 2.847,
+   "end": 3.047,
+   "score": 0.963
+  },
+  {
+   "text": "bahut",
+   "start": 3.128,
+   "end": 3.308,
+   "score": 0.767
+  },
+  {
+   "text": "aasaan",
+   "start": 3.328,
+   "end": 3.629,
+   "score": 0.9
+  },
+  {
+   "text": "hai",
+   "start": 3.649,
+   "end": 3.749,
+   "score": 0.785
+  }
+ ],
+ "S2": [
+  {
+   "text": "jaise",
+   "start": 3.981,
+   "end": 4.243,
+   "score": 0.975
+  },
+  {
+   "text": "ki",
+   "start": 4.283,
+   "end": 4.343,
+   "score": 0.512
+  },
+  {
+   "text": "mere",
+   "start": 4.525,
+   "end": 4.726,
+   "score": 0.956
+  },
+  {
+   "text": "paas",
+   "start": 4.787,
+   "end": 4.988,
+   "score": 0.968
+  },
+  {
+   "text": "rolls",
+   "start": 5.109,
+   "end": 5.311,
+   "score": 0.669
+  },
+  {
+   "text": "royce",
+   "start": 5.371,
+   "end": 5.613,
+   "score": 0.289
+  },
+  {
+   "text": "nahi",
+   "start": 5.613,
+   "end": 5.734,
+   "score": 0.903
+  },
+  {
+   "text": "hai",
+   "start": 5.835,
+   "end": 5.936,
+   "score": 0.844
+  }
+ ],
+ "S3": [
+  {
+   "text": "badhiya",
+   "start": 6.551,
+   "end": 6.753,
+   "score": 0.548
+  },
+  {
+   "text": "dikh",
+   "start": 6.813,
+   "end": 6.954,
+   "score": 0.723
+  },
+  {
+   "text": "rahi",
+   "start": 6.954,
+   "end": 7.116,
+   "score": 0.272
+  },
+  {
+   "text": "hai",
+   "start": 7.136,
+   "end": 7.237,
+   "score": 0.958
+  }
+ ],
+ "S4": [
+  {
+   "text": "aur",
+   "start": 7.631,
+   "end": 7.751,
+   "score": 0.957
+  },
+  {
+   "text": "mere",
+   "start": 7.812,
+   "end": 8.013,
+   "score": 0.998
+  },
+  {
+   "text": "koi",
+   "start": 8.053,
+   "end": 8.154,
+   "score": 0.986
+  },
+  {
+   "text": "haath",
+   "start": 8.235,
+   "end": 8.476,
+   "score": 0.793
+  },
+  {
+   "text": "mein",
+   "start": 8.516,
+   "end": 8.657,
+   "score": 0.27
+  },
+  {
+   "text": "crore",
+   "start": 8.758,
+   "end": 9.02,
+   "score": 0.403
+  },
+  {
+   "text": "rupay",
+   "start": 9.06,
+   "end": 9.221,
+   "score": 0.451
+  },
+  {
+   "text": "ki",
+   "start": 9.261,
+   "end": 9.342,
+   "score": 0.77
+  },
+  {
+   "text": "ghadi",
+   "start": 9.342,
+   "end": 9.523,
+   "score": 0.935
+  },
+  {
+   "text": "nahi",
+   "start": 9.563,
+   "end": 9.684,
+   "score": 0.741
+  },
+  {
+   "text": "hai",
+   "start": 9.765,
+   "end": 9.885,
+   "score": 0.979
+  }
+ ],
+ "S5": [
+  {
+   "text": "badhiya",
+   "start": 10.581,
+   "end": 10.825,
+   "score": 0.722
+  },
+  {
+   "text": "humpe",
+   "start": 10.846,
+   "end": 10.968,
+   "score": 0.261
+  },
+  {
+   "text": "dikh",
+   "start": 11.008,
+   "end": 11.151,
+   "score": 0.982
+  },
+  {
+   "text": "rahi",
+   "start": 11.191,
+   "end": 11.293,
+   "score": 0.604
+  },
+  {
+   "text": "hai",
+   "start": 11.354,
+   "end": 11.456,
+   "score": 0.913
+  }
+ ],
+ "S6": [
+  {
+   "text": "uske",
+   "start": 11.73,
+   "end": 11.911,
+   "score": 0.987
+  },
+  {
+   "text": "alawa",
+   "start": 11.951,
+   "end": 12.112,
+   "score": 0.626
+  },
+  {
+   "text": "peeche",
+   "start": 12.192,
+   "end": 12.433,
+   "score": 0.608
+  },
+  {
+   "text": "mere",
+   "start": 12.493,
+   "end": 12.634,
+   "score": 0.741
+  },
+  {
+   "text": "paas",
+   "start": 12.634,
+   "end": 12.754,
+   "score": 0.931
+  },
+  {
+   "text": "koi",
+   "start": 12.774,
+   "end": 12.875,
+   "score": 0.973
+  },
+  {
+   "text": "mansion",
+   "start": 12.915,
+   "end": 13.276,
+   "score": 0.475
+  },
+  {
+   "text": "nahi",
+   "start": 13.317,
+   "end": 13.437,
+   "score": 0.808
+  },
+  {
+   "text": "hai",
+   "start": 13.517,
+   "end": 13.638,
+   "score": 0.975
+  }
+ ],
+ "S7": [
+  {
+   "text": "badhiya",
+   "start": 14.231,
+   "end": 14.493,
+   "score": 0.646
+  },
+  {
+   "text": "toh",
+   "start": 14.513,
+   "end": 14.594,
+   "score": 0.388
+  },
+  {
+   "text": "dikh",
+   "start": 14.614,
+   "end": 14.755,
+   "score": 0.99
+  },
+  {
+   "text": "raha",
+   "start": 14.775,
+   "end": 14.896,
+   "score": 0.694
+  },
+  {
+   "text": "hai",
+   "start": 14.896,
+   "end": 14.977,
+   "score": 0.299
+  },
+  {
+   "text": "na",
+   "start": 14.977,
+   "end": 15.037,
+   "score": 0.945
+  }
+ ]
+}
